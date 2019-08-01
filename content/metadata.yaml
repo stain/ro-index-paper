@@ -1,27 +1,28 @@
 ---
-title: "Manuscript Title"
+title: "RO-Index: A survey of Research Object usage"
 keywords:
-  - markdown
-  - publishing
-  - manubot
-lang: en-US
+  - research object
+  - linked data
+  - scholarly communication
+  - 
+lang: en-GB
 author_info:
   -
-    github: johndoe
-    name: John Doe
-    initials: JD
-    orcid: XXXX-XXXX-XXXX-XXXX
-    twitter: johndoe
-    email: john.doe@something.com
+    github: stain
+    name: Stian Soiland-Reyes
+    initials: SSR
+    orcid: 0000-0001-9842-9718
+    twitter: soilandreyes
+    email: soiland-reyes@manchester.ac.uk
     affiliations:
-      - Department of Something, University of Whatever
-    funders: Grant XXXXXXXX
+      - Department of Computer Science, The University of Manchester, UK
+      - Informatics Institute, Faculty of Science, University of Amsterdam, NL
+    funders: BioExcel-2 (European Commission H2020-INFRAEDI-02-2018-823830)
   -
-    github: janeroe
-    name: Jane Roe
-    initials: JR
-    orcid: XXXX-XXXX-XXXX-XXXX
-    email: jane.roe@whatever.edu
+    github: pgroth
+    name: Paul Groth
+    initials: PG
+    orcid: 0000-0003-0183-6910
+    email: p.groth@uva.nl
     affiliations:
-      - Department of Something, University of Whatever
-      - Department of Whatever, University of Something
+      - Informatics Institute, Faculty of Science, University of Amsterdam, NL
