@@ -1,0 +1,57 @@
+{
+  "date": "August 1, 2019",
+  "authors": [
+    {
+      "github": "johndoe",
+      "name": "John Doe",
+      "initials": "JD",
+      "orcid": "XXXX-XXXX-XXXX-XXXX",
+      "twitter": "johndoe",
+      "email": "john.doe@something.com",
+      "affiliations": [
+        "Department of Something, University of Whatever"
+      ],
+      "funders": "Grant XXXXXXXX",
+      "affiliation_numbers": [
+        1
+      ]
+    },
+    {
+      "github": "janeroe",
+      "name": "Jane Roe",
+      "initials": "JR",
+      "orcid": "XXXX-XXXX-XXXX-XXXX",
+      "email": "jane.roe@whatever.edu",
+      "affiliations": [
+        "Department of Something, University of Whatever",
+        "Department of Whatever, University of Something"
+      ],
+      "affiliation_numbers": [
+        1,
+        2
+      ]
+    }
+  ],
+  "affiliations": [
+    {
+      "affiliation": "Department of Something, University of Whatever",
+      "affiliation_number": 1
+    },
+    {
+      "affiliation": "Department of Whatever, University of Something",
+      "affiliation_number": 2
+    }
+  ],
+  "ci_source": {
+    "repo_slug": "stain/ro-index-paper",
+    "repo_owner": "stain",
+    "repo_name": "ro-index-paper",
+    "commit": "0d0814836e3507014f615b9ea7b50c9f9a25345d"
+  },
+  "manuscript_stats": {
+    "reference_counts": {
+      "total": 0
+    },
+    "word_count": 232
+  }
+}
