@@ -23,7 +23,7 @@
 <header id="title-block-header">
 <h1 class="title">RO-Index: A survey of Research Object usage</h1>
 </header>
-<p><small><em> This manuscript (<a href="https://stain.github.io/ro-index-paper/v/b3d3e2351d54f5d4bc0260a05736a5566b3c9386/">permalink</a>) was automatically generated from <a href="https://github.com/stain/ro-index-paper/tree/b3d3e2351d54f5d4bc0260a05736a5566b3c9386">stain/ro-index-paper@b3d3e23</a> on August 5, 2019. </em></small></p>
+<p><small><em> This manuscript (<a href="https://stain.github.io/ro-index-paper/v/136c27872d2de272b4175d66513c42a7ef2d541f/">permalink</a>) was automatically generated from <a href="https://github.com/stain/ro-index-paper/tree/136c27872d2de272b4175d66513c42a7ef2d541f">stain/ro-index-paper@136c278</a> on August 5, 2019. </em></small></p>
 <h2 id="authors">Authors</h2>
 <ul>
 <li><p><strong>Stian Soiland-Reyes</strong><br> <img src="images/orcid.svg" alt="ORCID icon" class="inline_icon" /> <a href="https://orcid.org/0000-0001-9842-9718">0000-0001-9842-9718</a> · <img src="images/github.svg" alt="GitHub icon" class="inline_icon" /> <a href="https://github.com/stain">stain</a> · <img src="images/twitter.svg" alt="Twitter icon" class="inline_icon" /> <a href="https://twitter.com/soilandreyes">soilandreyes</a><br> <small> Department of Computer Science, The University of Manchester, UK; Informatics Institute, Faculty of Science, University of Amsterdam, NL · Funded by BioExcel-2 (European Commission H2020-INFRAEDI-02-2018-823830) </small></p></li>
@@ -49,29 +49,113 @@ Please include a clear rationale for the study, as well as a detailed descriptio
      
 
 Ethics policies: All research must have been conducted within an appropriate ethical framework. Details of approval by the authors’ institution or an ethics committee must be provided in the Methods section. Please refer to the detailed ’Ethics’ section in our editorial policies for more information.
-
-
  -->
-<h3 id="data-sources">Data sources</h3>
+<p>For this study we aim to build <strong>RO-Index</strong>, a broad and comprehensive corpus of Research Objects found “in the wild”. The proposed methodology follows multiple strands to find the “breeding grounds” of research objects and describes how Research Objects are selected for inclusion in the corpus.</p>
+<h3 id="finding-research-objects">Finding Research Objects</h3>
+<p>One goal of this work is to determine what kind of artifacts, in practice, can be considered a <em>research object</em>. For the purpose of building a corpus we need to have both inclusion and exclusion criteria.</p>
+<p>The foundational article on the RO concept is <span class="citation" data-cites="sRYUCzCq">[<a href="#ref-sRYUCzCq" role="doc-biblioref">1</a>]</span> and its workshop predecessor <span class="citation" data-cites="14U5XT313">[<a href="#ref-14U5XT313" role="doc-biblioref">2</a>]</span>. The Research Object community has maintained lists of <a href="http://www.researchobject.org/initiative/">initiatives</a> and <a href="http://www.researchobject.org/scopes/">Research Object profiles</a> which provide curated, although potentially biased, collections of Research Object approaches and implementations.</p>
+<h4 id="declared-research-object-usage">Declared Research Object usage</h4>
+<p>In order to determine potential sources of Research Objects we will start with these community lists, but expand based on a literature review by following any academic citation of the before-mentioned Research Object articles to find potential repositories, tools and communities that may conceptually claim to have or make “research objects”. This is a broad interpretation that does not expand into general datasets or packaging formats. The list may be expanded by literate search for “Research Object”, the RO vocabularies and standard URLs.</p>
+<p>Each of the citing articles will then be assessed to see if they have openly accessible research objects that are possible to identify, and ideally retrieve, by building a programmatic crawler. Ideally such access would use an open harvesting protocol like <a href="http://www.openarchives.org/OAI/2.0/openarchivesprotocol.htm">OAI-PMH</a> or <a href="http://www.openarchives.org/rs/1.1/resourcesync">ResourceSync</a>, but it is predicted that in the majority of cases custom crawler code will need to be developed per repository, in addition to manual harvesting of identifiers for smaller collections and individual Research Objects.</p>
+<h4 id="keyword-searches">Keyword searches</h4>
+<p>In addition to this “self-claimed” research object usage we will search in more general repositories by developing a list of keywords like “research object”, “robundle” or the RO vocabulary URLs. We will search in at least:</p>
+<ul>
+<li><a href="https://github.com/" class="uri">https://github.com/</a></li>
+<li><a href="https://gitlab.com/" class="uri">https://gitlab.com/</a></li>
+<li><a href="http://datacite.org/" class="uri">http://datacite.org/</a></li>
+<li><a href="https://zenodo.org/" class="uri">https://zenodo.org/</a></li>
+<li><a href="https://toolbox.google.com/datasetsearch/" class="uri">https://toolbox.google.com/datasetsearch/</a></li>
+<li><a href="https://dataverse.harvard.edu/" class="uri">https://dataverse.harvard.edu/</a></li>
+</ul>
+<p>It is predicted that these searches will yield duplicates, but will be used to find potentially new Research Object sources or free-standing instances.</p>
+<h4 id="archives-with-manifests">Archives with manifests</h4>
+<p>Finally we will consider broadly Open Data repositories of file archives (e.g. ZIP, tar.gz) to inspect for the presence of a <em>manifest</em>-like file (e.g. <code>/manifest.rdf</code>). For practical reasons this search will be restricted to a smaller selection of public repositories and formats, e.g. <a href="https://zenodo.org/search?page=1&amp;size=20&amp;q=&amp;file_type=zip&amp;type=dataset">Zenodo (20k *.zip Datasets)</a>, <a href="https://figshare.com/search?q=zip&amp;searchMode=1&amp;types=3">FigShare (“zip” Datasets)</a>, <a href="https://data.mendeley.com/datasets?query=zip&amp;page=0&amp;type=FILE_SET&amp;repositoryType=NON_ARTICLE_BASED_REPOSITORY&amp;source=MENDELEY_DATA">Mendeley Data “zip” File Set</a>.</p>
+<p>Firstly a list of trigger filenames will be developed:</p>
+<ul>
+<li><code>.ro/manifest.json</code> from <a href="https://w3id.org/bundle/">Research Object Bundle</a> <span class="citation" data-cites="dijZpInF">[<a href="#ref-dijZpInF" role="doc-biblioref">3</a>]</span></li>
+<li><code>metadata/manifest.json</code> from <a href="https://w3id.org/ro/bagit">RO-Bagit</a> and BDBag</li>
+</ul>
+<p>It is predicted that most of the ZIP files</p>
+<h3 id="candidate-sources">Candidate sources</h3>
+<p>For each candidate source we will collect and assess:</p>
+<ul>
+<li>Date assessed</li>
+<li>Assessed by</li>
+<li>URL</li>
+<li>Name</li>
+<li>Estimate # ROs</li>
+<li>Estimate # users</li>
+<li>Maintainer/publisher</li>
+<li>Community links (if any)</li>
+<li>RO profile/format (if any)</li>
+<li>Identifier scheme(s) (if any)</li>
+<li>Persistence/Versioning (if any)</li>
+</ul>
+<p>Then for each candidate source we will evaluate:</p>
+<ul>
+<li>Accessability - can we retrieve RO and/or their metadata</li>
+<li>License - permissions and/or restrictions to redistribute the ROs and/or their metadata</li>
+<li>Feasibility - can we programmatically retrieve all ROs (or just a sample)?</li>
+<li>Duplication - could the “same” RO be present by multiple identifiers or in other repositories?</li>
+<li>Self-identified - are Research Objects classified as such (or using similar terminology)?</li>
+</ul>
+<p>We may contact the provider or maintainer to expand on these questions if unclear from public information, however we are not conducting a formal survey, as our main interest lays in the machine-readable information from the research objects themselves.</p>
+<p>We will finally form a shortlist of sources for further harvesting, considering:</p>
+<ul>
+<li>Programmatically access (or interesting enough to warrant manual access)</li>
+<li>Diversity - might this source be different from the majority of sources?</li>
+<li>Legality - are we allowed to retrieve ROs (or their identifiers and metadata?)</li>
+<li>Confidentiality - are the research objects accessible to the public? (anonymous access or access by ‘fresh’ user registration)</li>
+</ul>
+<h3 id="handling-personally-identifiable-information">Handling personally identifiable information</h3>
+<p>Research Objects may, by their nature, contain information about people and their research activities. It is therefore important that our data collection, processing and potential re-distribution is in consistent with the <a href="https://www.gov.uk/government/publications/guide-to-the-general-data-protection-regulation">General Data Protection Regulation (GDPR)</a>. To this end we will evaluate:</p>
+<ul>
+<li>Does the source have a GDPR-compliant privacy policy or equivalent?</li>
+<li>Is personally identifiable information contained by identifier (e.g. username)?</li>
+<li>May personally identifiable information be contained by the Research Object manifest/description</li>
+<li>May personally identifiable information be contained by the Research Object files/content?</li>
+<li>Does the RO (or the metadata) have a license that permits redistribution and attribution, e.g. <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 (CC-BY)</a>?</li>
+</ul>
+<p>Evaluating this may require retrieving research objects in the first place, but particular care will be taken to classify Research Objects and their sources according to the above evaluation in order to filter information that can progress to be part of the Open Data RO-Index corpus. This forms a staged inclusion list:</p>
+<ol type="1">
+<li>Unfiltered list of identifiers for a source will be shared if the identifiers tend not to include personally identifiable information</li>
+<li>Metadata will be shared if it is accessible and does not tend to include personally identifiable information</li>
+<li>Metadata and identifier will be shared if an open attribution-permitting license is indicated (or implied by site)</li>
+<li>Content/files will be shared if accessible and an open license is indicated (or, for archives, implied by archive license)</li>
+</ol>
+<p><em>Note: In the above, “tend to” will be determined manually by inspecting a smaller subset of typically 10 research objects. The selection will aim to approximate a simple random subset, but may need to be expanded to take into account the overall diversity of ROs at the source, e.g. date, authors, subsystem, formats. The identifiers of the ROs of this subset will be recorded, along with a description of how the subset was selected.</em></p>
+<p>The inclusion list may be further restricted based on findings from further processing (e.g. a repository is found to distribute sensitive data).</p>
+<p>It is worth noting that compliance with open licenses like <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 (CC-BY)</a> or <a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License 2.0</a> <strong>require</strong> attribution to be propagated (if present). Attribution may sometimes take the form of a URL, identifier, project or organization which do not directly identify a person.</p>
+<p>The inclusion list will form different subsets of Research Objects:</p>
+<ol type="1">
+<li>Identified Research Objects</li>
+<li>“Non-sensitive” (but potentially closed) metadata</li>
+<li>Open metadata (potentially personally identifiable)</li>
+<li>Open content (potentially personally identifiable)</li>
+</ol>
+<p>Data for any excluded Research Objects will only be kept for the purpose and duration of this study on computer infrastructure managed by The University of Manchester. Data from excluded Research Objects will only be used for non-person-identifiable aggregated results (e.g. number of CSV files) and broad categorization (e.g. vocabularies used in metadata).</p>
+<p>The identifiers from category 1, metadata from category 3 and data from category 4 will be shared in the public Open Data repository <a href="https://zenodo.org/">Zenodo</a> according to <a href="https://about.zenodo.org/policies/">Zenodo’s policies</a>. Metadata from category 3 and 4 above may be exposed for programmatic querying (e.g. SPARQL) or converted to other formats. No additional linking with internal and external data sources will be performed, although the collected Research Objects may already contain such links (e.g. <a href="https://orcid.org/" class="uri">https://orcid.org/</a> identifiers of authors); an exception to this rule is that linking will be permitted to detect duplicate Research Objects across multiple sources, and to access resources clearly <em>aggregated</em> as part of the Research Object.</p>
+<p>For GDPR purposes the <em>Data Controller</em> is The University of Manchester, data subjects may contact <code>info@esciencelab.org.uk</code> for any enquiries, such as to request access to data about themselves, or to request update or removal of personally identifiable information.</p>
+<h3 id="pre-identified-data-sources">Pre-identified data sources</h3>
 <h4 id="proto-research-objects">Proto-research objects</h4>
 <ul>
 <li><a href="https://www.myexperiment.org/packs">myExperiment packs</a></li>
-<li><a href="https://combinearchive.org/index/">COMBINE archives</a> <span class="citation" data-cites="vGs0hZI FJly0f6l">[<a href="#ref-vGs0hZI" role="doc-biblioref">1</a>,<a href="#ref-FJly0f6l" role="doc-biblioref">2</a>]</span></li>
-<li>VoID datasets http://www.openphacts.org/specs/2013/WD-datadesc-20130912/ <span class="citation" data-cites="vGs0hZI 13RYarvnd">[<a href="#ref-vGs0hZI" role="doc-biblioref">1</a>,<a href="#ref-13RYarvnd" role="doc-biblioref">3</a>]</span></li>
-<li>DataONE Data packages <span class="citation" data-cites="B4ffHizQ">[<a href="#ref-B4ffHizQ" role="doc-biblioref">4</a>]</span></li>
+<li><a href="https://combinearchive.org/index/">COMBINE archives</a> <span class="citation" data-cites="vGs0hZI FJly0f6l">[<a href="#ref-vGs0hZI" role="doc-biblioref">4</a>,<a href="#ref-FJly0f6l" role="doc-biblioref">5</a>]</span></li>
+<li>VoID datasets http://www.openphacts.org/specs/2013/WD-datadesc-20130912/ <span class="citation" data-cites="vGs0hZI 13RYarvnd">[<a href="#ref-vGs0hZI" role="doc-biblioref">4</a>,<a href="#ref-13RYarvnd" role="doc-biblioref">6</a>]</span></li>
+<li>DataONE Data packages <span class="citation" data-cites="B4ffHizQ">[<a href="#ref-B4ffHizQ" role="doc-biblioref">7</a>]</span></li>
 </ul>
 <h4 id="ore-based-research-objects">ORE-based research objects</h4>
 <ul>
-<li>CWL Viewer https://view.commonwl.org/workflows <span class="citation" data-cites="xhtkrFLT">[<a href="#ref-xhtkrFLT" role="doc-biblioref">5</a>]</span></li>
-<li>RO Bundle https://researchobject.github.io/specifications/bundle/ <span class="citation" data-cites="dijZpInF">[<a href="#ref-dijZpInF" role="doc-biblioref">6</a>]</span></li>
-<li>Workflow PROV corpus <span class="citation" data-cites="eV4QvWFF">[<a href="#ref-eV4QvWFF" role="doc-biblioref">7</a>]</span></li>
-<li>CWLProv 10.1093/gigascience/giz095 aka <span class="citation" data-cites="YsYtVdV4">[<a href="#ref-YsYtVdV4" role="doc-biblioref">8</a>]</span></li>
-<li>http://www.rohub.org/ <span class="citation" data-cites="Ut1RxNtm">[<a href="#ref-Ut1RxNtm" role="doc-biblioref">9</a>]</span></li>
+<li>CWL Viewer https://view.commonwl.org/workflows <span class="citation" data-cites="xhtkrFLT">[<a href="#ref-xhtkrFLT" role="doc-biblioref">8</a>]</span></li>
+<li>RO Bundle https://researchobject.github.io/specifications/bundle/ <span class="citation" data-cites="dijZpInF">[<a href="#ref-dijZpInF" role="doc-biblioref">3</a>]</span></li>
+<li>Workflow PROV corpus <span class="citation" data-cites="eV4QvWFF">[<a href="#ref-eV4QvWFF" role="doc-biblioref">9</a>]</span></li>
+<li>CWLProv 10.1093/gigascience/giz095 aka <span class="citation" data-cites="YsYtVdV4">[<a href="#ref-YsYtVdV4" role="doc-biblioref">10</a>]</span></li>
+<li>http://www.rohub.org/ <span class="citation" data-cites="Ut1RxNtm">[<a href="#ref-Ut1RxNtm" role="doc-biblioref">11</a>]</span></li>
 <li>http://rohub.linkeddata.es/</li>
 <li>SEEK: https://fairdomhub.org/investigations</li>
-<li>BDBags with MinID http://minid.bd2k.org/ [<span class="citation" data-cites="3FDNoHin"><a href="#ref-3FDNoHin" role="doc-biblioref">10</a></span>; ]</li>
-<li>Zenodo e.g. <span class="citation" data-cites="Ypeevn8I">[<a href="#ref-Ypeevn8I" role="doc-biblioref">11</a>]</span></li>
-<li>Mendeley Data eg <span class="citation" data-cites="1CrTaYKc2">[<a href="#ref-1CrTaYKc2" role="doc-biblioref">12</a>]</span></li>
+<li>BDBags with MinID http://minid.bd2k.org/ [<span class="citation" data-cites="3FDNoHin"><a href="#ref-3FDNoHin" role="doc-biblioref">12</a></span>; ]</li>
+<li>Zenodo e.g. <span class="citation" data-cites="Ypeevn8I">[<a href="#ref-Ypeevn8I" role="doc-biblioref">13</a>]</span></li>
+<li>Mendeley Data eg <span class="citation" data-cites="1CrTaYKc2">[<a href="#ref-1CrTaYKc2" role="doc-biblioref">14</a>]</span></li>
 <li>Maven https://repository.mygrid.org.uk/artifactory/ops/org/openphacts/data/</li>
 <li>DocumentObject https://github.com/binfalse/DocumentObjectCompiler/</li>
 <li>GitHub</li>
@@ -112,8 +196,8 @@ http://casrai.org/credit
 <li>Funding Acquisition: SSR, CAG</li>
 <li>Investigation:</li>
 <li>Methodology:</li>
-<li>Project Administratoin:</li>
-<li>Resources:</li>
+<li>Project Administration:</li>
+<li>Resources: CAG, SSR</li>
 <li>Software: SSR</li>
 <li>Supervision: PG</li>
 <li>Validation:</li>
@@ -127,74 +211,86 @@ http://casrai.org/credit
 <h2 id="references" class="page_break_before">References</h2>
 <!-- Explicitly insert bibliography here -->
 <div id="refs" role="doc-bibliography">
+<div id="ref-sRYUCzCq">
+<p>1. <strong>Why linked data is not enough for scientists</strong><br />
+Sean Bechhofer, Iain Buchan, David De Roure, Paolo Missier, John Ainsworth, Jiten Bhagat, Philip Couch, Don Cruickshank, Mark Delderfield, Ian Dunlop, … Carole Goble<br />
+<em>Future Generation Computer Systems</em> (2013-02) <a href="https://doi.org/bgmqrb">https://doi.org/bgmqrb</a><br />
+DOI: <a href="https://doi.org/10.1016/j.future.2011.08.004">10.1016/j.future.2011.08.004</a></p>
+</div>
+<div id="ref-14U5XT313">
+<p>2. <strong>Why Linked Data is Not Enough for Scientists</strong><br />
+Sean Bechhofer, John Ainsworth, Jiten Bhagat, Iain Buchan, Philip Couch, Don Cruickshank, David De Roure, Mark Delderfield, Ian Dunlop, Matthew Gamble, … Shoaib Sufi<br />
+<em>2010 IEEE Sixth International Conference on e-Science</em> (2010-12) <a href="https://doi.org/cv5tzk">https://doi.org/cv5tzk</a><br />
+DOI: <a href="https://doi.org/10.1109/escience.2010.21">10.1109/escience.2010.21</a></p>
+</div>
+<div id="ref-dijZpInF">
+<p>3. <strong>Research Object Bundle 1.0</strong><br />
+Stian Soiland-Reyes, Matthew Gamble, Robert Haines<br />
+<em>Zenodo</em> (2014-11-05) <a href="https://doi.org/gf5m6k">https://doi.org/gf5m6k</a><br />
+DOI: <a href="https://doi.org/10.5281/zenodo.12586">10.5281/zenodo.12586</a></p>
+</div>
 <div id="ref-vGs0hZI">
-<p>1. <strong>COMBINE archive and OMEX format: one file to share all information to reproduce a modeling project</strong><br />
+<p>4. <strong>COMBINE archive and OMEX format: one file to share all information to reproduce a modeling project</strong><br />
 Frank T Bergmann, Richard Adams, Stuart Moodie, Jonathan Cooper, Mihai Glont, Martin Golebiewski, Michael Hucka, Camille Laibe, Andrew K Miller, David P Nickerson, … Nicolas Le Novère<br />
 <em>BMC Bioinformatics</em> (2014-12) <a href="https://doi.org/gb8wc5">https://doi.org/gb8wc5</a><br />
 DOI: <a href="https://doi.org/10.1186/s12859-014-0369-z">10.1186/s12859-014-0369-z</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/25494900">25494900</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4272562">PMC4272562</a></p>
 </div>
 <div id="ref-FJly0f6l">
-<p>2. <strong>Ro-Combine-Archive</strong><br />
+<p>5. <strong>Ro-Combine-Archive</strong><br />
 Stian Soiland-Reyes, Matthew Gamble<br />
 <em>Zenodo</em> (2014-04-28) <a href="https://doi.org/gf5m6t">https://doi.org/gf5m6t</a><br />
 DOI: <a href="https://doi.org/10.5281/zenodo.10439">10.5281/zenodo.10439</a></p>
 </div>
 <div id="ref-13RYarvnd">
-<p>3. <strong>Applying linked data approaches to pharmacology: Architectural decisions and implementation</strong><br />
+<p>6. <strong>Applying linked data approaches to pharmacology: Architectural decisions and implementation</strong><br />
 Gray Alasdair J.G., Groth Paul, Loizou Antonis, Askjaer Sune, Brenninkmeijer Christian, Burger Kees, Chichester Christine, Evelo Chris T., Goble Carole, Harland Lee, … Williams Antony J.<br />
 <em>Semantic Web</em> (2014) <a href="https://doi.org/gf5m6j">https://doi.org/gf5m6j</a><br />
 DOI: <a href="https://doi.org/10.3233/SW-2012-0088">10.3233/sw-2012-0088</a></p>
 </div>
 <div id="ref-B4ffHizQ">
-<p>4. <strong>Preserving Reproducibility: Provenance and Executable Containers in DataONE Data Packages</strong><br />
+<p>7. <strong>Preserving Reproducibility: Provenance and Executable Containers in DataONE Data Packages</strong><br />
 Bryce Mecum, Matthew B. Jones, Dave Vieglais, Craig Willis<br />
 <em>2018 IEEE 14th International Conference on e-Science (e-Science)</em> (2018-10) <a href="https://doi.org/gf5m6q">https://doi.org/gf5m6q</a><br />
 DOI: <a href="https://doi.org/10.1109/escience.2018.00019">10.1109/escience.2018.00019</a></p>
 </div>
 <div id="ref-xhtkrFLT">
-<p>5. <strong>CWL Viewer: the common workflow language viewer</strong><br />
+<p>8. <strong>CWL Viewer: the common workflow language viewer</strong><br />
 Mark Robinson, Stian Soiland-Reyes, Michael R. Crusoe, Carole Goble<br />
 <em>F1000Research</em> (2017) <a href="https://doi.org/cbq2">https://doi.org/cbq2</a><br />
 DOI: <a href="https://doi.org/10.7490/f1000research.1114375.1">10.7490/f1000research.1114375.1</a></p>
 </div>
-<div id="ref-dijZpInF">
-<p>6. <strong>Research Object Bundle 1.0</strong><br />
-Stian Soiland-Reyes, Matthew Gamble, Robert Haines<br />
-<em>Zenodo</em> (2014-11-05) <a href="https://doi.org/gf5m6k">https://doi.org/gf5m6k</a><br />
-DOI: <a href="https://doi.org/10.5281/zenodo.12586">10.5281/zenodo.12586</a></p>
-</div>
 <div id="ref-eV4QvWFF">
-<p>7. <strong>A workflow PROV-corpus based on taverna and wings</strong><br />
+<p>9. <strong>A workflow PROV-corpus based on taverna and wings</strong><br />
 Khalid Belhajjame, Jun Zhao, Daniel Garijo, Aleix Garrido, Stian Soiland-Reyes, Pinar Alper, Oscar Corcho<br />
 <em>Proceedings of the Joint EDBT/ICDT 2013 Workshops on - EDBT ’13</em> (2013) <a href="https://doi.org/gf5m6r">https://doi.org/gf5m6r</a><br />
 DOI: <a href="https://doi.org/10.1145/2457317.2457376">10.1145/2457317.2457376</a></p>
 </div>
 <div id="ref-YsYtVdV4">
-<p>8. <strong>Sharing interoperable workflow provenance: A review of best practices and their practical application in CWLProv</strong><br />
+<p>10. <strong>Sharing interoperable workflow provenance: A review of best practices and their practical application in CWLProv</strong><br />
 Farah Zaib Khan, Stian Soiland-Reyes, Richard O. Sinnott, Andrew Lonie, Carole Goble, Michael R. Crusoe<br />
 <em>Zenodo</em> (2019-07-15) <a href="https://doi.org/gf5tg8">https://doi.org/gf5tg8</a><br />
 DOI: <a href="https://doi.org/10.5281/zenodo.1208477">10.5281/zenodo.1208477</a></p>
 </div>
 <div id="ref-Ut1RxNtm">
-<p>9. <strong>ROHub — A Digital Library of Research Objects Supporting Scientists Towards Reproducible Science</strong><br />
+<p>11. <strong>ROHub — A Digital Library of Research Objects Supporting Scientists Towards Reproducible Science</strong><br />
 Raúl Palma, Piotr Hołubowicz, Oscar Corcho, José Manuel Gómez-Pérez, Cezary Mazurek<br />
 <em>Communications in Computer and Information Science</em> (2014) <a href="https://doi.org/gf5m6p">https://doi.org/gf5m6p</a><br />
 DOI: <a href="https://doi.org/10.1007/978-3-319-12024-9_9">10.1007/978-3-319-12024-9_9</a></p>
 </div>
 <div id="ref-3FDNoHin">
-<p>10. <strong>Reproducible big data science: A case study in continuous FAIRness</strong><br />
+<p>12. <strong>Reproducible big data science: A case study in continuous FAIRness</strong><br />
 Ravi Madduri, Kyle Chard, Mike D’Arcy, Segun C. Jung, Alexis Rodriguez, Dinanath Sulakhe, Eric Deutsch, Cory Funk, Ben Heavner, Matthew Richards, … Ian Foster<br />
 <em>PLOS ONE</em> (2019-04-11) <a href="https://doi.org/gf5m6s">https://doi.org/gf5m6s</a><br />
 DOI: <a href="https://doi.org/10.1371/journal.pone.0213013">10.1371/journal.pone.0213013</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/30973881">30973881</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6459504">PMC6459504</a></p>
 </div>
 <div id="ref-Ypeevn8I">
-<p>11. <strong>W2Share Case Study: Workflow Research Object (Wro)</strong><br />
+<p>13. <strong>W2Share Case Study: Workflow Research Object (Wro)</strong><br />
 Lucas Carvalho, Claudia Bauzer Medeiros<br />
 <em>Zenodo</em> (2018-10-18) <a href="https://doi.org/gf5m6m">https://doi.org/gf5m6m</a><br />
 DOI: <a href="https://doi.org/10.5281/zenodo.1465897">10.5281/zenodo.1465897</a></p>
 </div>
 <div id="ref-1CrTaYKc2">
-<p>12. <strong>CWL run of Alignment Workflow (CWLProv 0.6.0 Research Object)</strong><br />
+<p>14. <strong>CWL run of Alignment Workflow (CWLProv 0.6.0 Research Object)</strong><br />
 Stian Soiland-Reyes<br />
 <em>Mendeley</em> (2018-12-04) <a href="https://doi.org/gf5m6h">https://doi.org/gf5m6h</a><br />
 DOI: <a href="https://doi.org/10.17632/6wtpgr3kbj.1">10.17632/6wtpgr3kbj.1</a></p>
