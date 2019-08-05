@@ -19,9 +19,9 @@ title: 'RO-Index: A survey of Research Object usage'
 
 <small><em>
 This manuscript
-([permalink](https://stain.github.io/ro-index-paper/v/b3d3e2351d54f5d4bc0260a05736a5566b3c9386/))
+([permalink](https://stain.github.io/ro-index-paper/v/136c27872d2de272b4175d66513c42a7ef2d541f/))
 was automatically generated
-from [stain/ro-index-paper@b3d3e23](https://github.com/stain/ro-index-paper/tree/b3d3e2351d54f5d4bc0260a05736a5566b3c9386)
+from [stain/ro-index-paper@136c278](https://github.com/stain/ro-index-paper/tree/136c27872d2de272b4175d66513c42a7ef2d541f)
 on August 5, 2019.
 </em></small>
 
@@ -79,10 +79,117 @@ Please include a clear rationale for the study, as well as a detailed descriptio
      
 
 Ethics policies: All research must have been conducted within an appropriate ethical framework. Details of approval by the authors’ institution or an ethics committee must be provided in the Methods section. Please refer to the detailed ’Ethics’ section in our editorial policies for more information.
-
-
  -->
-### Data sources
+
+For this study we aim to build **RO-Index**, a broad and comprehensive corpus of Research Objects found "in the wild". The proposed methodology follows multiple strands to find the "breeding grounds" of research objects and describes how Research Objects are selected for inclusion in the corpus.
+
+### Finding Research Objects
+
+One goal of this work is to determine what kind of artifacts, in practice, can be considered a _research object_. For the purpose of building a corpus we need to have both inclusion and exclusion criteria.
+
+The foundational article on the RO concept is [@sRYUCzCq] and its workshop predecessor [@14U5XT313]. The Research Object community has maintained lists of [initiatives](http://www.researchobject.org/initiative/) and [Research Object profiles](http://www.researchobject.org/scopes/) which provide curated, although potentially biased, collections of Research Object approaches and implementations. 
+
+#### Declared Research Object usage
+
+In order to determine potential sources of Research Objects we will start with these community lists, but expand based on a literature review by following any academic citation of the before-mentioned Research Object articles to find potential repositories, tools and communities that may conceptually claim to have or make "research objects". This is a broad interpretation that does not expand into general datasets or packaging formats. The list may be expanded by literate search for "Research Object", the RO vocabularies and standard URLs.
+
+Each of the citing articles will then be assessed to see if they have openly accessible research objects that are possible to identify, and ideally retrieve, by building a programmatic crawler. Ideally such access would use an open harvesting protocol like [OAI-PMH](http://www.openarchives.org/OAI/2.0/openarchivesprotocol.htm) or [ResourceSync](http://www.openarchives.org/rs/1.1/resourcesync), but it is predicted that in the majority of cases custom crawler code will need to be developed per repository, in addition to manual harvesting of identifiers for smaller collections and individual Research Objects. 
+
+#### Keyword searches
+
+In addition to this "self-claimed" research object usage we will search in more general repositories by developing a list of keywords like "research object", "robundle" or the RO vocabulary URLs. We will search in at least:
+
+* <https://github.com/>
+* <https://gitlab.com/>
+* <http://datacite.org/> 
+* <https://zenodo.org/>
+* <https://toolbox.google.com/datasetsearch/>
+* <https://dataverse.harvard.edu/>
+
+It is predicted that these searches will yield duplicates, but will be used to find potentially new Research Object sources or free-standing instances.
+
+#### Archives with manifests
+
+Finally we will consider broadly Open Data repositories of file archives (e.g. ZIP, tar.gz) to inspect for the presence of a _manifest_-like file (e.g. `/manifest.rdf`). For practical reasons this search will be restricted to a smaller selection of public repositories and formats, e.g. [Zenodo (20k *.zip Datasets)](https://zenodo.org/search?page=1&size=20&q=&file_type=zip&type=dataset), [FigShare ("zip" Datasets)](https://figshare.com/search?q=zip&searchMode=1&types=3), [Mendeley Data "zip" File Set](https://data.mendeley.com/datasets?query=zip&page=0&type=FILE_SET&repositoryType=NON_ARTICLE_BASED_REPOSITORY&source=MENDELEY_DATA).
+
+Firstly a list of trigger filenames will be developed:
+
+* `.ro/manifest.json` from [Research Object Bundle](https://w3id.org/bundle/) [@dijZpInF] 
+* `metadata/manifest.json` from [RO-Bagit](https://w3id.org/ro/bagit) and BDBag
+
+It is predicted that most of the ZIP files 
+
+### Candidate sources
+
+For each candidate source we will collect and assess:
+
+* Date assessed
+* Assessed by
+* URL
+* Name
+* Estimate # ROs
+* Estimate # users
+* Maintainer/publisher
+* Community links  (if any)
+* RO profile/format  (if any)
+* Identifier scheme(s)  (if any)
+* Persistence/Versioning (if any)
+
+Then for each candidate source we will evaluate:
+
+* Accessability - can we retrieve RO and/or their metadata
+* License - permissions and/or restrictions to redistribute the ROs and/or their metadata
+* Feasibility - can we programmatically retrieve all ROs (or just a sample)?
+* Duplication - could the "same" RO be present by multiple identifiers or in other repositories?
+* Self-identified - are Research Objects classified as such (or using similar terminology)?
+
+We may contact the provider or maintainer to expand on these questions if unclear from public information, however we are not conducting a formal survey, as our main interest lays in the machine-readable information from the research objects themselves.
+
+We will finally form a shortlist of sources for further harvesting, considering:
+
+* Programmatically access (or interesting enough to warrant manual access)
+* Diversity - might this source be different from the majority of sources?
+* Legality - are we allowed to retrieve ROs (or their identifiers and metadata?)
+* Confidentiality - are the research objects accessible to the public? (anonymous access or access by 'fresh' user registration)
+
+
+### Handling personally identifiable information
+
+Research Objects may, by their nature, contain information about people and their research activities. It is therefore important that our data collection, processing and potential re-distribution is in consistent with the [General Data Protection Regulation (GDPR)](https://www.gov.uk/government/publications/guide-to-the-general-data-protection-regulation). To this end we will evaluate:
+
+* Does the source have a GDPR-compliant privacy policy or equivalent?
+* Is personally identifiable information contained by identifier (e.g. username)?
+* May personally identifiable information be contained by the Research Object manifest/description
+* May personally identifiable information be contained by the Research Object files/content?
+* Does the RO (or the metadata) have a license that permits redistribution and attribution, e.g. [Creative Commons Attribution 4.0 (CC-BY)](https://creativecommons.org/licenses/by/4.0/)?
+
+Evaluating this may require retrieving research objects in the first place, but particular care will be taken to classify Research Objects and their sources according to the above evaluation in order to filter information that can progress to be part of the Open Data RO-Index corpus. This forms a staged inclusion list:
+
+1. Unfiltered list of identifiers for a source will be shared if the identifiers tend not to include personally identifiable information
+2. Metadata will be shared if it is accessible and does not tend to include personally identifiable information
+3. Metadata and identifier will be shared if an open attribution-permitting license is indicated (or implied by site)
+4. Content/files will be shared if accessible and an open license is indicated (or, for archives, implied by archive license)
+
+_Note: In the above, "tend to" will be determined manually by inspecting a smaller subset of typically 10 research objects. The selection will aim to approximate a simple random subset, but may need to be expanded to take into account the overall diversity of ROs at the source, e.g. date, authors, subsystem, formats. The identifiers of the ROs of this subset will be recorded, along with a description of how the subset was selected._
+
+The inclusion list may be further restricted based on findings from further processing (e.g. a repository is found to distribute sensitive data).
+
+It is worth noting that compliance with open licenses like [Creative Commons Attribution 4.0 (CC-BY)](https://creativecommons.org/licenses/by/4.0/) or [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0)  **require** attribution to be propagated (if present). Attribution may sometimes take the form of a URL, identifier, project or organization which do not directly identify a person.
+
+The inclusion list will form different subsets of Research Objects:
+
+1. Identified Research Objects
+2. "Non-sensitive" (but potentially closed) metadata
+3. Open metadata (potentially personally identifiable)
+4. Open content (potentially personally identifiable)
+
+Data for any excluded Research Objects will only be kept for the purpose and duration of this study on computer infrastructure managed by The University of Manchester. Data from excluded Research Objects will only be used for non-person-identifiable aggregated results (e.g. number of CSV files) and broad categorization (e.g. vocabularies used in metadata).
+
+The identifiers from category 1, metadata from category 3 and data from category 4 will be shared in the public Open Data repository  [Zenodo](https://zenodo.org/) according to [Zenodo's policies](https://about.zenodo.org/policies/). Metadata from category 3 and 4 above may be exposed for programmatic querying (e.g. SPARQL) or converted to other formats. No additional linking with internal and external data sources will be performed, although the collected Research Objects may already contain such links (e.g. <https://orcid.org/> identifiers of authors); an exception to this rule is that linking will be permitted to detect duplicate Research Objects across multiple sources, and to access resources clearly _aggregated_ as part of the Research Object.
+
+For GDPR purposes the _Data Controller_ is The University of Manchester, data subjects may contact `info@esciencelab.org.uk` for any enquiries, such as to request access to data about themselves, or to request update or removal of personally identifiable information.
+
+### Pre-identified data sources
 
 #### Proto-research objects
 
@@ -151,8 +258,8 @@ http://casrai.org/credit
 * Funding Acquisition: SSR, CAG
 * Investigation: 
 * Methodology: 
-* Project Administratoin:
-* Resources: 
+* Project Administration:
+* Resources: CAG, SSR
 * Software: SSR
 * Supervision: PG
 * Validation: 
