@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
   <meta name="author" content="Stian Soiland-Reyes" />
   <meta name="author" content="Paul Groth" />
-  <meta name="dcterms.date" content="2019-08-01" />
+  <meta name="dcterms.date" content="2019-08-05" />
   <meta name="keywords" content="research object, linked data, scholarly communication, null" />
   <title>RO-Index: A survey of Research Object usage</title>
   <style>
@@ -23,7 +23,7 @@
 <header id="title-block-header">
 <h1 class="title">RO-Index: A survey of Research Object usage</h1>
 </header>
-<p><small><em> This manuscript (<a href="https://stain.github.io/ro-index-paper/v/4c32e7e111b2740bfd6bd1af6e0ca8d8c8adc06b/">permalink</a>) was automatically generated from <a href="https://github.com/stain/ro-index-paper/tree/4c32e7e111b2740bfd6bd1af6e0ca8d8c8adc06b">stain/ro-index-paper@4c32e7e</a> on August 1, 2019. </em></small></p>
+<p><small><em> This manuscript (<a href="https://stain.github.io/ro-index-paper/v/b3d3e2351d54f5d4bc0260a05736a5566b3c9386/">permalink</a>) was automatically generated from <a href="https://github.com/stain/ro-index-paper/tree/b3d3e2351d54f5d4bc0260a05736a5566b3c9386">stain/ro-index-paper@b3d3e23</a> on August 5, 2019. </em></small></p>
 <h2 id="authors">Authors</h2>
 <ul>
 <li><p><strong>Stian Soiland-Reyes</strong><br> <img src="images/orcid.svg" alt="ORCID icon" class="inline_icon" /> <a href="https://orcid.org/0000-0001-9842-9718">0000-0001-9842-9718</a> · <img src="images/github.svg" alt="GitHub icon" class="inline_icon" /> <a href="https://github.com/stain">stain</a> · <img src="images/twitter.svg" alt="Twitter icon" class="inline_icon" /> <a href="https://twitter.com/soilandreyes">soilandreyes</a><br> <small> Department of Computer Science, The University of Manchester, UK; Informatics Institute, Faculty of Science, University of Amsterdam, NL · Funded by BioExcel-2 (European Commission H2020-INFRAEDI-02-2018-823830) </small></p></li>
@@ -31,6 +31,7 @@
 </ul>
 <h2 id="abstract" class="page_break_before">Abstract</h2>
 <h2 id="introduction" class="page_break_before">Introduction</h2>
+<h1 id="section"></h1>
 <h2 id="protocol" class="page_break_before">Protocol</h2>
 <!-- From https://f1000research.com/for-authors/article-guidelines/study-protocols
 
@@ -51,6 +52,36 @@ Ethics policies: All research must have been conducted within an appropriate eth
 
 
  -->
+<h3 id="data-sources">Data sources</h3>
+<h4 id="proto-research-objects">Proto-research objects</h4>
+<ul>
+<li><a href="https://www.myexperiment.org/packs">myExperiment packs</a></li>
+<li><a href="https://combinearchive.org/index/">COMBINE archives</a> <span class="citation" data-cites="vGs0hZI FJly0f6l">[<a href="#ref-vGs0hZI" role="doc-biblioref">1</a>,<a href="#ref-FJly0f6l" role="doc-biblioref">2</a>]</span></li>
+<li>VoID datasets http://www.openphacts.org/specs/2013/WD-datadesc-20130912/ <span class="citation" data-cites="vGs0hZI 13RYarvnd">[<a href="#ref-vGs0hZI" role="doc-biblioref">1</a>,<a href="#ref-13RYarvnd" role="doc-biblioref">3</a>]</span></li>
+<li>DataONE Data packages <span class="citation" data-cites="B4ffHizQ">[<a href="#ref-B4ffHizQ" role="doc-biblioref">4</a>]</span></li>
+</ul>
+<h4 id="ore-based-research-objects">ORE-based research objects</h4>
+<ul>
+<li>CWL Viewer https://view.commonwl.org/workflows <span class="citation" data-cites="xhtkrFLT">[<a href="#ref-xhtkrFLT" role="doc-biblioref">5</a>]</span></li>
+<li>RO Bundle https://researchobject.github.io/specifications/bundle/ <span class="citation" data-cites="dijZpInF">[<a href="#ref-dijZpInF" role="doc-biblioref">6</a>]</span></li>
+<li>Workflow PROV corpus <span class="citation" data-cites="eV4QvWFF">[<a href="#ref-eV4QvWFF" role="doc-biblioref">7</a>]</span></li>
+<li>CWLProv 10.1093/gigascience/giz095 aka <span class="citation" data-cites="YsYtVdV4">[<a href="#ref-YsYtVdV4" role="doc-biblioref">8</a>]</span></li>
+<li>http://www.rohub.org/ <span class="citation" data-cites="Ut1RxNtm">[<a href="#ref-Ut1RxNtm" role="doc-biblioref">9</a>]</span></li>
+<li>http://rohub.linkeddata.es/</li>
+<li>SEEK: https://fairdomhub.org/investigations</li>
+<li>BDBags with MinID http://minid.bd2k.org/ [<span class="citation" data-cites="3FDNoHin"><a href="#ref-3FDNoHin" role="doc-biblioref">10</a></span>; ]</li>
+<li>Zenodo e.g. <span class="citation" data-cites="Ypeevn8I">[<a href="#ref-Ypeevn8I" role="doc-biblioref">11</a>]</span></li>
+<li>Mendeley Data eg <span class="citation" data-cites="1CrTaYKc2">[<a href="#ref-1CrTaYKc2" role="doc-biblioref">12</a>]</span></li>
+<li>Maven https://repository.mygrid.org.uk/artifactory/ops/org/openphacts/data/</li>
+<li>DocumentObject https://github.com/binfalse/DocumentObjectCompiler/</li>
+<li>GitHub</li>
+<li>EOSC-Life (too early?)</li>
+</ul>
+<h4 id="nd-generation-ros">2nd generation ROs</h4>
+<ul>
+<li>DataCrate: https://github.com/UTS-eResearch/datacrate/blob/master/spec/1.0/data_crate_specification_v1.0.md#examples</li>
+<li>RO-Crate: https://data.research.uts.edu.au/examples/ro-crate/0.2/</li>
+</ul>
 <h2 id="conclusionsdiscussion" class="page_break_before">Conclusions/Discussion</h2>
 <h2 id="data-and-software-availability" class="page_break_before">Data (and Software) Availability</h2>
 <!--
@@ -96,7 +127,78 @@ http://casrai.org/credit
 <h2 id="references" class="page_break_before">References</h2>
 <!-- Explicitly insert bibliography here -->
 <div id="refs" role="doc-bibliography">
-
+<div id="ref-vGs0hZI">
+<p>1. <strong>COMBINE archive and OMEX format: one file to share all information to reproduce a modeling project</strong><br />
+Frank T Bergmann, Richard Adams, Stuart Moodie, Jonathan Cooper, Mihai Glont, Martin Golebiewski, Michael Hucka, Camille Laibe, Andrew K Miller, David P Nickerson, … Nicolas Le Novère<br />
+<em>BMC Bioinformatics</em> (2014-12) <a href="https://doi.org/gb8wc5">https://doi.org/gb8wc5</a><br />
+DOI: <a href="https://doi.org/10.1186/s12859-014-0369-z">10.1186/s12859-014-0369-z</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/25494900">25494900</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4272562">PMC4272562</a></p>
+</div>
+<div id="ref-FJly0f6l">
+<p>2. <strong>Ro-Combine-Archive</strong><br />
+Stian Soiland-Reyes, Matthew Gamble<br />
+<em>Zenodo</em> (2014-04-28) <a href="https://doi.org/gf5m6t">https://doi.org/gf5m6t</a><br />
+DOI: <a href="https://doi.org/10.5281/zenodo.10439">10.5281/zenodo.10439</a></p>
+</div>
+<div id="ref-13RYarvnd">
+<p>3. <strong>Applying linked data approaches to pharmacology: Architectural decisions and implementation</strong><br />
+Gray Alasdair J.G., Groth Paul, Loizou Antonis, Askjaer Sune, Brenninkmeijer Christian, Burger Kees, Chichester Christine, Evelo Chris T., Goble Carole, Harland Lee, … Williams Antony J.<br />
+<em>Semantic Web</em> (2014) <a href="https://doi.org/gf5m6j">https://doi.org/gf5m6j</a><br />
+DOI: <a href="https://doi.org/10.3233/SW-2012-0088">10.3233/sw-2012-0088</a></p>
+</div>
+<div id="ref-B4ffHizQ">
+<p>4. <strong>Preserving Reproducibility: Provenance and Executable Containers in DataONE Data Packages</strong><br />
+Bryce Mecum, Matthew B. Jones, Dave Vieglais, Craig Willis<br />
+<em>2018 IEEE 14th International Conference on e-Science (e-Science)</em> (2018-10) <a href="https://doi.org/gf5m6q">https://doi.org/gf5m6q</a><br />
+DOI: <a href="https://doi.org/10.1109/escience.2018.00019">10.1109/escience.2018.00019</a></p>
+</div>
+<div id="ref-xhtkrFLT">
+<p>5. <strong>CWL Viewer: the common workflow language viewer</strong><br />
+Mark Robinson, Stian Soiland-Reyes, Michael R. Crusoe, Carole Goble<br />
+<em>F1000Research</em> (2017) <a href="https://doi.org/cbq2">https://doi.org/cbq2</a><br />
+DOI: <a href="https://doi.org/10.7490/f1000research.1114375.1">10.7490/f1000research.1114375.1</a></p>
+</div>
+<div id="ref-dijZpInF">
+<p>6. <strong>Research Object Bundle 1.0</strong><br />
+Stian Soiland-Reyes, Matthew Gamble, Robert Haines<br />
+<em>Zenodo</em> (2014-11-05) <a href="https://doi.org/gf5m6k">https://doi.org/gf5m6k</a><br />
+DOI: <a href="https://doi.org/10.5281/zenodo.12586">10.5281/zenodo.12586</a></p>
+</div>
+<div id="ref-eV4QvWFF">
+<p>7. <strong>A workflow PROV-corpus based on taverna and wings</strong><br />
+Khalid Belhajjame, Jun Zhao, Daniel Garijo, Aleix Garrido, Stian Soiland-Reyes, Pinar Alper, Oscar Corcho<br />
+<em>Proceedings of the Joint EDBT/ICDT 2013 Workshops on - EDBT ’13</em> (2013) <a href="https://doi.org/gf5m6r">https://doi.org/gf5m6r</a><br />
+DOI: <a href="https://doi.org/10.1145/2457317.2457376">10.1145/2457317.2457376</a></p>
+</div>
+<div id="ref-YsYtVdV4">
+<p>8. <strong>Sharing interoperable workflow provenance: A review of best practices and their practical application in CWLProv</strong><br />
+Farah Zaib Khan, Stian Soiland-Reyes, Richard O. Sinnott, Andrew Lonie, Carole Goble, Michael R. Crusoe<br />
+<em>Zenodo</em> (2019-07-15) <a href="https://doi.org/gf5tg8">https://doi.org/gf5tg8</a><br />
+DOI: <a href="https://doi.org/10.5281/zenodo.1208477">10.5281/zenodo.1208477</a></p>
+</div>
+<div id="ref-Ut1RxNtm">
+<p>9. <strong>ROHub — A Digital Library of Research Objects Supporting Scientists Towards Reproducible Science</strong><br />
+Raúl Palma, Piotr Hołubowicz, Oscar Corcho, José Manuel Gómez-Pérez, Cezary Mazurek<br />
+<em>Communications in Computer and Information Science</em> (2014) <a href="https://doi.org/gf5m6p">https://doi.org/gf5m6p</a><br />
+DOI: <a href="https://doi.org/10.1007/978-3-319-12024-9_9">10.1007/978-3-319-12024-9_9</a></p>
+</div>
+<div id="ref-3FDNoHin">
+<p>10. <strong>Reproducible big data science: A case study in continuous FAIRness</strong><br />
+Ravi Madduri, Kyle Chard, Mike D’Arcy, Segun C. Jung, Alexis Rodriguez, Dinanath Sulakhe, Eric Deutsch, Cory Funk, Ben Heavner, Matthew Richards, … Ian Foster<br />
+<em>PLOS ONE</em> (2019-04-11) <a href="https://doi.org/gf5m6s">https://doi.org/gf5m6s</a><br />
+DOI: <a href="https://doi.org/10.1371/journal.pone.0213013">10.1371/journal.pone.0213013</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/30973881">30973881</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6459504">PMC6459504</a></p>
+</div>
+<div id="ref-Ypeevn8I">
+<p>11. <strong>W2Share Case Study: Workflow Research Object (Wro)</strong><br />
+Lucas Carvalho, Claudia Bauzer Medeiros<br />
+<em>Zenodo</em> (2018-10-18) <a href="https://doi.org/gf5m6m">https://doi.org/gf5m6m</a><br />
+DOI: <a href="https://doi.org/10.5281/zenodo.1465897">10.5281/zenodo.1465897</a></p>
+</div>
+<div id="ref-1CrTaYKc2">
+<p>12. <strong>CWL run of Alignment Workflow (CWLProv 0.6.0 Research Object)</strong><br />
+Stian Soiland-Reyes<br />
+<em>Mendeley</em> (2018-12-04) <a href="https://doi.org/gf5m6h">https://doi.org/gf5m6h</a><br />
+DOI: <a href="https://doi.org/10.17632/6wtpgr3kbj.1">10.17632/6wtpgr3kbj.1</a></p>
+</div>
 </div>
 <!-- default theme -->
 

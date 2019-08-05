@@ -2,7 +2,7 @@
 author-meta:
 - Stian Soiland-Reyes
 - Paul Groth
-date-meta: '2019-08-01'
+date-meta: '2019-08-05'
 keywords:
 - research object
 - linked data
@@ -19,10 +19,10 @@ title: 'RO-Index: A survey of Research Object usage'
 
 <small><em>
 This manuscript
-([permalink](https://stain.github.io/ro-index-paper/v/4c32e7e111b2740bfd6bd1af6e0ca8d8c8adc06b/))
+([permalink](https://stain.github.io/ro-index-paper/v/b3d3e2351d54f5d4bc0260a05736a5566b3c9386/))
 was automatically generated
-from [stain/ro-index-paper@4c32e7e](https://github.com/stain/ro-index-paper/tree/4c32e7e111b2740bfd6bd1af6e0ca8d8c8adc06b)
-on August 1, 2019.
+from [stain/ro-index-paper@b3d3e23](https://github.com/stain/ro-index-paper/tree/b3d3e2351d54f5d4bc0260a05736a5566b3c9386)
+on August 5, 2019.
 </em></small>
 
 ## Authors
@@ -59,6 +59,8 @@ on August 1, 2019.
 
 ## Introduction {.page_break_before}
 
+# 
+
 ## Protocol {.page_break_before}
 
 <!-- From https://f1000research.com/for-authors/article-guidelines/study-protocols
@@ -80,6 +82,37 @@ Ethics policies: All research must have been conducted within an appropriate eth
 
 
  -->
+### Data sources
+
+#### Proto-research objects
+
+* [myExperiment packs](https://www.myexperiment.org/packs)
+* [COMBINE archives](https://combinearchive.org/index/) [@vGs0hZI; @FJly0f6l]
+* VoID datasets http://www.openphacts.org/specs/2013/WD-datadesc-20130912/ [@vGs0hZI; @13RYarvnd]
+* DataONE Data packages [@B4ffHizQ]
+
+#### ORE-based research objects
+
+* CWL Viewer https://view.commonwl.org/workflows [@xhtkrFLT]
+* RO Bundle https://researchobject.github.io/specifications/bundle/ [@dijZpInF] 
+* Workflow PROV corpus [@eV4QvWFF]
+* CWLProv 10.1093/gigascience/giz095 aka [@YsYtVdV4]
+* http://www.rohub.org/ [@Ut1RxNtm]
+* http://rohub.linkeddata.es/
+* SEEK: https://fairdomhub.org/investigations
+* BDBags with MinID http://minid.bd2k.org/ [@3FDNoHin; ]
+* Zenodo e.g. [@Ypeevn8I]
+* Mendeley Data eg [@1CrTaYKc2]
+* Maven https://repository.mygrid.org.uk/artifactory/ops/org/openphacts/data/
+* DocumentObject https://github.com/binfalse/DocumentObjectCompiler/
+* GitHub 
+* EOSC-Life (too early?)
+
+#### 2nd generation ROs
+
+* DataCrate: https://github.com/UTS-eResearch/datacrate/blob/master/spec/1.0/data_crate_specification_v1.0.md#examples
+* RO-Crate: https://data.research.uts.edu.au/examples/ro-crate/0.2/
+
 
 
 ## Conclusions/Discussion {.page_break_before}
