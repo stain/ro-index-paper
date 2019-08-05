@@ -19,9 +19,9 @@ title: 'RO-Index: A survey of Research Object usage'
 
 <small><em>
 This manuscript
-([permalink](https://stain.github.io/ro-index-paper/v/136c27872d2de272b4175d66513c42a7ef2d541f/))
+([permalink](https://stain.github.io/ro-index-paper/v/4dfb6d2d1b5960f29768312cffc86dfea40cba2f/))
 was automatically generated
-from [stain/ro-index-paper@136c278](https://github.com/stain/ro-index-paper/tree/136c27872d2de272b4175d66513c42a7ef2d541f)
+from [stain/ro-index-paper@4dfb6d2](https://github.com/stain/ro-index-paper/tree/4dfb6d2d1b5960f29768312cffc86dfea40cba2f)
 on August 5, 2019.
 </em></small>
 
@@ -112,12 +112,17 @@ It is predicted that these searches will yield duplicates, but will be used to f
 
 Finally we will consider broadly Open Data repositories of file archives (e.g. ZIP, tar.gz) to inspect for the presence of a _manifest_-like file (e.g. `/manifest.rdf`). For practical reasons this search will be restricted to a smaller selection of public repositories and formats, e.g. [Zenodo (20k *.zip Datasets)](https://zenodo.org/search?page=1&size=20&q=&file_type=zip&type=dataset), [FigShare ("zip" Datasets)](https://figshare.com/search?q=zip&searchMode=1&types=3), [Mendeley Data "zip" File Set](https://data.mendeley.com/datasets?query=zip&page=0&type=FILE_SET&repositoryType=NON_ARTICLE_BASED_REPOSITORY&source=MENDELEY_DATA).
 
-Firstly a list of trigger filenames will be developed:
+A list of trigger filename patterns will be developed, including:
 
-* `.ro/manifest.json` from [Research Object Bundle](https://w3id.org/bundle/) [@dijZpInF] 
-* `metadata/manifest.json` from [RO-Bagit](https://w3id.org/ro/bagit) and BDBag
+* `META-INF/manifest.xml` and `META-INF/container.xml` from [EPUB Open Container Format](https://www.w3.org/publishing/epub3/epub-ocf.html)
+* `manifest.xml` from [COMBINE archives](http://co.mbine.org/documents/archive) [@vGs0hZI]
+* `.ro/manifest.rdf` from [RO Hub](http://www.rohub.org/) [@Ut1RxNtm]
+* `.ro/manifest.json`  from [Research Object Bundle](https://w3id.org/bundle/) [@dijZpInF] 
+* `metadata/manifest.json` from [RO-Bagit](https://w3id.org/ro/bagit) and BDBag [@3FDNoHin; ]
+* `CATALOG.json` from [DataCrate](https://github.com/UTS-eResearch/datacrate) [@1Hsf35Rx7]
+* `ro-crate-metadata.jsonld` from [RO-Crate](http://researchobject.org/ro-crate/) [@19ead6wt6]
 
-It is predicted that most of the ZIP files 
+It is predicted that most of the archive files will _not_ contain such a manifest, therefore they can be inspected "on the fly" by the crawler without intermediate storage, to first detect a short-list of archives that contain a manifest-like file. These can then be downloaded in full for further inspection. File-name matching will inspect potential sub-directories, e.g. to detect `nested/data/manifest.xml`, but will classify these archives differently from direct matches.
 
 ### Candidate sources
 
@@ -220,6 +225,10 @@ For GDPR purposes the _Data Controller_ is The University of Manchester, data su
 * DataCrate: https://github.com/UTS-eResearch/datacrate/blob/master/spec/1.0/data_crate_specification_v1.0.md#examples
 * RO-Crate: https://data.research.uts.edu.au/examples/ro-crate/0.2/
 
+
+### Manifest formats
+
+A key characteristic of a Research Object is the presence of a _manifest_ that describes and relates the content. However, multiple potential formats and conventions have emerged for how to serialize such a format.
 
 
 ## Conclusions/Discussion {.page_break_before}
