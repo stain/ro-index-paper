@@ -2,7 +2,7 @@
 author-meta:
 - Stian Soiland-Reyes
 - Paul Groth
-date-meta: '2019-08-05'
+date-meta: '2019-08-12'
 keywords:
 - research object
 - linked data
@@ -19,10 +19,10 @@ title: 'RO-Index: A survey of Research Object usage'
 
 <small><em>
 This manuscript
-([permalink](https://stain.github.io/ro-index-paper/v/4dfb6d2d1b5960f29768312cffc86dfea40cba2f/))
+([permalink](https://stain.github.io/ro-index-paper/v/af26ee81d0aae77dca4cb5e83fcaa07ef3765757/))
 was automatically generated
-from [stain/ro-index-paper@4dfb6d2](https://github.com/stain/ro-index-paper/tree/4dfb6d2d1b5960f29768312cffc86dfea40cba2f)
-on August 5, 2019.
+from [stain/ro-index-paper@af26ee8](https://github.com/stain/ro-index-paper/tree/af26ee81d0aae77dca4cb5e83fcaa07ef3765757)
+on August 12, 2019.
 </em></small>
 
 ## Authors
@@ -205,30 +205,37 @@ For GDPR purposes the _Data Controller_ is The University of Manchester, data su
 
 #### ORE-based research objects
 
-* CWL Viewer https://view.commonwl.org/workflows [@xhtkrFLT]
-* RO Bundle https://researchobject.github.io/specifications/bundle/ [@dijZpInF] 
+* CWL Viewer <https://view.commonwl.org/workflows> [@xhtkrFLT]
+* RO Bundle <https://w3id.org/bundle/2014-11-05/> [@dijZpInF] 
 * Workflow PROV corpus [@eV4QvWFF]
 * CWLProv 10.1093/gigascience/giz095 aka [@YsYtVdV4]
-* http://www.rohub.org/ [@Ut1RxNtm]
-* http://rohub.linkeddata.es/
-* SEEK: https://fairdomhub.org/investigations
-* BDBags with MinID http://minid.bd2k.org/ [@3FDNoHin; ]
+* <http://www.rohub.org/> [@Ut1RxNtm]
+* <http://rohub.linkeddata.es/>
+* SEEK: <https://fairdomhub.org/investigations>
+* BDBags with [MinID](http://minid.bd2k.org/) [@3FDNoHin; ]
 * Zenodo e.g. [@Ypeevn8I]
 * Mendeley Data eg [@1CrTaYKc2]
-* Maven https://repository.mygrid.org.uk/artifactory/ops/org/openphacts/data/
-* DocumentObject https://github.com/binfalse/DocumentObjectCompiler/
-* GitHub 
+* Maven <https://repository.mygrid.org.uk/artifactory/ops/org/openphacts/data/>
+* DocumentObject <https://github.com/binfalse/DocumentObjectCompiler/>
+* GitHub search
 * EOSC-Life (too early?)
+
+### Software/container-based research objects
+
+* <https://sci-f.github.io/> [@OMB8E9Yi]
+* <https://frictionlessdata.io/specs/data-package/>
 
 #### 2nd generation ROs
 
-* DataCrate: https://github.com/UTS-eResearch/datacrate/blob/master/spec/1.0/data_crate_specification_v1.0.md#examples
-* RO-Crate: https://data.research.uts.edu.au/examples/ro-crate/0.2/
+* DataCrate: <https://github.com/UTS-eResearch/datacrate/blob/master/spec/1.0/data_crate_specification_v1.0.md#examples>
+* RO-Crate: <https://data.research.uts.edu.au/examples/ro-crate/0.2/>
+
 
 
 ### Manifest formats
 
-A key characteristic of a Research Object is the presence of a _manifest_ that describes and relates the content. However, multiple potential formats and conventions have emerged for how to serialize such a format.
+A key characteristic of a Research Object is the presence of a _manifest_ that describes and relates the content. However, multiple potential formats and conventions have emerged for how to serialize such a format. (..)
+
 
 
 ## Conclusions/Discussion {.page_break_before}
