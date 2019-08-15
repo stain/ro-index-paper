@@ -2,7 +2,7 @@
 author-meta:
 - Stian Soiland-Reyes
 - Paul Groth
-date-meta: '2019-08-12'
+date-meta: '2019-08-15'
 keywords:
 - research object
 - linked data
@@ -19,10 +19,10 @@ title: 'RO-Index: A survey of Research Object usage'
 
 <small><em>
 This manuscript
-([permalink](https://stain.github.io/ro-index-paper/v/af26ee81d0aae77dca4cb5e83fcaa07ef3765757/))
+([permalink](https://stain.github.io/ro-index-paper/v/8137a40b4a446f4492928d1e368b8cfef29e9ed0/))
 was automatically generated
-from [stain/ro-index-paper@af26ee8](https://github.com/stain/ro-index-paper/tree/af26ee81d0aae77dca4cb5e83fcaa07ef3765757)
-on August 12, 2019.
+from [stain/ro-index-paper@8137a40](https://github.com/stain/ro-index-paper/tree/8137a40b4a446f4492928d1e368b8cfef29e9ed0)
+on August 15, 2019.
 </em></small>
 
 ## Authors
@@ -230,11 +230,27 @@ For GDPR purposes the _Data Controller_ is The University of Manchester, data su
 * DataCrate: <https://github.com/UTS-eResearch/datacrate/blob/master/spec/1.0/data_crate_specification_v1.0.md#examples>
 * RO-Crate: <https://data.research.uts.edu.au/examples/ro-crate/0.2/>
 
-
-
 ### Manifest formats
 
 A key characteristic of a Research Object is the presence of a _manifest_ that describes and relates the content. However, multiple potential formats and conventions have emerged for how to serialize such a format. (..)
+
+### Proposed workflow
+
+The overall data gathering workflow is envisioned as:
+
+1. Traverse repository (or one of its sub-sections) using API like [OAI-PMH](http://www.openarchives.org/OAI/2.0/openarchivesprotocol.htm)
+2. Filter for entries that have an archive-like file type (e.g. ZIP, tar.gz)
+3. Retrieve entry's Datacite-like metadata from repository (e.g. DOI, author, license)
+3. Start downloading archive
+4. Stream archive though a utility like [sunzip](https://github.com/madler/sunzip) to list filenames within
+5. Record filenames mapped to identifier
+6. Select entries which have a manifest-like file in list
+7. Re-download selected archives
+8. Extract manifest(s) from archives
+9. Classify manifests based on format and vocabulary (e.g. RDF/XML using ORE-OAI)
+10. Convert manifests to a unified format/vocabulary (e.g. JSON-LD using RO-Crate)
+11. Record provenance of data gathering
+12. Populate quad store (e.g. Apache Jena) with converted manifests
 
 
 
