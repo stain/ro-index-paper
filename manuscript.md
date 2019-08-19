@@ -19,9 +19,9 @@ title: 'RO-Index: A survey of Research Object usage'
 
 <small><em>
 This manuscript
-([permalink](https://stain.github.io/ro-index-paper/v/7db09b3eed6838218d009a86ebcc433bade05ca1/))
+([permalink](https://stain.github.io/ro-index-paper/v/1b796c8350802207c815fb8a07c5d411987be0e1/))
 was automatically generated
-from [stain/ro-index-paper@7db09b3](https://github.com/stain/ro-index-paper/tree/7db09b3eed6838218d009a86ebcc433bade05ca1)
+from [stain/ro-index-paper@1b796c8](https://github.com/stain/ro-index-paper/tree/1b796c8350802207c815fb8a07c5d411987be0e1)
 on August 19, 2019.
 </em></small>
 
@@ -54,6 +54,30 @@ on August 19, 2019.
 
 ## Abstract
 
+> This manuscript is **work in progress** and (for now) follows the style of a [Study Protocol](https://f1000research.com/for-authors/article-guidelines/study-protocols) for [F1000Research Registered Reports](https://f1000research.com/for-authors/article-guidelines/registered-reports)
+
+
+For this study we aim to build **RO-Index**, a broad and comprehensive corpus of Research Objects found "in the wild". The proposed methodology follows multiple strands to find the "breeding grounds" of research objects and further describes how Research Objects are selected for inclusion, along with post-processing to build the corpus. 
+
+The corpus of Research Objects will primarily be distributed as Open Data, including:
+
+* Identifiers and access URLs
+* Extracted manifests and annotation files
+* Checksums/references for external data
+* Metadata from repository (e.g. Datacite XML)
+* Provenance of data gathering and post-processing
+
+Research Objects that cannot be redistributed (e.g. unknown license) will only be examined for aggregates.
+
+A brief set of qualitative and quantitative analytics will then be performed across the overall corpus, in particular to address research questions like:
+
+* Where are Research Objects published?
+* Which scientific domains produce Research Objects?
+* What serializations are used for making Research Objects?
+* What vocabularies are used to describe Research Objects and their content?
+* What type of resources to Research Objects contain?
+* What kinds of life cycles do Research Objects follow?
+
 
 
 
@@ -81,7 +105,6 @@ Please include a clear rationale for the study, as well as a detailed descriptio
 Ethics policies: All research must have been conducted within an appropriate ethical framework. Details of approval by the authors’ institution or an ethics committee must be provided in the Methods section. Please refer to the detailed ’Ethics’ section in our editorial policies for more information.
  -->
 
-For this study we aim to build **RO-Index**, a broad and comprehensive corpus of Research Objects found "in the wild". The proposed methodology follows multiple strands to find the "breeding grounds" of research objects and describes how Research Objects are selected for inclusion in the corpus.
 
 ### Finding Research Objects
 

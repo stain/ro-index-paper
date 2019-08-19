@@ -23,13 +23,35 @@
 <header id="title-block-header">
 <h1 class="title">RO-Index: A survey of Research Object usage</h1>
 </header>
-<p><small><em> This manuscript (<a href="https://stain.github.io/ro-index-paper/v/7db09b3eed6838218d009a86ebcc433bade05ca1/">permalink</a>) was automatically generated from <a href="https://github.com/stain/ro-index-paper/tree/7db09b3eed6838218d009a86ebcc433bade05ca1">stain/ro-index-paper@7db09b3</a> on August 19, 2019. </em></small></p>
+<p><small><em> This manuscript (<a href="https://stain.github.io/ro-index-paper/v/1b796c8350802207c815fb8a07c5d411987be0e1/">permalink</a>) was automatically generated from <a href="https://github.com/stain/ro-index-paper/tree/1b796c8350802207c815fb8a07c5d411987be0e1">stain/ro-index-paper@1b796c8</a> on August 19, 2019. </em></small></p>
 <h2 id="authors">Authors</h2>
 <ul>
 <li><p><strong>Stian Soiland-Reyes</strong><br> <img src="images/orcid.svg" alt="ORCID icon" class="inline_icon" /> <a href="https://orcid.org/0000-0001-9842-9718">0000-0001-9842-9718</a> · <img src="images/github.svg" alt="GitHub icon" class="inline_icon" /> <a href="https://github.com/stain">stain</a> · <img src="images/twitter.svg" alt="Twitter icon" class="inline_icon" /> <a href="https://twitter.com/soilandreyes">soilandreyes</a><br> <small> Department of Computer Science, The University of Manchester, UK; Informatics Institute, Faculty of Science, University of Amsterdam, NL · Funded by BioExcel-2 (European Commission H2020-INFRAEDI-02-2018-823830) </small></p></li>
 <li><p><strong>Paul Groth</strong><br> <img src="images/orcid.svg" alt="ORCID icon" class="inline_icon" /> <a href="https://orcid.org/0000-0003-0183-6910">0000-0003-0183-6910</a> · <img src="images/github.svg" alt="GitHub icon" class="inline_icon" /> <a href="https://github.com/pgroth">pgroth</a><br> <small> Informatics Institute, Faculty of Science, University of Amsterdam, NL </small></p></li>
 </ul>
 <h2 id="abstract">Abstract</h2>
+<blockquote>
+<p>This manuscript is <strong>work in progress</strong> and (for now) follows the style of a <a href="https://f1000research.com/for-authors/article-guidelines/study-protocols">Study Protocol</a> for <a href="https://f1000research.com/for-authors/article-guidelines/registered-reports">F1000Research Registered Reports</a></p>
+</blockquote>
+<p>For this study we aim to build <strong>RO-Index</strong>, a broad and comprehensive corpus of Research Objects found “in the wild”. The proposed methodology follows multiple strands to find the “breeding grounds” of research objects and further describes how Research Objects are selected for inclusion, along with post-processing to build the corpus.</p>
+<p>The corpus of Research Objects will primarily be distributed as Open Data, including:</p>
+<ul>
+<li>Identifiers and access URLs</li>
+<li>Extracted manifests and annotation files</li>
+<li>Checksums/references for external data</li>
+<li>Metadata from repository (e.g. Datacite XML)</li>
+<li>Provenance of data gathering and post-processing</li>
+</ul>
+<p>Research Objects that cannot be redistributed (e.g. unknown license) will only be examined for aggregates.</p>
+<p>A brief set of qualitative and quantitative analytics will then be performed across the overall corpus, in particular to address research questions like:</p>
+<ul>
+<li>Where are Research Objects published?</li>
+<li>Which scientific domains produce Research Objects?</li>
+<li>What serializations are used for making Research Objects?</li>
+<li>What vocabularies are used to describe Research Objects and their content?</li>
+<li>What type of resources to Research Objects contain?</li>
+<li>What kinds of life cycles do Research Objects follow?</li>
+</ul>
 <h2 id="introduction">Introduction</h2>
 <h1 id="section"></h1>
 <h2 id="protocol">Protocol</h2>
@@ -50,7 +72,6 @@ Please include a clear rationale for the study, as well as a detailed descriptio
 
 Ethics policies: All research must have been conducted within an appropriate ethical framework. Details of approval by the authors’ institution or an ethics committee must be provided in the Methods section. Please refer to the detailed ’Ethics’ section in our editorial policies for more information.
  -->
-<p>For this study we aim to build <strong>RO-Index</strong>, a broad and comprehensive corpus of Research Objects found “in the wild”. The proposed methodology follows multiple strands to find the “breeding grounds” of research objects and describes how Research Objects are selected for inclusion in the corpus.</p>
 <h3 id="finding-research-objects">Finding Research Objects</h3>
 <p>One goal of this work is to determine what kind of artifacts, in practice, can be considered a <em>research object</em>. For the purpose of building a corpus we need to have both inclusion and exclusion criteria.</p>
 <p>The foundational article on the RO concept is <span class="citation" data-cites="sRYUCzCq">[<a href="#ref-sRYUCzCq" role="doc-biblioref">1</a>]</span> and its workshop predecessor <span class="citation" data-cites="14U5XT313">[<a href="#ref-14U5XT313" role="doc-biblioref">2</a>]</span>. The Research Object community has maintained lists of <a href="http://www.researchobject.org/initiative/">initiatives</a> and <a href="http://www.researchobject.org/scopes/">Research Object profiles</a> which provide curated, although potentially biased, collections of Research Object approaches and implementations.</p>
