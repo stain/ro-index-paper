@@ -1,4 +1,4 @@
-# Automated scholarly manuscripts on GitHub
+# RO-Index: A survey of Research Object usage
 
 <!-- usage note: edit the H1 title above to personalize the manuscript -->
 
@@ -10,8 +10,21 @@
 
 <!-- usage note: edit this section. -->
 
-This repository is a template manuscript (a.k.a. rootstock).
-Actual manuscript instances will clone this repository (see [`SETUP.md`](SETUP.md)) and replace this paragraph with a description of their manuscript.
+This is the automated scholarly manuscript **RO-Index: A survey of Research Object usage** and related analytical source code.
+
+> For this study we aim to build **RO-Index**, a broad and comprehensive corpus 
+> of [Research Objects](http://www.researchobject.org/) found "in the wild". 
+> The proposed methodology follows multiple strands to find the 
+> "breeding grounds" of research objects and describes how 
+> Research Objects are selected for inclusion in the corpus.
+
+This manuscript is **work in progress** and (for now) follows the style of a [Study Protocol](https://f1000research.com/for-authors/article-guidelines/study-protocols) for [F1000Research Registered Reports](https://f1000research.com/for-authors/article-guidelines/registered-reports) - although it may be 
+
+## Contributing feedback
+
+Please [raise an issue](https://github.com/stain/ro-index-paper/issues) or a [pull request](https://github.com/stain/ro-index-paper/pulls) using GitHub for any suggestions, comments, additions and corrections. Any non-trivial contributions will be recognized as authorship, so it is preferable if you include your [ORCID](https://orcid.org/) in the issue description.
+
+Any received contributions are assumed to be covered by the [manuscript and/or code license](#license).
 
 ## Manubot
 
@@ -37,6 +50,7 @@ The directories are as follows:
 + [`build`](build) contains commands and tools for building the manuscript.
 + [`ci`](ci) contains files necessary for deployment via continuous integration.
   For the CI configuration, see [`.travis.yml`](.travis.yml).
++ [`code`](code) contains scripts/workflow for data gathering and analytics.
 
 ### Local execution
 
@@ -96,27 +110,32 @@ We encourage users to openly license their manuscripts, which is the default as 
 -->
 
 [![License: CC BY 4.0](https://img.shields.io/badge/License%20All-CC%20BY%204.0-lightgrey.svg)](http://creativecommons.org/licenses/by/4.0/)
-[![License: CC0 1.0](https://img.shields.io/badge/License%20Parts-CC0%201.0-lightgrey.svg)](https://creativecommons.org/publicdomain/zero/1.0/)
+[![License: LICENSE-Apache-2.0](https://img.shields.io/badge/license-Apache--2.0-blue)](https://www.apache.org/licenses/LICENSE-2.0)
 
-Except when noted otherwise, the entirety of this repository is licensed under a CC BY 4.0 License ([`LICENSE.md`](LICENSE.md)), which allows reuse with attribution.
-Please attribute by linking to https://github.com/stain/ro-index-paper.
+The manuscript-part of this repository is licensed under a CC BY 4.0 License ([`LICENSE.md`](LICENSE.md)), which allows reuse with attribution.
+Please attribute by linking to <https://github.com/stain/ro-index-paper> and <https://orcid.org/0000-0001-9842-9718>.
 
-Since CC BY is not ideal for code and data, certain repository components are also released under the CC0 1.0 public domain dedication ([`LICENSE-CC0.md`](LICENSE-CC0.md)).
-All files matched by the following glob patterns are dual licensed under CC BY 4.0 and CC0 1.0:
+Since CC BY is not ideal for code and data, certain repository components are also released under the Apache Software License. ([`LICENSE-Apache-2.0.md`](LICENSE-Apache-2.0.md)).
+All files matched by the following glob patterns are dual licensed under CC BY 4.0 and Apache-2.0:
 
++ `code/*`
 + `*.sh`
 + `*.py`
++ `*.cwl`
 + `*.yml` / `*.yaml`
 + `*.json`
 + `*.bib`
 + `*.tsv`
 + `.gitignore`
 
-All other files are only available under CC BY 4.0, including:
+All other manuscript files are only available under CC BY 4.0, including:
 
 + `*.md`
 + `*.html`
 + `*.pdf`
 + `*.docx`
++ `*.svg`
++ `*.png`
+
 
 Please open [an issue](https://github.com/stain/ro-index-paper/issues) for any question related to licensing.
