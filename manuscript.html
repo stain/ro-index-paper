@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
   <meta name="author" content="Stian Soiland-Reyes" />
   <meta name="author" content="Paul Groth" />
-  <meta name="dcterms.date" content="2019-08-15" />
+  <meta name="dcterms.date" content="2019-08-19" />
   <meta name="keywords" content="research object, linked data, scholarly communication, null" />
   <title>RO-Index: A survey of Research Object usage</title>
   <style>
@@ -23,7 +23,7 @@
 <header id="title-block-header">
 <h1 class="title">RO-Index: A survey of Research Object usage</h1>
 </header>
-<p><small><em> This manuscript (<a href="https://stain.github.io/ro-index-paper/v/8137a40b4a446f4492928d1e368b8cfef29e9ed0/">permalink</a>) was automatically generated from <a href="https://github.com/stain/ro-index-paper/tree/8137a40b4a446f4492928d1e368b8cfef29e9ed0">stain/ro-index-paper@8137a40</a> on August 15, 2019. </em></small></p>
+<p><small><em> This manuscript (<a href="https://stain.github.io/ro-index-paper/v/6645610bab8fb62755bb49478e5910a796fc454c/">permalink</a>) was automatically generated from <a href="https://github.com/stain/ro-index-paper/tree/6645610bab8fb62755bb49478e5910a796fc454c">stain/ro-index-paper@6645610</a> on August 19, 2019. </em></small></p>
 <h2 id="authors">Authors</h2>
 <ul>
 <li><p><strong>Stian Soiland-Reyes</strong><br> <img src="images/orcid.svg" alt="ORCID icon" class="inline_icon" /> <a href="https://orcid.org/0000-0001-9842-9718">0000-0001-9842-9718</a> · <img src="images/github.svg" alt="GitHub icon" class="inline_icon" /> <a href="https://github.com/stain">stain</a> · <img src="images/twitter.svg" alt="Twitter icon" class="inline_icon" /> <a href="https://twitter.com/soilandreyes">soilandreyes</a><br> <small> Department of Computer Science, The University of Manchester, UK; Informatics Institute, Faculty of Science, University of Amsterdam, NL · Funded by BioExcel-2 (European Commission H2020-INFRAEDI-02-2018-823830) </small></p></li>
@@ -191,10 +191,15 @@ Ethics policies: All research must have been conducted within an appropriate eth
 <li>Re-download selected archives</li>
 <li>Extract manifest(s) from archives</li>
 <li>Classify manifests based on format and vocabulary (e.g. RDF/XML using ORE-OAI)</li>
-<li>Convert manifests to a unified format/vocabulary (e.g. JSON-LD using RO-Crate)</li>
 <li>Record provenance of data gathering</li>
-<li>Populate quad store (e.g. Apache Jena) with converted manifests</li>
 </ol>
+<p>Post-processing workflow:</p>
+<ol type="1">
+<li>Convert manifests to a unified RDF format (e.g. N-Triples)</li>
+<li>Populate quad store (e.g. Apache Jena) with converted manifests</li>
+<li></li>
+</ol>
+<p>https://zenodo.org/communities/ro/?page=1&amp;size=20</p>
 <h2 id="conclusionsdiscussion" class="page_break_before">Conclusions/Discussion</h2>
 <h2 id="data-and-software-availability" class="page_break_before">Data (and Software) Availability</h2>
 <!--

@@ -2,7 +2,7 @@
 author-meta:
 - Stian Soiland-Reyes
 - Paul Groth
-date-meta: '2019-08-15'
+date-meta: '2019-08-19'
 keywords:
 - research object
 - linked data
@@ -19,10 +19,10 @@ title: 'RO-Index: A survey of Research Object usage'
 
 <small><em>
 This manuscript
-([permalink](https://stain.github.io/ro-index-paper/v/8137a40b4a446f4492928d1e368b8cfef29e9ed0/))
+([permalink](https://stain.github.io/ro-index-paper/v/6645610bab8fb62755bb49478e5910a796fc454c/))
 was automatically generated
-from [stain/ro-index-paper@8137a40](https://github.com/stain/ro-index-paper/tree/8137a40b4a446f4492928d1e368b8cfef29e9ed0)
-on August 15, 2019.
+from [stain/ro-index-paper@6645610](https://github.com/stain/ro-index-paper/tree/6645610bab8fb62755bb49478e5910a796fc454c)
+on August 19, 2019.
 </em></small>
 
 ## Authors
@@ -248,9 +248,19 @@ The overall data gathering workflow is envisioned as:
 7. Re-download selected archives
 8. Extract manifest(s) from archives
 9. Classify manifests based on format and vocabulary (e.g. RDF/XML using ORE-OAI)
-10. Convert manifests to a unified format/vocabulary (e.g. JSON-LD using RO-Crate)
-11. Record provenance of data gathering
-12. Populate quad store (e.g. Apache Jena) with converted manifests
+10. Record provenance of data gathering
+
+Post-processing workflow:
+
+1. Convert manifests to a unified RDF format (e.g. N-Triples)
+2. Populate quad store (e.g. Apache Jena) with converted manifests
+3. 
+
+
+https://zenodo.org/communities/ro/?page=1&size=20
+
+
+
 
 
 
