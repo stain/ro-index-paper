@@ -10,7 +10,7 @@
 
 <!-- usage note: edit this section. -->
 
-This is the automated scholarly manuscript **RO-Index: A survey of Research Object usage** and related analytical source code.
+This is the automated scholarly manuscript [RO-Index: A survey of Research Object usage](https://stain.github.io/ro-index-paper/) and related analytical [source code](code).
 
 > For this study we aim to build **RO-Index**, a broad and comprehensive corpus 
 > of [Research Objects](http://www.researchobject.org/) found "in the wild". 
