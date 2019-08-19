@@ -115,7 +115,10 @@ We encourage users to openly license their manuscripts, which is the default as 
 The manuscript-part of this repository is licensed under a CC BY 4.0 License ([`LICENSE.md`](LICENSE.md)), which allows reuse with attribution.
 Please attribute by linking to <https://github.com/stain/ro-index-paper> and <https://orcid.org/0000-0001-9842-9718>.
 
-Since CC BY is not ideal for code and data, certain repository components are also released under the Apache Software License. ([`LICENSE-Apache-2.0.md`](LICENSE-Apache-2.0.md)).
+* Copyright (c) 2019 The University of Manchester, UK
+* Copyright (c) 2019 University of Amsterdam, The Netherlands
+
+Since CC BY is not ideal for code and data, certain repository components are also released under the [Apache Software License, version 2.0](https://www.apache.org/licenses/LICENSE-2.). ([`LICENSE-Apache-2.0.md`](LICENSE-Apache-2.0.md)).
 All files matched by the following glob patterns are dual licensed under CC BY 4.0 and Apache-2.0:
 
 + `code/*`
