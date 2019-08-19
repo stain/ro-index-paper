@@ -19,9 +19,9 @@ title: 'RO-Index: A survey of Research Object usage'
 
 <small><em>
 This manuscript
-([permalink](https://stain.github.io/ro-index-paper/v/6645610bab8fb62755bb49478e5910a796fc454c/))
+([permalink](https://stain.github.io/ro-index-paper/v/7db09b3eed6838218d009a86ebcc433bade05ca1/))
 was automatically generated
-from [stain/ro-index-paper@6645610](https://github.com/stain/ro-index-paper/tree/6645610bab8fb62755bb49478e5910a796fc454c)
+from [stain/ro-index-paper@7db09b3](https://github.com/stain/ro-index-paper/tree/7db09b3eed6838218d009a86ebcc433bade05ca1)
 on August 19, 2019.
 </em></small>
 
@@ -52,16 +52,16 @@ on August 19, 2019.
 
 
 
-## Abstract {.page_break_before}
+## Abstract
 
 
 
 
-## Introduction {.page_break_before}
+## Introduction
 
 # 
 
-## Protocol {.page_break_before}
+## Protocol
 
 <!-- From https://f1000research.com/for-authors/article-guidelines/study-protocols
 
@@ -264,11 +264,11 @@ https://zenodo.org/communities/ro/?page=1&size=20
 
 
 
-## Conclusions/Discussion {.page_break_before}
+## Conclusions/Discussion
 
 
 
-## Data (and Software) Availability {.page_break_before}
+## Data (and Software) Availability
 
 <!--
 From https://f1000research.com/for-authors/article-guidelines/study-protocols
@@ -288,7 +288,7 @@ Please note, information which can be used to directly identify participants sho
 
 -->
 
-## Author contributions {.page_break_before}
+## Author contributions
 
 <!--
 http://casrai.org/credit
@@ -309,14 +309,14 @@ http://casrai.org/credit
 * Writing – Original Draft Preparation: SSR
 * Writing – Review & Editing: 
 
-## Competing interests {.page_break_before}
+## Competing interests
 
-## Grant Information {.page_break_before}
+## Grant Information
 
 
 This work has been done as part of the BioExcel CoE ([www.bioexcel.eu](https://www.bioexcel.eu/)), a project funded by the European Union contracts [H2020-INFRAEDI-02-2018-823830](https://cordis.europa.eu/project/id/823830), [H2020-EINFRA-2015-1-675728](https://cordis.europa.eu/project/id/675728).
 
-## References {.page_break_before}
+## References
 
 <!-- Explicitly insert bibliography here -->
 <div id="refs"></div>
