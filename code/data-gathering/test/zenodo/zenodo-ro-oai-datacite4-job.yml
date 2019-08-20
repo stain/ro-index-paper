@@ -1,0 +1,28 @@
+#!/usr/bin/env cwltool
+
+cwl:tool: ../../tools/curl-get.cwl
+
+# See Also:
+# - Zenodo RO community <https://zenodo.org/communities/ro/>
+# - OAI-PMH protocol <http://www.openarchives.org/OAI/openarchivesprotocol.html>
+# - Harvesting Zenodo with OAI-PMH <https://developers.zenodo.org/#oai-pmh>
+# - Zenodo OAI-PMH metadata formats <https://developers.zenodo.org/#metadata-formats> 
+url: https://zenodo.org/oai2d?verb=ListRecords&set=user-ro&metadataPrefix=datacite4
+
+# See http://www.openarchives.org/OAI/openarchivesprotocol.html#HTTPResponseFormat
+acceptType: text/xml
+
+#https://developers.zenodo.org/#deposition-files
+
+#http://rdf.greggkellogg.net/distiller?command=serialize&format=rdfa&output_format=turtle&url=https:%2F%2Fzenodo.org%2Frecord%2F1215611
+#https://search.google.com/structured-data/testing-tool/u/0/#url=https%3A%2F%2Fzenodo.org%2Frecord%2F1215611
+#vs 
+#https://search.google.com/structured-data/testing-tool/u/0/#url=https%3A%2F%2Fzenodo.org%2Frecord%2F2632836
+#https://zenodo.org/record/1215611/export/json#.XVtQo_zTU5l
+#https://zenodo.org/record/1215611/export/schemaorg_jsonld#.XVtRJ_zTU5k
+
+### Need to go to:
+#https://zenodo.org/record/1215611/files/RunTimeResearchObject-f0b553d37e4255a3291393948f3e308bd88ed301.zip?download=1
+
+## simpler but no datacite
+#https://zenodo.org/oai2d?verb=ListIdentifiers&metadataPrefix=oai_datacite&set=user-ro
