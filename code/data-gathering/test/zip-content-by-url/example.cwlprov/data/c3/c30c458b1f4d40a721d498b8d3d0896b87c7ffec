@@ -1,0 +1,38 @@
+HTTP/1.1 302 Found
+Date: Tue, 20 Aug 2019 00:50:22 GMT
+Content-Type: text/html; charset=utf-8
+Transfer-Encoding: chunked
+Server: GitHub.com
+Status: 302 Found
+Vary: X-PJAX
+Location: https://codeload.github.com/stain/ro-index-paper/zip/38f2a711f9f115e92cea930398019c147e56ac5a
+Cache-Control: max-age=0, private
+Set-Cookie: has_recent_activity=1; path=/; expires=Tue, 20 Aug 2019 01:50:22 -0000
+Set-Cookie: logged_in=no; domain=.github.com; path=/; expires=Sat, 20 Aug 2039 00:50:22 -0000; secure; HttpOnly
+Set-Cookie: _gh_sess=YVZjWTd3aTUyT0RFaUxwaW5mYkY5VnJaa3FBMnFXcHM1Zi9MMlNUR0NqZWZrMHdRTVVDNjYrcUxFZ2tOV3ltMWdKK28vbGRubEJkMWhPRzFZRHd4elg5cHVZa0UyQWo4V2crRHlEaVc4VnhVS011QmJaNHBKZVdhRzR1UXRZMnV0UnhzcjcxQ0Jhc3pSWUxKazNQY0xjRzJGanJHaU5mUTBpU1JCeFZpVVB4N0Fjc3JYY2dwQmVkOXN1UHI1djdCTlVIekg1Mi9tTm1ndGpSVHY5dkw1QT09LS1SeCtHQWJCYVVwUWRibENWbFVWZ2d3PT0%3D--0743f38426127c71e38f5434a31550af99025c34; path=/; secure; HttpOnly
+X-Request-Id: 750bd6d0-3fa3-4ac3-aa00-466d2cb789aa
+Strict-Transport-Security: max-age=31536000; includeSubdomains; preload
+X-Frame-Options: deny
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+Expect-CT: max-age=2592000, report-uri="https://api.github.com/_private/browser/errors"
+Content-Security-Policy: default-src 'none'; base-uri 'self'; block-all-mixed-content; connect-src 'self' uploads.github.com www.githubstatus.com collector.githubapp.com api.github.com www.google-analytics.com github-cloud.s3.amazonaws.com github-production-repository-file-5c1aeb.s3.amazonaws.com github-production-upload-manifest-file-7fdce7.s3.amazonaws.com github-production-user-asset-6210df.s3.amazonaws.com wss://live.github.com; font-src github.githubassets.com; form-action 'self' github.com gist.github.com; frame-ancestors 'none'; frame-src render.githubusercontent.com; img-src 'self' data: github.githubassets.com identicons.github.com collector.githubapp.com github-cloud.s3.amazonaws.com *.githubusercontent.com; manifest-src 'self'; media-src 'none'; script-src github.githubassets.com; style-src 'unsafe-inline' github.githubassets.com
+Vary: Accept-Encoding
+X-GitHub-Request-Id: 9766:30765:1809D6:25F00E:5D5B43CE
+
+HTTP/1.1 200 OK
+Transfer-Encoding: chunked
+Access-Control-Allow-Origin: https://render.githubusercontent.com
+Content-Security-Policy: default-src 'none'; style-src 'unsafe-inline'; sandbox
+Strict-Transport-Security: max-age=31536000
+Vary: Authorization,Accept-Encoding
+X-Content-Type-Options: nosniff
+X-Frame-Options: deny
+X-XSS-Protection: 1; mode=block
+ETag: "38f2a711f9f115e92cea930398019c147e56ac5a"
+Content-Type: application/zip
+Content-Disposition: attachment; filename=ro-index-paper-38f2a711f9f115e92cea930398019c147e56ac5a.zip
+X-Geo-Block-List: 
+Date: Tue, 20 Aug 2019 00:50:22 GMT
+X-GitHub-Request-Id: 9A40:1CA3:3947:9F39:5D5B43CE
+

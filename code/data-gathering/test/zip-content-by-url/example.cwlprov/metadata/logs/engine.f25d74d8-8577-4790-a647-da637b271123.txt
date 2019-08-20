@@ -1,0 +1,56 @@
+[2019-08-20T00:50:13,844Z] [cwltool] /home/stain/miniconda3/bin/cwltool --provenance example ./zip-content-by-url-job.yml
+[2019-08-20T00:50:13,845Z] Resolved './zip-content-by-url-job.yml' to 'file:///home/stain/src/ro-index-paper/code/data-gathering/test/zip-content-by-url/zip-content-by-url-job.yml'
+[2019-08-20T00:50:21,067Z] [workflow ] start
+[2019-08-20T00:50:21,067Z] [workflow ] starting step fetch
+[2019-08-20T00:50:21,067Z] [step fetch] start
+[2019-08-20T00:50:21,272Z] [job fetch] /tmp/dw_mdef0$ docker \
+    run \
+    -i \
+    --volume=/tmp/dw_mdef0:/uagcGt:rw \
+    --volume=/tmp/jci1sugg:/tmp:rw \
+    --workdir=/uagcGt \
+    --read-only=true \
+    --log-driver=none \
+    --user=1000:1000 \
+    --rm \
+    --env=TMPDIR=/tmp \
+    --env=HOME=/uagcGt \
+    --cidfile=/tmp/_zy6j0e7/20190820015021-272085.cid \
+    appropriate/curl:3.1 \
+    curl \
+    --silent \
+    --show-error \
+    --fail \
+    --location \
+    --dump-header \
+    headers.txt \
+    --header \
+    'Accept: application/zip' \
+    https://github.com/stain/ro-index-paper/archive/38f2a711f9f115e92cea930398019c147e56ac5a.zip > /tmp/dw_mdef0/downloaded
+[2019-08-20T00:50:23,520Z] [job fetch] Max memory used: 0MiB
+[2019-08-20T00:50:23,530Z] [job fetch] completed success
+[2019-08-20T00:50:23,530Z] [step fetch] completed success
+[2019-08-20T00:50:23,531Z] [workflow ] starting step list
+[2019-08-20T00:50:23,531Z] [step list] start
+[2019-08-20T00:50:23,694Z] [job list] /tmp/edsycgki$ docker \
+    run \
+    -i \
+    --volume=/tmp/edsycgki:/uagcGt:rw \
+    --volume=/tmp/btqflv6y:/tmp:rw \
+    --volume=/tmp/dw_mdef0/downloaded:/var/lib/cwl/stgd6e1bd90-eaeb-4798-a268-7ab6ccccff86/downloaded:ro \
+    --workdir=/uagcGt \
+    --read-only=true \
+    --log-driver=none \
+    --user=1000:1000 \
+    --rm \
+    --env=TMPDIR=/tmp \
+    --env=HOME=/uagcGt \
+    --cidfile=/tmp/1nw7ansu/20190820015023-694067.cid \
+    stain/sunzip \
+    sunzip \
+    -l < /var/lib/cwl/stgd6e1bd90-eaeb-4798-a268-7ab6ccccff86/downloaded > /tmp/edsycgki/filenames.txt
+[2019-08-20T00:50:25,032Z] [job list] Max memory used: 0MiB
+[2019-08-20T00:50:25,035Z] [job list] completed success
+[2019-08-20T00:50:25,035Z] [step list] completed success
+[2019-08-20T00:50:25,036Z] [workflow ] completed success
+[2019-08-20T00:50:25,132Z] Final process status is success

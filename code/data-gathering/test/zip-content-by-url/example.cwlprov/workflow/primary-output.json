@@ -1,0 +1,24 @@
+{
+    "filenames": {
+        "location": "../data/ea/ea81a56a134293016cf9701b9198945f9a115e25",
+        "basename": "filenames.txt",
+        "nameroot": "filenames",
+        "nameext": ".txt",
+        "class": "File",
+        "checksum": "sha1$ea81a56a134293016cf9701b9198945f9a115e25",
+        "size": 5581,
+        "http://commonwl.org/cwltool#generation": 0,
+        "@id": "urn:uuid:7962c25b-6352-4161-bae4-49ee6873a9ca"
+    },
+    "headers": {
+        "location": "../data/c3/c30c458b1f4d40a721d498b8d3d0896b87c7ffec",
+        "basename": "headers.txt",
+        "nameroot": "headers",
+        "nameext": ".txt",
+        "class": "File",
+        "checksum": "sha1$c30c458b1f4d40a721d498b8d3d0896b87c7ffec",
+        "size": 2828,
+        "http://commonwl.org/cwltool#generation": 0,
+        "@id": "urn:uuid:03d151ab-ccec-427b-97d6-6f5bc67ff9f7"
+    }
+}
