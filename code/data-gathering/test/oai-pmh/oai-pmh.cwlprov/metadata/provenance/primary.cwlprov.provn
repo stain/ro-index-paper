@@ -1,0 +1,46 @@
+document
+  prefix wfprov <http://purl.org/wf4ever/wfprov#>
+  prefix wfdesc <http://purl.org/wf4ever/wfdesc#>
+  prefix cwlprov <https://w3id.org/cwl/prov#>
+  prefix foaf <http://xmlns.com/foaf/0.1/>
+  prefix schema <http://schema.org/>
+  prefix orcid <https://orcid.org/>
+  prefix id <urn:uuid:>
+  prefix data <urn:hash::sha1:>
+  prefix sha256 <nih:sha-256;>
+  prefix researchobject <arcp://uuid,9868917e-a8e5-4139-b960-639678f38bb6/>
+  prefix metadata <arcp://uuid,9868917e-a8e5-4139-b960-639678f38bb6/metadata/>
+  prefix provenance <arcp://uuid,9868917e-a8e5-4139-b960-639678f38bb6/metadata/provenance/>
+  prefix wf <arcp://uuid,9868917e-a8e5-4139-b960-639678f38bb6/workflow/packed.cwl#>
+  prefix input <arcp://uuid,9868917e-a8e5-4139-b960-639678f38bb6/workflow/primary-job.json#>
+  prefix wf4ever <http://purl.org/wf4ever/wf4ever#>
+  
+  agent(id:fcc0702d-b9c4-4b28-8bd3-734555f25909)
+  agent(id:c66d0476-ccdd-4e42-bc38-008d09acdfe6, [prov:type='wfprov:WorkflowEngine', prov:type='prov:SoftwareAgent', prov:label="cwltool 1.0.20190815141648"])
+  wasStartedBy(id:c66d0476-ccdd-4e42-bc38-008d09acdfe6, -, id:fcc0702d-b9c4-4b28-8bd3-734555f25909, 2019-08-20T17:52:44.867252)
+  activity(id:9868917e-a8e5-4139-b960-639678f38bb6, 2019-08-20T17:52:44.867291, -, [prov:type='wfprov:WorkflowRun', prov:label="Run of workflow/packed.cwl#main"])
+  wasAssociatedWith(id:9868917e-a8e5-4139-b960-639678f38bb6, id:c66d0476-ccdd-4e42-bc38-008d09acdfe6, wf:main)
+  wasStartedBy(id:9868917e-a8e5-4139-b960-639678f38bb6, -, id:c66d0476-ccdd-4e42-bc38-008d09acdfe6, 2019-08-20T17:52:44.867384)
+  entity(wf:main, [prov:type='prov:Plan', prov:type='wfdesc:Process', prov:label="Prospective provenance"])
+  entity(data:efddde86a300ea418265905fdcce9137ac2c120e, [prov:type='wfprov:Artifact', prov:value="https://zenodo.org/oai2d"])
+  used(id:9868917e-a8e5-4139-b960-639678f38bb6, data:efddde86a300ea418265905fdcce9137ac2c120e, 2019-08-20T17:52:44.871593, [prov:role='wf:main/baseurl'])
+  entity(data:655863eb4bf9d08f092fcf922ba2f9e8cdb7c093, [prov:type='wfprov:Artifact', prov:value="oai_dc"])
+  used(id:9868917e-a8e5-4139-b960-639678f38bb6, data:655863eb4bf9d08f092fcf922ba2f9e8cdb7c093, 2019-08-20T17:52:44.872020, [prov:role='wf:main/metadataPrefix'])
+  entity(data:708cacfa43eaf128e9d74d1b9a1ab9cb09e7b059, [prov:type='wfprov:Artifact', prov:value="user-ro"])
+  used(id:9868917e-a8e5-4139-b960-639678f38bb6, data:708cacfa43eaf128e9d74d1b9a1ab9cb09e7b059, 2019-08-20T17:52:44.872477, [prov:role='wf:main/set'])
+  agent(id:b291ee9e-21ed-488c-ad52-ca31a9db8ba8, [prov:type='prov:SoftwareAgent', cwlprov:image="stain/perl-oai-lib", prov:label="Container execution of image stain/perl-oai-lib"])
+  wasAssociatedWith(id:9868917e-a8e5-4139-b960-639678f38bb6, id:b291ee9e-21ed-488c-ad52-ca31a9db8ba8, -)
+  entity(data:efddde86a300ea418265905fdcce9137ac2c120e, [prov:type='wfprov:Artifact', prov:value="https://zenodo.org/oai2d"])
+  used(id:9868917e-a8e5-4139-b960-639678f38bb6, data:efddde86a300ea418265905fdcce9137ac2c120e, 2019-08-20T17:52:45.046318, [prov:role='wf:main/oai-pmh.cwl/baseurl'])
+  entity(data:655863eb4bf9d08f092fcf922ba2f9e8cdb7c093, [prov:type='wfprov:Artifact', prov:value="oai_dc"])
+  used(id:9868917e-a8e5-4139-b960-639678f38bb6, data:655863eb4bf9d08f092fcf922ba2f9e8cdb7c093, 2019-08-20T17:52:45.046714, [prov:role='wf:main/oai-pmh.cwl/metadataPrefix'])
+  entity(data:708cacfa43eaf128e9d74d1b9a1ab9cb09e7b059, [prov:type='wfprov:Artifact', prov:value="user-ro"])
+  used(id:9868917e-a8e5-4139-b960-639678f38bb6, data:708cacfa43eaf128e9d74d1b9a1ab9cb09e7b059, 2019-08-20T17:52:45.047076, [prov:role='wf:main/oai-pmh.cwl/set'])
+  entity(data:32eabf61edf3d973d1da2046e2f79390743b22cc, [prov:type='wfprov:Artifact'])
+  entity(id:9b4b15e0-b4ab-4be6-b7b4-5b8d86c65aa6, [prov:type='wf4ever:File', prov:type='wfprov:Artifact', cwlprov:basename="identifiers", cwlprov:nameroot="identifiers", cwlprov:nameext=""])
+  specializationOf(id:9b4b15e0-b4ab-4be6-b7b4-5b8d86c65aa6, data:32eabf61edf3d973d1da2046e2f79390743b22cc)
+  wasGeneratedBy(id:9b4b15e0-b4ab-4be6-b7b4-5b8d86c65aa6, id:9868917e-a8e5-4139-b960-639678f38bb6, 2019-08-20T17:52:47.495960, [prov:role='wf:main/oai-pmh.cwl/identifiers'])
+  wasEndedBy(id:9868917e-a8e5-4139-b960-639678f38bb6, -, id:9868917e-a8e5-4139-b960-639678f38bb6, 2019-08-20T17:52:47.495949)
+  wasGeneratedBy(id:9b4b15e0-b4ab-4be6-b7b4-5b8d86c65aa6, id:9868917e-a8e5-4139-b960-639678f38bb6, 2019-08-20T17:52:47.506768, [prov:role='wf:main/primary/identifiers'])
+  wasEndedBy(id:9868917e-a8e5-4139-b960-639678f38bb6, -, id:c66d0476-ccdd-4e42-bc38-008d09acdfe6, 2019-08-20T17:52:47.507017)
+endDocument

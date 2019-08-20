@@ -1,0 +1,22 @@
+[2019-08-20T16:52:37,840Z] [cwltool] /home/stain/miniconda3/bin/cwltool --provenance oai-pmh.cwlprov oai-pmh-job.yml
+[2019-08-20T16:52:37,841Z] Resolved 'oai-pmh-job.yml' to 'file:///home/stain/src/ro-index-paper/code/data-gathering/test/oai-pmh/oai-pmh-job.yml'
+[2019-08-20T16:52:45,045Z] [job oai-pmh.cwl] /tmp/x__1fxt2$ docker \
+    run \
+    -i \
+    --volume=/tmp/x__1fxt2:/vHsPwH:rw \
+    --volume=/tmp/zenclwan:/tmp:rw \
+    --workdir=/vHsPwH \
+    --read-only=true \
+    --log-driver=none \
+    --user=1000:1000 \
+    --rm \
+    --env=TMPDIR=/tmp \
+    --env=HOME=/vHsPwH \
+    --cidfile=/tmp/byou0guk/20190820175245-044979.cid \
+    stain/perl-oai-lib \
+    /bin/sh \
+    -c \
+    'oai_pmh' '--request' 'ListIdentifiers' '--metadataPrefix' 'oai_dc' '--set' 'user-ro' 'https://zenodo.org/oai2d' | grep identifier: | sed 's/^.*identifier: //g' > /tmp/x__1fxt2/identifiers
+[2019-08-20T16:52:47,491Z] [job oai-pmh.cwl] Max memory used: 0MiB
+[2019-08-20T16:52:47,498Z] [job oai-pmh.cwl] completed success
+[2019-08-20T16:52:47,639Z] Final process status is success

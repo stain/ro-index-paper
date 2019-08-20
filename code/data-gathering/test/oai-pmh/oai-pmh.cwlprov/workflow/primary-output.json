@@ -1,0 +1,13 @@
+{
+    "identifiers": {
+        "location": "../data/32/32eabf61edf3d973d1da2046e2f79390743b22cc",
+        "basename": "identifiers",
+        "nameroot": "identifiers",
+        "nameext": "",
+        "class": "File",
+        "checksum": "sha1$32eabf61edf3d973d1da2046e2f79390743b22cc",
+        "size": 1472,
+        "http://commonwl.org/cwltool#generation": 0,
+        "@id": "urn:uuid:9b4b15e0-b4ab-4be6-b7b4-5b8d86c65aa6"
+    }
+}

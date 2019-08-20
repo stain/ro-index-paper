@@ -1,0 +1,114 @@
+@prefix cwlprov: <https://w3id.org/cwl/prov#> .
+@prefix data: <urn:hash::sha1:> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix id: <urn:uuid:> .
+@prefix input: <arcp://uuid,9868917e-a8e5-4139-b960-639678f38bb6/workflow/primary-job.json#> .
+@prefix metadata: <arcp://uuid,9868917e-a8e5-4139-b960-639678f38bb6/metadata/> .
+@prefix orcid: <https://orcid.org/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix provenance: <arcp://uuid,9868917e-a8e5-4139-b960-639678f38bb6/metadata/provenance/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix researchobject: <arcp://uuid,9868917e-a8e5-4139-b960-639678f38bb6/> .
+@prefix schema: <http://schema.org/> .
+@prefix sha256: <nih:sha-256;> .
+@prefix wf: <arcp://uuid,9868917e-a8e5-4139-b960-639678f38bb6/workflow/packed.cwl#> .
+@prefix wf4ever: <http://purl.org/wf4ever/wf4ever#> .
+@prefix wfdesc: <http://purl.org/wf4ever/wfdesc#> .
+@prefix wfprov: <http://purl.org/wf4ever/wfprov#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:9b4b15e0-b4ab-4be6-b7b4-5b8d86c65aa6> a wf4ever:File,
+        wfprov:Artifact,
+        prov:Entity ;
+    prov:qualifiedGeneration [ a prov:Generation ;
+            prov:activity <urn:uuid:9868917e-a8e5-4139-b960-639678f38bb6> ;
+            prov:atTime "2019-08-20T17:52:47.506768"^^xsd:dateTime ;
+            prov:hadRole <arcp://uuid,9868917e-a8e5-4139-b960-639678f38bb6/workflow/packed.cwl#main/primary/identifiers> ],
+        [ a prov:Generation ;
+            prov:activity <urn:uuid:9868917e-a8e5-4139-b960-639678f38bb6> ;
+            prov:atTime "2019-08-20T17:52:47.495960"^^xsd:dateTime ;
+            prov:hadRole <arcp://uuid,9868917e-a8e5-4139-b960-639678f38bb6/workflow/packed.cwl#main/oai-pmh.cwl/identifiers> ] ;
+    prov:specializationOf <urn:hash::sha1:32eabf61edf3d973d1da2046e2f79390743b22cc> ;
+    cwlprov:basename "identifiers"^^xsd:string ;
+    cwlprov:nameext ""^^xsd:string ;
+    cwlprov:nameroot "identifiers"^^xsd:string .
+
+wf:main a wfdesc:Process,
+        prov:Entity,
+        prov:Plan ;
+    rdfs:label "Prospective provenance"^^xsd:string .
+
+<urn:hash::sha1:32eabf61edf3d973d1da2046e2f79390743b22cc> a wfprov:Artifact,
+        prov:Entity .
+
+id:b291ee9e-21ed-488c-ad52-ca31a9db8ba8 a prov:Agent,
+        prov:SoftwareAgent ;
+    rdfs:label "Container execution of image stain/perl-oai-lib"^^xsd:string ;
+    cwlprov:image "stain/perl-oai-lib"^^xsd:string .
+
+id:fcc0702d-b9c4-4b28-8bd3-734555f25909 a prov:Agent .
+
+<urn:hash::sha1:655863eb4bf9d08f092fcf922ba2f9e8cdb7c093> a wfprov:Artifact,
+        prov:Entity ;
+    prov:value "oai_dc"^^xsd:string .
+
+<urn:hash::sha1:708cacfa43eaf128e9d74d1b9a1ab9cb09e7b059> a wfprov:Artifact,
+        prov:Entity ;
+    prov:value "user-ro"^^xsd:string .
+
+data:efddde86a300ea418265905fdcce9137ac2c120e a wfprov:Artifact,
+        prov:Entity ;
+    prov:value "https://zenodo.org/oai2d"^^xsd:string .
+
+<urn:uuid:9868917e-a8e5-4139-b960-639678f38bb6> a wfprov:WorkflowRun,
+        prov:Activity ;
+    rdfs:label "Run of workflow/packed.cwl#main"^^xsd:string ;
+    prov:qualifiedAssociation [ a prov:Association ;
+            prov:hadPlan wf:main ] ;
+    prov:qualifiedEnd [ a prov:End ;
+            prov:atTime "2019-08-20T17:52:47.507017"^^xsd:dateTime ;
+            prov:hadActivity id:c66d0476-ccdd-4e42-bc38-008d09acdfe6 ],
+        [ a prov:End ;
+            prov:atTime "2019-08-20T17:52:47.495949"^^xsd:dateTime ;
+            prov:hadActivity <urn:uuid:9868917e-a8e5-4139-b960-639678f38bb6> ] ;
+    prov:qualifiedStart [ a prov:Start ;
+            prov:atTime "2019-08-20T17:52:44.867384"^^xsd:dateTime ;
+            prov:hadActivity id:c66d0476-ccdd-4e42-bc38-008d09acdfe6 ] ;
+    prov:qualifiedUsage [ a prov:Usage ;
+            prov:atTime "2019-08-20T17:52:44.872020"^^xsd:dateTime ;
+            prov:entity <urn:hash::sha1:655863eb4bf9d08f092fcf922ba2f9e8cdb7c093> ;
+            prov:hadRole <arcp://uuid,9868917e-a8e5-4139-b960-639678f38bb6/workflow/packed.cwl#main/metadataPrefix> ],
+        [ a prov:Usage ;
+            prov:atTime "2019-08-20T17:52:44.872477"^^xsd:dateTime ;
+            prov:entity <urn:hash::sha1:708cacfa43eaf128e9d74d1b9a1ab9cb09e7b059> ;
+            prov:hadRole <arcp://uuid,9868917e-a8e5-4139-b960-639678f38bb6/workflow/packed.cwl#main/set> ],
+        [ a prov:Usage ;
+            prov:atTime "2019-08-20T17:52:45.046714"^^xsd:dateTime ;
+            prov:entity <urn:hash::sha1:655863eb4bf9d08f092fcf922ba2f9e8cdb7c093> ;
+            prov:hadRole <arcp://uuid,9868917e-a8e5-4139-b960-639678f38bb6/workflow/packed.cwl#main/oai-pmh.cwl/metadataPrefix> ],
+        [ a prov:Usage ;
+            prov:atTime "2019-08-20T17:52:45.046318"^^xsd:dateTime ;
+            prov:entity data:efddde86a300ea418265905fdcce9137ac2c120e ;
+            prov:hadRole <arcp://uuid,9868917e-a8e5-4139-b960-639678f38bb6/workflow/packed.cwl#main/oai-pmh.cwl/baseurl> ],
+        [ a prov:Usage ;
+            prov:atTime "2019-08-20T17:52:44.871593"^^xsd:dateTime ;
+            prov:entity data:efddde86a300ea418265905fdcce9137ac2c120e ;
+            prov:hadRole <arcp://uuid,9868917e-a8e5-4139-b960-639678f38bb6/workflow/packed.cwl#main/baseurl> ],
+        [ a prov:Usage ;
+            prov:atTime "2019-08-20T17:52:45.047076"^^xsd:dateTime ;
+            prov:entity <urn:hash::sha1:708cacfa43eaf128e9d74d1b9a1ab9cb09e7b059> ;
+            prov:hadRole <arcp://uuid,9868917e-a8e5-4139-b960-639678f38bb6/workflow/packed.cwl#main/oai-pmh.cwl/set> ] ;
+    prov:startedAtTime "2019-08-20T17:52:44.867291"^^xsd:dateTime ;
+    prov:wasAssociatedWith id:b291ee9e-21ed-488c-ad52-ca31a9db8ba8,
+        id:c66d0476-ccdd-4e42-bc38-008d09acdfe6 .
+
+id:c66d0476-ccdd-4e42-bc38-008d09acdfe6 a wfprov:WorkflowEngine,
+        prov:Agent,
+        prov:SoftwareAgent ;
+    rdfs:label "cwltool 1.0.20190815141648"^^xsd:string ;
+    prov:qualifiedStart [ a prov:Start ;
+            prov:atTime "2019-08-20T17:52:44.867252"^^xsd:dateTime ;
+            prov:hadActivity id:fcc0702d-b9c4-4b28-8bd3-734555f25909 ] .
+

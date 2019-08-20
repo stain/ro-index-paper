@@ -1,0 +1,5 @@
+{
+    "baseurl": "https://zenodo.org/oai2d",
+    "metadataPrefix": "oai_dc",
+    "set": "user-ro"
+}

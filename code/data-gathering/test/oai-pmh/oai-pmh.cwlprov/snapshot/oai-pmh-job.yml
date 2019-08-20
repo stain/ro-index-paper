@@ -1,0 +1,6 @@
+#!/usr/bin/env cwltool
+
+cwl:tool: ../../tools/oai-pmh.cwl
+
+baseurl: https://zenodo.org/oai2d
+set: user-ro
