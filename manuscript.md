@@ -19,9 +19,9 @@ title: 'RO-Index: A survey of Research Object usage'
 
 <small><em>
 This manuscript
-([permalink](https://stain.github.io/ro-index-paper/v/cd01d30ffc9e04b8804b62df5e985ebfa6f5b276/))
+([permalink](https://stain.github.io/ro-index-paper/v/df7f35ed0ee58a2d8721ef431d2bcf412a5d13e6/))
 was automatically generated
-from [stain/ro-index-paper@cd01d30](https://github.com/stain/ro-index-paper/tree/cd01d30ffc9e04b8804b62df5e985ebfa6f5b276)
+from [stain/ro-index-paper@df7f35e](https://github.com/stain/ro-index-paper/tree/df7f35ed0ee58a2d8721ef431d2bcf412a5d13e6)
 on August 20, 2019.
 </em></small>
 
@@ -284,6 +284,15 @@ https://zenodo.org/communities/ro/?page=1&size=20
 
 https://developers.zenodo.org/#metadata-formats
 
+#### Prototype workflow
+
+A [prototype workflow](https://github.com/stain/ro-index-paper/blob/master/code/data-gathering/workflows/zip-content-by-url.cwl) is being developed using [Common Workflow Language](https://www.commonwl.org/), figure @fig:square-image shows how the content of a ZIP file can be listed in a streaming mode.
+
+
+![
+**CWL workflow: List ZIP content by URL**
+Visualization by CWL Viewer <https://w3id.org/cwl/view/git/cd01d30ffc9e04b8804b62df5e985ebfa6f5b276/code/data-gathering/workflows/zip-content-by-url.cwl>
+](https://view.commonwl.org/graph/svg/github.com/stain/ro-index-paper/blob/master/code/data-gathering/workflows/zip-content-by-url.cwl "Workflow url to fetch to curl to headers & filenames"){#fig:square-image}
 
 
 

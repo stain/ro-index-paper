@@ -46,13 +46,13 @@
     "repo_slug": "stain/ro-index-paper",
     "repo_owner": "stain",
     "repo_name": "ro-index-paper",
-    "commit": "cd01d30ffc9e04b8804b62df5e985ebfa6f5b276"
+    "commit": "df7f35ed0ee58a2d8721ef431d2bcf412a5d13e6"
   },
   "manuscript_stats": {
     "reference_counts": {
       "doi": 17,
       "total": 17
     },
-    "word_count": 2669
+    "word_count": 2723
   }
 }
