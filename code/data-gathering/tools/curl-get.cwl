@@ -54,8 +54,6 @@ inputs:
       Optional IANA media-type to request using Accept: header, 
       for example "application/json" or "text/html".
       The default "*/*" requests any content type.
-      Multiple types can be listed separated by ";", See
-      https://tools.ietf.org/html/rfc7231#section-5.3.2
     s:about: https://tools.ietf.org/html/rfc7231#section-5.3.2
     default: "*/*"
     inputBinding:
@@ -66,7 +64,8 @@ outputs:
   downloaded:
     type: stdout
     streamable: true
-    doc: The downloaded file, written in streamable mode. 
+    doc: The downloaded file, written in streamable mode.
+    format: "https://www.iana.org/assignments/media-types/$(inputs.acceptType)"
   headers:
     type: File
     streamable: true

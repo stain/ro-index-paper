@@ -18,6 +18,11 @@ class: Workflow
 
 label: "list ZIP content by URL"
 
+# Uncomment if needing valueFrom: instead of default:
+#requirements:
+#    - class: StepInputExpressionRequirement
+
+
 doc: > 
   curl will download a HTTP/HTTPS resource or file from a given URL,
   following any redirections.
@@ -49,8 +54,8 @@ steps:
         run: ../tools/curl-get.cwl
         in: 
             url: url
-            accept:
-                default: "application/zip; application/octet-stream"
+            acceptType:
+                default: "application/zip"
         out: [downloaded, headers]
     list:
         in:

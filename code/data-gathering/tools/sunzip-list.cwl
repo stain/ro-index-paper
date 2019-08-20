@@ -48,6 +48,9 @@ inputs:
       read in a streaming mode.
     type: stdin
     streamable: true
+    # Disabled to avoid error when using with more generic curl-get.zip
+    # ERROR [step list] Cannot make job: Expected value of 'zipstream' to have format https://www.iana.org/assignments/media-types/application/zip but File has no 'format' defined: {
+
     format: iana:application/zip
 
 outputs:
