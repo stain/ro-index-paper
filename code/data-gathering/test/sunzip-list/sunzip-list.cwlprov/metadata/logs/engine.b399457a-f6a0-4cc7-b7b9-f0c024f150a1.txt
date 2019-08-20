@@ -1,0 +1,22 @@
+[2019-08-20T01:05:35,741Z] [cwltool] /home/stain/miniconda3/bin/cwltool --provenance sunzip-list.cwlprov sunzip-list-job.yml
+[2019-08-20T01:05:35,742Z] Resolved 'sunzip-list-job.yml' to 'file:///home/stain/src/ro-index-paper/code/data-gathering/test/sunzip-list/sunzip-list-job.yml'
+[2019-08-20T01:05:42,808Z] [job sunzip-list.cwl] /tmp/bxeyr2xk$ docker \
+    run \
+    -i \
+    --volume=/tmp/bxeyr2xk:/EyGvfm:rw \
+    --volume=/tmp/abv1ecdv:/tmp:rw \
+    --volume=/home/stain/src/ro-index-paper/code/data-gathering/test/sunzip-list/test.zip:/var/lib/cwl/stg77541e49-b0fd-4ebc-9c25-59934008dd27/test.zip:ro \
+    --workdir=/EyGvfm \
+    --read-only=true \
+    --log-driver=none \
+    --user=1000:1000 \
+    --rm \
+    --env=TMPDIR=/tmp \
+    --env=HOME=/EyGvfm \
+    --cidfile=/tmp/5ndiseje/20190820020542-808721.cid \
+    stain/sunzip \
+    sunzip \
+    -l < /var/lib/cwl/stg77541e49-b0fd-4ebc-9c25-59934008dd27/test.zip > /tmp/bxeyr2xk/filenames.txt
+[2019-08-20T01:05:44,169Z] [job sunzip-list.cwl] Max memory used: 0MiB
+[2019-08-20T01:05:44,175Z] [job sunzip-list.cwl] completed success
+[2019-08-20T01:05:44,268Z] Final process status is success

@@ -1,0 +1,63 @@
+document
+  prefix wfprov <http://purl.org/wf4ever/wfprov#>
+  prefix wfdesc <http://purl.org/wf4ever/wfdesc#>
+  prefix cwlprov <https://w3id.org/cwl/prov#>
+  prefix foaf <http://xmlns.com/foaf/0.1/>
+  prefix schema <http://schema.org/>
+  prefix orcid <https://orcid.org/>
+  prefix id <urn:uuid:>
+  prefix data <urn:hash::sha1:>
+  prefix sha256 <nih:sha-256;>
+  prefix researchobject <arcp://uuid,454aeb5b-b14f-467e-b6b8-3fa490495482/>
+  prefix metadata <arcp://uuid,454aeb5b-b14f-467e-b6b8-3fa490495482/metadata/>
+  prefix provenance <arcp://uuid,454aeb5b-b14f-467e-b6b8-3fa490495482/metadata/provenance/>
+  prefix wf <arcp://uuid,454aeb5b-b14f-467e-b6b8-3fa490495482/workflow/packed.cwl#>
+  prefix input <arcp://uuid,454aeb5b-b14f-467e-b6b8-3fa490495482/workflow/primary-job.json#>
+  prefix wf4ever <http://purl.org/wf4ever/wf4ever#>
+  
+  agent(id:73504c56-03ee-4568-bdab-cb9ccbce1b17)
+  agent(id:d8ed0297-4611-45d9-93d1-3aa3d31efdf0, [prov:type='wfprov:WorkflowEngine', prov:type='prov:SoftwareAgent', prov:label="cwltool 1.0.20190815141648"])
+  wasStartedBy(id:d8ed0297-4611-45d9-93d1-3aa3d31efdf0, -, id:73504c56-03ee-4568-bdab-cb9ccbce1b17, 2019-08-20T02:06:34.306382)
+  activity(id:454aeb5b-b14f-467e-b6b8-3fa490495482, 2019-08-20T02:06:34.306422, -, [prov:type='wfprov:WorkflowRun', prov:label="Run of workflow/packed.cwl#main"])
+  wasAssociatedWith(id:454aeb5b-b14f-467e-b6b8-3fa490495482, id:d8ed0297-4611-45d9-93d1-3aa3d31efdf0, wf:main)
+  wasStartedBy(id:454aeb5b-b14f-467e-b6b8-3fa490495482, -, id:d8ed0297-4611-45d9-93d1-3aa3d31efdf0, 2019-08-20T02:06:34.306514)
+  entity(wf:main, [prov:type='prov:Plan', prov:type='wfdesc:Workflow', prov:label="Prospective provenance"])
+  entity(wf:main/list, [prov:type='wfdesc:Process', prov:type='prov:Plan'])
+  entity(wf:main, [wfdesc:hasSubProcess='wf:main/list', prov:label="Prospective provenance"])
+  entity(wf:main/fetch, [prov:type='wfdesc:Process', prov:type='prov:Plan'])
+  entity(wf:main, [wfdesc:hasSubProcess='wf:main/fetch', prov:label="Prospective provenance"])
+  entity(data:1ed25ffe281de63b243fbd01ceeba2d4c84ebb92, [prov:type='wfprov:Artifact', prov:value="https://github.com/stain/ro-index-paper/archive/38f2a711f9f115e92cea930398019c147e56ac5a.zip"])
+  used(id:454aeb5b-b14f-467e-b6b8-3fa490495482, data:1ed25ffe281de63b243fbd01ceeba2d4c84ebb92, 2019-08-20T02:06:35.018073, [prov:role='wf:main/url'])
+  activity(id:7760c4c2-a5d0-4be5-8798-97106aea049f, -, -, [prov:type='wfprov:ProcessRun', prov:label="Run of workflow/packed.cwl#main/fetch"])
+  wasAssociatedWith(id:7760c4c2-a5d0-4be5-8798-97106aea049f, id:d8ed0297-4611-45d9-93d1-3aa3d31efdf0, wf:main/fetch)
+  wasStartedBy(id:7760c4c2-a5d0-4be5-8798-97106aea049f, -, id:454aeb5b-b14f-467e-b6b8-3fa490495482, 2019-08-20T02:06:35.022196)
+  agent(id:84507d98-286c-4533-a259-13c18b01877d, [prov:type='prov:SoftwareAgent', cwlprov:image="appropriate/curl:3.1", prov:label="Container execution of image appropriate/curl:3.1"])
+  wasAssociatedWith(id:7760c4c2-a5d0-4be5-8798-97106aea049f, id:84507d98-286c-4533-a259-13c18b01877d, -)
+  entity(data:19e1edf9ec12896b679c785ee768f8995478a7ea, [prov:type='wfprov:Artifact', prov:value="application/zip"])
+  used(id:7760c4c2-a5d0-4be5-8798-97106aea049f, data:19e1edf9ec12896b679c785ee768f8995478a7ea, 2019-08-20T02:06:35.221809, [prov:role='wf:main/fetch/acceptType'])
+  entity(data:1ed25ffe281de63b243fbd01ceeba2d4c84ebb92, [prov:type='wfprov:Artifact', prov:value="https://github.com/stain/ro-index-paper/archive/38f2a711f9f115e92cea930398019c147e56ac5a.zip"])
+  used(id:7760c4c2-a5d0-4be5-8798-97106aea049f, data:1ed25ffe281de63b243fbd01ceeba2d4c84ebb92, 2019-08-20T02:06:35.222232, [prov:role='wf:main/fetch/url'])
+  entity(data:0dce36217c7de25325d67344dc15e5518781a920, [prov:type='wfprov:Artifact'])
+  entity(id:912213cd-6c25-4a53-9555-70fa71154b29, [prov:type='wfprov:Artifact', prov:type='wf4ever:File', cwlprov:basename="downloaded", cwlprov:nameroot="downloaded", cwlprov:nameext=""])
+  specializationOf(id:912213cd-6c25-4a53-9555-70fa71154b29, data:0dce36217c7de25325d67344dc15e5518781a920)
+  wasGeneratedBy(id:912213cd-6c25-4a53-9555-70fa71154b29, id:7760c4c2-a5d0-4be5-8798-97106aea049f, 2019-08-20T02:06:37.520561, [prov:role='wf:main/fetch/downloaded'])
+  entity(data:b875e161b7de752df1b5e111482391fd0ef23f61, [prov:type='wfprov:Artifact'])
+  entity(id:5aac5126-1827-4dca-ba53-e867eca94faa, [prov:type='wfprov:Artifact', prov:type='wf4ever:File', cwlprov:basename="headers.txt", cwlprov:nameroot="headers", cwlprov:nameext=".txt"])
+  specializationOf(id:5aac5126-1827-4dca-ba53-e867eca94faa, data:b875e161b7de752df1b5e111482391fd0ef23f61)
+  wasGeneratedBy(id:5aac5126-1827-4dca-ba53-e867eca94faa, id:7760c4c2-a5d0-4be5-8798-97106aea049f, 2019-08-20T02:06:37.520561, [prov:role='wf:main/fetch/headers'])
+  wasEndedBy(id:7760c4c2-a5d0-4be5-8798-97106aea049f, -, id:454aeb5b-b14f-467e-b6b8-3fa490495482, 2019-08-20T02:06:37.520549)
+  activity(id:0e114bb2-79f8-4514-806a-8d8af99f54d4, -, -, [prov:type='wfprov:ProcessRun', prov:label="Run of workflow/packed.cwl#main/list"])
+  wasAssociatedWith(id:0e114bb2-79f8-4514-806a-8d8af99f54d4, id:d8ed0297-4611-45d9-93d1-3aa3d31efdf0, wf:main/list)
+  wasStartedBy(id:0e114bb2-79f8-4514-806a-8d8af99f54d4, -, id:454aeb5b-b14f-467e-b6b8-3fa490495482, 2019-08-20T02:06:37.528478)
+  agent(id:adefb683-9c6f-4e75-aece-c2947baaaed1, [prov:type='prov:SoftwareAgent', cwlprov:image="stain/sunzip", prov:label="Container execution of image stain/sunzip"])
+  wasAssociatedWith(id:0e114bb2-79f8-4514-806a-8d8af99f54d4, id:adefb683-9c6f-4e75-aece-c2947baaaed1, -)
+  used(id:0e114bb2-79f8-4514-806a-8d8af99f54d4, id:912213cd-6c25-4a53-9555-70fa71154b29, 2019-08-20T02:06:37.697645, [prov:role='wf:main/list/zipstream'])
+  entity(data:ea81a56a134293016cf9701b9198945f9a115e25, [prov:type='wfprov:Artifact'])
+  entity(id:38bbce96-10ca-441a-b672-abe5bf1a0acf, [prov:type='wfprov:Artifact', prov:type='wf4ever:File', cwlprov:basename="filenames.txt", cwlprov:nameroot="filenames", cwlprov:nameext=".txt"])
+  specializationOf(id:38bbce96-10ca-441a-b672-abe5bf1a0acf, data:ea81a56a134293016cf9701b9198945f9a115e25)
+  wasGeneratedBy(id:38bbce96-10ca-441a-b672-abe5bf1a0acf, id:0e114bb2-79f8-4514-806a-8d8af99f54d4, 2019-08-20T02:06:39.244884, [prov:role='wf:main/list/filenames'])
+  wasEndedBy(id:0e114bb2-79f8-4514-806a-8d8af99f54d4, -, id:454aeb5b-b14f-467e-b6b8-3fa490495482, 2019-08-20T02:06:39.244876)
+  wasGeneratedBy(id:38bbce96-10ca-441a-b672-abe5bf1a0acf, id:454aeb5b-b14f-467e-b6b8-3fa490495482, 2019-08-20T02:06:39.249261, [prov:role='wf:main/primary/filenames'])
+  wasGeneratedBy(id:5aac5126-1827-4dca-ba53-e867eca94faa, id:454aeb5b-b14f-467e-b6b8-3fa490495482, 2019-08-20T02:06:39.249261, [prov:role='wf:main/primary/headers'])
+  wasEndedBy(id:454aeb5b-b14f-467e-b6b8-3fa490495482, -, id:d8ed0297-4611-45d9-93d1-3aa3d31efdf0, 2019-08-20T02:06:39.249574)
+endDocument

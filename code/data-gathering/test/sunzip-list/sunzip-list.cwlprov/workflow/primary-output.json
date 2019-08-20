@@ -1,0 +1,13 @@
+{
+    "filenames": {
+        "location": "../data/f3/f3e94720e7a07ad05002418aad752de381d6ba5b",
+        "basename": "filenames.txt",
+        "nameroot": "filenames",
+        "nameext": ".txt",
+        "class": "File",
+        "checksum": "sha1$f3e94720e7a07ad05002418aad752de381d6ba5b",
+        "size": 50,
+        "http://commonwl.org/cwltool#generation": 0,
+        "@id": "urn:uuid:8a373983-6f24-4d6f-bf19-bb530fe2b936"
+    }
+}
