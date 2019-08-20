@@ -65,6 +65,7 @@ outputs:
     type: stdout
     streamable: true
     doc: The downloaded file, written in streamable mode.
+    # TODO: Extract format from last Content-Type: in headers.txt
     format: "https://www.iana.org/assignments/media-types/$(inputs.acceptType)"
   headers:
     type: File
@@ -73,6 +74,7 @@ outputs:
       A log of the HTTP response headers. If HTTP redirection with a 
       Location: header was received, an empty line separates the headers
       from subsequent requests.
+    
     outputBinding:
       glob: headers.txt
 
