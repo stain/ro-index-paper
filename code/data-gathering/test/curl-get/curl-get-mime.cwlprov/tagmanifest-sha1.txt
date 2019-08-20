@@ -1,0 +1,14 @@
+2d4b4281f8db601aaa345694b6371a939e4d33f3  workflow/packed.cwl
+854c26286561afbec4e586883843eb726c0393b8  workflow/primary-job.json
+f8a08f2f788842611298583b5fb96d172fdda950  metadata/provenance/primary.cwlprov.xml
+e4766293f0254bc032fdd9d50a71be3bfbddb0e8  metadata/provenance/primary.cwlprov.provn
+3d39a4ce82cb10952fc9d4f556214a7f6679f929  metadata/provenance/primary.cwlprov.json
+dcb641276bbc105601f951ef1481b13b1f0f9411  metadata/provenance/primary.cwlprov.ttl
+c37ddf9aaa78b96bafda57bd1eaacfe52ae23e3a  metadata/provenance/primary.cwlprov.nt
+a9474615d0b7d5efe0577b5a5aab36cc005451ef  metadata/provenance/primary.cwlprov.jsonld
+d426f696d6b0fbbb019b97006d6f693adcbfe6e0  workflow/primary-output.json
+e2011df50500672b3f27498bdb0c538503a40594  snapshot/curl-get.cwl
+1ef3c276413d0b48222e288c2f7d82dcb29480e4  snapshot/curl-get-mime-job.yml
+78cc847e34fe52c5b65d994d8d525bffc900681d  metadata/logs/engine.1924ad2d-0d80-4403-bc85-0492115ad4e1.txt
+92669633b2b975767b0fa8a4d16f62a7590d948a  metadata/manifest.json
+786e42ff1e7d5edef38b28ec70cfe5e6c0205e95  bag-info.txt

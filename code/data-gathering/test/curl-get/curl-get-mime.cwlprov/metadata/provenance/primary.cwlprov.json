@@ -1,0 +1,258 @@
+{
+  "prefix": {
+    "wfprov": "http://purl.org/wf4ever/wfprov#",
+    "wfdesc": "http://purl.org/wf4ever/wfdesc#",
+    "cwlprov": "https://w3id.org/cwl/prov#",
+    "foaf": "http://xmlns.com/foaf/0.1/",
+    "schema": "http://schema.org/",
+    "orcid": "https://orcid.org/",
+    "id": "urn:uuid:",
+    "data": "urn:hash::sha1:",
+    "sha256": "nih:sha-256;",
+    "researchobject": "arcp://uuid,a0a6323e-ef2e-45a2-827e-ea7c4de3d99c/",
+    "metadata": "arcp://uuid,a0a6323e-ef2e-45a2-827e-ea7c4de3d99c/metadata/",
+    "provenance": "arcp://uuid,a0a6323e-ef2e-45a2-827e-ea7c4de3d99c/metadata/provenance/",
+    "wf": "arcp://uuid,a0a6323e-ef2e-45a2-827e-ea7c4de3d99c/workflow/packed.cwl#",
+    "input": "arcp://uuid,a0a6323e-ef2e-45a2-827e-ea7c4de3d99c/workflow/primary-job.json#",
+    "wf4ever": "http://purl.org/wf4ever/wf4ever#"
+  },
+  "agent": {
+    "id:9e38863c-0e90-4065-835b-a74ec36a2ae2": {},
+    "id:1924ad2d-0d80-4403-bc85-0492115ad4e1": {
+      "prov:type": [
+        {
+          "$": "wfprov:WorkflowEngine",
+          "type": "prov:QUALIFIED_NAME"
+        },
+        {
+          "$": "prov:SoftwareAgent",
+          "type": "prov:QUALIFIED_NAME"
+        }
+      ],
+      "prov:label": "cwltool 1.0.20190815141648"
+    },
+    "id:9aaf9d65-b30c-45ed-92b0-7183b4186e29": {
+      "prov:type": {
+        "$": "prov:SoftwareAgent",
+        "type": "prov:QUALIFIED_NAME"
+      },
+      "cwlprov:image": "appropriate/curl:3.1",
+      "prov:label": "Container execution of image appropriate/curl:3.1"
+    }
+  },
+  "wasStartedBy": {
+    "_:id1": {
+      "prov:activity": "id:1924ad2d-0d80-4403-bc85-0492115ad4e1",
+      "prov:starter": "id:9e38863c-0e90-4065-835b-a74ec36a2ae2",
+      "prov:time": "2019-08-20T02:03:42.484632"
+    },
+    "_:id3": {
+      "prov:activity": "id:a0a6323e-ef2e-45a2-827e-ea7c4de3d99c",
+      "prov:starter": "id:1924ad2d-0d80-4403-bc85-0492115ad4e1",
+      "prov:time": "2019-08-20T02:03:42.484762"
+    }
+  },
+  "activity": {
+    "id:a0a6323e-ef2e-45a2-827e-ea7c4de3d99c": {
+      "prov:startTime": "2019-08-20T02:03:42.484671",
+      "prov:type": {
+        "$": "wfprov:WorkflowRun",
+        "type": "prov:QUALIFIED_NAME"
+      },
+      "prov:label": "Run of workflow/packed.cwl#main"
+    }
+  },
+  "wasAssociatedWith": {
+    "_:id2": {
+      "prov:activity": "id:a0a6323e-ef2e-45a2-827e-ea7c4de3d99c",
+      "prov:agent": "id:1924ad2d-0d80-4403-bc85-0492115ad4e1",
+      "prov:plan": "wf:main"
+    },
+    "_:id6": {
+      "prov:activity": "id:a0a6323e-ef2e-45a2-827e-ea7c4de3d99c",
+      "prov:agent": "id:9aaf9d65-b30c-45ed-92b0-7183b4186e29"
+    }
+  },
+  "entity": {
+    "wf:main": {
+      "prov:type": [
+        {
+          "$": "wfdesc:Process",
+          "type": "prov:QUALIFIED_NAME"
+        },
+        {
+          "$": "prov:Plan",
+          "type": "prov:QUALIFIED_NAME"
+        }
+      ],
+      "prov:label": "Prospective provenance"
+    },
+    "data:f919d9f152904f6c40db36d416df4901ff69eaa0": [
+      {
+        "prov:type": {
+          "$": "wfprov:Artifact",
+          "type": "prov:QUALIFIED_NAME"
+        },
+        "prov:value": "text/plain"
+      },
+      {
+        "prov:type": {
+          "$": "wfprov:Artifact",
+          "type": "prov:QUALIFIED_NAME"
+        },
+        "prov:value": "text/plain"
+      },
+      {}
+    ],
+    "data:590da2415bd45f4deb878e99d97270f100a58d57": [
+      {
+        "prov:type": {
+          "$": "wfprov:Artifact",
+          "type": "prov:QUALIFIED_NAME"
+        },
+        "prov:value": "https://ifconfig.me/mime"
+      },
+      {
+        "prov:type": {
+          "$": "wfprov:Artifact",
+          "type": "prov:QUALIFIED_NAME"
+        },
+        "prov:value": "https://ifconfig.me/mime"
+      }
+    ],
+    "id:460eafc5-4606-4bb3-9db9-3a6b024e39da": {
+      "prov:type": [
+        {
+          "$": "wfprov:Artifact",
+          "type": "prov:QUALIFIED_NAME"
+        },
+        {
+          "$": "wf4ever:File",
+          "type": "prov:QUALIFIED_NAME"
+        }
+      ],
+      "cwlprov:basename": "downloaded",
+      "cwlprov:nameroot": "downloaded",
+      "cwlprov:nameext": ""
+    },
+    "data:ac92e1cb9dd589734c892d060ed55e6100dc307a": {
+      "prov:type": {
+        "$": "wfprov:Artifact",
+        "type": "prov:QUALIFIED_NAME"
+      }
+    },
+    "id:1a1ecc42-c7ca-418f-bc2a-7e778ff0d557": {
+      "prov:type": [
+        {
+          "$": "wfprov:Artifact",
+          "type": "prov:QUALIFIED_NAME"
+        },
+        {
+          "$": "wf4ever:File",
+          "type": "prov:QUALIFIED_NAME"
+        }
+      ],
+      "cwlprov:basename": "headers.txt",
+      "cwlprov:nameroot": "headers",
+      "cwlprov:nameext": ".txt"
+    }
+  },
+  "used": {
+    "_:id4": {
+      "prov:activity": "id:a0a6323e-ef2e-45a2-827e-ea7c4de3d99c",
+      "prov:entity": "data:f919d9f152904f6c40db36d416df4901ff69eaa0",
+      "prov:time": "2019-08-20T02:03:42.488647",
+      "prov:role": {
+        "$": "wf:main/acceptType",
+        "type": "prov:QUALIFIED_NAME"
+      }
+    },
+    "_:id5": {
+      "prov:activity": "id:a0a6323e-ef2e-45a2-827e-ea7c4de3d99c",
+      "prov:entity": "data:590da2415bd45f4deb878e99d97270f100a58d57",
+      "prov:time": "2019-08-20T02:03:42.489098",
+      "prov:role": {
+        "$": "wf:main/url",
+        "type": "prov:QUALIFIED_NAME"
+      }
+    },
+    "_:id7": {
+      "prov:activity": "id:a0a6323e-ef2e-45a2-827e-ea7c4de3d99c",
+      "prov:entity": "data:f919d9f152904f6c40db36d416df4901ff69eaa0",
+      "prov:time": "2019-08-20T02:03:42.645743",
+      "prov:role": {
+        "$": "wf:main/curl-get.cwl/acceptType",
+        "type": "prov:QUALIFIED_NAME"
+      }
+    },
+    "_:id8": {
+      "prov:activity": "id:a0a6323e-ef2e-45a2-827e-ea7c4de3d99c",
+      "prov:entity": "data:590da2415bd45f4deb878e99d97270f100a58d57",
+      "prov:time": "2019-08-20T02:03:42.646142",
+      "prov:role": {
+        "$": "wf:main/curl-get.cwl/url",
+        "type": "prov:QUALIFIED_NAME"
+      }
+    }
+  },
+  "specializationOf": {
+    "_:id9": {
+      "prov:specificEntity": "id:460eafc5-4606-4bb3-9db9-3a6b024e39da",
+      "prov:generalEntity": "data:f919d9f152904f6c40db36d416df4901ff69eaa0"
+    },
+    "_:id11": {
+      "prov:specificEntity": "id:1a1ecc42-c7ca-418f-bc2a-7e778ff0d557",
+      "prov:generalEntity": "data:ac92e1cb9dd589734c892d060ed55e6100dc307a"
+    }
+  },
+  "wasGeneratedBy": {
+    "_:id10": {
+      "prov:entity": "id:460eafc5-4606-4bb3-9db9-3a6b024e39da",
+      "prov:activity": "id:a0a6323e-ef2e-45a2-827e-ea7c4de3d99c",
+      "prov:time": "2019-08-20T02:03:44.087077",
+      "prov:role": {
+        "$": "wf:main/curl-get.cwl/downloaded",
+        "type": "prov:QUALIFIED_NAME"
+      }
+    },
+    "_:id12": {
+      "prov:entity": "id:1a1ecc42-c7ca-418f-bc2a-7e778ff0d557",
+      "prov:activity": "id:a0a6323e-ef2e-45a2-827e-ea7c4de3d99c",
+      "prov:time": "2019-08-20T02:03:44.087077",
+      "prov:role": {
+        "$": "wf:main/curl-get.cwl/headers",
+        "type": "prov:QUALIFIED_NAME"
+      }
+    },
+    "_:id14": {
+      "prov:entity": "id:460eafc5-4606-4bb3-9db9-3a6b024e39da",
+      "prov:activity": "id:a0a6323e-ef2e-45a2-827e-ea7c4de3d99c",
+      "prov:time": "2019-08-20T02:03:44.090818",
+      "prov:role": {
+        "$": "wf:main/primary/downloaded",
+        "type": "prov:QUALIFIED_NAME"
+      }
+    },
+    "_:id15": {
+      "prov:entity": "id:1a1ecc42-c7ca-418f-bc2a-7e778ff0d557",
+      "prov:activity": "id:a0a6323e-ef2e-45a2-827e-ea7c4de3d99c",
+      "prov:time": "2019-08-20T02:03:44.090818",
+      "prov:role": {
+        "$": "wf:main/primary/headers",
+        "type": "prov:QUALIFIED_NAME"
+      }
+    }
+  },
+  "wasEndedBy": {
+    "_:id13": {
+      "prov:activity": "id:a0a6323e-ef2e-45a2-827e-ea7c4de3d99c",
+      "prov:ender": "id:a0a6323e-ef2e-45a2-827e-ea7c4de3d99c",
+      "prov:time": "2019-08-20T02:03:44.087067"
+    },
+    "_:id16": {
+      "prov:activity": "id:a0a6323e-ef2e-45a2-827e-ea7c4de3d99c",
+      "prov:ender": "id:1924ad2d-0d80-4403-bc85-0492115ad4e1",
+      "prov:time": "2019-08-20T02:03:44.091136"
+    }
+  }
+}

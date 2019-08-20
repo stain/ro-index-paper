@@ -1,0 +1,121 @@
+@prefix cwlprov: <https://w3id.org/cwl/prov#> .
+@prefix data: <urn:hash::sha1:> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix id: <urn:uuid:> .
+@prefix input: <arcp://uuid,c301ae11-cf9a-410c-bf7b-1af5be3c2364/workflow/primary-job.json#> .
+@prefix metadata: <arcp://uuid,c301ae11-cf9a-410c-bf7b-1af5be3c2364/metadata/> .
+@prefix orcid: <https://orcid.org/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix provenance: <arcp://uuid,c301ae11-cf9a-410c-bf7b-1af5be3c2364/metadata/provenance/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix researchobject: <arcp://uuid,c301ae11-cf9a-410c-bf7b-1af5be3c2364/> .
+@prefix schema: <http://schema.org/> .
+@prefix sha256: <nih:sha-256;> .
+@prefix wf: <arcp://uuid,c301ae11-cf9a-410c-bf7b-1af5be3c2364/workflow/packed.cwl#> .
+@prefix wf4ever: <http://purl.org/wf4ever/wf4ever#> .
+@prefix wfdesc: <http://purl.org/wf4ever/wfdesc#> .
+@prefix wfprov: <http://purl.org/wf4ever/wfprov#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:05f871c8-37d2-4a14-badc-0032d7536cab> a wf4ever:File,
+        wfprov:Artifact,
+        prov:Entity ;
+    prov:qualifiedGeneration [ a prov:Generation ;
+            prov:activity id:c301ae11-cf9a-410c-bf7b-1af5be3c2364 ;
+            prov:atTime "2019-08-20T02:04:17.042555"^^xsd:dateTime ;
+            prov:hadRole <arcp://uuid,c301ae11-cf9a-410c-bf7b-1af5be3c2364/workflow/packed.cwl#main/curl-get.cwl/downloaded> ],
+        [ a prov:Generation ;
+            prov:activity id:c301ae11-cf9a-410c-bf7b-1af5be3c2364 ;
+            prov:atTime "2019-08-20T02:04:17.045949"^^xsd:dateTime ;
+            prov:hadRole <arcp://uuid,c301ae11-cf9a-410c-bf7b-1af5be3c2364/workflow/packed.cwl#main/primary/downloaded> ] ;
+    prov:specializationOf data:e8ea62e35d96e0354e6d9b6f4a90b49b1dad2ffb ;
+    cwlprov:basename "downloaded"^^xsd:string ;
+    cwlprov:nameext ""^^xsd:string ;
+    cwlprov:nameroot "downloaded"^^xsd:string .
+
+id:c84cbedc-7e24-4512-8e2b-0189c447615e a wf4ever:File,
+        wfprov:Artifact,
+        prov:Entity ;
+    prov:qualifiedGeneration [ a prov:Generation ;
+            prov:activity id:c301ae11-cf9a-410c-bf7b-1af5be3c2364 ;
+            prov:atTime "2019-08-20T02:04:17.045949"^^xsd:dateTime ;
+            prov:hadRole <arcp://uuid,c301ae11-cf9a-410c-bf7b-1af5be3c2364/workflow/packed.cwl#main/primary/headers> ],
+        [ a prov:Generation ;
+            prov:activity id:c301ae11-cf9a-410c-bf7b-1af5be3c2364 ;
+            prov:atTime "2019-08-20T02:04:17.042555"^^xsd:dateTime ;
+            prov:hadRole <arcp://uuid,c301ae11-cf9a-410c-bf7b-1af5be3c2364/workflow/packed.cwl#main/curl-get.cwl/headers> ] ;
+    prov:specializationOf <urn:hash::sha1:6c9c9df6754881aa9ec85b423e39409f1fdf5dde> ;
+    cwlprov:basename "headers.txt"^^xsd:string ;
+    cwlprov:nameext ".txt"^^xsd:string ;
+    cwlprov:nameroot "headers"^^xsd:string .
+
+wf:main a wfdesc:Process,
+        prov:Entity,
+        prov:Plan ;
+    rdfs:label "Prospective provenance"^^xsd:string .
+
+<urn:hash::sha1:6c9c9df6754881aa9ec85b423e39409f1fdf5dde> a wfprov:Artifact,
+        prov:Entity .
+
+data:e8ea62e35d96e0354e6d9b6f4a90b49b1dad2ffb a wfprov:Artifact,
+        prov:Entity .
+
+<urn:uuid:8680410e-52cb-4349-bab4-c7bfa3c06d30> a prov:Agent,
+        prov:SoftwareAgent ;
+    rdfs:label "Container execution of image appropriate/curl:3.1"^^xsd:string ;
+    cwlprov:image "appropriate/curl:3.1"^^xsd:string .
+
+id:bcf76ef3-2d14-427d-abf8-57c31a9c9b9f a prov:Agent .
+
+<urn:hash::sha1:7a42bf9502c7cb1d903b4774453aa0fe2ab5ad61> a wfprov:Artifact,
+        prov:Entity ;
+    prov:value "https://ifconfig.me/ua"^^xsd:string .
+
+data:facb855c9cef68cf9733f539bde2b57586848293 a wfprov:Artifact,
+        prov:Entity ;
+    prov:value "*/*"^^xsd:string .
+
+<urn:uuid:5b97340d-ced5-4007-9d33-269251039449> a wfprov:WorkflowEngine,
+        prov:Agent,
+        prov:SoftwareAgent ;
+    rdfs:label "cwltool 1.0.20190815141648"^^xsd:string ;
+    prov:qualifiedStart [ a prov:Start ;
+            prov:atTime "2019-08-20T02:04:15.459109"^^xsd:dateTime ;
+            prov:hadActivity id:bcf76ef3-2d14-427d-abf8-57c31a9c9b9f ] .
+
+id:c301ae11-cf9a-410c-bf7b-1af5be3c2364 a wfprov:WorkflowRun,
+        prov:Activity ;
+    rdfs:label "Run of workflow/packed.cwl#main"^^xsd:string ;
+    prov:qualifiedAssociation [ a prov:Association ;
+            prov:hadPlan wf:main ] ;
+    prov:qualifiedEnd [ a prov:End ;
+            prov:atTime "2019-08-20T02:04:17.046206"^^xsd:dateTime ;
+            prov:hadActivity <urn:uuid:5b97340d-ced5-4007-9d33-269251039449> ],
+        [ a prov:End ;
+            prov:atTime "2019-08-20T02:04:17.042545"^^xsd:dateTime ;
+            prov:hadActivity id:c301ae11-cf9a-410c-bf7b-1af5be3c2364 ] ;
+    prov:qualifiedStart [ a prov:Start ;
+            prov:atTime "2019-08-20T02:04:15.459239"^^xsd:dateTime ;
+            prov:hadActivity <urn:uuid:5b97340d-ced5-4007-9d33-269251039449> ] ;
+    prov:qualifiedUsage [ a prov:Usage ;
+            prov:atTime "2019-08-20T02:04:15.630337"^^xsd:dateTime ;
+            prov:entity <urn:hash::sha1:7a42bf9502c7cb1d903b4774453aa0fe2ab5ad61> ;
+            prov:hadRole <arcp://uuid,c301ae11-cf9a-410c-bf7b-1af5be3c2364/workflow/packed.cwl#main/curl-get.cwl/url> ],
+        [ a prov:Usage ;
+            prov:atTime "2019-08-20T02:04:15.463009"^^xsd:dateTime ;
+            prov:entity data:facb855c9cef68cf9733f539bde2b57586848293 ;
+            prov:hadRole <arcp://uuid,c301ae11-cf9a-410c-bf7b-1af5be3c2364/workflow/packed.cwl#main/acceptType> ],
+        [ a prov:Usage ;
+            prov:atTime "2019-08-20T02:04:15.463412"^^xsd:dateTime ;
+            prov:entity <urn:hash::sha1:7a42bf9502c7cb1d903b4774453aa0fe2ab5ad61> ;
+            prov:hadRole <arcp://uuid,c301ae11-cf9a-410c-bf7b-1af5be3c2364/workflow/packed.cwl#main/url> ],
+        [ a prov:Usage ;
+            prov:atTime "2019-08-20T02:04:15.629937"^^xsd:dateTime ;
+            prov:entity data:facb855c9cef68cf9733f539bde2b57586848293 ;
+            prov:hadRole <arcp://uuid,c301ae11-cf9a-410c-bf7b-1af5be3c2364/workflow/packed.cwl#main/curl-get.cwl/acceptType> ] ;
+    prov:startedAtTime "2019-08-20T02:04:15.459151"^^xsd:dateTime ;
+    prov:wasAssociatedWith <urn:uuid:5b97340d-ced5-4007-9d33-269251039449>,
+        <urn:uuid:8680410e-52cb-4349-bab4-c7bfa3c06d30> .
+

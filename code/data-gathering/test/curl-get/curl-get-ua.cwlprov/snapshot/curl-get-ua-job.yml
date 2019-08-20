@@ -1,0 +1,5 @@
+#!/usr/bin/env cwltool
+
+cwl:tool: ../../tools/curl-get.cwl
+
+url: https://ifconfig.me/ua

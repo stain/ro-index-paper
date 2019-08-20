@@ -1,0 +1,25 @@
+{
+    "downloaded": {
+        "location": "../data/f9/f919d9f152904f6c40db36d416df4901ff69eaa0",
+        "basename": "downloaded",
+        "nameroot": "downloaded",
+        "nameext": "",
+        "class": "File",
+        "checksum": "sha1$f919d9f152904f6c40db36d416df4901ff69eaa0",
+        "size": 10,
+        "format": "https://www.iana.org/assignments/media-types/text/plain",
+        "http://commonwl.org/cwltool#generation": 0,
+        "@id": "urn:uuid:460eafc5-4606-4bb3-9db9-3a6b024e39da"
+    },
+    "headers": {
+        "location": "../data/ac/ac92e1cb9dd589734c892d060ed55e6100dc307a",
+        "basename": "headers.txt",
+        "nameroot": "headers",
+        "nameext": ".txt",
+        "class": "File",
+        "checksum": "sha1$ac92e1cb9dd589734c892d060ed55e6100dc307a",
+        "size": 305,
+        "http://commonwl.org/cwltool#generation": 0,
+        "@id": "urn:uuid:1a1ecc42-c7ca-418f-bc2a-7e778ff0d557"
+    }
+}

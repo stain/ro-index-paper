@@ -1,0 +1,140 @@
+<?xml version='1.0' encoding='ASCII'?>
+<prov:document xmlns:cwlprov="https://w3id.org/cwl/prov#" xmlns:data="urn:hash::sha1:" xmlns:foaf="http://xmlns.com/foaf/0.1/" xmlns:id="urn:uuid:" xmlns:input="arcp://uuid,a0a6323e-ef2e-45a2-827e-ea7c4de3d99c/workflow/primary-job.json#" xmlns:metadata="arcp://uuid,a0a6323e-ef2e-45a2-827e-ea7c4de3d99c/metadata/" xmlns:orcid="https://orcid.org/" xmlns:prov="http://www.w3.org/ns/prov#" xmlns:provenance="arcp://uuid,a0a6323e-ef2e-45a2-827e-ea7c4de3d99c/metadata/provenance/" xmlns:researchobject="arcp://uuid,a0a6323e-ef2e-45a2-827e-ea7c4de3d99c/" xmlns:schema="http://schema.org/" xmlns:sha256="nih:sha-256;" xmlns:wf="arcp://uuid,a0a6323e-ef2e-45a2-827e-ea7c4de3d99c/workflow/packed.cwl#" xmlns:wf4ever="http://purl.org/wf4ever/wf4ever#" xmlns:wfdesc="http://purl.org/wf4ever/wfdesc#" xmlns:wfprov="http://purl.org/wf4ever/wfprov#" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <prov:agent prov:id="id:9e38863c-0e90-4065-835b-a74ec36a2ae2"/>
+  <prov:softwareAgent prov:id="id:1924ad2d-0d80-4403-bc85-0492115ad4e1">
+    <prov:label>cwltool 1.0.20190815141648</prov:label>
+    <prov:type xsi:type="xsd:QName">wfprov:WorkflowEngine</prov:type>
+  </prov:softwareAgent>
+  <prov:wasStartedBy>
+    <prov:activity prov:ref="id:1924ad2d-0d80-4403-bc85-0492115ad4e1"/>
+    <prov:starter prov:ref="id:9e38863c-0e90-4065-835b-a74ec36a2ae2"/>
+    <prov:time>2019-08-20T02:03:42.484632</prov:time>
+  </prov:wasStartedBy>
+  <prov:activity prov:id="id:a0a6323e-ef2e-45a2-827e-ea7c4de3d99c">
+    <prov:startTime>2019-08-20T02:03:42.484671</prov:startTime>
+    <prov:label>Run of workflow/packed.cwl#main</prov:label>
+    <prov:type xsi:type="xsd:QName">wfprov:WorkflowRun</prov:type>
+  </prov:activity>
+  <prov:wasAssociatedWith>
+    <prov:activity prov:ref="id:a0a6323e-ef2e-45a2-827e-ea7c4de3d99c"/>
+    <prov:agent prov:ref="id:1924ad2d-0d80-4403-bc85-0492115ad4e1"/>
+    <prov:plan prov:ref="wf:main"/>
+  </prov:wasAssociatedWith>
+  <prov:wasStartedBy>
+    <prov:activity prov:ref="id:a0a6323e-ef2e-45a2-827e-ea7c4de3d99c"/>
+    <prov:starter prov:ref="id:1924ad2d-0d80-4403-bc85-0492115ad4e1"/>
+    <prov:time>2019-08-20T02:03:42.484762</prov:time>
+  </prov:wasStartedBy>
+  <prov:plan prov:id="wf:main">
+    <prov:label>Prospective provenance</prov:label>
+    <prov:type xsi:type="xsd:QName">wfdesc:Process</prov:type>
+  </prov:plan>
+  <prov:entity prov:id="data:f919d9f152904f6c40db36d416df4901ff69eaa0">
+    <prov:type xsi:type="xsd:QName">wfprov:Artifact</prov:type>
+    <prov:value xsi:type="xsd:string">text/plain</prov:value>
+  </prov:entity>
+  <prov:used>
+    <prov:activity prov:ref="id:a0a6323e-ef2e-45a2-827e-ea7c4de3d99c"/>
+    <prov:entity prov:ref="data:f919d9f152904f6c40db36d416df4901ff69eaa0"/>
+    <prov:time>2019-08-20T02:03:42.488647</prov:time>
+    <prov:role xsi:type="xsd:QName">wf:main/acceptType</prov:role>
+  </prov:used>
+  <prov:entity prov:id="data:590da2415bd45f4deb878e99d97270f100a58d57">
+    <prov:type xsi:type="xsd:QName">wfprov:Artifact</prov:type>
+    <prov:value xsi:type="xsd:string">https://ifconfig.me/mime</prov:value>
+  </prov:entity>
+  <prov:used>
+    <prov:activity prov:ref="id:a0a6323e-ef2e-45a2-827e-ea7c4de3d99c"/>
+    <prov:entity prov:ref="data:590da2415bd45f4deb878e99d97270f100a58d57"/>
+    <prov:time>2019-08-20T02:03:42.489098</prov:time>
+    <prov:role xsi:type="xsd:QName">wf:main/url</prov:role>
+  </prov:used>
+  <prov:softwareAgent prov:id="id:9aaf9d65-b30c-45ed-92b0-7183b4186e29">
+    <prov:label>Container execution of image appropriate/curl:3.1</prov:label>
+    <cwlprov:image>appropriate/curl:3.1</cwlprov:image>
+  </prov:softwareAgent>
+  <prov:wasAssociatedWith>
+    <prov:activity prov:ref="id:a0a6323e-ef2e-45a2-827e-ea7c4de3d99c"/>
+    <prov:agent prov:ref="id:9aaf9d65-b30c-45ed-92b0-7183b4186e29"/>
+  </prov:wasAssociatedWith>
+  <prov:entity prov:id="data:f919d9f152904f6c40db36d416df4901ff69eaa0">
+    <prov:type xsi:type="xsd:QName">wfprov:Artifact</prov:type>
+    <prov:value xsi:type="xsd:string">text/plain</prov:value>
+  </prov:entity>
+  <prov:used>
+    <prov:activity prov:ref="id:a0a6323e-ef2e-45a2-827e-ea7c4de3d99c"/>
+    <prov:entity prov:ref="data:f919d9f152904f6c40db36d416df4901ff69eaa0"/>
+    <prov:time>2019-08-20T02:03:42.645743</prov:time>
+    <prov:role xsi:type="xsd:QName">wf:main/curl-get.cwl/acceptType</prov:role>
+  </prov:used>
+  <prov:entity prov:id="data:590da2415bd45f4deb878e99d97270f100a58d57">
+    <prov:type xsi:type="xsd:QName">wfprov:Artifact</prov:type>
+    <prov:value xsi:type="xsd:string">https://ifconfig.me/mime</prov:value>
+  </prov:entity>
+  <prov:used>
+    <prov:activity prov:ref="id:a0a6323e-ef2e-45a2-827e-ea7c4de3d99c"/>
+    <prov:entity prov:ref="data:590da2415bd45f4deb878e99d97270f100a58d57"/>
+    <prov:time>2019-08-20T02:03:42.646142</prov:time>
+    <prov:role xsi:type="xsd:QName">wf:main/curl-get.cwl/url</prov:role>
+  </prov:used>
+  <prov:entity prov:id="data:f919d9f152904f6c40db36d416df4901ff69eaa0"/>
+  <prov:entity prov:id="id:460eafc5-4606-4bb3-9db9-3a6b024e39da">
+    <prov:type xsi:type="xsd:QName">wf4ever:File</prov:type>
+    <prov:type xsi:type="xsd:QName">wfprov:Artifact</prov:type>
+    <cwlprov:basename>downloaded</cwlprov:basename>
+    <cwlprov:nameext></cwlprov:nameext>
+    <cwlprov:nameroot>downloaded</cwlprov:nameroot>
+  </prov:entity>
+  <prov:specializationOf>
+    <prov:specificEntity prov:ref="id:460eafc5-4606-4bb3-9db9-3a6b024e39da"/>
+    <prov:generalEntity prov:ref="data:f919d9f152904f6c40db36d416df4901ff69eaa0"/>
+  </prov:specializationOf>
+  <prov:wasGeneratedBy>
+    <prov:entity prov:ref="id:460eafc5-4606-4bb3-9db9-3a6b024e39da"/>
+    <prov:activity prov:ref="id:a0a6323e-ef2e-45a2-827e-ea7c4de3d99c"/>
+    <prov:time>2019-08-20T02:03:44.087077</prov:time>
+    <prov:role xsi:type="xsd:QName">wf:main/curl-get.cwl/downloaded</prov:role>
+  </prov:wasGeneratedBy>
+  <prov:entity prov:id="data:ac92e1cb9dd589734c892d060ed55e6100dc307a">
+    <prov:type xsi:type="xsd:QName">wfprov:Artifact</prov:type>
+  </prov:entity>
+  <prov:entity prov:id="id:1a1ecc42-c7ca-418f-bc2a-7e778ff0d557">
+    <prov:type xsi:type="xsd:QName">wf4ever:File</prov:type>
+    <prov:type xsi:type="xsd:QName">wfprov:Artifact</prov:type>
+    <cwlprov:basename>headers.txt</cwlprov:basename>
+    <cwlprov:nameext>.txt</cwlprov:nameext>
+    <cwlprov:nameroot>headers</cwlprov:nameroot>
+  </prov:entity>
+  <prov:specializationOf>
+    <prov:specificEntity prov:ref="id:1a1ecc42-c7ca-418f-bc2a-7e778ff0d557"/>
+    <prov:generalEntity prov:ref="data:ac92e1cb9dd589734c892d060ed55e6100dc307a"/>
+  </prov:specializationOf>
+  <prov:wasGeneratedBy>
+    <prov:entity prov:ref="id:1a1ecc42-c7ca-418f-bc2a-7e778ff0d557"/>
+    <prov:activity prov:ref="id:a0a6323e-ef2e-45a2-827e-ea7c4de3d99c"/>
+    <prov:time>2019-08-20T02:03:44.087077</prov:time>
+    <prov:role xsi:type="xsd:QName">wf:main/curl-get.cwl/headers</prov:role>
+  </prov:wasGeneratedBy>
+  <prov:wasEndedBy>
+    <prov:activity prov:ref="id:a0a6323e-ef2e-45a2-827e-ea7c4de3d99c"/>
+    <prov:ender prov:ref="id:a0a6323e-ef2e-45a2-827e-ea7c4de3d99c"/>
+    <prov:time>2019-08-20T02:03:44.087067</prov:time>
+  </prov:wasEndedBy>
+  <prov:wasGeneratedBy>
+    <prov:entity prov:ref="id:460eafc5-4606-4bb3-9db9-3a6b024e39da"/>
+    <prov:activity prov:ref="id:a0a6323e-ef2e-45a2-827e-ea7c4de3d99c"/>
+    <prov:time>2019-08-20T02:03:44.090818</prov:time>
+    <prov:role xsi:type="xsd:QName">wf:main/primary/downloaded</prov:role>
+  </prov:wasGeneratedBy>
+  <prov:wasGeneratedBy>
+    <prov:entity prov:ref="id:1a1ecc42-c7ca-418f-bc2a-7e778ff0d557"/>
+    <prov:activity prov:ref="id:a0a6323e-ef2e-45a2-827e-ea7c4de3d99c"/>
+    <prov:time>2019-08-20T02:03:44.090818</prov:time>
+    <prov:role xsi:type="xsd:QName">wf:main/primary/headers</prov:role>
+  </prov:wasGeneratedBy>
+  <prov:wasEndedBy>
+    <prov:activity prov:ref="id:a0a6323e-ef2e-45a2-827e-ea7c4de3d99c"/>
+    <prov:ender prov:ref="id:1924ad2d-0d80-4403-bc85-0492115ad4e1"/>
+    <prov:time>2019-08-20T02:03:44.091136</prov:time>
+  </prov:wasEndedBy>
+</prov:document>

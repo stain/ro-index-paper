@@ -1,0 +1,29 @@
+[2019-08-20T01:03:36,706Z] [cwltool] /home/stain/miniconda3/bin/cwltool --provenance curl-get-mime-cwlprov curl-get-mime-job.yml
+[2019-08-20T01:03:36,707Z] Resolved 'curl-get-mime-job.yml' to 'file:///home/stain/src/ro-index-paper/code/data-gathering/test/curl-get/curl-get-mime-job.yml'
+[2019-08-20T01:03:42,644Z] [job curl-get.cwl] /tmp/tixgzzzx$ docker \
+    run \
+    -i \
+    --volume=/tmp/tixgzzzx:/tGSnQv:rw \
+    --volume=/tmp/7owjgh1r:/tmp:rw \
+    --workdir=/tGSnQv \
+    --read-only=true \
+    --log-driver=none \
+    --user=1000:1000 \
+    --rm \
+    --env=TMPDIR=/tmp \
+    --env=HOME=/tGSnQv \
+    --cidfile=/tmp/5krfkuix/20190820020342-644587.cid \
+    appropriate/curl:3.1 \
+    curl \
+    --silent \
+    --show-error \
+    --fail \
+    --location \
+    --dump-header \
+    headers.txt \
+    --header \
+    'Accept: text/plain' \
+    https://ifconfig.me/mime > /tmp/tixgzzzx/downloaded
+[2019-08-20T01:03:44,083Z] [job curl-get.cwl] Max memory used: 0MiB
+[2019-08-20T01:03:44,088Z] [job curl-get.cwl] completed success
+[2019-08-20T01:03:44,163Z] Final process status is success

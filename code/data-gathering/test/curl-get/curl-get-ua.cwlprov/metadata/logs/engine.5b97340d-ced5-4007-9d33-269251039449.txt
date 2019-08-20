@@ -1,0 +1,29 @@
+[2019-08-20T01:04:08,854Z] [cwltool] /home/stain/miniconda3/bin/cwltool --provenance curl-get-ua.cwlprov curl-get-ua-job.yml
+[2019-08-20T01:04:08,855Z] Resolved 'curl-get-ua-job.yml' to 'file:///home/stain/src/ro-index-paper/code/data-gathering/test/curl-get/curl-get-ua-job.yml'
+[2019-08-20T01:04:15,628Z] [job curl-get.cwl] /tmp/9v4etmod$ docker \
+    run \
+    -i \
+    --volume=/tmp/9v4etmod:/HOmiQR:rw \
+    --volume=/tmp/vu70ge2h:/tmp:rw \
+    --workdir=/HOmiQR \
+    --read-only=true \
+    --log-driver=none \
+    --user=1000:1000 \
+    --rm \
+    --env=TMPDIR=/tmp \
+    --env=HOME=/HOmiQR \
+    --cidfile=/tmp/ghrjbvo7/20190820020415-628711.cid \
+    appropriate/curl:3.1 \
+    curl \
+    --silent \
+    --show-error \
+    --fail \
+    --location \
+    --dump-header \
+    headers.txt \
+    --header \
+    'Accept: */*' \
+    https://ifconfig.me/ua > /tmp/9v4etmod/downloaded
+[2019-08-20T01:04:17,039Z] [job curl-get.cwl] Max memory used: 0MiB
+[2019-08-20T01:04:17,044Z] [job curl-get.cwl] completed success
+[2019-08-20T01:04:17,117Z] Final process status is success
