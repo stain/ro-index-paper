@@ -2,7 +2,7 @@
 author-meta:
 - Stian Soiland-Reyes
 - Paul Groth
-date-meta: '2019-08-20'
+date-meta: '2019-08-21'
 keywords:
 - research object
 - linked data
@@ -19,10 +19,10 @@ title: 'RO-Index: A survey of Research Object usage'
 
 <small><em>
 This manuscript
-([permalink](https://stain.github.io/ro-index-paper/v/c1a4ffb3f5a7c57219dbed826564435f2c7a62fc/))
+([permalink](https://stain.github.io/ro-index-paper/v/91db17ba301018439f3d027ea6360fa2f1f0b3a0/))
 was automatically generated
-from [stain/ro-index-paper@c1a4ffb](https://github.com/stain/ro-index-paper/tree/c1a4ffb3f5a7c57219dbed826564435f2c7a62fc)
-on August 20, 2019.
+from [stain/ro-index-paper@91db17b](https://github.com/stain/ro-index-paper/tree/91db17ba301018439f3d027ea6360fa2f1f0b3a0)
+on August 21, 2019.
 </em></small>
 
 ## Authors
@@ -291,8 +291,8 @@ A [prototype workflow](https://github.com/stain/ro-index-paper/blob/master/code/
 
 ![
 **CWL workflow: List ZIP content by URL**
-Visualization by CWL Viewer <https://w3id.org/cwl/view/git/cd01d30ffc9e04b8804b62df5e985ebfa6f5b276/code/data-gathering/workflows/zip-content-by-url.cwl>
-](https://view.commonwl.org/graph/svg/github.com/stain/ro-index-paper/blob/master/code/data-gathering/workflows/zip-content-by-url.cwl "Workflow url to fetch to curl to headers & filenames"){#fig:square-image}
+Visualization by CWL Viewer <https://w3id.org/cwl/view/git/c1a4ffb3f5a7c57219dbed826564435f2c7a62fc/code/data-gathering/workflows/zip-content-by-url.cwl>
+](https://w3id.org/cwl/view/git/c1a4ffb3f5a7c57219dbed826564435f2c7a62fc/code/data-gathering/workflows/zip-content-by-url.cwl?format=svg "Workflow url to fetch to curl to headers & filenames"){#fig:square-image}
 
 
 
