@@ -1,0 +1,10 @@
+#!/usr/bin/env cwltool
+
+cwl:tool: ../../tools/sed.cwl
+
+command: s/fred/soup/g
+
+original: 
+  class: File
+  path: original.txt
+  

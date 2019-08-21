@@ -1,0 +1,13 @@
+{
+    "command": "s/fred/soup/g",
+    "original": {
+        "class": "File",
+        "location": "../data/6f/6f83e2beca9803c05f8d22925509ba6917cbfe81",
+        "size": 146,
+        "basename": "original.txt",
+        "nameroot": "original",
+        "nameext": ".txt",
+        "checksum": "sha1$6f83e2beca9803c05f8d22925509ba6917cbfe81",
+        "@id": "urn:uuid:8b4b727c-b05d-4caa-aa66-1c6c28e5b5d4"
+    }
+}

@@ -1,0 +1,13 @@
+{
+    "modified": {
+        "location": "../data/d0/d0dbd8d4fb24b8de348c0193f75f95b6d9f9d6a6",
+        "basename": "modified.txt",
+        "nameroot": "modified",
+        "nameext": ".txt",
+        "class": "File",
+        "checksum": "sha1$d0dbd8d4fb24b8de348c0193f75f95b6d9f9d6a6",
+        "size": 146,
+        "http://commonwl.org/cwltool#generation": 0,
+        "@id": "urn:uuid:19741a27-a5a6-4c93-9ba9-8c1809fc1c90"
+    }
+}

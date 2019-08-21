@@ -1,0 +1,25 @@
+[2019-08-21T13:32:04,194Z] [cwltool] /home/stain/miniconda3/bin/cwltool --provenance sed-job.cwlprov sed-job.yml
+[2019-08-21T13:32:04,196Z] Resolved 'sed-job.yml' to 'file:///home/stain/src/ro-index-paper/code/data-gathering/test/sed/sed-job.yml'
+[2019-08-21T13:32:12,215Z] [job sed.cwl] /tmp/_k1xsfmc$ docker \
+    run \
+    -i \
+    --volume=/tmp/_k1xsfmc:/hMqwlM:rw \
+    --volume=/tmp/ynoy2w1b:/tmp:rw \
+    --volume=/home/stain/src/ro-index-paper/code/data-gathering/test/sed/original.txt:/var/lib/cwl/stg80e85d7a-3680-4676-a377-402a561f9515/original.txt:ro \
+    --workdir=/hMqwlM \
+    --read-only=true \
+    --log-driver=none \
+    --user=1000:1000 \
+    --rm \
+    --env=TMPDIR=/tmp \
+    --env=HOME=/hMqwlM \
+    --cidfile=/tmp/opg558mt/20190821143212-214846.cid \
+    debian:9 \
+    sed \
+    --unbuffered \
+    --regexp-extended \
+    s/fred/soup/g \
+    /var/lib/cwl/stg80e85d7a-3680-4676-a377-402a561f9515/original.txt > /tmp/_k1xsfmc/modified.txt
+[2019-08-21T13:32:13,576Z] [job sed.cwl] Max memory used: 0MiB
+[2019-08-21T13:32:13,581Z] [job sed.cwl] completed success
+[2019-08-21T13:32:13,652Z] Final process status is success
