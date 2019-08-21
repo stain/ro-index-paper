@@ -19,12 +19,12 @@ class: Workflow
 label: "find downloadable files in zenodo community"
 
 doc: > 
-  do stuff
+  For a given Zenodo community, retrieve a list of all its downloadable files
 
 requirements:
-    - class: StepInputExpressionRequirement
-    - class: ScatterFeatureRequirement
-    - class: InlineJavascriptRequirement
+  - class: StepInputExpressionRequirement
+  - class: ScatterFeatureRequirement
+#  - class: InlineJavascriptRequirement
 
 inputs:
   community:
@@ -35,11 +35,11 @@ inputs:
 
 outputs:
   urls:
-    type: File[]
+    type: File
     streamable: true
     doc: >
       A list of downloadable URLs across the community
-    outputSource: fetch-meta/links
+    outputSource: flatten/concatinated
 
 steps:
     list-ids:
@@ -67,18 +67,7 @@ steps:
         file:
           source: make-uri/modified
       out: [lines]
-      run:
-        class: ExpressionTool
-        inputs:
-          file:
-            type: File
-            inputBinding:
-              loadContents: true
-        outputs:
-          lines: 
-            type: string[]
-        expression: >
-          ${ return {"lines": inputs.file.contents.split('\n')}; }
+      run: ../tools/split-by-line.cwl
 
     fetch-meta:
       run: ../tools/scrapy-meta.cwl
@@ -87,6 +76,13 @@ steps:
         url:
           source: split-ids-by-line/lines
       out: [links]
+    
+    flatten:
+      run: ../tools/cat.cwl
+      in:
+        files: 
+          source: fetch-meta/links
+      out: [concatinated]
 
 s:creator:
   - class: s:Person
