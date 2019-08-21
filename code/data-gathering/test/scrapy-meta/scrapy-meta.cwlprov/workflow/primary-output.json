@@ -1,0 +1,13 @@
+{
+    "links": {
+        "location": "../data/ac/ac5dc13831954b532ffd80534bb93a1057aef944",
+        "basename": "links.txt",
+        "nameroot": "links",
+        "nameext": ".txt",
+        "class": "File",
+        "checksum": "sha1$ac5dc13831954b532ffd80534bb93a1057aef944",
+        "size": 280,
+        "http://commonwl.org/cwltool#generation": 0,
+        "@id": "urn:uuid:9166719d-3cb2-4dc2-87b4-f2ca900fc578"
+    }
+}

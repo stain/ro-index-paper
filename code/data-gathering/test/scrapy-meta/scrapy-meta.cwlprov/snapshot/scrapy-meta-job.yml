@@ -1,0 +1,6 @@
+#!/usr/bin/env cwltool
+
+cwl:tool: ../../tools/scrapy-meta.cwl
+
+url: https://zenodo.org/record/1215611
+

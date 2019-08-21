@@ -1,0 +1,24 @@
+[2019-08-21T20:19:17,181Z] [cwltool] /home/stain/miniconda3/bin/cwltool --provenance scrapy-meta.cwlprov scrapy-meta-job.yml
+[2019-08-21T20:19:17,182Z] Resolved 'scrapy-meta-job.yml' to 'file:///home/stain/src/ro-index-paper/code/data-gathering/test/scrapy-meta/scrapy-meta-job.yml'
+[2019-08-21T20:19:18,195Z] [job scrapy-meta.cwl] /tmp/sjdoiymj$ docker \
+    run \
+    -i \
+    --volume=/tmp/sjdoiymj:/dvKQsK:rw \
+    --volume=/tmp/efgm_2tj:/tmp:rw \
+    --volume=/home/stain/src/ro-index-paper/code/data-gathering/tools/scrapy-meta.py:/dvKQsK/scrapy-meta.py:ro \
+    --workdir=/dvKQsK \
+    --read-only=true \
+    --log-driver=none \
+    --user=1000:1000 \
+    --rm \
+    --env=TMPDIR=/tmp \
+    --env=HOME=/dvKQsK \
+    --cidfile=/tmp/f2xl3bwy/20190821211918-194896.cid \
+    aciobanu/scrapy \
+    scrapy \
+    runspider \
+    -aurl=https://zenodo.org/record/1215611 \
+    scrapy-meta.py > /tmp/sjdoiymj/links.txt
+[2019-08-21T20:19:22,665Z] [job scrapy-meta.cwl] Max memory used: 43MiB
+[2019-08-21T20:19:22,672Z] [job scrapy-meta.cwl] completed success
+[2019-08-21T20:19:22,729Z] Final process status is success

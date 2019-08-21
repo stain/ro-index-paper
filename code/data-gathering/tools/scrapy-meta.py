@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 ## Not a standalone Python script, run as
 ## scrapy runspider -a url=https://zenodo.org/record/1215611 scrapy-meta.py
 
@@ -19,12 +21,8 @@ import scrapy
 
 class LinkAlternateSpider(scrapy.Spider):
     name = 'link_alternate'
-    # Set the HTTP error codes that should be handled
-    handle_httpstatus_list = []
-    valid_url = []
-    invalid_url = []
-    maxdepth = 2;
-    domain = ''
+    allowed_domains = ['basic']
+    start_urls = ['http://basic/']
 
     def __init__(self, url='http://www.example.com', *args, **kwargs):
         super(LinkAlternateSpider, self).__init__(*args, **kwargs)
