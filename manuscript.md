@@ -2,7 +2,7 @@
 author-meta:
 - Stian Soiland-Reyes
 - Paul Groth
-date-meta: '2019-08-21'
+date-meta: '2019-09-02'
 keywords:
 - research object
 - linked data
@@ -19,10 +19,10 @@ title: 'RO-Index: A survey of Research Object usage'
 
 <small><em>
 This manuscript
-([permalink](https://stain.github.io/ro-index-paper/v/f728fe91b7bcdb771fab4593d44e0e6c2979548c/))
+([permalink](https://stain.github.io/ro-index-paper/v/4c2e03540e64ff4c2681e1a307cd3f41b24b07a3/))
 was automatically generated
-from [stain/ro-index-paper@f728fe9](https://github.com/stain/ro-index-paper/tree/f728fe91b7bcdb771fab4593d44e0e6c2979548c)
-on August 21, 2019.
+from [stain/ro-index-paper@4c2e035](https://github.com/stain/ro-index-paper/tree/4c2e03540e64ff4c2681e1a307cd3f41b24b07a3)
+on September 2, 2019.
 </em></small>
 
 ## Authors
@@ -247,6 +247,7 @@ For GDPR purposes the _Data Controller_ is The University of Manchester, data su
 
 * <https://sci-f.github.io/> [@OMB8E9Yi]
 * <https://frictionlessdata.io/specs/data-package/>
+* The Journal of Research Objects <http://jro.world/> (see also [presentation](https://docs.google.com/presentation/d/1c4eSbTbaJ2ydEujvL1AA1rWghVFesy__nEtRIZeI-kA/edit?usp=sharing)
 
 #### 2nd generation ROs
 
