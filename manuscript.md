@@ -2,7 +2,7 @@
 author-meta:
 - Stian Soiland-Reyes
 - Paul Groth
-date-meta: '2019-09-02'
+date-meta: '2019-09-03'
 keywords:
 - research object
 - linked data
@@ -19,10 +19,10 @@ title: 'RO-Index: A survey of Research Object usage'
 
 <small><em>
 This manuscript
-([permalink](https://stain.github.io/ro-index-paper/v/484620c9210fde1985f88b65608bfec69d7129f1/))
+([permalink](https://stain.github.io/ro-index-paper/v/2580460e4295e9a254be2be3333ce7722866b8b4/))
 was automatically generated
-from [stain/ro-index-paper@484620c](https://github.com/stain/ro-index-paper/tree/484620c9210fde1985f88b65608bfec69d7129f1)
-on September 2, 2019.
+from [stain/ro-index-paper@2580460](https://github.com/stain/ro-index-paper/tree/2580460e4295e9a254be2be3333ce7722866b8b4)
+on September 3, 2019.
 </em></small>
 
 ## Authors
@@ -249,6 +249,8 @@ For GDPR purposes the _Data Controller_ is The University of Manchester, data su
 * <https://frictionlessdata.io/specs/data-package/>
 * The Journal of Research Objects <http://jro.world/> (see also [presentation](https://docs.google.com/presentation/d/1c4eSbTbaJ2ydEujvL1AA1rWghVFesy__nEtRIZeI-kA/edit?usp=sharing)
 * Tonkaz <https://docs.google.com/presentation/d/1YRKCM1KwHyNOz7B6AP2j5qIHjl7Ew9CnAtvXA1xSeNY/edit#slide=id.g419a3a9d09_1_93>
+* [ActivePaper](https://www.activepapers.org) / HDF5  [@RpWvrttS]
+  > HDF5 dataset attributes are used to store metadata, including a dataflow graph that records provenance (requirement 5), but also creation time stamps and a data type indicator distinguishing references and executable code from “plain” datasets.
 
 #### 2nd generation ROs
 
