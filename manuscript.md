@@ -2,7 +2,7 @@
 author-meta:
 - Stian Soiland-Reyes
 - Paul Groth
-date-meta: '2019-09-03'
+date-meta: '2019-09-04'
 keywords:
 - research object
 - linked data
@@ -19,10 +19,10 @@ title: 'RO-Index: A survey of Research Object usage'
 
 <small><em>
 This manuscript
-([permalink](https://stain.github.io/ro-index-paper/v/2580460e4295e9a254be2be3333ce7722866b8b4/))
+([permalink](https://stain.github.io/ro-index-paper/v/5b9f502052f901189f8d9f3609da346427cbe8c5/))
 was automatically generated
-from [stain/ro-index-paper@2580460](https://github.com/stain/ro-index-paper/tree/2580460e4295e9a254be2be3333ce7722866b8b4)
-on September 3, 2019.
+from [stain/ro-index-paper@5b9f502](https://github.com/stain/ro-index-paper/tree/5b9f502052f901189f8d9f3609da346427cbe8c5)
+on September 4, 2019.
 </em></small>
 
 ## Authors
@@ -225,6 +225,7 @@ For GDPR purposes the _Data Controller_ is The University of Manchester, data su
 * [COMBINE archives](https://combinearchive.org/index/) [@vGs0hZI; @FJly0f6l]
 * VoID datasets http://www.openphacts.org/specs/2013/WD-datadesc-20130912/ [@vGs0hZI; @13RYarvnd]
 * DataONE Data packages [@B4ffHizQ]
+* DataLad <https://www.datalad.org/datasets.html> [@lciHFS2H]
 
 #### ORE-based research objects
 
