@@ -105,4 +105,4 @@ $schemas:
 
 $namespaces: 
   iana: https://www.iana.org/assignments/media-types/
-  s: https://schema.org/
+  s: http://schema.org/

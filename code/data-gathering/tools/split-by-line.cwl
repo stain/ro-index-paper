@@ -41,3 +41,23 @@ outputs:
 
 expression: |
     ${ return {"lines": inputs.file.contents.split(/\r?\n/g) }; }
+
+s:creator:
+  - class: s:Person
+    s:identifier: https://orcid.org/0000-0001-9842-9718
+    s:name: Stian Soiland-Reyes
+
+s:codeRepository: https://github.com/stain/ro-index-paper/
+s:dateCreated: "2019-08-21"
+s:license: https://spdx.org/licenses/Apache-2.0 
+
+s:potentialAction:
+  - class: s:ActivateAction
+    s:label: "example run"
+    s:instrument: "../test/split-by-line/split-by-line-job.yml"
+
+$schemas: 
+  - https://schema.org/version/3.9/schema.rdf
+
+$namespaces: 
+  s: http://schema.org/

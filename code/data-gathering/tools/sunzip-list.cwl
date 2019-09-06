@@ -93,13 +93,13 @@ s:description: |
 s:potentialAction:
   - class: s:ActivateAction
     s:label: "example run"
-    s:instrument: "../test/sunzip-list-job.yml"
-    s:object: "../test/test.zip"
-    s:result: "../test/test-sunzip-files.txt"
+    s:instrument: "../test/sunzip-list/sunzip-list-job.yml"
+    s:object: "../test/sunzip-list/test.zip"
+    s:result: "../test/sunzip-list/test-sunzip-files.txt"
 
 $schemas: 
   - https://schema.org/version/3.9/schema.rdf
 
 $namespaces: 
   iana: https://www.iana.org/assignments/media-types/
-  s: https://schema.org/
+  s: http://schema.org/

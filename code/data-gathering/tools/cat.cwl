@@ -55,7 +55,7 @@ stdout: concatinated
 label: "cat: concatinate files"
 
 doc: > 
-  concatinate files and to a single streamable file
+  concatinate files to a single streamable file
 
 
 $schemas: 
@@ -63,5 +63,5 @@ $schemas:
 
 $namespaces: 
   iana: https://www.iana.org/assignments/media-types/
-  s: https://schema.org/
+  s: http://schema.org/
 
