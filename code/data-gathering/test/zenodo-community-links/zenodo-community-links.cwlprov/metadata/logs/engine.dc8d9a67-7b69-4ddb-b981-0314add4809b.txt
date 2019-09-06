@@ -1,0 +1,1758 @@
+[2019-09-06T08:40:55,438Z] [cwltool] /home/stain/miniconda3/bin/cwltool --provenance zenodo-community-links.cwlprov zenodo-community-links-job.yml
+[2019-09-06T08:40:55,439Z] Resolved 'zenodo-community-links-job.yml' to 'file:///home/stain/src/ro-index-paper/code/data-gathering/test/zenodo-community-links/zenodo-community-links-job.yml'
+[2019-09-06T08:41:09,520Z] [workflow ] start
+[2019-09-06T08:41:09,520Z] [workflow ] starting step list-ids
+[2019-09-06T08:41:09,521Z] [step list-ids] start
+[2019-09-06T08:41:09,814Z] [job list-ids] /tmp/b2l1kuhg$ docker \
+    run \
+    -i \
+    --volume=/tmp/b2l1kuhg:/KOJdZh:rw \
+    --volume=/tmp/a1n1ds5f:/tmp:rw \
+    --workdir=/KOJdZh \
+    --read-only=true \
+    --log-driver=none \
+    --user=1000:1000 \
+    --rm \
+    --env=TMPDIR=/tmp \
+    --env=HOME=/KOJdZh \
+    --cidfile=/tmp/x806gc65/20190906094109-813855.cid \
+    stain/perl-oai-lib \
+    /bin/sh \
+    -c \
+    'oai_pmh' '--request' 'ListIdentifiers' '--metadataPrefix' 'oai_dc' '--set' 'user-ro' 'https://zenodo.org/oai2d' | grep identifier: | sed 's/^.*identifier: //g' > /tmp/b2l1kuhg/identifiers
+[2019-09-06T08:41:13,212Z] [job list-ids] Max memory used: 0MiB
+[2019-09-06T08:41:13,216Z] [job list-ids] completed success
+[2019-09-06T08:41:13,216Z] [step list-ids] completed success
+[2019-09-06T08:41:13,217Z] [workflow ] starting step make-uri
+[2019-09-06T08:41:13,217Z] [step make-uri] start
+[2019-09-06T08:41:13,502Z] [job make-uri] /tmp/bc13k1wk$ docker \
+    run \
+    -i \
+    --volume=/tmp/bc13k1wk:/KOJdZh:rw \
+    --volume=/tmp/dv_rfx_5:/tmp:rw \
+    --volume=/tmp/b2l1kuhg/identifiers:/var/lib/cwl/stg73be6a60-172c-4f3d-b9b1-d0100947b632/identifiers:ro \
+    --workdir=/KOJdZh \
+    --read-only=true \
+    --log-driver=none \
+    --user=1000:1000 \
+    --rm \
+    --env=TMPDIR=/tmp \
+    --env=HOME=/KOJdZh \
+    --cidfile=/tmp/eug92gcu/20190906094113-501776.cid \
+    debian:9 \
+    sed \
+    --unbuffered \
+    --regexp-extended \
+    s,oai:zenodo.org:,https://zenodo.org/record/, \
+    /var/lib/cwl/stg73be6a60-172c-4f3d-b9b1-d0100947b632/identifiers > /tmp/bc13k1wk/modified.txt
+[2019-09-06T08:41:15,273Z] [job make-uri] Max memory used: 0MiB
+[2019-09-06T08:41:15,277Z] [job make-uri] completed success
+[2019-09-06T08:41:15,277Z] [step make-uri] completed success
+[2019-09-06T08:41:15,278Z] [workflow ] starting step split-ids-by-line
+[2019-09-06T08:41:15,278Z] [step split-ids-by-line] start
+[2019-09-06T08:41:16,338Z] [step split-ids-by-line] completed success
+[2019-09-06T08:41:16,339Z] [workflow ] starting step fetch-meta
+[2019-09-06T08:41:16,341Z] [step fetch-meta] start
+[2019-09-06T08:41:16,560Z] [job fetch-meta] /tmp/_sq2fb04$ docker \
+    run \
+    -i \
+    --volume=/tmp/_sq2fb04:/KOJdZh:rw \
+    --volume=/tmp/3i3_3pxd:/tmp:rw \
+    --volume=/home/stain/src/ro-index-paper/code/data-gathering/tools/scrapy-meta.py:/KOJdZh/scrapy-meta.py:ro \
+    --workdir=/KOJdZh \
+    --read-only=true \
+    --log-driver=none \
+    --user=1000:1000 \
+    --rm \
+    --env=TMPDIR=/tmp \
+    --env=HOME=/KOJdZh \
+    --cidfile=/tmp/1ygsdo8z/20190906094116-560220.cid \
+    aciobanu/scrapy \
+    scrapy \
+    runspider \
+    -aurl=https://zenodo.org/record/1310621 \
+    scrapy-meta.py > /tmp/_sq2fb04/links.txt
+[2019-09-06T08:41:21,684Z] [job fetch-meta] Max memory used: 43MiB
+[2019-09-06T08:41:21,692Z] [job fetch-meta] completed success
+[2019-09-06T08:41:21,692Z] [step fetch-meta] start
+[2019-09-06T08:41:21,709Z] [job fetch-meta_2] /tmp/sy0ebju6$ docker \
+    run \
+    -i \
+    --volume=/tmp/sy0ebju6:/KOJdZh:rw \
+    --volume=/tmp/0ptya7t8:/tmp:rw \
+    --volume=/home/stain/src/ro-index-paper/code/data-gathering/tools/scrapy-meta.py:/KOJdZh/scrapy-meta.py:ro \
+    --workdir=/KOJdZh \
+    --read-only=true \
+    --log-driver=none \
+    --user=1000:1000 \
+    --rm \
+    --env=TMPDIR=/tmp \
+    --env=HOME=/KOJdZh \
+    --cidfile=/tmp/660de5dc/20190906094121-709209.cid \
+    aciobanu/scrapy \
+    scrapy \
+    runspider \
+    -aurl=https://zenodo.org/record/1421066 \
+    scrapy-meta.py > /tmp/sy0ebju6/links.txt
+[2019-09-06T08:41:26,969Z] [job fetch-meta_2] Max memory used: 43MiB
+[2019-09-06T08:41:26,976Z] [job fetch-meta_2] completed success
+[2019-09-06T08:41:26,977Z] [step fetch-meta] start
+[2019-09-06T08:41:26,991Z] [job fetch-meta_3] /tmp/qxme3nh6$ docker \
+    run \
+    -i \
+    --volume=/tmp/qxme3nh6:/KOJdZh:rw \
+    --volume=/tmp/77332ch8:/tmp:rw \
+    --volume=/home/stain/src/ro-index-paper/code/data-gathering/tools/scrapy-meta.py:/KOJdZh/scrapy-meta.py:ro \
+    --workdir=/KOJdZh \
+    --read-only=true \
+    --log-driver=none \
+    --user=1000:1000 \
+    --rm \
+    --env=TMPDIR=/tmp \
+    --env=HOME=/KOJdZh \
+    --cidfile=/tmp/eojfo04u/20190906094126-991009.cid \
+    aciobanu/scrapy \
+    scrapy \
+    runspider \
+    -aurl=https://zenodo.org/record/1484341 \
+    scrapy-meta.py > /tmp/qxme3nh6/links.txt
+[2019-09-06T08:41:31,666Z] [job fetch-meta_3] Max memory used: 44MiB
+[2019-09-06T08:41:31,674Z] [job fetch-meta_3] completed success
+[2019-09-06T08:41:31,674Z] [step fetch-meta] start
+[2019-09-06T08:41:31,689Z] [job fetch-meta_4] /tmp/epju2mc5$ docker \
+    run \
+    -i \
+    --volume=/tmp/epju2mc5:/KOJdZh:rw \
+    --volume=/tmp/o_omxtxt:/tmp:rw \
+    --volume=/home/stain/src/ro-index-paper/code/data-gathering/tools/scrapy-meta.py:/KOJdZh/scrapy-meta.py:ro \
+    --workdir=/KOJdZh \
+    --read-only=true \
+    --log-driver=none \
+    --user=1000:1000 \
+    --rm \
+    --env=TMPDIR=/tmp \
+    --env=HOME=/KOJdZh \
+    --cidfile=/tmp/_792jw7y/20190906094131-688772.cid \
+    aciobanu/scrapy \
+    scrapy \
+    runspider \
+    -aurl=https://zenodo.org/record/1410052 \
+    scrapy-meta.py > /tmp/epju2mc5/links.txt
+[2019-09-06T08:41:36,386Z] [job fetch-meta_4] Max memory used: 43MiB
+[2019-09-06T08:41:36,390Z] [job fetch-meta_4] completed success
+[2019-09-06T08:41:36,390Z] [step fetch-meta] start
+[2019-09-06T08:41:36,400Z] [job fetch-meta_5] /tmp/494vwyq0$ docker \
+    run \
+    -i \
+    --volume=/tmp/494vwyq0:/KOJdZh:rw \
+    --volume=/tmp/g16w4iqo:/tmp:rw \
+    --volume=/home/stain/src/ro-index-paper/code/data-gathering/tools/scrapy-meta.py:/KOJdZh/scrapy-meta.py:ro \
+    --workdir=/KOJdZh \
+    --read-only=true \
+    --log-driver=none \
+    --user=1000:1000 \
+    --rm \
+    --env=TMPDIR=/tmp \
+    --env=HOME=/KOJdZh \
+    --cidfile=/tmp/vamwqcnr/20190906094136-400687.cid \
+    aciobanu/scrapy \
+    scrapy \
+    runspider \
+    -aurl=https://zenodo.org/record/1484480 \
+    scrapy-meta.py > /tmp/494vwyq0/links.txt
+[2019-09-06T08:41:41,276Z] [job fetch-meta_5] Max memory used: 43MiB
+[2019-09-06T08:41:41,281Z] [job fetch-meta_5] completed success
+[2019-09-06T08:41:41,282Z] [step fetch-meta] start
+[2019-09-06T08:41:41,294Z] [job fetch-meta_6] /tmp/wkhib_u1$ docker \
+    run \
+    -i \
+    --volume=/tmp/wkhib_u1:/KOJdZh:rw \
+    --volume=/tmp/3znru7bg:/tmp:rw \
+    --volume=/home/stain/src/ro-index-paper/code/data-gathering/tools/scrapy-meta.py:/KOJdZh/scrapy-meta.py:ro \
+    --workdir=/KOJdZh \
+    --read-only=true \
+    --log-driver=none \
+    --user=1000:1000 \
+    --rm \
+    --env=TMPDIR=/tmp \
+    --env=HOME=/KOJdZh \
+    --cidfile=/tmp/ga1ac47p/20190906094141-294263.cid \
+    aciobanu/scrapy \
+    scrapy \
+    runspider \
+    -aurl=https://zenodo.org/record/1299320 \
+    scrapy-meta.py > /tmp/wkhib_u1/links.txt
+[2019-09-06T08:41:45,895Z] [job fetch-meta_6] Max memory used: 43MiB
+[2019-09-06T08:41:45,902Z] [job fetch-meta_6] completed success
+[2019-09-06T08:41:45,902Z] [step fetch-meta] start
+[2019-09-06T08:41:45,913Z] [job fetch-meta_7] /tmp/v81zuqu4$ docker \
+    run \
+    -i \
+    --volume=/tmp/v81zuqu4:/KOJdZh:rw \
+    --volume=/tmp/o4hmk375:/tmp:rw \
+    --volume=/home/stain/src/ro-index-paper/code/data-gathering/tools/scrapy-meta.py:/KOJdZh/scrapy-meta.py:ro \
+    --workdir=/KOJdZh \
+    --read-only=true \
+    --log-driver=none \
+    --user=1000:1000 \
+    --rm \
+    --env=TMPDIR=/tmp \
+    --env=HOME=/KOJdZh \
+    --cidfile=/tmp/smvpdpz8/20190906094145-912932.cid \
+    aciobanu/scrapy \
+    scrapy \
+    runspider \
+    -aurl=https://zenodo.org/record/1308997 \
+    scrapy-meta.py > /tmp/v81zuqu4/links.txt
+[2019-09-06T08:41:50,484Z] [job fetch-meta_7] Max memory used: 43MiB
+[2019-09-06T08:41:50,487Z] [job fetch-meta_7] completed success
+[2019-09-06T08:41:50,487Z] [step fetch-meta] start
+[2019-09-06T08:41:50,501Z] [job fetch-meta_8] /tmp/absabxf8$ docker \
+    run \
+    -i \
+    --volume=/tmp/absabxf8:/KOJdZh:rw \
+    --volume=/tmp/o7m7qoy0:/tmp:rw \
+    --volume=/home/stain/src/ro-index-paper/code/data-gathering/tools/scrapy-meta.py:/KOJdZh/scrapy-meta.py:ro \
+    --workdir=/KOJdZh \
+    --read-only=true \
+    --log-driver=none \
+    --user=1000:1000 \
+    --rm \
+    --env=TMPDIR=/tmp \
+    --env=HOME=/KOJdZh \
+    --cidfile=/tmp/lz_qtuy8/20190906094150-500921.cid \
+    aciobanu/scrapy \
+    scrapy \
+    runspider \
+    -aurl=https://zenodo.org/record/1309962 \
+    scrapy-meta.py > /tmp/absabxf8/links.txt
+[2019-09-06T08:41:55,023Z] [job fetch-meta_8] Max memory used: 43MiB
+[2019-09-06T08:41:55,029Z] [job fetch-meta_8] completed success
+[2019-09-06T08:41:55,030Z] [step fetch-meta] start
+[2019-09-06T08:41:55,042Z] [job fetch-meta_9] /tmp/iqexicyi$ docker \
+    run \
+    -i \
+    --volume=/tmp/iqexicyi:/KOJdZh:rw \
+    --volume=/tmp/6y394rlw:/tmp:rw \
+    --volume=/home/stain/src/ro-index-paper/code/data-gathering/tools/scrapy-meta.py:/KOJdZh/scrapy-meta.py:ro \
+    --workdir=/KOJdZh \
+    --read-only=true \
+    --log-driver=none \
+    --user=1000:1000 \
+    --rm \
+    --env=TMPDIR=/tmp \
+    --env=HOME=/KOJdZh \
+    --cidfile=/tmp/qxwob_6w/20190906094155-042159.cid \
+    aciobanu/scrapy \
+    scrapy \
+    runspider \
+    -aurl=https://zenodo.org/record/1299783 \
+    scrapy-meta.py > /tmp/iqexicyi/links.txt
+[2019-09-06T08:41:59,731Z] [job fetch-meta_9] Max memory used: 43MiB
+[2019-09-06T08:41:59,734Z] [job fetch-meta_9] completed success
+[2019-09-06T08:41:59,734Z] [step fetch-meta] start
+[2019-09-06T08:41:59,746Z] [job fetch-meta_10] /tmp/2feaq3rc$ docker \
+    run \
+    -i \
+    --volume=/tmp/2feaq3rc:/KOJdZh:rw \
+    --volume=/tmp/_xkby278:/tmp:rw \
+    --volume=/home/stain/src/ro-index-paper/code/data-gathering/tools/scrapy-meta.py:/KOJdZh/scrapy-meta.py:ro \
+    --workdir=/KOJdZh \
+    --read-only=true \
+    --log-driver=none \
+    --user=1000:1000 \
+    --rm \
+    --env=TMPDIR=/tmp \
+    --env=HOME=/KOJdZh \
+    --cidfile=/tmp/x4ir8ffy/20190906094159-746255.cid \
+    aciobanu/scrapy \
+    scrapy \
+    runspider \
+    -aurl=https://zenodo.org/record/1312652 \
+    scrapy-meta.py > /tmp/2feaq3rc/links.txt
+[2019-09-06T08:42:04,189Z] [job fetch-meta_10] Max memory used: 43MiB
+[2019-09-06T08:42:04,193Z] [job fetch-meta_10] completed success
+[2019-09-06T08:42:04,194Z] [step fetch-meta] start
+[2019-09-06T08:42:04,207Z] [job fetch-meta_11] /tmp/9jruim7y$ docker \
+    run \
+    -i \
+    --volume=/tmp/9jruim7y:/KOJdZh:rw \
+    --volume=/tmp/1vtkh3uf:/tmp:rw \
+    --volume=/home/stain/src/ro-index-paper/code/data-gathering/tools/scrapy-meta.py:/KOJdZh/scrapy-meta.py:ro \
+    --workdir=/KOJdZh \
+    --read-only=true \
+    --log-driver=none \
+    --user=1000:1000 \
+    --rm \
+    --env=TMPDIR=/tmp \
+    --env=HOME=/KOJdZh \
+    --cidfile=/tmp/tqkvaw79/20190906094204-207077.cid \
+    aciobanu/scrapy \
+    scrapy \
+    runspider \
+    -aurl=https://zenodo.org/record/3334688 \
+    scrapy-meta.py > /tmp/9jruim7y/links.txt
+[2019-09-06T08:42:08,677Z] [job fetch-meta_11] Max memory used: 43MiB
+[2019-09-06T08:42:08,685Z] [job fetch-meta_11] completed success
+[2019-09-06T08:42:08,685Z] [step fetch-meta] start
+[2019-09-06T08:42:08,699Z] [job fetch-meta_12] /tmp/uee6gjub$ docker \
+    run \
+    -i \
+    --volume=/tmp/uee6gjub:/KOJdZh:rw \
+    --volume=/tmp/kawdjvg2:/tmp:rw \
+    --volume=/home/stain/src/ro-index-paper/code/data-gathering/tools/scrapy-meta.py:/KOJdZh/scrapy-meta.py:ro \
+    --workdir=/KOJdZh \
+    --read-only=true \
+    --log-driver=none \
+    --user=1000:1000 \
+    --rm \
+    --env=TMPDIR=/tmp \
+    --env=HOME=/KOJdZh \
+    --cidfile=/tmp/1bhpcb4q/20190906094208-699279.cid \
+    aciobanu/scrapy \
+    scrapy \
+    runspider \
+    -aurl=https://zenodo.org/record/1311933 \
+    scrapy-meta.py > /tmp/uee6gjub/links.txt
+[2019-09-06T08:42:13,312Z] [job fetch-meta_12] Max memory used: 43MiB
+[2019-09-06T08:42:13,318Z] [job fetch-meta_12] completed success
+[2019-09-06T08:42:13,318Z] [step fetch-meta] start
+[2019-09-06T08:42:13,330Z] [job fetch-meta_13] /tmp/mbitt91w$ docker \
+    run \
+    -i \
+    --volume=/tmp/mbitt91w:/KOJdZh:rw \
+    --volume=/tmp/zguvy6ry:/tmp:rw \
+    --volume=/home/stain/src/ro-index-paper/code/data-gathering/tools/scrapy-meta.py:/KOJdZh/scrapy-meta.py:ro \
+    --workdir=/KOJdZh \
+    --read-only=true \
+    --log-driver=none \
+    --user=1000:1000 \
+    --rm \
+    --env=TMPDIR=/tmp \
+    --env=HOME=/KOJdZh \
+    --cidfile=/tmp/uw2rq6bd/20190906094213-330031.cid \
+    aciobanu/scrapy \
+    scrapy \
+    runspider \
+    -aurl=https://zenodo.org/record/1442453 \
+    scrapy-meta.py > /tmp/mbitt91w/links.txt
+[2019-09-06T08:42:17,888Z] [job fetch-meta_13] Max memory used: 43MiB
+[2019-09-06T08:42:17,893Z] [job fetch-meta_13] completed success
+[2019-09-06T08:42:17,893Z] [step fetch-meta] start
+[2019-09-06T08:42:17,906Z] [job fetch-meta_14] /tmp/p1h03e08$ docker \
+    run \
+    -i \
+    --volume=/tmp/p1h03e08:/KOJdZh:rw \
+    --volume=/tmp/3hvot992:/tmp:rw \
+    --volume=/home/stain/src/ro-index-paper/code/data-gathering/tools/scrapy-meta.py:/KOJdZh/scrapy-meta.py:ro \
+    --workdir=/KOJdZh \
+    --read-only=true \
+    --log-driver=none \
+    --user=1000:1000 \
+    --rm \
+    --env=TMPDIR=/tmp \
+    --env=HOME=/KOJdZh \
+    --cidfile=/tmp/aw2g6nt9/20190906094217-906181.cid \
+    aciobanu/scrapy \
+    scrapy \
+    runspider \
+    -aurl=https://zenodo.org/record/1484403 \
+    scrapy-meta.py > /tmp/p1h03e08/links.txt
+[2019-09-06T08:42:22,381Z] [job fetch-meta_14] Max memory used: 44MiB
+[2019-09-06T08:42:22,389Z] [job fetch-meta_14] completed success
+[2019-09-06T08:42:22,389Z] [step fetch-meta] start
+[2019-09-06T08:42:22,402Z] [job fetch-meta_15] /tmp/8lc7thdt$ docker \
+    run \
+    -i \
+    --volume=/tmp/8lc7thdt:/KOJdZh:rw \
+    --volume=/tmp/wwj6pc5k:/tmp:rw \
+    --volume=/home/stain/src/ro-index-paper/code/data-gathering/tools/scrapy-meta.py:/KOJdZh/scrapy-meta.py:ro \
+    --workdir=/KOJdZh \
+    --read-only=true \
+    --log-driver=none \
+    --user=1000:1000 \
+    --rm \
+    --env=TMPDIR=/tmp \
+    --env=HOME=/KOJdZh \
+    --cidfile=/tmp/jg_sg71g/20190906094222-402794.cid \
+    aciobanu/scrapy \
+    scrapy \
+    runspider \
+    -aurl=https://zenodo.org/record/1313218 \
+    scrapy-meta.py > /tmp/8lc7thdt/links.txt
+[2019-09-06T08:42:26,877Z] [job fetch-meta_15] Max memory used: 43MiB
+[2019-09-06T08:42:26,881Z] [job fetch-meta_15] completed success
+[2019-09-06T08:42:26,882Z] [step fetch-meta] start
+[2019-09-06T08:42:26,894Z] [job fetch-meta_16] /tmp/i1wnwitp$ docker \
+    run \
+    -i \
+    --volume=/tmp/i1wnwitp:/KOJdZh:rw \
+    --volume=/tmp/9lno2gl6:/tmp:rw \
+    --volume=/home/stain/src/ro-index-paper/code/data-gathering/tools/scrapy-meta.py:/KOJdZh/scrapy-meta.py:ro \
+    --workdir=/KOJdZh \
+    --read-only=true \
+    --log-driver=none \
+    --user=1000:1000 \
+    --rm \
+    --env=TMPDIR=/tmp \
+    --env=HOME=/KOJdZh \
+    --cidfile=/tmp/7soyb196/20190906094226-894064.cid \
+    aciobanu/scrapy \
+    scrapy \
+    runspider \
+    -aurl=https://zenodo.org/record/3380592 \
+    scrapy-meta.py > /tmp/i1wnwitp/links.txt
+[2019-09-06T08:42:31,417Z] [job fetch-meta_16] Max memory used: 43MiB
+[2019-09-06T08:42:31,422Z] [job fetch-meta_16] completed success
+[2019-09-06T08:42:31,423Z] [step fetch-meta] start
+[2019-09-06T08:42:31,435Z] [job fetch-meta_17] /tmp/pnqx4knw$ docker \
+    run \
+    -i \
+    --volume=/tmp/pnqx4knw:/KOJdZh:rw \
+    --volume=/tmp/_mjruflj:/tmp:rw \
+    --volume=/home/stain/src/ro-index-paper/code/data-gathering/tools/scrapy-meta.py:/KOJdZh/scrapy-meta.py:ro \
+    --workdir=/KOJdZh \
+    --read-only=true \
+    --log-driver=none \
+    --user=1000:1000 \
+    --rm \
+    --env=TMPDIR=/tmp \
+    --env=HOME=/KOJdZh \
+    --cidfile=/tmp/taggbivq/20190906094231-435572.cid \
+    aciobanu/scrapy \
+    scrapy \
+    runspider \
+    -aurl=https://zenodo.org/record/3268809 \
+    scrapy-meta.py > /tmp/pnqx4knw/links.txt
+[2019-09-06T08:42:36,347Z] [job fetch-meta_17] Max memory used: 43MiB
+[2019-09-06T08:42:36,354Z] [job fetch-meta_17] completed success
+[2019-09-06T08:42:36,354Z] [step fetch-meta] start
+[2019-09-06T08:42:36,365Z] [job fetch-meta_18] /tmp/6gvyag6v$ docker \
+    run \
+    -i \
+    --volume=/tmp/6gvyag6v:/KOJdZh:rw \
+    --volume=/tmp/2z1d7u4j:/tmp:rw \
+    --volume=/home/stain/src/ro-index-paper/code/data-gathering/tools/scrapy-meta.py:/KOJdZh/scrapy-meta.py:ro \
+    --workdir=/KOJdZh \
+    --read-only=true \
+    --log-driver=none \
+    --user=1000:1000 \
+    --rm \
+    --env=TMPDIR=/tmp \
+    --env=HOME=/KOJdZh \
+    --cidfile=/tmp/8ldsn4n_/20190906094236-365468.cid \
+    aciobanu/scrapy \
+    scrapy \
+    runspider \
+    -aurl=https://zenodo.org/record/1472385 \
+    scrapy-meta.py > /tmp/6gvyag6v/links.txt
+[2019-09-06T08:42:40,952Z] [job fetch-meta_18] Max memory used: 43MiB
+[2019-09-06T08:42:40,955Z] [job fetch-meta_18] completed success
+[2019-09-06T08:42:40,956Z] [step fetch-meta] start
+[2019-09-06T08:42:40,967Z] [job fetch-meta_19] /tmp/w9d8_290$ docker \
+    run \
+    -i \
+    --volume=/tmp/w9d8_290:/KOJdZh:rw \
+    --volume=/tmp/jbvqbk3v:/tmp:rw \
+    --volume=/home/stain/src/ro-index-paper/code/data-gathering/tools/scrapy-meta.py:/KOJdZh/scrapy-meta.py:ro \
+    --workdir=/KOJdZh \
+    --read-only=true \
+    --log-driver=none \
+    --user=1000:1000 \
+    --rm \
+    --env=TMPDIR=/tmp \
+    --env=HOME=/KOJdZh \
+    --cidfile=/tmp/iei2d4zr/20190906094240-967526.cid \
+    aciobanu/scrapy \
+    scrapy \
+    runspider \
+    -aurl=https://zenodo.org/record/1484496 \
+    scrapy-meta.py > /tmp/w9d8_290/links.txt
+[2019-09-06T08:42:46,353Z] [job fetch-meta_19] Max memory used: 43MiB
+[2019-09-06T08:42:46,374Z] [job fetch-meta_19] completed success
+[2019-09-06T08:42:46,376Z] [step fetch-meta] start
+[2019-09-06T08:42:46,396Z] [job fetch-meta_20] /tmp/p0u3j14y$ docker \
+    run \
+    -i \
+    --volume=/tmp/p0u3j14y:/KOJdZh:rw \
+    --volume=/tmp/3gfgahte:/tmp:rw \
+    --volume=/home/stain/src/ro-index-paper/code/data-gathering/tools/scrapy-meta.py:/KOJdZh/scrapy-meta.py:ro \
+    --workdir=/KOJdZh \
+    --read-only=true \
+    --log-driver=none \
+    --user=1000:1000 \
+    --rm \
+    --env=TMPDIR=/tmp \
+    --env=HOME=/KOJdZh \
+    --cidfile=/tmp/a92hfmte/20190906094246-396673.cid \
+    aciobanu/scrapy \
+    scrapy \
+    runspider \
+    -aurl=https://zenodo.org/record/1323831 \
+    scrapy-meta.py > /tmp/p0u3j14y/links.txt
+[2019-09-06T08:42:52,358Z] [job fetch-meta_20] Max memory used: 43MiB
+[2019-09-06T08:42:52,361Z] [job fetch-meta_20] completed success
+[2019-09-06T08:42:52,362Z] [step fetch-meta] start
+[2019-09-06T08:42:52,372Z] [job fetch-meta_21] /tmp/rizk56ka$ docker \
+    run \
+    -i \
+    --volume=/tmp/rizk56ka:/KOJdZh:rw \
+    --volume=/tmp/lrd17y5k:/tmp:rw \
+    --volume=/home/stain/src/ro-index-paper/code/data-gathering/tools/scrapy-meta.py:/KOJdZh/scrapy-meta.py:ro \
+    --workdir=/KOJdZh \
+    --read-only=true \
+    --log-driver=none \
+    --user=1000:1000 \
+    --rm \
+    --env=TMPDIR=/tmp \
+    --env=HOME=/KOJdZh \
+    --cidfile=/tmp/b8bhp4no/20190906094252-372500.cid \
+    aciobanu/scrapy \
+    scrapy \
+    runspider \
+    -aurl=https://zenodo.org/record/1484442 \
+    scrapy-meta.py > /tmp/rizk56ka/links.txt
+[2019-09-06T08:42:56,789Z] [job fetch-meta_21] Max memory used: 43MiB
+[2019-09-06T08:42:56,793Z] [job fetch-meta_21] completed success
+[2019-09-06T08:42:56,794Z] [step fetch-meta] start
+[2019-09-06T08:42:56,807Z] [job fetch-meta_22] /tmp/oialhxc7$ docker \
+    run \
+    -i \
+    --volume=/tmp/oialhxc7:/KOJdZh:rw \
+    --volume=/tmp/bfnz23oj:/tmp:rw \
+    --volume=/home/stain/src/ro-index-paper/code/data-gathering/tools/scrapy-meta.py:/KOJdZh/scrapy-meta.py:ro \
+    --workdir=/KOJdZh \
+    --read-only=true \
+    --log-driver=none \
+    --user=1000:1000 \
+    --rm \
+    --env=TMPDIR=/tmp \
+    --env=HOME=/KOJdZh \
+    --cidfile=/tmp/rnuvybgv/20190906094256-806662.cid \
+    aciobanu/scrapy \
+    scrapy \
+    runspider \
+    -aurl=https://zenodo.org/record/3336124 \
+    scrapy-meta.py > /tmp/oialhxc7/links.txt
+[2019-09-06T08:43:01,299Z] [job fetch-meta_22] Max memory used: 44MiB
+[2019-09-06T08:43:01,303Z] [job fetch-meta_22] completed success
+[2019-09-06T08:43:01,304Z] [step fetch-meta] start
+[2019-09-06T08:43:01,314Z] [job fetch-meta_23] /tmp/mx2inhy6$ docker \
+    run \
+    -i \
+    --volume=/tmp/mx2inhy6:/KOJdZh:rw \
+    --volume=/tmp/8qj4idhr:/tmp:rw \
+    --volume=/home/stain/src/ro-index-paper/code/data-gathering/tools/scrapy-meta.py:/KOJdZh/scrapy-meta.py:ro \
+    --workdir=/KOJdZh \
+    --read-only=true \
+    --log-driver=none \
+    --user=1000:1000 \
+    --rm \
+    --env=TMPDIR=/tmp \
+    --env=HOME=/KOJdZh \
+    --cidfile=/tmp/iw493tmf/20190906094301-314428.cid \
+    aciobanu/scrapy \
+    scrapy \
+    runspider \
+    -aurl=https://zenodo.org/record/3196309 \
+    scrapy-meta.py > /tmp/mx2inhy6/links.txt
+[2019-09-06T08:43:05,853Z] [job fetch-meta_23] Max memory used: 43MiB
+[2019-09-06T08:43:05,859Z] [job fetch-meta_23] completed success
+[2019-09-06T08:43:05,860Z] [step fetch-meta] start
+[2019-09-06T08:43:05,871Z] [job fetch-meta_24] /tmp/sznkf_gp$ docker \
+    run \
+    -i \
+    --volume=/tmp/sznkf_gp:/KOJdZh:rw \
+    --volume=/tmp/ws9l7bgu:/tmp:rw \
+    --volume=/home/stain/src/ro-index-paper/code/data-gathering/tools/scrapy-meta.py:/KOJdZh/scrapy-meta.py:ro \
+    --workdir=/KOJdZh \
+    --read-only=true \
+    --log-driver=none \
+    --user=1000:1000 \
+    --rm \
+    --env=TMPDIR=/tmp \
+    --env=HOME=/KOJdZh \
+    --cidfile=/tmp/bbsu_pjy/20190906094305-871637.cid \
+    aciobanu/scrapy \
+    scrapy \
+    runspider \
+    -aurl=https://zenodo.org/record/1208478 \
+    scrapy-meta.py > /tmp/sznkf_gp/links.txt
+[2019-09-06T08:43:10,396Z] [job fetch-meta_24] Max memory used: 43MiB
+[2019-09-06T08:43:10,404Z] [job fetch-meta_24] completed success
+[2019-09-06T08:43:10,405Z] [step fetch-meta] start
+[2019-09-06T08:43:10,414Z] [job fetch-meta_25] /tmp/yvpxbrvr$ docker \
+    run \
+    -i \
+    --volume=/tmp/yvpxbrvr:/KOJdZh:rw \
+    --volume=/tmp/4t5y_lzc:/tmp:rw \
+    --volume=/home/stain/src/ro-index-paper/code/data-gathering/tools/scrapy-meta.py:/KOJdZh/scrapy-meta.py:ro \
+    --workdir=/KOJdZh \
+    --read-only=true \
+    --log-driver=none \
+    --user=1000:1000 \
+    --rm \
+    --env=TMPDIR=/tmp \
+    --env=HOME=/KOJdZh \
+    --cidfile=/tmp/0ipeusod/20190906094310-413821.cid \
+    aciobanu/scrapy \
+    scrapy \
+    runspider \
+    -aurl=https://zenodo.org/record/1314672 \
+    scrapy-meta.py > /tmp/yvpxbrvr/links.txt
+[2019-09-06T08:43:14,924Z] [job fetch-meta_25] Max memory used: 44MiB
+[2019-09-06T08:43:14,929Z] [job fetch-meta_25] completed success
+[2019-09-06T08:43:14,929Z] [step fetch-meta] start
+[2019-09-06T08:43:14,943Z] [job fetch-meta_26] /tmp/inm_l71k$ docker \
+    run \
+    -i \
+    --volume=/tmp/inm_l71k:/KOJdZh:rw \
+    --volume=/tmp/gd_gpgbh:/tmp:rw \
+    --volume=/home/stain/src/ro-index-paper/code/data-gathering/tools/scrapy-meta.py:/KOJdZh/scrapy-meta.py:ro \
+    --workdir=/KOJdZh \
+    --read-only=true \
+    --log-driver=none \
+    --user=1000:1000 \
+    --rm \
+    --env=TMPDIR=/tmp \
+    --env=HOME=/KOJdZh \
+    --cidfile=/tmp/1sd7m7jw/20190906094314-943500.cid \
+    aciobanu/scrapy \
+    scrapy \
+    runspider \
+    -aurl=https://zenodo.org/record/3338176 \
+    scrapy-meta.py > /tmp/inm_l71k/links.txt
+[2019-09-06T08:43:19,393Z] [job fetch-meta_26] Max memory used: 43MiB
+[2019-09-06T08:43:19,398Z] [job fetch-meta_26] completed success
+[2019-09-06T08:43:19,399Z] [step fetch-meta] start
+[2019-09-06T08:43:19,411Z] [job fetch-meta_27] /tmp/0l6_7h9a$ docker \
+    run \
+    -i \
+    --volume=/tmp/0l6_7h9a:/KOJdZh:rw \
+    --volume=/tmp/9myh345o:/tmp:rw \
+    --volume=/home/stain/src/ro-index-paper/code/data-gathering/tools/scrapy-meta.py:/KOJdZh/scrapy-meta.py:ro \
+    --workdir=/KOJdZh \
+    --read-only=true \
+    --log-driver=none \
+    --user=1000:1000 \
+    --rm \
+    --env=TMPDIR=/tmp \
+    --env=HOME=/KOJdZh \
+    --cidfile=/tmp/nnl3ebvi/20190906094319-411023.cid \
+    aciobanu/scrapy \
+    scrapy \
+    runspider \
+    -aurl=https://zenodo.org/record/3336148 \
+    scrapy-meta.py > /tmp/0l6_7h9a/links.txt
+[2019-09-06T08:43:23,729Z] [job fetch-meta_27] Max memory used: 43MiB
+[2019-09-06T08:43:23,733Z] [job fetch-meta_27] completed success
+[2019-09-06T08:43:23,734Z] [step fetch-meta] start
+[2019-09-06T08:43:23,749Z] [job fetch-meta_28] /tmp/rda4ocnj$ docker \
+    run \
+    -i \
+    --volume=/tmp/rda4ocnj:/KOJdZh:rw \
+    --volume=/tmp/_gif6qld:/tmp:rw \
+    --volume=/home/stain/src/ro-index-paper/code/data-gathering/tools/scrapy-meta.py:/KOJdZh/scrapy-meta.py:ro \
+    --workdir=/KOJdZh \
+    --read-only=true \
+    --log-driver=none \
+    --user=1000:1000 \
+    --rm \
+    --env=TMPDIR=/tmp \
+    --env=HOME=/KOJdZh \
+    --cidfile=/tmp/t_7qu98v/20190906094323-749294.cid \
+    aciobanu/scrapy \
+    scrapy \
+    runspider \
+    -aurl=https://zenodo.org/record/1312623 \
+    scrapy-meta.py > /tmp/rda4ocnj/links.txt
+[2019-09-06T08:43:28,687Z] [job fetch-meta_28] Max memory used: 43MiB
+[2019-09-06T08:43:28,691Z] [job fetch-meta_28] completed success
+[2019-09-06T08:43:28,691Z] [step fetch-meta] start
+[2019-09-06T08:43:28,704Z] [job fetch-meta_29] /tmp/zg1bc967$ docker \
+    run \
+    -i \
+    --volume=/tmp/zg1bc967:/KOJdZh:rw \
+    --volume=/tmp/l7nzc6ja:/tmp:rw \
+    --volume=/home/stain/src/ro-index-paper/code/data-gathering/tools/scrapy-meta.py:/KOJdZh/scrapy-meta.py:ro \
+    --workdir=/KOJdZh \
+    --read-only=true \
+    --log-driver=none \
+    --user=1000:1000 \
+    --rm \
+    --env=TMPDIR=/tmp \
+    --env=HOME=/KOJdZh \
+    --cidfile=/tmp/3lf_omh7/20190906094328-704526.cid \
+    aciobanu/scrapy \
+    scrapy \
+    runspider \
+    -aurl=https://zenodo.org/record/3270620 \
+    scrapy-meta.py > /tmp/zg1bc967/links.txt
+[2019-09-06T08:43:33,674Z] [job fetch-meta_29] Max memory used: 43MiB
+[2019-09-06T08:43:33,678Z] [job fetch-meta_29] completed success
+[2019-09-06T08:43:33,678Z] [step fetch-meta] start
+[2019-09-06T08:43:33,695Z] [job fetch-meta_30] /tmp/pjplryoi$ docker \
+    run \
+    -i \
+    --volume=/tmp/pjplryoi:/KOJdZh:rw \
+    --volume=/tmp/ruyfd5z6:/tmp:rw \
+    --volume=/home/stain/src/ro-index-paper/code/data-gathering/tools/scrapy-meta.py:/KOJdZh/scrapy-meta.py:ro \
+    --workdir=/KOJdZh \
+    --read-only=true \
+    --log-driver=none \
+    --user=1000:1000 \
+    --rm \
+    --env=TMPDIR=/tmp \
+    --env=HOME=/KOJdZh \
+    --cidfile=/tmp/y1rwxy6v/20190906094333-695431.cid \
+    aciobanu/scrapy \
+    scrapy \
+    runspider \
+    -aurl=https://zenodo.org/record/3343031 \
+    scrapy-meta.py > /tmp/pjplryoi/links.txt
+[2019-09-06T08:43:38,960Z] [job fetch-meta_30] Max memory used: 43MiB
+[2019-09-06T08:43:38,966Z] [job fetch-meta_30] completed success
+[2019-09-06T08:43:38,967Z] [step fetch-meta] start
+[2019-09-06T08:43:38,984Z] [job fetch-meta_31] /tmp/91c8smsl$ docker \
+    run \
+    -i \
+    --volume=/tmp/91c8smsl:/KOJdZh:rw \
+    --volume=/tmp/x425dtmd:/tmp:rw \
+    --volume=/home/stain/src/ro-index-paper/code/data-gathering/tools/scrapy-meta.py:/KOJdZh/scrapy-meta.py:ro \
+    --workdir=/KOJdZh \
+    --read-only=true \
+    --log-driver=none \
+    --user=1000:1000 \
+    --rm \
+    --env=TMPDIR=/tmp \
+    --env=HOME=/KOJdZh \
+    --cidfile=/tmp/6j2rpkdl/20190906094338-983767.cid \
+    aciobanu/scrapy \
+    scrapy \
+    runspider \
+    -aurl=https://zenodo.org/record/3362412 \
+    scrapy-meta.py > /tmp/91c8smsl/links.txt
+[2019-09-06T08:43:44,143Z] [job fetch-meta_31] Max memory used: 43MiB
+[2019-09-06T08:43:44,148Z] [job fetch-meta_31] completed success
+[2019-09-06T08:43:44,149Z] [step fetch-meta] start
+[2019-09-06T08:43:44,163Z] [job fetch-meta_32] /tmp/vlti3g1e$ docker \
+    run \
+    -i \
+    --volume=/tmp/vlti3g1e:/KOJdZh:rw \
+    --volume=/tmp/mps07fxv:/tmp:rw \
+    --volume=/home/stain/src/ro-index-paper/code/data-gathering/tools/scrapy-meta.py:/KOJdZh/scrapy-meta.py:ro \
+    --workdir=/KOJdZh \
+    --read-only=true \
+    --log-driver=none \
+    --user=1000:1000 \
+    --rm \
+    --env=TMPDIR=/tmp \
+    --env=HOME=/KOJdZh \
+    --cidfile=/tmp/wommaxhn/20190906094344-163330.cid \
+    aciobanu/scrapy \
+    scrapy \
+    runspider \
+    -aurl=https://zenodo.org/record/3357806 \
+    scrapy-meta.py > /tmp/vlti3g1e/links.txt
+[2019-09-06T08:43:49,529Z] [job fetch-meta_32] Max memory used: 43MiB
+[2019-09-06T08:43:49,537Z] [job fetch-meta_32] completed success
+[2019-09-06T08:43:49,538Z] [step fetch-meta] start
+[2019-09-06T08:43:49,555Z] [job fetch-meta_33] /tmp/lenud52k$ docker \
+    run \
+    -i \
+    --volume=/tmp/lenud52k:/KOJdZh:rw \
+    --volume=/tmp/fma5f5v_:/tmp:rw \
+    --volume=/home/stain/src/ro-index-paper/code/data-gathering/tools/scrapy-meta.py:/KOJdZh/scrapy-meta.py:ro \
+    --workdir=/KOJdZh \
+    --read-only=true \
+    --log-driver=none \
+    --user=1000:1000 \
+    --rm \
+    --env=TMPDIR=/tmp \
+    --env=HOME=/KOJdZh \
+    --cidfile=/tmp/lr4q_jyx/20190906094349-554820.cid \
+    aciobanu/scrapy \
+    scrapy \
+    runspider \
+    -aurl=https://zenodo.org/record/1484502 \
+    scrapy-meta.py > /tmp/lenud52k/links.txt
+[2019-09-06T08:43:54,598Z] [job fetch-meta_33] Max memory used: 43MiB
+[2019-09-06T08:43:54,605Z] [job fetch-meta_33] completed success
+[2019-09-06T08:43:54,605Z] [step fetch-meta] start
+[2019-09-06T08:43:54,618Z] [job fetch-meta_34] /tmp/5m0xa172$ docker \
+    run \
+    -i \
+    --volume=/tmp/5m0xa172:/KOJdZh:rw \
+    --volume=/tmp/a_5fx_gc:/tmp:rw \
+    --volume=/home/stain/src/ro-index-paper/code/data-gathering/tools/scrapy-meta.py:/KOJdZh/scrapy-meta.py:ro \
+    --workdir=/KOJdZh \
+    --read-only=true \
+    --log-driver=none \
+    --user=1000:1000 \
+    --rm \
+    --env=TMPDIR=/tmp \
+    --env=HOME=/KOJdZh \
+    --cidfile=/tmp/wwkivelg/20190906094354-618131.cid \
+    aciobanu/scrapy \
+    scrapy \
+    runspider \
+    -aurl=https://zenodo.org/record/1441011 \
+    scrapy-meta.py > /tmp/5m0xa172/links.txt
+[2019-09-06T08:43:59,674Z] [job fetch-meta_34] Max memory used: 43MiB
+[2019-09-06T08:43:59,682Z] [job fetch-meta_34] completed success
+[2019-09-06T08:43:59,683Z] [step fetch-meta] start
+[2019-09-06T08:43:59,697Z] [job fetch-meta_35] /tmp/5dyk7fbl$ docker \
+    run \
+    -i \
+    --volume=/tmp/5dyk7fbl:/KOJdZh:rw \
+    --volume=/tmp/95ymxf66:/tmp:rw \
+    --volume=/home/stain/src/ro-index-paper/code/data-gathering/tools/scrapy-meta.py:/KOJdZh/scrapy-meta.py:ro \
+    --workdir=/KOJdZh \
+    --read-only=true \
+    --log-driver=none \
+    --user=1000:1000 \
+    --rm \
+    --env=TMPDIR=/tmp \
+    --env=HOME=/KOJdZh \
+    --cidfile=/tmp/3uffxb57/20190906094359-697295.cid \
+    aciobanu/scrapy \
+    scrapy \
+    runspider \
+    -aurl=https://zenodo.org/record/1304969 \
+    scrapy-meta.py > /tmp/5dyk7fbl/links.txt
+[2019-09-06T08:44:04,663Z] [job fetch-meta_35] Max memory used: 43MiB
+[2019-09-06T08:44:04,667Z] [job fetch-meta_35] completed success
+[2019-09-06T08:44:04,668Z] [step fetch-meta] start
+[2019-09-06T08:44:04,682Z] [job fetch-meta_36] /tmp/3__hnknd$ docker \
+    run \
+    -i \
+    --volume=/tmp/3__hnknd:/KOJdZh:rw \
+    --volume=/tmp/mx9areoy:/tmp:rw \
+    --volume=/home/stain/src/ro-index-paper/code/data-gathering/tools/scrapy-meta.py:/KOJdZh/scrapy-meta.py:ro \
+    --workdir=/KOJdZh \
+    --read-only=true \
+    --log-driver=none \
+    --user=1000:1000 \
+    --rm \
+    --env=TMPDIR=/tmp \
+    --env=HOME=/KOJdZh \
+    --cidfile=/tmp/pfjq3ddw/20190906094404-681836.cid \
+    aciobanu/scrapy \
+    scrapy \
+    runspider \
+    -aurl=https://zenodo.org/record/1310034 \
+    scrapy-meta.py > /tmp/3__hnknd/links.txt
+[2019-09-06T08:44:09,823Z] [job fetch-meta_36] Max memory used: 43MiB
+[2019-09-06T08:44:09,829Z] [job fetch-meta_36] completed success
+[2019-09-06T08:44:09,829Z] [step fetch-meta] start
+[2019-09-06T08:44:09,861Z] [job fetch-meta_37] /tmp/8yfc0wdu$ docker \
+    run \
+    -i \
+    --volume=/tmp/8yfc0wdu:/KOJdZh:rw \
+    --volume=/tmp/dv03u074:/tmp:rw \
+    --volume=/home/stain/src/ro-index-paper/code/data-gathering/tools/scrapy-meta.py:/KOJdZh/scrapy-meta.py:ro \
+    --workdir=/KOJdZh \
+    --read-only=true \
+    --log-driver=none \
+    --user=1000:1000 \
+    --rm \
+    --env=TMPDIR=/tmp \
+    --env=HOME=/KOJdZh \
+    --cidfile=/tmp/6g_hybff/20190906094409-860778.cid \
+    aciobanu/scrapy \
+    scrapy \
+    runspider \
+    -aurl=https://zenodo.org/record/1484286 \
+    scrapy-meta.py > /tmp/8yfc0wdu/links.txt
+[2019-09-06T08:44:15,721Z] [job fetch-meta_37] Max memory used: 43MiB
+[2019-09-06T08:44:15,726Z] [job fetch-meta_37] completed success
+[2019-09-06T08:44:15,727Z] [step fetch-meta] start
+[2019-09-06T08:44:15,755Z] [job fetch-meta_38] /tmp/cpr2u954$ docker \
+    run \
+    -i \
+    --volume=/tmp/cpr2u954:/KOJdZh:rw \
+    --volume=/tmp/o8z41hmj:/tmp:rw \
+    --volume=/home/stain/src/ro-index-paper/code/data-gathering/tools/scrapy-meta.py:/KOJdZh/scrapy-meta.py:ro \
+    --workdir=/KOJdZh \
+    --read-only=true \
+    --log-driver=none \
+    --user=1000:1000 \
+    --rm \
+    --env=TMPDIR=/tmp \
+    --env=HOME=/KOJdZh \
+    --cidfile=/tmp/4umyx4et/20190906094415-755336.cid \
+    aciobanu/scrapy \
+    scrapy \
+    runspider \
+    -aurl=https://zenodo.org/record/1410238 \
+    scrapy-meta.py > /tmp/cpr2u954/links.txt
+[2019-09-06T08:44:21,486Z] [job fetch-meta_38] Max memory used: 43MiB
+[2019-09-06T08:44:21,494Z] [job fetch-meta_38] completed success
+[2019-09-06T08:44:21,495Z] [step fetch-meta] start
+[2019-09-06T08:44:21,508Z] [job fetch-meta_39] /tmp/2sqopztk$ docker \
+    run \
+    -i \
+    --volume=/tmp/2sqopztk:/KOJdZh:rw \
+    --volume=/tmp/pt357hz0:/tmp:rw \
+    --volume=/home/stain/src/ro-index-paper/code/data-gathering/tools/scrapy-meta.py:/KOJdZh/scrapy-meta.py:ro \
+    --workdir=/KOJdZh \
+    --read-only=true \
+    --log-driver=none \
+    --user=1000:1000 \
+    --rm \
+    --env=TMPDIR=/tmp \
+    --env=HOME=/KOJdZh \
+    --cidfile=/tmp/35u5sw6o/20190906094421-508751.cid \
+    aciobanu/scrapy \
+    scrapy \
+    runspider \
+    -aurl=https://zenodo.org/record/3336609 \
+    scrapy-meta.py > /tmp/2sqopztk/links.txt
+[2019-09-06T08:44:25,965Z] [job fetch-meta_39] Max memory used: 43MiB
+[2019-09-06T08:44:25,968Z] [job fetch-meta_39] completed success
+[2019-09-06T08:44:25,968Z] [step fetch-meta] start
+[2019-09-06T08:44:25,979Z] [job fetch-meta_40] /tmp/crcz1mph$ docker \
+    run \
+    -i \
+    --volume=/tmp/crcz1mph:/KOJdZh:rw \
+    --volume=/tmp/nhymvt6u:/tmp:rw \
+    --volume=/home/stain/src/ro-index-paper/code/data-gathering/tools/scrapy-meta.py:/KOJdZh/scrapy-meta.py:ro \
+    --workdir=/KOJdZh \
+    --read-only=true \
+    --log-driver=none \
+    --user=1000:1000 \
+    --rm \
+    --env=TMPDIR=/tmp \
+    --env=HOME=/KOJdZh \
+    --cidfile=/tmp/69a582o2/20190906094425-979393.cid \
+    aciobanu/scrapy \
+    scrapy \
+    runspider \
+    -aurl=https://zenodo.org/record/1326284 \
+    scrapy-meta.py > /tmp/crcz1mph/links.txt
+[2019-09-06T08:44:30,367Z] [job fetch-meta_40] Max memory used: 43MiB
+[2019-09-06T08:44:30,371Z] [job fetch-meta_40] completed success
+[2019-09-06T08:44:30,372Z] [step fetch-meta] start
+[2019-09-06T08:44:30,383Z] [job fetch-meta_41] /tmp/jrg2h_2v$ docker \
+    run \
+    -i \
+    --volume=/tmp/jrg2h_2v:/KOJdZh:rw \
+    --volume=/tmp/18s8nqp7:/tmp:rw \
+    --volume=/home/stain/src/ro-index-paper/code/data-gathering/tools/scrapy-meta.py:/KOJdZh/scrapy-meta.py:ro \
+    --workdir=/KOJdZh \
+    --read-only=true \
+    --log-driver=none \
+    --user=1000:1000 \
+    --rm \
+    --env=TMPDIR=/tmp \
+    --env=HOME=/KOJdZh \
+    --cidfile=/tmp/dqvqrxx9/20190906094430-382883.cid \
+    aciobanu/scrapy \
+    scrapy \
+    runspider \
+    -aurl=https://zenodo.org/record/1473154 \
+    scrapy-meta.py > /tmp/jrg2h_2v/links.txt
+[2019-09-06T08:44:34,983Z] [job fetch-meta_41] Max memory used: 43MiB
+[2019-09-06T08:44:34,987Z] [job fetch-meta_41] completed success
+[2019-09-06T08:44:34,989Z] [step fetch-meta] start
+[2019-09-06T08:44:34,998Z] [job fetch-meta_42] /tmp/nvq5lqln$ docker \
+    run \
+    -i \
+    --volume=/tmp/nvq5lqln:/KOJdZh:rw \
+    --volume=/tmp/nepm0t7p:/tmp:rw \
+    --volume=/home/stain/src/ro-index-paper/code/data-gathering/tools/scrapy-meta.py:/KOJdZh/scrapy-meta.py:ro \
+    --workdir=/KOJdZh \
+    --read-only=true \
+    --log-driver=none \
+    --user=1000:1000 \
+    --rm \
+    --env=TMPDIR=/tmp \
+    --env=HOME=/KOJdZh \
+    --cidfile=/tmp/80hgtj1t/20190906094434-998454.cid \
+    aciobanu/scrapy \
+    scrapy \
+    runspider \
+    -aurl=https://zenodo.org/record/3270824 \
+    scrapy-meta.py > /tmp/nvq5lqln/links.txt
+[2019-09-06T08:44:39,343Z] [job fetch-meta_42] Max memory used: 43MiB
+[2019-09-06T08:44:39,346Z] [job fetch-meta_42] completed success
+[2019-09-06T08:44:39,347Z] [step fetch-meta] start
+[2019-09-06T08:44:39,356Z] [job fetch-meta_43] /tmp/v7068p0e$ docker \
+    run \
+    -i \
+    --volume=/tmp/v7068p0e:/KOJdZh:rw \
+    --volume=/tmp/8r90vyta:/tmp:rw \
+    --volume=/home/stain/src/ro-index-paper/code/data-gathering/tools/scrapy-meta.py:/KOJdZh/scrapy-meta.py:ro \
+    --workdir=/KOJdZh \
+    --read-only=true \
+    --log-driver=none \
+    --user=1000:1000 \
+    --rm \
+    --env=TMPDIR=/tmp \
+    --env=HOME=/KOJdZh \
+    --cidfile=/tmp/9glpkddc/20190906094439-356016.cid \
+    aciobanu/scrapy \
+    scrapy \
+    runspider \
+    -aurl=https://zenodo.org/record/3338725 \
+    scrapy-meta.py > /tmp/v7068p0e/links.txt
+[2019-09-06T08:44:43,767Z] [job fetch-meta_43] Max memory used: 43MiB
+[2019-09-06T08:44:43,771Z] [job fetch-meta_43] completed success
+[2019-09-06T08:44:43,772Z] [step fetch-meta] start
+[2019-09-06T08:44:43,785Z] [job fetch-meta_44] /tmp/cga7g4lb$ docker \
+    run \
+    -i \
+    --volume=/tmp/cga7g4lb:/KOJdZh:rw \
+    --volume=/tmp/upzpmm_k:/tmp:rw \
+    --volume=/home/stain/src/ro-index-paper/code/data-gathering/tools/scrapy-meta.py:/KOJdZh/scrapy-meta.py:ro \
+    --workdir=/KOJdZh \
+    --read-only=true \
+    --log-driver=none \
+    --user=1000:1000 \
+    --rm \
+    --env=TMPDIR=/tmp \
+    --env=HOME=/KOJdZh \
+    --cidfile=/tmp/14g9zdig/20190906094443-784909.cid \
+    aciobanu/scrapy \
+    scrapy \
+    runspider \
+    -aurl=https://zenodo.org/record/1408170 \
+    scrapy-meta.py > /tmp/cga7g4lb/links.txt
+[2019-09-06T08:44:48,659Z] [job fetch-meta_44] Max memory used: 43MiB
+[2019-09-06T08:44:48,663Z] [job fetch-meta_44] completed success
+[2019-09-06T08:44:48,664Z] [step fetch-meta] start
+[2019-09-06T08:44:48,683Z] [job fetch-meta_45] /tmp/ft3k27rc$ docker \
+    run \
+    -i \
+    --volume=/tmp/ft3k27rc:/KOJdZh:rw \
+    --volume=/tmp/p7yvlgjh:/tmp:rw \
+    --volume=/home/stain/src/ro-index-paper/code/data-gathering/tools/scrapy-meta.py:/KOJdZh/scrapy-meta.py:ro \
+    --workdir=/KOJdZh \
+    --read-only=true \
+    --log-driver=none \
+    --user=1000:1000 \
+    --rm \
+    --env=TMPDIR=/tmp \
+    --env=HOME=/KOJdZh \
+    --cidfile=/tmp/d2q_qbmr/20190906094448-683546.cid \
+    aciobanu/scrapy \
+    scrapy \
+    runspider \
+    -aurl=https://zenodo.org/record/3337375 \
+    scrapy-meta.py > /tmp/ft3k27rc/links.txt
+[2019-09-06T08:44:53,292Z] [job fetch-meta_45] Max memory used: 43MiB
+[2019-09-06T08:44:53,295Z] [job fetch-meta_45] completed success
+[2019-09-06T08:44:53,296Z] [step fetch-meta] start
+[2019-09-06T08:44:53,306Z] [job fetch-meta_46] /tmp/6ktzokxl$ docker \
+    run \
+    -i \
+    --volume=/tmp/6ktzokxl:/KOJdZh:rw \
+    --volume=/tmp/zpxuq4hp:/tmp:rw \
+    --volume=/home/stain/src/ro-index-paper/code/data-gathering/tools/scrapy-meta.py:/KOJdZh/scrapy-meta.py:ro \
+    --workdir=/KOJdZh \
+    --read-only=true \
+    --log-driver=none \
+    --user=1000:1000 \
+    --rm \
+    --env=TMPDIR=/tmp \
+    --env=HOME=/KOJdZh \
+    --cidfile=/tmp/oqb5bno7/20190906094453-306292.cid \
+    aciobanu/scrapy \
+    scrapy \
+    runspider \
+    -aurl=https://zenodo.org/record/1484424 \
+    scrapy-meta.py > /tmp/6ktzokxl/links.txt
+[2019-09-06T08:44:57,792Z] [job fetch-meta_46] Max memory used: 43MiB
+[2019-09-06T08:44:57,796Z] [job fetch-meta_46] completed success
+[2019-09-06T08:44:57,797Z] [step fetch-meta] start
+[2019-09-06T08:44:57,809Z] [job fetch-meta_47] /tmp/xqui2o1g$ docker \
+    run \
+    -i \
+    --volume=/tmp/xqui2o1g:/KOJdZh:rw \
+    --volume=/tmp/phyzcgg6:/tmp:rw \
+    --volume=/home/stain/src/ro-index-paper/code/data-gathering/tools/scrapy-meta.py:/KOJdZh/scrapy-meta.py:ro \
+    --workdir=/KOJdZh \
+    --read-only=true \
+    --log-driver=none \
+    --user=1000:1000 \
+    --rm \
+    --env=TMPDIR=/tmp \
+    --env=HOME=/KOJdZh \
+    --cidfile=/tmp/thax8zvt/20190906094457-808749.cid \
+    aciobanu/scrapy \
+    scrapy \
+    runspider \
+    -aurl=https://zenodo.org/record/1420531 \
+    scrapy-meta.py > /tmp/xqui2o1g/links.txt
+[2019-09-06T08:45:02,337Z] [job fetch-meta_47] Max memory used: 43MiB
+[2019-09-06T08:45:02,340Z] [job fetch-meta_47] completed success
+[2019-09-06T08:45:02,341Z] [step fetch-meta] start
+[2019-09-06T08:45:02,351Z] [job fetch-meta_48] /tmp/4v522m7p$ docker \
+    run \
+    -i \
+    --volume=/tmp/4v522m7p:/KOJdZh:rw \
+    --volume=/tmp/c7jh6q2i:/tmp:rw \
+    --volume=/home/stain/src/ro-index-paper/code/data-gathering/tools/scrapy-meta.py:/KOJdZh/scrapy-meta.py:ro \
+    --workdir=/KOJdZh \
+    --read-only=true \
+    --log-driver=none \
+    --user=1000:1000 \
+    --rm \
+    --env=TMPDIR=/tmp \
+    --env=HOME=/KOJdZh \
+    --cidfile=/tmp/uvk9pkm3/20190906094502-351591.cid \
+    aciobanu/scrapy \
+    scrapy \
+    runspider \
+    -aurl=https://zenodo.org/record/2632836 \
+    scrapy-meta.py > /tmp/4v522m7p/links.txt
+[2019-09-06T08:45:06,823Z] [job fetch-meta_48] Max memory used: 43MiB
+[2019-09-06T08:45:06,828Z] [job fetch-meta_48] completed success
+[2019-09-06T08:45:06,829Z] [step fetch-meta] start
+[2019-09-06T08:45:06,841Z] [job fetch-meta_49] /tmp/xblv02y3$ docker \
+    run \
+    -i \
+    --volume=/tmp/xblv02y3:/KOJdZh:rw \
+    --volume=/tmp/xwo_gcx3:/tmp:rw \
+    --volume=/home/stain/src/ro-index-paper/code/data-gathering/tools/scrapy-meta.py:/KOJdZh/scrapy-meta.py:ro \
+    --workdir=/KOJdZh \
+    --read-only=true \
+    --log-driver=none \
+    --user=1000:1000 \
+    --rm \
+    --env=TMPDIR=/tmp \
+    --env=HOME=/KOJdZh \
+    --cidfile=/tmp/0iczoi5q/20190906094506-841286.cid \
+    aciobanu/scrapy \
+    scrapy \
+    runspider \
+    -aurl=https://zenodo.org/record/1301152 \
+    scrapy-meta.py > /tmp/xblv02y3/links.txt
+[2019-09-06T08:45:11,392Z] [job fetch-meta_49] Max memory used: 43MiB
+[2019-09-06T08:45:11,397Z] [job fetch-meta_49] completed success
+[2019-09-06T08:45:11,397Z] [step fetch-meta] start
+[2019-09-06T08:45:11,415Z] [job fetch-meta_50] /tmp/7xgk_qlj$ docker \
+    run \
+    -i \
+    --volume=/tmp/7xgk_qlj:/KOJdZh:rw \
+    --volume=/tmp/eel2xs7s:/tmp:rw \
+    --volume=/home/stain/src/ro-index-paper/code/data-gathering/tools/scrapy-meta.py:/KOJdZh/scrapy-meta.py:ro \
+    --workdir=/KOJdZh \
+    --read-only=true \
+    --log-driver=none \
+    --user=1000:1000 \
+    --rm \
+    --env=TMPDIR=/tmp \
+    --env=HOME=/KOJdZh \
+    --cidfile=/tmp/lzk426jz/20190906094511-414869.cid \
+    aciobanu/scrapy \
+    scrapy \
+    runspider \
+    -aurl=https://zenodo.org/record/1312685 \
+    scrapy-meta.py > /tmp/7xgk_qlj/links.txt
+[2019-09-06T08:45:15,900Z] [job fetch-meta_50] Max memory used: 44MiB
+[2019-09-06T08:45:15,906Z] [job fetch-meta_50] completed success
+[2019-09-06T08:45:15,907Z] [step fetch-meta] start
+[2019-09-06T08:45:15,919Z] [job fetch-meta_51] /tmp/5keku0yl$ docker \
+    run \
+    -i \
+    --volume=/tmp/5keku0yl:/KOJdZh:rw \
+    --volume=/tmp/31z5tmrw:/tmp:rw \
+    --volume=/home/stain/src/ro-index-paper/code/data-gathering/tools/scrapy-meta.py:/KOJdZh/scrapy-meta.py:ro \
+    --workdir=/KOJdZh \
+    --read-only=true \
+    --log-driver=none \
+    --user=1000:1000 \
+    --rm \
+    --env=TMPDIR=/tmp \
+    --env=HOME=/KOJdZh \
+    --cidfile=/tmp/n6lqv07w/20190906094515-918914.cid \
+    aciobanu/scrapy \
+    scrapy \
+    runspider \
+    -aurl=https://zenodo.org/record/3268904 \
+    scrapy-meta.py > /tmp/5keku0yl/links.txt
+[2019-09-06T08:45:20,434Z] [job fetch-meta_51] Max memory used: 43MiB
+[2019-09-06T08:45:20,440Z] [job fetch-meta_51] completed success
+[2019-09-06T08:45:20,440Z] [step fetch-meta] start
+[2019-09-06T08:45:20,457Z] [job fetch-meta_52] /tmp/warr6pdp$ docker \
+    run \
+    -i \
+    --volume=/tmp/warr6pdp:/KOJdZh:rw \
+    --volume=/tmp/8r74a6fy:/tmp:rw \
+    --volume=/home/stain/src/ro-index-paper/code/data-gathering/tools/scrapy-meta.py:/KOJdZh/scrapy-meta.py:ro \
+    --workdir=/KOJdZh \
+    --read-only=true \
+    --log-driver=none \
+    --user=1000:1000 \
+    --rm \
+    --env=TMPDIR=/tmp \
+    --env=HOME=/KOJdZh \
+    --cidfile=/tmp/lmz4wc74/20190906094520-456805.cid \
+    aciobanu/scrapy \
+    scrapy \
+    runspider \
+    -aurl=https://zenodo.org/record/3358983 \
+    scrapy-meta.py > /tmp/warr6pdp/links.txt
+[2019-09-06T08:45:24,912Z] [job fetch-meta_52] Max memory used: 43MiB
+[2019-09-06T08:45:24,915Z] [job fetch-meta_52] completed success
+[2019-09-06T08:45:24,916Z] [step fetch-meta] start
+[2019-09-06T08:45:24,928Z] [job fetch-meta_53] /tmp/wzll8q4t$ docker \
+    run \
+    -i \
+    --volume=/tmp/wzll8q4t:/KOJdZh:rw \
+    --volume=/tmp/iu_6lj_1:/tmp:rw \
+    --volume=/home/stain/src/ro-index-paper/code/data-gathering/tools/scrapy-meta.py:/KOJdZh/scrapy-meta.py:ro \
+    --workdir=/KOJdZh \
+    --read-only=true \
+    --log-driver=none \
+    --user=1000:1000 \
+    --rm \
+    --env=TMPDIR=/tmp \
+    --env=HOME=/KOJdZh \
+    --cidfile=/tmp/mjyqqmv3/20190906094524-928772.cid \
+    aciobanu/scrapy \
+    scrapy \
+    runspider \
+    -aurl=https://zenodo.org/record/3382423 \
+    scrapy-meta.py > /tmp/wzll8q4t/links.txt
+[2019-09-06T08:45:29,370Z] [job fetch-meta_53] Max memory used: 43MiB
+[2019-09-06T08:45:29,374Z] [job fetch-meta_53] completed success
+[2019-09-06T08:45:29,374Z] [step fetch-meta] start
+[2019-09-06T08:45:29,385Z] [job fetch-meta_54] /tmp/fp81cnds$ docker \
+    run \
+    -i \
+    --volume=/tmp/fp81cnds:/KOJdZh:rw \
+    --volume=/tmp/nexxy7xs:/tmp:rw \
+    --volume=/home/stain/src/ro-index-paper/code/data-gathering/tools/scrapy-meta.py:/KOJdZh/scrapy-meta.py:ro \
+    --workdir=/KOJdZh \
+    --read-only=true \
+    --log-driver=none \
+    --user=1000:1000 \
+    --rm \
+    --env=TMPDIR=/tmp \
+    --env=HOME=/KOJdZh \
+    --cidfile=/tmp/iondha20/20190906094529-385444.cid \
+    aciobanu/scrapy \
+    scrapy \
+    runspider \
+    -aurl=https://zenodo.org/record/1412509 \
+    scrapy-meta.py > /tmp/fp81cnds/links.txt
+[2019-09-06T08:45:34,289Z] [job fetch-meta_54] Max memory used: 43MiB
+[2019-09-06T08:45:34,293Z] [job fetch-meta_54] completed success
+[2019-09-06T08:45:34,294Z] [step fetch-meta] start
+[2019-09-06T08:45:34,304Z] [job fetch-meta_55] /tmp/fpphojwe$ docker \
+    run \
+    -i \
+    --volume=/tmp/fpphojwe:/KOJdZh:rw \
+    --volume=/tmp/6g69q1zb:/tmp:rw \
+    --volume=/home/stain/src/ro-index-paper/code/data-gathering/tools/scrapy-meta.py:/KOJdZh/scrapy-meta.py:ro \
+    --workdir=/KOJdZh \
+    --read-only=true \
+    --log-driver=none \
+    --user=1000:1000 \
+    --rm \
+    --env=TMPDIR=/tmp \
+    --env=HOME=/KOJdZh \
+    --cidfile=/tmp/qnwdiq7x/20190906094534-304707.cid \
+    aciobanu/scrapy \
+    scrapy \
+    runspider \
+    -aurl=https://zenodo.org/record/3337883 \
+    scrapy-meta.py > /tmp/fpphojwe/links.txt
+[2019-09-06T08:45:38,745Z] [job fetch-meta_55] Max memory used: 43MiB
+[2019-09-06T08:45:38,749Z] [job fetch-meta_55] completed success
+[2019-09-06T08:45:38,749Z] [step fetch-meta] start
+[2019-09-06T08:45:38,763Z] [job fetch-meta_56] /tmp/n12__2q6$ docker \
+    run \
+    -i \
+    --volume=/tmp/n12__2q6:/KOJdZh:rw \
+    --volume=/tmp/57fzyj_a:/tmp:rw \
+    --volume=/home/stain/src/ro-index-paper/code/data-gathering/tools/scrapy-meta.py:/KOJdZh/scrapy-meta.py:ro \
+    --workdir=/KOJdZh \
+    --read-only=true \
+    --log-driver=none \
+    --user=1000:1000 \
+    --rm \
+    --env=TMPDIR=/tmp \
+    --env=HOME=/KOJdZh \
+    --cidfile=/tmp/wzk9m9dg/20190906094538-763120.cid \
+    aciobanu/scrapy \
+    scrapy \
+    runspider \
+    -aurl=https://zenodo.org/record/2636997 \
+    scrapy-meta.py > /tmp/n12__2q6/links.txt
+[2019-09-06T08:45:43,333Z] [job fetch-meta_56] Max memory used: 43MiB
+[2019-09-06T08:45:43,338Z] [job fetch-meta_56] completed success
+[2019-09-06T08:45:43,339Z] [step fetch-meta] start
+[2019-09-06T08:45:43,349Z] [job fetch-meta_57] /tmp/vazd850p$ docker \
+    run \
+    -i \
+    --volume=/tmp/vazd850p:/KOJdZh:rw \
+    --volume=/tmp/9e9ypn0z:/tmp:rw \
+    --volume=/home/stain/src/ro-index-paper/code/data-gathering/tools/scrapy-meta.py:/KOJdZh/scrapy-meta.py:ro \
+    --workdir=/KOJdZh \
+    --read-only=true \
+    --log-driver=none \
+    --user=1000:1000 \
+    --rm \
+    --env=TMPDIR=/tmp \
+    --env=HOME=/KOJdZh \
+    --cidfile=/tmp/53bxsrof/20190906094543-349762.cid \
+    aciobanu/scrapy \
+    scrapy \
+    runspider \
+    -aurl=https://zenodo.org/record/1484377 \
+    scrapy-meta.py > /tmp/vazd850p/links.txt
+[2019-09-06T08:45:47,910Z] [job fetch-meta_57] Max memory used: 43MiB
+[2019-09-06T08:45:47,918Z] [job fetch-meta_57] completed success
+[2019-09-06T08:45:47,918Z] [step fetch-meta] start
+[2019-09-06T08:45:47,932Z] [job fetch-meta_58] /tmp/bs2c0hpj$ docker \
+    run \
+    -i \
+    --volume=/tmp/bs2c0hpj:/KOJdZh:rw \
+    --volume=/tmp/6vmzb6vh:/tmp:rw \
+    --volume=/home/stain/src/ro-index-paper/code/data-gathering/tools/scrapy-meta.py:/KOJdZh/scrapy-meta.py:ro \
+    --workdir=/KOJdZh \
+    --read-only=true \
+    --log-driver=none \
+    --user=1000:1000 \
+    --rm \
+    --env=TMPDIR=/tmp \
+    --env=HOME=/KOJdZh \
+    --cidfile=/tmp/9d54_fq7/20190906094547-931959.cid \
+    aciobanu/scrapy \
+    scrapy \
+    runspider \
+    -aurl=https://zenodo.org/record/3270560 \
+    scrapy-meta.py > /tmp/bs2c0hpj/links.txt
+[2019-09-06T08:45:52,449Z] [job fetch-meta_58] Max memory used: 44MiB
+[2019-09-06T08:45:52,453Z] [job fetch-meta_58] completed success
+[2019-09-06T08:45:52,454Z] [step fetch-meta] start
+[2019-09-06T08:45:52,467Z] [job fetch-meta_59] /tmp/1yy95w2h$ docker \
+    run \
+    -i \
+    --volume=/tmp/1yy95w2h:/KOJdZh:rw \
+    --volume=/tmp/3v6l7xbi:/tmp:rw \
+    --volume=/home/stain/src/ro-index-paper/code/data-gathering/tools/scrapy-meta.py:/KOJdZh/scrapy-meta.py:ro \
+    --workdir=/KOJdZh \
+    --read-only=true \
+    --log-driver=none \
+    --user=1000:1000 \
+    --rm \
+    --env=TMPDIR=/tmp \
+    --env=HOME=/KOJdZh \
+    --cidfile=/tmp/l2yvvt5o/20190906094552-467076.cid \
+    aciobanu/scrapy \
+    scrapy \
+    runspider \
+    -aurl=https://zenodo.org/record/1966881 \
+    scrapy-meta.py > /tmp/1yy95w2h/links.txt
+[2019-09-06T08:45:56,970Z] [job fetch-meta_59] Max memory used: 43MiB
+[2019-09-06T08:45:56,973Z] [job fetch-meta_59] completed success
+[2019-09-06T08:45:56,974Z] [step fetch-meta] start
+[2019-09-06T08:45:56,985Z] [job fetch-meta_60] /tmp/zyv5d35p$ docker \
+    run \
+    -i \
+    --volume=/tmp/zyv5d35p:/KOJdZh:rw \
+    --volume=/tmp/jhchjypa:/tmp:rw \
+    --volume=/home/stain/src/ro-index-paper/code/data-gathering/tools/scrapy-meta.py:/KOJdZh/scrapy-meta.py:ro \
+    --workdir=/KOJdZh \
+    --read-only=true \
+    --log-driver=none \
+    --user=1000:1000 \
+    --rm \
+    --env=TMPDIR=/tmp \
+    --env=HOME=/KOJdZh \
+    --cidfile=/tmp/6ejzv0w3/20190906094556-985054.cid \
+    aciobanu/scrapy \
+    scrapy \
+    runspider \
+    -aurl=https://zenodo.org/record/3250687 \
+    scrapy-meta.py > /tmp/zyv5d35p/links.txt
+[2019-09-06T08:46:01,672Z] [job fetch-meta_60] Max memory used: 43MiB
+[2019-09-06T08:46:01,677Z] [job fetch-meta_60] completed success
+[2019-09-06T08:46:01,677Z] [step fetch-meta] start
+[2019-09-06T08:46:01,692Z] [job fetch-meta_61] /tmp/j5_u7l6a$ docker \
+    run \
+    -i \
+    --volume=/tmp/j5_u7l6a:/KOJdZh:rw \
+    --volume=/tmp/a5z4xayb:/tmp:rw \
+    --volume=/home/stain/src/ro-index-paper/code/data-gathering/tools/scrapy-meta.py:/KOJdZh/scrapy-meta.py:ro \
+    --workdir=/KOJdZh \
+    --read-only=true \
+    --log-driver=none \
+    --user=1000:1000 \
+    --rm \
+    --env=TMPDIR=/tmp \
+    --env=HOME=/KOJdZh \
+    --cidfile=/tmp/xoqlhho8/20190906094601-692051.cid \
+    aciobanu/scrapy \
+    scrapy \
+    runspider \
+    -aurl=https://zenodo.org/record/1313066 \
+    scrapy-meta.py > /tmp/j5_u7l6a/links.txt
+[2019-09-06T08:46:06,428Z] [job fetch-meta_61] Max memory used: 43MiB
+[2019-09-06T08:46:06,435Z] [job fetch-meta_61] completed success
+[2019-09-06T08:46:06,436Z] [step fetch-meta] start
+[2019-09-06T08:46:06,445Z] [job fetch-meta_62] /tmp/bo7fg59y$ docker \
+    run \
+    -i \
+    --volume=/tmp/bo7fg59y:/KOJdZh:rw \
+    --volume=/tmp/vd7j34ho:/tmp:rw \
+    --volume=/home/stain/src/ro-index-paper/code/data-gathering/tools/scrapy-meta.py:/KOJdZh/scrapy-meta.py:ro \
+    --workdir=/KOJdZh \
+    --read-only=true \
+    --log-driver=none \
+    --user=1000:1000 \
+    --rm \
+    --env=TMPDIR=/tmp \
+    --env=HOME=/KOJdZh \
+    --cidfile=/tmp/dz5x11db/20190906094606-445433.cid \
+    aciobanu/scrapy \
+    scrapy \
+    runspider \
+    -aurl=https://zenodo.org/record/2838898 \
+    scrapy-meta.py > /tmp/bo7fg59y/links.txt
+[2019-09-06T08:46:10,929Z] [job fetch-meta_62] Max memory used: 44MiB
+[2019-09-06T08:46:10,933Z] [job fetch-meta_62] completed success
+[2019-09-06T08:46:10,934Z] [step fetch-meta] start
+[2019-09-06T08:46:10,946Z] [job fetch-meta_63] /tmp/udt10bxb$ docker \
+    run \
+    -i \
+    --volume=/tmp/udt10bxb:/KOJdZh:rw \
+    --volume=/tmp/i745i1gs:/tmp:rw \
+    --volume=/home/stain/src/ro-index-paper/code/data-gathering/tools/scrapy-meta.py:/KOJdZh/scrapy-meta.py:ro \
+    --workdir=/KOJdZh \
+    --read-only=true \
+    --log-driver=none \
+    --user=1000:1000 \
+    --rm \
+    --env=TMPDIR=/tmp \
+    --env=HOME=/KOJdZh \
+    --cidfile=/tmp/nw70ii8v/20190906094610-946060.cid \
+    aciobanu/scrapy \
+    scrapy \
+    runspider \
+    -aurl=https://zenodo.org/record/3382259 \
+    scrapy-meta.py > /tmp/udt10bxb/links.txt
+[2019-09-06T08:46:15,311Z] [job fetch-meta_63] Max memory used: 43MiB
+[2019-09-06T08:46:15,315Z] [job fetch-meta_63] completed success
+[2019-09-06T08:46:15,316Z] [step fetch-meta] start
+[2019-09-06T08:46:15,328Z] [job fetch-meta_64] /tmp/gx588g4m$ docker \
+    run \
+    -i \
+    --volume=/tmp/gx588g4m:/KOJdZh:rw \
+    --volume=/tmp/rxccln62:/tmp:rw \
+    --volume=/home/stain/src/ro-index-paper/code/data-gathering/tools/scrapy-meta.py:/KOJdZh/scrapy-meta.py:ro \
+    --workdir=/KOJdZh \
+    --read-only=true \
+    --log-driver=none \
+    --user=1000:1000 \
+    --rm \
+    --env=TMPDIR=/tmp \
+    --env=HOME=/KOJdZh \
+    --cidfile=/tmp/ibx9ueed/20190906094615-328262.cid \
+    aciobanu/scrapy \
+    scrapy \
+    runspider \
+    -aurl=https://zenodo.org/record/2841641 \
+    scrapy-meta.py > /tmp/gx588g4m/links.txt
+[2019-09-06T08:46:19,890Z] [job fetch-meta_64] Max memory used: 43MiB
+[2019-09-06T08:46:19,896Z] [job fetch-meta_64] completed success
+[2019-09-06T08:46:19,897Z] [step fetch-meta] start
+[2019-09-06T08:46:19,913Z] [job fetch-meta_65] /tmp/n1gni3tt$ docker \
+    run \
+    -i \
+    --volume=/tmp/n1gni3tt:/KOJdZh:rw \
+    --volume=/tmp/p7a5r_mb:/tmp:rw \
+    --volume=/home/stain/src/ro-index-paper/code/data-gathering/tools/scrapy-meta.py:/KOJdZh/scrapy-meta.py:ro \
+    --workdir=/KOJdZh \
+    --read-only=true \
+    --log-driver=none \
+    --user=1000:1000 \
+    --rm \
+    --env=TMPDIR=/tmp \
+    --env=HOME=/KOJdZh \
+    --cidfile=/tmp/knc8y2ob/20190906094619-913349.cid \
+    aciobanu/scrapy \
+    scrapy \
+    runspider \
+    -aurl=https://zenodo.org/record/1473157 \
+    scrapy-meta.py > /tmp/n1gni3tt/links.txt
+[2019-09-06T08:46:24,998Z] [job fetch-meta_65] Max memory used: 43MiB
+[2019-09-06T08:46:25,001Z] [job fetch-meta_65] completed success
+[2019-09-06T08:46:25,002Z] [step fetch-meta] start
+[2019-09-06T08:46:25,013Z] [job fetch-meta_66] /tmp/1xhi5flk$ docker \
+    run \
+    -i \
+    --volume=/tmp/1xhi5flk:/KOJdZh:rw \
+    --volume=/tmp/6enis6mp:/tmp:rw \
+    --volume=/home/stain/src/ro-index-paper/code/data-gathering/tools/scrapy-meta.py:/KOJdZh/scrapy-meta.py:ro \
+    --workdir=/KOJdZh \
+    --read-only=true \
+    --log-driver=none \
+    --user=1000:1000 \
+    --rm \
+    --env=TMPDIR=/tmp \
+    --env=HOME=/KOJdZh \
+    --cidfile=/tmp/l9ftxujs/20190906094625-013203.cid \
+    aciobanu/scrapy \
+    scrapy \
+    runspider \
+    -aurl=https://zenodo.org/record/1215611 \
+    scrapy-meta.py > /tmp/1xhi5flk/links.txt
+[2019-09-06T08:46:30,242Z] [job fetch-meta_66] Max memory used: 43MiB
+[2019-09-06T08:46:30,245Z] [job fetch-meta_66] completed success
+[2019-09-06T08:46:30,245Z] [step fetch-meta] start
+[2019-09-06T08:46:30,259Z] [job fetch-meta_67] /tmp/h0im6j5u$ docker \
+    run \
+    -i \
+    --volume=/tmp/h0im6j5u:/KOJdZh:rw \
+    --volume=/tmp/npwg2ums:/tmp:rw \
+    --volume=/home/stain/src/ro-index-paper/code/data-gathering/tools/scrapy-meta.py:/KOJdZh/scrapy-meta.py:ro \
+    --workdir=/KOJdZh \
+    --read-only=true \
+    --log-driver=none \
+    --user=1000:1000 \
+    --rm \
+    --env=TMPDIR=/tmp \
+    --env=HOME=/KOJdZh \
+    --cidfile=/tmp/7m5q5x8f/20190906094630-258927.cid \
+    aciobanu/scrapy \
+    scrapy \
+    runspider \
+    -aurl=https://zenodo.org/record/1320264 \
+    scrapy-meta.py > /tmp/h0im6j5u/links.txt
+[2019-09-06T08:46:35,465Z] [job fetch-meta_67] Max memory used: 43MiB
+[2019-09-06T08:46:35,476Z] [job fetch-meta_67] completed success
+[2019-09-06T08:46:35,477Z] [step fetch-meta] start
+[2019-09-06T08:46:35,493Z] [job fetch-meta_68] /tmp/q8x9tmxo$ docker \
+    run \
+    -i \
+    --volume=/tmp/q8x9tmxo:/KOJdZh:rw \
+    --volume=/tmp/a98__t1c:/tmp:rw \
+    --volume=/home/stain/src/ro-index-paper/code/data-gathering/tools/scrapy-meta.py:/KOJdZh/scrapy-meta.py:ro \
+    --workdir=/KOJdZh \
+    --read-only=true \
+    --log-driver=none \
+    --user=1000:1000 \
+    --rm \
+    --env=TMPDIR=/tmp \
+    --env=HOME=/KOJdZh \
+    --cidfile=/tmp/q96ps146/20190906094635-493177.cid \
+    aciobanu/scrapy \
+    scrapy \
+    runspider \
+    -aurl=https://zenodo.org/record/1311612 \
+    scrapy-meta.py > /tmp/q8x9tmxo/links.txt
+[2019-09-06T08:46:40,880Z] [job fetch-meta_68] Max memory used: 43MiB
+[2019-09-06T08:46:40,885Z] [job fetch-meta_68] completed success
+[2019-09-06T08:46:40,886Z] [step fetch-meta] start
+[2019-09-06T08:46:40,902Z] [job fetch-meta_69] /tmp/gdtzct62$ docker \
+    run \
+    -i \
+    --volume=/tmp/gdtzct62:/KOJdZh:rw \
+    --volume=/tmp/3s2um2d0:/tmp:rw \
+    --volume=/home/stain/src/ro-index-paper/code/data-gathering/tools/scrapy-meta.py:/KOJdZh/scrapy-meta.py:ro \
+    --workdir=/KOJdZh \
+    --read-only=true \
+    --log-driver=none \
+    --user=1000:1000 \
+    --rm \
+    --env=TMPDIR=/tmp \
+    --env=HOME=/KOJdZh \
+    --cidfile=/tmp/ty2hrjem/20190906094640-902125.cid \
+    aciobanu/scrapy \
+    scrapy \
+    runspider \
+    -aurl=https://zenodo.org/record/1312582 \
+    scrapy-meta.py > /tmp/gdtzct62/links.txt
+[2019-09-06T08:46:46,119Z] [job fetch-meta_69] Max memory used: 43MiB
+[2019-09-06T08:46:46,128Z] [job fetch-meta_69] completed success
+[2019-09-06T08:46:46,129Z] [step fetch-meta] start
+[2019-09-06T08:46:46,146Z] [job fetch-meta_70] /tmp/xynp3lyx$ docker \
+    run \
+    -i \
+    --volume=/tmp/xynp3lyx:/KOJdZh:rw \
+    --volume=/tmp/our5ayzv:/tmp:rw \
+    --volume=/home/stain/src/ro-index-paper/code/data-gathering/tools/scrapy-meta.py:/KOJdZh/scrapy-meta.py:ro \
+    --workdir=/KOJdZh \
+    --read-only=true \
+    --log-driver=none \
+    --user=1000:1000 \
+    --rm \
+    --env=TMPDIR=/tmp \
+    --env=HOME=/KOJdZh \
+    --cidfile=/tmp/wy3u10l6/20190906094646-146136.cid \
+    aciobanu/scrapy \
+    scrapy \
+    runspider \
+    -aurl= \
+    scrapy-meta.py > /tmp/xynp3lyx/links.txt
+[2019-09-06T08:46:50,195Z] [job fetch-meta_70] Max memory used: 7MiB
+[2019-09-06T08:46:50,199Z] [job fetch-meta_70] completed success
+[2019-09-06T08:46:50,200Z] [step fetch-meta] completed success
+[2019-09-06T08:46:50,201Z] [workflow ] starting step flatten
+[2019-09-06T08:46:50,201Z] [step flatten] start
+[2019-09-06T08:46:50,340Z] [job flatten] /tmp/ewks871f$ docker \
+    run \
+    -i \
+    --volume=/tmp/ewks871f:/KOJdZh:rw \
+    --volume=/tmp/gxygbpjs:/tmp:rw \
+    --volume=/tmp/_sq2fb04/links.txt:/var/lib/cwl/stgedb9dc9c-17e2-4ab5-9062-3012dce5a3b9/links.txt:ro \
+    --volume=/tmp/sy0ebju6/links.txt:/var/lib/cwl/stgec7454a1-4292-4482-abe1-5f3633cb406d/links.txt:ro \
+    --volume=/tmp/qxme3nh6/links.txt:/var/lib/cwl/stgf64bbb27-c1e8-4186-aae3-c02f7d845d74/links.txt:ro \
+    --volume=/tmp/epju2mc5/links.txt:/var/lib/cwl/stg4a4eb7b5-a636-4bb8-9240-34acc3f6980f/links.txt:ro \
+    --volume=/tmp/494vwyq0/links.txt:/var/lib/cwl/stg6faee1d5-37fd-4238-a2c0-f6eadc1bedf7/links.txt:ro \
+    --volume=/tmp/wkhib_u1/links.txt:/var/lib/cwl/stg576da64c-29ed-48ae-9563-73da55748e11/links.txt:ro \
+    --volume=/tmp/v81zuqu4/links.txt:/var/lib/cwl/stg53920124-fd33-4fb4-812d-89503d2a399a/links.txt:ro \
+    --volume=/tmp/absabxf8/links.txt:/var/lib/cwl/stg90110b0c-2fa2-4231-af3d-8c989ee194be/links.txt:ro \
+    --volume=/tmp/iqexicyi/links.txt:/var/lib/cwl/stg7c5d8584-6db9-4656-968e-d6e836974002/links.txt:ro \
+    --volume=/tmp/2feaq3rc/links.txt:/var/lib/cwl/stg22417faa-c024-4bda-a80a-a49181841f9c/links.txt:ro \
+    --volume=/tmp/9jruim7y/links.txt:/var/lib/cwl/stg233df650-e34c-4c65-b32c-6ca408d559cb/links.txt:ro \
+    --volume=/tmp/uee6gjub/links.txt:/var/lib/cwl/stg1f59a1c3-56e9-43c0-a6ac-1ad4b2f52a66/links.txt:ro \
+    --volume=/tmp/mbitt91w/links.txt:/var/lib/cwl/stg1f673c5b-6baa-4f67-bfd4-4cb527f629ba/links.txt:ro \
+    --volume=/tmp/p1h03e08/links.txt:/var/lib/cwl/stg3f973495-3c48-4996-b307-30e483b6a16e/links.txt:ro \
+    --volume=/tmp/8lc7thdt/links.txt:/var/lib/cwl/stg55e51aaa-2af4-430e-8f89-155769612e6a/links.txt:ro \
+    --volume=/tmp/i1wnwitp/links.txt:/var/lib/cwl/stg7ef4ab00-4c3c-4ca9-bf99-f637ecf71b04/links.txt:ro \
+    --volume=/tmp/pnqx4knw/links.txt:/var/lib/cwl/stgabe0acde-289a-4330-bffe-163a5540628a/links.txt:ro \
+    --volume=/tmp/6gvyag6v/links.txt:/var/lib/cwl/stgdb77d56a-ad2f-4d3b-93e9-cd173d3ba835/links.txt:ro \
+    --volume=/tmp/w9d8_290/links.txt:/var/lib/cwl/stg178b5fcd-4e6e-40b6-b3b0-db7cf45570a3/links.txt:ro \
+    --volume=/tmp/p0u3j14y/links.txt:/var/lib/cwl/stg57891c1b-c9de-4f92-8de3-e823d0ead278/links.txt:ro \
+    --volume=/tmp/rizk56ka/links.txt:/var/lib/cwl/stgf1d83381-15fb-433f-8b64-eee028fcea3c/links.txt:ro \
+    --volume=/tmp/oialhxc7/links.txt:/var/lib/cwl/stg64876e8f-2865-410e-842c-fd527e824055/links.txt:ro \
+    --volume=/tmp/mx2inhy6/links.txt:/var/lib/cwl/stg728e8531-3bb8-427e-9a44-af88f7b76525/links.txt:ro \
+    --volume=/tmp/sznkf_gp/links.txt:/var/lib/cwl/stg4f1e953e-4aab-4111-bbf5-cef587f10ac2/links.txt:ro \
+    --volume=/tmp/yvpxbrvr/links.txt:/var/lib/cwl/stga1ea6e3a-e0e1-4124-b8e9-19716621d84e/links.txt:ro \
+    --volume=/tmp/inm_l71k/links.txt:/var/lib/cwl/stg87f0f6b8-372e-47b8-b32e-88f76338d5be/links.txt:ro \
+    --volume=/tmp/0l6_7h9a/links.txt:/var/lib/cwl/stg1736c8a2-d05b-4f5e-914a-2bad4e6dca88/links.txt:ro \
+    --volume=/tmp/rda4ocnj/links.txt:/var/lib/cwl/stg6880d835-a0e1-4d03-9afd-fab12f16b127/links.txt:ro \
+    --volume=/tmp/zg1bc967/links.txt:/var/lib/cwl/stg03f2ad9f-7346-46ca-8365-2c8e742eb59f/links.txt:ro \
+    --volume=/tmp/pjplryoi/links.txt:/var/lib/cwl/stg39867b57-2f7e-4771-ba1b-a72338480d9f/links.txt:ro \
+    --volume=/tmp/91c8smsl/links.txt:/var/lib/cwl/stgc3d99197-6bd1-4dee-80e8-a6bd03ed15f9/links.txt:ro \
+    --volume=/tmp/vlti3g1e/links.txt:/var/lib/cwl/stg0bc19fdd-0d96-45bd-a041-5730621249f4/links.txt:ro \
+    --volume=/tmp/lenud52k/links.txt:/var/lib/cwl/stgfa34e93e-5436-4f23-8a5c-e33db6c16f05/links.txt:ro \
+    --volume=/tmp/5m0xa172/links.txt:/var/lib/cwl/stg0e2e1343-4951-46c7-93ff-c6428f5b727d/links.txt:ro \
+    --volume=/tmp/5dyk7fbl/links.txt:/var/lib/cwl/stgd9319157-a87d-4f4f-907a-4608780036c8/links.txt:ro \
+    --volume=/tmp/3__hnknd/links.txt:/var/lib/cwl/stg7766d6cf-492d-4724-941f-ca60a538daff/links.txt:ro \
+    --volume=/tmp/8yfc0wdu/links.txt:/var/lib/cwl/stg2b79f615-74f1-49f9-88eb-54780eabe296/links.txt:ro \
+    --volume=/tmp/cpr2u954/links.txt:/var/lib/cwl/stg46b35893-fb39-4000-96c8-292f979ce9ba/links.txt:ro \
+    --volume=/tmp/2sqopztk/links.txt:/var/lib/cwl/stg156258fa-dbd9-4fa0-a4bf-90b58822a8f0/links.txt:ro \
+    --volume=/tmp/crcz1mph/links.txt:/var/lib/cwl/stgac400002-ae46-49bd-8b32-f51c977d1189/links.txt:ro \
+    --volume=/tmp/jrg2h_2v/links.txt:/var/lib/cwl/stgec6fd251-7b01-457c-9359-8d852bbe693e/links.txt:ro \
+    --volume=/tmp/nvq5lqln/links.txt:/var/lib/cwl/stge97855b5-5ea8-48ef-83b6-653cef23f6e6/links.txt:ro \
+    --volume=/tmp/v7068p0e/links.txt:/var/lib/cwl/stg804bf79f-4c39-49ef-96ae-e14f34f4b6f6/links.txt:ro \
+    --volume=/tmp/cga7g4lb/links.txt:/var/lib/cwl/stg76edb9f1-bf1c-46b8-b8e6-5dffe695e42a/links.txt:ro \
+    --volume=/tmp/ft3k27rc/links.txt:/var/lib/cwl/stgfe55a99a-a2cb-431a-a956-bc6f37e01335/links.txt:ro \
+    --volume=/tmp/6ktzokxl/links.txt:/var/lib/cwl/stgdfe9b13b-b98e-47b8-b87d-7d1f98c456e8/links.txt:ro \
+    --volume=/tmp/xqui2o1g/links.txt:/var/lib/cwl/stg224214b6-1bcf-4565-b619-3efe30dc7185/links.txt:ro \
+    --volume=/tmp/4v522m7p/links.txt:/var/lib/cwl/stg35f42b3b-2a10-4b01-9b7d-f273d7baf95f/links.txt:ro \
+    --volume=/tmp/xblv02y3/links.txt:/var/lib/cwl/stg4cf5b6e0-024b-4629-8c6c-c3783da4e8cd/links.txt:ro \
+    --volume=/tmp/7xgk_qlj/links.txt:/var/lib/cwl/stgfb88bfff-0cca-4278-9be5-7b8345b323c5/links.txt:ro \
+    --volume=/tmp/5keku0yl/links.txt:/var/lib/cwl/stgdc4e8b20-450a-4a5d-abef-fb93f16cf81e/links.txt:ro \
+    --volume=/tmp/warr6pdp/links.txt:/var/lib/cwl/stg23dd7830-fb0c-426b-a1f6-e35241223cc8/links.txt:ro \
+    --volume=/tmp/wzll8q4t/links.txt:/var/lib/cwl/stg6825b401-5aed-4e8d-bb5d-3de9f2ed783a/links.txt:ro \
+    --volume=/tmp/fp81cnds/links.txt:/var/lib/cwl/stgf963438e-2fea-4212-91d2-917e250d37d9/links.txt:ro \
+    --volume=/tmp/fpphojwe/links.txt:/var/lib/cwl/stg12cbcbd0-843f-4f07-9897-fa53367af520/links.txt:ro \
+    --volume=/tmp/n12__2q6/links.txt:/var/lib/cwl/stgcc5515d3-074e-481d-9f9a-e96cc2011a52/links.txt:ro \
+    --volume=/tmp/vazd850p/links.txt:/var/lib/cwl/stg7f1a2687-f968-4adb-9d88-9fa8ca6ac1b5/links.txt:ro \
+    --volume=/tmp/bs2c0hpj/links.txt:/var/lib/cwl/stg88f96615-50f7-46d8-870f-413af82349a1/links.txt:ro \
+    --volume=/tmp/1yy95w2h/links.txt:/var/lib/cwl/stgdef03d47-1e45-4af7-b2f8-bb0c3f9b470b/links.txt:ro \
+    --volume=/tmp/zyv5d35p/links.txt:/var/lib/cwl/stg48fa43c1-c469-4532-a91c-65b415f17032/links.txt:ro \
+    --volume=/tmp/j5_u7l6a/links.txt:/var/lib/cwl/stg95c168d6-ec97-45e8-8932-d70b9a43da64/links.txt:ro \
+    --volume=/tmp/bo7fg59y/links.txt:/var/lib/cwl/stg6cd9edee-8319-483f-83db-8c63bafe9fd9/links.txt:ro \
+    --volume=/tmp/udt10bxb/links.txt:/var/lib/cwl/stg45dffe2a-407a-4258-aa87-b25980808b75/links.txt:ro \
+    --volume=/tmp/gx588g4m/links.txt:/var/lib/cwl/stg8f46bc9b-5bf1-4f77-84d6-1fde68627e77/links.txt:ro \
+    --volume=/tmp/n1gni3tt/links.txt:/var/lib/cwl/stg180d64a3-1d56-4c07-a2e0-1a9263743f54/links.txt:ro \
+    --volume=/tmp/1xhi5flk/links.txt:/var/lib/cwl/stg6b816f0b-26e8-448a-82c4-3e9d5fed7e68/links.txt:ro \
+    --volume=/tmp/h0im6j5u/links.txt:/var/lib/cwl/stg6a300d84-256e-4024-a5fa-4ebf5fa45232/links.txt:ro \
+    --volume=/tmp/q8x9tmxo/links.txt:/var/lib/cwl/stg3176b44a-8629-4d12-9fdf-1643552062b3/links.txt:ro \
+    --volume=/tmp/gdtzct62/links.txt:/var/lib/cwl/stg1c7c007e-c62d-433b-96b3-8fdb8bd66881/links.txt:ro \
+    --volume=/tmp/xynp3lyx/links.txt:/var/lib/cwl/stg84cd7c1f-102c-465a-8e07-a6dbe681261c/links.txt:ro \
+    --workdir=/KOJdZh \
+    --read-only=true \
+    --log-driver=none \
+    --user=1000:1000 \
+    --rm \
+    --env=TMPDIR=/tmp \
+    --env=HOME=/KOJdZh \
+    --cidfile=/tmp/f_3_sont/20190906094650-339676.cid \
+    debian:9 \
+    cat \
+    --squeeze-blank \
+    /var/lib/cwl/stgedb9dc9c-17e2-4ab5-9062-3012dce5a3b9/links.txt \
+    /var/lib/cwl/stgec7454a1-4292-4482-abe1-5f3633cb406d/links.txt \
+    /var/lib/cwl/stgf64bbb27-c1e8-4186-aae3-c02f7d845d74/links.txt \
+    /var/lib/cwl/stg4a4eb7b5-a636-4bb8-9240-34acc3f6980f/links.txt \
+    /var/lib/cwl/stg6faee1d5-37fd-4238-a2c0-f6eadc1bedf7/links.txt \
+    /var/lib/cwl/stg576da64c-29ed-48ae-9563-73da55748e11/links.txt \
+    /var/lib/cwl/stg53920124-fd33-4fb4-812d-89503d2a399a/links.txt \
+    /var/lib/cwl/stg90110b0c-2fa2-4231-af3d-8c989ee194be/links.txt \
+    /var/lib/cwl/stg7c5d8584-6db9-4656-968e-d6e836974002/links.txt \
+    /var/lib/cwl/stg22417faa-c024-4bda-a80a-a49181841f9c/links.txt \
+    /var/lib/cwl/stg233df650-e34c-4c65-b32c-6ca408d559cb/links.txt \
+    /var/lib/cwl/stg1f59a1c3-56e9-43c0-a6ac-1ad4b2f52a66/links.txt \
+    /var/lib/cwl/stg1f673c5b-6baa-4f67-bfd4-4cb527f629ba/links.txt \
+    /var/lib/cwl/stg3f973495-3c48-4996-b307-30e483b6a16e/links.txt \
+    /var/lib/cwl/stg55e51aaa-2af4-430e-8f89-155769612e6a/links.txt \
+    /var/lib/cwl/stg7ef4ab00-4c3c-4ca9-bf99-f637ecf71b04/links.txt \
+    /var/lib/cwl/stgabe0acde-289a-4330-bffe-163a5540628a/links.txt \
+    /var/lib/cwl/stgdb77d56a-ad2f-4d3b-93e9-cd173d3ba835/links.txt \
+    /var/lib/cwl/stg178b5fcd-4e6e-40b6-b3b0-db7cf45570a3/links.txt \
+    /var/lib/cwl/stg57891c1b-c9de-4f92-8de3-e823d0ead278/links.txt \
+    /var/lib/cwl/stgf1d83381-15fb-433f-8b64-eee028fcea3c/links.txt \
+    /var/lib/cwl/stg64876e8f-2865-410e-842c-fd527e824055/links.txt \
+    /var/lib/cwl/stg728e8531-3bb8-427e-9a44-af88f7b76525/links.txt \
+    /var/lib/cwl/stg4f1e953e-4aab-4111-bbf5-cef587f10ac2/links.txt \
+    /var/lib/cwl/stga1ea6e3a-e0e1-4124-b8e9-19716621d84e/links.txt \
+    /var/lib/cwl/stg87f0f6b8-372e-47b8-b32e-88f76338d5be/links.txt \
+    /var/lib/cwl/stg1736c8a2-d05b-4f5e-914a-2bad4e6dca88/links.txt \
+    /var/lib/cwl/stg6880d835-a0e1-4d03-9afd-fab12f16b127/links.txt \
+    /var/lib/cwl/stg03f2ad9f-7346-46ca-8365-2c8e742eb59f/links.txt \
+    /var/lib/cwl/stg39867b57-2f7e-4771-ba1b-a72338480d9f/links.txt \
+    /var/lib/cwl/stgc3d99197-6bd1-4dee-80e8-a6bd03ed15f9/links.txt \
+    /var/lib/cwl/stg0bc19fdd-0d96-45bd-a041-5730621249f4/links.txt \
+    /var/lib/cwl/stgfa34e93e-5436-4f23-8a5c-e33db6c16f05/links.txt \
+    /var/lib/cwl/stg0e2e1343-4951-46c7-93ff-c6428f5b727d/links.txt \
+    /var/lib/cwl/stgd9319157-a87d-4f4f-907a-4608780036c8/links.txt \
+    /var/lib/cwl/stg7766d6cf-492d-4724-941f-ca60a538daff/links.txt \
+    /var/lib/cwl/stg2b79f615-74f1-49f9-88eb-54780eabe296/links.txt \
+    /var/lib/cwl/stg46b35893-fb39-4000-96c8-292f979ce9ba/links.txt \
+    /var/lib/cwl/stg156258fa-dbd9-4fa0-a4bf-90b58822a8f0/links.txt \
+    /var/lib/cwl/stgac400002-ae46-49bd-8b32-f51c977d1189/links.txt \
+    /var/lib/cwl/stgec6fd251-7b01-457c-9359-8d852bbe693e/links.txt \
+    /var/lib/cwl/stge97855b5-5ea8-48ef-83b6-653cef23f6e6/links.txt \
+    /var/lib/cwl/stg804bf79f-4c39-49ef-96ae-e14f34f4b6f6/links.txt \
+    /var/lib/cwl/stg76edb9f1-bf1c-46b8-b8e6-5dffe695e42a/links.txt \
+    /var/lib/cwl/stgfe55a99a-a2cb-431a-a956-bc6f37e01335/links.txt \
+    /var/lib/cwl/stgdfe9b13b-b98e-47b8-b87d-7d1f98c456e8/links.txt \
+    /var/lib/cwl/stg224214b6-1bcf-4565-b619-3efe30dc7185/links.txt \
+    /var/lib/cwl/stg35f42b3b-2a10-4b01-9b7d-f273d7baf95f/links.txt \
+    /var/lib/cwl/stg4cf5b6e0-024b-4629-8c6c-c3783da4e8cd/links.txt \
+    /var/lib/cwl/stgfb88bfff-0cca-4278-9be5-7b8345b323c5/links.txt \
+    /var/lib/cwl/stgdc4e8b20-450a-4a5d-abef-fb93f16cf81e/links.txt \
+    /var/lib/cwl/stg23dd7830-fb0c-426b-a1f6-e35241223cc8/links.txt \
+    /var/lib/cwl/stg6825b401-5aed-4e8d-bb5d-3de9f2ed783a/links.txt \
+    /var/lib/cwl/stgf963438e-2fea-4212-91d2-917e250d37d9/links.txt \
+    /var/lib/cwl/stg12cbcbd0-843f-4f07-9897-fa53367af520/links.txt \
+    /var/lib/cwl/stgcc5515d3-074e-481d-9f9a-e96cc2011a52/links.txt \
+    /var/lib/cwl/stg7f1a2687-f968-4adb-9d88-9fa8ca6ac1b5/links.txt \
+    /var/lib/cwl/stg88f96615-50f7-46d8-870f-413af82349a1/links.txt \
+    /var/lib/cwl/stgdef03d47-1e45-4af7-b2f8-bb0c3f9b470b/links.txt \
+    /var/lib/cwl/stg48fa43c1-c469-4532-a91c-65b415f17032/links.txt \
+    /var/lib/cwl/stg95c168d6-ec97-45e8-8932-d70b9a43da64/links.txt \
+    /var/lib/cwl/stg6cd9edee-8319-483f-83db-8c63bafe9fd9/links.txt \
+    /var/lib/cwl/stg45dffe2a-407a-4258-aa87-b25980808b75/links.txt \
+    /var/lib/cwl/stg8f46bc9b-5bf1-4f77-84d6-1fde68627e77/links.txt \
+    /var/lib/cwl/stg180d64a3-1d56-4c07-a2e0-1a9263743f54/links.txt \
+    /var/lib/cwl/stg6b816f0b-26e8-448a-82c4-3e9d5fed7e68/links.txt \
+    /var/lib/cwl/stg6a300d84-256e-4024-a5fa-4ebf5fa45232/links.txt \
+    /var/lib/cwl/stg3176b44a-8629-4d12-9fdf-1643552062b3/links.txt \
+    /var/lib/cwl/stg1c7c007e-c62d-433b-96b3-8fdb8bd66881/links.txt \
+    /var/lib/cwl/stg84cd7c1f-102c-465a-8e07-a6dbe681261c/links.txt > /tmp/ewks871f/concatinated
+[2019-09-06T08:46:52,248Z] [job flatten] Max memory used: 0MiB
+[2019-09-06T08:46:52,257Z] [job flatten] completed success
+[2019-09-06T08:46:52,257Z] [step flatten] completed success
+[2019-09-06T08:46:52,258Z] [workflow ] completed success
+[2019-09-06T08:46:55,369Z] Final process status is success

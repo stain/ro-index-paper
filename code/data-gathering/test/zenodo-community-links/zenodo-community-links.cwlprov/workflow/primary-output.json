@@ -1,0 +1,13 @@
+{
+    "urls": {
+        "location": "../data/0b/0be32fbe1b2a6f7ec693a9ee3b30a19477822d73",
+        "basename": "concatinated",
+        "nameroot": "concatinated",
+        "nameext": "",
+        "class": "File",
+        "checksum": "sha1$0be32fbe1b2a6f7ec693a9ee3b30a19477822d73",
+        "size": 8243,
+        "http://commonwl.org/cwltool#generation": 0,
+        "@id": "urn:uuid:abafcba8-9afc-4984-b9fa-ff7291b8eb32"
+    }
+}

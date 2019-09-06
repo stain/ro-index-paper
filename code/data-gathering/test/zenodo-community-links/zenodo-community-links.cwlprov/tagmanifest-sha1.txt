@@ -1,0 +1,14 @@
+ea866558061fc01f43472f87fb2d0e52bc87f497  workflow/packed.cwl
+b6ec06b9ce0a7bb84d35978a2e8ebd5b904cdfdf  workflow/primary-job.json
+bcf5a21906774ebf768934965d8b68f4a57d2bbf  metadata/provenance/primary.cwlprov.xml
+dad4cf0ed206588d5786b6f90b02134e575fd54d  metadata/provenance/primary.cwlprov.provn
+342fe1370e8fdabbe8d18800a758a6e68996d9f2  metadata/provenance/primary.cwlprov.json
+8c8f23371329be4b4b37a237522e25e48eb160db  metadata/provenance/primary.cwlprov.ttl
+42fad74d32c59dbbac0aea12636c7606f0270685  metadata/provenance/primary.cwlprov.nt
+a39b3f35cdbd7099374d5a4571a9e50978ef7487  metadata/provenance/primary.cwlprov.jsonld
+7ee4f59917d46963ec566c6831f2f7211216daf2  workflow/primary-output.json
+ebe69c7efba41ef28a682e8db94f4f9a9f1fcb10  snapshot/zenodo-community-links.cwl
+70fc36512fd477c70a9e213926873b07b25c6032  snapshot/zenodo-community-links-job.yml
+4ac2426c2f79b5e068eacffdf7882e55ded41653  metadata/logs/engine.dc8d9a67-7b69-4ddb-b981-0314add4809b.txt
+5d00a93188dde1d660d043cd6e53653c26a3f559  metadata/manifest.json
+194d77adc54d96e4311b312ce447bcc0a0cd278a  bag-info.txt
