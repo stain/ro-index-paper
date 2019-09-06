@@ -27,7 +27,6 @@ doc: >
   curl will download a HTTP/HTTPS resource or file from a given URL,
   following any redirections.
 
-
 inputs:
   url:
     type: string
@@ -76,9 +75,9 @@ s:license: https://spdx.org/licenses/Apache-2.0
 s:potentialAction:
   - class: s:ActivateAction
     s:label: "example run"
-    s:instrument: "../test/zip=content-by-url-job.yml"
-#    s:object: "../test/test.zip"
-#    s:result: "../test/test-sunzip-files.txt"
+    s:instrument: "../test/zip=content-by-url/zip=content-by-url-job.yml"
+    s:object: "https://github.com/stain/ro-index-paper/archive/38f2a711f9f115e92cea930398019c147e56ac5a.zip"
+    s:result: "../test/zip=content-by-url/filenames.txt"
 
 $schemas: 
   - https://schema.org/version/3.9/schema.rdf
