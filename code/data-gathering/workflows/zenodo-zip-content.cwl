@@ -36,12 +36,11 @@ inputs:
 
 outputs:
   zip-content:
-    type: 
-      type: array
-      items: File
+    type: File
     doc: >
       Filenames found across ZIP files
-    outputSource: zip-content-by-url/zip-content
+    outputSource: flatten/concatinated
+    #outputSource: zip-content-by-url/zip-content
 
 steps:
     zenodo-community-links:
@@ -106,6 +105,13 @@ steps:
       #scatter: [urls]
       #scatterMethod: flat_crossproduct
       out: [zip-content]
+
+    flatten:
+      run: ../tools/cat.cwl
+      in:
+        files: 
+          source: zip-content-by-url/zip-content
+      out: [concatinated]
 
 s:creator:
   - class: s:Person

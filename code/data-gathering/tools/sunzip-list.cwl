@@ -35,7 +35,7 @@ doc: >
   or incomplete. 
 
 baseCommand: sunzip
-arguments: ["-l"]
+arguments: ["-t", "-q"]
 
 hints:
   DockerRequirement:
