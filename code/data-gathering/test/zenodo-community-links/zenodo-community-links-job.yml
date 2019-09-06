@@ -1,0 +1,6 @@
+#!/usr/bin/env cwltool
+
+cwl:tool: ../../workflows/zenodo-community-links.cwl
+
+# <https://zenodo.org/communities/ro/>
+community: ro
