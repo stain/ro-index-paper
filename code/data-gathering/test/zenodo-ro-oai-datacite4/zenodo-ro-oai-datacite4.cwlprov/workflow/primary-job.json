@@ -1,0 +1,4 @@
+{
+    "acceptType": "text/xml",
+    "url": "https://zenodo.org/oai2d?verb=ListRecords&set=user-ro&metadataPrefix=datacite4"
+}

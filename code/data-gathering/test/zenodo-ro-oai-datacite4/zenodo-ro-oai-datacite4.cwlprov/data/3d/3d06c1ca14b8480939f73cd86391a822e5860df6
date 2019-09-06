@@ -1,0 +1,19 @@
+HTTP/1.1 200 OK
+Server: nginx/1.12.2
+Date: Fri, 06 Sep 2019 08:44:17 GMT
+Content-Type: text/xml; charset=utf-8
+Content-Length: 384850
+Vary: Accept-Encoding
+X-Frame-Options: sameorigin
+X-XSS-Protection: 1; mode=block
+X-Content-Type-Options: nosniff
+Strict-Transport-Security: max-age=0
+Referrer-Policy: strict-origin-when-cross-origin
+X-RateLimit-Limit: 5000
+X-RateLimit-Remaining: 4999
+X-RateLimit-Reset: 1567763058
+Retry-After: 3600
+Set-Cookie: session=6d05398dc9d53662_5d721c61.oFPAh5KitU2XE_iMAse66kuOtJo; Expires=Mon, 07-Oct-2019 08:44:17 GMT; Secure; HttpOnly; Path=/
+X-Session-ID: 6d05398dc9d53662_5d721c61
+X-Request-ID: 152ea2e91a01a94d223f917d46e77100
+

@@ -1,0 +1,14 @@
+da7bfce8b5f888a1c8078e26f5df04a84c71334d  workflow/packed.cwl
+2dd8910d2f696d2969f45494637ad97763d80d17  workflow/primary-job.json
+1cf5556cb3e749876dc67d647e9950461fff14e8  metadata/provenance/primary.cwlprov.xml
+30ca8243388c63322e9a24a2745aecb2d4eabc5a  metadata/provenance/primary.cwlprov.provn
+0aa3cb1f98dc8005001e4aa4ea37af72ddaee643  metadata/provenance/primary.cwlprov.json
+db59032b2ed2d067f32c8c7ce175d862a086dca3  metadata/provenance/primary.cwlprov.ttl
+991386c4418ef4117cef3d287c721ffae0254f41  metadata/provenance/primary.cwlprov.nt
+e4e5a7031417cf8c82380ce17bb161fe01e8e3ea  metadata/provenance/primary.cwlprov.jsonld
+06918233cd5a070ae0bf143ff422c910d6b00020  workflow/primary-output.json
+29fd599ff084c8efc9ec70225a29f0a07b41b31c  snapshot/curl-get.cwl
+0104543532ea0b253100bb57068680380d907783  snapshot/zenodo-ro-oai-datacite4-job.yml
+1f590667fde6bde30b9852af4b52f5522ad69293  metadata/logs/engine.2796e237-aaf1-40b3-9973-96bd332ba03b.txt
+10912c84abfc2c9131fa52a335fd3a685443cb65  metadata/manifest.json
+fd55a19182d3d7d74241c4e54ed19849ff9a20a0  bag-info.txt

@@ -1,0 +1,29 @@
+[2019-09-06T08:44:06,333Z] [cwltool] /home/stain/miniconda3/bin/cwltool --provenance zenodo-ro-oai-datacite4.cwlprov zenodo-ro-oai-datacite4-job.yml
+[2019-09-06T08:44:06,335Z] Resolved 'zenodo-ro-oai-datacite4-job.yml' to 'file:///home/stain/src/ro-index-paper/code/data-gathering/test/zenodo/zenodo-ro-oai-datacite4-job.yml'
+[2019-09-06T08:44:15,361Z] [job curl-get.cwl] /tmp/pnih4fi5$ docker \
+    run \
+    -i \
+    --volume=/tmp/pnih4fi5:/ljmPhJ:rw \
+    --volume=/tmp/f91175sa:/tmp:rw \
+    --workdir=/ljmPhJ \
+    --read-only=true \
+    --log-driver=none \
+    --user=1000:1000 \
+    --rm \
+    --env=TMPDIR=/tmp \
+    --env=HOME=/ljmPhJ \
+    --cidfile=/tmp/1pxb0d76/20190906094415-361560.cid \
+    appropriate/curl:3.1 \
+    curl \
+    --silent \
+    --show-error \
+    --fail \
+    --location \
+    --dump-header \
+    headers.txt \
+    --header \
+    'Accept: text/xml' \
+    'https://zenodo.org/oai2d?verb=ListRecords&set=user-ro&metadataPrefix=datacite4' > /tmp/pnih4fi5/downloaded
+[2019-09-06T08:44:18,455Z] [job curl-get.cwl] Max memory used: 0MiB
+[2019-09-06T08:44:18,465Z] [job curl-get.cwl] completed success
+[2019-09-06T08:44:18,557Z] Final process status is success
