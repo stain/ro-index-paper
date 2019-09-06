@@ -1,0 +1,7 @@
+#!/usr/bin/env cwltool
+
+cwl:tool: ../../tools/split-by-line.cwl
+
+file: 
+  class: File
+  path: lines.txt

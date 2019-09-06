@@ -1,0 +1,106 @@
+<?xml version='1.0' encoding='ASCII'?>
+<prov:document xmlns:cwlprov="https://w3id.org/cwl/prov#" xmlns:data="urn:hash::sha1:" xmlns:foaf="http://xmlns.com/foaf/0.1/" xmlns:id="urn:uuid:" xmlns:input="arcp://uuid,5424d054-7f02-4e1f-9f74-fb6cde53c2e7/workflow/primary-job.json#" xmlns:metadata="arcp://uuid,5424d054-7f02-4e1f-9f74-fb6cde53c2e7/metadata/" xmlns:orcid="https://orcid.org/" xmlns:prov="http://www.w3.org/ns/prov#" xmlns:provenance="arcp://uuid,5424d054-7f02-4e1f-9f74-fb6cde53c2e7/metadata/provenance/" xmlns:researchobject="arcp://uuid,5424d054-7f02-4e1f-9f74-fb6cde53c2e7/" xmlns:schema="http://schema.org/" xmlns:sha256="nih:sha-256;" xmlns:wf="arcp://uuid,5424d054-7f02-4e1f-9f74-fb6cde53c2e7/workflow/packed.cwl#" xmlns:wf4ever="http://purl.org/wf4ever/wf4ever#" xmlns:wfdesc="http://purl.org/wf4ever/wfdesc#" xmlns:wfprov="http://purl.org/wf4ever/wfprov#" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <prov:agent prov:id="id:7e489110-efb1-495b-83e8-edfbc52fe108"/>
+  <prov:softwareAgent prov:id="id:1b0d368b-ec7c-4b2f-a627-571622acbe7c">
+    <prov:label>cwltool 1.0.20190815141648</prov:label>
+    <prov:type xsi:type="xsd:QName">wfprov:WorkflowEngine</prov:type>
+  </prov:softwareAgent>
+  <prov:wasStartedBy>
+    <prov:activity prov:ref="id:1b0d368b-ec7c-4b2f-a627-571622acbe7c"/>
+    <prov:starter prov:ref="id:7e489110-efb1-495b-83e8-edfbc52fe108"/>
+    <prov:time>2019-09-06T09:28:23.814148</prov:time>
+  </prov:wasStartedBy>
+  <prov:activity prov:id="id:5424d054-7f02-4e1f-9f74-fb6cde53c2e7">
+    <prov:startTime>2019-09-06T09:28:23.814196</prov:startTime>
+    <prov:label>Run of workflow/packed.cwl#main</prov:label>
+    <prov:type xsi:type="xsd:QName">wfprov:WorkflowRun</prov:type>
+  </prov:activity>
+  <prov:wasAssociatedWith>
+    <prov:activity prov:ref="id:5424d054-7f02-4e1f-9f74-fb6cde53c2e7"/>
+    <prov:agent prov:ref="id:1b0d368b-ec7c-4b2f-a627-571622acbe7c"/>
+    <prov:plan prov:ref="wf:main"/>
+  </prov:wasAssociatedWith>
+  <prov:wasStartedBy>
+    <prov:activity prov:ref="id:5424d054-7f02-4e1f-9f74-fb6cde53c2e7"/>
+    <prov:starter prov:ref="id:1b0d368b-ec7c-4b2f-a627-571622acbe7c"/>
+    <prov:time>2019-09-06T09:28:23.814299</prov:time>
+  </prov:wasStartedBy>
+  <prov:plan prov:id="wf:main">
+    <prov:label>Prospective provenance</prov:label>
+    <prov:type xsi:type="xsd:QName">wfdesc:Process</prov:type>
+  </prov:plan>
+  <prov:entity prov:id="data:88554bcbde7c3441fe1d86e2f6f8415919605eee">
+    <prov:type xsi:type="xsd:QName">wfprov:Artifact</prov:type>
+  </prov:entity>
+  <prov:entity prov:id="id:635c3cd3-0d58-4a37-900a-282109d46480">
+    <prov:type xsi:type="xsd:QName">wf4ever:File</prov:type>
+    <prov:type xsi:type="xsd:QName">wfprov:Artifact</prov:type>
+    <cwlprov:basename>lines.txt</cwlprov:basename>
+    <cwlprov:nameext>.txt</cwlprov:nameext>
+    <cwlprov:nameroot>lines</cwlprov:nameroot>
+  </prov:entity>
+  <prov:specializationOf>
+    <prov:specificEntity prov:ref="id:635c3cd3-0d58-4a37-900a-282109d46480"/>
+    <prov:generalEntity prov:ref="data:88554bcbde7c3441fe1d86e2f6f8415919605eee"/>
+  </prov:specializationOf>
+  <prov:used>
+    <prov:activity prov:ref="id:5424d054-7f02-4e1f-9f74-fb6cde53c2e7"/>
+    <prov:entity prov:ref="id:635c3cd3-0d58-4a37-900a-282109d46480"/>
+    <prov:time>2019-09-06T09:28:23.817390</prov:time>
+    <prov:role xsi:type="xsd:QName">wf:main/file</prov:role>
+  </prov:used>
+  <prov:entity prov:id="data:726c76553e1a3fdea29134f36e6af2ea05ec5cce">
+    <prov:type xsi:type="xsd:QName">wfprov:Artifact</prov:type>
+    <prov:value xsi:type="xsd:string">Hello there</prov:value>
+  </prov:entity>
+  <prov:entity prov:id="data:34be1708e4988ddb66fd6be13f86bbc45ab91a41">
+    <prov:type xsi:type="xsd:QName">wfprov:Artifact</prov:type>
+    <prov:value xsi:type="xsd:string">This is not</prov:value>
+  </prov:entity>
+  <prov:entity prov:id="data:084ab4093f675b9f4eb22dc243a80d8adc4ff27c">
+    <prov:type xsi:type="xsd:QName">wfprov:Artifact</prov:type>
+    <prov:value xsi:type="xsd:string">really</prov:value>
+  </prov:entity>
+  <prov:entity prov:id="data:f6269f26c769c40e909cdbea5b2a5a7f473251c6">
+    <prov:type xsi:type="xsd:QName">wfprov:Artifact</prov:type>
+    <prov:value xsi:type="xsd:string">data actually</prov:value>
+  </prov:entity>
+  <prov:entity prov:id="data:da39a3ee5e6b4b0d3255bfef95601890afd80709">
+    <prov:type xsi:type="xsd:QName">wfprov:Artifact</prov:type>
+    <prov:value xsi:type="xsd:string"></prov:value>
+  </prov:entity>
+  <prov:collection prov:id="id:6c02abf9-2161-4f92-b796-aca3ab3f7b79">
+    <prov:type xsi:type="xsd:QName">wfprov:Artifact</prov:type>
+  </prov:collection>
+  <prov:hadMember>
+    <prov:collection prov:ref="id:6c02abf9-2161-4f92-b796-aca3ab3f7b79"/>
+    <prov:entity prov:ref="data:726c76553e1a3fdea29134f36e6af2ea05ec5cce"/>
+  </prov:hadMember>
+  <prov:hadMember>
+    <prov:collection prov:ref="id:6c02abf9-2161-4f92-b796-aca3ab3f7b79"/>
+    <prov:entity prov:ref="data:34be1708e4988ddb66fd6be13f86bbc45ab91a41"/>
+  </prov:hadMember>
+  <prov:hadMember>
+    <prov:collection prov:ref="id:6c02abf9-2161-4f92-b796-aca3ab3f7b79"/>
+    <prov:entity prov:ref="data:084ab4093f675b9f4eb22dc243a80d8adc4ff27c"/>
+  </prov:hadMember>
+  <prov:hadMember>
+    <prov:collection prov:ref="id:6c02abf9-2161-4f92-b796-aca3ab3f7b79"/>
+    <prov:entity prov:ref="data:f6269f26c769c40e909cdbea5b2a5a7f473251c6"/>
+  </prov:hadMember>
+  <prov:hadMember>
+    <prov:collection prov:ref="id:6c02abf9-2161-4f92-b796-aca3ab3f7b79"/>
+    <prov:entity prov:ref="data:da39a3ee5e6b4b0d3255bfef95601890afd80709"/>
+  </prov:hadMember>
+  <prov:wasGeneratedBy>
+    <prov:entity prov:ref="id:6c02abf9-2161-4f92-b796-aca3ab3f7b79"/>
+    <prov:activity prov:ref="id:5424d054-7f02-4e1f-9f74-fb6cde53c2e7"/>
+    <prov:time>2019-09-06T09:28:24.972364</prov:time>
+    <prov:role xsi:type="xsd:QName">wf:main/primary/lines</prov:role>
+  </prov:wasGeneratedBy>
+  <prov:wasEndedBy>
+    <prov:activity prov:ref="id:5424d054-7f02-4e1f-9f74-fb6cde53c2e7"/>
+    <prov:ender prov:ref="id:1b0d368b-ec7c-4b2f-a627-571622acbe7c"/>
+    <prov:time>2019-09-06T09:28:24.977062</prov:time>
+  </prov:wasEndedBy>
+</prov:document>
