@@ -1,0 +1,1855 @@
+[2019-09-10T09:20:11,743Z] [cwltool] /home/stain/bin/cwltool --parallel --provenance zenodo-zip-content.cwlprov /home/stain/ro-index-paper/code/data-gathering/workflows/zenodo-zip-content.cwl
+[2019-09-10T09:20:11,746Z] Resolved '/home/stain/ro-index-paper/code/data-gathering/workflows/zenodo-zip-content.cwl' to 'file:///home/stain/ro-index-paper/code/data-gathering/workflows/zenodo-zip-content.cwl'
+[2019-09-10T09:20:34,825Z] [workflow ] start
+[2019-09-10T09:20:34,825Z] [workflow ] starting step zenodo-community-links
+[2019-09-10T09:20:34,826Z] [step zenodo-community-links] start
+[2019-09-10T09:20:34,930Z] [workflow zenodo-community-links] start
+[2019-09-10T09:20:34,930Z] [workflow zenodo-community-links] starting step list-ids
+[2019-09-10T09:20:34,931Z] [step list-ids] start
+[2019-09-10T09:20:35,170Z] [job list-ids] /tmp/e3zxxr5j$ docker \
+    run \
+    -i \
+    --volume=/tmp/e3zxxr5j:/JwkuUA:rw \
+    --volume=/tmp/aodn8c0p:/tmp:rw \
+    --workdir=/JwkuUA \
+    --read-only=true \
+    --log-driver=none \
+    --user=1000:1000 \
+    --rm \
+    --env=TMPDIR=/tmp \
+    --env=HOME=/JwkuUA \
+    --cidfile=/tmp/dlrwp1v0/20190910092035-170419.cid \
+    stain/perl-oai-lib \
+    /bin/sh \
+    -c \
+    'oai_pmh' '--request' 'ListIdentifiers' '--metadataPrefix' 'oai_dc' '--set' 'user-ro' 'https://zenodo.org/oai2d' | grep identifier: | sed 's/^.*identifier: //g' > /tmp/e3zxxr5j/identifiers
+[2019-09-10T09:20:35,171Z] research_obj set but one of process_run_id or prov_obj is missing from runtimeContext: <cwltool.context.RuntimeContext object at 0x7fd4a2034898>
+[2019-09-10T09:20:39,551Z] [job list-ids] Max memory used: 0MiB
+[2019-09-10T09:20:39,556Z] [job list-ids] completed success
+[2019-09-10T09:20:39,556Z] [step list-ids] completed success
+[2019-09-10T09:20:39,557Z] [workflow zenodo-community-links] starting step make-uri
+[2019-09-10T09:20:39,558Z] [step make-uri] start
+[2019-09-10T09:20:39,808Z] [job make-uri] /tmp/u7fqfdg6$ docker \
+    run \
+    -i \
+    --volume=/tmp/u7fqfdg6:/JwkuUA:rw \
+    --volume=/tmp/i2m2y9_f:/tmp:rw \
+    --volume=/tmp/e3zxxr5j/identifiers:/var/lib/cwl/stg001f9786-63ff-48eb-ab5c-543494e38efb/identifiers:ro \
+    --workdir=/JwkuUA \
+    --read-only=true \
+    --log-driver=none \
+    --user=1000:1000 \
+    --rm \
+    --env=TMPDIR=/tmp \
+    --env=HOME=/JwkuUA \
+    --cidfile=/tmp/wjhlhnq9/20190910092039-807678.cid \
+    debian:9 \
+    sed \
+    --unbuffered \
+    --regexp-extended \
+    s,oai:zenodo.org:,https://zenodo.org/record/, \
+    /var/lib/cwl/stg001f9786-63ff-48eb-ab5c-543494e38efb/identifiers > /tmp/u7fqfdg6/modified.txt
+[2019-09-10T09:20:39,808Z] research_obj set but one of process_run_id or prov_obj is missing from runtimeContext: <cwltool.context.RuntimeContext object at 0x7fd4a2034898>
+[2019-09-10T09:20:41,825Z] [job make-uri] Max memory used: 0MiB
+[2019-09-10T09:20:41,830Z] [job make-uri] completed success
+[2019-09-10T09:20:41,830Z] [step make-uri] completed success
+[2019-09-10T09:20:41,831Z] [workflow zenodo-community-links] starting step split-ids-by-line
+[2019-09-10T09:20:41,832Z] [step split-ids-by-line] start
+[2019-09-10T09:20:44,069Z] [step split-ids-by-line] completed success
+[2019-09-10T09:20:44,070Z] [workflow zenodo-community-links] starting step fetch-meta
+[2019-09-10T09:20:44,072Z] [step fetch-meta] start
+[2019-09-10T09:20:44,157Z] [step fetch-meta] start
+[2019-09-10T09:20:44,190Z] [step fetch-meta] start
+[2019-09-10T09:20:44,246Z] [step fetch-meta] start
+[2019-09-10T09:20:44,271Z] [step fetch-meta] start
+[2019-09-10T09:20:44,286Z] [job fetch-meta] /tmp/ktn_utj7$ docker \
+    run \
+    -i \
+    --volume=/tmp/ktn_utj7:/JwkuUA:rw \
+    --volume=/tmp/a8acdukv:/tmp:rw \
+    --volume=/home/stain/ro-index-paper/code/data-gathering/tools/scrapy-meta.py:/JwkuUA/scrapy-meta.py:ro \
+    --workdir=/JwkuUA \
+    --read-only=true \
+    --log-driver=none \
+    --user=1000:1000 \
+    --rm \
+    --env=TMPDIR=/tmp \
+    --env=HOME=/JwkuUA \
+    --cidfile=/tmp/75xxxo82/20190910092044-286481.cid \
+    aciobanu/scrapy \
+    scrapy \
+    runspider \
+    -aurl=https://zenodo.org/record/1310621 \
+    scrapy-meta.py > /tmp/ktn_utj7/links.txt
+[2019-09-10T09:20:44,287Z] research_obj set but one of process_run_id or prov_obj is missing from runtimeContext: <cwltool.context.RuntimeContext object at 0x7fd4a2034898>
+[2019-09-10T09:20:44,308Z] [job fetch-meta_3] /tmp/kt496tqi$ docker \
+    run \
+    -i \
+    --volume=/tmp/kt496tqi:/JwkuUA:rw \
+    --volume=/tmp/paz78wyx:/tmp:rw \
+    --volume=/home/stain/ro-index-paper/code/data-gathering/tools/scrapy-meta.py:/JwkuUA/scrapy-meta.py:ro \
+    --workdir=/JwkuUA \
+    --read-only=true \
+    --log-driver=none \
+    --user=1000:1000 \
+    --rm \
+    --env=TMPDIR=/tmp \
+    --env=HOME=/JwkuUA \
+    --cidfile=/tmp/kh6z57_a/20190910092044-307893.cid \
+    aciobanu/scrapy \
+    scrapy \
+    runspider \
+    -aurl=https://zenodo.org/record/1484480 \
+    scrapy-meta.py > /tmp/kt496tqi/links.txt
+[2019-09-10T09:20:44,308Z] research_obj set but one of process_run_id or prov_obj is missing from runtimeContext: <cwltool.context.RuntimeContext object at 0x7fd4a2034898>
+[2019-09-10T09:20:44,336Z] [job fetch-meta_4] /tmp/oerlz1e0$ docker \
+    run \
+    -i \
+    --volume=/tmp/oerlz1e0:/JwkuUA:rw \
+    --volume=/tmp/0jr_ra2a:/tmp:rw \
+    --volume=/home/stain/ro-index-paper/code/data-gathering/tools/scrapy-meta.py:/JwkuUA/scrapy-meta.py:ro \
+    --workdir=/JwkuUA \
+    --read-only=true \
+    --log-driver=none \
+    --user=1000:1000 \
+    --rm \
+    --env=TMPDIR=/tmp \
+    --env=HOME=/JwkuUA \
+    --cidfile=/tmp/scyzcxl0/20190910092044-336250.cid \
+    aciobanu/scrapy \
+    scrapy \
+    runspider \
+    -aurl=https://zenodo.org/record/1299320 \
+    scrapy-meta.py > /tmp/oerlz1e0/links.txt
+[2019-09-10T09:20:44,336Z] research_obj set but one of process_run_id or prov_obj is missing from runtimeContext: <cwltool.context.RuntimeContext object at 0x7fd4a2034898>
+[2019-09-10T09:20:44,385Z] [job fetch-meta_2] /tmp/ojcoh9u1$ docker \
+    run \
+    -i \
+    --volume=/tmp/ojcoh9u1:/JwkuUA:rw \
+    --volume=/tmp/4bqlsrqx:/tmp:rw \
+    --volume=/home/stain/ro-index-paper/code/data-gathering/tools/scrapy-meta.py:/JwkuUA/scrapy-meta.py:ro \
+    --workdir=/JwkuUA \
+    --read-only=true \
+    --log-driver=none \
+    --user=1000:1000 \
+    --rm \
+    --env=TMPDIR=/tmp \
+    --env=HOME=/JwkuUA \
+    --cidfile=/tmp/tzopz0z9/20190910092044-385111.cid \
+    aciobanu/scrapy \
+    scrapy \
+    runspider \
+    -aurl=https://zenodo.org/record/1484341 \
+    scrapy-meta.py > /tmp/ojcoh9u1/links.txt
+[2019-09-10T09:20:44,385Z] research_obj set but one of process_run_id or prov_obj is missing from runtimeContext: <cwltool.context.RuntimeContext object at 0x7fd4a2034898>
+[2019-09-10T09:20:44,642Z] [step fetch-meta] start
+[2019-09-10T09:20:44,691Z] [step fetch-meta] start
+[2019-09-10T09:20:44,729Z] [job fetch-meta_5] /tmp/8a_ebvio$ docker \
+    run \
+    -i \
+    --volume=/tmp/8a_ebvio:/JwkuUA:rw \
+    --volume=/tmp/kvmthnuw:/tmp:rw \
+    --volume=/home/stain/ro-index-paper/code/data-gathering/tools/scrapy-meta.py:/JwkuUA/scrapy-meta.py:ro \
+    --workdir=/JwkuUA \
+    --read-only=true \
+    --log-driver=none \
+    --user=1000:1000 \
+    --rm \
+    --env=TMPDIR=/tmp \
+    --env=HOME=/JwkuUA \
+    --cidfile=/tmp/xx8yk5l0/20190910092044-728712.cid \
+    aciobanu/scrapy \
+    scrapy \
+    runspider \
+    -aurl=https://zenodo.org/record/1299783 \
+    scrapy-meta.py > /tmp/8a_ebvio/links.txt
+[2019-09-10T09:20:44,729Z] research_obj set but one of process_run_id or prov_obj is missing from runtimeContext: <cwltool.context.RuntimeContext object at 0x7fd4a2034898>
+[2019-09-10T09:20:44,769Z] [job fetch-meta_6] /tmp/b_rehyar$ docker \
+    run \
+    -i \
+    --volume=/tmp/b_rehyar:/JwkuUA:rw \
+    --volume=/tmp/cs82qf_b:/tmp:rw \
+    --volume=/home/stain/ro-index-paper/code/data-gathering/tools/scrapy-meta.py:/JwkuUA/scrapy-meta.py:ro \
+    --workdir=/JwkuUA \
+    --read-only=true \
+    --log-driver=none \
+    --user=1000:1000 \
+    --rm \
+    --env=TMPDIR=/tmp \
+    --env=HOME=/JwkuUA \
+    --cidfile=/tmp/s8nn2w13/20190910092044-768946.cid \
+    aciobanu/scrapy \
+    scrapy \
+    runspider \
+    -aurl=https://zenodo.org/record/1312652 \
+    scrapy-meta.py > /tmp/b_rehyar/links.txt
+[2019-09-10T09:20:44,769Z] research_obj set but one of process_run_id or prov_obj is missing from runtimeContext: <cwltool.context.RuntimeContext object at 0x7fd4a2034898>
+[2019-09-10T09:20:44,946Z] [step fetch-meta] start
+[2019-09-10T09:20:45,060Z] [job fetch-meta_7] /tmp/r_gthcdx$ docker \
+    run \
+    -i \
+    --volume=/tmp/r_gthcdx:/JwkuUA:rw \
+    --volume=/tmp/pvqbxw5e:/tmp:rw \
+    --volume=/home/stain/ro-index-paper/code/data-gathering/tools/scrapy-meta.py:/JwkuUA/scrapy-meta.py:ro \
+    --workdir=/JwkuUA \
+    --read-only=true \
+    --log-driver=none \
+    --user=1000:1000 \
+    --rm \
+    --env=TMPDIR=/tmp \
+    --env=HOME=/JwkuUA \
+    --cidfile=/tmp/8ls24qq5/20190910092045-060412.cid \
+    aciobanu/scrapy \
+    scrapy \
+    runspider \
+    -aurl=https://zenodo.org/record/3334688 \
+    scrapy-meta.py > /tmp/r_gthcdx/links.txt
+[2019-09-10T09:20:45,061Z] research_obj set but one of process_run_id or prov_obj is missing from runtimeContext: <cwltool.context.RuntimeContext object at 0x7fd4a2034898>
+[2019-09-10T09:20:45,163Z] [step fetch-meta] start
+[2019-09-10T09:20:45,391Z] [job fetch-meta_8] /tmp/hiwqzhda$ docker \
+    run \
+    -i \
+    --volume=/tmp/hiwqzhda:/JwkuUA:rw \
+    --volume=/tmp/6_8o06av:/tmp:rw \
+    --volume=/home/stain/ro-index-paper/code/data-gathering/tools/scrapy-meta.py:/JwkuUA/scrapy-meta.py:ro \
+    --workdir=/JwkuUA \
+    --read-only=true \
+    --log-driver=none \
+    --user=1000:1000 \
+    --rm \
+    --env=TMPDIR=/tmp \
+    --env=HOME=/JwkuUA \
+    --cidfile=/tmp/dkf6mczr/20190910092045-390914.cid \
+    aciobanu/scrapy \
+    scrapy \
+    runspider \
+    -aurl=https://zenodo.org/record/1442453 \
+    scrapy-meta.py > /tmp/hiwqzhda/links.txt
+[2019-09-10T09:20:45,395Z] [step fetch-meta] start
+[2019-09-10T09:20:45,396Z] research_obj set but one of process_run_id or prov_obj is missing from runtimeContext: <cwltool.context.RuntimeContext object at 0x7fd4a2034898>
+[2019-09-10T09:20:45,549Z] [step fetch-meta] start
+[2019-09-10T09:20:45,707Z] [step fetch-meta] start
+[2019-09-10T09:20:45,786Z] [step fetch-meta] start
+[2019-09-10T09:20:46,030Z] [step fetch-meta] start
+[2019-09-10T09:20:46,232Z] [step fetch-meta] start
+[2019-09-10T09:20:46,366Z] [step fetch-meta] start
+[2019-09-10T09:20:46,512Z] [step fetch-meta] start
+[2019-09-10T09:20:46,716Z] [step fetch-meta] start
+[2019-09-10T09:20:46,963Z] [step fetch-meta] start
+[2019-09-10T09:20:47,020Z] [step fetch-meta] start
+[2019-09-10T09:20:47,111Z] [step fetch-meta] start
+[2019-09-10T09:20:47,119Z] [step fetch-meta] start
+[2019-09-10T09:20:47,128Z] [step fetch-meta] start
+[2019-09-10T09:20:47,136Z] [step fetch-meta] start
+[2019-09-10T09:20:47,145Z] [step fetch-meta] start
+[2019-09-10T09:20:47,153Z] [step fetch-meta] start
+[2019-09-10T09:20:47,252Z] [step fetch-meta] start
+[2019-09-10T09:20:47,260Z] [step fetch-meta] start
+[2019-09-10T09:20:47,319Z] [step fetch-meta] start
+[2019-09-10T09:20:47,327Z] [step fetch-meta] start
+[2019-09-10T09:20:47,337Z] [step fetch-meta] start
+[2019-09-10T09:20:47,345Z] [step fetch-meta] start
+[2019-09-10T09:20:47,354Z] [step fetch-meta] start
+[2019-09-10T09:20:47,362Z] [step fetch-meta] start
+[2019-09-10T09:20:47,371Z] [step fetch-meta] start
+[2019-09-10T09:20:47,499Z] [step fetch-meta] start
+[2019-09-10T09:20:47,508Z] [step fetch-meta] start
+[2019-09-10T09:20:47,518Z] [step fetch-meta] start
+[2019-09-10T09:20:47,527Z] [step fetch-meta] start
+[2019-09-10T09:20:47,536Z] [step fetch-meta] start
+[2019-09-10T09:20:47,544Z] [step fetch-meta] start
+[2019-09-10T09:20:47,553Z] [step fetch-meta] start
+[2019-09-10T09:20:47,562Z] [step fetch-meta] start
+[2019-09-10T09:20:47,570Z] [step fetch-meta] start
+[2019-09-10T09:20:47,680Z] [step fetch-meta] start
+[2019-09-10T09:20:47,689Z] [step fetch-meta] start
+[2019-09-10T09:20:47,769Z] [step fetch-meta] start
+[2019-09-10T09:20:47,843Z] [step fetch-meta] start
+[2019-09-10T09:20:47,851Z] [step fetch-meta] start
+[2019-09-10T09:20:47,883Z] [step fetch-meta] start
+[2019-09-10T09:20:47,892Z] [step fetch-meta] start
+[2019-09-10T09:20:47,901Z] [step fetch-meta] start
+[2019-09-10T09:20:47,990Z] [step fetch-meta] start
+[2019-09-10T09:20:47,998Z] [step fetch-meta] start
+[2019-09-10T09:20:48,007Z] [step fetch-meta] start
+[2019-09-10T09:20:48,016Z] [step fetch-meta] start
+[2019-09-10T09:20:48,025Z] [step fetch-meta] start
+[2019-09-10T09:20:48,034Z] [step fetch-meta] start
+[2019-09-10T09:20:48,043Z] [step fetch-meta] start
+[2019-09-10T09:20:48,053Z] [step fetch-meta] start
+[2019-09-10T09:20:48,062Z] [step fetch-meta] start
+[2019-09-10T09:20:48,071Z] [step fetch-meta] start
+[2019-09-10T09:20:48,080Z] [step fetch-meta] start
+[2019-09-10T09:20:48,089Z] [step fetch-meta] start
+[2019-09-10T09:20:48,097Z] [step fetch-meta] start
+[2019-09-10T09:20:48,106Z] [step fetch-meta] start
+[2019-09-10T09:20:48,115Z] [step fetch-meta] start
+[2019-09-10T09:20:48,124Z] [step fetch-meta] start
+[2019-09-10T09:20:48,133Z] [step fetch-meta] start
+[2019-09-10T09:20:48,143Z] [step fetch-meta] start
+[2019-09-10T09:21:05,544Z] [job fetch-meta] Max memory used: 0MiB
+[2019-09-10T09:21:05,551Z] [job fetch-meta] completed success
+[2019-09-10T09:21:05,563Z] [job fetch-meta_9] /tmp/hk0zxym1$ docker \
+    run \
+    -i \
+    --volume=/tmp/hk0zxym1:/JwkuUA:rw \
+    --volume=/tmp/7ztx_mnz:/tmp:rw \
+    --volume=/home/stain/ro-index-paper/code/data-gathering/tools/scrapy-meta.py:/JwkuUA/scrapy-meta.py:ro \
+    --workdir=/JwkuUA \
+    --read-only=true \
+    --log-driver=none \
+    --user=1000:1000 \
+    --rm \
+    --env=TMPDIR=/tmp \
+    --env=HOME=/JwkuUA \
+    --cidfile=/tmp/6qw99nhz/20190910092105-563462.cid \
+    aciobanu/scrapy \
+    scrapy \
+    runspider \
+    -aurl=https://zenodo.org/record/1484442 \
+    scrapy-meta.py > /tmp/hk0zxym1/links.txt
+[2019-09-10T09:21:05,564Z] research_obj set but one of process_run_id or prov_obj is missing from runtimeContext: <cwltool.context.RuntimeContext object at 0x7fd4a2034898>
+[2019-09-10T09:21:06,913Z] [job fetch-meta_3] Max memory used: 0MiB
+[2019-09-10T09:21:06,917Z] [job fetch-meta_3] completed success
+[2019-09-10T09:21:06,924Z] [job fetch-meta_10] /tmp/psq_jcrm$ docker \
+    run \
+    -i \
+    --volume=/tmp/psq_jcrm:/JwkuUA:rw \
+    --volume=/tmp/0317dvxv:/tmp:rw \
+    --volume=/home/stain/ro-index-paper/code/data-gathering/tools/scrapy-meta.py:/JwkuUA/scrapy-meta.py:ro \
+    --workdir=/JwkuUA \
+    --read-only=true \
+    --log-driver=none \
+    --user=1000:1000 \
+    --rm \
+    --env=TMPDIR=/tmp \
+    --env=HOME=/JwkuUA \
+    --cidfile=/tmp/8wvebbre/20190910092106-924727.cid \
+    aciobanu/scrapy \
+    scrapy \
+    runspider \
+    -aurl=https://zenodo.org/record/3268809 \
+    scrapy-meta.py > /tmp/psq_jcrm/links.txt
+[2019-09-10T09:21:06,925Z] research_obj set but one of process_run_id or prov_obj is missing from runtimeContext: <cwltool.context.RuntimeContext object at 0x7fd4a2034898>
+[2019-09-10T09:21:07,224Z] [job fetch-meta_4] Max memory used: 0MiB
+[2019-09-10T09:21:07,228Z] [job fetch-meta_4] completed success
+[2019-09-10T09:21:07,244Z] [job fetch-meta_11] /tmp/m774585q$ docker \
+    run \
+    -i \
+    --volume=/tmp/m774585q:/JwkuUA:rw \
+    --volume=/tmp/iduac3b3:/tmp:rw \
+    --volume=/home/stain/ro-index-paper/code/data-gathering/tools/scrapy-meta.py:/JwkuUA/scrapy-meta.py:ro \
+    --workdir=/JwkuUA \
+    --read-only=true \
+    --log-driver=none \
+    --user=1000:1000 \
+    --rm \
+    --env=TMPDIR=/tmp \
+    --env=HOME=/JwkuUA \
+    --cidfile=/tmp/436u4wow/20190910092107-243810.cid \
+    aciobanu/scrapy \
+    scrapy \
+    runspider \
+    -aurl=https://zenodo.org/record/1308997 \
+    scrapy-meta.py > /tmp/m774585q/links.txt
+[2019-09-10T09:21:07,244Z] research_obj set but one of process_run_id or prov_obj is missing from runtimeContext: <cwltool.context.RuntimeContext object at 0x7fd4a2034898>
+[2019-09-10T09:21:09,457Z] [job fetch-meta_2] Max memory used: 0MiB
+[2019-09-10T09:21:09,462Z] [job fetch-meta_2] completed success
+[2019-09-10T09:21:09,475Z] [job fetch-meta_12] /tmp/ikcjdyb6$ docker \
+    run \
+    -i \
+    --volume=/tmp/ikcjdyb6:/JwkuUA:rw \
+    --volume=/tmp/9andnxo4:/tmp:rw \
+    --volume=/home/stain/ro-index-paper/code/data-gathering/tools/scrapy-meta.py:/JwkuUA/scrapy-meta.py:ro \
+    --workdir=/JwkuUA \
+    --read-only=true \
+    --log-driver=none \
+    --user=1000:1000 \
+    --rm \
+    --env=TMPDIR=/tmp \
+    --env=HOME=/JwkuUA \
+    --cidfile=/tmp/8lb1476r/20190910092109-474695.cid \
+    aciobanu/scrapy \
+    scrapy \
+    runspider \
+    -aurl=https://zenodo.org/record/1309962 \
+    scrapy-meta.py > /tmp/ikcjdyb6/links.txt
+[2019-09-10T09:21:09,475Z] research_obj set but one of process_run_id or prov_obj is missing from runtimeContext: <cwltool.context.RuntimeContext object at 0x7fd4a2034898>
+[2019-09-10T09:21:09,895Z] [job fetch-meta_5] Max memory used: 0MiB
+[2019-09-10T09:21:09,900Z] [job fetch-meta_5] completed success
+[2019-09-10T09:21:09,912Z] [job fetch-meta_13] /tmp/hnfh63bx$ docker \
+    run \
+    -i \
+    --volume=/tmp/hnfh63bx:/JwkuUA:rw \
+    --volume=/tmp/ts4gbdcb:/tmp:rw \
+    --volume=/home/stain/ro-index-paper/code/data-gathering/tools/scrapy-meta.py:/JwkuUA/scrapy-meta.py:ro \
+    --workdir=/JwkuUA \
+    --read-only=true \
+    --log-driver=none \
+    --user=1000:1000 \
+    --rm \
+    --env=TMPDIR=/tmp \
+    --env=HOME=/JwkuUA \
+    --cidfile=/tmp/1367iz0s/20190910092109-912373.cid \
+    aciobanu/scrapy \
+    scrapy \
+    runspider \
+    -aurl=https://zenodo.org/record/1312623 \
+    scrapy-meta.py > /tmp/hnfh63bx/links.txt
+[2019-09-10T09:21:09,913Z] research_obj set but one of process_run_id or prov_obj is missing from runtimeContext: <cwltool.context.RuntimeContext object at 0x7fd4a2034898>
+[2019-09-10T09:21:12,441Z] [job fetch-meta_6] Max memory used: 0MiB
+[2019-09-10T09:21:12,446Z] [job fetch-meta_6] completed success
+[2019-09-10T09:21:12,460Z] [job fetch-meta_14] /tmp/tjp3g2qt$ docker \
+    run \
+    -i \
+    --volume=/tmp/tjp3g2qt:/JwkuUA:rw \
+    --volume=/tmp/ndr5til_:/tmp:rw \
+    --volume=/home/stain/ro-index-paper/code/data-gathering/tools/scrapy-meta.py:/JwkuUA/scrapy-meta.py:ro \
+    --workdir=/JwkuUA \
+    --read-only=true \
+    --log-driver=none \
+    --user=1000:1000 \
+    --rm \
+    --env=TMPDIR=/tmp \
+    --env=HOME=/JwkuUA \
+    --cidfile=/tmp/_wr6iazt/20190910092112-460167.cid \
+    aciobanu/scrapy \
+    scrapy \
+    runspider \
+    -aurl=https://zenodo.org/record/1421066 \
+    scrapy-meta.py > /tmp/tjp3g2qt/links.txt
+[2019-09-10T09:21:12,461Z] research_obj set but one of process_run_id or prov_obj is missing from runtimeContext: <cwltool.context.RuntimeContext object at 0x7fd4a2034898>
+[2019-09-10T09:21:12,707Z] [job fetch-meta_7] Max memory used: 0MiB
+[2019-09-10T09:21:12,711Z] [job fetch-meta_7] completed success
+[2019-09-10T09:21:12,724Z] [job fetch-meta_15] /tmp/2qy9bhwf$ docker \
+    run \
+    -i \
+    --volume=/tmp/2qy9bhwf:/JwkuUA:rw \
+    --volume=/tmp/rh7sc9g1:/tmp:rw \
+    --volume=/home/stain/ro-index-paper/code/data-gathering/tools/scrapy-meta.py:/JwkuUA/scrapy-meta.py:ro \
+    --workdir=/JwkuUA \
+    --read-only=true \
+    --log-driver=none \
+    --user=1000:1000 \
+    --rm \
+    --env=TMPDIR=/tmp \
+    --env=HOME=/JwkuUA \
+    --cidfile=/tmp/mxb8x8_7/20190910092112-724238.cid \
+    aciobanu/scrapy \
+    scrapy \
+    runspider \
+    -aurl=https://zenodo.org/record/1323831 \
+    scrapy-meta.py > /tmp/2qy9bhwf/links.txt
+[2019-09-10T09:21:12,725Z] research_obj set but one of process_run_id or prov_obj is missing from runtimeContext: <cwltool.context.RuntimeContext object at 0x7fd4a2034898>
+[2019-09-10T09:21:13,212Z] [job fetch-meta_8] Max memory used: 0MiB
+[2019-09-10T09:21:13,216Z] [job fetch-meta_8] completed success
+[2019-09-10T09:21:13,231Z] [job fetch-meta_16] /tmp/66fj1ul2$ docker \
+    run \
+    -i \
+    --volume=/tmp/66fj1ul2:/JwkuUA:rw \
+    --volume=/tmp/jfqznjyj:/tmp:rw \
+    --volume=/home/stain/ro-index-paper/code/data-gathering/tools/scrapy-meta.py:/JwkuUA/scrapy-meta.py:ro \
+    --workdir=/JwkuUA \
+    --read-only=true \
+    --log-driver=none \
+    --user=1000:1000 \
+    --rm \
+    --env=TMPDIR=/tmp \
+    --env=HOME=/JwkuUA \
+    --cidfile=/tmp/3iw8bjt0/20190910092113-230651.cid \
+    aciobanu/scrapy \
+    scrapy \
+    runspider \
+    -aurl=https://zenodo.org/record/1484403 \
+    scrapy-meta.py > /tmp/66fj1ul2/links.txt
+[2019-09-10T09:21:13,231Z] research_obj set but one of process_run_id or prov_obj is missing from runtimeContext: <cwltool.context.RuntimeContext object at 0x7fd4a2034898>
+[2019-09-10T09:21:23,596Z] [job fetch-meta_9] Max memory used: 0MiB
+[2019-09-10T09:21:23,604Z] [job fetch-meta_9] completed success
+[2019-09-10T09:21:23,616Z] [job fetch-meta_17] /tmp/2ck_0coo$ docker \
+    run \
+    -i \
+    --volume=/tmp/2ck_0coo:/JwkuUA:rw \
+    --volume=/tmp/785udrsx:/tmp:rw \
+    --volume=/home/stain/ro-index-paper/code/data-gathering/tools/scrapy-meta.py:/JwkuUA/scrapy-meta.py:ro \
+    --workdir=/JwkuUA \
+    --read-only=true \
+    --log-driver=none \
+    --user=1000:1000 \
+    --rm \
+    --env=TMPDIR=/tmp \
+    --env=HOME=/JwkuUA \
+    --cidfile=/tmp/h7swwgi1/20190910092123-616555.cid \
+    aciobanu/scrapy \
+    scrapy \
+    runspider \
+    -aurl=https://zenodo.org/record/1472385 \
+    scrapy-meta.py > /tmp/2ck_0coo/links.txt
+[2019-09-10T09:21:23,617Z] research_obj set but one of process_run_id or prov_obj is missing from runtimeContext: <cwltool.context.RuntimeContext object at 0x7fd4a2034898>
+[2019-09-10T09:21:23,696Z] [job fetch-meta_10] Max memory used: 0MiB
+[2019-09-10T09:21:23,702Z] [job fetch-meta_10] completed success
+[2019-09-10T09:21:23,718Z] [job fetch-meta_18] /tmp/f3byum3q$ docker \
+    run \
+    -i \
+    --volume=/tmp/f3byum3q:/JwkuUA:rw \
+    --volume=/tmp/9i90ko8p:/tmp:rw \
+    --volume=/home/stain/ro-index-paper/code/data-gathering/tools/scrapy-meta.py:/JwkuUA/scrapy-meta.py:ro \
+    --workdir=/JwkuUA \
+    --read-only=true \
+    --log-driver=none \
+    --user=1000:1000 \
+    --rm \
+    --env=TMPDIR=/tmp \
+    --env=HOME=/JwkuUA \
+    --cidfile=/tmp/h_q08hwu/20190910092123-718137.cid \
+    aciobanu/scrapy \
+    scrapy \
+    runspider \
+    -aurl=https://zenodo.org/record/1313218 \
+    scrapy-meta.py > /tmp/f3byum3q/links.txt
+[2019-09-10T09:21:23,718Z] research_obj set but one of process_run_id or prov_obj is missing from runtimeContext: <cwltool.context.RuntimeContext object at 0x7fd4a2034898>
+[2019-09-10T09:21:25,477Z] [job fetch-meta_11] Max memory used: 0MiB
+[2019-09-10T09:21:25,482Z] [job fetch-meta_11] completed success
+[2019-09-10T09:21:25,495Z] [job fetch-meta_19] /tmp/rr9s40yu$ docker \
+    run \
+    -i \
+    --volume=/tmp/rr9s40yu:/JwkuUA:rw \
+    --volume=/tmp/aq8awtif:/tmp:rw \
+    --volume=/home/stain/ro-index-paper/code/data-gathering/tools/scrapy-meta.py:/JwkuUA/scrapy-meta.py:ro \
+    --workdir=/JwkuUA \
+    --read-only=true \
+    --log-driver=none \
+    --user=1000:1000 \
+    --rm \
+    --env=TMPDIR=/tmp \
+    --env=HOME=/JwkuUA \
+    --cidfile=/tmp/j6nuiust/20190910092125-495083.cid \
+    aciobanu/scrapy \
+    scrapy \
+    runspider \
+    -aurl=https://zenodo.org/record/3357806 \
+    scrapy-meta.py > /tmp/rr9s40yu/links.txt
+[2019-09-10T09:21:25,496Z] research_obj set but one of process_run_id or prov_obj is missing from runtimeContext: <cwltool.context.RuntimeContext object at 0x7fd4a2034898>
+[2019-09-10T09:21:26,979Z] [job fetch-meta_12] Max memory used: 0MiB
+[2019-09-10T09:21:26,983Z] [job fetch-meta_12] completed success
+[2019-09-10T09:21:26,996Z] [job fetch-meta_20] /tmp/zir2fp5d$ docker \
+    run \
+    -i \
+    --volume=/tmp/zir2fp5d:/JwkuUA:rw \
+    --volume=/tmp/zgwlzess:/tmp:rw \
+    --volume=/home/stain/ro-index-paper/code/data-gathering/tools/scrapy-meta.py:/JwkuUA/scrapy-meta.py:ro \
+    --workdir=/JwkuUA \
+    --read-only=true \
+    --log-driver=none \
+    --user=1000:1000 \
+    --rm \
+    --env=TMPDIR=/tmp \
+    --env=HOME=/JwkuUA \
+    --cidfile=/tmp/_5xcnfmx/20190910092126-996286.cid \
+    aciobanu/scrapy \
+    scrapy \
+    runspider \
+    -aurl=https://zenodo.org/record/3270620 \
+    scrapy-meta.py > /tmp/zir2fp5d/links.txt
+[2019-09-10T09:21:26,997Z] research_obj set but one of process_run_id or prov_obj is missing from runtimeContext: <cwltool.context.RuntimeContext object at 0x7fd4a2034898>
+[2019-09-10T09:21:27,325Z] [job fetch-meta_13] Max memory used: 0MiB
+[2019-09-10T09:21:27,329Z] [job fetch-meta_13] completed success
+[2019-09-10T09:21:27,345Z] [job fetch-meta_21] /tmp/xi5kntiv$ docker \
+    run \
+    -i \
+    --volume=/tmp/xi5kntiv:/JwkuUA:rw \
+    --volume=/tmp/1mhdmysx:/tmp:rw \
+    --volume=/home/stain/ro-index-paper/code/data-gathering/tools/scrapy-meta.py:/JwkuUA/scrapy-meta.py:ro \
+    --workdir=/JwkuUA \
+    --read-only=true \
+    --log-driver=none \
+    --user=1000:1000 \
+    --rm \
+    --env=TMPDIR=/tmp \
+    --env=HOME=/JwkuUA \
+    --cidfile=/tmp/urhsd0ku/20190910092127-344571.cid \
+    aciobanu/scrapy \
+    scrapy \
+    runspider \
+    -aurl=https://zenodo.org/record/1410052 \
+    scrapy-meta.py > /tmp/xi5kntiv/links.txt
+[2019-09-10T09:21:27,345Z] research_obj set but one of process_run_id or prov_obj is missing from runtimeContext: <cwltool.context.RuntimeContext object at 0x7fd4a2034898>
+[2019-09-10T09:21:28,604Z] [job fetch-meta_15] Max memory used: 0MiB
+[2019-09-10T09:21:28,608Z] [job fetch-meta_15] completed success
+[2019-09-10T09:21:28,621Z] [job fetch-meta_22] /tmp/8chuvbt1$ docker \
+    run \
+    -i \
+    --volume=/tmp/8chuvbt1:/JwkuUA:rw \
+    --volume=/tmp/gxob9x5k:/tmp:rw \
+    --volume=/home/stain/ro-index-paper/code/data-gathering/tools/scrapy-meta.py:/JwkuUA/scrapy-meta.py:ro \
+    --workdir=/JwkuUA \
+    --read-only=true \
+    --log-driver=none \
+    --user=1000:1000 \
+    --rm \
+    --env=TMPDIR=/tmp \
+    --env=HOME=/JwkuUA \
+    --cidfile=/tmp/180o_bih/20190910092128-621200.cid \
+    aciobanu/scrapy \
+    scrapy \
+    runspider \
+    -aurl=https://zenodo.org/record/1484496 \
+    scrapy-meta.py > /tmp/8chuvbt1/links.txt
+[2019-09-10T09:21:28,622Z] research_obj set but one of process_run_id or prov_obj is missing from runtimeContext: <cwltool.context.RuntimeContext object at 0x7fd4a2034898>
+[2019-09-10T09:21:28,874Z] [job fetch-meta_14] Max memory used: 0MiB
+[2019-09-10T09:21:28,878Z] [job fetch-meta_14] completed success
+[2019-09-10T09:21:28,891Z] [job fetch-meta_23] /tmp/1lbvmxyx$ docker \
+    run \
+    -i \
+    --volume=/tmp/1lbvmxyx:/JwkuUA:rw \
+    --volume=/tmp/0gabui9x:/tmp:rw \
+    --volume=/home/stain/ro-index-paper/code/data-gathering/tools/scrapy-meta.py:/JwkuUA/scrapy-meta.py:ro \
+    --workdir=/JwkuUA \
+    --read-only=true \
+    --log-driver=none \
+    --user=1000:1000 \
+    --rm \
+    --env=TMPDIR=/tmp \
+    --env=HOME=/JwkuUA \
+    --cidfile=/tmp/e6ws9c6p/20190910092128-890928.cid \
+    aciobanu/scrapy \
+    scrapy \
+    runspider \
+    -aurl=https://zenodo.org/record/3343031 \
+    scrapy-meta.py > /tmp/1lbvmxyx/links.txt
+[2019-09-10T09:21:28,891Z] research_obj set but one of process_run_id or prov_obj is missing from runtimeContext: <cwltool.context.RuntimeContext object at 0x7fd4a2034898>
+[2019-09-10T09:21:30,123Z] [job fetch-meta_16] Max memory used: 0MiB
+[2019-09-10T09:21:30,128Z] [job fetch-meta_16] completed success
+[2019-09-10T09:21:30,140Z] [job fetch-meta_24] /tmp/vhl3m274$ docker \
+    run \
+    -i \
+    --volume=/tmp/vhl3m274:/JwkuUA:rw \
+    --volume=/tmp/a759jd71:/tmp:rw \
+    --volume=/home/stain/ro-index-paper/code/data-gathering/tools/scrapy-meta.py:/JwkuUA/scrapy-meta.py:ro \
+    --workdir=/JwkuUA \
+    --read-only=true \
+    --log-driver=none \
+    --user=1000:1000 \
+    --rm \
+    --env=TMPDIR=/tmp \
+    --env=HOME=/JwkuUA \
+    --cidfile=/tmp/pbu_5m92/20190910092130-140543.cid \
+    aciobanu/scrapy \
+    scrapy \
+    runspider \
+    -aurl=https://zenodo.org/record/1314672 \
+    scrapy-meta.py > /tmp/vhl3m274/links.txt
+[2019-09-10T09:21:30,141Z] research_obj set but one of process_run_id or prov_obj is missing from runtimeContext: <cwltool.context.RuntimeContext object at 0x7fd4a2034898>
+[2019-09-10T09:21:41,993Z] [job fetch-meta_17] Max memory used: 0MiB
+[2019-09-10T09:21:41,997Z] [job fetch-meta_17] completed success
+[2019-09-10T09:21:42,010Z] [job fetch-meta_25] /tmp/sxv0pp8j$ docker \
+    run \
+    -i \
+    --volume=/tmp/sxv0pp8j:/JwkuUA:rw \
+    --volume=/tmp/luy2vwf3:/tmp:rw \
+    --volume=/home/stain/ro-index-paper/code/data-gathering/tools/scrapy-meta.py:/JwkuUA/scrapy-meta.py:ro \
+    --workdir=/JwkuUA \
+    --read-only=true \
+    --log-driver=none \
+    --user=1000:1000 \
+    --rm \
+    --env=TMPDIR=/tmp \
+    --env=HOME=/JwkuUA \
+    --cidfile=/tmp/x9wxpw8o/20190910092142-010512.cid \
+    aciobanu/scrapy \
+    scrapy \
+    runspider \
+    -aurl=https://zenodo.org/record/3362412 \
+    scrapy-meta.py > /tmp/sxv0pp8j/links.txt
+[2019-09-10T09:21:42,011Z] research_obj set but one of process_run_id or prov_obj is missing from runtimeContext: <cwltool.context.RuntimeContext object at 0x7fd4a2034898>
+[2019-09-10T09:21:42,075Z] [job fetch-meta_18] Max memory used: 0MiB
+[2019-09-10T09:21:42,083Z] [job fetch-meta_18] completed success
+[2019-09-10T09:21:42,096Z] [job fetch-meta_26] /tmp/ydbylcqo$ docker \
+    run \
+    -i \
+    --volume=/tmp/ydbylcqo:/JwkuUA:rw \
+    --volume=/tmp/gpxwmcdd:/tmp:rw \
+    --volume=/home/stain/ro-index-paper/code/data-gathering/tools/scrapy-meta.py:/JwkuUA/scrapy-meta.py:ro \
+    --workdir=/JwkuUA \
+    --read-only=true \
+    --log-driver=none \
+    --user=1000:1000 \
+    --rm \
+    --env=TMPDIR=/tmp \
+    --env=HOME=/JwkuUA \
+    --cidfile=/tmp/ba8hu_j7/20190910092142-096129.cid \
+    aciobanu/scrapy \
+    scrapy \
+    runspider \
+    -aurl=https://zenodo.org/record/1311933 \
+    scrapy-meta.py > /tmp/ydbylcqo/links.txt
+[2019-09-10T09:21:42,097Z] research_obj set but one of process_run_id or prov_obj is missing from runtimeContext: <cwltool.context.RuntimeContext object at 0x7fd4a2034898>
+[2019-09-10T09:21:43,886Z] [job fetch-meta_20] Max memory used: 0MiB
+[2019-09-10T09:21:43,890Z] [job fetch-meta_20] completed success
+[2019-09-10T09:21:43,904Z] [job fetch-meta_27] /tmp/4n7ynvhn$ docker \
+    run \
+    -i \
+    --volume=/tmp/4n7ynvhn:/JwkuUA:rw \
+    --volume=/tmp/yssng44r:/tmp:rw \
+    --volume=/home/stain/ro-index-paper/code/data-gathering/tools/scrapy-meta.py:/JwkuUA/scrapy-meta.py:ro \
+    --workdir=/JwkuUA \
+    --read-only=true \
+    --log-driver=none \
+    --user=1000:1000 \
+    --rm \
+    --env=TMPDIR=/tmp \
+    --env=HOME=/JwkuUA \
+    --cidfile=/tmp/kp2taf1r/20190910092143-904219.cid \
+    aciobanu/scrapy \
+    scrapy \
+    runspider \
+    -aurl=https://zenodo.org/record/3380592 \
+    scrapy-meta.py > /tmp/4n7ynvhn/links.txt
+[2019-09-10T09:21:43,905Z] research_obj set but one of process_run_id or prov_obj is missing from runtimeContext: <cwltool.context.RuntimeContext object at 0x7fd4a2034898>
+[2019-09-10T09:21:44,128Z] [job fetch-meta_19] Max memory used: 0MiB
+[2019-09-10T09:21:44,132Z] [job fetch-meta_19] completed success
+[2019-09-10T09:21:44,145Z] [job fetch-meta_28] /tmp/etgp8_s_$ docker \
+    run \
+    -i \
+    --volume=/tmp/etgp8_s_:/JwkuUA:rw \
+    --volume=/tmp/b1rjiryu:/tmp:rw \
+    --volume=/home/stain/ro-index-paper/code/data-gathering/tools/scrapy-meta.py:/JwkuUA/scrapy-meta.py:ro \
+    --workdir=/JwkuUA \
+    --read-only=true \
+    --log-driver=none \
+    --user=1000:1000 \
+    --rm \
+    --env=TMPDIR=/tmp \
+    --env=HOME=/JwkuUA \
+    --cidfile=/tmp/ibvea443/20190910092144-144980.cid \
+    aciobanu/scrapy \
+    scrapy \
+    runspider \
+    -aurl=https://zenodo.org/record/3196309 \
+    scrapy-meta.py > /tmp/etgp8_s_/links.txt
+[2019-09-10T09:21:44,145Z] research_obj set but one of process_run_id or prov_obj is missing from runtimeContext: <cwltool.context.RuntimeContext object at 0x7fd4a2034898>
+[2019-09-10T09:21:46,194Z] [job fetch-meta_21] Max memory used: 0MiB
+[2019-09-10T09:21:46,199Z] [job fetch-meta_21] completed success
+[2019-09-10T09:21:46,212Z] [job fetch-meta_29] /tmp/jsxefzwx$ docker \
+    run \
+    -i \
+    --volume=/tmp/jsxefzwx:/JwkuUA:rw \
+    --volume=/tmp/ptraa496:/tmp:rw \
+    --volume=/home/stain/ro-index-paper/code/data-gathering/tools/scrapy-meta.py:/JwkuUA/scrapy-meta.py:ro \
+    --workdir=/JwkuUA \
+    --read-only=true \
+    --log-driver=none \
+    --user=1000:1000 \
+    --rm \
+    --env=TMPDIR=/tmp \
+    --env=HOME=/JwkuUA \
+    --cidfile=/tmp/5d6frdpk/20190910092146-212013.cid \
+    aciobanu/scrapy \
+    scrapy \
+    runspider \
+    -aurl=https://zenodo.org/record/3336124 \
+    scrapy-meta.py > /tmp/jsxefzwx/links.txt
+[2019-09-10T09:21:46,212Z] research_obj set but one of process_run_id or prov_obj is missing from runtimeContext: <cwltool.context.RuntimeContext object at 0x7fd4a2034898>
+[2019-09-10T09:21:46,795Z] [job fetch-meta_22] Max memory used: 0MiB
+[2019-09-10T09:21:46,800Z] [job fetch-meta_22] completed success
+[2019-09-10T09:21:46,813Z] [job fetch-meta_30] /tmp/df_hxqcq$ docker \
+    run \
+    -i \
+    --volume=/tmp/df_hxqcq:/JwkuUA:rw \
+    --volume=/tmp/08l_8lmm:/tmp:rw \
+    --volume=/home/stain/ro-index-paper/code/data-gathering/tools/scrapy-meta.py:/JwkuUA/scrapy-meta.py:ro \
+    --workdir=/JwkuUA \
+    --read-only=true \
+    --log-driver=none \
+    --user=1000:1000 \
+    --rm \
+    --env=TMPDIR=/tmp \
+    --env=HOME=/JwkuUA \
+    --cidfile=/tmp/ae3jaczz/20190910092146-812937.cid \
+    aciobanu/scrapy \
+    scrapy \
+    runspider \
+    -aurl=https://zenodo.org/record/1208478 \
+    scrapy-meta.py > /tmp/df_hxqcq/links.txt
+[2019-09-10T09:21:46,813Z] research_obj set but one of process_run_id or prov_obj is missing from runtimeContext: <cwltool.context.RuntimeContext object at 0x7fd4a2034898>
+[2019-09-10T09:21:47,801Z] [job fetch-meta_23] Max memory used: 0MiB
+[2019-09-10T09:21:47,805Z] [job fetch-meta_23] completed success
+[2019-09-10T09:21:47,818Z] [job fetch-meta_31] /tmp/we3b3lij$ docker \
+    run \
+    -i \
+    --volume=/tmp/we3b3lij:/JwkuUA:rw \
+    --volume=/tmp/u51v839i:/tmp:rw \
+    --volume=/home/stain/ro-index-paper/code/data-gathering/tools/scrapy-meta.py:/JwkuUA/scrapy-meta.py:ro \
+    --workdir=/JwkuUA \
+    --read-only=true \
+    --log-driver=none \
+    --user=1000:1000 \
+    --rm \
+    --env=TMPDIR=/tmp \
+    --env=HOME=/JwkuUA \
+    --cidfile=/tmp/7vf99d9f/20190910092147-818014.cid \
+    aciobanu/scrapy \
+    scrapy \
+    runspider \
+    -aurl=https://zenodo.org/record/3336148 \
+    scrapy-meta.py > /tmp/we3b3lij/links.txt
+[2019-09-10T09:21:47,818Z] research_obj set but one of process_run_id or prov_obj is missing from runtimeContext: <cwltool.context.RuntimeContext object at 0x7fd4a2034898>
+[2019-09-10T09:21:49,092Z] [job fetch-meta_24] Max memory used: 0MiB
+[2019-09-10T09:21:49,140Z] [job fetch-meta_24] completed success
+[2019-09-10T09:21:49,154Z] [job fetch-meta_32] /tmp/nrfh3j06$ docker \
+    run \
+    -i \
+    --volume=/tmp/nrfh3j06:/JwkuUA:rw \
+    --volume=/tmp/dy3xfndk:/tmp:rw \
+    --volume=/home/stain/ro-index-paper/code/data-gathering/tools/scrapy-meta.py:/JwkuUA/scrapy-meta.py:ro \
+    --workdir=/JwkuUA \
+    --read-only=true \
+    --log-driver=none \
+    --user=1000:1000 \
+    --rm \
+    --env=TMPDIR=/tmp \
+    --env=HOME=/JwkuUA \
+    --cidfile=/tmp/gsab6uhn/20190910092149-154168.cid \
+    aciobanu/scrapy \
+    scrapy \
+    runspider \
+    -aurl=https://zenodo.org/record/3338176 \
+    scrapy-meta.py > /tmp/nrfh3j06/links.txt
+[2019-09-10T09:21:49,155Z] research_obj set but one of process_run_id or prov_obj is missing from runtimeContext: <cwltool.context.RuntimeContext object at 0x7fd4a2034898>
+[2019-09-10T09:21:58,246Z] [job fetch-meta_26] Max memory used: 0MiB
+[2019-09-10T09:21:58,250Z] [job fetch-meta_26] completed success
+[2019-09-10T09:21:58,264Z] [job fetch-meta_33] /tmp/ny_avc9b$ docker \
+    run \
+    -i \
+    --volume=/tmp/ny_avc9b:/JwkuUA:rw \
+    --volume=/tmp/jew5ji4i:/tmp:rw \
+    --volume=/home/stain/ro-index-paper/code/data-gathering/tools/scrapy-meta.py:/JwkuUA/scrapy-meta.py:ro \
+    --workdir=/JwkuUA \
+    --read-only=true \
+    --log-driver=none \
+    --user=1000:1000 \
+    --rm \
+    --env=TMPDIR=/tmp \
+    --env=HOME=/JwkuUA \
+    --cidfile=/tmp/1v25t2t2/20190910092158-263831.cid \
+    aciobanu/scrapy \
+    scrapy \
+    runspider \
+    -aurl=https://zenodo.org/record/1484502 \
+    scrapy-meta.py > /tmp/ny_avc9b/links.txt
+[2019-09-10T09:21:58,264Z] research_obj set but one of process_run_id or prov_obj is missing from runtimeContext: <cwltool.context.RuntimeContext object at 0x7fd4a2034898>
+[2019-09-10T09:21:58,339Z] [job fetch-meta_25] Max memory used: 0MiB
+[2019-09-10T09:21:58,347Z] [job fetch-meta_25] completed success
+[2019-09-10T09:21:58,362Z] [job fetch-meta_34] /tmp/87dwsgjo$ docker \
+    run \
+    -i \
+    --volume=/tmp/87dwsgjo:/JwkuUA:rw \
+    --volume=/tmp/aycfhed7:/tmp:rw \
+    --volume=/home/stain/ro-index-paper/code/data-gathering/tools/scrapy-meta.py:/JwkuUA/scrapy-meta.py:ro \
+    --workdir=/JwkuUA \
+    --read-only=true \
+    --log-driver=none \
+    --user=1000:1000 \
+    --rm \
+    --env=TMPDIR=/tmp \
+    --env=HOME=/JwkuUA \
+    --cidfile=/tmp/x009btyc/20190910092158-361838.cid \
+    aciobanu/scrapy \
+    scrapy \
+    runspider \
+    -aurl=https://zenodo.org/record/1304969 \
+    scrapy-meta.py > /tmp/87dwsgjo/links.txt
+[2019-09-10T09:21:58,362Z] research_obj set but one of process_run_id or prov_obj is missing from runtimeContext: <cwltool.context.RuntimeContext object at 0x7fd4a2034898>
+[2019-09-10T09:22:00,198Z] [job fetch-meta_27] Max memory used: 0MiB
+[2019-09-10T09:22:00,202Z] [job fetch-meta_27] completed success
+[2019-09-10T09:22:00,222Z] [job fetch-meta_35] /tmp/q4xru4j6$ docker \
+    run \
+    -i \
+    --volume=/tmp/q4xru4j6:/JwkuUA:rw \
+    --volume=/tmp/k2havx82:/tmp:rw \
+    --volume=/home/stain/ro-index-paper/code/data-gathering/tools/scrapy-meta.py:/JwkuUA/scrapy-meta.py:ro \
+    --workdir=/JwkuUA \
+    --read-only=true \
+    --log-driver=none \
+    --user=1000:1000 \
+    --rm \
+    --env=TMPDIR=/tmp \
+    --env=HOME=/JwkuUA \
+    --cidfile=/tmp/rz7wo7g8/20190910092200-221878.cid \
+    aciobanu/scrapy \
+    scrapy \
+    runspider \
+    -aurl=https://zenodo.org/record/1310034 \
+    scrapy-meta.py > /tmp/q4xru4j6/links.txt
+[2019-09-10T09:22:00,223Z] research_obj set but one of process_run_id or prov_obj is missing from runtimeContext: <cwltool.context.RuntimeContext object at 0x7fd4a2034898>
+[2019-09-10T09:22:00,681Z] [job fetch-meta_28] Max memory used: 0MiB
+[2019-09-10T09:22:00,686Z] [job fetch-meta_28] completed success
+[2019-09-10T09:22:00,699Z] [job fetch-meta_36] /tmp/vqrjj_7k$ docker \
+    run \
+    -i \
+    --volume=/tmp/vqrjj_7k:/JwkuUA:rw \
+    --volume=/tmp/vbi6ou6j:/tmp:rw \
+    --volume=/home/stain/ro-index-paper/code/data-gathering/tools/scrapy-meta.py:/JwkuUA/scrapy-meta.py:ro \
+    --workdir=/JwkuUA \
+    --read-only=true \
+    --log-driver=none \
+    --user=1000:1000 \
+    --rm \
+    --env=TMPDIR=/tmp \
+    --env=HOME=/JwkuUA \
+    --cidfile=/tmp/ulcczqp1/20190910092200-698828.cid \
+    aciobanu/scrapy \
+    scrapy \
+    runspider \
+    -aurl=https://zenodo.org/record/1484286 \
+    scrapy-meta.py > /tmp/vqrjj_7k/links.txt
+[2019-09-10T09:22:00,699Z] research_obj set but one of process_run_id or prov_obj is missing from runtimeContext: <cwltool.context.RuntimeContext object at 0x7fd4a2034898>
+[2019-09-10T09:22:02,774Z] [job fetch-meta_30] Max memory used: 0MiB
+[2019-09-10T09:22:02,779Z] [job fetch-meta_30] completed success
+[2019-09-10T09:22:02,794Z] [job fetch-meta_37] /tmp/ny98kj0s$ docker \
+    run \
+    -i \
+    --volume=/tmp/ny98kj0s:/JwkuUA:rw \
+    --volume=/tmp/4busome4:/tmp:rw \
+    --volume=/home/stain/ro-index-paper/code/data-gathering/tools/scrapy-meta.py:/JwkuUA/scrapy-meta.py:ro \
+    --workdir=/JwkuUA \
+    --read-only=true \
+    --log-driver=none \
+    --user=1000:1000 \
+    --rm \
+    --env=TMPDIR=/tmp \
+    --env=HOME=/JwkuUA \
+    --cidfile=/tmp/xmbb62yk/20190910092202-794073.cid \
+    aciobanu/scrapy \
+    scrapy \
+    runspider \
+    -aurl=https://zenodo.org/record/1410238 \
+    scrapy-meta.py > /tmp/ny98kj0s/links.txt
+[2019-09-10T09:22:02,794Z] research_obj set but one of process_run_id or prov_obj is missing from runtimeContext: <cwltool.context.RuntimeContext object at 0x7fd4a2034898>
+[2019-09-10T09:22:03,016Z] [job fetch-meta_29] Max memory used: 0MiB
+[2019-09-10T09:22:03,020Z] [job fetch-meta_29] completed success
+[2019-09-10T09:22:03,033Z] [job fetch-meta_38] /tmp/2jv8yqmx$ docker \
+    run \
+    -i \
+    --volume=/tmp/2jv8yqmx:/JwkuUA:rw \
+    --volume=/tmp/1ucikvsf:/tmp:rw \
+    --volume=/home/stain/ro-index-paper/code/data-gathering/tools/scrapy-meta.py:/JwkuUA/scrapy-meta.py:ro \
+    --workdir=/JwkuUA \
+    --read-only=true \
+    --log-driver=none \
+    --user=1000:1000 \
+    --rm \
+    --env=TMPDIR=/tmp \
+    --env=HOME=/JwkuUA \
+    --cidfile=/tmp/bo0ql7ky/20190910092203-033062.cid \
+    aciobanu/scrapy \
+    scrapy \
+    runspider \
+    -aurl=https://zenodo.org/record/1473154 \
+    scrapy-meta.py > /tmp/2jv8yqmx/links.txt
+[2019-09-10T09:22:03,033Z] research_obj set but one of process_run_id or prov_obj is missing from runtimeContext: <cwltool.context.RuntimeContext object at 0x7fd4a2034898>
+[2019-09-10T09:22:04,484Z] [job fetch-meta_32] Max memory used: 0MiB
+[2019-09-10T09:22:04,488Z] [job fetch-meta_32] completed success
+[2019-09-10T09:22:04,501Z] [job fetch-meta_39] /tmp/5bs1bdvb$ docker \
+    run \
+    -i \
+    --volume=/tmp/5bs1bdvb:/JwkuUA:rw \
+    --volume=/tmp/oiuhb7p2:/tmp:rw \
+    --volume=/home/stain/ro-index-paper/code/data-gathering/tools/scrapy-meta.py:/JwkuUA/scrapy-meta.py:ro \
+    --workdir=/JwkuUA \
+    --read-only=true \
+    --log-driver=none \
+    --user=1000:1000 \
+    --rm \
+    --env=TMPDIR=/tmp \
+    --env=HOME=/JwkuUA \
+    --cidfile=/tmp/djj3b96b/20190910092204-501207.cid \
+    aciobanu/scrapy \
+    scrapy \
+    runspider \
+    -aurl=https://zenodo.org/record/1408170 \
+    scrapy-meta.py > /tmp/5bs1bdvb/links.txt
+[2019-09-10T09:22:04,502Z] research_obj set but one of process_run_id or prov_obj is missing from runtimeContext: <cwltool.context.RuntimeContext object at 0x7fd4a2034898>
+[2019-09-10T09:22:06,065Z] [job fetch-meta_31] Max memory used: 0MiB
+[2019-09-10T09:22:06,070Z] [job fetch-meta_31] completed success
+[2019-09-10T09:22:06,082Z] [job fetch-meta_40] /tmp/giehyfsn$ docker \
+    run \
+    -i \
+    --volume=/tmp/giehyfsn:/JwkuUA:rw \
+    --volume=/tmp/h1uyzpx1:/tmp:rw \
+    --volume=/home/stain/ro-index-paper/code/data-gathering/tools/scrapy-meta.py:/JwkuUA/scrapy-meta.py:ro \
+    --workdir=/JwkuUA \
+    --read-only=true \
+    --log-driver=none \
+    --user=1000:1000 \
+    --rm \
+    --env=TMPDIR=/tmp \
+    --env=HOME=/JwkuUA \
+    --cidfile=/tmp/b3yrt7k2/20190910092206-082363.cid \
+    aciobanu/scrapy \
+    scrapy \
+    runspider \
+    -aurl=https://zenodo.org/record/3270824 \
+    scrapy-meta.py > /tmp/giehyfsn/links.txt
+[2019-09-10T09:22:06,083Z] research_obj set but one of process_run_id or prov_obj is missing from runtimeContext: <cwltool.context.RuntimeContext object at 0x7fd4a2034898>
+[2019-09-10T09:22:16,848Z] [job fetch-meta_33] Max memory used: 0MiB
+[2019-09-10T09:22:16,852Z] [job fetch-meta_33] completed success
+[2019-09-10T09:22:16,860Z] [job fetch-meta_41] /tmp/_n9pkc7o$ docker \
+    run \
+    -i \
+    --volume=/tmp/_n9pkc7o:/JwkuUA:rw \
+    --volume=/tmp/hyc5_j7c:/tmp:rw \
+    --volume=/home/stain/ro-index-paper/code/data-gathering/tools/scrapy-meta.py:/JwkuUA/scrapy-meta.py:ro \
+    --workdir=/JwkuUA \
+    --read-only=true \
+    --log-driver=none \
+    --user=1000:1000 \
+    --rm \
+    --env=TMPDIR=/tmp \
+    --env=HOME=/JwkuUA \
+    --cidfile=/tmp/m9gbbklf/20190910092216-860074.cid \
+    aciobanu/scrapy \
+    scrapy \
+    runspider \
+    -aurl=https://zenodo.org/record/3338725 \
+    scrapy-meta.py > /tmp/_n9pkc7o/links.txt
+[2019-09-10T09:22:16,860Z] research_obj set but one of process_run_id or prov_obj is missing from runtimeContext: <cwltool.context.RuntimeContext object at 0x7fd4a2034898>
+[2019-09-10T09:22:16,909Z] [job fetch-meta_34] Max memory used: 0MiB
+[2019-09-10T09:22:16,911Z] [job fetch-meta_34] completed success
+[2019-09-10T09:22:16,918Z] [job fetch-meta_42] /tmp/717rq40_$ docker \
+    run \
+    -i \
+    --volume=/tmp/717rq40_:/JwkuUA:rw \
+    --volume=/tmp/qi1laj63:/tmp:rw \
+    --volume=/home/stain/ro-index-paper/code/data-gathering/tools/scrapy-meta.py:/JwkuUA/scrapy-meta.py:ro \
+    --workdir=/JwkuUA \
+    --read-only=true \
+    --log-driver=none \
+    --user=1000:1000 \
+    --rm \
+    --env=TMPDIR=/tmp \
+    --env=HOME=/JwkuUA \
+    --cidfile=/tmp/jjz8tgy4/20190910092216-918722.cid \
+    aciobanu/scrapy \
+    scrapy \
+    runspider \
+    -aurl=https://zenodo.org/record/1326284 \
+    scrapy-meta.py > /tmp/717rq40_/links.txt
+[2019-09-10T09:22:16,919Z] research_obj set but one of process_run_id or prov_obj is missing from runtimeContext: <cwltool.context.RuntimeContext object at 0x7fd4a2034898>
+[2019-09-10T09:22:19,092Z] [job fetch-meta_35] Max memory used: 0MiB
+[2019-09-10T09:22:19,097Z] [job fetch-meta_35] completed success
+[2019-09-10T09:22:19,109Z] [job fetch-meta_43] /tmp/pf_6wbw8$ docker \
+    run \
+    -i \
+    --volume=/tmp/pf_6wbw8:/JwkuUA:rw \
+    --volume=/tmp/h3z7ojo_:/tmp:rw \
+    --volume=/home/stain/ro-index-paper/code/data-gathering/tools/scrapy-meta.py:/JwkuUA/scrapy-meta.py:ro \
+    --workdir=/JwkuUA \
+    --read-only=true \
+    --log-driver=none \
+    --user=1000:1000 \
+    --rm \
+    --env=TMPDIR=/tmp \
+    --env=HOME=/JwkuUA \
+    --cidfile=/tmp/9t0zn42h/20190910092219-109222.cid \
+    aciobanu/scrapy \
+    scrapy \
+    runspider \
+    -aurl=https://zenodo.org/record/1313066 \
+    scrapy-meta.py > /tmp/pf_6wbw8/links.txt
+[2019-09-10T09:22:19,110Z] research_obj set but one of process_run_id or prov_obj is missing from runtimeContext: <cwltool.context.RuntimeContext object at 0x7fd4a2034898>
+[2019-09-10T09:22:19,240Z] [job fetch-meta_36] Max memory used: 0MiB
+[2019-09-10T09:22:19,244Z] [job fetch-meta_36] completed success
+[2019-09-10T09:22:19,257Z] [job fetch-meta_44] /tmp/xbutsord$ docker \
+    run \
+    -i \
+    --volume=/tmp/xbutsord:/JwkuUA:rw \
+    --volume=/tmp/kugjp720:/tmp:rw \
+    --volume=/home/stain/ro-index-paper/code/data-gathering/tools/scrapy-meta.py:/JwkuUA/scrapy-meta.py:ro \
+    --workdir=/JwkuUA \
+    --read-only=true \
+    --log-driver=none \
+    --user=1000:1000 \
+    --rm \
+    --env=TMPDIR=/tmp \
+    --env=HOME=/JwkuUA \
+    --cidfile=/tmp/qsdfkzbr/20190910092219-256610.cid \
+    aciobanu/scrapy \
+    scrapy \
+    runspider \
+    -aurl=https://zenodo.org/record/1484377 \
+    scrapy-meta.py > /tmp/xbutsord/links.txt
+[2019-09-10T09:22:19,257Z] research_obj set but one of process_run_id or prov_obj is missing from runtimeContext: <cwltool.context.RuntimeContext object at 0x7fd4a2034898>
+[2019-09-10T09:22:22,087Z] [job fetch-meta_38] Max memory used: 0MiB
+[2019-09-10T09:22:22,091Z] [job fetch-meta_38] completed success
+[2019-09-10T09:22:22,104Z] [job fetch-meta_45] /tmp/y8spi1ri$ docker \
+    run \
+    -i \
+    --volume=/tmp/y8spi1ri:/JwkuUA:rw \
+    --volume=/tmp/3izqiey2:/tmp:rw \
+    --volume=/home/stain/ro-index-paper/code/data-gathering/tools/scrapy-meta.py:/JwkuUA/scrapy-meta.py:ro \
+    --workdir=/JwkuUA \
+    --read-only=true \
+    --log-driver=none \
+    --user=1000:1000 \
+    --rm \
+    --env=TMPDIR=/tmp \
+    --env=HOME=/JwkuUA \
+    --cidfile=/tmp/8j6hadk0/20190910092222-103987.cid \
+    aciobanu/scrapy \
+    scrapy \
+    runspider \
+    -aurl=https://zenodo.org/record/1301152 \
+    scrapy-meta.py > /tmp/y8spi1ri/links.txt
+[2019-09-10T09:22:22,104Z] research_obj set but one of process_run_id or prov_obj is missing from runtimeContext: <cwltool.context.RuntimeContext object at 0x7fd4a2034898>
+[2019-09-10T09:22:22,337Z] [job fetch-meta_37] Max memory used: 0MiB
+[2019-09-10T09:22:22,341Z] [job fetch-meta_37] completed success
+[2019-09-10T09:22:22,354Z] [job fetch-meta_46] /tmp/mvayc8fs$ docker \
+    run \
+    -i \
+    --volume=/tmp/mvayc8fs:/JwkuUA:rw \
+    --volume=/tmp/9s6orbvo:/tmp:rw \
+    --volume=/home/stain/ro-index-paper/code/data-gathering/tools/scrapy-meta.py:/JwkuUA/scrapy-meta.py:ro \
+    --workdir=/JwkuUA \
+    --read-only=true \
+    --log-driver=none \
+    --user=1000:1000 \
+    --rm \
+    --env=TMPDIR=/tmp \
+    --env=HOME=/JwkuUA \
+    --cidfile=/tmp/r6_q0nwx/20190910092222-353656.cid \
+    aciobanu/scrapy \
+    scrapy \
+    runspider \
+    -aurl=https://zenodo.org/record/1484424 \
+    scrapy-meta.py > /tmp/mvayc8fs/links.txt
+[2019-09-10T09:22:22,354Z] research_obj set but one of process_run_id or prov_obj is missing from runtimeContext: <cwltool.context.RuntimeContext object at 0x7fd4a2034898>
+[2019-09-10T09:22:22,457Z] [job fetch-meta_39] Max memory used: 0MiB
+[2019-09-10T09:22:22,461Z] [job fetch-meta_39] completed success
+[2019-09-10T09:22:22,474Z] [job fetch-meta_47] /tmp/rfavblgk$ docker \
+    run \
+    -i \
+    --volume=/tmp/rfavblgk:/JwkuUA:rw \
+    --volume=/tmp/nsgroo8y:/tmp:rw \
+    --volume=/home/stain/ro-index-paper/code/data-gathering/tools/scrapy-meta.py:/JwkuUA/scrapy-meta.py:ro \
+    --workdir=/JwkuUA \
+    --read-only=true \
+    --log-driver=none \
+    --user=1000:1000 \
+    --rm \
+    --env=TMPDIR=/tmp \
+    --env=HOME=/JwkuUA \
+    --cidfile=/tmp/rq7jq6hh/20190910092222-473919.cid \
+    aciobanu/scrapy \
+    scrapy \
+    runspider \
+    -aurl=https://zenodo.org/record/3268904 \
+    scrapy-meta.py > /tmp/rfavblgk/links.txt
+[2019-09-10T09:22:22,474Z] research_obj set but one of process_run_id or prov_obj is missing from runtimeContext: <cwltool.context.RuntimeContext object at 0x7fd4a2034898>
+[2019-09-10T09:22:22,775Z] [job fetch-meta_40] Max memory used: 0MiB
+[2019-09-10T09:22:22,779Z] [job fetch-meta_40] completed success
+[2019-09-10T09:22:22,792Z] [job fetch-meta_48] /tmp/yf_vb_w_$ docker \
+    run \
+    -i \
+    --volume=/tmp/yf_vb_w_:/JwkuUA:rw \
+    --volume=/tmp/6kkmz6y8:/tmp:rw \
+    --volume=/home/stain/ro-index-paper/code/data-gathering/tools/scrapy-meta.py:/JwkuUA/scrapy-meta.py:ro \
+    --workdir=/JwkuUA \
+    --read-only=true \
+    --log-driver=none \
+    --user=1000:1000 \
+    --rm \
+    --env=TMPDIR=/tmp \
+    --env=HOME=/JwkuUA \
+    --cidfile=/tmp/su8s_l8q/20190910092222-792168.cid \
+    aciobanu/scrapy \
+    scrapy \
+    runspider \
+    -aurl=https://zenodo.org/record/3358983 \
+    scrapy-meta.py > /tmp/yf_vb_w_/links.txt
+[2019-09-10T09:22:22,793Z] research_obj set but one of process_run_id or prov_obj is missing from runtimeContext: <cwltool.context.RuntimeContext object at 0x7fd4a2034898>
+[2019-09-10T09:22:36,471Z] [job fetch-meta_41] Max memory used: 0MiB
+[2019-09-10T09:22:36,474Z] [job fetch-meta_41] completed success
+[2019-09-10T09:22:36,483Z] [job fetch-meta_49] /tmp/3u15szm7$ docker \
+    run \
+    -i \
+    --volume=/tmp/3u15szm7:/JwkuUA:rw \
+    --volume=/tmp/__7fg0dp:/tmp:rw \
+    --volume=/home/stain/ro-index-paper/code/data-gathering/tools/scrapy-meta.py:/JwkuUA/scrapy-meta.py:ro \
+    --workdir=/JwkuUA \
+    --read-only=true \
+    --log-driver=none \
+    --user=1000:1000 \
+    --rm \
+    --env=TMPDIR=/tmp \
+    --env=HOME=/JwkuUA \
+    --cidfile=/tmp/wo1q_10c/20190910092236-483064.cid \
+    aciobanu/scrapy \
+    scrapy \
+    runspider \
+    -aurl=https://zenodo.org/record/1311612 \
+    scrapy-meta.py > /tmp/3u15szm7/links.txt
+[2019-09-10T09:22:36,483Z] research_obj set but one of process_run_id or prov_obj is missing from runtimeContext: <cwltool.context.RuntimeContext object at 0x7fd4a2034898>
+[2019-09-10T09:22:38,198Z] [job fetch-meta_42] Max memory used: 0MiB
+[2019-09-10T09:22:38,203Z] [job fetch-meta_42] completed success
+[2019-09-10T09:22:38,215Z] [job fetch-meta_50] /tmp/lv0h4qgi$ docker \
+    run \
+    -i \
+    --volume=/tmp/lv0h4qgi:/JwkuUA:rw \
+    --volume=/tmp/4c9lee8m:/tmp:rw \
+    --volume=/home/stain/ro-index-paper/code/data-gathering/tools/scrapy-meta.py:/JwkuUA/scrapy-meta.py:ro \
+    --workdir=/JwkuUA \
+    --read-only=true \
+    --log-driver=none \
+    --user=1000:1000 \
+    --rm \
+    --env=TMPDIR=/tmp \
+    --env=HOME=/JwkuUA \
+    --cidfile=/tmp/79g5s8xg/20190910092238-215079.cid \
+    aciobanu/scrapy \
+    scrapy \
+    runspider \
+    -aurl=https://zenodo.org/record/3250687 \
+    scrapy-meta.py > /tmp/lv0h4qgi/links.txt
+[2019-09-10T09:22:38,215Z] research_obj set but one of process_run_id or prov_obj is missing from runtimeContext: <cwltool.context.RuntimeContext object at 0x7fd4a2034898>
+[2019-09-10T09:22:38,291Z] [job fetch-meta_43] Max memory used: 0MiB
+[2019-09-10T09:22:38,295Z] [job fetch-meta_43] completed success
+[2019-09-10T09:22:38,308Z] [job fetch-meta_51] /tmp/pcn6z0fd$ docker \
+    run \
+    -i \
+    --volume=/tmp/pcn6z0fd:/JwkuUA:rw \
+    --volume=/tmp/luz611vt:/tmp:rw \
+    --volume=/home/stain/ro-index-paper/code/data-gathering/tools/scrapy-meta.py:/JwkuUA/scrapy-meta.py:ro \
+    --workdir=/JwkuUA \
+    --read-only=true \
+    --log-driver=none \
+    --user=1000:1000 \
+    --rm \
+    --env=TMPDIR=/tmp \
+    --env=HOME=/JwkuUA \
+    --cidfile=/tmp/u_c8ycbi/20190910092238-307718.cid \
+    aciobanu/scrapy \
+    scrapy \
+    runspider \
+    -aurl=https://zenodo.org/record/2636997 \
+    scrapy-meta.py > /tmp/pcn6z0fd/links.txt
+[2019-09-10T09:22:38,308Z] research_obj set but one of process_run_id or prov_obj is missing from runtimeContext: <cwltool.context.RuntimeContext object at 0x7fd4a2034898>
+[2019-09-10T09:22:38,640Z] [job fetch-meta_44] Max memory used: 0MiB
+[2019-09-10T09:22:38,645Z] [job fetch-meta_44] completed success
+[2019-09-10T09:22:38,657Z] [job fetch-meta_52] /tmp/6e42btu8$ docker \
+    run \
+    -i \
+    --volume=/tmp/6e42btu8:/JwkuUA:rw \
+    --volume=/tmp/j8r80zmr:/tmp:rw \
+    --volume=/home/stain/ro-index-paper/code/data-gathering/tools/scrapy-meta.py:/JwkuUA/scrapy-meta.py:ro \
+    --workdir=/JwkuUA \
+    --read-only=true \
+    --log-driver=none \
+    --user=1000:1000 \
+    --rm \
+    --env=TMPDIR=/tmp \
+    --env=HOME=/JwkuUA \
+    --cidfile=/tmp/w8cxbahx/20190910092238-657250.cid \
+    aciobanu/scrapy \
+    scrapy \
+    runspider \
+    -aurl=https://zenodo.org/record/2632836 \
+    scrapy-meta.py > /tmp/6e42btu8/links.txt
+[2019-09-10T09:22:38,658Z] research_obj set but one of process_run_id or prov_obj is missing from runtimeContext: <cwltool.context.RuntimeContext object at 0x7fd4a2034898>
+[2019-09-10T09:22:42,531Z] [job fetch-meta_45] Max memory used: 0MiB
+[2019-09-10T09:22:42,536Z] [job fetch-meta_45] completed success
+[2019-09-10T09:22:42,549Z] [job fetch-meta_53] /tmp/_6ivch2s$ docker \
+    run \
+    -i \
+    --volume=/tmp/_6ivch2s:/JwkuUA:rw \
+    --volume=/tmp/c04t2kay:/tmp:rw \
+    --volume=/home/stain/ro-index-paper/code/data-gathering/tools/scrapy-meta.py:/JwkuUA/scrapy-meta.py:ro \
+    --workdir=/JwkuUA \
+    --read-only=true \
+    --log-driver=none \
+    --user=1000:1000 \
+    --rm \
+    --env=TMPDIR=/tmp \
+    --env=HOME=/JwkuUA \
+    --cidfile=/tmp/h_9u87mk/20190910092242-548872.cid \
+    aciobanu/scrapy \
+    scrapy \
+    runspider \
+    -aurl=https://zenodo.org/record/1412509 \
+    scrapy-meta.py > /tmp/_6ivch2s/links.txt
+[2019-09-10T09:22:42,549Z] research_obj set but one of process_run_id or prov_obj is missing from runtimeContext: <cwltool.context.RuntimeContext object at 0x7fd4a2034898>
+[2019-09-10T09:22:42,840Z] [job fetch-meta_47] Max memory used: 0MiB
+[2019-09-10T09:22:42,845Z] [job fetch-meta_47] completed success
+[2019-09-10T09:22:42,857Z] [job fetch-meta_54] /tmp/_pd69sph$ docker \
+    run \
+    -i \
+    --volume=/tmp/_pd69sph:/JwkuUA:rw \
+    --volume=/tmp/y6t6694x:/tmp:rw \
+    --volume=/home/stain/ro-index-paper/code/data-gathering/tools/scrapy-meta.py:/JwkuUA/scrapy-meta.py:ro \
+    --workdir=/JwkuUA \
+    --read-only=true \
+    --log-driver=none \
+    --user=1000:1000 \
+    --rm \
+    --env=TMPDIR=/tmp \
+    --env=HOME=/JwkuUA \
+    --cidfile=/tmp/prcjd5cp/20190910092242-857084.cid \
+    aciobanu/scrapy \
+    scrapy \
+    runspider \
+    -aurl=https://zenodo.org/record/3337883 \
+    scrapy-meta.py > /tmp/_pd69sph/links.txt
+[2019-09-10T09:22:42,857Z] research_obj set but one of process_run_id or prov_obj is missing from runtimeContext: <cwltool.context.RuntimeContext object at 0x7fd4a2034898>
+[2019-09-10T09:22:43,416Z] [job fetch-meta_46] Max memory used: 0MiB
+[2019-09-10T09:22:43,421Z] [job fetch-meta_46] completed success
+[2019-09-10T09:22:43,434Z] [job fetch-meta_55] /tmp/ffdg4f92$ docker \
+    run \
+    -i \
+    --volume=/tmp/ffdg4f92:/JwkuUA:rw \
+    --volume=/tmp/o2gdkb00:/tmp:rw \
+    --volume=/home/stain/ro-index-paper/code/data-gathering/tools/scrapy-meta.py:/JwkuUA/scrapy-meta.py:ro \
+    --workdir=/JwkuUA \
+    --read-only=true \
+    --log-driver=none \
+    --user=1000:1000 \
+    --rm \
+    --env=TMPDIR=/tmp \
+    --env=HOME=/JwkuUA \
+    --cidfile=/tmp/z_bjjb0q/20190910092243-433657.cid \
+    aciobanu/scrapy \
+    scrapy \
+    runspider \
+    -aurl=https://zenodo.org/record/2838898 \
+    scrapy-meta.py > /tmp/ffdg4f92/links.txt
+[2019-09-10T09:22:43,434Z] research_obj set but one of process_run_id or prov_obj is missing from runtimeContext: <cwltool.context.RuntimeContext object at 0x7fd4a2034898>
+[2019-09-10T09:22:43,820Z] [job fetch-meta_48] Max memory used: 0MiB
+[2019-09-10T09:22:43,824Z] [job fetch-meta_48] completed success
+[2019-09-10T09:22:43,836Z] [job fetch-meta_56] /tmp/zrmo_f52$ docker \
+    run \
+    -i \
+    --volume=/tmp/zrmo_f52:/JwkuUA:rw \
+    --volume=/tmp/btmoh1j6:/tmp:rw \
+    --volume=/home/stain/ro-index-paper/code/data-gathering/tools/scrapy-meta.py:/JwkuUA/scrapy-meta.py:ro \
+    --workdir=/JwkuUA \
+    --read-only=true \
+    --log-driver=none \
+    --user=1000:1000 \
+    --rm \
+    --env=TMPDIR=/tmp \
+    --env=HOME=/JwkuUA \
+    --cidfile=/tmp/jhk_cova/20190910092243-836526.cid \
+    aciobanu/scrapy \
+    scrapy \
+    runspider \
+    -aurl=https://zenodo.org/record/3336609 \
+    scrapy-meta.py > /tmp/zrmo_f52/links.txt
+[2019-09-10T09:22:43,837Z] research_obj set but one of process_run_id or prov_obj is missing from runtimeContext: <cwltool.context.RuntimeContext object at 0x7fd4a2034898>
+[2019-09-10T09:22:55,903Z] [job fetch-meta_49] Max memory used: 0MiB
+[2019-09-10T09:22:55,907Z] [job fetch-meta_49] completed success
+[2019-09-10T09:22:55,920Z] [job fetch-meta_57] /tmp/zg8keiy_$ docker \
+    run \
+    -i \
+    --volume=/tmp/zg8keiy_:/JwkuUA:rw \
+    --volume=/tmp/4san0yfo:/tmp:rw \
+    --volume=/home/stain/ro-index-paper/code/data-gathering/tools/scrapy-meta.py:/JwkuUA/scrapy-meta.py:ro \
+    --workdir=/JwkuUA \
+    --read-only=true \
+    --log-driver=none \
+    --user=1000:1000 \
+    --rm \
+    --env=TMPDIR=/tmp \
+    --env=HOME=/JwkuUA \
+    --cidfile=/tmp/zo8eq038/20190910092255-920327.cid \
+    aciobanu/scrapy \
+    scrapy \
+    runspider \
+    -aurl=https://zenodo.org/record/1420531 \
+    scrapy-meta.py > /tmp/zg8keiy_/links.txt
+[2019-09-10T09:22:55,921Z] research_obj set but one of process_run_id or prov_obj is missing from runtimeContext: <cwltool.context.RuntimeContext object at 0x7fd4a2034898>
+[2019-09-10T09:22:56,932Z] [job fetch-meta_51] Max memory used: 0MiB
+[2019-09-10T09:22:56,937Z] [job fetch-meta_51] completed success
+[2019-09-10T09:22:56,950Z] [job fetch-meta_58] /tmp/bdxh63xk$ docker \
+    run \
+    -i \
+    --volume=/tmp/bdxh63xk:/JwkuUA:rw \
+    --volume=/tmp/jfddnqso:/tmp:rw \
+    --volume=/home/stain/ro-index-paper/code/data-gathering/tools/scrapy-meta.py:/JwkuUA/scrapy-meta.py:ro \
+    --workdir=/JwkuUA \
+    --read-only=true \
+    --log-driver=none \
+    --user=1000:1000 \
+    --rm \
+    --env=TMPDIR=/tmp \
+    --env=HOME=/JwkuUA \
+    --cidfile=/tmp/zmol_ird/20190910092256-949756.cid \
+    aciobanu/scrapy \
+    scrapy \
+    runspider \
+    -aurl=https://zenodo.org/record/1312685 \
+    scrapy-meta.py > /tmp/bdxh63xk/links.txt
+[2019-09-10T09:22:56,950Z] research_obj set but one of process_run_id or prov_obj is missing from runtimeContext: <cwltool.context.RuntimeContext object at 0x7fd4a2034898>
+[2019-09-10T09:22:57,181Z] [job fetch-meta_50] Max memory used: 0MiB
+[2019-09-10T09:22:57,186Z] [job fetch-meta_50] completed success
+[2019-09-10T09:22:57,198Z] [job fetch-meta_59] /tmp/sin9ucjx$ docker \
+    run \
+    -i \
+    --volume=/tmp/sin9ucjx:/JwkuUA:rw \
+    --volume=/tmp/obz5b1hn:/tmp:rw \
+    --volume=/home/stain/ro-index-paper/code/data-gathering/tools/scrapy-meta.py:/JwkuUA/scrapy-meta.py:ro \
+    --workdir=/JwkuUA \
+    --read-only=true \
+    --log-driver=none \
+    --user=1000:1000 \
+    --rm \
+    --env=TMPDIR=/tmp \
+    --env=HOME=/JwkuUA \
+    --cidfile=/tmp/oem37vbx/20190910092257-198228.cid \
+    aciobanu/scrapy \
+    scrapy \
+    runspider \
+    -aurl=https://zenodo.org/record/2841641 \
+    scrapy-meta.py > /tmp/sin9ucjx/links.txt
+[2019-09-10T09:22:57,199Z] research_obj set but one of process_run_id or prov_obj is missing from runtimeContext: <cwltool.context.RuntimeContext object at 0x7fd4a2034898>
+[2019-09-10T09:22:57,483Z] [job fetch-meta_52] Max memory used: 0MiB
+[2019-09-10T09:22:57,487Z] [job fetch-meta_52] completed success
+[2019-09-10T09:22:57,500Z] [job fetch-meta_60] /tmp/rgcz_hz7$ docker \
+    run \
+    -i \
+    --volume=/tmp/rgcz_hz7:/JwkuUA:rw \
+    --volume=/tmp/d313knma:/tmp:rw \
+    --volume=/home/stain/ro-index-paper/code/data-gathering/tools/scrapy-meta.py:/JwkuUA/scrapy-meta.py:ro \
+    --workdir=/JwkuUA \
+    --read-only=true \
+    --log-driver=none \
+    --user=1000:1000 \
+    --rm \
+    --env=TMPDIR=/tmp \
+    --env=HOME=/JwkuUA \
+    --cidfile=/tmp/9pdzqg7n/20190910092257-499950.cid \
+    aciobanu/scrapy \
+    scrapy \
+    runspider \
+    -aurl=https://zenodo.org/record/1441011 \
+    scrapy-meta.py > /tmp/rgcz_hz7/links.txt
+[2019-09-10T09:22:57,500Z] research_obj set but one of process_run_id or prov_obj is missing from runtimeContext: <cwltool.context.RuntimeContext object at 0x7fd4a2034898>
+[2019-09-10T09:23:01,480Z] [job fetch-meta_56] Max memory used: 0MiB
+[2019-09-10T09:23:01,485Z] [job fetch-meta_56] completed success
+[2019-09-10T09:23:01,499Z] [job fetch-meta_61] /tmp/h3_x1fb5$ docker \
+    run \
+    -i \
+    --volume=/tmp/h3_x1fb5:/JwkuUA:rw \
+    --volume=/tmp/ldx_dusp:/tmp:rw \
+    --volume=/home/stain/ro-index-paper/code/data-gathering/tools/scrapy-meta.py:/JwkuUA/scrapy-meta.py:ro \
+    --workdir=/JwkuUA \
+    --read-only=true \
+    --log-driver=none \
+    --user=1000:1000 \
+    --rm \
+    --env=TMPDIR=/tmp \
+    --env=HOME=/JwkuUA \
+    --cidfile=/tmp/d9j5l8ar/20190910092301-499277.cid \
+    aciobanu/scrapy \
+    scrapy \
+    runspider \
+    -aurl=https://zenodo.org/record/3270560 \
+    scrapy-meta.py > /tmp/h3_x1fb5/links.txt
+[2019-09-10T09:23:01,500Z] research_obj set but one of process_run_id or prov_obj is missing from runtimeContext: <cwltool.context.RuntimeContext object at 0x7fd4a2034898>
+[2019-09-10T09:23:01,709Z] [job fetch-meta_55] Max memory used: 0MiB
+[2019-09-10T09:23:01,713Z] [job fetch-meta_55] completed success
+[2019-09-10T09:23:01,725Z] [job fetch-meta_62] /tmp/xdp6dc7p$ docker \
+    run \
+    -i \
+    --volume=/tmp/xdp6dc7p:/JwkuUA:rw \
+    --volume=/tmp/nlwn12vm:/tmp:rw \
+    --volume=/home/stain/ro-index-paper/code/data-gathering/tools/scrapy-meta.py:/JwkuUA/scrapy-meta.py:ro \
+    --workdir=/JwkuUA \
+    --read-only=true \
+    --log-driver=none \
+    --user=1000:1000 \
+    --rm \
+    --env=TMPDIR=/tmp \
+    --env=HOME=/JwkuUA \
+    --cidfile=/tmp/aqp2dx6d/20190910092301-725460.cid \
+    aciobanu/scrapy \
+    scrapy \
+    runspider \
+    -aurl=https://zenodo.org/record/3382423 \
+    scrapy-meta.py > /tmp/xdp6dc7p/links.txt
+[2019-09-10T09:23:01,726Z] research_obj set but one of process_run_id or prov_obj is missing from runtimeContext: <cwltool.context.RuntimeContext object at 0x7fd4a2034898>
+[2019-09-10T09:23:02,261Z] [job fetch-meta_54] Max memory used: 0MiB
+[2019-09-10T09:23:02,266Z] [job fetch-meta_54] completed success
+[2019-09-10T09:23:02,278Z] [job fetch-meta_63] /tmp/l1ezzxp8$ docker \
+    run \
+    -i \
+    --volume=/tmp/l1ezzxp8:/JwkuUA:rw \
+    --volume=/tmp/pasymzkl:/tmp:rw \
+    --volume=/home/stain/ro-index-paper/code/data-gathering/tools/scrapy-meta.py:/JwkuUA/scrapy-meta.py:ro \
+    --workdir=/JwkuUA \
+    --read-only=true \
+    --log-driver=none \
+    --user=1000:1000 \
+    --rm \
+    --env=TMPDIR=/tmp \
+    --env=HOME=/JwkuUA \
+    --cidfile=/tmp/2m2f8ym5/20190910092302-278352.cid \
+    aciobanu/scrapy \
+    scrapy \
+    runspider \
+    -aurl=https://zenodo.org/record/3382259 \
+    scrapy-meta.py > /tmp/l1ezzxp8/links.txt
+[2019-09-10T09:23:02,279Z] research_obj set but one of process_run_id or prov_obj is missing from runtimeContext: <cwltool.context.RuntimeContext object at 0x7fd4a2034898>
+[2019-09-10T09:23:02,702Z] [job fetch-meta_53] Max memory used: 0MiB
+[2019-09-10T09:23:02,706Z] [job fetch-meta_53] completed success
+[2019-09-10T09:23:02,718Z] [job fetch-meta_64] /tmp/ez6_y475$ docker \
+    run \
+    -i \
+    --volume=/tmp/ez6_y475:/JwkuUA:rw \
+    --volume=/tmp/b3v92o7f:/tmp:rw \
+    --volume=/home/stain/ro-index-paper/code/data-gathering/tools/scrapy-meta.py:/JwkuUA/scrapy-meta.py:ro \
+    --workdir=/JwkuUA \
+    --read-only=true \
+    --log-driver=none \
+    --user=1000:1000 \
+    --rm \
+    --env=TMPDIR=/tmp \
+    --env=HOME=/JwkuUA \
+    --cidfile=/tmp/2rkyds9s/20190910092302-718554.cid \
+    aciobanu/scrapy \
+    scrapy \
+    runspider \
+    -aurl=https://zenodo.org/record/3337375 \
+    scrapy-meta.py > /tmp/ez6_y475/links.txt
+[2019-09-10T09:23:02,719Z] research_obj set but one of process_run_id or prov_obj is missing from runtimeContext: <cwltool.context.RuntimeContext object at 0x7fd4a2034898>
+[2019-09-10T09:23:17,027Z] [job fetch-meta_57] Max memory used: 0MiB
+[2019-09-10T09:23:17,032Z] [job fetch-meta_57] completed success
+[2019-09-10T09:23:17,044Z] [job fetch-meta_65] /tmp/tpns0qpp$ docker \
+    run \
+    -i \
+    --volume=/tmp/tpns0qpp:/JwkuUA:rw \
+    --volume=/tmp/svgtmhp8:/tmp:rw \
+    --volume=/home/stain/ro-index-paper/code/data-gathering/tools/scrapy-meta.py:/JwkuUA/scrapy-meta.py:ro \
+    --workdir=/JwkuUA \
+    --read-only=true \
+    --log-driver=none \
+    --user=1000:1000 \
+    --rm \
+    --env=TMPDIR=/tmp \
+    --env=HOME=/JwkuUA \
+    --cidfile=/tmp/ey960yjr/20190910092317-044010.cid \
+    aciobanu/scrapy \
+    scrapy \
+    runspider \
+    -aurl=https://zenodo.org/record/1966881 \
+    scrapy-meta.py > /tmp/tpns0qpp/links.txt
+[2019-09-10T09:23:17,044Z] research_obj set but one of process_run_id or prov_obj is missing from runtimeContext: <cwltool.context.RuntimeContext object at 0x7fd4a2034898>
+[2019-09-10T09:23:18,553Z] [job fetch-meta_59] Max memory used: 0MiB
+[2019-09-10T09:23:18,557Z] [job fetch-meta_59] completed success
+[2019-09-10T09:23:18,570Z] [job fetch-meta_66] /tmp/oubwdvqo$ docker \
+    run \
+    -i \
+    --volume=/tmp/oubwdvqo:/JwkuUA:rw \
+    --volume=/tmp/vhtd1e30:/tmp:rw \
+    --volume=/home/stain/ro-index-paper/code/data-gathering/tools/scrapy-meta.py:/JwkuUA/scrapy-meta.py:ro \
+    --workdir=/JwkuUA \
+    --read-only=true \
+    --log-driver=none \
+    --user=1000:1000 \
+    --rm \
+    --env=TMPDIR=/tmp \
+    --env=HOME=/JwkuUA \
+    --cidfile=/tmp/ygqfzsl2/20190910092318-570220.cid \
+    aciobanu/scrapy \
+    scrapy \
+    runspider \
+    -aurl=https://zenodo.org/record/1473157 \
+    scrapy-meta.py > /tmp/oubwdvqo/links.txt
+[2019-09-10T09:23:18,571Z] research_obj set but one of process_run_id or prov_obj is missing from runtimeContext: <cwltool.context.RuntimeContext object at 0x7fd4a2034898>
+[2019-09-10T09:23:18,850Z] [job fetch-meta_58] Max memory used: 0MiB
+[2019-09-10T09:23:18,855Z] [job fetch-meta_58] completed success
+[2019-09-10T09:23:18,867Z] [job fetch-meta_67] /tmp/_ze97qmv$ docker \
+    run \
+    -i \
+    --volume=/tmp/_ze97qmv:/JwkuUA:rw \
+    --volume=/tmp/e6d5m974:/tmp:rw \
+    --volume=/home/stain/ro-index-paper/code/data-gathering/tools/scrapy-meta.py:/JwkuUA/scrapy-meta.py:ro \
+    --workdir=/JwkuUA \
+    --read-only=true \
+    --log-driver=none \
+    --user=1000:1000 \
+    --rm \
+    --env=TMPDIR=/tmp \
+    --env=HOME=/JwkuUA \
+    --cidfile=/tmp/2i9hynn8/20190910092318-867155.cid \
+    aciobanu/scrapy \
+    scrapy \
+    runspider \
+    -aurl=https://zenodo.org/record/1215611 \
+    scrapy-meta.py > /tmp/_ze97qmv/links.txt
+[2019-09-10T09:23:18,867Z] research_obj set but one of process_run_id or prov_obj is missing from runtimeContext: <cwltool.context.RuntimeContext object at 0x7fd4a2034898>
+[2019-09-10T09:23:19,102Z] [job fetch-meta_60] Max memory used: 0MiB
+[2019-09-10T09:23:19,106Z] [job fetch-meta_60] completed success
+[2019-09-10T09:23:19,118Z] [job fetch-meta_68] /tmp/k5hox392$ docker \
+    run \
+    -i \
+    --volume=/tmp/k5hox392:/JwkuUA:rw \
+    --volume=/tmp/rzo4jblj:/tmp:rw \
+    --volume=/home/stain/ro-index-paper/code/data-gathering/tools/scrapy-meta.py:/JwkuUA/scrapy-meta.py:ro \
+    --workdir=/JwkuUA \
+    --read-only=true \
+    --log-driver=none \
+    --user=1000:1000 \
+    --rm \
+    --env=TMPDIR=/tmp \
+    --env=HOME=/JwkuUA \
+    --cidfile=/tmp/f33_jthv/20190910092319-118577.cid \
+    aciobanu/scrapy \
+    scrapy \
+    runspider \
+    -aurl=https://zenodo.org/record/1312582 \
+    scrapy-meta.py > /tmp/k5hox392/links.txt
+[2019-09-10T09:23:19,119Z] research_obj set but one of process_run_id or prov_obj is missing from runtimeContext: <cwltool.context.RuntimeContext object at 0x7fd4a2034898>
+[2019-09-10T09:23:19,523Z] [job fetch-meta_63] Max memory used: 0MiB
+[2019-09-10T09:23:19,605Z] [job fetch-meta_63] completed success
+[2019-09-10T09:23:19,605Z] [job fetch-meta_61] Max memory used: 0MiB
+[2019-09-10T09:23:19,611Z] [job fetch-meta_61] completed success
+[2019-09-10T09:23:19,630Z] [job fetch-meta_69] /tmp/oofsqbyl$ docker \
+    run \
+    -i \
+    --volume=/tmp/oofsqbyl:/JwkuUA:rw \
+    --volume=/tmp/1lz47_mq:/tmp:rw \
+    --volume=/home/stain/ro-index-paper/code/data-gathering/tools/scrapy-meta.py:/JwkuUA/scrapy-meta.py:ro \
+    --workdir=/JwkuUA \
+    --read-only=true \
+    --log-driver=none \
+    --user=1000:1000 \
+    --rm \
+    --env=TMPDIR=/tmp \
+    --env=HOME=/JwkuUA \
+    --cidfile=/tmp/58z4h08a/20190910092319-629573.cid \
+    aciobanu/scrapy \
+    scrapy \
+    runspider \
+    -aurl=https://zenodo.org/record/1320264 \
+    scrapy-meta.py > /tmp/oofsqbyl/links.txt
+[2019-09-10T09:23:19,630Z] research_obj set but one of process_run_id or prov_obj is missing from runtimeContext: <cwltool.context.RuntimeContext object at 0x7fd4a2034898>
+[2019-09-10T09:23:19,631Z] [job fetch-meta_70] /tmp/m5gye7yg$ docker \
+    run \
+    -i \
+    --volume=/tmp/m5gye7yg:/JwkuUA:rw \
+    --volume=/tmp/9gkf2hss:/tmp:rw \
+    --volume=/home/stain/ro-index-paper/code/data-gathering/tools/scrapy-meta.py:/JwkuUA/scrapy-meta.py:ro \
+    --workdir=/JwkuUA \
+    --read-only=true \
+    --log-driver=none \
+    --user=1000:1000 \
+    --rm \
+    --env=TMPDIR=/tmp \
+    --env=HOME=/JwkuUA \
+    --cidfile=/tmp/46_hq0mt/20190910092319-631142.cid \
+    aciobanu/scrapy \
+    scrapy \
+    runspider \
+    -aurl= \
+    scrapy-meta.py > /tmp/m5gye7yg/links.txt
+[2019-09-10T09:23:19,631Z] research_obj set but one of process_run_id or prov_obj is missing from runtimeContext: <cwltool.context.RuntimeContext object at 0x7fd4a2034898>
+[2019-09-10T09:23:19,698Z] [job fetch-meta_64] Max memory used: 0MiB
+[2019-09-10T09:23:19,702Z] [job fetch-meta_64] completed success
+[2019-09-10T09:23:19,827Z] [job fetch-meta_62] Max memory used: 0MiB
+[2019-09-10T09:23:19,831Z] [job fetch-meta_62] completed success
+[2019-09-10T09:23:32,045Z] [job fetch-meta_70] Max memory used: 0MiB
+[2019-09-10T09:23:32,050Z] [job fetch-meta_70] completed success
+[2019-09-10T09:23:32,954Z] [job fetch-meta_66] Max memory used: 0MiB
+[2019-09-10T09:23:32,958Z] [job fetch-meta_66] completed success
+[2019-09-10T09:23:33,186Z] [job fetch-meta_67] Max memory used: 0MiB
+[2019-09-10T09:23:33,191Z] [job fetch-meta_67] completed success
+[2019-09-10T09:23:33,306Z] [job fetch-meta_65] Max memory used: 0MiB
+[2019-09-10T09:23:33,310Z] [job fetch-meta_65] completed success
+[2019-09-10T09:23:33,553Z] [job fetch-meta_68] Max memory used: 0MiB
+[2019-09-10T09:23:33,557Z] [job fetch-meta_68] completed success
+[2019-09-10T09:23:33,700Z] [job fetch-meta_69] Max memory used: 0MiB
+[2019-09-10T09:23:33,703Z] [job fetch-meta_69] completed success
+[2019-09-10T09:23:33,704Z] [step fetch-meta] completed success
+[2019-09-10T09:23:33,707Z] [workflow zenodo-community-links] starting step flatten_2
+[2019-09-10T09:23:33,708Z] [step flatten_2] start
+[2019-09-10T09:23:34,121Z] [job flatten] /tmp/ss2r74gh$ docker \
+    run \
+    -i \
+    --volume=/tmp/ss2r74gh:/JwkuUA:rw \
+    --volume=/tmp/sgvt9qg7:/tmp:rw \
+    --volume=/tmp/sin9ucjx/links.txt:/var/lib/cwl/stg4eba80ed-8fc2-4daf-bdc6-0d1c02c4cd00/links.txt:ro \
+    --volume=/tmp/psq_jcrm/links.txt:/var/lib/cwl/stg341d7bae-9394-4f08-877d-54bb37360bed/links.txt:ro \
+    --volume=/tmp/ojcoh9u1/links.txt:/var/lib/cwl/stg035d4cba-399c-4559-bc86-f51d856fae75/links.txt:ro \
+    --volume=/tmp/rr9s40yu/links.txt:/var/lib/cwl/stg3c6ad280-b640-4a53-b4d8-0eecd9574f48/links.txt:ro \
+    --volume=/tmp/3u15szm7/links.txt:/var/lib/cwl/stg0bfa29f3-75cd-40ac-9e1f-95258fc3d5d3/links.txt:ro \
+    --volume=/tmp/ikcjdyb6/links.txt:/var/lib/cwl/stg36947e6b-001b-409b-81cb-91e5a1bb179a/links.txt:ro \
+    --volume=/tmp/1lbvmxyx/links.txt:/var/lib/cwl/stg84c383c8-3007-43ec-9687-0e20d81ec358/links.txt:ro \
+    --volume=/tmp/ez6_y475/links.txt:/var/lib/cwl/stg13262cea-cc3c-476f-ac58-6f2680fe103e/links.txt:ro \
+    --volume=/tmp/y8spi1ri/links.txt:/var/lib/cwl/stgb384832f-f96f-4faa-8378-6c645dd7b234/links.txt:ro \
+    --volume=/tmp/lv0h4qgi/links.txt:/var/lib/cwl/stgabf5d094-9278-4968-809d-a8b4995f66cb/links.txt:ro \
+    --volume=/tmp/pcn6z0fd/links.txt:/var/lib/cwl/stgd1f8172a-60f7-40b0-9188-45c0438eecde/links.txt:ro \
+    --volume=/tmp/_ze97qmv/links.txt:/var/lib/cwl/stg1a1813d4-49c8-46d7-adb1-09b979638448/links.txt:ro \
+    --volume=/tmp/m774585q/links.txt:/var/lib/cwl/stg27b3e508-fe4d-478d-a60b-a0eca9aec655/links.txt:ro \
+    --volume=/tmp/6e42btu8/links.txt:/var/lib/cwl/stg4817bbaf-383d-4c74-8fcb-68a81783c98b/links.txt:ro \
+    --volume=/tmp/ffdg4f92/links.txt:/var/lib/cwl/stge47e21c9-dfbb-4feb-ab39-677bc273b9a2/links.txt:ro \
+    --volume=/tmp/r_gthcdx/links.txt:/var/lib/cwl/stg5dcb7911-291b-4bf6-beef-b1c223f05345/links.txt:ro \
+    --volume=/tmp/2qy9bhwf/links.txt:/var/lib/cwl/stgce26a2e9-9bd7-426a-a314-429404826816/links.txt:ro \
+    --volume=/tmp/ny98kj0s/links.txt:/var/lib/cwl/stgf0ecb98e-8e80-42a0-9c87-aa6d254e374e/links.txt:ro \
+    --volume=/tmp/f3byum3q/links.txt:/var/lib/cwl/stg9c4069a9-9270-479b-89b7-2785e7431225/links.txt:ro \
+    --volume=/tmp/_pd69sph/links.txt:/var/lib/cwl/stg1e747294-30d2-4174-a404-18a2699219ae/links.txt:ro \
+    --volume=/tmp/we3b3lij/links.txt:/var/lib/cwl/stgec6ecab7-01e3-409a-bfdb-4956444af9f0/links.txt:ro \
+    --volume=/tmp/oofsqbyl/links.txt:/var/lib/cwl/stg6e0fce1c-bc0e-4a1e-94cb-6d42c76d1c7b/links.txt:ro \
+    --volume=/tmp/oubwdvqo/links.txt:/var/lib/cwl/stgce72452b-420e-4069-b05d-913e0b1d6b81/links.txt:ro \
+    --volume=/tmp/q4xru4j6/links.txt:/var/lib/cwl/stg60ecbb1b-9b59-4386-b740-bb7ab82929fe/links.txt:ro \
+    --volume=/tmp/m5gye7yg/links.txt:/var/lib/cwl/stg8e7ad276-314a-4569-8316-0c59c08412e0/links.txt:ro \
+    --volume=/tmp/l1ezzxp8/links.txt:/var/lib/cwl/stgffbfef9e-e159-4ea4-a7b7-c38340a8a53e/links.txt:ro \
+    --volume=/tmp/hk0zxym1/links.txt:/var/lib/cwl/stg1c518739-d080-48bc-87bd-f8a6eabc0cf7/links.txt:ro \
+    --volume=/tmp/sxv0pp8j/links.txt:/var/lib/cwl/stgd216e86e-7927-471d-a196-0849a754c036/links.txt:ro \
+    --volume=/tmp/pf_6wbw8/links.txt:/var/lib/cwl/stg89ec2495-b5a3-4b32-93ae-71baec3b494b/links.txt:ro \
+    --volume=/tmp/etgp8_s_/links.txt:/var/lib/cwl/stg62598677-b13f-41a7-9271-de5a2d535b38/links.txt:ro \
+    --volume=/tmp/5bs1bdvb/links.txt:/var/lib/cwl/stg6e18551b-4d8e-486c-9267-514c041b13d8/links.txt:ro \
+    --volume=/tmp/xi5kntiv/links.txt:/var/lib/cwl/stg05b77149-7050-4ef9-b3c5-6947ead0d3ec/links.txt:ro \
+    --volume=/tmp/87dwsgjo/links.txt:/var/lib/cwl/stge1d33a1a-6558-47e2-9b67-3a7300ea55cc/links.txt:ro \
+    --volume=/tmp/bdxh63xk/links.txt:/var/lib/cwl/stgadc5ae34-5645-4cd7-986e-7e5c498bef55/links.txt:ro \
+    --volume=/tmp/zg8keiy_/links.txt:/var/lib/cwl/stg8f2ff1cd-7e78-47d5-8a4d-3f61283117f5/links.txt:ro \
+    --volume=/tmp/vqrjj_7k/links.txt:/var/lib/cwl/stg705a99d5-704e-44ab-ab88-e3f81ca75b31/links.txt:ro \
+    --volume=/tmp/ydbylcqo/links.txt:/var/lib/cwl/stgcacac8f7-4dae-46d8-b775-91babda9ac14/links.txt:ro \
+    --volume=/tmp/ny_avc9b/links.txt:/var/lib/cwl/stgddf6ef35-da49-4a01-a688-8bdd1a56ffa3/links.txt:ro \
+    --volume=/tmp/b_rehyar/links.txt:/var/lib/cwl/stgd14b2d1d-da23-47d3-9562-b08d61b7838e/links.txt:ro \
+    --volume=/tmp/zrmo_f52/links.txt:/var/lib/cwl/stg58a75784-7cf7-47cf-b5c4-5338b0511de3/links.txt:ro \
+    --volume=/tmp/yf_vb_w_/links.txt:/var/lib/cwl/stg52cd5dac-0e8f-4e44-b9aa-fac7bd05af25/links.txt:ro \
+    --volume=/tmp/tjp3g2qt/links.txt:/var/lib/cwl/stg62bc3391-5b3f-4bb5-a902-702825a361d2/links.txt:ro \
+    --volume=/tmp/hnfh63bx/links.txt:/var/lib/cwl/stg73029977-f8fd-4ae7-8fec-29e02578cca2/links.txt:ro \
+    --volume=/tmp/2jv8yqmx/links.txt:/var/lib/cwl/stgd4838346-7a68-4f14-b26d-13e8edb38141/links.txt:ro \
+    --volume=/tmp/k5hox392/links.txt:/var/lib/cwl/stga93e5b7d-3959-40bf-9bdf-0f3d4faf80f9/links.txt:ro \
+    --volume=/tmp/kt496tqi/links.txt:/var/lib/cwl/stg7c98e744-2cf9-4ab0-9b09-13c98f0a9700/links.txt:ro \
+    --volume=/tmp/66fj1ul2/links.txt:/var/lib/cwl/stg8c5ee373-c90b-4f53-9eb5-3d04273237b7/links.txt:ro \
+    --volume=/tmp/ktn_utj7/links.txt:/var/lib/cwl/stgf921c37c-7c93-45ca-8633-9fc0ca646be6/links.txt:ro \
+    --volume=/tmp/8a_ebvio/links.txt:/var/lib/cwl/stg60851474-9ba6-4b0d-8502-034c1ac3a01d/links.txt:ro \
+    --volume=/tmp/2ck_0coo/links.txt:/var/lib/cwl/stgdc61d96e-b784-4b3d-8d38-4ae6ff07e14a/links.txt:ro \
+    --volume=/tmp/_n9pkc7o/links.txt:/var/lib/cwl/stga2d1e785-eb1c-4ce2-885b-2e7a3007a43e/links.txt:ro \
+    --volume=/tmp/8chuvbt1/links.txt:/var/lib/cwl/stgcc97e028-9751-422f-b750-7a488d942c64/links.txt:ro \
+    --volume=/tmp/rfavblgk/links.txt:/var/lib/cwl/stgff739262-7b90-4963-b06d-4273d46b4d5c/links.txt:ro \
+    --volume=/tmp/oerlz1e0/links.txt:/var/lib/cwl/stg18d28652-2544-4516-b50f-b952ba4b1855/links.txt:ro \
+    --volume=/tmp/zir2fp5d/links.txt:/var/lib/cwl/stg32779477-6946-4008-a9e0-cc058fcc7c1a/links.txt:ro \
+    --volume=/tmp/717rq40_/links.txt:/var/lib/cwl/stg4466df20-7752-4b68-9074-bd9b2c1142f9/links.txt:ro \
+    --volume=/tmp/_6ivch2s/links.txt:/var/lib/cwl/stg8e0ef55f-79ff-4447-b9f5-ad1816ab1ac0/links.txt:ro \
+    --volume=/tmp/hiwqzhda/links.txt:/var/lib/cwl/stg8aba2c8d-012e-44ba-9832-8a45682cdf2a/links.txt:ro \
+    --volume=/tmp/jsxefzwx/links.txt:/var/lib/cwl/stg24935882-a034-4bcd-a410-6b60e0ee1c1c/links.txt:ro \
+    --volume=/tmp/h3_x1fb5/links.txt:/var/lib/cwl/stg1d628569-5a0b-4d92-9f67-64cc9e2206ff/links.txt:ro \
+    --volume=/tmp/mvayc8fs/links.txt:/var/lib/cwl/stg2bae243e-3d18-409c-a464-9937bddac3a3/links.txt:ro \
+    --volume=/tmp/rgcz_hz7/links.txt:/var/lib/cwl/stge2bf3709-76c8-4f81-a067-e2442366216c/links.txt:ro \
+    --volume=/tmp/xbutsord/links.txt:/var/lib/cwl/stg87f97674-0b86-45fb-9733-da0e0ad4b1b5/links.txt:ro \
+    --volume=/tmp/giehyfsn/links.txt:/var/lib/cwl/stge034f463-6c54-48c6-8956-d77dc0358784/links.txt:ro \
+    --volume=/tmp/xdp6dc7p/links.txt:/var/lib/cwl/stg07bccfd8-e0bc-4d57-b0d6-c08ba3f4634c/links.txt:ro \
+    --volume=/tmp/vhl3m274/links.txt:/var/lib/cwl/stgdc5d9e42-e805-4617-8e13-c88e75420535/links.txt:ro \
+    --volume=/tmp/df_hxqcq/links.txt:/var/lib/cwl/stg50d67b84-61c8-422e-8b08-dede88f8054b/links.txt:ro \
+    --volume=/tmp/4n7ynvhn/links.txt:/var/lib/cwl/stg2e899884-4359-4ad1-b2b3-01c506f76d0e/links.txt:ro \
+    --volume=/tmp/nrfh3j06/links.txt:/var/lib/cwl/stg4998f452-d556-4dc8-b121-a75e9a672f8b/links.txt:ro \
+    --volume=/tmp/tpns0qpp/links.txt:/var/lib/cwl/stg60eaf656-06cb-4092-a866-77bba087100f/links.txt:ro \
+    --workdir=/JwkuUA \
+    --read-only=true \
+    --log-driver=none \
+    --user=1000:1000 \
+    --rm \
+    --env=TMPDIR=/tmp \
+    --env=HOME=/JwkuUA \
+    --cidfile=/tmp/jioi9_ke/20190910092334-120215.cid \
+    debian:9 \
+    cat \
+    --squeeze-blank \
+    /var/lib/cwl/stgf921c37c-7c93-45ca-8633-9fc0ca646be6/links.txt \
+    /var/lib/cwl/stg035d4cba-399c-4559-bc86-f51d856fae75/links.txt \
+    /var/lib/cwl/stg7c98e744-2cf9-4ab0-9b09-13c98f0a9700/links.txt \
+    /var/lib/cwl/stg18d28652-2544-4516-b50f-b952ba4b1855/links.txt \
+    /var/lib/cwl/stg60851474-9ba6-4b0d-8502-034c1ac3a01d/links.txt \
+    /var/lib/cwl/stgd14b2d1d-da23-47d3-9562-b08d61b7838e/links.txt \
+    /var/lib/cwl/stg5dcb7911-291b-4bf6-beef-b1c223f05345/links.txt \
+    /var/lib/cwl/stg8aba2c8d-012e-44ba-9832-8a45682cdf2a/links.txt \
+    /var/lib/cwl/stg1c518739-d080-48bc-87bd-f8a6eabc0cf7/links.txt \
+    /var/lib/cwl/stg341d7bae-9394-4f08-877d-54bb37360bed/links.txt \
+    /var/lib/cwl/stg27b3e508-fe4d-478d-a60b-a0eca9aec655/links.txt \
+    /var/lib/cwl/stg36947e6b-001b-409b-81cb-91e5a1bb179a/links.txt \
+    /var/lib/cwl/stg73029977-f8fd-4ae7-8fec-29e02578cca2/links.txt \
+    /var/lib/cwl/stg62bc3391-5b3f-4bb5-a902-702825a361d2/links.txt \
+    /var/lib/cwl/stgce26a2e9-9bd7-426a-a314-429404826816/links.txt \
+    /var/lib/cwl/stg8c5ee373-c90b-4f53-9eb5-3d04273237b7/links.txt \
+    /var/lib/cwl/stgdc61d96e-b784-4b3d-8d38-4ae6ff07e14a/links.txt \
+    /var/lib/cwl/stg9c4069a9-9270-479b-89b7-2785e7431225/links.txt \
+    /var/lib/cwl/stg3c6ad280-b640-4a53-b4d8-0eecd9574f48/links.txt \
+    /var/lib/cwl/stg32779477-6946-4008-a9e0-cc058fcc7c1a/links.txt \
+    /var/lib/cwl/stg05b77149-7050-4ef9-b3c5-6947ead0d3ec/links.txt \
+    /var/lib/cwl/stgcc97e028-9751-422f-b750-7a488d942c64/links.txt \
+    /var/lib/cwl/stg84c383c8-3007-43ec-9687-0e20d81ec358/links.txt \
+    /var/lib/cwl/stgdc5d9e42-e805-4617-8e13-c88e75420535/links.txt \
+    /var/lib/cwl/stgd216e86e-7927-471d-a196-0849a754c036/links.txt \
+    /var/lib/cwl/stgcacac8f7-4dae-46d8-b775-91babda9ac14/links.txt \
+    /var/lib/cwl/stg2e899884-4359-4ad1-b2b3-01c506f76d0e/links.txt \
+    /var/lib/cwl/stg62598677-b13f-41a7-9271-de5a2d535b38/links.txt \
+    /var/lib/cwl/stg24935882-a034-4bcd-a410-6b60e0ee1c1c/links.txt \
+    /var/lib/cwl/stg50d67b84-61c8-422e-8b08-dede88f8054b/links.txt \
+    /var/lib/cwl/stgec6ecab7-01e3-409a-bfdb-4956444af9f0/links.txt \
+    /var/lib/cwl/stg4998f452-d556-4dc8-b121-a75e9a672f8b/links.txt \
+    /var/lib/cwl/stgddf6ef35-da49-4a01-a688-8bdd1a56ffa3/links.txt \
+    /var/lib/cwl/stge1d33a1a-6558-47e2-9b67-3a7300ea55cc/links.txt \
+    /var/lib/cwl/stg60ecbb1b-9b59-4386-b740-bb7ab82929fe/links.txt \
+    /var/lib/cwl/stg705a99d5-704e-44ab-ab88-e3f81ca75b31/links.txt \
+    /var/lib/cwl/stgf0ecb98e-8e80-42a0-9c87-aa6d254e374e/links.txt \
+    /var/lib/cwl/stgd4838346-7a68-4f14-b26d-13e8edb38141/links.txt \
+    /var/lib/cwl/stg6e18551b-4d8e-486c-9267-514c041b13d8/links.txt \
+    /var/lib/cwl/stge034f463-6c54-48c6-8956-d77dc0358784/links.txt \
+    /var/lib/cwl/stga2d1e785-eb1c-4ce2-885b-2e7a3007a43e/links.txt \
+    /var/lib/cwl/stg4466df20-7752-4b68-9074-bd9b2c1142f9/links.txt \
+    /var/lib/cwl/stg89ec2495-b5a3-4b32-93ae-71baec3b494b/links.txt \
+    /var/lib/cwl/stg87f97674-0b86-45fb-9733-da0e0ad4b1b5/links.txt \
+    /var/lib/cwl/stgb384832f-f96f-4faa-8378-6c645dd7b234/links.txt \
+    /var/lib/cwl/stg2bae243e-3d18-409c-a464-9937bddac3a3/links.txt \
+    /var/lib/cwl/stgff739262-7b90-4963-b06d-4273d46b4d5c/links.txt \
+    /var/lib/cwl/stg52cd5dac-0e8f-4e44-b9aa-fac7bd05af25/links.txt \
+    /var/lib/cwl/stg0bfa29f3-75cd-40ac-9e1f-95258fc3d5d3/links.txt \
+    /var/lib/cwl/stgabf5d094-9278-4968-809d-a8b4995f66cb/links.txt \
+    /var/lib/cwl/stgd1f8172a-60f7-40b0-9188-45c0438eecde/links.txt \
+    /var/lib/cwl/stg4817bbaf-383d-4c74-8fcb-68a81783c98b/links.txt \
+    /var/lib/cwl/stg8e0ef55f-79ff-4447-b9f5-ad1816ab1ac0/links.txt \
+    /var/lib/cwl/stg1e747294-30d2-4174-a404-18a2699219ae/links.txt \
+    /var/lib/cwl/stge47e21c9-dfbb-4feb-ab39-677bc273b9a2/links.txt \
+    /var/lib/cwl/stg58a75784-7cf7-47cf-b5c4-5338b0511de3/links.txt \
+    /var/lib/cwl/stg8f2ff1cd-7e78-47d5-8a4d-3f61283117f5/links.txt \
+    /var/lib/cwl/stgadc5ae34-5645-4cd7-986e-7e5c498bef55/links.txt \
+    /var/lib/cwl/stg4eba80ed-8fc2-4daf-bdc6-0d1c02c4cd00/links.txt \
+    /var/lib/cwl/stge2bf3709-76c8-4f81-a067-e2442366216c/links.txt \
+    /var/lib/cwl/stg1d628569-5a0b-4d92-9f67-64cc9e2206ff/links.txt \
+    /var/lib/cwl/stg07bccfd8-e0bc-4d57-b0d6-c08ba3f4634c/links.txt \
+    /var/lib/cwl/stgffbfef9e-e159-4ea4-a7b7-c38340a8a53e/links.txt \
+    /var/lib/cwl/stg13262cea-cc3c-476f-ac58-6f2680fe103e/links.txt \
+    /var/lib/cwl/stg60eaf656-06cb-4092-a866-77bba087100f/links.txt \
+    /var/lib/cwl/stgce72452b-420e-4069-b05d-913e0b1d6b81/links.txt \
+    /var/lib/cwl/stg1a1813d4-49c8-46d7-adb1-09b979638448/links.txt \
+    /var/lib/cwl/stga93e5b7d-3959-40bf-9bdf-0f3d4faf80f9/links.txt \
+    /var/lib/cwl/stg6e0fce1c-bc0e-4a1e-94cb-6d42c76d1c7b/links.txt \
+    /var/lib/cwl/stg8e7ad276-314a-4569-8316-0c59c08412e0/links.txt > /tmp/ss2r74gh/concatinated
+[2019-09-10T09:23:34,122Z] research_obj set but one of process_run_id or prov_obj is missing from runtimeContext: <cwltool.context.RuntimeContext object at 0x7fd4a2034898>
+[2019-09-10T09:23:36,221Z] [job flatten] Max memory used: 0MiB
+[2019-09-10T09:23:36,226Z] [job flatten] completed success
+[2019-09-10T09:23:36,226Z] [step flatten_2] completed success
+[2019-09-10T09:23:36,227Z] Got workflow error
+Traceback (most recent call last):
+  File "/home/stain/.local/lib/python3.5/site-packages/cwltool/executors.py", line 248, in _runner
+    job.run(runtime_context, TMPDIR_LOCK)
+  File "/home/stain/.local/lib/python3.5/site-packages/cwltool/job.py", line 693, in run
+    self._execute(runtime, env, runtimeContext, monitor_function)
+  File "/home/stain/.local/lib/python3.5/site-packages/cwltool/job.py", line 393, in _execute
+    self.output_callback(outputs, processStatus)
+  File "/home/stain/.local/lib/python3.5/site-packages/cwltool/workflow.py", line 779, in receive_output
+    output_callback(output, processStatus)
+  File "/home/stain/.local/lib/python3.5/site-packages/cwltool/workflow.py", line 305, in receive_output
+    self.do_output_callback(final_output_callback)
+  File "/home/stain/.local/lib/python3.5/site-packages/cwltool/workflow.py", line 259, in do_output_callback
+    self.prov_obj.generate_output_prov(wo or {}, process_run_id, self.name)
+  File "/home/stain/.local/lib/python3.5/site-packages/cwltool/provenance.py", line 829, in generate_output_prov
+    entity = self.declare_artefact(value)
+  File "/home/stain/.local/lib/python3.5/site-packages/cwltool/provenance.py", line 715, in declare_artefact
+    (entity, _, _) = self.declare_file(value)
+  File "/home/stain/.local/lib/python3.5/site-packages/cwltool/provenance.py", line 509, in declare_file
+    with self.fsaccess.open(location, "rb") as fhandle:
+TypeError: open() missing 1 required positional argument: 'mode'
+[2019-09-10T09:23:36,275Z] Workflow error, try again with --debug for more information:
+open() missing 1 required positional argument: 'mode'

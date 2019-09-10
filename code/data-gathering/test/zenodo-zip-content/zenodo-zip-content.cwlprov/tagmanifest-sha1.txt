@@ -1,0 +1,17 @@
+5891d50f56378d35efe57e2807e64e384dcba6cf  workflow/packed.cwl
+b6ec06b9ce0a7bb84d35978a2e8ebd5b904cdfdf  workflow/primary-job.json
+a60f2d1aa4d060f4297597766ede163550a041f0  snapshot/zenodo-zip-content.cwl
+9d71c5591000d15c3c89b6131a746f870af6236c  snapshot/cat.cwl
+e0f52d0d2efb2ca53015ebb8df375214a75c5fd9  snapshot/split-by-line.cwl
+6f4a161ba7faf75d88bd46a129c1011ef246c37a  snapshot/zip-content-by-url.cwl
+cdee56a9f3de0a707ee3be2a7f00f4937af2bcbf  snapshot/sunzip-list.cwl
+29fd599ff084c8efc9ec70225a29f0a07b41b31c  snapshot/curl-get.cwl
+ebe69c7efba41ef28a682e8db94f4f9a9f1fcb10  snapshot/zenodo-community-links.cwl
+445bdca921aceaba0367b58cfe47ae3ac961dcfd  snapshot/sed.cwl
+9d71c5591000d15c3c89b6131a746f870af6236c  snapshot/cat.cwl
+6aa55c656c65751bad2a394deaf01e6145a12270  snapshot/oai-pmh.cwl
+da37f9b7b927c9d1dbc6111897797c9a37f77271  snapshot/scrapy-meta.cwl
+e0f52d0d2efb2ca53015ebb8df375214a75c5fd9  snapshot/split-by-line.cwl
+59ccf671e12f33a3ac8ebca5450736c71653ebdb  metadata/logs/engine.e7b02d0c-3ebd-4912-b309-280153259337.txt
+fabb7b5c1a1e13b7cf5907d1f1da97ecae706b6a  metadata/manifest.json
+60f317e0877e5d2eb4bd34b6c36fb8aa56085aec  bag-info.txt
