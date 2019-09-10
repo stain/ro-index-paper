@@ -23,7 +23,7 @@
 <header id="title-block-header">
 <h1 class="title">RO-Index: A survey of Research Object usage</h1>
 </header>
-<p><small><em> This manuscript (<a href="https://stain.github.io/ro-index-paper/v/e6d872e6dda8d430f98b216ff40918ccff1b06a8/">permalink</a>) was automatically generated from <a href="https://github.com/stain/ro-index-paper/tree/e6d872e6dda8d430f98b216ff40918ccff1b06a8">stain/ro-index-paper@e6d872e</a> on September 10, 2019. </em></small></p>
+<p><small><em> This manuscript (<a href="https://stain.github.io/ro-index-paper/v/a3ce8d810d16111d695a04316ef55671d2d38ee5/">permalink</a>) was automatically generated from <a href="https://github.com/stain/ro-index-paper/tree/a3ce8d810d16111d695a04316ef55671d2d38ee5">stain/ro-index-paper@a3ce8d8</a> on September 10, 2019. </em></small></p>
 <h2 id="authors">Authors</h2>
 <ul>
 <li><p><strong>Stian Soiland-Reyes</strong><br> <img src="images/orcid.svg" alt="ORCID icon" class="inline_icon" /> <a href="https://orcid.org/0000-0001-9842-9718">0000-0001-9842-9718</a> · <img src="images/github.svg" alt="GitHub icon" class="inline_icon" /> <a href="https://github.com/stain">stain</a> · <img src="images/twitter.svg" alt="Twitter icon" class="inline_icon" /> <a href="https://twitter.com/soilandreyes">soilandreyes</a><br> <small> Department of Computer Science, The University of Manchester, UK; Informatics Institute, Faculty of Science, University of Amsterdam, NL · Funded by BioExcel-2 (European Commission H2020-INFRAEDI-02-2018-823830) </small></p></li>
@@ -203,7 +203,7 @@ Ethics policies: All research must have been conducted within an appropriate eth
 </ul>
 <h3 id="manifest-formats">Manifest formats</h3>
 <p>A key characteristic of a Research Object is the presence of a <em>manifest</em> that describes and relates the content. However, multiple potential formats and conventions have emerged for how to serialize such a format. (..)</p>
-<h3 id="proposed-workflow">Proposed workflow</h3>
+<h3 id="proposed-data-gathering-workflow">Proposed data gathering workflow</h3>
 <p>The overall data gathering workflow is envisioned as:</p>
 <ol type="1">
 <li>Traverse repository (or one of its sub-sections) using API like <a href="http://www.openarchives.org/OAI/2.0/openarchivesprotocol.htm">OAI-PMH</a></li>
@@ -227,10 +227,55 @@ Ethics policies: All research must have been conducted within an appropriate eth
 <p>https://zenodo.org/communities/ro/?page=1&amp;size=20</p>
 <p>https://developers.zenodo.org/#metadata-formats</p>
 <h4 id="prototype-workflow">Prototype workflow</h4>
-<p>A <a href="https://github.com/stain/ro-index-paper/blob/master/code/data-gathering/workflows/zip-content-by-url.cwl">prototype workflow</a> is being developed using <a href="https://www.commonwl.org/">Common Workflow Language</a> <span class="citation" data-cites="Ppg8PzBL">[<a href="#ref-Ppg8PzBL" role="doc-biblioref">20</a>]</span>, figure <a href="#fig:square-image">1</a> shows how the content of a ZIP file can be listed in a streaming mode.</p>
+<p>A <a href="https://github.com/stain/ro-index-paper/blob/master/code/data-gathering/workflows/zenodo-zip-content.cwl">prototype workflow</a> is being developed using <a href="https://www.commonwl.org/">Common Workflow Language</a> <span class="citation" data-cites="Ppg8PzBL">[<a href="#ref-Ppg8PzBL" role="doc-biblioref">20</a>]</span>, figure <a href="#fig:square-image">1</a> shows how a a community sub-section of the <a href="https://zenodo.org/">Zenodo</a> repository is being inspected to list the filenames contained within its downloadable ZIP files.</p>
 <figure>
-<embed src="https://w3id.org/cwl/view/git/c1a4ffb3f5a7c57219dbed826564435f2c7a62fc/code/data-gathering/workflows/zip-content-by-url.cwl?format=svg" id="fig:square-image" /><figcaption><span>Figure 1:</span> <strong>CWL workflow: List ZIP content by URL</strong> Visualization by CWL Viewer <a href="https://w3id.org/cwl/view/git/c1a4ffb3f5a7c57219dbed826564435f2c7a62fc/code/data-gathering/workflows/zip-content-by-url.cwl" class="uri">https://w3id.org/cwl/view/git/c1a4ffb3f5a7c57219dbed826564435f2c7a62fc/code/data-gathering/workflows/zip-content-by-url.cwl</a></figcaption>
+<embed src="https://w3id.org/cwl/view/git/4360a062ehe7cff5aadacbf401e8e743a660657680/code/data-gathering/workflows/zenodo-zip-content.cwl?format=svg" id="fig:square-image" /><figcaption><span>Figure 1:</span> <strong>CWL workflow: List ZIP content for Zenodo community</strong> Visualization by CWL Viewer <a href="https://w3id.org/cwl/view/git/4360a062e7cff5aadacbf401e8e743a660657680/code/data-gathering/workflows/zenodo-zip-content.cwl" class="uri">https://w3id.org/cwl/view/git/4360a062e7cff5aadacbf401e8e743a660657680/code/data-gathering/workflows/zenodo-zip-content.cwl</a></figcaption>
 </figure>
+<p>In brief the prototype workflow consists of these steps:</p>
+<ol type="1">
+<li>For a given Zenodo community, e.g. <a href="https://zenodo.org/communities/ro" class="uri">https://zenodo.org/communities/ro</a>, retrieve its OAI-PMH entries using DataCite v4 XML e.g. <a href="https://zenodo.org/oai2d?verb=ListRecords&amp;set=user-ro&amp;metadataPrefix=datacite4" class="uri">https://zenodo.org/oai2d?verb=ListRecords&amp;set=user-ro&amp;metadataPrefix=datacite4</a></li>
+<li>Extract the URI for the Zenodo record, e.g. &lt;oai:zenodo.org:1484341&gt;</li>
+<li>Search-replace to build the URI of the the corresponding Zenodo landing page, e.g. <a href="https://zenodo.org/record/2838898" class="uri">https://zenodo.org/record/2838898</a></li>
+<li>Retrieve the HTML of the landing page</li>
+<li>Extract the <a href="https://tools.ietf.org/html/rfc8288">link relations</a> of type <a href="https://html.spec.whatwg.org/multipage/links.html#rel-alternate">alternate</a> to find the download links</li>
+<li>Filter for download links that end with <code>*.zip</code></li>
+<li>Retrieve ZIP file</li>
+<li>List filenames within ZIP file</li>
+<li>Detect filenames like “manifest.rdf” within list and return original Zenodo URI or <code>null</code> <em>(in development)</em></li>
+</ol>
+<p>The workflow and its components have been tested with the reference implementation <code>cwltool</code> <span class="citation" data-cites="YRViKAa0">[<a href="#ref-YRViKAa0" role="doc-biblioref">21</a>]</span> which can provide rich provenance captured in CWLProv research objects <span class="citation" data-cites="12kpw3Zbe">[<a href="#ref-12kpw3Zbe" role="doc-biblioref">22</a>]</span> <!-- in press 10.1093/gigascience/giz095--></p>
+<p>In developing this prototype several challenges where immediately detected:</p>
+<ul>
+<li>The <a href="https://zenodo.org/oai2d?verb=ListRecords&amp;set=user-ro&amp;metadataPrefix=datacite4">OAI-PMH records</a> contain substansive DataCite information, but do not include the links to the Zenodo record or the ZIP downloads. The identifiers for records is in a form that is specific to OAI-PMH, e.g. <code>oai:zenodo.org:1310621</code> and had to be rewritten to a URI using the same record number.
+<ul>
+<li>The <a href="https://developers.zenodo.org/">Zenodo API</a> does include these additional URIs - but is not available for anonymous use as it requires a registration token. Distributing this token as part of the workflow provenance would give access to the author’s Zenodo account.</li>
+</ul></li>
+<li>The HTML landing page provides links to structured metadata, e.g. as JSON-LD using Schema.org <a href="https://zenodo.org/record/1310621/export/schemaorg_jsonld" class="uri">https://zenodo.org/record/1310621/export/schemaorg_jsonld</a> but the structured data is included in a <code>&lt;pre&gt;</code> block within HTML (for copy-pasting) and not programmatically accessible. HTTP content-negotiation does not give direct access to the structured data. There are no <code>alternate</code> links from the HTML landing page to these “export” pages, so their URIs would have to be manually constructed.
+<ul>
+<li>The JSON-LD does include links to downloads of ZIP files etc, but only if the Record is of type <em>Dataset</em> in Zenodo, which <a href="https://zenodo.org/record/2838898/export/schemaorg_jsonld#.XXdwzffTU5k">in JSON-LD</a> is represented as a <a href="http://schema.org/DataDownload">DataDownload</a> with a <a href="http://schema.org/contentUrl">contentUrl</a></li>
+</ul></li>
+<li>To list filename contained in a ZIP file, the whole file must be downloaded because in the <a href="https://pkware.cachefly.net/webdocs/casestudies/APPNOTE.TXT">ZIP format</a> the table of content is written at the end of the file
+<ul>
+<li>The host providing Zenodo downloads do not support the <a href="https://tools.ietf.org/html/rfc7233">HTTP Range</a> request header, so it is not possible to download say only the last 128 kB of the ZIP file.</li>
+<li>Some of the dataset downloads are larger than 1 GB</li>
+<li><code>cwltool</code> saves all intermediate values until the end of the workflow</li>
+</ul></li>
+<li>To preserve disk space use during download of ZIP file only, an initial idea was explored of using the CWL <a href="https://www.commonwl.org/v1.1/CommandLineTool.html#CommandOutputRecordField">streamable</a> feature so that the output of <code>curl</code> could be passed to the utillity <a href="https://github.com/madler/sunzip">sunzip</a> which can extract/inspect ZIP files in a streaming fashion
+<ul>
+<li>It was found that while the sunzip tool supports streamable extraction and testing based on the intermediate file entry records of the ZIP file, it does not decide or list the filenames before the end of the download. Thus the output of <code>sunzip -t</code> (test extract) itself is not streamable</li>
+<li>An experimental new feature <code>sunzip -l</code> was <a href="https://github.com/madler/sunzip/pull/3">attempted</a>, where file names of records are printed as they are encountered. This is at the risk of printing files that have subsequently been deleted from the ZIP file and do not appear in the table of content. This was considered a small risk as the primary purpose was to detect ZIP files containing “manifest-like” files and it was assumed that most deposited ZIP files had been created in a one-off operation and would not have inconsistent file records.</li>
+<li>The experimental feature however detected that several files found in Zenodo are written with a “deferred length” - the intermitting ZIP records do not record their length and so <code>sunzip</code> is unable to find the offset to the next record without actually decompressing the stream.</li>
+<li>It was found that <code>cwltool --parallel</code> did not seem to start the subsequent step and thus did not facilitate the <code>streamable</code> feature. The ZIP files were still saved to disk, and all the ZIP file downloads where completed before any of the ZIP extraction was started. Future work will explore using the implementation <code>toil</code> which have been argued to have better support for concurrency.</li>
+</ul></li>
+</ul>
+<!--
+TODO: 
+
+Create PROV entities for each record, download, manifest, datacite etc.
+
+Can we get data/stats for all of Zenodo? Start download to fill .cache
+
+-->
 <h2 id="conclusionsdiscussion">Conclusions/Discussion</h2>
 <h2 id="data-and-software-availability">Data (and Software) Availability</h2>
 <!--
@@ -395,6 +440,18 @@ DOI: <a href="https://doi.org/10.12688/f1000research.5773.3">10.12688/f1000resea
 Peter Amstutz, Michael R. Crusoe, Nebojša Tijanić, Brad Chapman, John Chilton, Michael Heuer, Andrey Kartashov, Dan Leehr, Hervé Ménager, Maya Nedeljkovich, … Luka Stojanovic<br />
 <em>Figshare</em> (2016) <a href="https://doi.org/gf6ppg">https://doi.org/gf6ppg</a><br />
 DOI: <a href="https://doi.org/10.6084/m9.figshare.3115156.v2">10.6084/m9.figshare.3115156.v2</a></p>
+</div>
+<div id="ref-YRViKAa0">
+<p>21. <strong>common-workflow-language/cwltool: cwltool 1.0.20190815141648</strong><br />
+Peter Amstutz, Michael R. Crusoe, Farah Zaib Khan, Stian Soiland-Reyes, Manvendra Singh, Kapil Kumar, Anton Khodak, John Chilton, Thomas Hickman, Boysha, … Ryan Spangler<br />
+<em>Zenodo</em> (2019-08-15) <a href="https://doi.org/gf7s2s">https://doi.org/gf7s2s</a><br />
+DOI: <a href="https://doi.org/10.5281/zenodo.3369238">10.5281/zenodo.3369238</a></p>
+</div>
+<div id="ref-12kpw3Zbe">
+<p>22. <strong>Sharing interoperable workflow provenance: A review of best practices and their practical application in CWLProv</strong><br />
+Farah Zaib Khan, Stian Soiland-Reyes, Richard O. Sinnott, Andrew Lonie, Carole Goble, Michael R. Crusoe<br />
+<em>Zenodo</em> (2019-05-23) <a href="https://doi.org/gf7s2r">https://doi.org/gf7s2r</a><br />
+DOI: <a href="https://doi.org/10.5281/zenodo.3196309">10.5281/zenodo.3196309</a></p>
 </div>
 </div>
 <!-- default theme -->
