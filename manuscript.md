@@ -19,9 +19,9 @@ title: 'RO-Index: A survey of Research Object usage'
 
 <small><em>
 This manuscript
-([permalink](https://stain.github.io/ro-index-paper/v/871fa0be6f97b286cb61aba65daf7f3eabd00d84/))
+([permalink](https://stain.github.io/ro-index-paper/v/4d410f6b40e4a92ee79156510e04d90df35587a4/))
 was automatically generated
-from [stain/ro-index-paper@871fa0b](https://github.com/stain/ro-index-paper/tree/871fa0be6f97b286cb61aba65daf7f3eabd00d84)
+from [stain/ro-index-paper@4d410f6](https://github.com/stain/ro-index-paper/tree/4d410f6b40e4a92ee79156510e04d90df35587a4)
 on September 13, 2019.
 </em></small>
 
@@ -309,7 +309,7 @@ In brief the prototype workflow consists of these steps:
 6. Filter for download links that end with `*.zip`
 7. Retrieve ZIP file
 8. List filenames within ZIP file
-9. Detect filenames like "manifest.rdf" within list and return original Zenodo URI or `null` _(in development)_
+9. Detect filenames like `manifest.rdf` or `meta.xml` within list and return original Zenodo URI or `null` _(in development)_
 
 The workflow and its components have been tested with the reference implementation `cwltool` [@YRViKAa0] which can provide rich provenance captured in CWLProv research objects [@12kpw3Zbe] <!-- in press 10.1093/gigascience/giz095-->
 
