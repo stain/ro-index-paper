@@ -19,9 +19,9 @@ title: 'RO-Index: A survey of Research Object usage'
 
 <small><em>
 This manuscript
-([permalink](https://stain.github.io/ro-index-paper/v/056af20c8c4faba2def6b10ca4986647f73e978a/))
+([permalink](https://stain.github.io/ro-index-paper/v/871fa0be6f97b286cb61aba65daf7f3eabd00d84/))
 was automatically generated
-from [stain/ro-index-paper@056af20](https://github.com/stain/ro-index-paper/tree/056af20c8c4faba2def6b10ca4986647f73e978a)
+from [stain/ro-index-paper@871fa0b](https://github.com/stain/ro-index-paper/tree/871fa0be6f97b286cb61aba65daf7f3eabd00d84)
 on September 13, 2019.
 </em></small>
 
@@ -226,6 +226,7 @@ For GDPR purposes the _Data Controller_ is The University of Manchester, data su
 * VoID datasets http://www.openphacts.org/specs/2013/WD-datadesc-20130912/ [@vGs0hZI; @13RYarvnd]
 * DataONE Data packages [@B4ffHizQ]
 * DataLad <https://www.datalad.org/datasets.html> [@lciHFS2H]
+* [BloodHound](http://bloodhound-tracker.net/) / [Global Biodiversity Information Facility](https://gbif.org) GBIF Darwin Core Archives [@tLIHmzFN] e.g. [@11XlStsyA] <https://www.gbif.org/dataset/search>
 
 #### ORE-based research objects
 
