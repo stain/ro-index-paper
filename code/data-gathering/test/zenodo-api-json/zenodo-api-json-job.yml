@@ -1,0 +1,11 @@
+#!/usr/bin/env cwltool
+
+cwl:tool: ../../tools/curl-get.cwl
+
+# Undocumented Zenodo API call, see
+# <https://github.com/zenodo/zenodo/blob/master/zenodo/config.py#L814>
+
+url: https://zenodo.org/api/records/3361509
+
+acceptType: application/vnd.zenodo.v1+json
+
