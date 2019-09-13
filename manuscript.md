@@ -2,7 +2,7 @@
 author-meta:
 - Stian Soiland-Reyes
 - Paul Groth
-date-meta: '2019-09-10'
+date-meta: '2019-09-13'
 keywords:
 - research object
 - linked data
@@ -19,10 +19,10 @@ title: 'RO-Index: A survey of Research Object usage'
 
 <small><em>
 This manuscript
-([permalink](https://stain.github.io/ro-index-paper/v/a3ce8d810d16111d695a04316ef55671d2d38ee5/))
+([permalink](https://stain.github.io/ro-index-paper/v/056af20c8c4faba2def6b10ca4986647f73e978a/))
 was automatically generated
-from [stain/ro-index-paper@a3ce8d8](https://github.com/stain/ro-index-paper/tree/a3ce8d810d16111d695a04316ef55671d2d38ee5)
-on September 10, 2019.
+from [stain/ro-index-paper@056af20](https://github.com/stain/ro-index-paper/tree/056af20c8c4faba2def6b10ca4986647f73e978a)
+on September 13, 2019.
 </em></small>
 
 ## Authors
@@ -296,7 +296,7 @@ A [prototype workflow](https://github.com/stain/ro-index-paper/blob/master/code/
 ![
 **CWL workflow: List ZIP content for Zenodo community**
 Visualization by CWL Viewer <https://w3id.org/cwl/view/git/4360a062e7cff5aadacbf401e8e743a660657680/code/data-gathering/workflows/zenodo-zip-content.cwl>
-](https://w3id.org/cwl/view/git/4360a062ehe7cff5aadacbf401e8e743a660657680/code/data-gathering/workflows/zenodo-zip-content.cwl?format=svg "Inspect downloadable zip files in Zenodo"){#fig:square-image}
+](https://w3id.org/cwl/view/git/4360a062e7cff5aadacbf401e8e743a660657680/code/data-gathering/workflows/zenodo-zip-content.cwl?format=svg "Inspect downloadable zip files in Zenodo"){#fig:square-image}
 
 In brief the prototype workflow consists of these steps:
 
