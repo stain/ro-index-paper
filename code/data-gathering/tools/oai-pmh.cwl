@@ -34,7 +34,7 @@ requirements:
     dockerFile: |
         FROM debian:9
         RUN apt-get update && apt-get -y install libhttp-oai-perl
-        # Quick-and-dirty patch for https://github.com/LibreCat/perl-oai-lib/pull/5
+        # Quick-and-dirty patch oai_omh < v4.09 <https://github.com/LibreCat/perl-oai-lib/pull/5>
         RUN sed -i "/identifier=s/ a 'set=s'," /usr/bin/oai_pmh
 
 inputs:
