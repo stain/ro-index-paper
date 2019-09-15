@@ -2,7 +2,7 @@
 author-meta:
 - Stian Soiland-Reyes
 - Paul Groth
-date-meta: '2019-09-13'
+date-meta: '2019-09-15'
 keywords:
 - research object
 - linked data
@@ -19,10 +19,10 @@ title: 'RO-Index: A survey of Research Object usage'
 
 <small><em>
 This manuscript
-([permalink](https://stain.github.io/ro-index-paper/v/169bbbf6eed425736a0d78c3dcc8900b212909e0/))
+([permalink](https://stain.github.io/ro-index-paper/v/5acdbf80c8ee51fc2309a5b228171b868e6a40b5/))
 was automatically generated
-from [stain/ro-index-paper@169bbbf](https://github.com/stain/ro-index-paper/tree/169bbbf6eed425736a0d78c3dcc8900b212909e0)
-on September 13, 2019.
+from [stain/ro-index-paper@5acdbf8](https://github.com/stain/ro-index-paper/tree/5acdbf80c8ee51fc2309a5b228171b868e6a40b5)
+on September 15, 2019.
 </em></small>
 
 ## Authors
@@ -227,6 +227,7 @@ For GDPR purposes the _Data Controller_ is The University of Manchester, data su
 * DataONE Data packages [@B4ffHizQ]
 * DataLad <https://www.datalad.org/datasets.html> [@lciHFS2H]
 * [BloodHound](http://bloodhound-tracker.net/) / [Global Biodiversity Information Facility](https://gbif.org) GBIF Darwin Core Archives [@tLIHmzFN] e.g. [@11XlStsyA] <https://www.gbif.org/dataset/search>
+* Crystallographic Binary File CBS/imgCIF [@YzzfnDAq] - instrument-specific metadata. HBF
 
 #### ORE-based research objects
 
@@ -332,9 +333,138 @@ In developing this prototype several challenges where immediately detected:
 <!--
 TODO: 
 
-Create PROV entities for each record, download, manifest, datacite etc.
+- Create PROV entities for each record, download, manifest, datacite etc.
 
-Can we get data/stats for all of Zenodo? Start download to fill .cache
+- Can we get data/stats for all of Zenodo? Start download to fill .cache
+
+
+Some of the commands..
+
+## Download all records (many of are 404)
+# TODO: Run from OAI-PMH ids to avoid 404
+# TODO: Respect Retry and X-Ratelimit headers
+# TODO: Parallelize 2-3 threads so it does not take 3 days
+curl --retry 10 -H "Accept: application/vnd.zenodo.v1+json" 'https://zenodo.org/api/records/[1-3450000]' -o "record_#1.json"
+
+# TODO: Consistency check of records
+find . -maxdepth 1 -type f -name 'record*json' | xargs grep ^.."status.*404" | cut -d ":" -f 1 | xargs mv -t 404/
+
+
+### TODO: Redo as Jupyter notebook
+
+### Let's check the size of the *.zip files
+
+find . -maxdepth 1 -type f -name 'record*json' | xargs -n3 cat | jq '.files[]? | select(.type == "zip") | reduce .size as $s (0; . + $s)  ' > zipsizes.txt
+
+
+## Some quick estimates on workload and network/disk requirements :
+
+# How many terabytes to download?
+cat zipsizes.txt | jq --slurp 'reduce .[] as $s (0; . + $s) | ./1024 /1024 /1024 / 1024'
+3.8408555243122464
+# (at 1008098/3450000 downloaded) 
+
+# So in total we will need to download about 13 TB
+stain@ondex2:/tmp/zenodo$ cat zipsizes.txt | jq --slurp 'reduce .[] as $s (0; . + $s) | ./1024 /1024 /1024 / 1024 /1008098*3450000'
+13.144507338450477
+
+# Downloading 19 MB takes 0.8 s
+# stain@ondex2:/tmp$ time wget https://zenodo.org/api/files/36ee07d5-7c07-4382-8463-4502d98148a4/s10.zip
+--2019-09-15 00:13:19--  https://zenodo.org/api/files/36ee07d5-7c07-4382-8463-4502d98148a4/s10.zip
+Resolving zenodo.org (zenodo.org)... 188.184.65.20
+Connecting to zenodo.org (zenodo.org)|188.184.65.20|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 20233334 (19M) [application/octet-stream]
+Saving to: 's10.zip.1'
+
+s10.zip.1                                          100%[================================================================================================================>]  19.30M  59.6MB/s    in 0.3s    
+
+2019-09-15 00:13:20 (59.6 MB/s) - 's10.zip.1' saved [20233334/20233334]
+
+
+real    0m0.823s
+user    0m0.056s
+sys     0m0.128s
+
+## Only 6000/31370 files or so are more than 30 MB.
+stain@ondex2:/tmp/zenodo$ cat zipsizes.txt | jq 'select(. > 30*1024*1024)' | wc -l
+6318
+
+## Only 655/31370 are more than 1 GB
+stain@ondex2:/tmp/zenodo$ cat zipsizes.txt | jq 'select(. > 1024*1024*1024)' | wc -l
+655
+
+## Downloading a file of 10 GB runs at 73.9 MB/s avg
+(tested at Sunday 2019-09-15 01:24 - so over-ideal timing)
+
+stain@ondex2:/tmp$ time wget https://zenodo.org/api/files/2cdaea21-80be-48b9-9ab2-259671795f7a/br20832_cores.zip
+--2019-09-15 00:22:52--  https://zenodo.org/api/files/2cdaea21-80be-48b9-9ab2-259671795f7a/br20832_cores.zip
+Resolving zenodo.org (zenodo.org)... 188.184.65.20
+Connecting to zenodo.org (zenodo.org)|188.184.65.20|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 10081056983 (9.4G) [application/octet-stream]
+Saving to: 'br20832_cores.zip'
+
+br20832_cores.zip                                  100%[================================================================================================================>]   9.39G   101MB/s    in 2m 10s  
+
+2019-09-15 00:25:03 (73.9 MB/s) - 'br20832_cores.zip' saved [10081056983/10081056983]
+
+
+real    2m10.634s
+user    0m31.100s
+sys     0m55.288s
+
+## This machine is on a single Gbit link (capable of two links) with MTU 1500 
+# in server room of Computer Science UNIMAN - jumboframes not supported by network
+
+
+
+
+## Absolute fastest we can download 13 TB?
+stain@ondex2:/tmp/zenodo$ jq -n '13.144507338450477 * 1024 *1024 / 73.9 / 3600 / 24'
+2.158668954374506
+# aka 2 days 
+
+# how long would Non-parallel download of the small files take?
+
+cat zipsizes.txt | jq 'select(. <= 30*1024*1024)' | wc -l
+25052
+
+(tip, 1008098*3450000 is the scaling factor as these estimates are done after
+downloading about 30 % of zenodo records -- WARNING: Those are not representative but 
+are the 30% oldest. )
+
+stain@ondex2:/tmp/zenodo$ jq -n '25052 * 0.823 / 1008098*3450000 / 3600 / 24'
+0.816
+
+# Should take less than a day? (That would means API download is slower.. )
+
+So in total 3 days for all zip downloads. No need for special measures.
+
+# All the small ZIP files fit on single disk 
+stain@ondex2:/tmp/zenodo$ cat zipsizes.txt | jq -s '.[] | select(. <= 30*1024*1024)' | jq -s 'reduce .[] as $s (0; . + $s)  / 0.30/ 1024/1024/1024'
+322.71499813844764
+
+# .. but just about!
+stain@ondex2:/tmp/zenodo$ df -h .
+Filesystem                  Size  Used Avail Use% Mounted on
+/dev/mapper/VolGroup00-tmp  296G   46G  235G  17% /tmp
+
+## TODO: Decide on threshold for data that should be kept on disk
+
+## TODO: Can we use Isolon for local storage..? No bandwidth benefit
+# but perhaps latency improvement. Might have just 300 GB quota left
+
+# //nasr.man.ac.uk/epsrss$/snapped/replicated/goble/methodbox
+#                      600T  555T   46T  93% /rds/methodbox
+
+
+# Use methodbox.cs.man.ac.uk ...? More diskspace (0.8 TB * 2)
+# the 1TB of Isilon storage has now been setup and is available for use. 
+
+## artifactory Used: 790.6 GB
+## methodbox 189G
+## uh.. 1 TB alrady
 
 -->
 
