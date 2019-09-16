@@ -2,7 +2,7 @@
 author-meta:
 - Stian Soiland-Reyes
 - Paul Groth
-date-meta: '2019-09-15'
+date-meta: '2019-09-16'
 keywords:
 - research object
 - linked data
@@ -19,10 +19,10 @@ title: 'RO-Index: A survey of Research Object usage'
 
 <small><em>
 This manuscript
-([permalink](https://stain.github.io/ro-index-paper/v/5acdbf80c8ee51fc2309a5b228171b868e6a40b5/))
+([permalink](https://stain.github.io/ro-index-paper/v/e32764f855bb948fe1b7de24eb01382fb381d9bd/))
 was automatically generated
-from [stain/ro-index-paper@5acdbf8](https://github.com/stain/ro-index-paper/tree/5acdbf80c8ee51fc2309a5b228171b868e6a40b5)
-on September 15, 2019.
+from [stain/ro-index-paper@e32764f](https://github.com/stain/ro-index-paper/tree/e32764f855bb948fe1b7de24eb01382fb381d9bd)
+on September 16, 2019.
 </em></small>
 
 ## Authors
@@ -398,7 +398,7 @@ stain@ondex2:/tmp/zenodo$ cat zipsizes.txt | jq 'select(. > 1024*1024*1024)' | w
 (tested at Sunday 2019-09-15 01:24 - so over-ideal timing)
 
 stain@ondex2:/tmp$ time wget https://zenodo.org/api/files/2cdaea21-80be-48b9-9ab2-259671795f7a/br20832_cores.zip
---2019-09-15 00:22:52--  https://zenodo.org/api/files/2cdaea21-80be-48b9-9ab2-259671795f7a/br20832_cores.zip
+--2017-09-15 00:22:52--  https://zenodo.org/api/files/2cdaea21-80be-48b9-9ab2-259671795f7a/br20832_cores.zip
 Resolving zenodo.org (zenodo.org)... 188.184.65.20
 Connecting to zenodo.org (zenodo.org)|188.184.65.20|:443... connected.
 HTTP request sent, awaiting response... 200 OK
@@ -449,6 +449,8 @@ stain@ondex2:/tmp/zenodo$ cat zipsizes.txt | jq -s '.[] | select(. <= 30*1024*10
 stain@ondex2:/tmp/zenodo$ df -h .
 Filesystem                  Size  Used Avail Use% Mounted on
 /dev/mapper/VolGroup00-tmp  296G   46G  235G  17% /tmp
+
+# (total disk space is 1.8T*2, about 1 TB free)
 
 ## TODO: Decide on threshold for data that should be kept on disk
 

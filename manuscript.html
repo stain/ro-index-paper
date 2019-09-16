@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
   <meta name="author" content="Stian Soiland-Reyes" />
   <meta name="author" content="Paul Groth" />
-  <meta name="dcterms.date" content="2019-09-15" />
+  <meta name="dcterms.date" content="2019-09-16" />
   <meta name="keywords" content="research object, linked data, scholarly communication, null" />
   <title>RO-Index: A survey of Research Object usage</title>
   <style>
@@ -23,7 +23,7 @@
 <header id="title-block-header">
 <h1 class="title">RO-Index: A survey of Research Object usage</h1>
 </header>
-<p><small><em> This manuscript (<a href="https://stain.github.io/ro-index-paper/v/5acdbf80c8ee51fc2309a5b228171b868e6a40b5/">permalink</a>) was automatically generated from <a href="https://github.com/stain/ro-index-paper/tree/5acdbf80c8ee51fc2309a5b228171b868e6a40b5">stain/ro-index-paper@5acdbf8</a> on September 15, 2019. </em></small></p>
+<p><small><em> This manuscript (<a href="https://stain.github.io/ro-index-paper/v/e32764f855bb948fe1b7de24eb01382fb381d9bd/">permalink</a>) was automatically generated from <a href="https://github.com/stain/ro-index-paper/tree/e32764f855bb948fe1b7de24eb01382fb381d9bd">stain/ro-index-paper@e32764f</a> on September 16, 2019. </em></small></p>
 <h2 id="authors">Authors</h2>
 <ul>
 <li><p><strong>Stian Soiland-Reyes</strong><br> <img src="images/orcid.svg" alt="ORCID icon" class="inline_icon" /> <a href="https://orcid.org/0000-0001-9842-9718">0000-0001-9842-9718</a> · <img src="images/github.svg" alt="GitHub icon" class="inline_icon" /> <a href="https://github.com/stain">stain</a> · <img src="images/twitter.svg" alt="Twitter icon" class="inline_icon" /> <a href="https://twitter.com/soilandreyes">soilandreyes</a><br> <small> Department of Computer Science, The University of Manchester, UK; Informatics Institute, Faculty of Science, University of Amsterdam, NL · Funded by BioExcel-2 (European Commission H2020-INFRAEDI-02-2018-823830) </small></p></li>
@@ -338,7 +338,7 @@ stain@ondex2:/tmp/zenodo$ cat zipsizes.txt | jq 'select(. > 1024*1024*1024)' | w
 (tested at Sunday 2019-09-15 01:24 - so over-ideal timing)
 
 stain@ondex2:/tmp$ time wget https://zenodo.org/api/files/2cdaea21-80be-48b9-9ab2-259671795f7a/br20832_cores.zip
---2019-09-15 00:22:52--  https://zenodo.org/api/files/2cdaea21-80be-48b9-9ab2-259671795f7a/br20832_cores.zip
+--2017-09-15 00:22:52--  https://zenodo.org/api/files/2cdaea21-80be-48b9-9ab2-259671795f7a/br20832_cores.zip
 Resolving zenodo.org (zenodo.org)... 188.184.65.20
 Connecting to zenodo.org (zenodo.org)|188.184.65.20|:443... connected.
 HTTP request sent, awaiting response... 200 OK
@@ -389,6 +389,8 @@ stain@ondex2:/tmp/zenodo$ cat zipsizes.txt | jq -s '.[] | select(. <= 30*1024*10
 stain@ondex2:/tmp/zenodo$ df -h .
 Filesystem                  Size  Used Avail Use% Mounted on
 /dev/mapper/VolGroup00-tmp  296G   46G  235G  17% /tmp
+
+# (total disk space is 1.8T*2, about 1 TB free)
 
 ## TODO: Decide on threshold for data that should be kept on disk
 
