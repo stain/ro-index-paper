@@ -1,0 +1,64 @@
+document
+  prefix wfprov <http://purl.org/wf4ever/wfprov#>
+  prefix wfdesc <http://purl.org/wf4ever/wfdesc#>
+  prefix cwlprov <https://w3id.org/cwl/prov#>
+  prefix foaf <http://xmlns.com/foaf/0.1/>
+  prefix schema <http://schema.org/>
+  prefix orcid <https://orcid.org/>
+  prefix id <urn:uuid:>
+  prefix data <urn:hash::sha1:>
+  prefix sha256 <nih:sha-256;>
+  prefix researchobject <arcp://uuid,122d9b1b-b9c4-491d-ad07-471d8f3bbfc3/>
+  prefix metadata <arcp://uuid,122d9b1b-b9c4-491d-ad07-471d8f3bbfc3/metadata/>
+  prefix provenance <arcp://uuid,122d9b1b-b9c4-491d-ad07-471d8f3bbfc3/metadata/provenance/>
+  prefix wf <arcp://uuid,122d9b1b-b9c4-491d-ad07-471d8f3bbfc3/workflow/packed.cwl#>
+  prefix input <arcp://uuid,122d9b1b-b9c4-491d-ad07-471d8f3bbfc3/workflow/primary-job.json#>
+  prefix wf4ever <http://purl.org/wf4ever/wf4ever#>
+  
+  agent(id:829d94b8-089c-4938-8b9b-857d278ed914)
+  agent(id:a8fde2f1-5712-4d98-9a59-b18c60316c11, [prov:type='prov:SoftwareAgent', prov:type='wfprov:WorkflowEngine', prov:label="cwltool 1.0.20190815141648"])
+  wasStartedBy(id:a8fde2f1-5712-4d98-9a59-b18c60316c11, -, id:829d94b8-089c-4938-8b9b-857d278ed914, 2019-09-20T00:24:23.224151)
+  activity(id:122d9b1b-b9c4-491d-ad07-471d8f3bbfc3, 2019-09-20T00:24:23.224189, -, [prov:type='wfprov:WorkflowRun', prov:label="Run of workflow/packed.cwl#main"])
+  wasAssociatedWith(id:122d9b1b-b9c4-491d-ad07-471d8f3bbfc3, id:a8fde2f1-5712-4d98-9a59-b18c60316c11, wf:main)
+  wasStartedBy(id:122d9b1b-b9c4-491d-ad07-471d8f3bbfc3, -, id:a8fde2f1-5712-4d98-9a59-b18c60316c11, 2019-09-20T00:24:23.224280)
+  entity(wf:main, [prov:type='prov:Plan', prov:type='wfdesc:Process', prov:label="Prospective provenance"])
+  entity(data:25403e5354dd352c07c86b755d470811485a5279, [prov:type='wfprov:Artifact', prov:value=""".files[]? .size
+"""])
+  used(id:122d9b1b-b9c4-491d-ad07-471d8f3bbfc3, data:25403e5354dd352c07c86b755d470811485a5279, 2019-09-20T00:24:23.239066, [prov:role='wf:main/filter'])
+  entity(data:829d2dad48e1ced6f7d037701304c4d71d481585, [prov:type='wfprov:Artifact'])
+  entity(id:bb3f8f89-ee04-4a18-a05a-66485fd46bdf, [prov:type='wf4ever:File', prov:type='wfprov:Artifact', cwlprov:basename="zenodo-record-3361509.json", cwlprov:nameroot="zenodo-record-3361509", cwlprov:nameext=".json"])
+  specializationOf(id:bb3f8f89-ee04-4a18-a05a-66485fd46bdf, data:829d2dad48e1ced6f7d037701304c4d71d481585)
+  entity(data:11be2e59966840d9ac20206bf3e94b68653a0a2f, [prov:type='wfprov:Artifact'])
+  entity(id:dd65ae00-20e3-4669-a15e-7ef59628990a, [prov:type='wf4ever:File', prov:type='wfprov:Artifact', cwlprov:basename="zenodo-record-3408750.json", cwlprov:nameroot="zenodo-record-3408750", cwlprov:nameext=".json"])
+  specializationOf(id:dd65ae00-20e3-4669-a15e-7ef59628990a, data:11be2e59966840d9ac20206bf3e94b68653a0a2f)
+  entity(id:01844538-d678-4d16-ab1d-452ed3543095, [prov:type='prov:Collection', prov:type='wfprov:Artifact'])
+  hadMember(id:01844538-d678-4d16-ab1d-452ed3543095, id:bb3f8f89-ee04-4a18-a05a-66485fd46bdf)
+  hadMember(id:01844538-d678-4d16-ab1d-452ed3543095, id:dd65ae00-20e3-4669-a15e-7ef59628990a)
+  used(id:122d9b1b-b9c4-491d-ad07-471d8f3bbfc3, id:01844538-d678-4d16-ab1d-452ed3543095, 2019-09-20T00:24:23.240544, [prov:role='wf:main/json'])
+  entity(id:5629cc87-22b7-41a8-8ef3-a8e78ddc2f86, [prov:value="0" %% xsd:boolean])
+  used(id:122d9b1b-b9c4-491d-ad07-471d8f3bbfc3, id:5629cc87-22b7-41a8-8ef3-a8e78ddc2f86, 2019-09-20T00:24:23.240636, [prov:role='wf:main/slurp'])
+  agent(id:41bf226f-fc87-47d9-a916-b5373097240f, [prov:type='prov:SoftwareAgent', cwlprov:image="quay.io/biocontainers/jq:1.5--0", prov:label="Container execution of image quay.io/biocontainers/jq:1.5--0"])
+  wasAssociatedWith(id:122d9b1b-b9c4-491d-ad07-471d8f3bbfc3, id:41bf226f-fc87-47d9-a916-b5373097240f, -)
+  entity(data:25403e5354dd352c07c86b755d470811485a5279, [prov:type='wfprov:Artifact', prov:value=""".files[]? .size
+"""])
+  used(id:122d9b1b-b9c4-491d-ad07-471d8f3bbfc3, data:25403e5354dd352c07c86b755d470811485a5279, 2019-09-20T00:24:23.342989, [prov:role='wf:main/jq-filter.cwl/filter'])
+  entity(data:829d2dad48e1ced6f7d037701304c4d71d481585, [prov:type='wfprov:Artifact'])
+  entity(id:ac1b0cc1-f3a0-413d-af13-bc2d0c990268, [prov:type='wf4ever:File', prov:type='wfprov:Artifact', cwlprov:basename="zenodo-record-3361509.json", cwlprov:nameroot="zenodo-record-3361509", cwlprov:nameext=".json"])
+  specializationOf(id:ac1b0cc1-f3a0-413d-af13-bc2d0c990268, data:829d2dad48e1ced6f7d037701304c4d71d481585)
+  entity(data:11be2e59966840d9ac20206bf3e94b68653a0a2f, [prov:type='wfprov:Artifact'])
+  entity(id:0ef3449d-2812-42e5-8f1b-8dd494f23fd5, [prov:type='wf4ever:File', prov:type='wfprov:Artifact', cwlprov:basename="zenodo-record-3408750.json", cwlprov:nameroot="zenodo-record-3408750", cwlprov:nameext=".json"])
+  specializationOf(id:0ef3449d-2812-42e5-8f1b-8dd494f23fd5, data:11be2e59966840d9ac20206bf3e94b68653a0a2f)
+  entity(id:14879acb-5a90-469c-8a62-fd1014a77938, [prov:type='prov:Collection', prov:type='wfprov:Artifact'])
+  hadMember(id:14879acb-5a90-469c-8a62-fd1014a77938, id:ac1b0cc1-f3a0-413d-af13-bc2d0c990268)
+  hadMember(id:14879acb-5a90-469c-8a62-fd1014a77938, id:0ef3449d-2812-42e5-8f1b-8dd494f23fd5)
+  used(id:122d9b1b-b9c4-491d-ad07-471d8f3bbfc3, id:14879acb-5a90-469c-8a62-fd1014a77938, 2019-09-20T00:24:23.344709, [prov:role='wf:main/jq-filter.cwl/json'])
+  entity(id:fd3a0acd-ca65-4b71-bff5-e3aadd11a30c, [prov:value="0" %% xsd:boolean])
+  used(id:122d9b1b-b9c4-491d-ad07-471d8f3bbfc3, id:fd3a0acd-ca65-4b71-bff5-e3aadd11a30c, 2019-09-20T00:24:23.344824, [prov:role='wf:main/jq-filter.cwl/slurp'])
+  entity(data:6137e05929df43c628c18e7a1484ceb27f8040dc, [prov:type='wfprov:Artifact'])
+  entity(id:ccee3c14-9515-4fdb-8032-02408a10d8d1, [prov:type='wf4ever:File', prov:type='wfprov:Artifact', cwlprov:basename="filtered.jsonseq", cwlprov:nameroot="filtered", cwlprov:nameext=".jsonseq"])
+  specializationOf(id:ccee3c14-9515-4fdb-8032-02408a10d8d1, data:6137e05929df43c628c18e7a1484ceb27f8040dc)
+  wasGeneratedBy(id:ccee3c14-9515-4fdb-8032-02408a10d8d1, id:122d9b1b-b9c4-491d-ad07-471d8f3bbfc3, 2019-09-20T00:24:24.606221, [prov:role='wf:main/jq-filter.cwl/filtered'])
+  wasEndedBy(id:122d9b1b-b9c4-491d-ad07-471d8f3bbfc3, -, id:122d9b1b-b9c4-491d-ad07-471d8f3bbfc3, 2019-09-20T00:24:24.606215)
+  wasGeneratedBy(id:ccee3c14-9515-4fdb-8032-02408a10d8d1, id:122d9b1b-b9c4-491d-ad07-471d8f3bbfc3, 2019-09-20T00:24:24.608778, [prov:role='wf:main/primary/filtered'])
+  wasEndedBy(id:122d9b1b-b9c4-491d-ad07-471d8f3bbfc3, -, id:a8fde2f1-5712-4d98-9a59-b18c60316c11, 2019-09-20T00:24:24.608950)
+endDocument

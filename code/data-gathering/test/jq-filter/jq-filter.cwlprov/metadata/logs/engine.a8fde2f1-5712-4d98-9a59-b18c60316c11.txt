@@ -1,0 +1,26 @@
+[2019-09-19T23:24:18,191Z] [cwltool] /home/stain/miniconda3/bin/cwltool --provenance jq-filter.cwlprov jq-filter-job.yml
+[2019-09-19T23:24:18,194Z] Resolved 'jq-filter-job.yml' to 'file:///home/stain/src/ro-index-paper/code/data-gathering/test/jq-filter/jq-filter-job.yml'
+[2019-09-19T23:24:23,341Z] [job jq-filter.cwl] /tmp/zqyixrhc$ docker \
+    run \
+    -i \
+    --volume=/tmp/zqyixrhc:/NgFfad:rw \
+    --volume=/tmp/q6wrmyum:/tmp:rw \
+    --volume=/home/stain/src/ro-index-paper/code/data-gathering/test/jq-filter/zenodo-record-3361509.json:/var/lib/cwl/stg446e78a1-e635-4022-8dd7-a212f12700ed/zenodo-record-3361509.json:ro \
+    --volume=/home/stain/src/ro-index-paper/code/data-gathering/test/jq-filter/zenodo-record-3408750.json:/var/lib/cwl/stg5b3f097f-b606-4a81-90e6-77ebbd9e971b/zenodo-record-3408750.json:ro \
+    --workdir=/NgFfad \
+    --read-only=true \
+    --log-driver=none \
+    --user=1000:1000 \
+    --rm \
+    --env=TMPDIR=/tmp \
+    --env=HOME=/NgFfad \
+    --cidfile=/tmp/4sj0ufwo/20190920002423-341686.cid \
+    quay.io/biocontainers/jq:1.5--0 \
+    jq \
+    '.files[]? .size
+' \
+    /var/lib/cwl/stg446e78a1-e635-4022-8dd7-a212f12700ed/zenodo-record-3361509.json \
+    /var/lib/cwl/stg5b3f097f-b606-4a81-90e6-77ebbd9e971b/zenodo-record-3408750.json > /tmp/zqyixrhc/filtered.jsonseq
+[2019-09-19T23:24:24,603Z] [job jq-filter.cwl] Max memory used: 0MiB
+[2019-09-19T23:24:24,607Z] [job jq-filter.cwl] completed success
+[2019-09-19T23:24:24,717Z] Final process status is success

@@ -1,0 +1,13 @@
+#!/usr/bin/env cwltool
+
+cwl:tool: ../../tools/jq-filter.cwl
+
+json:
+ - class: File
+   path: zenodo-record-3361509.json
+ - class: File
+   path: zenodo-record-3408750.json
+
+filter: >
+  .files[]?
+  .size

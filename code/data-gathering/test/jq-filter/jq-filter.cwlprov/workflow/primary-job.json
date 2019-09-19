@@ -1,0 +1,26 @@
+{
+    "filter": ".files[]? .size\n",
+    "json": [
+        {
+            "class": "File",
+            "location": "../data/82/829d2dad48e1ced6f7d037701304c4d71d481585",
+            "size": 3802,
+            "basename": "zenodo-record-3361509.json",
+            "nameroot": "zenodo-record-3361509",
+            "nameext": ".json",
+            "checksum": "sha1$829d2dad48e1ced6f7d037701304c4d71d481585",
+            "@id": "urn:uuid:bb3f8f89-ee04-4a18-a05a-66485fd46bdf"
+        },
+        {
+            "class": "File",
+            "location": "../data/11/11be2e59966840d9ac20206bf3e94b68653a0a2f",
+            "size": 4305,
+            "basename": "zenodo-record-3408750.json",
+            "nameroot": "zenodo-record-3408750",
+            "nameext": ".json",
+            "checksum": "sha1$11be2e59966840d9ac20206bf3e94b68653a0a2f",
+            "@id": "urn:uuid:dd65ae00-20e3-4669-a15e-7ef59628990a"
+        }
+    ],
+    "slurp": false
+}

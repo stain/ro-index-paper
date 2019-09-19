@@ -1,0 +1,163 @@
+@prefix cwlprov: <https://w3id.org/cwl/prov#> .
+@prefix data: <urn:hash::sha1:> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix id: <urn:uuid:> .
+@prefix input: <arcp://uuid,122d9b1b-b9c4-491d-ad07-471d8f3bbfc3/workflow/primary-job.json#> .
+@prefix metadata: <arcp://uuid,122d9b1b-b9c4-491d-ad07-471d8f3bbfc3/metadata/> .
+@prefix orcid: <https://orcid.org/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix provenance: <arcp://uuid,122d9b1b-b9c4-491d-ad07-471d8f3bbfc3/metadata/provenance/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix researchobject: <arcp://uuid,122d9b1b-b9c4-491d-ad07-471d8f3bbfc3/> .
+@prefix schema: <http://schema.org/> .
+@prefix sha256: <nih:sha-256;> .
+@prefix wf: <arcp://uuid,122d9b1b-b9c4-491d-ad07-471d8f3bbfc3/workflow/packed.cwl#> .
+@prefix wf4ever: <http://purl.org/wf4ever/wf4ever#> .
+@prefix wfdesc: <http://purl.org/wf4ever/wfdesc#> .
+@prefix wfprov: <http://purl.org/wf4ever/wfprov#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+id:ccee3c14-9515-4fdb-8032-02408a10d8d1 a wf4ever:File,
+        wfprov:Artifact,
+        prov:Entity ;
+    prov:qualifiedGeneration [ a prov:Generation ;
+            prov:activity <urn:uuid:122d9b1b-b9c4-491d-ad07-471d8f3bbfc3> ;
+            prov:atTime "2019-09-20T00:24:24.608778"^^xsd:dateTime ;
+            prov:hadRole <arcp://uuid,122d9b1b-b9c4-491d-ad07-471d8f3bbfc3/workflow/packed.cwl#main/primary/filtered> ],
+        [ a prov:Generation ;
+            prov:activity <urn:uuid:122d9b1b-b9c4-491d-ad07-471d8f3bbfc3> ;
+            prov:atTime "2019-09-20T00:24:24.606221"^^xsd:dateTime ;
+            prov:hadRole <arcp://uuid,122d9b1b-b9c4-491d-ad07-471d8f3bbfc3/workflow/packed.cwl#main/jq-filter.cwl/filtered> ] ;
+    prov:specializationOf <urn:hash::sha1:6137e05929df43c628c18e7a1484ceb27f8040dc> ;
+    cwlprov:basename "filtered.jsonseq"^^xsd:string ;
+    cwlprov:nameext ".jsonseq"^^xsd:string ;
+    cwlprov:nameroot "filtered"^^xsd:string .
+
+wf:main a wfdesc:Process,
+        prov:Entity,
+        prov:Plan ;
+    rdfs:label "Prospective provenance"^^xsd:string .
+
+<urn:hash::sha1:6137e05929df43c628c18e7a1484ceb27f8040dc> a wfprov:Artifact,
+        prov:Entity .
+
+<urn:uuid:01844538-d678-4d16-ab1d-452ed3543095> a wfprov:Artifact,
+        prov:Collection,
+        prov:Entity ;
+    prov:hadMember id:bb3f8f89-ee04-4a18-a05a-66485fd46bdf,
+        id:dd65ae00-20e3-4669-a15e-7ef59628990a .
+
+<urn:uuid:0ef3449d-2812-42e5-8f1b-8dd494f23fd5> a wf4ever:File,
+        wfprov:Artifact,
+        prov:Entity ;
+    prov:specializationOf <urn:hash::sha1:11be2e59966840d9ac20206bf3e94b68653a0a2f> ;
+    cwlprov:basename "zenodo-record-3408750.json"^^xsd:string ;
+    cwlprov:nameext ".json"^^xsd:string ;
+    cwlprov:nameroot "zenodo-record-3408750"^^xsd:string .
+
+<urn:uuid:14879acb-5a90-469c-8a62-fd1014a77938> a wfprov:Artifact,
+        prov:Collection,
+        prov:Entity ;
+    prov:hadMember <urn:uuid:0ef3449d-2812-42e5-8f1b-8dd494f23fd5>,
+        id:ac1b0cc1-f3a0-413d-af13-bc2d0c990268 .
+
+<urn:uuid:41bf226f-fc87-47d9-a916-b5373097240f> a prov:Agent,
+        prov:SoftwareAgent ;
+    rdfs:label "Container execution of image quay.io/biocontainers/jq:1.5--0"^^xsd:string ;
+    cwlprov:image "quay.io/biocontainers/jq:1.5--0"^^xsd:string .
+
+<urn:uuid:5629cc87-22b7-41a8-8ef3-a8e78ddc2f86> a prov:Entity ;
+    prov:value false .
+
+<urn:uuid:829d94b8-089c-4938-8b9b-857d278ed914> a prov:Agent .
+
+id:ac1b0cc1-f3a0-413d-af13-bc2d0c990268 a wf4ever:File,
+        wfprov:Artifact,
+        prov:Entity ;
+    prov:specializationOf <urn:hash::sha1:829d2dad48e1ced6f7d037701304c4d71d481585> ;
+    cwlprov:basename "zenodo-record-3361509.json"^^xsd:string ;
+    cwlprov:nameext ".json"^^xsd:string ;
+    cwlprov:nameroot "zenodo-record-3361509"^^xsd:string .
+
+id:bb3f8f89-ee04-4a18-a05a-66485fd46bdf a wf4ever:File,
+        wfprov:Artifact,
+        prov:Entity ;
+    prov:specializationOf <urn:hash::sha1:829d2dad48e1ced6f7d037701304c4d71d481585> ;
+    cwlprov:basename "zenodo-record-3361509.json"^^xsd:string ;
+    cwlprov:nameext ".json"^^xsd:string ;
+    cwlprov:nameroot "zenodo-record-3361509"^^xsd:string .
+
+id:dd65ae00-20e3-4669-a15e-7ef59628990a a wf4ever:File,
+        wfprov:Artifact,
+        prov:Entity ;
+    prov:specializationOf <urn:hash::sha1:11be2e59966840d9ac20206bf3e94b68653a0a2f> ;
+    cwlprov:basename "zenodo-record-3408750.json"^^xsd:string ;
+    cwlprov:nameext ".json"^^xsd:string ;
+    cwlprov:nameroot "zenodo-record-3408750"^^xsd:string .
+
+id:fd3a0acd-ca65-4b71-bff5-e3aadd11a30c a prov:Entity ;
+    prov:value false .
+
+<urn:hash::sha1:11be2e59966840d9ac20206bf3e94b68653a0a2f> a wfprov:Artifact,
+        prov:Entity .
+
+<urn:hash::sha1:25403e5354dd352c07c86b755d470811485a5279> a wfprov:Artifact,
+        prov:Entity ;
+    prov:value """.files[]? .size
+"""^^xsd:string .
+
+<urn:hash::sha1:829d2dad48e1ced6f7d037701304c4d71d481585> a wfprov:Artifact,
+        prov:Entity .
+
+<urn:uuid:122d9b1b-b9c4-491d-ad07-471d8f3bbfc3> a wfprov:WorkflowRun,
+        prov:Activity ;
+    rdfs:label "Run of workflow/packed.cwl#main"^^xsd:string ;
+    prov:qualifiedAssociation [ a prov:Association ;
+            prov:hadPlan wf:main ] ;
+    prov:qualifiedEnd [ a prov:End ;
+            prov:atTime "2019-09-20T00:24:24.606215"^^xsd:dateTime ;
+            prov:hadActivity <urn:uuid:122d9b1b-b9c4-491d-ad07-471d8f3bbfc3> ],
+        [ a prov:End ;
+            prov:atTime "2019-09-20T00:24:24.608950"^^xsd:dateTime ;
+            prov:hadActivity id:a8fde2f1-5712-4d98-9a59-b18c60316c11 ] ;
+    prov:qualifiedStart [ a prov:Start ;
+            prov:atTime "2019-09-20T00:24:23.224280"^^xsd:dateTime ;
+            prov:hadActivity id:a8fde2f1-5712-4d98-9a59-b18c60316c11 ] ;
+    prov:qualifiedUsage [ a prov:Usage ;
+            prov:atTime "2019-09-20T00:24:23.344824"^^xsd:dateTime ;
+            prov:entity id:fd3a0acd-ca65-4b71-bff5-e3aadd11a30c ;
+            prov:hadRole <arcp://uuid,122d9b1b-b9c4-491d-ad07-471d8f3bbfc3/workflow/packed.cwl#main/jq-filter.cwl/slurp> ],
+        [ a prov:Usage ;
+            prov:atTime "2019-09-20T00:24:23.344709"^^xsd:dateTime ;
+            prov:entity <urn:uuid:14879acb-5a90-469c-8a62-fd1014a77938> ;
+            prov:hadRole <arcp://uuid,122d9b1b-b9c4-491d-ad07-471d8f3bbfc3/workflow/packed.cwl#main/jq-filter.cwl/json> ],
+        [ a prov:Usage ;
+            prov:atTime "2019-09-20T00:24:23.240544"^^xsd:dateTime ;
+            prov:entity <urn:uuid:01844538-d678-4d16-ab1d-452ed3543095> ;
+            prov:hadRole <arcp://uuid,122d9b1b-b9c4-491d-ad07-471d8f3bbfc3/workflow/packed.cwl#main/json> ],
+        [ a prov:Usage ;
+            prov:atTime "2019-09-20T00:24:23.240636"^^xsd:dateTime ;
+            prov:entity <urn:uuid:5629cc87-22b7-41a8-8ef3-a8e78ddc2f86> ;
+            prov:hadRole <arcp://uuid,122d9b1b-b9c4-491d-ad07-471d8f3bbfc3/workflow/packed.cwl#main/slurp> ],
+        [ a prov:Usage ;
+            prov:atTime "2019-09-20T00:24:23.239066"^^xsd:dateTime ;
+            prov:entity <urn:hash::sha1:25403e5354dd352c07c86b755d470811485a5279> ;
+            prov:hadRole <arcp://uuid,122d9b1b-b9c4-491d-ad07-471d8f3bbfc3/workflow/packed.cwl#main/filter> ],
+        [ a prov:Usage ;
+            prov:atTime "2019-09-20T00:24:23.342989"^^xsd:dateTime ;
+            prov:entity <urn:hash::sha1:25403e5354dd352c07c86b755d470811485a5279> ;
+            prov:hadRole <arcp://uuid,122d9b1b-b9c4-491d-ad07-471d8f3bbfc3/workflow/packed.cwl#main/jq-filter.cwl/filter> ] ;
+    prov:startedAtTime "2019-09-20T00:24:23.224189"^^xsd:dateTime ;
+    prov:wasAssociatedWith <urn:uuid:41bf226f-fc87-47d9-a916-b5373097240f>,
+        id:a8fde2f1-5712-4d98-9a59-b18c60316c11 .
+
+id:a8fde2f1-5712-4d98-9a59-b18c60316c11 a wfprov:WorkflowEngine,
+        prov:Agent,
+        prov:SoftwareAgent ;
+    rdfs:label "cwltool 1.0.20190815141648"^^xsd:string ;
+    prov:qualifiedStart [ a prov:Start ;
+            prov:atTime "2019-09-20T00:24:23.224151"^^xsd:dateTime ;
+            prov:hadActivity <urn:uuid:829d94b8-089c-4938-8b9b-857d278ed914> ] .
+

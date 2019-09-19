@@ -1,0 +1,13 @@
+{
+    "filtered": {
+        "location": "../data/61/6137e05929df43c628c18e7a1484ceb27f8040dc",
+        "basename": "filtered.jsonseq",
+        "nameroot": "filtered",
+        "nameext": ".jsonseq",
+        "class": "File",
+        "checksum": "sha1$6137e05929df43c628c18e7a1484ceb27f8040dc",
+        "size": 17,
+        "http://commonwl.org/cwltool#generation": 0,
+        "@id": "urn:uuid:ccee3c14-9515-4fdb-8032-02408a10d8d1"
+    }
+}
