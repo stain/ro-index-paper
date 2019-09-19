@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
   <meta name="author" content="Stian Soiland-Reyes" />
   <meta name="author" content="Paul Groth" />
-  <meta name="dcterms.date" content="2019-09-16" />
+  <meta name="dcterms.date" content="2019-09-19" />
   <meta name="keywords" content="research object, linked data, scholarly communication, null" />
   <title>RO-Index: A survey of Research Object usage</title>
   <style>
@@ -23,7 +23,7 @@
 <header id="title-block-header">
 <h1 class="title">RO-Index: A survey of Research Object usage</h1>
 </header>
-<p><small><em> This manuscript (<a href="https://stain.github.io/ro-index-paper/v/e32764f855bb948fe1b7de24eb01382fb381d9bd/">permalink</a>) was automatically generated from <a href="https://github.com/stain/ro-index-paper/tree/e32764f855bb948fe1b7de24eb01382fb381d9bd">stain/ro-index-paper@e32764f</a> on September 16, 2019. </em></small></p>
+<p><small><em> This manuscript (<a href="https://stain.github.io/ro-index-paper/v/0c49d0d983708b6104bbef31a8fdb99ccbb07d4d/">permalink</a>) was automatically generated from <a href="https://github.com/stain/ro-index-paper/tree/0c49d0d983708b6104bbef31a8fdb99ccbb07d4d">stain/ro-index-paper@0c49d0d</a> on September 19, 2019. </em></small></p>
 <h2 id="authors">Authors</h2>
 <ul>
 <li><p><strong>Stian Soiland-Reyes</strong><br> <img src="images/orcid.svg" alt="ORCID icon" class="inline_icon" /> <a href="https://orcid.org/0000-0001-9842-9718">0000-0001-9842-9718</a> · <img src="images/github.svg" alt="GitHub icon" class="inline_icon" /> <a href="https://github.com/stain">stain</a> · <img src="images/twitter.svg" alt="Twitter icon" class="inline_icon" /> <a href="https://twitter.com/soilandreyes">soilandreyes</a><br> <small> Department of Computer Science, The University of Manchester, UK; Informatics Institute, Faculty of Science, University of Amsterdam, NL · Funded by BioExcel-2 (European Commission H2020-INFRAEDI-02-2018-823830) </small></p></li>
@@ -407,6 +407,12 @@ Filesystem                  Size  Used Avail Use% Mounted on
 ## artifactory Used: 790.6 GB
 ## methodbox 189G
 ## uh.. 1 TB alrady
+
+# Concatinate *.json into a single file for future use with jq
+# Note that this file is not JSON, but application/json-seq
+# https://tools.ietf.org/html/rfc7464
+# -- for use wih jq use jq --seq
+find . -maxdepth 1 -type f -name 'record*json' | xargs -n32 cat | jq -c .  | sed `echo -e "s/^/\x1e/g"` | xz > records.jsonseq.xz
 
 -->
 <h2 id="conclusionsdiscussion">Conclusions/Discussion</h2>

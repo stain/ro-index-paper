@@ -2,7 +2,7 @@
 author-meta:
 - Stian Soiland-Reyes
 - Paul Groth
-date-meta: '2019-09-16'
+date-meta: '2019-09-19'
 keywords:
 - research object
 - linked data
@@ -19,10 +19,10 @@ title: 'RO-Index: A survey of Research Object usage'
 
 <small><em>
 This manuscript
-([permalink](https://stain.github.io/ro-index-paper/v/e32764f855bb948fe1b7de24eb01382fb381d9bd/))
+([permalink](https://stain.github.io/ro-index-paper/v/0c49d0d983708b6104bbef31a8fdb99ccbb07d4d/))
 was automatically generated
-from [stain/ro-index-paper@e32764f](https://github.com/stain/ro-index-paper/tree/e32764f855bb948fe1b7de24eb01382fb381d9bd)
-on September 16, 2019.
+from [stain/ro-index-paper@0c49d0d](https://github.com/stain/ro-index-paper/tree/0c49d0d983708b6104bbef31a8fdb99ccbb07d4d)
+on September 19, 2019.
 </em></small>
 
 ## Authors
@@ -467,6 +467,12 @@ Filesystem                  Size  Used Avail Use% Mounted on
 ## artifactory Used: 790.6 GB
 ## methodbox 189G
 ## uh.. 1 TB alrady
+
+# Concatinate *.json into a single file for future use with jq
+# Note that this file is not JSON, but application/json-seq
+# https://tools.ietf.org/html/rfc7464
+# -- for use wih jq use jq --seq
+find . -maxdepth 1 -type f -name 'record*json' | xargs -n32 cat | jq -c .  | sed `echo -e "s/^/\x1e/g"` | xz > records.jsonseq.xz
 
 -->
 
