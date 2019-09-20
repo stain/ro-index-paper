@@ -19,9 +19,9 @@ title: 'RO-Index: A survey of Research Object usage'
 
 <small><em>
 This manuscript
-([permalink](https://stain.github.io/ro-index-paper/v/3d4c0e3e66cec40253d25badc6d7126554939649/))
+([permalink](https://stain.github.io/ro-index-paper/v/aee2790a662cc9f9e3b46860b8242e106a2bea1c/))
 was automatically generated
-from [stain/ro-index-paper@3d4c0e3](https://github.com/stain/ro-index-paper/tree/3d4c0e3e66cec40253d25badc6d7126554939649)
+from [stain/ro-index-paper@aee2790](https://github.com/stain/ro-index-paper/tree/aee2790a662cc9f9e3b46860b8242e106a2bea1c)
 on September 20, 2019.
 </em></small>
 
@@ -346,6 +346,7 @@ as the numeric part from the OAI-PMH identifier, e.g. for `oai:zenodo.org:131062
 at <https://zenodo.org/api/records/1310621>.
 
 The JSON API supports content negotiation, the content-types supported as of 2019-09-20 include:
+
 * `application/vnd.zenodo.v1+json` giving the Zenodo record in Zenodo's [internal JSON schema](https://github.com/zenodo/zenodo/blob/deploy-qa-2019-09-19-0735/zenodo/modules/records/serializers/schemas/json.py#L267) (v1)
 * `application/ld+json` giving [JSON-LD](https://www.w3.org/TR/2014/REC-json-ld-20140116/) Linked Data using the <http://schema.org/> vocabulary
 * `application/x-datacite-v41+xml` giving DataCite v4 XML [@11AK1fxhK] 
@@ -370,10 +371,11 @@ network link.  The script does:
   the JSON is on a single line
 * Join the JSON files using the ASCII Record Separator (RS, `0x1e`)
   to make a `application/json-seq` JSON text sequence [@1ElvbWEwt] stream
-* Save the JSON stream as a single compressed file using `xz
+* Save the JSON stream as a single compressed file using `xz`
 * From the JSON, select those records that indicate
   `{ "metadata": { "access_right": "open"} }`
-* Select   
+* Select `{ "files": {"type": "zip"} }
+* Summarize `{ "files": {"size": 12345} }` (bytes)
 
 ```bash
 ## Naively Download first 3450000 records (many of are 404)
@@ -411,6 +413,18 @@ as measured using `wget` of a [9 GB file](https://zenodo.org/api/files/2cdaea21-
 it is predicted that actual download time may be doubled because
 of the effect of latency on shorter downloads, which will not
 be able to saturate the link speed before the download is complete.
+For comparison downloading the JSON files, each about 1 kB, took 3
+days, so a realistic estmiate is 7 days to download.
+
+It was found that only a small subset of downloads are over 30 MB. 
+Keeping all the ZIP files <30MB will require about 300 GB.
+
+The machine used for this experiment has about 1 TB free 
+across 2x 1.8TB disks.
+
+Therefore the suggestion is to split the download list into
+two subsets, a) with many small ZIP files which are kept
+b) large ZIP files which are processed by streami
 
 
 (random notes below)
