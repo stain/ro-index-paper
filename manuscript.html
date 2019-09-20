@@ -15,6 +15,69 @@
       span.underline{text-decoration: underline;}
       div.column{display: inline-block; vertical-align: top; width: 50%;}
   </style>
+  <style>
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(title);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+  </style>
   <!--[if lt IE 9]>
     <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
   <![endif]-->
@@ -23,7 +86,7 @@
 <header id="title-block-header">
 <h1 class="title">RO-Index: A survey of Research Object usage</h1>
 </header>
-<p><small><em> This manuscript (<a href="https://stain.github.io/ro-index-paper/v/df717eb1f8ba10c31c43724d632b315fecffda22/">permalink</a>) was automatically generated from <a href="https://github.com/stain/ro-index-paper/tree/df717eb1f8ba10c31c43724d632b315fecffda22">stain/ro-index-paper@df717eb</a> on September 20, 2019. </em></small></p>
+<p><small><em> This manuscript (<a href="https://stain.github.io/ro-index-paper/v/3d4c0e3e66cec40253d25badc6d7126554939649/">permalink</a>) was automatically generated from <a href="https://github.com/stain/ro-index-paper/tree/3d4c0e3e66cec40253d25badc6d7126554939649">stain/ro-index-paper@3d4c0e3</a> on September 20, 2019. </em></small></p>
 <h2 id="authors">Authors</h2>
 <ul>
 <li><p><strong>Stian Soiland-Reyes</strong><br> <img src="images/orcid.svg" alt="ORCID icon" class="inline_icon" /> <a href="https://orcid.org/0000-0001-9842-9718">0000-0001-9842-9718</a> · <img src="images/github.svg" alt="GitHub icon" class="inline_icon" /> <a href="https://github.com/stain">stain</a> · <img src="images/twitter.svg" alt="Twitter icon" class="inline_icon" /> <a href="https://twitter.com/soilandreyes">soilandreyes</a><br> <small> Department of Computer Science, The University of Manchester, UK; Informatics Institute, Faculty of Science, University of Amsterdam, NL · Funded by BioExcel-2 (European Commission H2020-INFRAEDI-02-2018-823830) </small></p></li>
@@ -79,7 +142,7 @@ Ethics policies: All research must have been conducted within an appropriate eth
 <p>In order to determine potential sources of Research Objects we will start with these community lists, but expand based on a literature review by following any academic citation of the before-mentioned Research Object articles to find potential repositories, tools and communities that may conceptually claim to have or make “research objects”. This is a broad interpretation that does not expand into general datasets or packaging formats. The list may be expanded by literate search for “Research Object”, the RO vocabularies and standard URLs.</p>
 <p>Each of the citing articles will then be assessed to see if they have openly accessible research objects that are possible to identify, and ideally retrieve, by building a programmatic crawler. Ideally such access would use an open harvesting protocol like <a href="http://www.openarchives.org/OAI/2.0/openarchivesprotocol.htm">OAI-PMH</a> or <a href="http://www.openarchives.org/rs/1.1/resourcesync">ResourceSync</a>, but it is predicted that in the majority of cases custom crawler code will need to be developed per repository, in addition to manual harvesting of identifiers for smaller collections and individual Research Objects.</p>
 <h4 id="keyword-searches">Keyword searches</h4>
-<p>In addition to this “self-claimed” research object usage we will search in more general repositories by developing a list of keywords like “research object”, “robundle” or the RO vocabulary URLs. We will search in at least:</p>
+<p>7 In addition to this “self-claimed” research object usage we will search in more general repositories by developing a list of keywords like “research object”, “robundle” or the RO vocabulary URLs. We will search in at least:</p>
 <ul>
 <li><a href="https://github.com/" class="uri">https://github.com/</a></li>
 <li><a href="https://gitlab.com/" class="uri">https://gitlab.com/</a></li>
@@ -239,13 +302,13 @@ Ethics policies: All research must have been conducted within an appropriate eth
 <li>Extract the URI for the Zenodo record, e.g. &lt;oai:zenodo.org:1484341&gt;</li>
 <li>Search-replace to build the URI of the the corresponding Zenodo landing page, e.g. <a href="https://zenodo.org/record/2838898" class="uri">https://zenodo.org/record/2838898</a></li>
 <li>Retrieve the HTML of the landing page</li>
-<li>Extract the <a href="https://tools.ietf.org/html/rfc8288">link relations</a> of type <a href="https://html.spec.whatwg.org/multipage/links.html#rel-alternate">alternate</a> to find the download links</li>
+<li>Extract the <a href="https://tools.ietf.org/html/rfc8288">link relations</a> <span class="citation" data-cites="ozdWB3O7">[<a href="#ref-ozdWB3O7" role="doc-biblioref">24</a>]</span> of type <a href="https://html.spec.whatwg.org/multipage/links.html#rel-alternate">alternate</a> to find the download links</li>
 <li>Filter for download links that end with <code>*.zip</code></li>
 <li>Retrieve ZIP file</li>
 <li>List filenames within ZIP file</li>
 <li>Detect filenames like <code>manifest.rdf</code> <code>eml.xml</code> or <code>meta.xml</code> within list and return original Zenodo URI or <code>null</code> <em>(in development)</em></li>
 </ol>
-<p>The workflow and its components have been tested with the reference implementation <code>cwltool</code> <span class="citation" data-cites="YRViKAa0">[<a href="#ref-YRViKAa0" role="doc-biblioref">24</a>]</span> which can provide rich provenance captured in CWLProv research objects <span class="citation" data-cites="12kpw3Zbe">[<a href="#ref-12kpw3Zbe" role="doc-biblioref">25</a>]</span> <!-- in press 10.1093/gigascience/giz095--></p>
+<p>The workflow and its components have been tested with the reference implementation <code>cwltool</code> <span class="citation" data-cites="YRViKAa0">[<a href="#ref-YRViKAa0" role="doc-biblioref">25</a>]</span> which can provide rich provenance captured in CWLProv research objects <span class="citation" data-cites="12kpw3Zbe">[<a href="#ref-12kpw3Zbe" role="doc-biblioref">26</a>]</span> <!-- in press 10.1093/gigascience/giz095--></p>
 <p>In developing this prototype several challenges where immediately detected:</p>
 <ul>
 <li>The <a href="https://zenodo.org/oai2d?verb=ListRecords&amp;set=user-ro&amp;metadataPrefix=datacite4">OAI-PMH records</a> contain substansive DataCite information, but do not include the links to the Zenodo record or the ZIP downloads. The identifiers for records is in a form that is specific to OAI-PMH, e.g. <code>oai:zenodo.org:1310621</code> and had to be rewritten to a URI using the same record number.
@@ -258,7 +321,7 @@ Ethics policies: All research must have been conducted within an appropriate eth
 </ul></li>
 <li>To list filename contained in a ZIP file, the whole file must be downloaded because in the <a href="https://pkware.cachefly.net/webdocs/casestudies/APPNOTE.TXT">ZIP format</a> the table of content is written at the end of the file
 <ul>
-<li>The host providing Zenodo downloads do not support the <a href="https://tools.ietf.org/html/rfc7233">HTTP Range</a> request header, so it is not possible to download say only the last 128 kB of the ZIP file.</li>
+<li>The host providing Zenodo downloads do not support the <a href="https://tools.ietf.org/html/rfc7233">HTTP Range</a> request header <span class="citation" data-cites="8nlwFIw8">[<a href="#ref-8nlwFIw8" role="doc-biblioref">27</a>]</span>, so it is not possible to download say only the last 128 kB of the ZIP file.</li>
 <li>Some of the dataset downloads are larger than 1 GB</li>
 <li><code>cwltool</code> saves all intermediate values until the end of the workflow</li>
 </ul></li>
@@ -270,8 +333,49 @@ Ethics policies: All research must have been conducted within an appropriate eth
 <li>It was found that <code>cwltool --parallel</code> did not seem to start the subsequent step and thus did not facilitate the <code>streamable</code> feature. The ZIP files were still saved to disk, and all the ZIP file downloads where completed before any of the ZIP extraction was started. Future work will explore using the implementation <code>toil</code> which have been argued to have better support for concurrency.</li>
 </ul></li>
 </ul>
-<!--
-TODO: 
+<h4 id="estimating-bandwidth-and-storage-requirements">Estimating bandwidth and storage requirements</h4>
+<p>In order to estimate the bandwidth and storage requirements for executing the above prototype workflow across the whole of Zenodo, a shell script approach was used to retrieve and analyse the JSON for each Zenodo record, which include information on downloadable filename, extension and file size.</p>
+<p>To retrieve these it was deemed necessary to use the <a href="https://github.com/zenodo/zenodo/issues/1426">undocumented</a> parts of <a href="https://developers.zenodo.org/">Zenodo API</a>. From the <a href="https://github.com/zenodo/zenodo/blob/deploy-qa-2019-09-19-0735/zenodo/config.py#L814">Zenodo source code</a> it was identified that the REST template <code>https://zenodo.org/api/records/{pid_value}</code> could be used with <code>pid_value</code> as the numeric part from the OAI-PMH identifier, e.g. for <code>oai:zenodo.org:1310621</code> the Zenodo JSON can be retrieved at <a href="https://zenodo.org/api/records/1310621" class="uri">https://zenodo.org/api/records/1310621</a>.</p>
+<p>The JSON API supports content negotiation, the content-types supported as of 2019-09-20 include: * <code>application/vnd.zenodo.v1+json</code> giving the Zenodo record in Zenodo’s <a href="https://github.com/zenodo/zenodo/blob/deploy-qa-2019-09-19-0735/zenodo/modules/records/serializers/schemas/json.py#L267">internal JSON schema</a> (v1) * <code>application/ld+json</code> giving <a href="https://www.w3.org/TR/2014/REC-json-ld-20140116/">JSON-LD</a> Linked Data using the <a href="http://schema.org/" class="uri">http://schema.org/</a> vocabulary * <code>application/x-datacite-v41+xml</code> giving DataCite v4 XML <span class="citation" data-cites="11AK1fxhK">[<a href="#ref-11AK1fxhK" role="doc-biblioref">28</a>]</span> * <code>application/marcxml+xml</code> giving <a href="http://www.loc.gov/standards/marcxml/">MARC</a> 21 XML</p>
+<p>Using these (currently) undocumented parts of the Zenodo API thus avoids the need for HTML scraping while also giving individual complete records that are suitable to redistribute as records in a filtered dataset.</p>
+<p>This preliminary exploration will be adapted into the reproducible CWL workflow. Below is a bash transcript. Execution time was about 3 days from a server at the University of Manchester network on a single 1 GBps network link. The script does:</p>
+<ul>
+<li>Retrieve each of the first 3.5 million Zenodo records<br />
+as Zenodo JSON by iterating over possible numeric IDs (current maximum ID <code>3450000</code> estimated from <a href="https://zenodo.org/">“Recent uploads”</a>)</li>
+<li>Filter list to exclude records that are not found, moved or deleted. The presence of the key <code>conceptrecid</code> is used as marker.</li>
+<li>Use <a href="https://stedolan.github.io/jq/manual/v1.5/">jq</a> to ensure the JSON is on a single line</li>
+<li>Join the JSON files using the ASCII Record Separator (RS, <code>0x1e</code>) to make a <code>application/json-seq</code> JSON text sequence <span class="citation" data-cites="1ElvbWEwt">[<a href="#ref-1ElvbWEwt" role="doc-biblioref">29</a>]</span> stream</li>
+<li>Save the JSON stream as a single compressed file using `xz</li>
+<li>From the JSON, select those records that indicate <code>{ "metadata": { "access_right": "open"} }</code></li>
+<li>Select</li>
+</ul>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb1-1" title="1"><span class="co">## Naively Download first 3450000 records (many of are 404)</span></a>
+<a class="sourceLine" id="cb1-2" title="2"><span class="co"># </span><span class="al">TODO</span><span class="co">: Run from OAI-PMH ids to avoid 404</span></a>
+<a class="sourceLine" id="cb1-3" title="3"><span class="co"># </span><span class="al">TODO</span><span class="co">: Respect Retry and X-Ratelimit headers (this only overrun once)</span></a>
+<a class="sourceLine" id="cb1-4" title="4"><span class="co"># </span><span class="al">TODO</span><span class="co">: Parallelize 2-3 threads so it does not take 3 days</span></a>
+<a class="sourceLine" id="cb1-5" title="5"><span class="ex">curl</span> --retry 10 -H <span class="st">&quot;Accept: application/vnd.zenodo.v1+json&quot;</span> \</a>
+<a class="sourceLine" id="cb1-6" title="6">  <span class="st">&#39;https://zenodo.org/api/records/[1-3450000]&#39;</span> -o <span class="st">&quot;record_#1.json&quot;</span></a>
+<a class="sourceLine" id="cb1-7" title="7"></a>
+<a class="sourceLine" id="cb1-8" title="8"><span class="co"># Ignore &quot;404&quot; etc.</span></a>
+<a class="sourceLine" id="cb1-9" title="9"><span class="co"># Convert to </span></a>
+<a class="sourceLine" id="cb1-10" title="10"><span class="fu">find</span> . -maxdepth 1 -type f -name <span class="st">&#39;record*json&#39;</span> <span class="kw">|</span> <span class="kw">\</span></a>
+<a class="sourceLine" id="cb1-11" title="11">  <span class="fu">xargs</span> -n32 cat <span class="kw">|</span> <span class="kw">\</span></a>
+<a class="sourceLine" id="cb1-12" title="12">  <span class="ex">jq</span> -c .  <span class="kw">|</span> <span class="kw">\</span></a>
+<a class="sourceLine" id="cb1-13" title="13">  <span class="fu">grep</span> conceptrecid <span class="kw">|</span> <span class="kw">\</span></a>
+<a class="sourceLine" id="cb1-14" title="14">  <span class="fu">sed</span> <span class="kw">`</span><span class="bu">echo</span> -e <span class="st">&quot;s/^/\x1e/g&quot;</span><span class="kw">`</span> <span class="kw">|</span> <span class="kw">\</span></a>
+<a class="sourceLine" id="cb1-15" title="15">  <span class="fu">xz</span> -4 -T5 <span class="op">&gt;</span> records-with-conceptrecid.jsonseq.xz</a>
+<a class="sourceLine" id="cb1-16" title="16"></a>
+<a class="sourceLine" id="cb1-17" title="17"><span class="fu">xzcat</span> records-wtih-conceptrecid.jsonseq.xz <span class="kw">|</span>  <span class="kw">\</span></a>
+<a class="sourceLine" id="cb1-18" title="18">  <span class="ex">jq</span> <span class="st">&#39;. | select(.metadata.access_right == &quot;open&quot;) | \.files[]? | </span></a>
+<a class="sourceLine" id="cb1-19" title="19"><span class="st">     select(.type == &quot;zip&quot;) | reduce .size as $s (0; . + $s)&#39;</span> <span class="kw">|</span> <span class="kw">\</span></a>
+<a class="sourceLine" id="cb1-20" title="20">  <span class="ex">jq</span> --slurp add</a>
+<a class="sourceLine" id="cb1-21" title="21"><span class="co"># 27620751244752</span></a></code></pre></div>
+<p>This indicates that downloading all the *.zip files is about 27 TiB.</p>
+<pre><code>jq -n &#39;27620751244752 / 1024 / 1024 / 73.9 / 3600 / 24&#39;
+# 4.125507608812889</code></pre>
+<p>Downloading all will take at least 4 days assuming 73.9 MBit/s as measured using <code>wget</code> of a <a href="https://zenodo.org/api/files/2cdaea21-80be-48b9-9ab2-259671795f7a/br20832_cores.zip">9 GB file</a> - it is predicted that actual download time may be doubled because of the effect of latency on shorter downloads, which will not be able to saturate the link speed before the download is complete.</p>
+<p>(random notes below)</p>
+<pre><code>TODO: 
 
 - Create PROV entities for each record, download, manifest, datacite etc.
 
@@ -280,32 +384,26 @@ TODO:
 
 Some of the commands..
 
-## Download all records (many of are 404)
-# TODO: Run from OAI-PMH ids to avoid 404
-# TODO: Respect Retry and X-Ratelimit headers
-# TODO: Parallelize 2-3 threads so it does not take 3 days
-curl --retry 10 -H "Accept: application/vnd.zenodo.v1+json" 'https://zenodo.org/api/records/[1-3450000]' -o "record_#1.json"
-
 # TODO: Consistency check of records
-find . -maxdepth 1 -type f -name 'record*json' | xargs grep ^.."status.*404" | cut -d ":" -f 1 | xargs mv -t 404/
+find . -maxdepth 1 -type f -name &#39;record*json&#39; | xargs grep ^..&quot;status.*404&quot; | cut -d &quot;:&quot; -f 1 | xargs mv -t 404/
 
 
 ### TODO: Redo as Jupyter notebook
 
-### Let's check the size of the *.zip files
+### Let&#39;s check the size of the *.zip files
 
-find . -maxdepth 1 -type f -name 'record*json' | xargs -n3 cat | jq '.files[]? | select(.type == "zip") | reduce .size as $s (0; . + $s)  ' > zipsizes.txt
+find . -maxdepth 1 -type f -name &#39;record*json&#39; | xargs -n3 cat | jq &#39;.files[]? | select(.type == &quot;zip&quot;) | reduce .size as $s (0; . + $s)  &#39; &gt; zipsizes.txt
 
 
 ## Some quick estimates on workload and network/disk requirements :
 
 # How many terabytes to download?
-cat zipsizes.txt | jq --slurp 'reduce .[] as $s (0; . + $s) | ./1024 /1024 /1024 / 1024'
+cat zipsizes.txt | jq --slurp &#39;reduce .[] as $s (0; . + $s) | ./1024 /1024 /1024 / 1024&#39;
 3.8408555243122464
 # (at 1008098/3450000 downloaded) 
 
 # So in total we will need to download about 13 TB
-stain@ondex2:/tmp/zenodo$ cat zipsizes.txt | jq --slurp 'reduce .[] as $s (0; . + $s) | ./1024 /1024 /1024 / 1024 /1008098*3450000'
+stain@ondex2:/tmp/zenodo$ cat zipsizes.txt | jq --slurp &#39;reduce .[] as $s (0; . + $s) | ./1024 /1024 /1024 / 1024 /1008098*3450000&#39;
 13.144507338450477
 
 # Downloading 19 MB takes 0.8 s
@@ -315,11 +413,11 @@ Resolving zenodo.org (zenodo.org)... 188.184.65.20
 Connecting to zenodo.org (zenodo.org)|188.184.65.20|:443... connected.
 HTTP request sent, awaiting response... 200 OK
 Length: 20233334 (19M) [application/octet-stream]
-Saving to: 's10.zip.1'
+Saving to: &#39;s10.zip.1&#39;
 
-s10.zip.1                                          100%[================================================================================================================>]  19.30M  59.6MB/s    in 0.3s    
+s10.zip.1                                          100%[================================================================================================================&gt;]  19.30M  59.6MB/s    in 0.3s    
 
-2019-09-15 00:13:20 (59.6 MB/s) - 's10.zip.1' saved [20233334/20233334]
+2019-09-15 00:13:20 (59.6 MB/s) - &#39;s10.zip.1&#39; saved [20233334/20233334]
 
 
 real    0m0.823s
@@ -327,11 +425,11 @@ user    0m0.056s
 sys     0m0.128s
 
 ## Only 6000/31370 files or so are more than 30 MB.
-stain@ondex2:/tmp/zenodo$ cat zipsizes.txt | jq 'select(. > 30*1024*1024)' | wc -l
+stain@ondex2:/tmp/zenodo$ cat zipsizes.txt | jq &#39;select(. &gt; 30*1024*1024)&#39; | wc -l
 6318
 
 ## Only 655/31370 are more than 1 GB
-stain@ondex2:/tmp/zenodo$ cat zipsizes.txt | jq 'select(. > 1024*1024*1024)' | wc -l
+stain@ondex2:/tmp/zenodo$ cat zipsizes.txt | jq &#39;select(. &gt; 1024*1024*1024)&#39; | wc -l
 655
 
 ## Downloading a file of 10 GB runs at 73.9 MB/s avg
@@ -343,11 +441,11 @@ Resolving zenodo.org (zenodo.org)... 188.184.65.20
 Connecting to zenodo.org (zenodo.org)|188.184.65.20|:443... connected.
 HTTP request sent, awaiting response... 200 OK
 Length: 10081056983 (9.4G) [application/octet-stream]
-Saving to: 'br20832_cores.zip'
+Saving to: &#39;br20832_cores.zip&#39;
 
-br20832_cores.zip                                  100%[================================================================================================================>]   9.39G   101MB/s    in 2m 10s  
+br20832_cores.zip                                  100%[================================================================================================================&gt;]   9.39G   101MB/s    in 2m 10s  
 
-2019-09-15 00:25:03 (73.9 MB/s) - 'br20832_cores.zip' saved [10081056983/10081056983]
+2019-09-15 00:25:03 (73.9 MB/s) - &#39;br20832_cores.zip&#39; saved [10081056983/10081056983]
 
 
 real    2m10.634s
@@ -361,20 +459,20 @@ sys     0m55.288s
 
 
 ## Absolute fastest we can download 13 TB?
-stain@ondex2:/tmp/zenodo$ jq -n '13.144507338450477 * 1024 *1024 / 73.9 / 3600 / 24'
+stain@ondex2:/tmp/zenodo$ jq -n &#39;13.144507338450477 * 1024 *1024 / 73.9 / 3600 / 24&#39;
 2.158668954374506
 # aka 2 days 
 
 # how long would Non-parallel download of the small files take?
 
-cat zipsizes.txt | jq 'select(. <= 30*1024*1024)' | wc -l
+cat zipsizes.txt | jq &#39;select(. &lt;= 30*1024*1024)&#39; | wc -l
 25052
 
 (tip, 1008098*3450000 is the scaling factor as these estimates are done after
 downloading about 30 % of zenodo records -- WARNING: Those are not representative but 
 are the 30% oldest. )
 
-stain@ondex2:/tmp/zenodo$ jq -n '25052 * 0.823 / 1008098*3450000 / 3600 / 24'
+stain@ondex2:/tmp/zenodo$ jq -n &#39;25052 * 0.823 / 1008098*3450000 / 3600 / 24&#39;
 0.816
 
 # Should take less than a day? (That would means API download is slower.. )
@@ -382,7 +480,7 @@ stain@ondex2:/tmp/zenodo$ jq -n '25052 * 0.823 / 1008098*3450000 / 3600 / 24'
 So in total 3 days for all zip downloads. No need for special measures.
 
 # All the small ZIP files fit on single disk 
-stain@ondex2:/tmp/zenodo$ cat zipsizes.txt | jq -s '.[] | select(. <= 30*1024*1024)' | jq -s 'reduce .[] as $s (0; . + $s)  / 0.30/ 1024/1024/1024'
+stain@ondex2:/tmp/zenodo$ cat zipsizes.txt | jq -s &#39;.[] | select(. &lt;= 30*1024*1024)&#39; | jq -s &#39;reduce .[] as $s (0; . + $s)  / 0.30/ 1024/1024/1024&#39;
 322.71499813844764
 
 # .. but just about!
@@ -412,30 +510,24 @@ Filesystem                  Size  Used Avail Use% Mounted on
 # Note that this file is not JSON, but application/json-seq
 # https://tools.ietf.org/html/rfc7464
 # -- for use wih jq use jq --seq
-find . -maxdepth 1 -type f -name 'record*json' | xargs -n32 cat | jq -c .  | sed `echo -e "s/^/\x1e/g"` | xz > records.jsonseq.xz
+find . -maxdepth 1 -type f -name &#39;record*json&#39; | xargs -n32 cat | jq -c .  | sed `echo -e &quot;s/^/\x1e/g&quot;` | xz &gt; records.jsonseq.xz
 
 # Find filenames of uploads
-xzcat < records.jsonseq.xz | jq --seq --raw-output '.files[]?.key'  > deposit_filenames.txt
+xzcat &lt; records.jsonseq.xz | jq --seq --raw-output &#39;.files[]?.key&#39;  &gt; deposit_filenames.txt
 
 
-# Build a jsonseq with only json records containing "conceptrecid" (avoiding "moved" and "not found" etc)
+# Build a jsonseq with only json records containing &quot;conceptrecid&quot; (avoiding &quot;moved&quot; and &quot;not found&quot; etc)
 # (avoids the previous naive 404 filtering)
 
-find . -maxdepth 1 -type f -name 'record*json' | xargs -n32 cat | jq -c .  | grep conceptrecid| sed `echo -e "s/^/\x1e/g"` | xz -4 -T5 > records-with-conceptrecid.jsonseq.xz
+
 
 # Look for *.zip file that are open to download
 
-xzcat records-wtih-conceptrecid.jsonseq.xz |  jq '. | select(.metadata.access_right == "open") | .files[]? | select(.type == "zip") | reduce .size as $s (0; . + $s)' | jq --slurp add
+xzcat records-wtih-conceptrecid.jsonseq.xz |  jq &#39;. | select(.metadata.access_right == &quot;open&quot;) | .files[]? | select(.type == &quot;zip&quot;) | reduce .size as $s (0; . + $s)&#39; | jq --slurp add
 
 27620751244752
 
-(aka 27 TiB)
-
-
-
-
-
--->
+(aka 27 TiB)</code></pre>
 <h2 id="conclusionsdiscussion">Conclusions/Discussion</h2>
 <h2 id="data-and-software-availability">Data (and Software) Availability</h2>
 <!--
@@ -619,17 +711,41 @@ Peter Amstutz, Michael R. Crusoe, Nebojša Tijanić, Brad Chapman, John Chilton,
 <em>Figshare</em> (2016) <a href="https://doi.org/gf6ppg">https://doi.org/gf6ppg</a><br />
 DOI: <a href="https://doi.org/10.6084/m9.figshare.3115156.v2">10.6084/m9.figshare.3115156.v2</a></p>
 </div>
+<div id="ref-ozdWB3O7">
+<p>24. <strong>Web Linking</strong><br />
+M. Nottingham<br />
+<em>RFC Editor</em> (2017-10) <a href="https://doi.org/gf8jcd">https://doi.org/gf8jcd</a><br />
+DOI: <a href="https://doi.org/10.17487/rfc8288">10.17487/rfc8288</a></p>
+</div>
 <div id="ref-YRViKAa0">
-<p>24. <strong>common-workflow-language/cwltool: cwltool 1.0.20190815141648</strong><br />
+<p>25. <strong>common-workflow-language/cwltool: cwltool 1.0.20190815141648</strong><br />
 Peter Amstutz, Michael R. Crusoe, Farah Zaib Khan, Stian Soiland-Reyes, Manvendra Singh, Kapil Kumar, Anton Khodak, John Chilton, Thomas Hickman, Boysha, … Ryan Spangler<br />
 <em>Zenodo</em> (2019-08-15) <a href="https://doi.org/gf7s2s">https://doi.org/gf7s2s</a><br />
 DOI: <a href="https://doi.org/10.5281/zenodo.3369238">10.5281/zenodo.3369238</a></p>
 </div>
 <div id="ref-12kpw3Zbe">
-<p>25. <strong>Sharing interoperable workflow provenance: A review of best practices and their practical application in CWLProv</strong><br />
+<p>26. <strong>Sharing interoperable workflow provenance: A review of best practices and their practical application in CWLProv</strong><br />
 Farah Zaib Khan, Stian Soiland-Reyes, Richard O. Sinnott, Andrew Lonie, Carole Goble, Michael R. Crusoe<br />
 <em>Zenodo</em> (2019-05-23) <a href="https://doi.org/gf7s2r">https://doi.org/gf7s2r</a><br />
 DOI: <a href="https://doi.org/10.5281/zenodo.3196309">10.5281/zenodo.3196309</a></p>
+</div>
+<div id="ref-8nlwFIw8">
+<p>27. <strong>Hypertext Transfer Protocol (HTTP/1.1): Range Requests</strong><br />
+R. Fielding, Y. Lafon, J. Reschke (editors)<br />
+<em>RFC Editor</em> (2014-06) <a href="https://doi.org/gf8jcb">https://doi.org/gf8jcb</a><br />
+DOI: <a href="https://doi.org/10.17487/rfc7233">10.17487/rfc7233</a></p>
+</div>
+<div id="ref-11AK1fxhK">
+<p>28. <strong>DataCite Metadata Schema Documentation for the Publication and Citation of Research Data v4.0</strong><br />
+DataCite Metadata Working Group<br />
+<em>DataCite e.V.</em> (2016) <a href="https://doi.org/gf8jcf">https://doi.org/gf8jcf</a><br />
+DOI: <a href="https://doi.org/10.5438/0012">10.5438/0012</a></p>
+</div>
+<div id="ref-1ElvbWEwt">
+<p>29. <strong>JavaScript Object Notation (JSON) Text Sequences</strong><br />
+N. Williams<br />
+<em>RFC Editor</em> (2015-02) <a href="https://doi.org/gf8jcc">https://doi.org/gf8jcc</a><br />
+DOI: <a href="https://doi.org/10.17487/rfc7464">10.17487/rfc7464</a></p>
 </div>
 </div>
 <!-- default theme -->
