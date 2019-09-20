@@ -2,7 +2,7 @@
 author-meta:
 - Stian Soiland-Reyes
 - Paul Groth
-date-meta: '2019-09-19'
+date-meta: '2019-09-20'
 keywords:
 - research object
 - linked data
@@ -19,10 +19,10 @@ title: 'RO-Index: A survey of Research Object usage'
 
 <small><em>
 This manuscript
-([permalink](https://stain.github.io/ro-index-paper/v/0c49d0d983708b6104bbef31a8fdb99ccbb07d4d/))
+([permalink](https://stain.github.io/ro-index-paper/v/df717eb1f8ba10c31c43724d632b315fecffda22/))
 was automatically generated
-from [stain/ro-index-paper@0c49d0d](https://github.com/stain/ro-index-paper/tree/0c49d0d983708b6104bbef31a8fdb99ccbb07d4d)
-on September 19, 2019.
+from [stain/ro-index-paper@df717eb](https://github.com/stain/ro-index-paper/tree/df717eb1f8ba10c31c43724d632b315fecffda22)
+on September 20, 2019.
 </em></small>
 
 ## Authors
@@ -473,6 +473,27 @@ Filesystem                  Size  Used Avail Use% Mounted on
 # https://tools.ietf.org/html/rfc7464
 # -- for use wih jq use jq --seq
 find . -maxdepth 1 -type f -name 'record*json' | xargs -n32 cat | jq -c .  | sed `echo -e "s/^/\x1e/g"` | xz > records.jsonseq.xz
+
+# Find filenames of uploads
+xzcat < records.jsonseq.xz | jq --seq --raw-output '.files[]?.key'  > deposit_filenames.txt
+
+
+# Build a jsonseq with only json records containing "conceptrecid" (avoiding "moved" and "not found" etc)
+# (avoids the previous naive 404 filtering)
+
+find . -maxdepth 1 -type f -name 'record*json' | xargs -n32 cat | jq -c .  | grep conceptrecid| sed `echo -e "s/^/\x1e/g"` | xz -4 -T5 > records-with-conceptrecid.jsonseq.xz
+
+# Look for *.zip file that are open to download
+
+xzcat records-wtih-conceptrecid.jsonseq.xz |  jq '. | select(.metadata.access_right == "open") | .files[]? | select(.type == "zip") | reduce .size as $s (0; . + $s)' | jq --slurp add
+
+27620751244752
+
+(aka 27 TiB)
+
+
+
+
 
 -->
 
