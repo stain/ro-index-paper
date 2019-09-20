@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
   <meta name="author" content="Stian Soiland-Reyes" />
   <meta name="author" content="Paul Groth" />
-  <meta name="dcterms.date" content="2019-09-19" />
+  <meta name="dcterms.date" content="2019-09-20" />
   <meta name="keywords" content="research object, linked data, scholarly communication, null" />
   <title>RO-Index: A survey of Research Object usage</title>
   <style>
@@ -23,7 +23,7 @@
 <header id="title-block-header">
 <h1 class="title">RO-Index: A survey of Research Object usage</h1>
 </header>
-<p><small><em> This manuscript (<a href="https://stain.github.io/ro-index-paper/v/0c49d0d983708b6104bbef31a8fdb99ccbb07d4d/">permalink</a>) was automatically generated from <a href="https://github.com/stain/ro-index-paper/tree/0c49d0d983708b6104bbef31a8fdb99ccbb07d4d">stain/ro-index-paper@0c49d0d</a> on September 19, 2019. </em></small></p>
+<p><small><em> This manuscript (<a href="https://stain.github.io/ro-index-paper/v/df717eb1f8ba10c31c43724d632b315fecffda22/">permalink</a>) was automatically generated from <a href="https://github.com/stain/ro-index-paper/tree/df717eb1f8ba10c31c43724d632b315fecffda22">stain/ro-index-paper@df717eb</a> on September 20, 2019. </em></small></p>
 <h2 id="authors">Authors</h2>
 <ul>
 <li><p><strong>Stian Soiland-Reyes</strong><br> <img src="images/orcid.svg" alt="ORCID icon" class="inline_icon" /> <a href="https://orcid.org/0000-0001-9842-9718">0000-0001-9842-9718</a> · <img src="images/github.svg" alt="GitHub icon" class="inline_icon" /> <a href="https://github.com/stain">stain</a> · <img src="images/twitter.svg" alt="Twitter icon" class="inline_icon" /> <a href="https://twitter.com/soilandreyes">soilandreyes</a><br> <small> Department of Computer Science, The University of Manchester, UK; Informatics Institute, Faculty of Science, University of Amsterdam, NL · Funded by BioExcel-2 (European Commission H2020-INFRAEDI-02-2018-823830) </small></p></li>
@@ -413,6 +413,27 @@ Filesystem                  Size  Used Avail Use% Mounted on
 # https://tools.ietf.org/html/rfc7464
 # -- for use wih jq use jq --seq
 find . -maxdepth 1 -type f -name 'record*json' | xargs -n32 cat | jq -c .  | sed `echo -e "s/^/\x1e/g"` | xz > records.jsonseq.xz
+
+# Find filenames of uploads
+xzcat < records.jsonseq.xz | jq --seq --raw-output '.files[]?.key'  > deposit_filenames.txt
+
+
+# Build a jsonseq with only json records containing "conceptrecid" (avoiding "moved" and "not found" etc)
+# (avoids the previous naive 404 filtering)
+
+find . -maxdepth 1 -type f -name 'record*json' | xargs -n32 cat | jq -c .  | grep conceptrecid| sed `echo -e "s/^/\x1e/g"` | xz -4 -T5 > records-with-conceptrecid.jsonseq.xz
+
+# Look for *.zip file that are open to download
+
+xzcat records-wtih-conceptrecid.jsonseq.xz |  jq '. | select(.metadata.access_right == "open") | .files[]? | select(.type == "zip") | reduce .size as $s (0; . + $s)' | jq --slurp add
+
+27620751244752
+
+(aka 27 TiB)
+
+
+
+
 
 -->
 <h2 id="conclusionsdiscussion">Conclusions/Discussion</h2>
