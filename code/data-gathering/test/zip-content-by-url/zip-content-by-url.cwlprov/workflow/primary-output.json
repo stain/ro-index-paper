@@ -8,17 +8,17 @@
         "checksum": "sha1$ea81a56a134293016cf9701b9198945f9a115e25",
         "size": 5581,
         "http://commonwl.org/cwltool#generation": 0,
-        "@id": "urn:uuid:38bbce96-10ca-441a-b672-abe5bf1a0acf"
+        "@id": "urn:uuid:53a45f26-569d-4f0f-8da4-5323afc960d2"
     },
     "headers": {
-        "location": "../data/b8/b875e161b7de752df1b5e111482391fd0ef23f61",
+        "location": "../data/3c/3c07ea55203d4eb693a6cfacec1fd555c31a5bf7",
         "basename": "headers.txt",
         "nameroot": "headers",
         "nameext": ".txt",
         "class": "File",
-        "checksum": "sha1$b875e161b7de752df1b5e111482391fd0ef23f61",
-        "size": 2827,
+        "checksum": "sha1$3c07ea55203d4eb693a6cfacec1fd555c31a5bf7",
+        "size": 2750,
         "http://commonwl.org/cwltool#generation": 0,
-        "@id": "urn:uuid:5aac5126-1827-4dca-ba53-e867eca94faa"
+        "@id": "urn:uuid:b677ce7c-9bb6-494e-8260-c4be61b03c0c"
     }
 }

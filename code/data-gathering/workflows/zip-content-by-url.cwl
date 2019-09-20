@@ -60,7 +60,8 @@ steps:
         in:
             zipstream: fetch/downloaded
         out: [filenames]
-        run: ../tools/sunzip-list.cwl
+        #run: ../tools/sunzip-list.cwl
+        run: ../tools/jar-list.cwl
 
 
 s:creator:

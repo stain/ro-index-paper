@@ -9,29 +9,29 @@
     "id": "urn:uuid:",
     "data": "urn:hash::sha1:",
     "sha256": "nih:sha-256;",
-    "researchobject": "arcp://uuid,454aeb5b-b14f-467e-b6b8-3fa490495482/",
-    "metadata": "arcp://uuid,454aeb5b-b14f-467e-b6b8-3fa490495482/metadata/",
-    "provenance": "arcp://uuid,454aeb5b-b14f-467e-b6b8-3fa490495482/metadata/provenance/",
-    "wf": "arcp://uuid,454aeb5b-b14f-467e-b6b8-3fa490495482/workflow/packed.cwl#",
-    "input": "arcp://uuid,454aeb5b-b14f-467e-b6b8-3fa490495482/workflow/primary-job.json#",
+    "researchobject": "arcp://uuid,6e0a2b65-867e-4403-968c-15be7d97274f/",
+    "metadata": "arcp://uuid,6e0a2b65-867e-4403-968c-15be7d97274f/metadata/",
+    "provenance": "arcp://uuid,6e0a2b65-867e-4403-968c-15be7d97274f/metadata/provenance/",
+    "wf": "arcp://uuid,6e0a2b65-867e-4403-968c-15be7d97274f/workflow/packed.cwl#",
+    "input": "arcp://uuid,6e0a2b65-867e-4403-968c-15be7d97274f/workflow/primary-job.json#",
     "wf4ever": "http://purl.org/wf4ever/wf4ever#"
   },
   "agent": {
-    "id:73504c56-03ee-4568-bdab-cb9ccbce1b17": {},
-    "id:d8ed0297-4611-45d9-93d1-3aa3d31efdf0": {
+    "id:2a7932ac-e72a-4d35-9d60-2e67282bbd8a": {},
+    "id:1d71d50a-669c-412f-8103-8a18a547c46b": {
       "prov:type": [
         {
-          "$": "wfprov:WorkflowEngine",
+          "$": "prov:SoftwareAgent",
           "type": "prov:QUALIFIED_NAME"
         },
         {
-          "$": "prov:SoftwareAgent",
+          "$": "wfprov:WorkflowEngine",
           "type": "prov:QUALIFIED_NAME"
         }
       ],
       "prov:label": "cwltool 1.0.20190815141648"
     },
-    "id:84507d98-286c-4533-a259-13c18b01877d": {
+    "id:618f1657-8615-46f4-a5d4-b69a9c6b3c21": {
       "prov:type": {
         "$": "prov:SoftwareAgent",
         "type": "prov:QUALIFIED_NAME"
@@ -39,54 +39,54 @@
       "cwlprov:image": "appropriate/curl:3.1",
       "prov:label": "Container execution of image appropriate/curl:3.1"
     },
-    "id:adefb683-9c6f-4e75-aece-c2947baaaed1": {
+    "id:79f33e51-c0e0-4eb2-8821-aa4176479cac": {
       "prov:type": {
         "$": "prov:SoftwareAgent",
         "type": "prov:QUALIFIED_NAME"
       },
-      "cwlprov:image": "stain/sunzip",
-      "prov:label": "Container execution of image stain/sunzip"
+      "cwlprov:image": "openjdk:11.0-slim",
+      "prov:label": "Container execution of image openjdk:11.0-slim"
     }
   },
   "wasStartedBy": {
     "_:id1": {
-      "prov:activity": "id:d8ed0297-4611-45d9-93d1-3aa3d31efdf0",
-      "prov:starter": "id:73504c56-03ee-4568-bdab-cb9ccbce1b17",
-      "prov:time": "2019-08-20T02:06:34.306382"
+      "prov:activity": "id:1d71d50a-669c-412f-8103-8a18a547c46b",
+      "prov:starter": "id:2a7932ac-e72a-4d35-9d60-2e67282bbd8a",
+      "prov:time": "2019-09-20T00:53:24.383828"
     },
     "_:id3": {
-      "prov:activity": "id:454aeb5b-b14f-467e-b6b8-3fa490495482",
-      "prov:starter": "id:d8ed0297-4611-45d9-93d1-3aa3d31efdf0",
-      "prov:time": "2019-08-20T02:06:34.306514"
+      "prov:activity": "id:6e0a2b65-867e-4403-968c-15be7d97274f",
+      "prov:starter": "id:1d71d50a-669c-412f-8103-8a18a547c46b",
+      "prov:time": "2019-09-20T00:53:24.383954"
     },
     "_:id6": {
-      "prov:activity": "id:7760c4c2-a5d0-4be5-8798-97106aea049f",
-      "prov:starter": "id:454aeb5b-b14f-467e-b6b8-3fa490495482",
-      "prov:time": "2019-08-20T02:06:35.022196"
+      "prov:activity": "id:70d0b91f-ccba-4be4-bc4c-f996b21be536",
+      "prov:starter": "id:6e0a2b65-867e-4403-968c-15be7d97274f",
+      "prov:time": "2019-09-20T00:53:24.916289"
     },
     "_:id16": {
-      "prov:activity": "id:0e114bb2-79f8-4514-806a-8d8af99f54d4",
-      "prov:starter": "id:454aeb5b-b14f-467e-b6b8-3fa490495482",
-      "prov:time": "2019-08-20T02:06:37.528478"
+      "prov:activity": "id:4facdd7b-27e1-410e-a54f-2b0bec96508c",
+      "prov:starter": "id:6e0a2b65-867e-4403-968c-15be7d97274f",
+      "prov:time": "2019-09-20T00:53:27.297369"
     }
   },
   "activity": {
-    "id:454aeb5b-b14f-467e-b6b8-3fa490495482": {
-      "prov:startTime": "2019-08-20T02:06:34.306422",
+    "id:6e0a2b65-867e-4403-968c-15be7d97274f": {
+      "prov:startTime": "2019-09-20T00:53:24.383866",
       "prov:type": {
         "$": "wfprov:WorkflowRun",
         "type": "prov:QUALIFIED_NAME"
       },
       "prov:label": "Run of workflow/packed.cwl#main"
     },
-    "id:7760c4c2-a5d0-4be5-8798-97106aea049f": {
+    "id:70d0b91f-ccba-4be4-bc4c-f996b21be536": {
       "prov:type": {
         "$": "wfprov:ProcessRun",
         "type": "prov:QUALIFIED_NAME"
       },
       "prov:label": "Run of workflow/packed.cwl#main/fetch"
     },
-    "id:0e114bb2-79f8-4514-806a-8d8af99f54d4": {
+    "id:4facdd7b-27e1-410e-a54f-2b0bec96508c": {
       "prov:type": {
         "$": "wfprov:ProcessRun",
         "type": "prov:QUALIFIED_NAME"
@@ -96,27 +96,27 @@
   },
   "wasAssociatedWith": {
     "_:id2": {
-      "prov:activity": "id:454aeb5b-b14f-467e-b6b8-3fa490495482",
-      "prov:agent": "id:d8ed0297-4611-45d9-93d1-3aa3d31efdf0",
+      "prov:activity": "id:6e0a2b65-867e-4403-968c-15be7d97274f",
+      "prov:agent": "id:1d71d50a-669c-412f-8103-8a18a547c46b",
       "prov:plan": "wf:main"
     },
     "_:id5": {
-      "prov:activity": "id:7760c4c2-a5d0-4be5-8798-97106aea049f",
-      "prov:agent": "id:d8ed0297-4611-45d9-93d1-3aa3d31efdf0",
+      "prov:activity": "id:70d0b91f-ccba-4be4-bc4c-f996b21be536",
+      "prov:agent": "id:1d71d50a-669c-412f-8103-8a18a547c46b",
       "prov:plan": "wf:main/fetch"
     },
     "_:id7": {
-      "prov:activity": "id:7760c4c2-a5d0-4be5-8798-97106aea049f",
-      "prov:agent": "id:84507d98-286c-4533-a259-13c18b01877d"
+      "prov:activity": "id:70d0b91f-ccba-4be4-bc4c-f996b21be536",
+      "prov:agent": "id:618f1657-8615-46f4-a5d4-b69a9c6b3c21"
     },
     "_:id15": {
-      "prov:activity": "id:0e114bb2-79f8-4514-806a-8d8af99f54d4",
-      "prov:agent": "id:d8ed0297-4611-45d9-93d1-3aa3d31efdf0",
+      "prov:activity": "id:4facdd7b-27e1-410e-a54f-2b0bec96508c",
+      "prov:agent": "id:1d71d50a-669c-412f-8103-8a18a547c46b",
       "prov:plan": "wf:main/list"
     },
     "_:id17": {
-      "prov:activity": "id:0e114bb2-79f8-4514-806a-8d8af99f54d4",
-      "prov:agent": "id:adefb683-9c6f-4e75-aece-c2947baaaed1"
+      "prov:activity": "id:4facdd7b-27e1-410e-a54f-2b0bec96508c",
+      "prov:agent": "id:79f33e51-c0e0-4eb2-8821-aa4176479cac"
     }
   },
   "entity": {
@@ -124,11 +124,11 @@
       {
         "prov:type": [
           {
-            "$": "prov:Plan",
+            "$": "wfdesc:Workflow",
             "type": "prov:QUALIFIED_NAME"
           },
           {
-            "$": "wfdesc:Workflow",
+            "$": "prov:Plan",
             "type": "prov:QUALIFIED_NAME"
           }
         ],
@@ -202,14 +202,14 @@
         "type": "prov:QUALIFIED_NAME"
       }
     },
-    "id:912213cd-6c25-4a53-9555-70fa71154b29": {
+    "id:8f07a7af-46d1-4089-b797-44d5a9169b9b": {
       "prov:type": [
         {
-          "$": "wfprov:Artifact",
+          "$": "wf4ever:File",
           "type": "prov:QUALIFIED_NAME"
         },
         {
-          "$": "wf4ever:File",
+          "$": "wfprov:Artifact",
           "type": "prov:QUALIFIED_NAME"
         }
       ],
@@ -217,20 +217,20 @@
       "cwlprov:nameroot": "downloaded",
       "cwlprov:nameext": ""
     },
-    "data:b875e161b7de752df1b5e111482391fd0ef23f61": {
+    "data:3c07ea55203d4eb693a6cfacec1fd555c31a5bf7": {
       "prov:type": {
         "$": "wfprov:Artifact",
         "type": "prov:QUALIFIED_NAME"
       }
     },
-    "id:5aac5126-1827-4dca-ba53-e867eca94faa": {
+    "id:b677ce7c-9bb6-494e-8260-c4be61b03c0c": {
       "prov:type": [
         {
-          "$": "wfprov:Artifact",
+          "$": "wf4ever:File",
           "type": "prov:QUALIFIED_NAME"
         },
         {
-          "$": "wf4ever:File",
+          "$": "wfprov:Artifact",
           "type": "prov:QUALIFIED_NAME"
         }
       ],
@@ -244,14 +244,14 @@
         "type": "prov:QUALIFIED_NAME"
       }
     },
-    "id:38bbce96-10ca-441a-b672-abe5bf1a0acf": {
+    "id:53a45f26-569d-4f0f-8da4-5323afc960d2": {
       "prov:type": [
         {
-          "$": "wfprov:Artifact",
+          "$": "wf4ever:File",
           "type": "prov:QUALIFIED_NAME"
         },
         {
-          "$": "wf4ever:File",
+          "$": "wfprov:Artifact",
           "type": "prov:QUALIFIED_NAME"
         }
       ],
@@ -262,36 +262,36 @@
   },
   "used": {
     "_:id4": {
-      "prov:activity": "id:454aeb5b-b14f-467e-b6b8-3fa490495482",
+      "prov:activity": "id:6e0a2b65-867e-4403-968c-15be7d97274f",
       "prov:entity": "data:1ed25ffe281de63b243fbd01ceeba2d4c84ebb92",
-      "prov:time": "2019-08-20T02:06:35.018073",
+      "prov:time": "2019-09-20T00:53:24.912446",
       "prov:role": {
         "$": "wf:main/url",
         "type": "prov:QUALIFIED_NAME"
       }
     },
     "_:id8": {
-      "prov:activity": "id:7760c4c2-a5d0-4be5-8798-97106aea049f",
+      "prov:activity": "id:70d0b91f-ccba-4be4-bc4c-f996b21be536",
       "prov:entity": "data:19e1edf9ec12896b679c785ee768f8995478a7ea",
-      "prov:time": "2019-08-20T02:06:35.221809",
+      "prov:time": "2019-09-20T00:53:25.032863",
       "prov:role": {
         "$": "wf:main/fetch/acceptType",
         "type": "prov:QUALIFIED_NAME"
       }
     },
     "_:id9": {
-      "prov:activity": "id:7760c4c2-a5d0-4be5-8798-97106aea049f",
+      "prov:activity": "id:70d0b91f-ccba-4be4-bc4c-f996b21be536",
       "prov:entity": "data:1ed25ffe281de63b243fbd01ceeba2d4c84ebb92",
-      "prov:time": "2019-08-20T02:06:35.222232",
+      "prov:time": "2019-09-20T00:53:25.033305",
       "prov:role": {
         "$": "wf:main/fetch/url",
         "type": "prov:QUALIFIED_NAME"
       }
     },
     "_:id18": {
-      "prov:activity": "id:0e114bb2-79f8-4514-806a-8d8af99f54d4",
-      "prov:entity": "id:912213cd-6c25-4a53-9555-70fa71154b29",
-      "prov:time": "2019-08-20T02:06:37.697645",
+      "prov:activity": "id:4facdd7b-27e1-410e-a54f-2b0bec96508c",
+      "prov:entity": "id:8f07a7af-46d1-4089-b797-44d5a9169b9b",
+      "prov:time": "2019-09-20T00:53:27.419737",
       "prov:role": {
         "$": "wf:main/list/zipstream",
         "type": "prov:QUALIFIED_NAME"
@@ -300,59 +300,59 @@
   },
   "specializationOf": {
     "_:id10": {
-      "prov:specificEntity": "id:912213cd-6c25-4a53-9555-70fa71154b29",
+      "prov:specificEntity": "id:8f07a7af-46d1-4089-b797-44d5a9169b9b",
       "prov:generalEntity": "data:0dce36217c7de25325d67344dc15e5518781a920"
     },
     "_:id12": {
-      "prov:specificEntity": "id:5aac5126-1827-4dca-ba53-e867eca94faa",
-      "prov:generalEntity": "data:b875e161b7de752df1b5e111482391fd0ef23f61"
+      "prov:specificEntity": "id:b677ce7c-9bb6-494e-8260-c4be61b03c0c",
+      "prov:generalEntity": "data:3c07ea55203d4eb693a6cfacec1fd555c31a5bf7"
     },
     "_:id19": {
-      "prov:specificEntity": "id:38bbce96-10ca-441a-b672-abe5bf1a0acf",
+      "prov:specificEntity": "id:53a45f26-569d-4f0f-8da4-5323afc960d2",
       "prov:generalEntity": "data:ea81a56a134293016cf9701b9198945f9a115e25"
     }
   },
   "wasGeneratedBy": {
     "_:id11": {
-      "prov:entity": "id:912213cd-6c25-4a53-9555-70fa71154b29",
-      "prov:activity": "id:7760c4c2-a5d0-4be5-8798-97106aea049f",
-      "prov:time": "2019-08-20T02:06:37.520561",
+      "prov:entity": "id:8f07a7af-46d1-4089-b797-44d5a9169b9b",
+      "prov:activity": "id:70d0b91f-ccba-4be4-bc4c-f996b21be536",
+      "prov:time": "2019-09-20T00:53:27.291989",
       "prov:role": {
         "$": "wf:main/fetch/downloaded",
         "type": "prov:QUALIFIED_NAME"
       }
     },
     "_:id13": {
-      "prov:entity": "id:5aac5126-1827-4dca-ba53-e867eca94faa",
-      "prov:activity": "id:7760c4c2-a5d0-4be5-8798-97106aea049f",
-      "prov:time": "2019-08-20T02:06:37.520561",
+      "prov:entity": "id:b677ce7c-9bb6-494e-8260-c4be61b03c0c",
+      "prov:activity": "id:70d0b91f-ccba-4be4-bc4c-f996b21be536",
+      "prov:time": "2019-09-20T00:53:27.291989",
       "prov:role": {
         "$": "wf:main/fetch/headers",
         "type": "prov:QUALIFIED_NAME"
       }
     },
     "_:id20": {
-      "prov:entity": "id:38bbce96-10ca-441a-b672-abe5bf1a0acf",
-      "prov:activity": "id:0e114bb2-79f8-4514-806a-8d8af99f54d4",
-      "prov:time": "2019-08-20T02:06:39.244884",
+      "prov:entity": "id:53a45f26-569d-4f0f-8da4-5323afc960d2",
+      "prov:activity": "id:4facdd7b-27e1-410e-a54f-2b0bec96508c",
+      "prov:time": "2019-09-20T00:53:29.068212",
       "prov:role": {
         "$": "wf:main/list/filenames",
         "type": "prov:QUALIFIED_NAME"
       }
     },
     "_:id22": {
-      "prov:entity": "id:38bbce96-10ca-441a-b672-abe5bf1a0acf",
-      "prov:activity": "id:454aeb5b-b14f-467e-b6b8-3fa490495482",
-      "prov:time": "2019-08-20T02:06:39.249261",
+      "prov:entity": "id:53a45f26-569d-4f0f-8da4-5323afc960d2",
+      "prov:activity": "id:6e0a2b65-867e-4403-968c-15be7d97274f",
+      "prov:time": "2019-09-20T00:53:29.072034",
       "prov:role": {
         "$": "wf:main/primary/filenames",
         "type": "prov:QUALIFIED_NAME"
       }
     },
     "_:id23": {
-      "prov:entity": "id:5aac5126-1827-4dca-ba53-e867eca94faa",
-      "prov:activity": "id:454aeb5b-b14f-467e-b6b8-3fa490495482",
-      "prov:time": "2019-08-20T02:06:39.249261",
+      "prov:entity": "id:b677ce7c-9bb6-494e-8260-c4be61b03c0c",
+      "prov:activity": "id:6e0a2b65-867e-4403-968c-15be7d97274f",
+      "prov:time": "2019-09-20T00:53:29.072034",
       "prov:role": {
         "$": "wf:main/primary/headers",
         "type": "prov:QUALIFIED_NAME"
@@ -361,19 +361,19 @@
   },
   "wasEndedBy": {
     "_:id14": {
-      "prov:activity": "id:7760c4c2-a5d0-4be5-8798-97106aea049f",
-      "prov:ender": "id:454aeb5b-b14f-467e-b6b8-3fa490495482",
-      "prov:time": "2019-08-20T02:06:37.520549"
+      "prov:activity": "id:70d0b91f-ccba-4be4-bc4c-f996b21be536",
+      "prov:ender": "id:6e0a2b65-867e-4403-968c-15be7d97274f",
+      "prov:time": "2019-09-20T00:53:27.291981"
     },
     "_:id21": {
-      "prov:activity": "id:0e114bb2-79f8-4514-806a-8d8af99f54d4",
-      "prov:ender": "id:454aeb5b-b14f-467e-b6b8-3fa490495482",
-      "prov:time": "2019-08-20T02:06:39.244876"
+      "prov:activity": "id:4facdd7b-27e1-410e-a54f-2b0bec96508c",
+      "prov:ender": "id:6e0a2b65-867e-4403-968c-15be7d97274f",
+      "prov:time": "2019-09-20T00:53:29.068205"
     },
     "_:id24": {
-      "prov:activity": "id:454aeb5b-b14f-467e-b6b8-3fa490495482",
-      "prov:ender": "id:d8ed0297-4611-45d9-93d1-3aa3d31efdf0",
-      "prov:time": "2019-08-20T02:06:39.249574"
+      "prov:activity": "id:6e0a2b65-867e-4403-968c-15be7d97274f",
+      "prov:ender": "id:1d71d50a-669c-412f-8103-8a18a547c46b",
+      "prov:time": "2019-09-20T00:53:29.072291"
     }
   }
 }

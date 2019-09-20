@@ -51,7 +51,7 @@
                         "valueFrom": "Accept: $(inputs.acceptType)"
                     },
                     "id": "#curl-get.cwl/acceptType",
-                    "https://schema.org/about": "https://tools.ietf.org/html/rfc7231#section-5.3.2"
+                    "http://schema.org/about": "https://tools.ietf.org/html/rfc7231#section-5.3.2"
                 },
                 {
                     "type": "string",
@@ -84,19 +84,19 @@
             "label": "curl: download HTTP resource from URL",
             "doc": "curl will download a HTTP/HTTPS resource or file from a given URL, following any redirections.\n",
             "id": "#curl-get.cwl",
-            "https://schema.org/author": [
+            "http://schema.org/author": [
                 {
-                    "class": "https://schema.org/Person",
-                    "https://schema.org/identifier": "https://keybase.io/bagder",
-                    "https://schema.org/name": "Daniel Stenberg"
+                    "class": "http://schema.org/Person",
+                    "http://schema.org/identifier": "https://keybase.io/bagder",
+                    "http://schema.org/name": "Daniel Stenberg"
                 }
             ],
-            "https://schema.org/codeRepository": "https://github.com/curl/curl",
-            "https://schema.org/url": "https://curl.haxx.se/",
-            "https://schema.org/license": "https://spdx.org/licenses/curl",
-            "https://schema.org/sdLicense": "https://spdx.org/licenses/Apache-2.0",
-            "https://schema.org/description": "curl is a command line tool and library for transferring data with URLs.\n",
-            "https://schema.org/version": "7.39.0",
+            "http://schema.org/codeRepository": "https://github.com/curl/curl",
+            "http://schema.org/url": "https://curl.haxx.se/",
+            "http://schema.org/license": "https://spdx.org/licenses/curl",
+            "http://schema.org/sdLicense": "https://spdx.org/licenses/Apache-2.0",
+            "http://schema.org/description": "curl is a command line tool and library for transferring data with URLs.\n",
+            "http://schema.org/version": "7.39.0",
             "$namespaces": {
                 "iana": "https://www.iana.org/assignments/media-types/",
                 "s": "https://schema.org/"
@@ -104,25 +104,47 @@
         },
         {
             "class": "CommandLineTool",
-            "label": "sunzip: list files from zip stream",
-            "doc": "sunzip is a streaming unzip tool that bypasses or delays the  need for reading the ZIP files table of content, which is located at end of the ZIP file. \nThe sunzip -l option print the file and directory names  as they are encountered in the stream, without uncompressing any of the content.\nNote that file names from the local file headers are less reliable  than the end-of-file TOC that would otherwise be used, and  may include duplicates, deleted and encrypted files.\nThe output may be incomplete or wrong if the ZIP file is corrupt or incomplete. \n",
-            "baseCommand": "sunzip",
+            "baseCommand": "jar",
             "arguments": [
-                "-l"
+                "t"
             ],
             "hints": [
                 {
-                    "dockerPull": "stain/sunzip",
+                    "dockerPull": "openjdk:11.0-slim",
                     "class": "DockerRequirement"
+                },
+                {
+                    "packages": [
+                        {
+                            "specs": [
+                                "https://anaconda.org/conda-forge/openjdk",
+                                "https://packages.debian.org/stretch/openjdk-8-jdk-headless",
+                                "https://packages.debian.org/buster/openjdk-11-jdk-headless",
+                                "https://packages.debian.org/bullseye/openjdk-11-jdk-headless",
+                                "https://packages.debian.org/sid/openjdk-11-jdk-headless"
+                            ],
+                            "version": [
+                                "11.0.1",
+                                "11.0.4",
+                                "10.0.1",
+                                "8u162-b12-1",
+                                "8u222-b10-1ubuntu1",
+                                "8u222-b10-1"
+                            ],
+                            "package": "openjdk"
+                        }
+                    ],
+                    "class": "SoftwareRequirement"
                 }
             ],
+            "label": "jar: list zip file content",
+            "doc": "List content of a ZIP file using OpenJDK jar, which can process the ZIP file in a streaming fashion.\n",
             "inputs": [
                 {
                     "doc": "File or stream of .zip file that should be read. The file will be read in a streaming mode.\n",
                     "type": "stdin",
                     "streamable": true,
-                    "format": "https://www.iana.org/assignments/media-types/application/zip",
-                    "id": "#sunzip-list.cwl/zipstream"
+                    "id": "#jar-list.cwl/zipstream"
                 }
             ],
             "outputs": [
@@ -130,42 +152,15 @@
                     "type": "stdout",
                     "streamable": true,
                     "doc": "A list of filenames and directories encountered in the ZIP archive,  seperated by newline. Paths are relative to the root of the ZIP archive. The list is written in a streaming mode.\n",
-                    "id": "#sunzip-list.cwl/filenames"
+                    "id": "#jar-list.cwl/filenames"
                 }
             ],
             "stdout": "filenames.txt",
-            "id": "#sunzip-list.cwl",
-            "https://schema.org/author": [
-                {
-                    "class": "https://schema.org/Person",
-                    "https://schema.org/identifier": "http://dbpedia.org/resource/Mark_Adler",
-                    "https://schema.org/url": "https://github.com/madler",
-                    "https://schema.org/name": "Mark Adler"
-                }
-            ],
-            "https://schema.org/contributor": [
-                {
-                    "class": "https://schema.org/Person",
-                    "https://schema.org/identifier": "https://orcid.org/0000-0001-9842-9718",
-                    "https://schema.org/name": "Stian Soiland-Reyes"
-                }
-            ],
-            "https://schema.org/codeRepository": "https://github.com/stain/sunzip/",
-            "https://schema.org/isBasedOn": "https://github.com/madler/sunzip",
-            "https://schema.org/dateModified": "2019-08-13",
-            "https://schema.org/license": "https://spdx.org/licenses/Zlib",
-            "https://schema.org/sdLicense": "https://spdx.org/licenses/Apache-2.0",
-            "https://schema.org/sdPublisher": "https://orcid.org/0000-0001-9842-9718",
-            "https://schema.org/description": "stain/sunzip is a fork of madler/sunzip, a streaming unzip utility. \nThe modifications add a -l list option to print the file and directory\nnames as they are encountered in the stream. \n\nNote that file names from the local file headers are less reliable \nthan the end-of-file TOC that would otherwise be used, and \nmay include duplicates, deleted and encrypted files.\n",
-            "https://schema.org/potentialAction": [
-                {
-                    "class": "https://schema.org/ActivateAction",
-                    "https://schema.org/label": "example run",
-                    "https://schema.org/instrument": "../test/sunzip-list-job.yml",
-                    "https://schema.org/object": "../test/test.zip",
-                    "https://schema.org/result": "../test/test-sunzip-files.txt"
-                }
-            ]
+            "id": "#jar-list.cwl",
+            "http://schema.org/codeRepository": "https://hg.openjdk.java.net/jdk/jdk11/file/1ddf9a99e4ad/src/jdk.jartool",
+            "http://schema.org/url": "https://openjdk.java.net/",
+            "http://schema.org/license": "https://spdx.org/licenses/GPL-2.0-with-classpath-exception",
+            "http://schema.org/sdLicense": "https://spdx.org/licenses/Apache-2.0"
         },
         {
             "class": "Workflow",
@@ -223,7 +218,7 @@
                     "out": [
                         "#main/list/filenames"
                     ],
-                    "run": "#sunzip-list.cwl",
+                    "run": "#jar-list.cwl",
                     "id": "#main/list"
                 }
             ],
@@ -242,7 +237,9 @@
                 {
                     "class": "https://schema.org/ActivateAction",
                     "https://schema.org/label": "example run",
-                    "https://schema.org/instrument": "../test/zip=content-by-url-job.yml"
+                    "https://schema.org/instrument": "../test/zip=content-by-url/zip=content-by-url-job.yml",
+                    "https://schema.org/object": "https://github.com/stain/ro-index-paper/archive/38f2a711f9f115e92cea930398019c147e56ac5a.zip",
+                    "https://schema.org/result": "../test/zip=content-by-url/filenames.txt"
                 }
             ],
             "hints": [

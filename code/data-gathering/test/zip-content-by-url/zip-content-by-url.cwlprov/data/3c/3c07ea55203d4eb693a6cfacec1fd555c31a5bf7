@@ -1,5 +1,5 @@
 HTTP/1.1 302 Found
-Date: Tue, 20 Aug 2019 01:06:36 GMT
+Date: Thu, 19 Sep 2019 23:53:26 GMT
 Content-Type: text/html; charset=utf-8
 Transfer-Encoding: chunked
 Server: GitHub.com
@@ -7,10 +7,10 @@ Status: 302 Found
 Vary: X-PJAX
 Location: https://codeload.github.com/stain/ro-index-paper/zip/38f2a711f9f115e92cea930398019c147e56ac5a
 Cache-Control: max-age=0, private
-Set-Cookie: has_recent_activity=1; path=/; expires=Tue, 20 Aug 2019 02:06:36 -0000
-Set-Cookie: logged_in=no; domain=.github.com; path=/; expires=Sat, 20 Aug 2039 01:06:36 -0000; secure; HttpOnly
-Set-Cookie: _gh_sess=ZXdlbjN4VFJrM1hQV1VnQ2xKMGJrT0lMcUF0eWF6UnlkV0txVXg5NGRUdjE2c0NqSUZKZUpkMjBlWEdLeXRldFk2aTA0bll3d1dYS1pNTTkrOHptc1Z6Rnhlb0VHdEdzNVVURzBQeU5VRng4TFIzaGFiSnVmRGxEeHk0dmd1OEtrVTgvYnBwQ0VJc2MzSmJhZHAyalZJem5IY1BjU1llV1hmS21vRkg3TkJEYjZXMUw5Yjh2Qy8rNmlxeExEaGh1Y1dlUldQRndhMFY0cGFmS25KclJ0Zz09LS1xSm84TzhmK2xOK3RQOHVabjJRdGdRPT0%3D--8f7b537ab52b65c082a3d1fc4bd17e52a51b484d; path=/; secure; HttpOnly
-X-Request-Id: 474d2a40-90ee-42d2-9a29-1d1204ecd080
+Set-Cookie: has_recent_activity=1; path=/; expires=Fri, 20 Sep 2019 00:53:26 -0000
+Set-Cookie: logged_in=no; domain=.github.com; path=/; expires=Mon, 19 Sep 2039 23:53:26 -0000; secure; HttpOnly
+Set-Cookie: _gh_sess=ZlRKRDRTcm9pdjh2UVlCNThLbmNmY1ZUU0FLbjZqL0JqcWovTUtXWXJIVk4rcEhCMjEwWHF1N0hxQ0NnY1NBeWE1MWpaeW5wM1FSWkhkbVMxSG1Vd3IxZmVzNTllTnVyM3kyWVA3eEtSb2hjOUdEajR5VnJxdGNTbmw5RExTeVVOVyt4d1RnTmpsK1R4T1hwNW1rMVRBPT0tLUlxaS8xZlBHc08rT1V5T253MXQxY3c9PQ%3D%3D--6df747f7a6050a808b3a6b912aad363fdc7eaa5d; path=/; secure; HttpOnly
+X-Request-Id: 731898bc-26ed-4ea0-b8aa-afd85f118a1d
 Strict-Transport-Security: max-age=31536000; includeSubdomains; preload
 X-Frame-Options: deny
 X-Content-Type-Options: nosniff
@@ -18,7 +18,7 @@ X-XSS-Protection: 1; mode=block
 Expect-CT: max-age=2592000, report-uri="https://api.github.com/_private/browser/errors"
 Content-Security-Policy: default-src 'none'; base-uri 'self'; block-all-mixed-content; connect-src 'self' uploads.github.com www.githubstatus.com collector.githubapp.com api.github.com www.google-analytics.com github-cloud.s3.amazonaws.com github-production-repository-file-5c1aeb.s3.amazonaws.com github-production-upload-manifest-file-7fdce7.s3.amazonaws.com github-production-user-asset-6210df.s3.amazonaws.com wss://live.github.com; font-src github.githubassets.com; form-action 'self' github.com gist.github.com; frame-ancestors 'none'; frame-src render.githubusercontent.com; img-src 'self' data: github.githubassets.com identicons.github.com collector.githubapp.com github-cloud.s3.amazonaws.com *.githubusercontent.com; manifest-src 'self'; media-src 'none'; script-src github.githubassets.com; style-src 'unsafe-inline' github.githubassets.com
 Vary: Accept-Encoding
-X-GitHub-Request-Id: 9848:DE7D:1ED827:30B448:5D5B479C
+X-GitHub-Request-Id: BC7E:F943:61F6586:95C5172:5D8414F5
 
 HTTP/1.1 200 OK
 Transfer-Encoding: chunked
@@ -33,6 +33,6 @@ ETag: "38f2a711f9f115e92cea930398019c147e56ac5a"
 Content-Type: application/zip
 Content-Disposition: attachment; filename=ro-index-paper-38f2a711f9f115e92cea930398019c147e56ac5a.zip
 X-Geo-Block-List: 
-Date: Tue, 20 Aug 2019 01:06:36 GMT
-X-GitHub-Request-Id: AF86:7CCD:2239:5A34:5D5B479C
+Date: Thu, 19 Sep 2019 23:53:26 GMT
+X-GitHub-Request-Id: D3E6:21D9:A43CC:16B641:5D8414F6
 

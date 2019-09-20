@@ -1,0 +1,8 @@
+#!/usr/bin/env cwltool
+
+cwl:tool: ../../tools/jar-list.cwl
+
+zipstream: 
+   class: File
+   path: test.zip
+   format: https://www.iana.org/assignments/media-types/application/zip

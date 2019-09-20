@@ -1,0 +1,22 @@
+[2019-09-20T00:00:19,887Z] [cwltool] /home/stain/miniconda3/bin/cwltool --provenance jar-list.cwlprov jar-list-job.yml
+[2019-09-20T00:00:19,888Z] Resolved 'jar-list-job.yml' to 'file:///home/stain/src/ro-index-paper/code/data-gathering/test/jar-list/jar-list-job.yml'
+[2019-09-20T00:00:24,981Z] [job jar-list.cwl] /tmp/0p8dxqeg$ docker \
+    run \
+    -i \
+    --volume=/tmp/0p8dxqeg:/qdftfw:rw \
+    --volume=/tmp/lgfpvaij:/tmp:rw \
+    --volume=/home/stain/src/ro-index-paper/code/data-gathering/test/jar-list/test.zip:/var/lib/cwl/stg4d6fdcb9-74dd-47d1-9aae-8a2a3c9d3ee4/test.zip:ro \
+    --workdir=/qdftfw \
+    --read-only=true \
+    --log-driver=none \
+    --user=1000:1000 \
+    --rm \
+    --env=TMPDIR=/tmp \
+    --env=HOME=/qdftfw \
+    --cidfile=/tmp/31bvrtlx/20190920010024-981616.cid \
+    openjdk:11.0-slim \
+    jar \
+    t < /var/lib/cwl/stg4d6fdcb9-74dd-47d1-9aae-8a2a3c9d3ee4/test.zip > /tmp/0p8dxqeg/filenames.txt
+[2019-09-20T00:00:26,631Z] [job jar-list.cwl] Max memory used: 0MiB
+[2019-09-20T00:00:26,634Z] [job jar-list.cwl] completed success
+[2019-09-20T00:00:26,701Z] Final process status is success

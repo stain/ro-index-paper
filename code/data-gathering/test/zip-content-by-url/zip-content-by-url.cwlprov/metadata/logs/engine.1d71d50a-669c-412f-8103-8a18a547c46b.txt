@@ -1,0 +1,56 @@
+[2019-09-19T23:53:17,836Z] [cwltool] /home/stain/miniconda3/bin/cwltool --provenance zip-content-by-url.cwlprov zip-content-by-url-job.yml
+[2019-09-19T23:53:17,837Z] Resolved 'zip-content-by-url-job.yml' to 'file:///home/stain/src/ro-index-paper/code/data-gathering/test/zip-content-by-url/zip-content-by-url-job.yml'
+[2019-09-19T23:53:24,912Z] [workflow ] start
+[2019-09-19T23:53:24,912Z] [workflow ] starting step fetch
+[2019-09-19T23:53:24,912Z] [step fetch] start
+[2019-09-19T23:53:25,031Z] [job fetch] /tmp/30ra8vtf$ docker \
+    run \
+    -i \
+    --volume=/tmp/30ra8vtf:/ObZlaR:rw \
+    --volume=/tmp/f2rloziu:/tmp:rw \
+    --workdir=/ObZlaR \
+    --read-only=true \
+    --log-driver=none \
+    --user=1000:1000 \
+    --rm \
+    --env=TMPDIR=/tmp \
+    --env=HOME=/ObZlaR \
+    --cidfile=/tmp/bsm0i52m/20190920005325-031597.cid \
+    appropriate/curl:3.1 \
+    curl \
+    --silent \
+    --show-error \
+    --fail \
+    --location \
+    --dump-header \
+    headers.txt \
+    --header \
+    'Accept: application/zip' \
+    https://github.com/stain/ro-index-paper/archive/38f2a711f9f115e92cea930398019c147e56ac5a.zip > /tmp/30ra8vtf/downloaded
+[2019-09-19T23:53:27,288Z] [job fetch] Max memory used: 0MiB
+[2019-09-19T23:53:27,294Z] [job fetch] completed success
+[2019-09-19T23:53:27,294Z] [step fetch] completed success
+[2019-09-19T23:53:27,295Z] [workflow ] starting step list
+[2019-09-19T23:53:27,295Z] [step list] start
+[2019-09-19T23:53:27,419Z] [job list] /tmp/4dap72pp$ docker \
+    run \
+    -i \
+    --volume=/tmp/4dap72pp:/ObZlaR:rw \
+    --volume=/tmp/heetu_pt:/tmp:rw \
+    --volume=/tmp/30ra8vtf/downloaded:/var/lib/cwl/stg9ad0b32f-75f3-43b6-94e2-0f49767035ae/downloaded:ro \
+    --workdir=/ObZlaR \
+    --read-only=true \
+    --log-driver=none \
+    --user=1000:1000 \
+    --rm \
+    --env=TMPDIR=/tmp \
+    --env=HOME=/ObZlaR \
+    --cidfile=/tmp/arexrj6v/20190920005327-419028.cid \
+    openjdk:11.0-slim \
+    jar \
+    t < /var/lib/cwl/stg9ad0b32f-75f3-43b6-94e2-0f49767035ae/downloaded > /tmp/4dap72pp/filenames.txt
+[2019-09-19T23:53:29,065Z] [job list] Max memory used: 0MiB
+[2019-09-19T23:53:29,069Z] [job list] completed success
+[2019-09-19T23:53:29,069Z] [step list] completed success
+[2019-09-19T23:53:29,070Z] [workflow ] completed success
+[2019-09-19T23:53:29,176Z] Final process status is success
