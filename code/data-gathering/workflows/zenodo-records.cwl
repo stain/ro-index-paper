@@ -20,7 +20,7 @@ label: "retrieve metadata from Zenodo community"
 
 doc: > 
   For a given Zenodo community, retrieve its repository records
-  as Zenodo JSON and schema.org JSON-LD.
+  as Zenodo JSON and (eventually) schema.org JSON-LD and DataCite v4 XML.
 
 requirements:
   - class: StepInputExpressionRequirement
@@ -29,10 +29,11 @@ requirements:
 
 inputs:
   community:
-    type: string
+    type: string?
     default: ro
     doc: >
       The short-name of the Zenodo community, e.g. "ro" for <https://zenodo.org/communities/ro>
+      Use null for all of Zenodo.
 
 outputs:
   zenodo-json:
@@ -49,7 +50,7 @@ steps:
           valueFrom: "https://zenodo.org/oai2d"
         set:
           source: community
-          valueFrom: user-$(self)
+          valueFrom: user-$(self) ## TODO: Does this work if community is null?
       out: [identifiers]
 
     make-uri:
@@ -62,7 +63,7 @@ steps:
         command:
           # Assumes Zenodo's correspondance between OAI identifiers and
           # Zenodo's API URI template.
-          # Undocumented Zenodo API call, see
+          # NOTE: This uses undocumented Zenodo API call, see
           # <https://github.com/zenodo/zenodo/blob/master/zenodo/config.py#L814>
           valueFrom: "s,oai:zenodo.org:,https://zenodo.org/api/records/,"
       out: [modified]
@@ -77,6 +78,8 @@ steps:
       run: ../tools/chunk-by-line.cwl ## TODO: Make this tool!!
 
     fetch-zenodo-json:
+      ## TODO: Set resource requirements
+      ## to avoid too many concurrent requests
       run: ../../tools/curl-get-many.cwl
       scatter: [urls]
       in:
@@ -85,7 +88,27 @@ steps:
         acceptType: 
             valueFrom: "application/vnd.zenodo.v1+json"
       out: [downloaded]
-    
+
+    fetch-zenodo-jsonld:
+      run: ../../tools/curl-get-many.cwl
+      scatter: [urls]
+      in:
+        urls:
+          source: chunk-by-line/chunked
+        acceptType: 
+            valueFrom: "application/ld+json"
+      out: [downloaded]
+
+    fetch-zenodo-datacite4:
+      run: ../../tools/curl-get-many.cwl
+      scatter: [urls]
+      in:
+        urls:
+          source: chunk-by-line/chunked
+        acceptType: 
+            valueFrom: "application/x-datacite-v41+xml"
+      out: [downloaded]
+
     gather-json:
       run:
         class: ExpressionTool
@@ -101,7 +124,7 @@ steps:
           ${return { "gathered": {
               "class": "Directory",
               "name": inputs.name,
-              "children??": inputs.files, ## TODO: Rename? Correct property
+              "children??": inputs.files, ## TODO: Rename each file to add extension .json
               "path": "."
               }
             }
