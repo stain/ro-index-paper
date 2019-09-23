@@ -6,7 +6,7 @@ class: Workflow
 #
 #  Licensed under the Apache License, Version 2.0 (the "License");
 #  you may not use this file except in compliance with the License.
-#  Y=ou may obtain a copy of the License at
+#  You may obtain a copy of the License at
 #
 #      http://www.apache.org/licenses/LICENSE-2.0
 #
@@ -96,7 +96,7 @@ s:license: https://spdx.org/licenses/Apache-2.0
 s:potentialAction:
   - class: s:ActivateAction
     s:label: "example run"
-    s:instrument: "../test/zip=zenodo-to-rdfa-job.yml"
+    s:instrument: "../test/zenodo-community-links/zenodo-community-links-job.yml"
 
 $schemas: 
   - https://schema.org/version/3.9/schema.rdf
