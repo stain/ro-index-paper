@@ -30,7 +30,8 @@ arguments:
 requirements:
   ShellCommandRequirement: {}
   DockerRequirement:
-    dockerImageId: stain/perl-oai-lib
+    #dockerPull: stain/perl-oai-lib:4.08-PR-5
+    dockerImageId: stain/perl-oai-lib:4.08-PR-5
     dockerFile: |
         FROM debian:9
         RUN apt-get update && apt-get -y install libhttp-oai-perl
