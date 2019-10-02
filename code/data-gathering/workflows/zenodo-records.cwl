@@ -70,41 +70,49 @@ steps:
 
     chunk-by-line:
       in:
-        file:
+        splittable:
           source: make-uri/modified
-        chunksize:
-          valueFrom: 50 # Number of URIs for curl to fetch at same time (reusing HTTP connection)
-      out: [chunked]
-      run: ../tools/chunk-by-line.cwl ## TODO: Make this tool!!
+        maxlines:
+          default: 50 # Number of URIs for curl to fetch at same time (reusing HTTP connection)
+      out: [splitted]
+      run: ../tools/split-lines.cwl
+
+    split-ids-by-line:
+      in:
+        file:
+          source: chunk-by-line/splitted
+      out: [lines]
+      run: ../tools/split-by-line.cwl
+      scatter: [file]
 
     fetch-zenodo-json:
       ## TODO: Set resource requirements
       ## to avoid too many concurrent requests
-      run: ../../tools/curl-get-many.cwl
+      run: ../tools/curl-get-many.cwl
       scatter: [urls]
       in:
         urls:
-          source: chunk-by-line/chunked
+          source: split-ids-by-line/lines
         acceptType: 
             valueFrom: "application/vnd.zenodo.v1+json"
       out: [downloaded]
 
     fetch-zenodo-jsonld:
-      run: ../../tools/curl-get-many.cwl
+      run: ../tools/curl-get-many.cwl
       scatter: [urls]
       in:
         urls:
-          source: chunk-by-line/chunked
+          source: split-ids-by-line/lines
         acceptType: 
             valueFrom: "application/ld+json"
       out: [downloaded]
 
     fetch-zenodo-datacite4:
-      run: ../../tools/curl-get-many.cwl
+      run: ../tools/curl-get-many.cwl
       scatter: [urls]
       in:
         urls:
-          source: chunk-by-line/chunked
+          source: split-ids-by-line/lines
         acceptType: 
             valueFrom: "application/x-datacite-v41+xml"
       out: [downloaded]
@@ -124,10 +132,10 @@ steps:
           ${return { "gathered": {
               "class": "Directory",
               "name": inputs.name,
-              "children??": inputs.files, ## TODO: Rename each file to add extension .json
+              "listing": inputs.files, // TODO: Rename each file to add extension .json
               "path": "."
               }
-            }
+            };
           }
       in:
         files: 
@@ -144,6 +152,11 @@ s:creator:
 s:codeRepository: https://github.com/stain/ro-index-paper/
 s:dateCreated: "2019-08-23"
 s:license: https://spdx.org/licenses/Apache-2.0 
+
+s:potentialAction:
+  - class: s:ActivateAction
+    s:label: "example run"
+    s:instrument: "../test/zenodo-records/zenodo-records-job.yml"
 
 $schemas: 
   - https://schema.org/version/3.9/schema.rdf
