@@ -118,31 +118,7 @@ steps:
       out: [downloaded]
 
     gather-json:
-      run:
-        class: ExpressionTool
-        inputs:
-          name:
-            type: string
-          files:
-            type: 
-              type: array
-              items: 
-                type: array
-                items: File
-        outputs:
-          gathered:
-            type: Directory
-        expression: |
-          ${var listing = Array.prototype.concat.apply([], inputs.files);
-            // TODO: Rename each file to add extension .json
-            
-            return { "gathered": {
-              "class": "Directory",
-              "basename": inputs.name,
-              "listing": listing, 
-              }
-            };
-          }
+      run: ../tools/gather-directory.cwl
       in:
         files: 
           source: fetch-zenodo-json/downloaded
