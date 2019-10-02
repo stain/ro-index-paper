@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://datacite.org/schema/kernel-4" xsi:schemaLocation="http://datacite.org/schema/kernel-4 http://schema.datacite.org/meta/kernel-4.1/metadata.xsd">
+  <identifier identifierType="DOI">10.5281/zenodo.3380592</identifier>
+  <creators>
+    <creator>
+      <creatorName>Weber, Nic</creatorName>
+      <givenName>Nic</givenName>
+      <familyName>Weber</familyName>
+      <nameIdentifier nameIdentifierScheme="ORCID" schemeURI="http://orcid.org/">0000-0002-6008-3763</nameIdentifier>
+      <affiliation>University of Washington</affiliation>
+    </creator>
+    <creator>
+      <creatorName>Brown, Jackson</creatorName>
+      <givenName>Jackson</givenName>
+      <familyName>Brown</familyName>
+      <affiliation>Allen Institute for Cell Science</affiliation>
+    </creator>
+  </creators>
+  <titles>
+    <title>Packaging Municipal Legislative Event Data for Reuse &amp; Exchange</title>
+  </titles>
+  <publisher>Zenodo</publisher>
+  <publicationYear>2019</publicationYear>
+  <dates>
+    <date dateType="Issued">2019-08-28</date>
+  </dates>
+  <language>en</language>
+  <resourceType resourceTypeGeneral="Text">Poster</resourceType>
+  <alternateIdentifiers>
+    <alternateIdentifier alternateIdentifierType="url">https://zenodo.org/record/3380592</alternateIdentifier>
+  </alternateIdentifiers>
+  <relatedIdentifiers>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="IsVersionOf">10.5281/zenodo.3380591</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="URL" relationType="IsPartOf">https://zenodo.org/communities/ro</relatedIdentifier>
+  </relatedIdentifiers>
+  <rightsList>
+    <rights rightsURI="http://creativecommons.org/licenses/by/4.0/legalcode">Creative Commons Attribution 4.0 International</rights>
+    <rights rightsURI="info:eu-repo/semantics/openAccess">Open Access</rights>
+  </rightsList>
+  <descriptions>
+    <description descriptionType="Abstract">&lt;p&gt;Municipal governments in the USA are often divided between a legislative (city council) and executive (mayoral) branch. These two branches not only differ in their power to govern a municipality, but also in the way their governing activities are organized: executive activities are periodic and random in occurrence, legislative activities are regularly occurring and organized around key events (e.g. committee and subcommittee meetings, expert testimony, public comment, introduction and debate of new legislation, and voting). Further, legislative events are subject to Open Meetings laws at both the State and Federal level - so that citizens can have a transparent record of how officials are performing their elected duties [1]. This openness mandate further requires that the events of any municipal legislature are recorded and published to the web in an openly accessible format. However, many municipal governments lack the time, money, and expertise to provide citizens with well described data beyond a simple audio or video file of a legislative event. [2]&lt;/p&gt;
+
+&lt;p&gt;The Council Data Project (CDP) is our attempt to provide a platform for adding needed context to event based legislative data. In particular we provide open-source tools for transcribing, indexing, modeling, and publishing legislative event data to the web. Our on-going research is focused on how to package a bundle of event-based digital objects (audio-files, videos, transcripts, votes, etc) along with relevant metadata parameters to facilitate meaningful reuse by researchers.&lt;/p&gt;</description>
+  </descriptions>
+</resource>

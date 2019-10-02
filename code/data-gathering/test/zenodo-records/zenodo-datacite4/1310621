@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://datacite.org/schema/kernel-4" xsi:schemaLocation="http://datacite.org/schema/kernel-4 http://schema.datacite.org/meta/kernel-4.1/metadata.xsd">
+  <identifier identifierType="DOI">10.5281/zenodo.1310621</identifier>
+  <creators>
+    <creator>
+      <creatorName>Wittenburg, Peter</creatorName>
+      <givenName>Peter</givenName>
+      <familyName>Wittenburg</familyName>
+      <affiliation>MPG</affiliation>
+    </creator>
+    <creator>
+      <creatorName>Koureas, Dimitris</creatorName>
+      <givenName>Dimitris</givenName>
+      <familyName>Koureas</familyName>
+      <affiliation>Naturalis</affiliation>
+    </creator>
+    <creator>
+      <creatorName>Lannom, Larry</creatorName>
+      <givenName>Larry</givenName>
+      <familyName>Lannom</familyName>
+      <affiliation>CNRI</affiliation>
+    </creator>
+    <creator>
+      <creatorName>Quick, Robert</creatorName>
+      <givenName>Robert</givenName>
+      <familyName>Quick</familyName>
+      <affiliation>Indiana University</affiliation>
+    </creator>
+  </creators>
+  <titles>
+    <title>Implementing a Flexible Infrastructure for a Digital Object Based Data Management</title>
+  </titles>
+  <publisher>Zenodo</publisher>
+  <publicationYear>2018</publicationYear>
+  <subjects>
+    <subject>FAIR, data management, data infrastructure, digital objects</subject>
+  </subjects>
+  <dates>
+    <date dateType="Issued">2018-07-12</date>
+  </dates>
+  <language>en</language>
+  <resourceType resourceTypeGeneral="Text">Journal article</resourceType>
+  <alternateIdentifiers>
+    <alternateIdentifier alternateIdentifierType="url">https://zenodo.org/record/1310621</alternateIdentifier>
+  </alternateIdentifiers>
+  <relatedIdentifiers>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="IsVersionOf">10.5281/zenodo.1310620</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="URL" relationType="IsPartOf">https://zenodo.org/communities/ro</relatedIdentifier>
+  </relatedIdentifiers>
+  <rightsList>
+    <rights rightsURI="http://creativecommons.org/licenses/by/4.0/legalcode">Creative Commons Attribution 4.0 International</rights>
+    <rights rightsURI="info:eu-repo/semantics/openAccess">Open Access</rights>
+  </rightsList>
+  <descriptions>
+    <description descriptionType="Abstract">&lt;p&gt;Data intensive projects are inefficient since in science and industry it is known from surveys that 80 % of the time is wasted for data wrangling. We suffer from fragmentation at all levels from data organisation up to semantics which lets many data projects fail and prohibiits the participation of many researchers and companies. The concept of Digital Objects is now broadly accepted as a new level of commodity to overcome the fragmentation at data organisation level and to facilitate interoperability at other levels and to open the way to automatic processing which will be the only way to scale up data intensive work. The C2CAMP initiative as a GO FAIR implementation network is now working on specifying and implementing key components of a DO centric data infrastructure in close collaboration with the Research Data Alliance and organisations such as DONA and ITU.&lt;/p&gt;</description>
+  </descriptions>
+</resource>

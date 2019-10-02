@@ -41,6 +41,19 @@ outputs:
     doc: >
       A directory of Zenodo JSON records retrieved from the given Zenodo community
     outputSource: gather-json/gathered
+  
+  zenodo-datacite4:
+    type: Directory
+    doc: >
+      A directory of Zenodo DataCitev4 XML records retrieved from the given Zenodo community
+    outputSource: gather-datacite4/gathered
+  
+  zenodo-jsonld:
+    type: Directory
+    doc: >
+      A directory of Zenodo schema.org JSON-LD records retrieved from the given Zenodo community
+    outputSource: gather-jsonld/gathered
+
 
 steps:
     list-ids:
@@ -125,6 +138,25 @@ steps:
         name: 
             default: "zenodo-json"
       out: [gathered]
+
+    gather-datacite4:
+      run: ../tools/gather-directory.cwl
+      in:
+        files: 
+          source: fetch-zenodo-datacite4/downloaded
+        name: 
+            default: "zenodo-datacite4"
+      out: [gathered]
+
+    gather-jsonld:
+      run: ../tools/gather-directory.cwl
+      in:
+        files: 
+          source: fetch-zenodo-jsonld/downloaded
+        name: 
+            default: "zenodo-jsonld"
+      out: [gathered]
+
 
 s:creator:
   - class: s:Person

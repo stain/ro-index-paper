@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://datacite.org/schema/kernel-4" xsi:schemaLocation="http://datacite.org/schema/kernel-4 http://schema.datacite.org/meta/kernel-4.1/metadata.xsd">
+  <identifier identifierType="DOI">10.5281/zenodo.1326284</identifier>
+  <creators>
+    <creator>
+      <creatorName>De Roure, David</creatorName>
+      <givenName>David</givenName>
+      <familyName>De Roure</familyName>
+      <nameIdentifier nameIdentifierScheme="ORCID" schemeURI="http://orcid.org/">0000-0001-9074-3016</nameIdentifier>
+      <affiliation>University of Oxford</affiliation>
+    </creator>
+    <creator>
+      <creatorName>Klyne, Graham</creatorName>
+      <givenName>Graham</givenName>
+      <familyName>Klyne</familyName>
+      <affiliation>University of Oxford</affiliation>
+    </creator>
+    <creator>
+      <creatorName>Page, Kevin</creatorName>
+      <givenName>Kevin</givenName>
+      <familyName>Page</familyName>
+      <affiliation>University of Oxford</affiliation>
+    </creator>
+    <creator>
+      <creatorName>Pybus, John</creatorName>
+      <givenName>John</givenName>
+      <familyName>Pybus</familyName>
+      <affiliation>University of Oxford</affiliation>
+    </creator>
+    <creator>
+      <creatorName>Weigl, Davd M.</creatorName>
+      <givenName>Davd M.</givenName>
+      <familyName>Weigl</familyName>
+      <affiliation>University of Oxford</affiliation>
+    </creator>
+    <creator>
+      <creatorName>Willcox, Pip</creatorName>
+      <givenName>Pip</givenName>
+      <familyName>Willcox</familyName>
+      <affiliation>University of Oxford</affiliation>
+    </creator>
+  </creators>
+  <titles>
+    <title>Digital Music Objects: Research Objects for Music</title>
+  </titles>
+  <publisher>Zenodo</publisher>
+  <publicationYear>2018</publicationYear>
+  <subjects>
+    <subject>Digital Music Object</subject>
+    <subject>Research Object</subject>
+    <subject>Linked Data</subject>
+  </subjects>
+  <dates>
+    <date dateType="Issued">2018-07-31</date>
+  </dates>
+  <resourceType resourceTypeGeneral="Text">Conference paper</resourceType>
+  <alternateIdentifiers>
+    <alternateIdentifier alternateIdentifierType="url">https://zenodo.org/record/1326284</alternateIdentifier>
+  </alternateIdentifiers>
+  <relatedIdentifiers>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="IsVersionOf">10.5281/zenodo.1326283</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="URL" relationType="IsPartOf">https://zenodo.org/communities/ro</relatedIdentifier>
+  </relatedIdentifiers>
+  <rightsList>
+    <rights rightsURI="http://creativecommons.org/licenses/by/4.0/legalcode">Creative Commons Attribution 4.0 International</rights>
+    <rights rightsURI="info:eu-repo/semantics/openAccess">Open Access</rights>
+  </rightsList>
+  <descriptions>
+    <description descriptionType="Abstract">&lt;p&gt;In the Fusing Audio and Semantic Technologies project we have been applying a Research Object approach in the context of music recording, production, distribution, consumption, reuse, and archiving. We call these&amp;nbsp;&lt;em&gt;Digital Music Objects&lt;/em&gt;&amp;mdash; rich representations of music works that are semantically described and can carry information about process and provenance.&lt;/p&gt;</description>
+    <description descriptionType="Other">Preprint submitted to RO2018 workshop at IEEE eScience Conference 2018</description>
+  </descriptions>
+</resource>

@@ -1,0 +1,59 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://datacite.org/schema/kernel-4" xsi:schemaLocation="http://datacite.org/schema/kernel-4 http://schema.datacite.org/meta/kernel-4.1/metadata.xsd">
+  <identifier identifierType="DOI">10.5281/zenodo.1323831</identifier>
+  <creators>
+    <creator>
+      <creatorName>Garriga Nogales, Edgar</creatorName>
+      <givenName>Edgar</givenName>
+      <familyName>Garriga Nogales</familyName>
+      <nameIdentifier nameIdentifierScheme="ORCID" schemeURI="http://orcid.org/">0000-0002-9861-5294</nameIdentifier>
+      <affiliation>Centre for Genomic Regulation (CRG).The Barcelona Institute for Science and Technology</affiliation>
+    </creator>
+    <creator>
+      <creatorName>Di Tommaso, Paolo</creatorName>
+      <givenName>Paolo</givenName>
+      <familyName>Di Tommaso</familyName>
+      <affiliation>Centre for Genomic Regulation (CRG).The Barcelona Institute for Science and Technology</affiliation>
+    </creator>
+    <creator>
+      <creatorName>Notredame, Cedric</creatorName>
+      <givenName>Cedric</givenName>
+      <familyName>Notredame</familyName>
+      <affiliation>Centre for Genomic Regulation (CRG).The Barcelona Institute for Science and Technology</affiliation>
+    </creator>
+  </creators>
+  <titles>
+    <title>Nextflow integration for the  Research Object Specification</title>
+  </titles>
+  <publisher>Zenodo</publisher>
+  <publicationYear>2018</publicationYear>
+  <subjects>
+    <subject>nextflow</subject>
+    <subject>research object</subject>
+    <subject>reproducibility</subject>
+    <subject>provenance</subject>
+  </subjects>
+  <dates>
+    <date dateType="Issued">2018-07-30</date>
+  </dates>
+  <language>en</language>
+  <resourceType resourceTypeGeneral="Text">Conference paper</resourceType>
+  <alternateIdentifiers>
+    <alternateIdentifier alternateIdentifierType="url">https://zenodo.org/record/1323831</alternateIdentifier>
+  </alternateIdentifiers>
+  <relatedIdentifiers>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Cites">10.5281/zenodo.1215611</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Cites">10.1038/nbt.3820</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Cites">10.1016/j.websem.2015.01.003</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="IsVersionOf">10.5281/zenodo.1323830</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="URL" relationType="IsPartOf">https://zenodo.org/communities/ro</relatedIdentifier>
+  </relatedIdentifiers>
+  <rightsList>
+    <rights rightsURI="http://creativecommons.org/licenses/by/4.0/legalcode">Creative Commons Attribution 4.0 International</rights>
+    <rights rightsURI="info:eu-repo/semantics/openAccess">Open Access</rights>
+  </rightsList>
+  <descriptions>
+    <description descriptionType="Abstract">&lt;p&gt;&lt;strong&gt;For reproducibility criteria to be met in a scientific context an increasing number of conditions need to be fulfilled. These conditions, explicited by the FAIR principle include traceability, reusability and data/methods permanent availability (findable). The challenge is not only to keep the right elements bundled together, but also to keep track of each component individual history (including individual updates) while associating every computational analysis with a transparent source. This issue, known as provenance, is the one we have been addressing in the context of this proposal. It is increasingly critical, at a time when a growing number of computational procedures are used to assess medical risks and take therapeutic decision. Our solution involves using the Research Object (RO)&amp;nbsp;specification that have allowed us to implement a method that enables the creation of a package collecting all provenance metadata of a computational experiment, so that it can be easily shared, archived and reproduced when needed&lt;/strong&gt;&lt;/p&gt;</description>
+    <description descriptionType="Other">Preprint submitted to RO2018 workshop at IEEE eScience Conference 2018</description>
+  </descriptions>
+</resource>

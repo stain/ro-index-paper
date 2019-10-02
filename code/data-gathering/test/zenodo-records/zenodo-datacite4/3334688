@@ -1,0 +1,73 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://datacite.org/schema/kernel-4" xsi:schemaLocation="http://datacite.org/schema/kernel-4 http://schema.datacite.org/meta/kernel-4.1/metadata.xsd">
+  <identifier identifierType="DOI">10.5281/zenodo.3334688</identifier>
+  <creators>
+    <creator>
+      <creatorName>Kristi Holmes</creatorName>
+      <nameIdentifier nameIdentifierScheme="ORCID" schemeURI="http://orcid.org/">0000-0001-8420-5254</nameIdentifier>
+      <affiliation>Northwestern University</affiliation>
+    </creator>
+    <creator>
+      <creatorName>Nicole Vasilevsky</creatorName>
+      <nameIdentifier nameIdentifierScheme="ORCID" schemeURI="http://orcid.org/">0000-0001-5208-3432</nameIdentifier>
+      <affiliation>Oregon Health &amp; Science University</affiliation>
+    </creator>
+    <creator>
+      <creatorName>Marijane White</creatorName>
+      <nameIdentifier nameIdentifierScheme="ORCID" schemeURI="http://orcid.org/">0000-0001-5059-4132</nameIdentifier>
+      <affiliation>Oregon Health &amp; Science University</affiliation>
+    </creator>
+    <creator>
+      <creatorName>Matthew Brush</creatorName>
+      <nameIdentifier nameIdentifierScheme="ORCID" schemeURI="http://orcid.org/">0000-0002-1048-5019</nameIdentifier>
+      <affiliation>Oregon Health &amp; Science University</affiliation>
+    </creator>
+    <creator>
+      <creatorName>Lisa O'Keefe</creatorName>
+      <nameIdentifier nameIdentifierScheme="ORCID" schemeURI="http://orcid.org/">0000-0003-1211-7583</nameIdentifier>
+      <affiliation>Northwestern University</affiliation>
+    </creator>
+    <creator>
+      <creatorName>Karen Gutzman</creatorName>
+      <nameIdentifier nameIdentifierScheme="ORCID" schemeURI="http://orcid.org/">0000-0001-6331-4451</nameIdentifier>
+      <affiliation>Northwestern University</affiliation>
+    </creator>
+    <creator>
+      <creatorName>Melissa Haendel</creatorName>
+      <nameIdentifier nameIdentifierScheme="ORCID" schemeURI="http://orcid.org/">0000-0001-9114-8737</nameIdentifier>
+      <affiliation>Oregon Health &amp; Science University</affiliation>
+    </creator>
+  </creators>
+  <titles>
+    <title>Architecting Attribution: expanding the scope of academic credit</title>
+  </titles>
+  <publisher>Zenodo</publisher>
+  <publicationYear>2019</publicationYear>
+  <subjects>
+    <subject>attribution</subject>
+    <subject>credit</subject>
+    <subject>ontology</subject>
+    <subject>promotion</subject>
+    <subject>tenure</subject>
+    <subject>research object</subject>
+  </subjects>
+  <dates>
+    <date dateType="Issued">2019-07-14</date>
+  </dates>
+  <language>en</language>
+  <resourceType resourceTypeGeneral="Text">Conference paper</resourceType>
+  <alternateIdentifiers>
+    <alternateIdentifier alternateIdentifierType="url">https://zenodo.org/record/3334688</alternateIdentifier>
+  </alternateIdentifiers>
+  <relatedIdentifiers>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="IsVersionOf">10.5281/zenodo.3334687</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="URL" relationType="IsPartOf">https://zenodo.org/communities/ro</relatedIdentifier>
+  </relatedIdentifiers>
+  <rightsList>
+    <rights rightsURI="http://creativecommons.org/licenses/by/4.0/legalcode">Creative Commons Attribution 4.0 International</rights>
+    <rights rightsURI="info:eu-repo/semantics/openAccess">Open Access</rights>
+  </rightsList>
+  <descriptions>
+    <description descriptionType="Abstract">&lt;p&gt;Traditional metrics for scholarship typically only measure publication records and grants received. However scholarly contributions can extend well beyond these traditional contributions. In order to properly give attribution for scholarship, we need improved mechanisms for recognizing and quantifying these efforts. We aim to develop a computable system to better attribute scholars for the work they do.&lt;/p&gt;</description>
+  </descriptions>
+</resource>

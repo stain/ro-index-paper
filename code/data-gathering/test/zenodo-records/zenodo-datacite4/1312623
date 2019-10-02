@@ -1,0 +1,84 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://datacite.org/schema/kernel-4" xsi:schemaLocation="http://datacite.org/schema/kernel-4 http://schema.datacite.org/meta/kernel-4.1/metadata.xsd">
+  <identifier identifierType="DOI">10.5281/zenodo.1312623</identifier>
+  <creators>
+    <creator>
+      <creatorName>Stian Soiland-Reyes</creatorName>
+      <nameIdentifier nameIdentifierScheme="ORCID" schemeURI="http://orcid.org/">0000-0001-9842-9718</nameIdentifier>
+      <affiliation>The University of Manchester, UK; Common Workflow Language project; Apache Taverna (incubating)</affiliation>
+    </creator>
+    <creator>
+      <creatorName>Farah Zaib Khan</creatorName>
+      <nameIdentifier nameIdentifierScheme="ORCID" schemeURI="http://orcid.org/">0000-0002-6337-3037</nameIdentifier>
+      <affiliation>The University of Melbourne, Australia; Common Workflow Language project</affiliation>
+    </creator>
+    <creator>
+      <creatorName>Richard O. Sinnott</creatorName>
+      <nameIdentifier nameIdentifierScheme="ORCID" schemeURI="http://orcid.org/">0000-0001-5998-222X</nameIdentifier>
+      <affiliation>The University of Melbourne, Australia</affiliation>
+    </creator>
+    <creator>
+      <creatorName>Andrew Lonie</creatorName>
+      <nameIdentifier nameIdentifierScheme="ORCID" schemeURI="http://orcid.org/">0000-0002-2006-3856</nameIdentifier>
+      <affiliation>The University of Melbourne, Australia</affiliation>
+    </creator>
+    <creator>
+      <creatorName>Michael R Crusoe</creatorName>
+      <nameIdentifier nameIdentifierScheme="ORCID" schemeURI="http://orcid.org/">0000-0002-2961-9670</nameIdentifier>
+      <affiliation>Common Workflow Language project</affiliation>
+    </creator>
+    <creator>
+      <creatorName>Carole Goble</creatorName>
+      <nameIdentifier nameIdentifierScheme="ORCID" schemeURI="http://orcid.org/">0000-0003-1219-2137</nameIdentifier>
+      <affiliation>The University of Manchester, UK</affiliation>
+    </creator>
+  </creators>
+  <titles>
+    <title>Capturing interoperable reproducible workflows with Common Workflow Language</title>
+  </titles>
+  <publisher>Zenodo</publisher>
+  <publicationYear>2018</publicationYear>
+  <subjects>
+    <subject>common workflow language</subject>
+    <subject>workflow</subject>
+    <subject>provenance</subject>
+    <subject>interoperability</subject>
+  </subjects>
+  <dates>
+    <date dateType="Issued">2018-07-16</date>
+  </dates>
+  <language>en</language>
+  <resourceType resourceTypeGeneral="Text">Conference paper</resourceType>
+  <alternateIdentifiers>
+    <alternateIdentifier alternateIdentifierType="url">https://zenodo.org/record/1312623</alternateIdentifier>
+  </alternateIdentifiers>
+  <relatedIdentifiers>
+    <relatedIdentifier relatedIdentifierType="URL" relationType="IsSupplementedBy">http://w3id.org/cwl/prov</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="URL" relationType="IsSupplementedBy">https://github.com/common-workflow-language/cwltool/releases/tag/1.0.20180711112827</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="URL" relationType="IsSupplementedBy">https://view.commonwl.org/</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Cites">10.5281/zenodo.1215611</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Cites">10.7490/f1000research.1114375.1</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="IsSupplementedBy">10.7490/f1000research.1115721.1</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="IsVersionOf">10.5281/zenodo.1312622</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="URL" relationType="IsPartOf">https://zenodo.org/communities/bioexcel</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="URL" relationType="IsPartOf">https://zenodo.org/communities/linkeddata</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="URL" relationType="IsPartOf">https://zenodo.org/communities/ro</relatedIdentifier>
+  </relatedIdentifiers>
+  <rightsList>
+    <rights rightsURI="http://creativecommons.org/licenses/by/4.0/legalcode">Creative Commons Attribution 4.0 International</rights>
+    <rights rightsURI="info:eu-repo/semantics/openAccess">Open Access</rights>
+  </rightsList>
+  <descriptions>
+    <description descriptionType="Abstract">&lt;p&gt;We present our ongoing work on integrating Research Object practices with Common Workflow Language, capturing and describing prospective and retrospective provenance.&lt;/p&gt;</description>
+    <description descriptionType="Other">Accepted for talk at RO2018.
+Web version at http://s11.no/2018/cwl.html</description>
+  </descriptions>
+  <fundingReferences>
+    <fundingReference>
+      <funderName>European Commission</funderName>
+      <funderIdentifier funderIdentifierType="Crossref Funder ID">10.13039/501100000780</funderIdentifier>
+      <awardNumber awardURI="info:eu-repo/grantAgreement/EC/H2020/675728/">675728</awardNumber>
+      <awardTitle>Centre of Excellence for Biomolecular Research</awardTitle>
+    </fundingReference>
+  </fundingReferences>
+</resource>

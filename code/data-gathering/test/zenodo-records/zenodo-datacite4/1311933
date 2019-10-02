@@ -1,0 +1,172 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://datacite.org/schema/kernel-4" xsi:schemaLocation="http://datacite.org/schema/kernel-4 http://schema.datacite.org/meta/kernel-4.1/metadata.xsd">
+  <identifier identifierType="DOI">10.5281/zenodo.1311933</identifier>
+  <creators>
+    <creator>
+      <creatorName>Huber, Sebastiaan P.</creatorName>
+      <givenName>Sebastiaan P.</givenName>
+      <familyName>Huber</familyName>
+      <affiliation>Theory and Simulation of Materials (THEOS), EPFL, Lausanne, Switzerland</affiliation>
+    </creator>
+    <creator>
+      <creatorName>Zoupanos, Spyros</creatorName>
+      <givenName>Spyros</givenName>
+      <familyName>Zoupanos</familyName>
+      <affiliation>Theory and Simulation of Materials (THEOS), EPFL, Lausanne, Switzerland</affiliation>
+    </creator>
+    <creator>
+      <creatorName>Kahle, Leonid</creatorName>
+      <givenName>Leonid</givenName>
+      <familyName>Kahle</familyName>
+      <affiliation>Theory and Simulation of Materials (THEOS), EPFL, Lausanne, Switzerland</affiliation>
+    </creator>
+    <creator>
+      <creatorName>Uhrin, Martin</creatorName>
+      <givenName>Martin</givenName>
+      <familyName>Uhrin</familyName>
+      <affiliation>Theory and Simulation of Materials (THEOS), EPFL, Lausanne, Switzerland</affiliation>
+    </creator>
+    <creator>
+      <creatorName>Mounet, Nicolas</creatorName>
+      <givenName>Nicolas</givenName>
+      <familyName>Mounet</familyName>
+      <affiliation>Theory and Simulation of Materials (THEOS), EPFL, Lausanne, Switzerland</affiliation>
+    </creator>
+    <creator>
+      <creatorName>Häuselmann, Rico Andreas</creatorName>
+      <givenName>Rico Andreas</givenName>
+      <familyName>Häuselmann</familyName>
+      <affiliation>Theory and Simulation of Materials (THEOS), EPFL, Lausanne, Switzerland</affiliation>
+    </creator>
+    <creator>
+      <creatorName>Kumbhar, Snehal</creatorName>
+      <givenName>Snehal</givenName>
+      <familyName>Kumbhar</familyName>
+      <affiliation>Theory and Simulation of Materials (THEOS), EPFL, Lausanne, Switzerland</affiliation>
+    </creator>
+    <creator>
+      <creatorName>Talirz, Leopold</creatorName>
+      <givenName>Leopold</givenName>
+      <familyName>Talirz</familyName>
+      <affiliation>Theory and Simulation of Materials (THEOS), EPFL, Lausanne, Switzerland and Laboratory for Molecular Simulation (LSMO), EPFL, Sion, Switzerland</affiliation>
+    </creator>
+    <creator>
+      <creatorName>Yakutovich, Aliaksandr</creatorName>
+      <givenName>Aliaksandr</givenName>
+      <familyName>Yakutovich</familyName>
+      <affiliation>Theory and Simulation of Materials (THEOS), EPFL, Lausanne, Switzerland and Laboratory for Molecular Simulation (LSMO), EPFL, Sion, Switzerland</affiliation>
+    </creator>
+    <creator>
+      <creatorName>Passaro, Elsa</creatorName>
+      <givenName>Elsa</givenName>
+      <familyName>Passaro</familyName>
+      <affiliation>Theory and Simulation of Materials (THEOS), EPFL, Lausanne, Switzerland and Laboratory for Molecular Simulation (LSMO), EPFL, Sion, Switzerland</affiliation>
+    </creator>
+    <creator>
+      <creatorName>Borelli, Marco</creatorName>
+      <givenName>Marco</givenName>
+      <familyName>Borelli</familyName>
+      <affiliation>Theory and Simulation of Materials (THEOS), EPFL, Lausanne, Switzerland</affiliation>
+    </creator>
+    <creator>
+      <creatorName>Gargiulo, Fernando</creatorName>
+      <givenName>Fernando</givenName>
+      <familyName>Gargiulo</familyName>
+      <affiliation>Theory and Simulation of Materials (THEOS), EPFL, Lausanne, Switzerland</affiliation>
+    </creator>
+    <creator>
+      <creatorName>Schütt, Ole</creatorName>
+      <givenName>Ole</givenName>
+      <familyName>Schütt</familyName>
+      <affiliation>nanotech@surfaces laboratory, Empa, Dübendorf, Switzerland</affiliation>
+    </creator>
+    <creator>
+      <creatorName>Cepellotti, Andrea</creatorName>
+      <givenName>Andrea</givenName>
+      <familyName>Cepellotti</familyName>
+      <affiliation>Theory and Simulation of Materials (THEOS), EPFL, Lausanne, Switzerland and UC Berkeley, USA</affiliation>
+    </creator>
+    <creator>
+      <creatorName>Merkys, Andrius</creatorName>
+      <givenName>Andrius</givenName>
+      <familyName>Merkys</familyName>
+      <affiliation>Theory and Simulation of Materials (THEOS), EPFL, Lausanne, Switzerland and Vilnius University, Lithuania</affiliation>
+    </creator>
+    <creator>
+      <creatorName>Kozinsky, Boris</creatorName>
+      <givenName>Boris</givenName>
+      <familyName>Kozinsky</familyName>
+      <affiliation>Harvard University, USA</affiliation>
+    </creator>
+    <creator>
+      <creatorName>Smit, Berend</creatorName>
+      <givenName>Berend</givenName>
+      <familyName>Smit</familyName>
+      <affiliation>Laboratory for Molecular Simulation (LSMO), EPFL, Sion, Switzerland</affiliation>
+    </creator>
+    <creator>
+      <creatorName>VandeVondele, Joost</creatorName>
+      <givenName>Joost</givenName>
+      <familyName>VandeVondele</familyName>
+      <affiliation>Swiss National Supercomputing Centre (CSCS), Lugano, Switzerland</affiliation>
+    </creator>
+    <creator>
+      <creatorName>Schulthess, Thomas</creatorName>
+      <givenName>Thomas</givenName>
+      <familyName>Schulthess</familyName>
+      <affiliation>Swiss National Supercomputing Centre (CSCS), Lugano, Switzerland</affiliation>
+    </creator>
+    <creator>
+      <creatorName>Marzari, Nicola</creatorName>
+      <givenName>Nicola</givenName>
+      <familyName>Marzari</familyName>
+      <affiliation>Theory and Simulation of Materials (THEOS), EPFL, Lausanne, Switzerland</affiliation>
+    </creator>
+    <creator>
+      <creatorName>Pizzi, Giovanni</creatorName>
+      <givenName>Giovanni</givenName>
+      <familyName>Pizzi</familyName>
+      <nameIdentifier nameIdentifierScheme="ORCID" schemeURI="http://orcid.org/">0000-0002-3583-4377</nameIdentifier>
+      <affiliation>Theory and Simulation of Materials (THEOS), EPFL, Lausanne, Switzerland</affiliation>
+    </creator>
+  </creators>
+  <titles>
+    <title>AiiDA and the Materials Cloud: workflow engine with automated provenance and dissemination platform for Open Science</title>
+  </titles>
+  <publisher>Zenodo</publisher>
+  <publicationYear>2018</publicationYear>
+  <subjects>
+    <subject>AiiDA</subject>
+    <subject>Materials Cloud</subject>
+    <subject>FAIR</subject>
+    <subject>Provenance</subject>
+    <subject>Workflows</subject>
+    <subject>Open research data</subject>
+  </subjects>
+  <dates>
+    <date dateType="Issued">2018-07-14</date>
+  </dates>
+  <resourceType resourceTypeGeneral="Text">Conference paper</resourceType>
+  <alternateIdentifiers>
+    <alternateIdentifier alternateIdentifierType="url">https://zenodo.org/record/1311933</alternateIdentifier>
+  </alternateIdentifiers>
+  <relatedIdentifiers>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="IsVersionOf">10.5281/zenodo.1311932</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="URL" relationType="IsPartOf">https://zenodo.org/communities/ro</relatedIdentifier>
+  </relatedIdentifiers>
+  <rightsList>
+    <rights rightsURI="http://creativecommons.org/licenses/by/4.0/legalcode">Creative Commons Attribution 4.0 International</rights>
+    <rights rightsURI="info:eu-repo/semantics/openAccess">Open Access</rights>
+  </rightsList>
+  <descriptions>
+    <description descriptionType="Abstract">&lt;p&gt;Modern advances in computational technology have facilitated great strides in a wide variety of scientific disciplines and have led to the production of a wealth of valuable research data. However, the extraordinarily quick growth of computational capabilities has left the scientific world wanting for a simple yet effective way of managing these new workflows and the vast amount of data that they produce. We present AiiDA[1], a highly-automated and robust workflow engine written in Python, designed for high-throughput computational science. AiiDA automatically tracks data provenance (and stores it in the form of a directed graph) while managing and automating simulations running either locally or on supercomputers. All data and calculations are stored in a database and can be efficiently queried thanks to a simple but powerful query language. AiiDA enables computational science that is fully reproducible and facilitates sharing of research results. Its symbiotic counterpart, the Materials Cloud [2], is an interactive online platform powered by AiiDA. It is designed to enable seamless sharing and dissemination of resources, of raw data with their provenance as well as of curated open research data in computational science, and to provide cloud resources for simulations. The combination of AiiDA and Materials Cloud (whose architecture is shown in the figure) provides an Open Science Framework fully compliant with the FAIR (findable, accessible, interoperable and reusable) data principles [3]. The diligent and dedicated data management of AiiDA, combined with the user-friendly and ergonomic Materials Cloud, form an invaluable tool to any computational scientist.&lt;/p&gt;
+
+&lt;p&gt;[1] G. Pizzi et al., Comp. Mat. Sci. 111, 218 (2016) -&amp;nbsp;&lt;a&gt;www.aiida.net&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;[2]&amp;nbsp;&lt;a href="http://www.materialscloud.org/"&gt;http://www.materialscloud.org&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;[3] M. D. Wilkinson et al, Sci. Data 3, 160018 (2016)&lt;/p&gt;</description>
+    <description descriptionType="Other">Preprint submitted to RO2018 workshop at IEEE eScience Conference 2018</description>
+    <description descriptionType="Other">{"references": ["G. Pizzi et al., Comp. Mat. Sci. 111, 218 (2016) - www.aiida.net", "http://www.materialscloud.org", "M. D. Wilkinson et al, Sci. Data 3, 160018 (2016)"]}</description>
+  </descriptions>
+</resource>

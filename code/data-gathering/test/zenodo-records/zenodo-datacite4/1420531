@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://datacite.org/schema/kernel-4" xsi:schemaLocation="http://datacite.org/schema/kernel-4 http://schema.datacite.org/meta/kernel-4.1/metadata.xsd">
+  <identifier identifierType="DOI">10.5281/zenodo.1420531</identifier>
+  <creators>
+    <creator>
+      <creatorName>Bryce Mecum</creatorName>
+      <nameIdentifier nameIdentifierScheme="ORCID" schemeURI="http://orcid.org/">0000-0002-0381-3766</nameIdentifier>
+      <affiliation>National Center for Ecological Analysis and Synthesis</affiliation>
+    </creator>
+    <creator>
+      <creatorName>Matthew B. Jones</creatorName>
+      <nameIdentifier nameIdentifierScheme="ORCID" schemeURI="http://orcid.org/">0000-0003-0077-4738</nameIdentifier>
+      <affiliation>National Center for Ecological Analysis and Synthesis</affiliation>
+    </creator>
+    <creator>
+      <creatorName>Dave Vieglais</creatorName>
+      <nameIdentifier nameIdentifierScheme="ORCID" schemeURI="http://orcid.org/">0000-0002-6513-4996</nameIdentifier>
+      <affiliation>University of Kansas</affiliation>
+    </creator>
+    <creator>
+      <creatorName>Craig Willis</creatorName>
+      <nameIdentifier nameIdentifierScheme="ORCID" schemeURI="http://orcid.org/">0000-0002-6148-7196</nameIdentifier>
+      <affiliation>University of Illinois</affiliation>
+    </creator>
+  </creators>
+  <titles>
+    <title>Preserving Reproducibility: Provenance and Executable Containers in DataONE Data Packages</title>
+  </titles>
+  <publisher>Zenodo</publisher>
+  <publicationYear>2018</publicationYear>
+  <subjects>
+    <subject>data packaging</subject>
+    <subject>standards</subject>
+    <subject>OAI-ORE</subject>
+    <subject>reproducibility</subject>
+    <subject>DataONE</subject>
+    <subject>WholeTale</subject>
+  </subjects>
+  <dates>
+    <date dateType="Issued">2018-09-17</date>
+  </dates>
+  <resourceType resourceTypeGeneral="Text">Conference paper</resourceType>
+  <alternateIdentifiers>
+    <alternateIdentifier alternateIdentifierType="url">https://zenodo.org/record/1420531</alternateIdentifier>
+  </alternateIdentifiers>
+  <relatedIdentifiers>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="IsVersionOf">10.5281/zenodo.1312684</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="URL" relationType="IsPartOf">https://zenodo.org/communities/ro</relatedIdentifier>
+  </relatedIdentifiers>
+  <rightsList>
+    <rights rightsURI="http://creativecommons.org/licenses/by-sa/4.0/legalcode">Creative Commons Attribution Share Alike 4.0 International</rights>
+    <rights rightsURI="info:eu-repo/semantics/openAccess">Open Access</rights>
+  </rightsList>
+  <descriptions>
+    <description descriptionType="Abstract">&lt;p&gt;A short paper submission for the ResearchObject2018 Call for Papers:&amp;nbsp;http://www.researchobject.org/ro2018/#call&lt;/p&gt;</description>
+    <description descriptionType="Other">Preprint submitted to RO2018 workshop at IEEE eScience Conference 2018</description>
+  </descriptions>
+</resource>

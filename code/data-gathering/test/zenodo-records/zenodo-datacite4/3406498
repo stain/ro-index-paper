@@ -1,0 +1,154 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://datacite.org/schema/kernel-4" xsi:schemaLocation="http://datacite.org/schema/kernel-4 http://schema.datacite.org/meta/kernel-4.1/metadata.xsd">
+  <identifier identifierType="DOI">10.5281/zenodo.3406498</identifier>
+  <creators>
+    <creator>
+      <creatorName>Peter Sefton</creatorName>
+      <nameIdentifier nameIdentifierScheme="ORCID" schemeURI="http://orcid.org/">0000-0002-3545-944X</nameIdentifier>
+    </creator>
+    <creator>
+      <creatorName>Eoghan Ó Carragáin</creatorName>
+      <nameIdentifier nameIdentifierScheme="ORCID" schemeURI="http://orcid.org/">0000-0001-8131-2150</nameIdentifier>
+    </creator>
+    <creator>
+      <creatorName>Stian Soiland-Reyes</creatorName>
+      <nameIdentifier nameIdentifierScheme="ORCID" schemeURI="http://orcid.org/">0000-0001-9842-9718</nameIdentifier>
+    </creator>
+    <creator>
+      <creatorName>Oscar Corcho</creatorName>
+      <nameIdentifier nameIdentifierScheme="ORCID" schemeURI="http://orcid.org/">0000-0002-9260-0753</nameIdentifier>
+    </creator>
+    <creator>
+      <creatorName>Daniel Garijo</creatorName>
+      <nameIdentifier nameIdentifierScheme="ORCID" schemeURI="http://orcid.org/">0000-0003-0454-7145</nameIdentifier>
+    </creator>
+    <creator>
+      <creatorName>Raul Palma</creatorName>
+      <nameIdentifier nameIdentifierScheme="ORCID" schemeURI="http://orcid.org/">0000-0003-4289-4922</nameIdentifier>
+    </creator>
+    <creator>
+      <creatorName>Frederik Coppens</creatorName>
+      <nameIdentifier nameIdentifierScheme="ORCID" schemeURI="http://orcid.org/">0000-0001-6565-5145</nameIdentifier>
+    </creator>
+    <creator>
+      <creatorName>Carole Goble</creatorName>
+      <nameIdentifier nameIdentifierScheme="ORCID" schemeURI="http://orcid.org/">0000-0003-1219-2137</nameIdentifier>
+    </creator>
+    <creator>
+      <creatorName>José María Fernández</creatorName>
+      <nameIdentifier nameIdentifierScheme="ORCID" schemeURI="http://orcid.org/">0000-0002-4806-5140</nameIdentifier>
+    </creator>
+    <creator>
+      <creatorName>Kyle Chard</creatorName>
+      <nameIdentifier nameIdentifierScheme="ORCID" schemeURI="http://orcid.org/">0000-0002-7370-4805</nameIdentifier>
+    </creator>
+    <creator>
+      <creatorName>Jose Manuel Gomez-Perez</creatorName>
+      <nameIdentifier nameIdentifierScheme="ORCID" schemeURI="http://orcid.org/">0000-0002-5491-6431</nameIdentifier>
+    </creator>
+    <creator>
+      <creatorName>Michael R Crusoe</creatorName>
+      <nameIdentifier nameIdentifierScheme="ORCID" schemeURI="http://orcid.org/">0000-0002-2961-9670</nameIdentifier>
+    </creator>
+    <creator>
+      <creatorName>Ignacio Eguinoa</creatorName>
+      <nameIdentifier nameIdentifierScheme="ORCID" schemeURI="http://orcid.org/">0000-0002-6190-122X</nameIdentifier>
+    </creator>
+    <creator>
+      <creatorName>Nick Juty</creatorName>
+      <nameIdentifier nameIdentifierScheme="ORCID" schemeURI="http://orcid.org/">0000-0002-2036-8350</nameIdentifier>
+    </creator>
+    <creator>
+      <creatorName>Kristi Holmes</creatorName>
+      <nameIdentifier nameIdentifierScheme="ORCID" schemeURI="http://orcid.org/">0000-0001-8420-5254</nameIdentifier>
+    </creator>
+    <creator>
+      <creatorName>Jason A. Clark</creatorName>
+      <nameIdentifier nameIdentifierScheme="ORCID" schemeURI="http://orcid.org/">0000-0002-3588-6257</nameIdentifier>
+    </creator>
+    <creator>
+      <creatorName>Salvador Capella-Gutierrez</creatorName>
+      <nameIdentifier nameIdentifierScheme="ORCID" schemeURI="http://orcid.org/">0000-0002-0309-604X</nameIdentifier>
+    </creator>
+    <creator>
+      <creatorName>Alasdair J. G. Gray</creatorName>
+      <nameIdentifier nameIdentifierScheme="ORCID" schemeURI="http://orcid.org/">0000-0002-5711-4872</nameIdentifier>
+    </creator>
+    <creator>
+      <creatorName>Stuart Owen</creatorName>
+      <nameIdentifier nameIdentifierScheme="ORCID" schemeURI="http://orcid.org/">0000-0003-2130-0865</nameIdentifier>
+    </creator>
+    <creator>
+      <creatorName>Alan R. Williams</creatorName>
+      <nameIdentifier nameIdentifierScheme="ORCID" schemeURI="http://orcid.org/">0000-0003-3156-2105</nameIdentifier>
+    </creator>
+  </creators>
+  <titles>
+    <title>RO-Crate Metadata Specification 0.2</title>
+  </titles>
+  <publisher>Zenodo</publisher>
+  <publicationYear>2019</publicationYear>
+  <subjects>
+    <subject>research object</subject>
+    <subject>data packaging</subject>
+    <subject>metadata</subject>
+    <subject>schema.org</subject>
+    <subject>JSON-LD</subject>
+    <subject>linked data</subject>
+  </subjects>
+  <dates>
+    <date dateType="Issued">2019-09-12</date>
+  </dates>
+  <language>en</language>
+  <resourceType resourceTypeGeneral="Text">Technical note</resourceType>
+  <alternateIdentifiers>
+    <alternateIdentifier alternateIdentifierType="url">https://w3id.org/ro/crate/0.2</alternateIdentifier>
+    <alternateIdentifier alternateIdentifierType="url">https://zenodo.org/record/3406498</alternateIdentifier>
+  </alternateIdentifiers>
+  <relatedIdentifiers>
+    <relatedIdentifier relatedIdentifierType="URL" relationType="IsSupplementedBy">https://w3id.org/ro/crate/0.2/context</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="URL" relationType="IsDocumentedBy">https://w3id.org/ro/crate</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="URL" relationType="IsNewVersionOf">https://researchobject.github.io/ro-crate/0.1.0/</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="URL" relationType="IsNewVersionOf">https://github.com/UTS-eResearch/datacrate/blob/47a5046b6fb54fc8f2e751f67fb98b8b2216c955/spec/1.0/data_crate_specification_v1.0.md</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Cites">10.17487/RFC2119</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="URL" relationType="IsSupplementedBy">https://github.com/ResearchObject/ro-crate</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="URL" relationType="References">http://researchobject.org/</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="URL" relationType="References">https://schema.org/</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="URL" relationType="Cites">http://www.w3.org/TR/2014/REC-json-ld-20140116/</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Cites">10.17487/RFC7159</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Cites">10.17487/RFC3986</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="URL" relationType="Cites">https://www.w3.org/TR/html52/</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Cites">10.25490/a97f-egyk</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Cites">10.17487/RFC8493</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="URL" relationType="References">https://ocfl.io/</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="URL" relationType="Cites">https://w3id.org/ro/2016-01-28/</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="URL" relationType="Cites">https://github.com/duraspace/pcdm/wiki</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="URL" relationType="References">https://orcid.org/</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="URL" relationType="References">https://ror.org/</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="URL" relationType="References">https://www.nationalarchives.gov.uk/PRONOM/Default.aspx</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="URL" relationType="Cites">https://en.wikipedia.org/wiki/Exif</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="URL" relationType="Cites">https://en.wikipedia.org/wiki/BagIt</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="URL" relationType="References">https://www.geonames.org/</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="URL" relationType="References">https://omeka.org/</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="PURL" relationType="References">http://purl.org/ontology/bibo/interviewee</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="URL" relationType="References">http://neologism.ecs.soton.ac.uk/bibo.html#interviewee</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="URL" relationType="IsIdenticalTo">https://github.com/ResearchObject/ro-crate/releases/tag/0.2.1</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="IsVersionOf">10.5281/zenodo.3406497</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="URL" relationType="IsPartOf">https://zenodo.org/communities/ro</relatedIdentifier>
+  </relatedIdentifiers>
+  <version>0.2.1</version>
+  <rightsList>
+    <rights rightsURI="http://www.opensource.org/licenses/Apache-2.0">Apache License 2.0</rights>
+    <rights rightsURI="info:eu-repo/semantics/openAccess">Open Access</rights>
+  </rightsList>
+  <descriptions>
+    <description descriptionType="Abstract">&lt;p&gt;&lt;strong&gt;Web-version:&lt;/strong&gt; &lt;a href="https://w3id.org/ro/crate/0.2"&gt;https://w3id.org/ro/crate/0.2&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;This document specifies a method, known as &lt;em&gt;RO-Crate&lt;/em&gt; (Research Object Crate), of organizing file-based data with associated metadata, using linked data principles, in both human and machine readable formats, with the ability to include additional domain-specific metadata.&lt;/p&gt;
+
+&lt;p&gt;The core of RO-Crate is a JSON-LD file, the &lt;em&gt;RO-Crate Metadata File&lt;/em&gt;, named &lt;code&gt;ro-crate-metadata.jsonld&lt;/code&gt;. This file contains structured metadata about the dataset as a whole (the &lt;em&gt;Root Data Entity&lt;/em&gt;) and, optionally, about some or all of its files. This provides a simple way to, for example, assert the authors (e.g. people, organizations) of the RO-Crate or one its files, or to capture more complex provenance for files, such as how they were created using software and equipment.&lt;/p&gt;
+
+&lt;p&gt;While providing the formal specification for RO-Crate, this document also aims to be a practical guide for software authors to create tools for generating and consuming research data packages, with explanation by examples.&lt;/p&gt;</description>
+    <description descriptionType="Other">Working Draft published by researchobject.org - see https://w3id.org/ro/crate/0.2 for web version.</description>
+  </descriptions>
+</resource>

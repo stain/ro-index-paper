@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://datacite.org/schema/kernel-4" xsi:schemaLocation="http://datacite.org/schema/kernel-4 http://schema.datacite.org/meta/kernel-4.1/metadata.xsd">
+  <identifier identifierType="DOI">10.5281/zenodo.3382423</identifier>
+  <creators>
+    <creator>
+      <creatorName>McPhillips, Timothy M</creatorName>
+      <givenName>Timothy M</givenName>
+      <familyName>McPhillips</familyName>
+      <affiliation>UIUC</affiliation>
+    </creator>
+    <creator>
+      <creatorName>Willis, Craig</creatorName>
+      <givenName>Craig</givenName>
+      <familyName>Willis</familyName>
+      <affiliation>UIUC</affiliation>
+    </creator>
+    <creator>
+      <creatorName>Gryk, Michael R.</creatorName>
+      <givenName>Michael R.</givenName>
+      <familyName>Gryk</familyName>
+    </creator>
+    <creator>
+      <creatorName>Nunez-Corrales, Santiago</creatorName>
+      <givenName>Santiago</givenName>
+      <familyName>Nunez-Corrales</familyName>
+    </creator>
+    <creator>
+      <creatorName>Ludaescher, Bertram</creatorName>
+      <givenName>Bertram</givenName>
+      <familyName>Ludaescher</familyName>
+      <affiliation>UIUC</affiliation>
+    </creator>
+  </creators>
+  <titles>
+    <title>Reproducibility by Other Means: Transparent Research Objects</title>
+  </titles>
+  <publisher>Zenodo</publisher>
+  <publicationYear>2019</publicationYear>
+  <dates>
+    <date dateType="Issued">2019-08-30</date>
+  </dates>
+  <language>en</language>
+  <resourceType resourceTypeGeneral="Text">Conference paper</resourceType>
+  <alternateIdentifiers>
+    <alternateIdentifier alternateIdentifierType="url">https://zenodo.org/record/3382423</alternateIdentifier>
+  </alternateIdentifiers>
+  <relatedIdentifiers>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="IsVersionOf">10.5281/zenodo.3270559</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="URL" relationType="IsPartOf">https://zenodo.org/communities/ro</relatedIdentifier>
+  </relatedIdentifiers>
+  <version>6</version>
+  <rightsList>
+    <rights rightsURI="http://creativecommons.org/licenses/by/4.0/legalcode">Creative Commons Attribution 4.0 International</rights>
+    <rights rightsURI="info:eu-repo/semantics/openAccess">Open Access</rights>
+  </rightsList>
+  <descriptions>
+    <description descriptionType="Abstract">&lt;p&gt;&lt;strong&gt;Abstract&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Research Objects have the potential to significantly enhance the reproducibility of scientific research. One important way Research Objects can do this is by encapsulating the means for re-executing the computational components of studies, thus supporting the new form of reproducibility enabled by digital computing---exact repeatability. However, Research Objects also can make scientific research more reproducible by supporting transparency, a component of reproducibility orthogonal to re-executability. We describe here our vision for making Research Objects more transparent by providing means for disambiguating claims about reproducibility generally, and computational repeatability specifically. We show how support for science-oriented queries can enable researchers to assess the reproducibility of Research Objects and the individual methods and results they encapsulate.&lt;/p&gt;</description>
+    <description descriptionType="Other">Final preprint submitted to RO2019 workshop at IEEE eScience Conference 2019</description>
+  </descriptions>
+</resource>

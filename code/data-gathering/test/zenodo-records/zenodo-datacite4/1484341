@@ -1,0 +1,61 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://datacite.org/schema/kernel-4" xsi:schemaLocation="http://datacite.org/schema/kernel-4 http://schema.datacite.org/meta/kernel-4.1/metadata.xsd">
+  <identifier identifierType="DOI">10.5281/zenodo.1484341</identifier>
+  <creators>
+    <creator>
+      <creatorName>Carl Kesselman</creatorName>
+      <nameIdentifier nameIdentifierScheme="ORCID" schemeURI="http://orcid.org/">0000-0003-0917-1562</nameIdentifier>
+      <affiliation>University of Southern California</affiliation>
+    </creator>
+  </creators>
+  <titles>
+    <title>Research Objects For Everyday Use</title>
+  </titles>
+  <publisher>Zenodo</publisher>
+  <publicationYear>2018</publicationYear>
+  <dates>
+    <date dateType="Issued">2018-10-29</date>
+  </dates>
+  <resourceType resourceTypeGeneral="Text">Presentation</resourceType>
+  <alternateIdentifiers>
+    <alternateIdentifier alternateIdentifierType="url">https://zenodo.org/record/1484341</alternateIdentifier>
+  </alternateIdentifiers>
+  <relatedIdentifiers>
+    <relatedIdentifier relatedIdentifierType="URL" relationType="References">http://docs.derivacloud.org/</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="URL" relationType="References">https://fair-research.org/</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="URL" relationType="References">https://dev.gudmap.org/</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Cites">10.25548/BURB-6P44</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Cites">10.1073/pnas.1802966115</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="URL" relationType="References">http://identifiers.org/ark/ark:/57799/b9040f</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="ARK" relationType="References">ark:/57799/b9040f</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Cites">10.1038/533452a</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="IsVersionOf">10.5281/zenodo.1484340</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="URL" relationType="IsPartOf">https://zenodo.org/communities/ro</relatedIdentifier>
+  </relatedIdentifiers>
+  <rightsList>
+    <rights rightsURI="http://creativecommons.org/licenses/by/4.0/legalcode">Creative Commons Attribution 4.0 International</rights>
+    <rights rightsURI="info:eu-repo/semantics/openAccess">Open Access</rights>
+  </rightsList>
+  <descriptions>
+    <description descriptionType="Abstract">&lt;p&gt;Overview:&lt;/p&gt;
+
+&lt;ul&gt;
+	&lt;li&gt;What does it mean to have a scientific &amp;ldquo;result&amp;rdquo;&lt;/li&gt;
+	&lt;li&gt;Science must be reproducible..&lt;/li&gt;
+	&lt;li&gt;Lets focus on the data...&lt;/li&gt;
+	&lt;li&gt;Reproducible Data is FAIR&lt;/li&gt;
+	&lt;li&gt;GOAL: FAIR Collaboration&lt;/li&gt;
+	&lt;li&gt;Knowledge Turns and Publication&lt;/li&gt;
+	&lt;li&gt;What does it mean to have research objects in daily use&lt;/li&gt;
+	&lt;li&gt;Minimal Identifiers (Minids)&lt;/li&gt;
+	&lt;li&gt;Large Multi-File Datasets: Big Data Bags&lt;/li&gt;
+	&lt;li&gt;Research Objects: rich metadata for bags&lt;/li&gt;
+	&lt;li&gt;Large, multi-file datasets&lt;/li&gt;
+	&lt;li&gt;Scientific Digital Asset Management&lt;/li&gt;
+	&lt;li&gt;Discovery Environment for Relational Information and&lt;br&gt;
+	Versioned Assets (DERIVA)&lt;/li&gt;
+&lt;/ul&gt;</description>
+    <description descriptionType="Other">Invited Keynote at RO2018</description>
+    <description descriptionType="Other">{"references": ["Karl Popper, 1959. The logic of scientific discovery. Hutchinson, London, United Kingdom."]}</description>
+  </descriptions>
+</resource>

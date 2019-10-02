@@ -1,0 +1,64 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://datacite.org/schema/kernel-4" xsi:schemaLocation="http://datacite.org/schema/kernel-4 http://schema.datacite.org/meta/kernel-4.1/metadata.xsd">
+  <identifier identifierType="DOI">10.5281/zenodo.1312652</identifier>
+  <creators>
+    <creator>
+      <creatorName>Kristi Holmes</creatorName>
+      <nameIdentifier nameIdentifierScheme="ORCID" schemeURI="http://orcid.org/">0000-0001-8420-5254</nameIdentifier>
+      <affiliation>Northwestern University Feinberg School of Medicine</affiliation>
+    </creator>
+    <creator>
+      <creatorName>Karen Gutzman</creatorName>
+      <nameIdentifier nameIdentifierScheme="ORCID" schemeURI="http://orcid.org/">0000-0001-6331-4451</nameIdentifier>
+      <affiliation>Northwestern University Feinberg School of Medicine</affiliation>
+    </creator>
+    <creator>
+      <creatorName>Patricia Smith</creatorName>
+      <nameIdentifier nameIdentifierScheme="ORCID" schemeURI="http://orcid.org/">0000-0002-4743-6659</nameIdentifier>
+      <affiliation>Northwestern University Feinberg School of Medicine</affiliation>
+    </creator>
+    <creator>
+      <creatorName>David Eichmann</creatorName>
+      <nameIdentifier nameIdentifierScheme="ORCID" schemeURI="http://orcid.org/">0000-0003-3150-8758</nameIdentifier>
+      <affiliation>University of Iowa</affiliation>
+    </creator>
+    <creator>
+      <creatorName>Melissa Haendel</creatorName>
+      <nameIdentifier nameIdentifierScheme="ORCID" schemeURI="http://orcid.org/">0000-0001-9114-8737</nameIdentifier>
+      <affiliation>Oregon Health &amp; Science University</affiliation>
+    </creator>
+  </creators>
+  <titles>
+    <title>Making it count: a computational approach to attribution</title>
+  </titles>
+  <publisher>Zenodo</publisher>
+  <publicationYear>2018</publicationYear>
+  <subjects>
+    <subject>attribution</subject>
+    <subject>credit</subject>
+    <subject>data model</subject>
+    <subject>research objects</subject>
+    <subject>contributor roles</subject>
+  </subjects>
+  <dates>
+    <date dateType="Issued">2018-07-16</date>
+  </dates>
+  <resourceType resourceTypeGeneral="Text">Conference paper</resourceType>
+  <alternateIdentifiers>
+    <alternateIdentifier alternateIdentifierType="url">https://zenodo.org/record/1312652</alternateIdentifier>
+  </alternateIdentifiers>
+  <relatedIdentifiers>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="IsVersionOf">10.5281/zenodo.1312651</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="URL" relationType="IsPartOf">https://zenodo.org/communities/ro</relatedIdentifier>
+  </relatedIdentifiers>
+  <rightsList>
+    <rights rightsURI="http://creativecommons.org/licenses/by/4.0/legalcode">Creative Commons Attribution 4.0 International</rights>
+    <rights rightsURI="info:eu-repo/semantics/openAccess">Open Access</rights>
+  </rightsList>
+  <descriptions>
+    <description descriptionType="Abstract">&lt;p&gt;People from a diverse array of backgrounds play important roles in research, often in ways that cannot be quantified through traditional metrics of scholarly impact. This demands better approaches to evaluate and ultimately communicate scholarly outcomes beyond the narrow criteria of publications and grants. It is imperative to develop a structure to track a much wider diversity of contributor roles and research objects - and do so in a manner that is easily populated with real data. This presentation will share details about the project, our team and approach, upcoming opportunities to collaborate, metrics for success, and integration and application of this work to date.&lt;/p&gt;
+
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;</description>
+    <description descriptionType="Other">Preprint submitted to RO2018 workshop at IEEE eScience Conference 2018</description>
+  </descriptions>
+</resource>

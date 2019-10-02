@@ -1,0 +1,73 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://datacite.org/schema/kernel-4" xsi:schemaLocation="http://datacite.org/schema/kernel-4 http://schema.datacite.org/meta/kernel-4.1/metadata.xsd">
+  <identifier identifierType="DOI">10.5281/zenodo.3343031</identifier>
+  <creators>
+    <creator>
+      <creatorName>Eoghan Ó Carragáin</creatorName>
+      <nameIdentifier nameIdentifierScheme="ORCID" schemeURI="http://orcid.org/">0000-0001-8131-2150</nameIdentifier>
+      <affiliation>University College Cork</affiliation>
+    </creator>
+    <creator>
+      <creatorName>Carole Goble</creatorName>
+      <nameIdentifier nameIdentifierScheme="ORCID" schemeURI="http://orcid.org/">0000-0003-1219-2137</nameIdentifier>
+      <affiliation>The University of Manchester, UK</affiliation>
+    </creator>
+    <creator>
+      <creatorName>Peter Sefton</creatorName>
+      <nameIdentifier nameIdentifierScheme="ORCID" schemeURI="http://orcid.org/">0000-0002-3545-944X</nameIdentifier>
+      <affiliation>University of Technology Sydney</affiliation>
+    </creator>
+    <creator>
+      <creatorName>Stian Soiland-Reyes</creatorName>
+      <nameIdentifier nameIdentifierScheme="ORCID" schemeURI="http://orcid.org/">0000-0001-9842-9718</nameIdentifier>
+      <affiliation>The University of Manchester, UK</affiliation>
+    </creator>
+  </creators>
+  <titles>
+    <title>RO-Crate, a lightweight approach to Research Object data packaging</title>
+  </titles>
+  <publisher>Zenodo</publisher>
+  <publicationYear>2019</publicationYear>
+  <dates>
+    <date dateType="Issued">2019-07-19</date>
+  </dates>
+  <resourceType resourceTypeGeneral="Text">Poster</resourceType>
+  <alternateIdentifiers>
+    <alternateIdentifier alternateIdentifierType="url">https://zenodo.org/record/3343031</alternateIdentifier>
+  </alternateIdentifiers>
+  <relatedIdentifiers>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="IsSupplementTo">10.5281/zenodo.3250687</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="URL" relationType="References">http://www.researchobject.org/ro-crate/</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="URL" relationType="References">http://github.com/researchobject/ro-crate</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Cites">10.5281/zenodo.844394</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="URL" relationType="References">https://data.research.uts.edu.au/examples/ro-crate/0.2/Data_Package-IDRC_Opportunities_and_Challenges_Open_Research_Strategies/ro-crate-preview.html</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="IsIdenticalTo">10.7490/f1000research.1117130.1</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="IsVersionOf">10.5281/zenodo.3343030</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="URL" relationType="IsPartOf">https://zenodo.org/communities/linkeddata</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="URL" relationType="IsPartOf">https://zenodo.org/communities/ro</relatedIdentifier>
+  </relatedIdentifiers>
+  <rightsList>
+    <rights rightsURI="http://creativecommons.org/licenses/by/4.0/legalcode">Creative Commons Attribution 4.0 International</rights>
+    <rights rightsURI="info:eu-repo/semantics/openAccess">Open Access</rights>
+  </rightsList>
+  <descriptions>
+    <description descriptionType="Abstract">&lt;p&gt;A &lt;strong&gt;Research Object&lt;/strong&gt; (RO) provides a machine-readable mechanism to communicate the diverse set of digital and real-world resources that contribute to an item of research. The aim of an RO is to replace traditional academic publications of static PDFs, to rather provide a complete and structured archive of the items (such as people, organisations, funding, equipment, software etc) that contributed to the research outcome, including their identifiers, provenance, relations and annotations. This is increasingly important as researchers now rely heavily on computational analysis, yet we are facing a &lt;em&gt;reproducibility crisis&lt;/em&gt; as key components are often not sufficiently tracked, archived or reported.&lt;/p&gt;
+
+&lt;p&gt;We propose &lt;strong&gt;Research Object Crate&lt;/strong&gt; (or &lt;strong&gt;RO-Crate&lt;/strong&gt; for short), an emerging lightweight approach to package research data with their structured metadata, based on schema.org annotations in a formalized JSON-LD format that can be used independent of infrastructure to encourage FAIR sharing of reproducible datasets and analytical methods.&lt;/p&gt;</description>
+    <description descriptionType="Other">Poster presented at BOSC 2019. See full abstract at https://doi.org/10.5281/zenodo.3250687</description>
+  </descriptions>
+  <fundingReferences>
+    <fundingReference>
+      <funderName>European Commission</funderName>
+      <funderIdentifier funderIdentifierType="Crossref Funder ID">10.13039/501100000780</funderIdentifier>
+      <awardNumber awardURI="info:eu-repo/grantAgreement/EC/H2020/823830/">823830</awardNumber>
+      <awardTitle>BioExcel-2 Centre of Excellence for Computational Biomolecular Research</awardTitle>
+    </fundingReference>
+    <fundingReference>
+      <funderName>European Commission</funderName>
+      <funderIdentifier funderIdentifierType="Crossref Funder ID">10.13039/501100000780</funderIdentifier>
+      <awardNumber awardURI="info:eu-repo/grantAgreement/EC/H2020/675728/">675728</awardNumber>
+      <awardTitle>Centre of Excellence for Biomolecular Research</awardTitle>
+    </fundingReference>
+  </fundingReferences>
+</resource>

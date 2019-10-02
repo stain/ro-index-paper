@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://datacite.org/schema/kernel-4" xsi:schemaLocation="http://datacite.org/schema/kernel-4 http://schema.datacite.org/meta/kernel-4.1/metadata.xsd">
+  <identifier identifierType="DOI">10.5281/zenodo.1311612</identifier>
+  <creators>
+    <creator>
+      <creatorName>Aufreiter, Michael</creatorName>
+      <givenName>Michael</givenName>
+      <familyName>Aufreiter</familyName>
+      <nameIdentifier nameIdentifierScheme="ORCID" schemeURI="http://orcid.org/">0000-0003-0715-1832</nameIdentifier>
+      <affiliation>Substance, Linz, Austria, GmbH</affiliation>
+    </creator>
+    <creator>
+      <creatorName>Penfold, Naomi</creatorName>
+      <givenName>Naomi</givenName>
+      <familyName>Penfold</familyName>
+      <nameIdentifier nameIdentifierScheme="ORCID" schemeURI="http://orcid.org/">0000-0003-0568-1194</nameIdentifier>
+      <affiliation>eLife, Cambridge, UK</affiliation>
+    </creator>
+  </creators>
+  <titles>
+    <title>The Reproducible Document Stack reinvents the journal publication for a world of computationally reproducible research</title>
+  </titles>
+  <publisher>Zenodo</publisher>
+  <publicationYear>2018</publicationYear>
+  <dates>
+    <date dateType="Issued">2018-07-13</date>
+  </dates>
+  <language>en</language>
+  <resourceType resourceTypeGeneral="Text">Conference paper</resourceType>
+  <alternateIdentifiers>
+    <alternateIdentifier alternateIdentifierType="url">https://zenodo.org/record/1311612</alternateIdentifier>
+  </alternateIdentifiers>
+  <relatedIdentifiers>
+    <relatedIdentifier relatedIdentifierType="URL" relationType="Cites">https://github.com/substance/dar</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="URL" relationType="Cites">https://github.com/substance/texture</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="URL" relationType="Cites">https://github.com/stencila</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="IsVersionOf">10.5281/zenodo.1311611</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="URL" relationType="IsPartOf">https://zenodo.org/communities/ro</relatedIdentifier>
+  </relatedIdentifiers>
+  <rightsList>
+    <rights rightsURI="http://creativecommons.org/licenses/by/4.0/legalcode">Creative Commons Attribution 4.0 International</rights>
+    <rights rightsURI="info:eu-repo/semantics/openAccess">Open Access</rights>
+  </rightsList>
+  <descriptions>
+    <description descriptionType="Abstract">&lt;p&gt;In September 2017, eLife, Substance and Stencila started a project to develop the technology required to treat code and data aspects of research as first-class citizens in the academic publishing process, and create the tools needed to support these new reproducible document formats through authoring, sharing and publication. In this talk, we&amp;rsquo;ll present the latest progress and outputs from the Reproducible Document Stack project and explore the next steps. In particular, we are seeking collaborations to make Dar interoperable with the Research Object ecosystem.&amp;nbsp;We also welcome the community&amp;rsquo;s suggestions as to the impact they wish to see from this project, and ways in which we could measure this impact together.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;This abstract was submitted for consideration for the Research Object 2018 workshop within the IEEE eScience 2018 conference.&lt;/em&gt;&lt;/p&gt;</description>
+    <description descriptionType="Other">Preprint submitted to RO2018 workshop at IEEE eScience Conference 2018</description>
+  </descriptions>
+</resource>
