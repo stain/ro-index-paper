@@ -1,0 +1,3 @@
+[2019-10-02T02:24:58,241Z] [cwltool] /home/stain/miniconda3/bin/cwltool --provenance split-by-line.cwlprov split-by-line-job.yml
+[2019-10-02T02:24:58,242Z] Resolved 'split-by-line-job.yml' to 'file:///home/stain/src/ro-index-paper/code/data-gathering/test/split-by-line/split-by-line-job.yml'
+[2019-10-02T02:25:05,114Z] Final process status is success

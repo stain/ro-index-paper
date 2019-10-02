@@ -57,7 +57,7 @@ steps:
       doc: > 
         Search-replace from oai identifier to Zenodo API URL
       run: ../tools/sed.cwl 
-      in:
+      in:g
         original:
           source: list-ids/identifiers
         command:
@@ -73,7 +73,7 @@ steps:
         splittable:
           source: make-uri/modified
         maxlines:
-          default: 50 # Number of URIs for curl to fetch at same time (reusing HTTP connection)
+          default: 5 # Number of URIs for curl to fetch at same time (reusing HTTP connection)
       out: [splitted]
       run: ../tools/split-lines.cwl
 
@@ -121,10 +121,14 @@ steps:
       run:
         class: ExpressionTool
         inputs:
-          files:
-            type: File[]
           name:
-            type: string        
+            type: string
+          files:
+            type: 
+              type: array
+              items: 
+                type: array
+                items: File
         outputs:
           gathered:
             type: Directory

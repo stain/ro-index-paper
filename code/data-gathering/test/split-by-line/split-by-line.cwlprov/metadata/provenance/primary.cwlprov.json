@@ -9,23 +9,23 @@
     "id": "urn:uuid:",
     "data": "urn:hash::sha1:",
     "sha256": "nih:sha-256;",
-    "researchobject": "arcp://uuid,5424d054-7f02-4e1f-9f74-fb6cde53c2e7/",
-    "metadata": "arcp://uuid,5424d054-7f02-4e1f-9f74-fb6cde53c2e7/metadata/",
-    "provenance": "arcp://uuid,5424d054-7f02-4e1f-9f74-fb6cde53c2e7/metadata/provenance/",
-    "wf": "arcp://uuid,5424d054-7f02-4e1f-9f74-fb6cde53c2e7/workflow/packed.cwl#",
-    "input": "arcp://uuid,5424d054-7f02-4e1f-9f74-fb6cde53c2e7/workflow/primary-job.json#",
+    "researchobject": "arcp://uuid,b698d1b6-98c9-4765-a06f-95f44e7efd48/",
+    "metadata": "arcp://uuid,b698d1b6-98c9-4765-a06f-95f44e7efd48/metadata/",
+    "provenance": "arcp://uuid,b698d1b6-98c9-4765-a06f-95f44e7efd48/metadata/provenance/",
+    "wf": "arcp://uuid,b698d1b6-98c9-4765-a06f-95f44e7efd48/workflow/packed.cwl#",
+    "input": "arcp://uuid,b698d1b6-98c9-4765-a06f-95f44e7efd48/workflow/primary-job.json#",
     "wf4ever": "http://purl.org/wf4ever/wf4ever#"
   },
   "agent": {
-    "id:7e489110-efb1-495b-83e8-edfbc52fe108": {},
-    "id:1b0d368b-ec7c-4b2f-a627-571622acbe7c": {
+    "id:96ee7c61-d629-421c-9e89-3e82140f9a96": {},
+    "id:09ed7b45-3afe-4373-b2ca-97c0cb581612": {
       "prov:type": [
         {
-          "$": "wfprov:WorkflowEngine",
+          "$": "prov:SoftwareAgent",
           "type": "prov:QUALIFIED_NAME"
         },
         {
-          "$": "prov:SoftwareAgent",
+          "$": "wfprov:WorkflowEngine",
           "type": "prov:QUALIFIED_NAME"
         }
       ],
@@ -34,19 +34,19 @@
   },
   "wasStartedBy": {
     "_:id1": {
-      "prov:activity": "id:1b0d368b-ec7c-4b2f-a627-571622acbe7c",
-      "prov:starter": "id:7e489110-efb1-495b-83e8-edfbc52fe108",
-      "prov:time": "2019-09-06T09:28:23.814148"
+      "prov:activity": "id:09ed7b45-3afe-4373-b2ca-97c0cb581612",
+      "prov:starter": "id:96ee7c61-d629-421c-9e89-3e82140f9a96",
+      "prov:time": "2019-10-02T03:25:04.338818"
     },
     "_:id3": {
-      "prov:activity": "id:5424d054-7f02-4e1f-9f74-fb6cde53c2e7",
-      "prov:starter": "id:1b0d368b-ec7c-4b2f-a627-571622acbe7c",
-      "prov:time": "2019-09-06T09:28:23.814299"
+      "prov:activity": "id:b698d1b6-98c9-4765-a06f-95f44e7efd48",
+      "prov:starter": "id:09ed7b45-3afe-4373-b2ca-97c0cb581612",
+      "prov:time": "2019-10-02T03:25:04.339022"
     }
   },
   "activity": {
-    "id:5424d054-7f02-4e1f-9f74-fb6cde53c2e7": {
-      "prov:startTime": "2019-09-06T09:28:23.814196",
+    "id:b698d1b6-98c9-4765-a06f-95f44e7efd48": {
+      "prov:startTime": "2019-10-02T03:25:04.338865",
       "prov:type": {
         "$": "wfprov:WorkflowRun",
         "type": "prov:QUALIFIED_NAME"
@@ -56,8 +56,8 @@
   },
   "wasAssociatedWith": {
     "_:id2": {
-      "prov:activity": "id:5424d054-7f02-4e1f-9f74-fb6cde53c2e7",
-      "prov:agent": "id:1b0d368b-ec7c-4b2f-a627-571622acbe7c",
+      "prov:activity": "id:b698d1b6-98c9-4765-a06f-95f44e7efd48",
+      "prov:agent": "id:09ed7b45-3afe-4373-b2ca-97c0cb581612",
       "prov:plan": "wf:main"
     }
   },
@@ -81,7 +81,7 @@
         "type": "prov:QUALIFIED_NAME"
       }
     },
-    "id:635c3cd3-0d58-4a37-900a-282109d46480": {
+    "id:2ad0df30-e48c-4aa0-9289-924f3ba688a7": {
       "prov:type": [
         {
           "$": "wf4ever:File",
@@ -124,14 +124,7 @@
       },
       "prov:value": "data actually"
     },
-    "data:da39a3ee5e6b4b0d3255bfef95601890afd80709": {
-      "prov:type": {
-        "$": "wfprov:Artifact",
-        "type": "prov:QUALIFIED_NAME"
-      },
-      "prov:value": ""
-    },
-    "id:6c02abf9-2161-4f92-b796-aca3ab3f7b79": {
+    "id:88d6ff71-d5c3-4cc8-86a9-e666f49c4988": {
       "prov:type": [
         {
           "$": "prov:Collection",
@@ -146,15 +139,15 @@
   },
   "specializationOf": {
     "_:id4": {
-      "prov:specificEntity": "id:635c3cd3-0d58-4a37-900a-282109d46480",
+      "prov:specificEntity": "id:2ad0df30-e48c-4aa0-9289-924f3ba688a7",
       "prov:generalEntity": "data:88554bcbde7c3441fe1d86e2f6f8415919605eee"
     }
   },
   "used": {
     "_:id5": {
-      "prov:activity": "id:5424d054-7f02-4e1f-9f74-fb6cde53c2e7",
-      "prov:entity": "id:635c3cd3-0d58-4a37-900a-282109d46480",
-      "prov:time": "2019-09-06T09:28:23.817390",
+      "prov:activity": "id:b698d1b6-98c9-4765-a06f-95f44e7efd48",
+      "prov:entity": "id:2ad0df30-e48c-4aa0-9289-924f3ba688a7",
+      "prov:time": "2019-10-02T03:25:04.341997",
       "prov:role": {
         "$": "wf:main/file",
         "type": "prov:QUALIFIED_NAME"
@@ -163,31 +156,27 @@
   },
   "hadMember": {
     "_:id6": {
-      "prov:collection": "id:6c02abf9-2161-4f92-b796-aca3ab3f7b79",
+      "prov:collection": "id:88d6ff71-d5c3-4cc8-86a9-e666f49c4988",
       "prov:entity": "data:726c76553e1a3fdea29134f36e6af2ea05ec5cce"
     },
     "_:id7": {
-      "prov:collection": "id:6c02abf9-2161-4f92-b796-aca3ab3f7b79",
+      "prov:collection": "id:88d6ff71-d5c3-4cc8-86a9-e666f49c4988",
       "prov:entity": "data:34be1708e4988ddb66fd6be13f86bbc45ab91a41"
     },
     "_:id8": {
-      "prov:collection": "id:6c02abf9-2161-4f92-b796-aca3ab3f7b79",
+      "prov:collection": "id:88d6ff71-d5c3-4cc8-86a9-e666f49c4988",
       "prov:entity": "data:084ab4093f675b9f4eb22dc243a80d8adc4ff27c"
     },
     "_:id9": {
-      "prov:collection": "id:6c02abf9-2161-4f92-b796-aca3ab3f7b79",
+      "prov:collection": "id:88d6ff71-d5c3-4cc8-86a9-e666f49c4988",
       "prov:entity": "data:f6269f26c769c40e909cdbea5b2a5a7f473251c6"
-    },
-    "_:id10": {
-      "prov:collection": "id:6c02abf9-2161-4f92-b796-aca3ab3f7b79",
-      "prov:entity": "data:da39a3ee5e6b4b0d3255bfef95601890afd80709"
     }
   },
   "wasGeneratedBy": {
-    "_:id11": {
-      "prov:entity": "id:6c02abf9-2161-4f92-b796-aca3ab3f7b79",
-      "prov:activity": "id:5424d054-7f02-4e1f-9f74-fb6cde53c2e7",
-      "prov:time": "2019-09-06T09:28:24.972364",
+    "_:id10": {
+      "prov:entity": "id:88d6ff71-d5c3-4cc8-86a9-e666f49c4988",
+      "prov:activity": "id:b698d1b6-98c9-4765-a06f-95f44e7efd48",
+      "prov:time": "2019-10-02T03:25:05.065080",
       "prov:role": {
         "$": "wf:main/primary/lines",
         "type": "prov:QUALIFIED_NAME"
@@ -195,10 +184,10 @@
     }
   },
   "wasEndedBy": {
-    "_:id12": {
-      "prov:activity": "id:5424d054-7f02-4e1f-9f74-fb6cde53c2e7",
-      "prov:ender": "id:1b0d368b-ec7c-4b2f-a627-571622acbe7c",
-      "prov:time": "2019-09-06T09:28:24.977062"
+    "_:id11": {
+      "prov:activity": "id:b698d1b6-98c9-4765-a06f-95f44e7efd48",
+      "prov:ender": "id:09ed7b45-3afe-4373-b2ca-97c0cb581612",
+      "prov:time": "2019-10-02T03:25:05.067453"
     }
   }
 }
