@@ -1,0 +1,9 @@
+#!/usr/bin/env cwltool
+
+cwl:tool: ../../tools/split-lines.cwl
+
+splittable: 
+  class: File
+  path: lines.txt
+
+lines: 10
