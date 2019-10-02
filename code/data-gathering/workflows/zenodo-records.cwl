@@ -57,7 +57,7 @@ steps:
       doc: > 
         Search-replace from oai identifier to Zenodo API URL
       run: ../tools/sed.cwl 
-      in:g
+      in:
         original:
           source: list-ids/identifiers
         command:
@@ -133,11 +133,13 @@ steps:
           gathered:
             type: Directory
         expression: |
-          ${return { "gathered": {
+          ${var listing = Array.prototype.concat.apply([], inputs.files);
+            // TODO: Rename each file to add extension .json
+            
+            return { "gathered": {
               "class": "Directory",
-              "name": inputs.name,
-              "listing": inputs.files, // TODO: Rename each file to add extension .json
-              "path": "."
+              "basename": inputs.name,
+              "listing": listing, 
               }
             };
           }
