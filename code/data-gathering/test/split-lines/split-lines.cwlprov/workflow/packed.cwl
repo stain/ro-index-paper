@@ -64,7 +64,7 @@
             "inputBinding": {
                 "prefix": "--lines"
             },
-            "id": "#main/lines"
+            "id": "#main/maxlines"
         },
         {
             "type": [
@@ -107,7 +107,7 @@
                 "glob": "*",
                 "outputEval": "${\n  // NOTE: Assumes the glob array self is modifiable\n  self.sort(function(a, b){\n      if (a.basename < b.basename) { return -1; }\n      if (a.basename > b.basename) { return  1; }\n      return 0;\n    });\n  return self; // now sorted\n}\n"
             },
-            "id": "#main/smaller"
+            "id": "#main/splitted"
         }
     ],
     "label": "split a file into smaller pieces",

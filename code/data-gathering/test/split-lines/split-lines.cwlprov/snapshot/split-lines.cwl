@@ -52,7 +52,7 @@ inputs:
       Prefix for generated files, the default is "x", 
       e.g. generating "xaa", "xab", etc.
       
-  lines:
+  maxlines:
     type: int?
     default: 1000
     doc: >
@@ -85,7 +85,7 @@ inputs:
       prefix: "--separator"
 
 outputs:
-  smaller:
+  splitted:
     type: File[]
     doc: The split files. 
     outputBinding:

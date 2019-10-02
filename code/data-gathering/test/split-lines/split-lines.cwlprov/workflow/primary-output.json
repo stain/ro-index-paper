@@ -1,5 +1,5 @@
 {
-    "smaller": [
+    "splitted": [
         {
             "location": "../data/61/612ca68d0305c821750a452e9d5bf050e915824f",
             "basename": "xaa",
@@ -9,7 +9,7 @@
             "checksum": "sha1$612ca68d0305c821750a452e9d5bf050e915824f",
             "size": 21,
             "http://commonwl.org/cwltool#generation": 0,
-            "@id": "urn:uuid:95490a96-eb34-4c88-ab4a-8ff23d3ba07b"
+            "@id": "urn:uuid:89e56c13-e7a6-493e-9f51-00c062d1ef18"
         },
         {
             "location": "../data/40/40761e192b48f695748c4ed4bd810a95c30f12de",
@@ -20,7 +20,7 @@
             "checksum": "sha1$40761e192b48f695748c4ed4bd810a95c30f12de",
             "size": 30,
             "http://commonwl.org/cwltool#generation": 0,
-            "@id": "urn:uuid:a2c760de-db75-4bb9-bbc3-3bbe9cbef54a"
+            "@id": "urn:uuid:beef3852-b85a-4596-87c0-1083cbe8a893"
         },
         {
             "location": "../data/33/33523371617e9e89df30993bd236817e1dcb9544",
@@ -31,7 +31,7 @@
             "checksum": "sha1$33523371617e9e89df30993bd236817e1dcb9544",
             "size": 30,
             "http://commonwl.org/cwltool#generation": 0,
-            "@id": "urn:uuid:db8f8f8a-e7d9-4e8b-8477-04a6b187e807"
+            "@id": "urn:uuid:21fb6850-60b7-465f-92f5-f582044c6b55"
         },
         {
             "location": "../data/c9/c9521d2d36aa7cabb7766dd87d8c5587e69bb55c",
@@ -42,7 +42,7 @@
             "checksum": "sha1$c9521d2d36aa7cabb7766dd87d8c5587e69bb55c",
             "size": 30,
             "http://commonwl.org/cwltool#generation": 0,
-            "@id": "urn:uuid:1801b489-1f02-4995-8025-5064e2dca094"
+            "@id": "urn:uuid:0e6fb156-20ee-431b-9cfb-7dbd8a343842"
         },
         {
             "location": "../data/82/821d86ee062f5314b5faf444e98baecc21e00093",
@@ -53,7 +53,7 @@
             "checksum": "sha1$821d86ee062f5314b5faf444e98baecc21e00093",
             "size": 30,
             "http://commonwl.org/cwltool#generation": 0,
-            "@id": "urn:uuid:3a143334-5c6f-4bf6-b4e2-c9a86a8b70e5"
+            "@id": "urn:uuid:69b66991-c372-4263-be04-e52332de8fbe"
         },
         {
             "location": "../data/0c/0c04575a6f9e356d86ad6673478d23e79074c0c3",
@@ -64,7 +64,7 @@
             "checksum": "sha1$0c04575a6f9e356d86ad6673478d23e79074c0c3",
             "size": 30,
             "http://commonwl.org/cwltool#generation": 0,
-            "@id": "urn:uuid:472bb410-2595-45d4-89ff-61924ce16294"
+            "@id": "urn:uuid:199fc61b-278b-45aa-9bf8-a889e5a0930c"
         },
         {
             "location": "../data/d6/d6f5c69f435da29240a08b098f213a21ef2f3c59",
@@ -75,7 +75,7 @@
             "checksum": "sha1$d6f5c69f435da29240a08b098f213a21ef2f3c59",
             "size": 30,
             "http://commonwl.org/cwltool#generation": 0,
-            "@id": "urn:uuid:d7e73390-2f03-4f3e-8b59-9cd6430c97c1"
+            "@id": "urn:uuid:ee355e4c-33b0-4912-9a83-ec608fc3d91a"
         },
         {
             "location": "../data/9f/9f59706823adafcbdad462edfc20861aee3cd16f",
@@ -86,7 +86,7 @@
             "checksum": "sha1$9f59706823adafcbdad462edfc20861aee3cd16f",
             "size": 30,
             "http://commonwl.org/cwltool#generation": 0,
-            "@id": "urn:uuid:902b3bb0-d47e-45fb-b73c-d56e121294c5"
+            "@id": "urn:uuid:afcbb0fb-0a6f-4843-beec-1e45d6abdfdd"
         },
         {
             "location": "../data/06/06a39fccf1cd48decef0e2d29d6fe00f885adc9a",
@@ -97,7 +97,7 @@
             "checksum": "sha1$06a39fccf1cd48decef0e2d29d6fe00f885adc9a",
             "size": 30,
             "http://commonwl.org/cwltool#generation": 0,
-            "@id": "urn:uuid:f99562a8-50d6-442d-bfd7-224c72207bbd"
+            "@id": "urn:uuid:41e609b4-4a3d-4b61-aa20-3a5b72262518"
         },
         {
             "location": "../data/08/081f7336ffdca277aa5ff597dd8426ec4b77b506",
@@ -108,7 +108,7 @@
             "checksum": "sha1$081f7336ffdca277aa5ff597dd8426ec4b77b506",
             "size": 31,
             "http://commonwl.org/cwltool#generation": 0,
-            "@id": "urn:uuid:9aa13af0-a0e9-4918-a90e-5d7c4d0a3e7a"
+            "@id": "urn:uuid:c3a0dba1-ea50-4cb6-88eb-efe184ab9916"
         }
     ]
 }

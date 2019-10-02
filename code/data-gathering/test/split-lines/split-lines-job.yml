@@ -6,4 +6,4 @@ splittable:
   class: File
   path: lines.txt
 
-lines: 10
+maxlines: 10

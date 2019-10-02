@@ -1,6 +1,6 @@
 {
     "extension": null,
-    "lines": 10,
+    "maxlines": 10,
     "prefix": "x",
     "separator": null,
     "splittable": {
@@ -11,6 +11,6 @@
         "nameroot": "lines",
         "nameext": ".txt",
         "checksum": "sha1$8084f0f10255c5e26605a1cb1f51c5e53f92df40",
-        "@id": "urn:uuid:e465fbe3-6c1b-42f4-b7cf-9a34cffe73e9"
+        "@id": "urn:uuid:bf545495-8f8f-40bc-a039-8518f24d8184"
     }
 }

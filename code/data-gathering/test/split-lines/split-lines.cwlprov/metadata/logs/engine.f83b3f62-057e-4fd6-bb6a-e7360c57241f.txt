@@ -1,0 +1,23 @@
+[2019-10-02T00:27:09,073Z] [cwltool] /home/stain/miniconda3/bin/cwltool --provenance split-lines.cwlprov split-lines-job.yml
+[2019-10-02T00:27:09,074Z] Resolved 'split-lines-job.yml' to 'file:///home/stain/src/ro-index-paper/code/data-gathering/test/split-lines/split-lines-job.yml'
+[2019-10-02T00:27:14,928Z] [job split-lines.cwl] /tmp/i_w0vmsl$ docker \
+    run \
+    -i \
+    --volume=/tmp/i_w0vmsl:/XTCVqj:rw \
+    --volume=/tmp/g56mpsql:/tmp:rw \
+    --volume=/home/stain/src/ro-index-paper/code/data-gathering/test/split-lines/lines.txt:/var/lib/cwl/stg5fcd83b3-84e0-4527-8c05-e71ee4ba7fad/lines.txt:ro \
+    --workdir=/XTCVqj \
+    --read-only=true \
+    --user=1000:1000 \
+    --rm \
+    --env=TMPDIR=/tmp \
+    --env=HOME=/XTCVqj \
+    --cidfile=/tmp/bmjo8ueo/20191002012714-927938.cid \
+    debian:10 \
+    split \
+    --lines \
+    10 \
+    /var/lib/cwl/stg5fcd83b3-84e0-4527-8c05-e71ee4ba7fad/lines.txt
+[2019-10-02T00:27:16,279Z] [job split-lines.cwl] Max memory used: 0MiB
+[2019-10-02T00:27:17,055Z] [job split-lines.cwl] completed success
+[2019-10-02T00:27:17,208Z] Final process status is success
