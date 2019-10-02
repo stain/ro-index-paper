@@ -1,0 +1,8 @@
+{
+    "acceptType": "*/*",
+    "urls": [
+        "https://example.com/f1",
+        "https://example.org/f2",
+        "https://example.net/f3"
+    ]
+}

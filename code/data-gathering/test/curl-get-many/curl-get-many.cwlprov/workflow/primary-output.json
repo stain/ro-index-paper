@@ -1,0 +1,51 @@
+{
+    "downloaded": [
+        {
+            "location": "../data/0e/0e973b59f476007fd10f87f347c3956065516fc0",
+            "basename": "f1",
+            "nameroot": "f1",
+            "nameext": "",
+            "class": "File",
+            "checksum": "sha1$0e973b59f476007fd10f87f347c3956065516fc0",
+            "size": 1270,
+            "format": "https://www.iana.org/assignments/media-types/*/*",
+            "http://commonwl.org/cwltool#generation": 0,
+            "@id": "urn:uuid:90e8a8b5-5714-459d-8b85-54ebca787e2d"
+        },
+        {
+            "location": "../data/0e/0e973b59f476007fd10f87f347c3956065516fc0",
+            "basename": "f2",
+            "nameroot": "f2",
+            "nameext": "",
+            "class": "File",
+            "checksum": "sha1$0e973b59f476007fd10f87f347c3956065516fc0",
+            "size": 1270,
+            "format": "https://www.iana.org/assignments/media-types/*/*",
+            "http://commonwl.org/cwltool#generation": 0,
+            "@id": "urn:uuid:f8c2238d-9c76-4c35-9891-5020ed185b50"
+        },
+        {
+            "location": "../data/0e/0e973b59f476007fd10f87f347c3956065516fc0",
+            "basename": "f3",
+            "nameroot": "f3",
+            "nameext": "",
+            "class": "File",
+            "checksum": "sha1$0e973b59f476007fd10f87f347c3956065516fc0",
+            "size": 1270,
+            "format": "https://www.iana.org/assignments/media-types/*/*",
+            "http://commonwl.org/cwltool#generation": 0,
+            "@id": "urn:uuid:06a3a384-44c1-44b5-a7dd-b0d374e5dc77"
+        }
+    ],
+    "headers": {
+        "location": "../data/c8/c8967e4e2fd25e2d05f540384096c70c6464596f",
+        "basename": ".headers.txt",
+        "nameroot": ".headers",
+        "nameext": ".txt",
+        "class": "File",
+        "checksum": "sha1$c8967e4e2fd25e2d05f540384096c70c6464596f",
+        "size": 987,
+        "http://commonwl.org/cwltool#generation": 0,
+        "@id": "urn:uuid:17690c20-e192-4fd0-b542-757c25ac23b8"
+    }
+}

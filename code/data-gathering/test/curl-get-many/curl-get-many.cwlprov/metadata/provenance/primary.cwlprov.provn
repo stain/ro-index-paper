@@ -1,0 +1,73 @@
+document
+  prefix wfprov <http://purl.org/wf4ever/wfprov#>
+  prefix wfdesc <http://purl.org/wf4ever/wfdesc#>
+  prefix cwlprov <https://w3id.org/cwl/prov#>
+  prefix foaf <http://xmlns.com/foaf/0.1/>
+  prefix schema <http://schema.org/>
+  prefix orcid <https://orcid.org/>
+  prefix id <urn:uuid:>
+  prefix data <urn:hash::sha1:>
+  prefix sha256 <nih:sha-256;>
+  prefix researchobject <arcp://uuid,fc2981c4-d5c3-409a-a895-8b957a9f16c3/>
+  prefix metadata <arcp://uuid,fc2981c4-d5c3-409a-a895-8b957a9f16c3/metadata/>
+  prefix provenance <arcp://uuid,fc2981c4-d5c3-409a-a895-8b957a9f16c3/metadata/provenance/>
+  prefix wf <arcp://uuid,fc2981c4-d5c3-409a-a895-8b957a9f16c3/workflow/packed.cwl#>
+  prefix input <arcp://uuid,fc2981c4-d5c3-409a-a895-8b957a9f16c3/workflow/primary-job.json#>
+  prefix wf4ever <http://purl.org/wf4ever/wf4ever#>
+  
+  agent(id:ae77f019-ad15-4593-8497-d89c0596365d)
+  agent(id:695d7517-59be-4c8a-9050-66605fc0f535, [prov:type='wfprov:WorkflowEngine', prov:type='prov:SoftwareAgent', prov:label="cwltool 1.0.20190815141648"])
+  wasStartedBy(id:695d7517-59be-4c8a-9050-66605fc0f535, -, id:ae77f019-ad15-4593-8497-d89c0596365d, 2019-10-02T01:39:17.930638)
+  activity(id:fc2981c4-d5c3-409a-a895-8b957a9f16c3, 2019-10-02T01:39:17.930679, -, [prov:type='wfprov:WorkflowRun', prov:label="Run of workflow/packed.cwl#main"])
+  wasAssociatedWith(id:fc2981c4-d5c3-409a-a895-8b957a9f16c3, id:695d7517-59be-4c8a-9050-66605fc0f535, wf:main)
+  wasStartedBy(id:fc2981c4-d5c3-409a-a895-8b957a9f16c3, -, id:695d7517-59be-4c8a-9050-66605fc0f535, 2019-10-02T01:39:17.930769)
+  entity(wf:main, [prov:type='prov:Plan', prov:type='wfdesc:Process', prov:label="Prospective provenance"])
+  entity(data:facb855c9cef68cf9733f539bde2b57586848293, [prov:type='wfprov:Artifact', prov:value="*/*"])
+  used(id:fc2981c4-d5c3-409a-a895-8b957a9f16c3, data:facb855c9cef68cf9733f539bde2b57586848293, 2019-10-02T01:39:17.936797, [prov:role='wf:main/acceptType'])
+  entity(data:da100adff47bf313d0dc58d7005edb0633489f06, [prov:type='wfprov:Artifact', prov:value="https://example.com/f1"])
+  entity(data:87da012520035016930bebc51992f5d271867889, [prov:type='wfprov:Artifact', prov:value="https://example.org/f2"])
+  entity(data:d5ac964144379c8233d090fec7f1e56a019d4eba, [prov:type='wfprov:Artifact', prov:value="https://example.net/f3"])
+  entity(id:4c62473b-0677-4024-b3da-105ed163445a, [prov:type='wfprov:Artifact', prov:type='prov:Collection'])
+  hadMember(id:4c62473b-0677-4024-b3da-105ed163445a, data:da100adff47bf313d0dc58d7005edb0633489f06)
+  hadMember(id:4c62473b-0677-4024-b3da-105ed163445a, data:87da012520035016930bebc51992f5d271867889)
+  hadMember(id:4c62473b-0677-4024-b3da-105ed163445a, data:d5ac964144379c8233d090fec7f1e56a019d4eba)
+  used(id:fc2981c4-d5c3-409a-a895-8b957a9f16c3, id:4c62473b-0677-4024-b3da-105ed163445a, 2019-10-02T01:39:17.938168, [prov:role='wf:main/urls'])
+  agent(id:90fd818f-f417-4a29-8a79-8e12f8272b8d, [prov:type='prov:SoftwareAgent', cwlprov:image="appropriate/curl:3.1", prov:label="Container execution of image appropriate/curl:3.1"])
+  wasAssociatedWith(id:fc2981c4-d5c3-409a-a895-8b957a9f16c3, id:90fd818f-f417-4a29-8a79-8e12f8272b8d, -)
+  entity(data:facb855c9cef68cf9733f539bde2b57586848293, [prov:type='wfprov:Artifact', prov:value="*/*"])
+  used(id:fc2981c4-d5c3-409a-a895-8b957a9f16c3, data:facb855c9cef68cf9733f539bde2b57586848293, 2019-10-02T01:39:18.057748, [prov:role='wf:main/curl-get-many.cwl/acceptType'])
+  entity(data:da100adff47bf313d0dc58d7005edb0633489f06, [prov:type='wfprov:Artifact', prov:value="https://example.com/f1"])
+  entity(data:87da012520035016930bebc51992f5d271867889, [prov:type='wfprov:Artifact', prov:value="https://example.org/f2"])
+  entity(data:d5ac964144379c8233d090fec7f1e56a019d4eba, [prov:type='wfprov:Artifact', prov:value="https://example.net/f3"])
+  entity(id:f4ec2812-460a-4631-b92b-d98a9ca3b24b, [prov:type='wfprov:Artifact', prov:type='prov:Collection'])
+  hadMember(id:f4ec2812-460a-4631-b92b-d98a9ca3b24b, data:da100adff47bf313d0dc58d7005edb0633489f06)
+  hadMember(id:f4ec2812-460a-4631-b92b-d98a9ca3b24b, data:87da012520035016930bebc51992f5d271867889)
+  hadMember(id:f4ec2812-460a-4631-b92b-d98a9ca3b24b, data:d5ac964144379c8233d090fec7f1e56a019d4eba)
+  used(id:fc2981c4-d5c3-409a-a895-8b957a9f16c3, id:f4ec2812-460a-4631-b92b-d98a9ca3b24b, 2019-10-02T01:39:18.059186, [prov:role='wf:main/curl-get-many.cwl/urls'])
+  entity(data:0e973b59f476007fd10f87f347c3956065516fc0, [prov:type='wfprov:Artifact'])
+  entity(id:90e8a8b5-5714-459d-8b85-54ebca787e2d, [prov:type='wf4ever:File', prov:type='wfprov:Artifact', cwlprov:basename="f1", cwlprov:nameroot="f1", cwlprov:nameext=""])
+  specializationOf(id:90e8a8b5-5714-459d-8b85-54ebca787e2d, data:0e973b59f476007fd10f87f347c3956065516fc0)
+  entity(data:0e973b59f476007fd10f87f347c3956065516fc0)
+  entity(id:f8c2238d-9c76-4c35-9891-5020ed185b50, [prov:type='wf4ever:File', prov:type='wfprov:Artifact', cwlprov:basename="f2", cwlprov:nameroot="f2", cwlprov:nameext=""])
+  specializationOf(id:f8c2238d-9c76-4c35-9891-5020ed185b50, data:0e973b59f476007fd10f87f347c3956065516fc0)
+  entity(data:0e973b59f476007fd10f87f347c3956065516fc0)
+  entity(id:06a3a384-44c1-44b5-a7dd-b0d374e5dc77, [prov:type='wf4ever:File', prov:type='wfprov:Artifact', cwlprov:basename="f3", cwlprov:nameroot="f3", cwlprov:nameext=""])
+  specializationOf(id:06a3a384-44c1-44b5-a7dd-b0d374e5dc77, data:0e973b59f476007fd10f87f347c3956065516fc0)
+  entity(id:59ab9182-436d-4c64-8b8c-84080bbf6964, [prov:type='wfprov:Artifact', prov:type='prov:Collection'])
+  hadMember(id:59ab9182-436d-4c64-8b8c-84080bbf6964, id:90e8a8b5-5714-459d-8b85-54ebca787e2d)
+  hadMember(id:59ab9182-436d-4c64-8b8c-84080bbf6964, id:f8c2238d-9c76-4c35-9891-5020ed185b50)
+  hadMember(id:59ab9182-436d-4c64-8b8c-84080bbf6964, id:06a3a384-44c1-44b5-a7dd-b0d374e5dc77)
+  wasGeneratedBy(id:59ab9182-436d-4c64-8b8c-84080bbf6964, id:fc2981c4-d5c3-409a-a895-8b957a9f16c3, 2019-10-02T01:39:20.378778, [prov:role='wf:main/curl-get-many.cwl/downloaded'])
+  entity(data:c8967e4e2fd25e2d05f540384096c70c6464596f, [prov:type='wfprov:Artifact'])
+  entity(id:17690c20-e192-4fd0-b542-757c25ac23b8, [prov:type='wf4ever:File', prov:type='wfprov:Artifact', cwlprov:basename=".headers.txt", cwlprov:nameroot=".headers", cwlprov:nameext=".txt"])
+  specializationOf(id:17690c20-e192-4fd0-b542-757c25ac23b8, data:c8967e4e2fd25e2d05f540384096c70c6464596f)
+  wasGeneratedBy(id:17690c20-e192-4fd0-b542-757c25ac23b8, id:fc2981c4-d5c3-409a-a895-8b957a9f16c3, 2019-10-02T01:39:20.378778, [prov:role='wf:main/curl-get-many.cwl/headers'])
+  wasEndedBy(id:fc2981c4-d5c3-409a-a895-8b957a9f16c3, -, id:fc2981c4-d5c3-409a-a895-8b957a9f16c3, 2019-10-02T01:39:20.378770)
+  entity(id:97e0e735-b25e-4391-a48c-b0d84039cd45, [prov:type='wfprov:Artifact', prov:type='prov:Collection'])
+  hadMember(id:97e0e735-b25e-4391-a48c-b0d84039cd45, id:90e8a8b5-5714-459d-8b85-54ebca787e2d)
+  hadMember(id:97e0e735-b25e-4391-a48c-b0d84039cd45, id:f8c2238d-9c76-4c35-9891-5020ed185b50)
+  hadMember(id:97e0e735-b25e-4391-a48c-b0d84039cd45, id:06a3a384-44c1-44b5-a7dd-b0d374e5dc77)
+  wasGeneratedBy(id:97e0e735-b25e-4391-a48c-b0d84039cd45, id:fc2981c4-d5c3-409a-a895-8b957a9f16c3, 2019-10-02T01:39:20.383515, [prov:role='wf:main/primary/downloaded'])
+  wasGeneratedBy(id:17690c20-e192-4fd0-b542-757c25ac23b8, id:fc2981c4-d5c3-409a-a895-8b957a9f16c3, 2019-10-02T01:39:20.383515, [prov:role='wf:main/primary/headers'])
+  wasEndedBy(id:fc2981c4-d5c3-409a-a895-8b957a9f16c3, -, id:695d7517-59be-4c8a-9050-66605fc0f535, 2019-10-02T01:39:20.384097)
+endDocument
