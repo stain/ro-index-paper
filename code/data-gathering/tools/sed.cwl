@@ -93,7 +93,7 @@ s:copyrightHolder:
 
 s:url: https://www.gnu.org/software/sed/
 s:mainEntityOfPage: https://www.gnu.org/software/sed/manual/
-s:codeRepository: https://github.com/LibreCat/perl-oai-lib/
+s:codeRepository: https://git.savannah.gnu.org/cgit/sed.git
 s:license: https://spdx.org/licenses/GPL-3.0-or-later
 s:sdLicense: https://spdx.org/licenses/Apache-2.0 
 s:sdPublisher: https://orcid.org/0000-0001-9842-9718
@@ -108,7 +108,7 @@ s:description: >
 s:potentialAction:
   - class: s:ActivateAction
     s:label: "example run"
-    s:instrument: "../test/sed-job.yml"
+    s:instrument: "../test/sec/sed-job.yml"
 
 $schemas: 
   - https://schema.org/version/3.9/schema.rdf
