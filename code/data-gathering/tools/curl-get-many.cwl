@@ -18,14 +18,14 @@ class: CommandLineTool
 
 baseCommand: "curl"
 arguments: 
-- "--silent"  ## Not the usual logging
+#- "--silent"  ## uncomment to avoid usual logging to stderr
 - "--show-error" ## ..except errors to stderr
-##  - "--fail" ## Disabled as --fail does not make sense on multiple URIs, 
+- "--fail-early" ## Disabled as --fail does not make sense on multiple URIs, 
 ## consider --fail-early from curl 7.52.0
 - "--retry"  ## Incremental backoff: 1s 2s 4s 8s 16s 32s 64s 128s 256s 512s
 - "10"
-#- "--retry-connrefused" # Requires 7.52.0
-- "--location" ## Follow HTTP redirects000
+- "--retry-connrefused" # Requires 7.52.0
+- "--location" ## Follow HTTP redirects
 - "--remote-name-all" ## Save URLs to filenames from URI paths
 - "--dump-header"  ## Record http response
 - "-" # .. on stdout
@@ -35,15 +35,11 @@ hints:
     packages:
       curl:
         specs: 
-          - https://anaconda.org/conda-forge/curl
-          - https://packages.debian.org/jessie/curl
-          - https://packages.debian.org/stretch/curl
-          - https://packages.debian.org/buster/curl
-          - https://packages.debian.org/bullseye/curl
-          - https://packages.debian.org/sid/curl
-        version: [ "7.39.0", "7.65.3", "7.38.0", "7.52.1", "7.64.0", "7.65.3" ]
+          - https://anaconda.org/conda-forge/curl      
+        version: [ "7.66.0" ] ## 7.66.0 needed to support Retry-After rate-limiting from Zenodo
   DockerRequirement:
-    dockerPull: appropriate/curl:3.1 # TODO: Find newer docker image
+    # TODO: curlimages/curl:7.66.0 awaiting https://github.com/curl/curl-docker/issues/9
+    dockerPull: stain/curl:7.66.0
 
 inputs:
   urls:
