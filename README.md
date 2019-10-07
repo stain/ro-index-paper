@@ -1,7 +1,7 @@
 # Output directory containing the formatted manuscript
 
 The [`gh-pages`](https://github.com/stain/ro-index-paper/tree/gh-pages) branch hosts the contents of this directory at https://stain.github.io/ro-index-paper/.
-The permalink for this webpage version is https://stain.github.io/ro-index-paper/v/7166c89aad278bdf438d593040948f3b95e6c410/.
+The permalink for this webpage version is https://stain.github.io/ro-index-paper/v/869e082710d3f1a18b59b89019f1a260f784973d/.
 To redirect to the permalink for the latest manuscript version at anytime, use the link https://stain.github.io/ro-index-paper/v/freeze/.
 
 ## Files
@@ -36,4 +36,4 @@ Verifying timestamps with the `ots verify` command requires running a local bitc
 ## Source
 
 The manuscripts in this directory were built from
-[`7166c89aad278bdf438d593040948f3b95e6c410`](https://github.com/stain/ro-index-paper/commit/7166c89aad278bdf438d593040948f3b95e6c410).
+[`869e082710d3f1a18b59b89019f1a260f784973d`](https://github.com/stain/ro-index-paper/commit/869e082710d3f1a18b59b89019f1a260f784973d).
