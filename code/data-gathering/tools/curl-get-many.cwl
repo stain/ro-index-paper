@@ -36,10 +36,10 @@ hints:
       curl:
         specs: 
           - https://anaconda.org/conda-forge/curl      
-        version: [ "7.66.0" ] ## 7.66.0 needed to support Retry-After rate-limiting from Zenodo
+        version: [ "7.66.1" ] ## 7.66.1 to honour "429 Too Many Requests" rate-limiting from Zenodo
   DockerRequirement:
-    # TODO: curlimages/curl:7.66.0 awaiting https://github.com/curl/curl-docker/issues/9
-    dockerPull: stain/curl:7.66.0
+    # TODO: curlimages/curl:7.66.1 awaiting https://github.com/curl/curl/pull/4465 release
+    dockerPull: stain/curl:7.67-DEV-f2941608f61adf1b2224ff4db400ffaeda3ea210
 
 inputs:
   urls:
