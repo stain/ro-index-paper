@@ -1,3 +1,4 @@
 output.txt
 headers.txt
 cwltool_deps
+.cache
