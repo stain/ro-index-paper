@@ -1,1 +1,56 @@
-{"message":"60 per 1 minute","status":429}
+<?xml version='1.0' encoding='utf-8'?>
+<resource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://datacite.org/schema/kernel-4" xsi:schemaLocation="http://datacite.org/schema/kernel-4 http://schema.datacite.org/meta/kernel-4.1/metadata.xsd">
+  <identifier identifierType="DOI">10.5281/zenodo.3457390</identifier>
+  <creators>
+    <creator>
+      <creatorName>Isabelle Perseil</creatorName>
+      <nameIdentifier nameIdentifierScheme="ORCID" schemeURI="http://orcid.org/">0000-0001-9058-9290</nameIdentifier>
+      <affiliation>INSERM</affiliation>
+    </creator>
+    <creator>
+      <creatorName>Petr Holub</creatorName>
+      <affiliation>Masaryk University</affiliation>
+    </creator>
+    <creator>
+      <creatorName>Rudolf Wittner</creatorName>
+      <affiliation>Masaryk University</affiliation>
+    </creator>
+  </creators>
+  <titles>
+    <title>Towards a reconstructive methodology for building a provenance metamodel that fits the complex bioinformatics pipelines</title>
+  </titles>
+  <publisher>Zenodo</publisher>
+  <publicationYear>2019</publicationYear>
+  <subjects>
+    <subject>Provenance</subject>
+    <subject>Metamodel</subject>
+    <subject>methodology</subject>
+  </subjects>
+  <dates>
+    <date dateType="Issued">2019-08-07</date>
+  </dates>
+  <language>en</language>
+  <resourceType resourceTypeGeneral="Text">Presentation</resourceType>
+  <alternateIdentifiers>
+    <alternateIdentifier alternateIdentifierType="url">https://zenodo.org/record/3457390</alternateIdentifier>
+  </alternateIdentifiers>
+  <relatedIdentifiers>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="IsVersionOf">10.5281/zenodo.3362411</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="URL" relationType="IsPartOf">https://zenodo.org/communities/ro</relatedIdentifier>
+  </relatedIdentifiers>
+  <rightsList>
+    <rights rightsURI="http://creativecommons.org/licenses/by/4.0/legalcode">Creative Commons Attribution 4.0 International</rights>
+    <rights rightsURI="info:eu-repo/semantics/openAccess">Open Access</rights>
+  </rightsList>
+  <descriptions>
+    <description descriptionType="Abstract">&lt;p&gt;Defining a methodology for building a provenance metamodel easily instantiable for the most complex bioinformatics pipelines, and use this methodology for simpler models.&lt;/p&gt;</description>
+  </descriptions>
+  <fundingReferences>
+    <fundingReference>
+      <funderName>European Commission</funderName>
+      <funderIdentifier funderIdentifierType="Crossref Funder ID">10.13039/501100000780</funderIdentifier>
+      <awardNumber awardURI="info:eu-repo/grantAgreement/EC/H2020/824087/">824087</awardNumber>
+      <awardTitle>Providing an open collaborative space for digital biology in Europe</awardTitle>
+    </fundingReference>
+  </fundingReferences>
+</resource>

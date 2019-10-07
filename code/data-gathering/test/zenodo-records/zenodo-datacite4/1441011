@@ -1,1 +1,83 @@
-{"message":"60 per 1 minute","status":429}
+<?xml version='1.0' encoding='utf-8'?>
+<resource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://datacite.org/schema/kernel-4" xsi:schemaLocation="http://datacite.org/schema/kernel-4 http://schema.datacite.org/meta/kernel-4.1/metadata.xsd">
+  <identifier identifierType="DOI">10.5281/zenodo.1441011</identifier>
+  <creators>
+    <creator>
+      <creatorName>Beyan, Oya</creatorName>
+      <givenName>Oya</givenName>
+      <familyName>Beyan</familyName>
+      <nameIdentifier nameIdentifierScheme="ORCID" schemeURI="http://orcid.org/">0000-0001-7611-3501</nameIdentifier>
+      <affiliation>Fraunhofer FIT</affiliation>
+    </creator>
+    <creator>
+      <creatorName>Wuchner, Andrea</creatorName>
+      <givenName>Andrea</givenName>
+      <familyName>Wuchner</familyName>
+      <affiliation>Fraunhofer IRB</affiliation>
+    </creator>
+    <creator>
+      <creatorName>Eisengräber-Pabst, Dirk</creatorName>
+      <givenName>Dirk</givenName>
+      <familyName>Eisengräber-Pabst</familyName>
+      <affiliation>Fraunhofer IRB</affiliation>
+    </creator>
+    <creator>
+      <creatorName>Quix, Christoph</creatorName>
+      <givenName>Christoph</givenName>
+      <familyName>Quix</familyName>
+      <affiliation>Fraunhofer FIT</affiliation>
+    </creator>
+    <creator>
+      <creatorName>Zaschke, Christian</creatorName>
+      <givenName>Christian</givenName>
+      <familyName>Zaschke</familyName>
+      <affiliation>Fraunhofer IOSB</affiliation>
+    </creator>
+    <creator>
+      <creatorName>Schumacher, Oliver</creatorName>
+      <givenName>Oliver</givenName>
+      <familyName>Schumacher</familyName>
+      <affiliation>Fraunhofer</affiliation>
+    </creator>
+  </creators>
+  <titles>
+    <title>Research Data in the Fraunhofer Digital Project : Creating a FAIR Research Data Infrastructure and Culture</title>
+  </titles>
+  <publisher>Zenodo</publisher>
+  <publicationYear>2018</publicationYear>
+  <subjects>
+    <subject>Research Data Infrastructure</subject>
+    <subject>Data reuse</subject>
+    <subject>Fraunhofer Data Space;</subject>
+    <subject>FAIR evaluation</subject>
+  </subjects>
+  <dates>
+    <date dateType="Issued">2018-09-06</date>
+  </dates>
+  <language>en</language>
+  <resourceType resourceTypeGeneral="Text">Conference paper</resourceType>
+  <alternateIdentifiers>
+    <alternateIdentifier alternateIdentifierType="url">https://zenodo.org/record/1441011</alternateIdentifier>
+  </alternateIdentifiers>
+  <relatedIdentifiers>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="IsVersionOf">10.5281/zenodo.1410051</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="URL" relationType="IsPartOf">https://zenodo.org/communities/ro</relatedIdentifier>
+  </relatedIdentifiers>
+  <rightsList>
+    <rights rightsURI="http://creativecommons.org/licenses/by/4.0/legalcode">Creative Commons Attribution 4.0 International</rights>
+    <rights rightsURI="info:eu-repo/semantics/openAccess">Open Access</rights>
+  </rightsList>
+  <descriptions>
+    <description descriptionType="Abstract">&lt;p&gt;The Fraunhofer Society, as the leading organization for applied research in Europe, conducts its research&lt;br&gt;
+activities by 72 institutes and research units at locations throughout Germany. The Fraunhofer Digital project,&lt;br&gt;
+a part of the Fraunhofer 2022 Agenda, introduces the vision, that research and administrative data will be&lt;br&gt;
+linked, aggregated and analyzed in order to optimize the research and development processes and support&lt;br&gt;
+management decisions. As a part of this vision, the Research Data in the Fraunhofer Data Space project&lt;br&gt;
+develops methods to reuse the research data in a broader sense, and integrate research data silos in various&lt;br&gt;
+institutes into Fraunhofer Data Space. In this work we present the concept, early outcomes, and a FAIRness&lt;br&gt;
+assessment of the research data repository approach. In our assessment we used the FAIR metrics, and as a&lt;br&gt;
+result developed a set of recommendations. These recommendations will be utilized to establish a digital&lt;br&gt;
+research data infrastructure as well as a research data reuse culture in Fraunhofer. They can be also useful for&lt;br&gt;
+other large scale institutions with heterogeneous research communities.&lt;/p&gt;</description>
+  </descriptions>
+</resource>

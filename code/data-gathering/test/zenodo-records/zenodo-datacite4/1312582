@@ -1,1 +1,60 @@
-{"message":"60 per 1 minute","status":429}
+<?xml version='1.0' encoding='utf-8'?>
+<resource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://datacite.org/schema/kernel-4" xsi:schemaLocation="http://datacite.org/schema/kernel-4 http://schema.datacite.org/meta/kernel-4.1/metadata.xsd">
+  <identifier identifierType="DOI">10.5281/zenodo.1312582</identifier>
+  <creators>
+    <creator>
+      <creatorName>Stian Soiland-Reyes</creatorName>
+      <nameIdentifier nameIdentifierScheme="ORCID" schemeURI="http://orcid.org/">0000-0001-9842-9718</nameIdentifier>
+      <affiliation>eScience Lab, School of Computer Science, The University of Manchester, UK</affiliation>
+    </creator>
+    <creator>
+      <creatorName>Marcos Cáceres</creatorName>
+      <affiliation>Mozilla Corporation</affiliation>
+    </creator>
+  </creators>
+  <titles>
+    <title>The Archive and Package (arcp) URI scheme</title>
+  </titles>
+  <publisher>Zenodo</publisher>
+  <publicationYear>2018</publicationYear>
+  <subjects>
+    <subject>linked data</subject>
+    <subject>identifier</subject>
+    <subject>archive</subject>
+    <subject>uri</subject>
+    <subject>research object</subject>
+  </subjects>
+  <dates>
+    <date dateType="Issued">2018-07-15</date>
+  </dates>
+  <language>en</language>
+  <resourceType resourceTypeGeneral="Text">Conference paper</resourceType>
+  <alternateIdentifiers>
+    <alternateIdentifier alternateIdentifierType="url">https://zenodo.org/record/1312582</alternateIdentifier>
+  </alternateIdentifiers>
+  <relatedIdentifiers>
+    <relatedIdentifier relatedIdentifierType="URL" relationType="IsSupplementedBy">https://tools.ietf.org/id/draft-soilandreyes-arcp-03.html</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="IsSupplementTo">10.5281/zenodo.1165986</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="URL" relationType="IsIdenticalTo">http://s11.no/2018/arcp.html</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="IsVersionOf">10.5281/zenodo.1312581</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="URL" relationType="IsPartOf">https://zenodo.org/communities/bioexcel</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="URL" relationType="IsPartOf">https://zenodo.org/communities/linkeddata</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="URL" relationType="IsPartOf">https://zenodo.org/communities/ro</relatedIdentifier>
+  </relatedIdentifiers>
+  <rightsList>
+    <rights rightsURI="http://creativecommons.org/licenses/by/4.0/legalcode">Creative Commons Attribution 4.0 International</rights>
+    <rights rightsURI="info:eu-repo/semantics/openAccess">Open Access</rights>
+  </rightsList>
+  <descriptions>
+    <description descriptionType="Abstract">&lt;p&gt;The arcp URI scheme is introduced for location-independent identifiers to consume or reference hypermedia and linked data resources bundled inside a file archive, as well as to resolve archived resources within programmatic frameworks for Research Objects.&lt;/p&gt;</description>
+    <description descriptionType="Other">Preprint, submitted to RO2018. Web version: http://s11.no/2018/arcp.html</description>
+  </descriptions>
+  <fundingReferences>
+    <fundingReference>
+      <funderName>European Commission</funderName>
+      <funderIdentifier funderIdentifierType="Crossref Funder ID">10.13039/501100000780</funderIdentifier>
+      <awardNumber awardURI="info:eu-repo/grantAgreement/EC/H2020/675728/">675728</awardNumber>
+      <awardTitle>Centre of Excellence for Biomolecular Research</awardTitle>
+    </fundingReference>
+  </fundingReferences>
+</resource>

@@ -1,1 +1,77 @@
-{"message":"60 per 1 minute","status":429}
+<?xml version='1.0' encoding='utf-8'?>
+<resource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://datacite.org/schema/kernel-4" xsi:schemaLocation="http://datacite.org/schema/kernel-4 http://schema.datacite.org/meta/kernel-4.1/metadata.xsd">
+  <identifier identifierType="DOI">10.5281/zenodo.1484286</identifier>
+  <creators>
+    <creator>
+      <creatorName>Carole Goble</creatorName>
+      <nameIdentifier nameIdentifierScheme="ORCID" schemeURI="http://orcid.org/">0000-0003-1219-2137</nameIdentifier>
+      <affiliation>The University of Manchester</affiliation>
+    </creator>
+    <creator>
+      <creatorName>Stian Soiland-Reyes</creatorName>
+      <nameIdentifier nameIdentifierScheme="ORCID" schemeURI="http://orcid.org/">0000-0001-9842-9718</nameIdentifier>
+      <affiliation>The University of Manchester</affiliation>
+    </creator>
+    <creator>
+      <creatorName>Sean Bechhofer</creatorName>
+      <nameIdentifier nameIdentifierScheme="ORCID" schemeURI="http://orcid.org/">0000-0002-5872-3573</nameIdentifier>
+      <affiliation>The University of Manchester</affiliation>
+    </creator>
+  </creators>
+  <titles>
+    <title>Research Object Community Update</title>
+  </titles>
+  <publisher>Zenodo</publisher>
+  <publicationYear>2018</publicationYear>
+  <dates>
+    <date dateType="Issued">2018-10-29</date>
+  </dates>
+  <resourceType resourceTypeGeneral="Text">Presentation</resourceType>
+  <alternateIdentifiers>
+    <alternateIdentifier alternateIdentifierType="url">https://zenodo.org/record/1484286</alternateIdentifier>
+  </alternateIdentifiers>
+  <relatedIdentifiers>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Documents">10.5281/zenodo.1313066</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Cites">10.1038/npre.2010.4626.1</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Cites">10.1016/j.future.2011.08.004</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Cites">10.1016/j.websem.2015.01.003</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="IsVersionOf">10.5281/zenodo.1484285</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="URL" relationType="IsPartOf">https://zenodo.org/communities/ro</relatedIdentifier>
+  </relatedIdentifiers>
+  <rightsList>
+    <rights rightsURI="http://creativecommons.org/licenses/by/4.0/legalcode">Creative Commons Attribution 4.0 International</rights>
+    <rights rightsURI="info:eu-repo/semantics/openAccess">Open Access</rights>
+  </rightsList>
+  <descriptions>
+    <description descriptionType="Abstract">&lt;p&gt;&lt;em&gt;We highlight recent developments and approaches in the ResearchObject.org community. &lt;/em&gt;&lt;a href="http://researchobject.org/"&gt;Research Object&lt;/a&gt;, originally proposed in &lt;a href="https://doi.org/10.1038/npre.2010.4626.1"&gt;[1]&lt;/a&gt; and since developed and expanded on &lt;a href="https://doi.org/10.1016/j.future.2011.08.004"&gt;[2]&lt;/a&gt;&lt;a href="https://doi.org/10.1016/j.websem.2015.01.003"&gt;[3]&lt;/a&gt;, is a framework by which the many, nested and contributed components of research can be packaged together in a systematic way, and their context, provenance and relationships richly described. Research Objects (ROs) define ontology-based mechanisms for richly describing the contents of container manifests, and the relationships between them.&lt;/p&gt;
+
+&lt;p&gt;Full abstract: &lt;a href="https://doi.org/10.5281/zenodo.1313066"&gt;https://doi.org/10.5281/zenodo.1313066&lt;/a&gt;&lt;/p&gt;</description>
+    <description descriptionType="Other">Accepted Talk at RO2018</description>
+  </descriptions>
+  <fundingReferences>
+    <fundingReference>
+      <funderName>European Commission</funderName>
+      <funderIdentifier funderIdentifierType="Crossref Funder ID">10.13039/501100000780</funderIdentifier>
+      <awardNumber awardURI="info:eu-repo/grantAgreement/EC/H2020/676559/">676559</awardNumber>
+      <awardTitle>ELIXIR-EXCELERATE: Fast-track ELIXIR implementation and drive early user exploitation across the life-sciences.</awardTitle>
+    </fundingReference>
+    <fundingReference>
+      <funderName>European Commission</funderName>
+      <funderIdentifier funderIdentifierType="Crossref Funder ID">10.13039/501100000780</funderIdentifier>
+      <awardNumber awardURI="info:eu-repo/grantAgreement/EC/H2020/675728/">675728</awardNumber>
+      <awardTitle>Centre of Excellence for Biomolecular Research</awardTitle>
+    </fundingReference>
+    <fundingReference>
+      <funderName>European Commission</funderName>
+      <funderIdentifier funderIdentifierType="Crossref Funder ID">10.13039/501100000780</funderIdentifier>
+      <awardNumber awardURI="info:eu-repo/grantAgreement/EC/H2020/739563/">739563</awardNumber>
+      <awardTitle>The European Open Science Cloud for Research Pilot Project.</awardTitle>
+    </fundingReference>
+    <fundingReference>
+      <funderName>European Commission</funderName>
+      <funderIdentifier funderIdentifierType="Crossref Funder ID">10.13039/501100000780</funderIdentifier>
+      <awardNumber awardURI="info:eu-repo/grantAgreement/EC/FP7/270192/">270192</awardNumber>
+      <awardTitle>Advanced Workflow Preservation Technologies for Enhanced Science</awardTitle>
+    </fundingReference>
+  </fundingReferences>
+</resource>

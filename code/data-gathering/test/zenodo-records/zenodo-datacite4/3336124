@@ -57,21 +57,21 @@
     <alternateIdentifier alternateIdentifierType="url">https://zenodo.org/record/3336124</alternateIdentifier>
   </alternateIdentifiers>
   <relatedIdentifiers>
-    <relatedIdentifier relatedIdentifierType="DOI" relationType="Cites">10.1109/BigData.2016.7840618</relatedIdentifier>
-    <relatedIdentifier relatedIdentifierType="DOI" relationType="Cites">10.5281/zenodo.592090</relatedIdentifier>
-    <relatedIdentifier relatedIdentifierType="DOI" relationType="Cites">10.5281/zenodo.51314</relatedIdentifier>
-    <relatedIdentifier relatedIdentifierType="URL" relationType="IsDocumentedBy">https://zenodo.org/record/1304969</relatedIdentifier>
-    <relatedIdentifier relatedIdentifierType="DOI" relationType="IsSupplementedBy">10.17632/xnwncxpw42.1</relatedIdentifier>
-    <relatedIdentifier relatedIdentifierType="DOI" relationType="IsSupplementedBy">10.17632/6wtpgr3kbj.1</relatedIdentifier>
-    <relatedIdentifier relatedIdentifierType="DOI" relationType="IsSupplementedBy">10.17632/97hj93mkfd.3</relatedIdentifier>
-    <relatedIdentifier relatedIdentifierType="DOI" relationType="HasPart">10.5281/zenodo.1471376</relatedIdentifier>
-    <relatedIdentifier relatedIdentifierType="DOI" relationType="HasPart">10.5281/zenodo.1471585</relatedIdentifier>
-    <relatedIdentifier relatedIdentifierType="DOI" relationType="HasPart">10.5281/zenodo.1471589</relatedIdentifier>
-    <relatedIdentifier relatedIdentifierType="URL" relationType="IsSupplementedBy">https://zenodo.org/record/2841641</relatedIdentifier>
-    <relatedIdentifier relatedIdentifierType="URL" relationType="IsSupplementedBy">https://zenodo.org/record/2632836</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Cites" resourceTypeGeneral="Text">10.1109/BigData.2016.7840618</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Cites" resourceTypeGeneral="Software">10.5281/zenodo.592090</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Cites" resourceTypeGeneral="Text">10.5281/zenodo.51314</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="URL" relationType="IsDocumentedBy" resourceTypeGeneral="Text">https://zenodo.org/record/1304969</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="IsSupplementedBy" resourceTypeGeneral="Dataset">10.17632/xnwncxpw42.1</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="IsSupplementedBy" resourceTypeGeneral="Dataset">10.17632/6wtpgr3kbj.1</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="IsSupplementedBy" resourceTypeGeneral="Dataset">10.17632/97hj93mkfd.3</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="HasPart" resourceTypeGeneral="Software">10.5281/zenodo.1471376</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="HasPart" resourceTypeGeneral="Software">10.5281/zenodo.1471585</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="HasPart" resourceTypeGeneral="Software">10.5281/zenodo.1471589</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="URL" relationType="IsSupplementedBy" resourceTypeGeneral="Dataset">https://zenodo.org/record/2841641</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="URL" relationType="IsSupplementedBy" resourceTypeGeneral="Dataset">https://zenodo.org/record/2632836</relatedIdentifier>
     <relatedIdentifier relatedIdentifierType="URL" relationType="IsSupplementedBy">https://zenodo.org/record/2838898</relatedIdentifier>
-    <relatedIdentifier relatedIdentifierType="DOI" relationType="IsSupplementedBy">10.5524/100625</relatedIdentifier>
-    <relatedIdentifier relatedIdentifierType="URL" relationType="IsCompiledBy">https://github.com/stain/cwlprov-paper-gigascience</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="IsSupplementedBy" resourceTypeGeneral="Dataset">10.5524/100625</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="URL" relationType="IsCompiledBy" resourceTypeGeneral="Text">https://github.com/stain/cwlprov-paper-gigascience</relatedIdentifier>
     <relatedIdentifier relatedIdentifierType="DOI" relationType="IsVersionOf">10.5281/zenodo.1208477</relatedIdentifier>
     <relatedIdentifier relatedIdentifierType="URL" relationType="IsPartOf">https://zenodo.org/communities/linkeddata</relatedIdentifier>
     <relatedIdentifier relatedIdentifierType="URL" relationType="IsPartOf">https://zenodo.org/communities/ro</relatedIdentifier>

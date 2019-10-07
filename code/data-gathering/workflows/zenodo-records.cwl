@@ -86,7 +86,7 @@ steps:
         splittable:
           source: make-uri/modified
         maxlines:
-          default: 5 # Number of URIs for curl to fetch at same time (reusing HTTP connection)
+          default: 50 # Number of URIs for curl to fetch at same time (reusing HTTP connection)
       out: [splitted]
       run: ../tools/split-lines.cwl
 

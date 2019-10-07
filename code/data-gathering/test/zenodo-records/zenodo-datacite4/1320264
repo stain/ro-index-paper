@@ -1,1 +1,98 @@
-{"message":"60 per 1 minute","status":429}
+<?xml version='1.0' encoding='utf-8'?>
+<resource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://datacite.org/schema/kernel-4" xsi:schemaLocation="http://datacite.org/schema/kernel-4 http://schema.datacite.org/meta/kernel-4.1/metadata.xsd">
+  <identifier identifierType="DOI">10.5281/zenodo.1320264</identifier>
+  <creators>
+    <creator>
+      <creatorName>Stian Soiland-Reyes</creatorName>
+      <nameIdentifier nameIdentifierScheme="ORCID" schemeURI="http://orcid.org/">0000-0001-9842-9718</nameIdentifier>
+      <affiliation>eScience Lab, School of Computer Science, The University of Manchester, UK</affiliation>
+    </creator>
+    <creator>
+      <creatorName>Marcos Cáceres</creatorName>
+      <affiliation>Mozilla Corporation</affiliation>
+    </creator>
+  </creators>
+  <titles>
+    <title>The Archive and Package (arcp) URI scheme</title>
+  </titles>
+  <publisher>Zenodo</publisher>
+  <publicationYear>2018</publicationYear>
+  <subjects>
+    <subject>linked data</subject>
+    <subject>identifier</subject>
+    <subject>archive</subject>
+    <subject>uri</subject>
+    <subject>research object</subject>
+  </subjects>
+  <dates>
+    <date dateType="Issued">2018-07-24</date>
+  </dates>
+  <language>en</language>
+  <resourceType resourceTypeGeneral="Text">Conference paper</resourceType>
+  <alternateIdentifiers>
+    <alternateIdentifier alternateIdentifierType="url">https://zenodo.org/record/1320264</alternateIdentifier>
+  </alternateIdentifiers>
+  <relatedIdentifiers>
+    <relatedIdentifier relatedIdentifierType="URL" relationType="IsSupplementedBy">https://tools.ietf.org/id/draft-soilandreyes-arcp-03.html</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="IsSupplementedBy">10.5281/zenodo.1165986</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="URL" relationType="IsIdenticalTo">http://s11.no/2018/arcp.html</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="URL" relationType="IsDocumentedBy">http://s11.no/2018/arcp.html#ro</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="URL" relationType="Cites">https://w3id.org/cwl/prov/0.3.0</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Cites">10.5281/zenodo.1215611</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="URL" relationType="Cites">https://datatracker.ietf.org/doc/html/draft-kunze-bagit-16</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Cites">10.15497/RDA00025</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Cites">10.1186/s12859-014-0369-z</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="URL" relationType="Cites">https://spdf.gsfc.nasa.gov/pub/software/cdf/doc/cdf364/cdf36ifd.pdf</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="URL" relationType="Cites">https://support.hdfgroup.org/HDF5/doc/H5.format.html</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Cites">10.5281/zenodo.12586</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="URL" relationType="Cites">https://www.w3.org/TR/2015/NOTE-app-uri-20150723/</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="URL" relationType="Cites">https://www.w3.org/TR/2018/WD-appmanifest-20180704/</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="URL" relationType="Cites">https://www.w3.org/TR/2017/WD-service-workers-1-20171102/</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="URL" relationType="Cites">https://tools.ietf.org/html/draft-soilandreyes-arcp-03</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Cites">10.17487/rfc8089</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Cites">10.17487/rfc3986</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Cites">10.17487/rfc4122</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Cites">10.17487/rfc6920</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Cites">10.17487/rfc5785</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Cites">10.1145/1255175.1255190</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Cites">10.1007/978-3-642-35834-0_22</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Cites">10.1109/FSKD.2013.6816297</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Cites">10.1007/978-3-642-19510-5_13</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Cites">10.1186/2041-1480-4-37</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="URL" relationType="Cites">https://www.w3.org/Submission/2017/SUBM-epub-ocf-20170125/</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="URL" relationType="Cites">http://www.idpf.org/epub/linking/cfi/epub-cfi-20170105.html</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Cites">10.5281/zenodo.1165986</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Cites">10.5281/zenodo.1215611</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="IsPreviousVersionOf">10.1109/eScience.2018.00018</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="arXiv" relationType="IsPreviousVersionOf">arXiv:1809.06935v1</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="IsVersionOf">10.5281/zenodo.1312581</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="URL" relationType="IsPartOf">https://zenodo.org/communities/bioexcel</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="URL" relationType="IsPartOf">https://zenodo.org/communities/linkeddata</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="URL" relationType="IsPartOf">https://zenodo.org/communities/ro</relatedIdentifier>
+  </relatedIdentifiers>
+  <rightsList>
+    <rights rightsURI="http://creativecommons.org/licenses/by/4.0/legalcode">Creative Commons Attribution 4.0 International</rights>
+    <rights rightsURI="info:eu-repo/semantics/openAccess">Open Access</rights>
+  </rightsList>
+  <descriptions>
+    <description descriptionType="Abstract">&lt;p&gt;The arcp URI scheme is introduced for location-independent identifiers to consume or reference hypermedia and linked data resources bundled inside a file archive, as well as to resolve archived resources within programmatic frameworks for Research Objects.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Research Object&lt;/strong&gt;: &lt;a href="http://s11.no/2018/arcp.html#ro"&gt;http://s11.no/2018/arcp.html#ro&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Cite as: &lt;/strong&gt;&lt;br&gt;
+Stian Soiland-Reyes, Marcos C&amp;aacute;ceres (2018):&lt;br&gt;
+&lt;strong&gt;The Archive and Package (arcp) URI Scheme&lt;/strong&gt;.&lt;br&gt;
+&lt;em&gt;2018 IEEE 14th International Conference on e-Science (e-Science)&lt;/em&gt;.&lt;br&gt;
+&lt;a href="https://doi.org/10.1109/eScience.2018.00018"&gt;https://doi.org/10.1109/eScience.2018.00018&lt;/a&gt;&lt;/p&gt;</description>
+    <description descriptionType="Other">Author-prepared preprint. Web version: http://s11.no/2018/arcp.html
+Publisher version: https://doi.org/10.1109/eScience.2018.00018</description>
+  </descriptions>
+  <fundingReferences>
+    <fundingReference>
+      <funderName>European Commission</funderName>
+      <funderIdentifier funderIdentifierType="Crossref Funder ID">10.13039/501100000780</funderIdentifier>
+      <awardNumber awardURI="info:eu-repo/grantAgreement/EC/H2020/675728/">675728</awardNumber>
+      <awardTitle>Centre of Excellence for Biomolecular Research</awardTitle>
+    </fundingReference>
+  </fundingReferences>
+</resource>

@@ -1,1 +1,111 @@
-{"message":"60 per 1 minute","status":429}
+<?xml version='1.0' encoding='utf-8'?>
+<resource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://datacite.org/schema/kernel-4" xsi:schemaLocation="http://datacite.org/schema/kernel-4 http://schema.datacite.org/meta/kernel-4.1/metadata.xsd">
+  <identifier identifierType="URL">https://zenodo.org/record/2838898</identifier>
+  <creators>
+    <creator>
+      <creatorName>Farah Zaib Khan</creatorName>
+      <nameIdentifier nameIdentifierScheme="ORCID" schemeURI="http://orcid.org/">0000-0002-6337-3037</nameIdentifier>
+      <affiliation>Department of Computing and Information Systems, The University of Melbourne, Australia</affiliation>
+    </creator>
+    <creator>
+      <creatorName>Stian Soiland-Reyes</creatorName>
+      <nameIdentifier nameIdentifierScheme="ORCID" schemeURI="http://orcid.org/">0000-0001-9842-9718</nameIdentifier>
+      <affiliation>School of Computer Science, The University of Manchester, UK</affiliation>
+    </creator>
+  </creators>
+  <titles>
+    <title>CWL run of RNA-seq Analysis Workflow (CWLProv 0.5.0 Research Object)</title>
+  </titles>
+  <publisher>Zenodo</publisher>
+  <publicationYear>2018</publicationYear>
+  <dates>
+    <date dateType="Issued">2018-12-04</date>
+  </dates>
+  <resourceType resourceTypeGeneral="Dataset"/>
+  <alternateIdentifiers>
+    <alternateIdentifier alternateIdentifierType="url">https://zenodo.org/record/2838898</alternateIdentifier>
+  </alternateIdentifiers>
+  <relatedIdentifiers>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="IsCitedBy">10.5281/zenodo.1208477</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="IsCompiledBy">10.5281/zenodo.1471594</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="URL" relationType="IsCompiledBy">https://w3id.org/cwl/view/git/018d344b12e9e1b888e21e0819096f9b337d371d/topmed-workflows/TOPMed_RNAseq_pipeline/rnaseq_pipeline_fastq.cwl</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="URL" relationType="Cites">https://github.com/heliumdatacommons/TOPMed_RNAseq_CWL</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="URL" relationType="IsSupplementedBy">https://pypi.org/project/cwlprov/</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="URL" relationType="Cites">https://w3id.org/cwl/prov/0.5.0</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="URL" relationType="References">https://github.com/heliumdatacommons</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="IsIdenticalTo">10.17632/xnwncxpw42.1</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="URL" relationType="IsPartOf">https://zenodo.org/communities/bioexcel</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="URL" relationType="IsPartOf">https://zenodo.org/communities/ro</relatedIdentifier>
+  </relatedIdentifiers>
+  <version>1</version>
+  <rightsList>
+    <rights rightsURI="http://creativecommons.org/licenses/by/4.0/legalcode">Creative Commons Attribution 4.0 International</rights>
+    <rights rightsURI="info:eu-repo/semantics/openAccess">Open Access</rights>
+  </rightsList>
+  <descriptions>
+    <description descriptionType="Abstract">&lt;p&gt;This workflow adapts the approach and parameter settings of &lt;a href="https://github.com/heliumdatacommons/TOPMed_RNAseq_CWL"&gt;Trans-Omics for precision Medicine (TOPMed)&lt;/a&gt;. The &lt;a href="https://w3id.org/cwl/view/git/018d344b12e9e1b888e21e0819096f9b337d371d/topmed-workflows/TOPMed_RNAseq_pipeline/rnaseq_pipeline_fastq.cwl"&gt;RNA-seq pipeline&lt;/a&gt; originated from the Broad Institute. There are in total five steps in the workflow starting from:&lt;/p&gt;
+
+&lt;ol&gt;
+	&lt;li&gt;Read alignment using &lt;strong&gt;STAR&lt;/strong&gt; which produces aligned BAM files including the Genome BAM and Transcriptome BAM.&lt;/li&gt;
+	&lt;li&gt;The Genome BAM file is processed using &lt;strong&gt;Picard MarkDuplicates.&lt;/strong&gt; producing an updated BAM file containing information on duplicate reads (such reads can indicate biased interpretation).&lt;/li&gt;
+	&lt;li&gt;&lt;strong&gt;SAMtools index&lt;/strong&gt; is then employed to generate an index for the BAM file, in preparation for the next step.&lt;/li&gt;
+	&lt;li&gt;The indexed BAM file is processed further with &lt;strong&gt;RNA-SeQC&lt;/strong&gt; which takes the BAM file, human genome reference sequence and Gene Transfer Format (GTF) file as inputs to generate transcriptome-level expression quantifications and standard quality control metrics.&lt;/li&gt;
+	&lt;li&gt;In parallel with transcript quantification, isoform expression levels are quantified by &lt;strong&gt;RSEM&lt;/strong&gt;. This step depends only on the output of the STAR tool, and additional RSEM reference sequences.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;For testing and analysis, the workflow author provided example data created by down-sampling the read files of a TOPMed public access data. &lt;em&gt;Chromosome 12&lt;/em&gt; was extracted from the &lt;em&gt;Homo Sapien Assembly 38&lt;/em&gt; reference sequence and provided by the workflow authors. The required GTF and RSEM reference data files are also provided. The workflow is well-documented with a detailed set of instructions of the steps performed to down-sample the data are also provided for transparency. The availability of example input data, use of containerization for underlying software and detailed documentation are important factors in choosing this specific CWL workflow for CWLProv evaluation.&lt;/p&gt;
+
+&lt;p&gt;This dataset folder is a &lt;strong&gt;CWLProv Research Object&lt;/strong&gt; that captures the Common Workflow Language execution provenance, see &lt;a href="https://w3id.org/cwl/prov/0.5.0"&gt;https://w3id.org/cwl/prov/0.5.0&lt;/a&gt; or use &lt;a href="https://pypi.org/project/cwl"&gt;https://pypi.org/project/cwl&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Steps to reproduce&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;To build the research object again, use Python 3 on macOS. Built with:&lt;/p&gt;
+
+&lt;ul&gt;
+	&lt;li&gt;Processor 2.8GHz Intel Core i7&lt;/li&gt;
+	&lt;li&gt;Memory: 16GB&lt;/li&gt;
+	&lt;li&gt;OS: macOS High Sierra, Version 10.13.3&lt;/li&gt;
+	&lt;li&gt;Storage: 250GB&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;ol&gt;
+	&lt;li&gt;
+	&lt;p&gt;Install &lt;strong&gt;cwltool&lt;/strong&gt;&lt;/p&gt;
+
+	&lt;pre&gt;&lt;code class="language-bash"&gt;pip3 install cwltool==1.0.20180912090223&lt;/code&gt;&lt;/pre&gt;
+	&lt;/li&gt;
+	&lt;li&gt;
+	&lt;p&gt;Install &lt;strong&gt;git lfs&lt;/strong&gt;&lt;br&gt;
+	The data download with the git repository requires the installation of Git lfs:&lt;br&gt;
+	&lt;a href="https://www.atlassian.com/git/tutorials/git-lfs#installing-git-lfs"&gt;https://www.atlassian.com/git/tutorials/git-lfs#installing-git-lfs&lt;/a&gt;&lt;/p&gt;
+	&lt;/li&gt;
+	&lt;li&gt;
+	&lt;p&gt;Get the data and make the analysis environment ready:&lt;/p&gt;
+
+	&lt;pre&gt;&lt;code class="language-bash"&gt;git clone https://github.com/FarahZKhan/cwl_workflows.git
+cd cwl_workflows/
+git checkout CWLProvTesting
+./topmed-workflows/TOPMed_RNAseq_pipeline/input-examples/download_examples.sh&lt;/code&gt;&lt;/pre&gt;
+	&lt;/li&gt;
+	&lt;li&gt;
+	&lt;p&gt;Run the following commands to create the CWLProv Research Object:&lt;/p&gt;
+
+	&lt;pre&gt;&lt;code class="language-bash"&gt;cwltool --provenance rnaseqwf_0.6.0_linux --tmp-outdir-prefix=/CWLProv_workflow_testing/intermediate_temp/temp --tmpdir-prefix=/CWLProv_workflow_testing/intermediate_temp/temp topmed-workflows/TOPMed_RNAseq_pipeline/rnaseq_pipeline_fastq.cwl topmed-workflows/TOPMed_RNAseq_pipeline/input-examples/Dockstore.json
+
+zip -r rnaseqwf_0.5.0_mac.zip rnaseqwf_0.5.0_mac
+sha256sum rnaseqwf_0.5.0_mac.zip &amp;gt; rnaseqwf_0.5.0_mac_mac.zip.sha256&lt;/code&gt;&lt;/pre&gt;
+	&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;The &lt;a href="https://github.com/FarahZKhan/cwl_workflows"&gt;https://github.com/FarahZKhan/cwl_workflows&lt;/a&gt; repository is a frozen snapshot from &lt;a href="https://github.com/heliumdatacommons/TOPMed_RNAseq_CWL"&gt;https://github.com/heliumdatacommons/TOPMed_RNAseq_CWL&lt;/a&gt; commit &lt;a href="https://github.com/heliumdatacommons/TOPMed_RNAseq_CWL/tree/027e8af41b906173aafdb791351fb29efc044120"&gt;027e8af41b906173aafdb791351fb29efc044120&lt;/a&gt;&lt;/p&gt;</description>
+    <description descriptionType="Other">Mirror of Mendeley Data upload https://data.mendeley.com/datasets/xnwncxpw42/1</description>
+  </descriptions>
+  <fundingReferences>
+    <fundingReference>
+      <funderName>European Commission</funderName>
+      <funderIdentifier funderIdentifierType="Crossref Funder ID">10.13039/501100000780</funderIdentifier>
+      <awardNumber awardURI="info:eu-repo/grantAgreement/EC/H2020/675728/">675728</awardNumber>
+      <awardTitle>Centre of Excellence for Biomolecular Research</awardTitle>
+    </fundingReference>
+  </fundingReferences>
+</resource>
