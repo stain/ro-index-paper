@@ -2,7 +2,7 @@
 author-meta:
 - Stian Soiland-Reyes
 - Paul Groth
-date-meta: '2019-10-02'
+date-meta: '2019-10-07'
 keywords:
 - research object
 - linked data
@@ -19,10 +19,10 @@ title: 'RO-Index: A survey of Research Object usage'
 
 <small><em>
 This manuscript
-([permalink](https://stain.github.io/ro-index-paper/v/7166c89aad278bdf438d593040948f3b95e6c410/))
+([permalink](https://stain.github.io/ro-index-paper/v/869e082710d3f1a18b59b89019f1a260f784973d/))
 was automatically generated
-from [stain/ro-index-paper@7166c89](https://github.com/stain/ro-index-paper/tree/7166c89aad278bdf438d593040948f3b95e6c410)
-on October 2, 2019.
+from [stain/ro-index-paper@869e082](https://github.com/stain/ro-index-paper/tree/869e082710d3f1a18b59b89019f1a260f784973d)
+on October 7, 2019.
 </em></small>
 
 ## Authors
@@ -433,6 +433,7 @@ b) large ZIP files which are processed by streami
 TODO: 
 
 - Create PROV entities for each record, download, manifest, datacite etc.
+https://doi.org/10.1016/j.websem.2015.04.001
 
 - Can we get data/stats for all of Zenodo? Start download to fill .cache
 

@@ -1,5 +1,5 @@
 {
-  "date": "October 2, 2019",
+  "date": "October 7, 2019",
   "authors": [
     {
       "github": "stain",
@@ -46,13 +46,13 @@
     "repo_slug": "stain/ro-index-paper",
     "repo_owner": "stain",
     "repo_name": "ro-index-paper",
-    "commit": "7166c89aad278bdf438d593040948f3b95e6c410"
+    "commit": "869e082710d3f1a18b59b89019f1a260f784973d"
   },
   "manuscript_stats": {
     "reference_counts": {
       "doi": 29,
       "total": 29
     },
-    "word_count": 4990
+    "word_count": 4991
   }
 }
