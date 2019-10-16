@@ -4,7 +4,4 @@ cwl:tool: ../../tools/oai-pmh.cwl
 
 baseurl: https://zenodo.org/oai2d
 
-# set to null this will fetch ALL of Zenodo
-# which will bail out early in "TOO MANY REQUESTS" at the
-# OAI-PMH API.. (max 6000 identifiers)
-#set: user-ro
+set: null

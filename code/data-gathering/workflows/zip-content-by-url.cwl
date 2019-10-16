@@ -19,8 +19,8 @@ class: Workflow
 label: "list ZIP content by URL"
 
 # Uncomment if needing valueFrom: instead of default:
-#requirements:
-#    - class: StepInputExpressionRequirement
+requirements:
+    - class: StepInputExpressionRequirement
 
 
 doc: > 

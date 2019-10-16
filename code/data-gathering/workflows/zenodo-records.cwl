@@ -30,7 +30,6 @@ requirements:
 inputs:
   community:
     type: string?
-    default: ro
     doc: >
       The short-name of the Zenodo community, e.g. "ro" for <https://zenodo.org/communities/ro>
       Use null for all of Zenodo.
@@ -63,7 +62,13 @@ steps:
           valueFrom: "https://zenodo.org/oai2d"
         set:
           source: community
-          valueFrom: user-$(self) ## TODO: Does this work if community is null?
+          valueFrom: |
+            ${
+                if (self == null) { 
+                  return null;
+                } 
+                return "user-" + self;
+            }
       out: [identifiers]
 
     make-uri:
@@ -86,7 +91,7 @@ steps:
         splittable:
           source: make-uri/modified
         maxlines:
-          default: 50 # Number of URIs for curl to fetch at same time (reusing HTTP connection)
+          default: 10 # Number of URIs for curl to fetch at same time (reusing HTTP connection)
       out: [splitted]
       run: ../tools/split-lines.cwl
 
