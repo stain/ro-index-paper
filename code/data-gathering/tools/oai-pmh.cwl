@@ -30,7 +30,7 @@ arguments:
 requirements:
   ShellCommandRequirement: {}
   DockerRequirement:
-    dockerPull: stain/perl-oai-lib:429-retry-after
+    dockerPull: stain/perl-oai-lib:branch-429-retry-after
     # patched to support 429 Retry-After, see
     # <https://github.com/LibreCat/perl-oai-lib/pull/7>
 
