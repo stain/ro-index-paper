@@ -1,0 +1,14 @@
+#!/usr/bin/env cwltool
+
+cwl:tool: ../../tools/gather-directory.cwl
+
+name: myfolder
+
+extension: ".json"
+
+files: 
+ -   ## array of array of File
+  - class: File
+    path: file1.txt
+  - class: File
+    path: file2

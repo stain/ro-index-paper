@@ -1,0 +1,16 @@
+0c402c8ac45a171c67b8635da39804e28e8f8f62  workflow/packed.cwl
+1473f8ad566e90ed2ecf5b43f5e823366c128603  workflow/primary-job.json
+3ed30c65de90262304f108f743b60b80b9484174  metadata/directory-b5005b6a-301d-4d99-a2d3-3317b68af98c.ttl
+f7e7dd251cc5100cec8fdd47348f9f1d39b15bf3  metadata/provenance/primary.cwlprov.xml
+64266fe00b8a31ce8ab66e4ba3fa7c6454d7d05c  metadata/provenance/primary.cwlprov.provn
+cf0a9e282f446c92afa31ec90111a7465ed5a60b  metadata/provenance/primary.cwlprov.json
+c40d789a40d9f609a34cdcf14245ab6faa4d3661  metadata/provenance/primary.cwlprov.ttl
+522e5a7ffceec22164bb551a03d0ab77017a1f76  metadata/provenance/primary.cwlprov.nt
+285069b046d2ef91c3c0ca2faaad82284e7a5085  metadata/provenance/primary.cwlprov.jsonld
+a94f29bda6fc779dfeb28ca9c3a4f6f97b07dad5  workflow/primary-output.json
+87247e813c69d623ddfee4eb405c869ea5bae7d0  snapshot/gather-directory.cwl
+99d118bbbd3274ef02f81e8e82d40ee68842d673  snapshot/gather-directory-job.yml
+8c607887a7b79a7c58a529a28792910965a4fc95  snapshot/file2
+f20af629d726b9beda5f7cc2672f8171ea5847ca  metadata/logs/engine.8aff5ec1-df57-499e-a242-86686069233c.txt
+709b067e60b6f50bc8f8605f3e7ac624eb6c232d  metadata/manifest.json
+567e2dc901e09ee72fec51575fc99399c83c5374  bag-info.txt

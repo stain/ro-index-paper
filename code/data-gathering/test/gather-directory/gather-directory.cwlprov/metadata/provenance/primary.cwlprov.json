@@ -1,0 +1,423 @@
+{
+  "prefix": {
+    "wfprov": "http://purl.org/wf4ever/wfprov#",
+    "wfdesc": "http://purl.org/wf4ever/wfdesc#",
+    "cwlprov": "https://w3id.org/cwl/prov#",
+    "foaf": "http://xmlns.com/foaf/0.1/",
+    "schema": "http://schema.org/",
+    "orcid": "https://orcid.org/",
+    "id": "urn:uuid:",
+    "data": "urn:hash::sha1:",
+    "sha256": "nih:sha-256;",
+    "researchobject": "arcp://uuid,032e77c5-0ecb-444b-8c6a-53a14b3573a0/",
+    "metadata": "arcp://uuid,032e77c5-0ecb-444b-8c6a-53a14b3573a0/metadata/",
+    "provenance": "arcp://uuid,032e77c5-0ecb-444b-8c6a-53a14b3573a0/metadata/provenance/",
+    "wf": "arcp://uuid,032e77c5-0ecb-444b-8c6a-53a14b3573a0/workflow/packed.cwl#",
+    "input": "arcp://uuid,032e77c5-0ecb-444b-8c6a-53a14b3573a0/workflow/primary-job.json#",
+    "wf4ever": "http://purl.org/wf4ever/wf4ever#",
+    "ro": "http://purl.org/wf4ever/ro#",
+    "ore": "http://www.openarchives.org/ore/terms/"
+  },
+  "agent": {
+    "id:e3c4113a-c8ab-4ff0-b138-abc5cbf73e1e": {},
+    "id:8aff5ec1-df57-499e-a242-86686069233c": {
+      "prov:type": [
+        {
+          "$": "wfprov:WorkflowEngine",
+          "type": "prov:QUALIFIED_NAME"
+        },
+        {
+          "$": "prov:SoftwareAgent",
+          "type": "prov:QUALIFIED_NAME"
+        }
+      ],
+      "prov:label": "cwltool 1.0.20190815141648"
+    }
+  },
+  "wasStartedBy": {
+    "_:id1": {
+      "prov:activity": "id:8aff5ec1-df57-499e-a242-86686069233c",
+      "prov:starter": "id:e3c4113a-c8ab-4ff0-b138-abc5cbf73e1e",
+      "prov:time": "2019-10-16T13:47:08.642460"
+    },
+    "_:id3": {
+      "prov:activity": "id:032e77c5-0ecb-444b-8c6a-53a14b3573a0",
+      "prov:starter": "id:8aff5ec1-df57-499e-a242-86686069233c",
+      "prov:time": "2019-10-16T13:47:08.642604"
+    }
+  },
+  "activity": {
+    "id:032e77c5-0ecb-444b-8c6a-53a14b3573a0": {
+      "prov:startTime": "2019-10-16T13:47:08.642505",
+      "prov:type": {
+        "$": "wfprov:WorkflowRun",
+        "type": "prov:QUALIFIED_NAME"
+      },
+      "prov:label": "Run of workflow/packed.cwl#main"
+    }
+  },
+  "wasAssociatedWith": {
+    "_:id2": {
+      "prov:activity": "id:032e77c5-0ecb-444b-8c6a-53a14b3573a0",
+      "prov:agent": "id:8aff5ec1-df57-499e-a242-86686069233c",
+      "prov:plan": "wf:main"
+    }
+  },
+  "entity": {
+    "wf:main": {
+      "prov:type": [
+        {
+          "$": "prov:Plan",
+          "type": "prov:QUALIFIED_NAME"
+        },
+        {
+          "$": "wfdesc:Process",
+          "type": "prov:QUALIFIED_NAME"
+        }
+      ],
+      "prov:label": "Prospective provenance"
+    },
+    "data:25688845860b85616a3fabdeb2e53d4408f6dea8": {
+      "prov:type": {
+        "$": "wfprov:Artifact",
+        "type": "prov:QUALIFIED_NAME"
+      },
+      "prov:value": ".json"
+    },
+    "data:3eddc23a5c289eb55aeacd19e440a00a211d7df1": [
+      {
+        "prov:type": {
+          "$": "wfprov:Artifact",
+          "type": "prov:QUALIFIED_NAME"
+        }
+      },
+      {}
+    ],
+    "id:189497e6-78d6-41c4-94f8-c2d1fbeb226f": {
+      "prov:type": [
+        {
+          "$": "wf4ever:File",
+          "type": "prov:QUALIFIED_NAME"
+        },
+        {
+          "$": "wfprov:Artifact",
+          "type": "prov:QUALIFIED_NAME"
+        }
+      ],
+      "cwlprov:basename": "file1.txt",
+      "cwlprov:nameroot": "file1",
+      "cwlprov:nameext": ".txt"
+    },
+    "data:8c607887a7b79a7c58a529a28792910965a4fc95": [
+      {
+        "prov:type": {
+          "$": "wfprov:Artifact",
+          "type": "prov:QUALIFIED_NAME"
+        }
+      },
+      {}
+    ],
+    "id:514ec614-b15e-4c88-ba8a-ee5c56d35648": {
+      "prov:type": [
+        {
+          "$": "wf4ever:File",
+          "type": "prov:QUALIFIED_NAME"
+        },
+        {
+          "$": "wfprov:Artifact",
+          "type": "prov:QUALIFIED_NAME"
+        }
+      ],
+      "cwlprov:basename": "file2",
+      "cwlprov:nameroot": "file2",
+      "cwlprov:nameext": ""
+    },
+    "id:4360d794-a240-470f-8706-d032313cb987": {
+      "prov:type": [
+        {
+          "$": "prov:Collection",
+          "type": "prov:QUALIFIED_NAME"
+        },
+        {
+          "$": "wfprov:Artifact",
+          "type": "prov:QUALIFIED_NAME"
+        }
+      ]
+    },
+    "id:0d8de5df-261d-4dcd-8218-97769ebe1262": {
+      "prov:type": [
+        {
+          "$": "prov:Collection",
+          "type": "prov:QUALIFIED_NAME"
+        },
+        {
+          "$": "wfprov:Artifact",
+          "type": "prov:QUALIFIED_NAME"
+        }
+      ]
+    },
+    "data:867d665a31844f594358074d59bb0c192ed9e4bf": {
+      "prov:type": {
+        "$": "wfprov:Artifact",
+        "type": "prov:QUALIFIED_NAME"
+      },
+      "prov:value": "myfolder"
+    },
+    "id:b5005b6a-301d-4d99-a2d3-3317b68af98c": {
+      "prov:type": [
+        {
+          "$": "ro:Folder",
+          "type": "prov:QUALIFIED_NAME"
+        },
+        {
+          "$": "prov:Collection",
+          "type": "prov:QUALIFIED_NAME"
+        },
+        {
+          "$": "prov:Dictionary",
+          "type": "prov:QUALIFIED_NAME"
+        },
+        {
+          "$": "wfprov:Artifact",
+          "type": "prov:QUALIFIED_NAME"
+        }
+      ],
+      "ore:isDescribedBy": {
+        "$": "metadata:directory-b5005b6a-301d-4d99-a2d3-3317b68af98c.ttl",
+        "type": "prov:QUALIFIED_NAME"
+      },
+      "prov:hadDictionaryMember": [
+        {
+          "$": "id:4da61885-9ad5-4f9e-a11d-8d4b4b5d6f8a",
+          "type": "prov:QUALIFIED_NAME"
+        },
+        {
+          "$": "id:a1a02d49-7f42-4a4c-8247-35b908386c0d",
+          "type": "prov:QUALIFIED_NAME"
+        }
+      ]
+    },
+    "id:8575ddfc-d503-4902-aee2-395e2219ae7c": {
+      "prov:type": [
+        {
+          "$": "wf4ever:File",
+          "type": "prov:QUALIFIED_NAME"
+        },
+        {
+          "$": "wfprov:Artifact",
+          "type": "prov:QUALIFIED_NAME"
+        }
+      ],
+      "cwlprov:basename": "file1.json",
+      "cwlprov:nameroot": "file1",
+      "cwlprov:nameext": ".json"
+    },
+    "id:4da61885-9ad5-4f9e-a11d-8d4b4b5d6f8a": {
+      "prov:type": {
+        "$": "prov:KeyEntityPair",
+        "type": "prov:QUALIFIED_NAME"
+      },
+      "prov:pairKey": "file1.json",
+      "prov:pairEntity": {
+        "$": "id:8575ddfc-d503-4902-aee2-395e2219ae7c",
+        "type": "prov:QUALIFIED_NAME"
+      }
+    },
+    "id:73669a3e-a782-47fb-903c-a7598bc7d119": {
+      "prov:type": [
+        {
+          "$": "wf4ever:File",
+          "type": "prov:QUALIFIED_NAME"
+        },
+        {
+          "$": "wfprov:Artifact",
+          "type": "prov:QUALIFIED_NAME"
+        }
+      ],
+      "cwlprov:basename": "file2.json",
+      "cwlprov:nameroot": "file2",
+      "cwlprov:nameext": ".json"
+    },
+    "id:a1a02d49-7f42-4a4c-8247-35b908386c0d": {
+      "prov:type": {
+        "$": "prov:KeyEntityPair",
+        "type": "prov:QUALIFIED_NAME"
+      },
+      "prov:pairKey": "file2.json",
+      "prov:pairEntity": {
+        "$": "id:73669a3e-a782-47fb-903c-a7598bc7d119",
+        "type": "prov:QUALIFIED_NAME"
+      }
+    }
+  },
+  "used": {
+    "_:id4": {
+      "prov:activity": "id:032e77c5-0ecb-444b-8c6a-53a14b3573a0",
+      "prov:entity": "data:25688845860b85616a3fabdeb2e53d4408f6dea8",
+      "prov:time": "2019-10-16T13:47:08.645838",
+      "prov:role": {
+        "$": "wf:main/extension",
+        "type": "prov:QUALIFIED_NAME"
+      }
+    },
+    "_:id10": {
+      "prov:activity": "id:032e77c5-0ecb-444b-8c6a-53a14b3573a0",
+      "prov:entity": "id:0d8de5df-261d-4dcd-8218-97769ebe1262",
+      "prov:time": "2019-10-16T13:47:08.647484",
+      "prov:role": {
+        "$": "wf:main/files",
+        "type": "prov:QUALIFIED_NAME"
+      }
+    },
+    "_:id11": {
+      "prov:activity": "id:032e77c5-0ecb-444b-8c6a-53a14b3573a0",
+      "prov:entity": "data:867d665a31844f594358074d59bb0c192ed9e4bf",
+      "prov:time": "2019-10-16T13:47:08.647893",
+      "prov:role": {
+        "$": "wf:main/name",
+        "type": "prov:QUALIFIED_NAME"
+      }
+    }
+  },
+  "specializationOf": {
+    "_:id5": {
+      "prov:specificEntity": "id:189497e6-78d6-41c4-94f8-c2d1fbeb226f",
+      "prov:generalEntity": "data:3eddc23a5c289eb55aeacd19e440a00a211d7df1"
+    },
+    "_:id6": {
+      "prov:specificEntity": "id:514ec614-b15e-4c88-ba8a-ee5c56d35648",
+      "prov:generalEntity": "data:8c607887a7b79a7c58a529a28792910965a4fc95"
+    },
+    "_:id13": {
+      "prov:specificEntity": "id:8575ddfc-d503-4902-aee2-395e2219ae7c",
+      "prov:generalEntity": "data:3eddc23a5c289eb55aeacd19e440a00a211d7df1"
+    },
+    "_:id15": {
+      "prov:specificEntity": "id:73669a3e-a782-47fb-903c-a7598bc7d119",
+      "prov:generalEntity": "data:8c607887a7b79a7c58a529a28792910965a4fc95"
+    }
+  },
+  "hadMember": {
+    "_:id7": {
+      "prov:collection": "id:4360d794-a240-470f-8706-d032313cb987",
+      "prov:entity": "id:189497e6-78d6-41c4-94f8-c2d1fbeb226f"
+    },
+    "_:id8": {
+      "prov:collection": "id:4360d794-a240-470f-8706-d032313cb987",
+      "prov:entity": "id:514ec614-b15e-4c88-ba8a-ee5c56d35648"
+    },
+    "_:id9": {
+      "prov:collection": "id:0d8de5df-261d-4dcd-8218-97769ebe1262",
+      "prov:entity": "id:4360d794-a240-470f-8706-d032313cb987"
+    },
+    "_:id14": {
+      "prov:collection": "id:b5005b6a-301d-4d99-a2d3-3317b68af98c",
+      "prov:entity": "id:8575ddfc-d503-4902-aee2-395e2219ae7c"
+    },
+    "_:id16": {
+      "prov:collection": "id:b5005b6a-301d-4d99-a2d3-3317b68af98c",
+      "prov:entity": "id:73669a3e-a782-47fb-903c-a7598bc7d119"
+    }
+  },
+  "mentionOf": {
+    "_:id12": {
+      "prov:specificEntity": "id:b5005b6a-301d-4d99-a2d3-3317b68af98c#ore",
+      "prov:generalEntity": "id:b5005b6a-301d-4d99-a2d3-3317b68af98c",
+      "prov:bundle": "metadata:directory-b5005b6a-301d-4d99-a2d3-3317b68af98c.ttl"
+    }
+  },
+  "wasGeneratedBy": {
+    "_:id17": {
+      "prov:entity": "id:b5005b6a-301d-4d99-a2d3-3317b68af98c",
+      "prov:activity": "id:032e77c5-0ecb-444b-8c6a-53a14b3573a0",
+      "prov:time": "2019-10-16T13:47:09.350009",
+      "prov:role": {
+        "$": "wf:main/primary/gathered",
+        "type": "prov:QUALIFIED_NAME"
+      }
+    }
+  },
+  "wasEndedBy": {
+    "_:id18": {
+      "prov:activity": "id:032e77c5-0ecb-444b-8c6a-53a14b3573a0",
+      "prov:ender": "id:8aff5ec1-df57-499e-a242-86686069233c",
+      "prov:time": "2019-10-16T13:47:09.358119"
+    }
+  },
+  "bundle": {
+    "metadata:directory-b5005b6a-301d-4d99-a2d3-3317b68af98c.ttl": {
+      "prefix": {
+        "ro": "http://purl.org/wf4ever/ro#",
+        "ore": "http://www.openarchives.org/ore/terms/",
+        "id": "urn:uuid:",
+        "metadata": "arcp://uuid,032e77c5-0ecb-444b-8c6a-53a14b3573a0/metadata/"
+      },
+      "entity": {
+        "id:b5005b6a-301d-4d99-a2d3-3317b68af98c": {
+          "prov:type": [
+            {
+              "$": "ro:Folder",
+              "type": "prov:QUALIFIED_NAME"
+            },
+            {
+              "$": "ore:Aggregation",
+              "type": "prov:QUALIFIED_NAME"
+            }
+          ],
+          "ore:aggregates": [
+            {
+              "$": "id:4da61885-9ad5-4f9e-a11d-8d4b4b5d6f8a",
+              "type": "prov:QUALIFIED_NAME"
+            },
+            {
+              "$": "id:a1a02d49-7f42-4a4c-8247-35b908386c0d",
+              "type": "prov:QUALIFIED_NAME"
+            }
+          ]
+        },
+        "id:4da61885-9ad5-4f9e-a11d-8d4b4b5d6f8a": {
+          "prov:type": [
+            {
+              "$": "ore:Proxy",
+              "type": "prov:QUALIFIED_NAME"
+            },
+            {
+              "$": "ro:FolderEntry",
+              "type": "prov:QUALIFIED_NAME"
+            }
+          ],
+          "ro:entryName": "file1.json",
+          "ore:proxyIn": {
+            "$": "id:b5005b6a-301d-4d99-a2d3-3317b68af98c",
+            "type": "prov:QUALIFIED_NAME"
+          },
+          "ore:proxyFor": {
+            "$": "id:8575ddfc-d503-4902-aee2-395e2219ae7c",
+            "type": "prov:QUALIFIED_NAME"
+          }
+        },
+        "id:a1a02d49-7f42-4a4c-8247-35b908386c0d": {
+          "prov:type": [
+            {
+              "$": "ore:Proxy",
+              "type": "prov:QUALIFIED_NAME"
+            },
+            {
+              "$": "ro:FolderEntry",
+              "type": "prov:QUALIFIED_NAME"
+            }
+          ],
+          "ro:entryName": "file2.json",
+          "ore:proxyIn": {
+            "$": "id:b5005b6a-301d-4d99-a2d3-3317b68af98c",
+            "type": "prov:QUALIFIED_NAME"
+          },
+          "ore:proxyFor": {
+            "$": "id:73669a3e-a782-47fb-903c-a7598bc7d119",
+            "type": "prov:QUALIFIED_NAME"
+          }
+        }
+      }
+    }
+  }
+}

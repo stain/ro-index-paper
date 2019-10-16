@@ -1,0 +1,29 @@
+{
+    "gathered": {
+        "class": "Directory",
+        "basename": "myfolder",
+        "listing": [
+            {
+                "class": "File",
+                "location": "../data/3e/3eddc23a5c289eb55aeacd19e440a00a211d7df1",
+                "size": 20,
+                "basename": "file1.json",
+                "nameroot": "file1",
+                "nameext": ".json",
+                "checksum": "sha1$3eddc23a5c289eb55aeacd19e440a00a211d7df1",
+                "@id": "urn:uuid:8575ddfc-d503-4902-aee2-395e2219ae7c"
+            },
+            {
+                "class": "File",
+                "location": "../data/8c/8c607887a7b79a7c58a529a28792910965a4fc95",
+                "size": 19,
+                "basename": "file2.json",
+                "nameroot": "file2",
+                "nameext": ".json",
+                "checksum": "sha1$8c607887a7b79a7c58a529a28792910965a4fc95",
+                "@id": "urn:uuid:73669a3e-a782-47fb-903c-a7598bc7d119"
+            }
+        ],
+        "@id": "urn:uuid:b5005b6a-301d-4d99-a2d3-3317b68af98c"
+    }
+}

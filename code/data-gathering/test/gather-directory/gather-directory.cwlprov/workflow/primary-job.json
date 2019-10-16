@@ -1,0 +1,28 @@
+{
+    "extension": ".json",
+    "files": [
+        [
+            {
+                "class": "File",
+                "location": "../data/3e/3eddc23a5c289eb55aeacd19e440a00a211d7df1",
+                "size": 20,
+                "basename": "file1.txt",
+                "nameroot": "file1",
+                "nameext": ".txt",
+                "checksum": "sha1$3eddc23a5c289eb55aeacd19e440a00a211d7df1",
+                "@id": "urn:uuid:189497e6-78d6-41c4-94f8-c2d1fbeb226f"
+            },
+            {
+                "class": "File",
+                "location": "../data/8c/8c607887a7b79a7c58a529a28792910965a4fc95",
+                "size": 19,
+                "basename": "file2",
+                "nameroot": "file2",
+                "nameext": "",
+                "checksum": "sha1$8c607887a7b79a7c58a529a28792910965a4fc95",
+                "@id": "urn:uuid:514ec614-b15e-4c88-ba8a-ee5c56d35648"
+            }
+        ]
+    ],
+    "name": "myfolder"
+}
