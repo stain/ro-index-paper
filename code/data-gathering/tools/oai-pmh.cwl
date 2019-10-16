@@ -30,13 +30,9 @@ arguments:
 requirements:
   ShellCommandRequirement: {}
   DockerRequirement:
-    #dockerPull: stain/perl-oai-lib:4.08-PR-5
-    dockerImageId: stain/perl-oai-lib:4.08-PR-5
-    dockerFile: |
-        FROM debian:9
-        RUN apt-get update && apt-get -y install libhttp-oai-perl
-        # Quick-and-dirty patch oai_omh < v4.09 <https://github.com/LibreCat/perl-oai-lib/pull/5>
-        RUN sed -i "/identifier=s/ a 'set=s'," /usr/bin/oai_pmh
+    dockerPull: stain/perl-oai-lib:429-retry-after
+    # patched to support 429 Retry-After, see
+    # <https://github.com/LibreCat/perl-oai-lib/pull/7>
 
 inputs:
   baseurl:
@@ -73,17 +69,38 @@ s:author:
     s:url: https://github.com/timbrody
     s:name: Tim Brody
 
+# From https://metacpan.org/pod/HTTP::OAI::Harvester
 s:contributor:
   - class: s:Person
     s:identifier: https://orcid.org/0000-0001-8390-6171
     s:name: Patrick Hochstenbach
     s:url: https://github.com/phochste
+  - class:  s:Person
+    s:name: Gregor Herrman
+    s:url:  https://metacpan.org/author/GREGOA
+  - class: s:Person
+    s:name: Jakob Voss
+  - class: s:Person
+    s:name: Mohammad S Anwar
+    s:url: https://metacpan.org/author/MANWAR
+  - class: s:Person
+    s:name: Nicolas Steenlant
+  - class: s:Person
+    s:name: Sebastien Francois
+  - class: s:Person
+    s:name: Stephen Thirlwall
+  - class: s:Person
+    s:identifier: https://orcid.org/0000-0001-9842-9718/
+    s:name: Stian Soiland-Reyes
+    s:url: https://github.com/stain
+
 
 s:publisher: 
  - class: s:Organization
    s:name: LibreCat
    s:url: https://librecat.org/
 
+s:url: https://metacpan.org/pod/HTTP::OAI::Harvester
 s:codeRepository: https://github.com/LibreCat/perl-oai-lib/
 s:isBasedOn: https://github.com/timbrody/perl-oai-lib
 s:license: https://spdx.org/licenses/BSD-3-Clause
