@@ -137,6 +137,8 @@ steps:
           source: fetch-zenodo-json/downloaded
         name: 
             default: "zenodo-json"
+        extension:
+            default: ".zenodo.json"
       out: [gathered]
 
     gather-datacite4:
@@ -146,6 +148,8 @@ steps:
           source: fetch-zenodo-datacite4/downloaded
         name: 
             default: "zenodo-datacite4"
+        extension:
+            default: ".datacite4.xml"
       out: [gathered]
 
     gather-jsonld:
@@ -155,6 +159,8 @@ steps:
           source: fetch-zenodo-jsonld/downloaded
         name: 
             default: "zenodo-jsonld"
+        extension:
+            default: ".schemaorg.jsonld"
       out: [gathered]
 
 
