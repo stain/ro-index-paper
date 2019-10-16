@@ -1,0 +1,629 @@
+@prefix id: <urn:uuid:> .
+@prefix ore: <http://www.openarchives.org/ore/terms/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ro: <http://purl.org/wf4ever/ro#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:0042f871-8fd7-4b83-a582-182b8d03a398> a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity ;
+    ro:entryName "1310621.datacite4.xml"^^xsd:string ;
+    ore:proxyFor id:ae73d1dc-3745-4fda-9921-276b9842dbc6 ;
+    ore:proxyIn <urn:uuid:3a21b447-8639-452b-8f72-08d05e79a999> .
+
+<urn:uuid:024ebf07-c503-4f5d-a286-6ebf78e56382> a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity ;
+    ro:entryName "1412509.datacite4.xml"^^xsd:string ;
+    ore:proxyFor <urn:uuid:7957a6a7-f757-4e59-aaac-f1798c9c5b44> ;
+    ore:proxyIn <urn:uuid:3a21b447-8639-452b-8f72-08d05e79a999> .
+
+<urn:uuid:0300e442-d368-4245-a155-55ce10066c2c> a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity ;
+    ro:entryName "2636997.datacite4.xml"^^xsd:string ;
+    ore:proxyFor <urn:uuid:2b679c53-6220-4508-9afb-599c92da0ac8> ;
+    ore:proxyIn <urn:uuid:3a21b447-8639-452b-8f72-08d05e79a999> .
+
+<urn:uuid:030dd67c-7e03-4ab0-b285-e5837c45098a> a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity ;
+    ro:entryName "2632836.datacite4.xml"^^xsd:string ;
+    ore:proxyFor id:eb613701-387a-4222-a711-3ac7351778db ;
+    ore:proxyIn <urn:uuid:3a21b447-8639-452b-8f72-08d05e79a999> .
+
+<urn:uuid:06995107-9f95-4dc8-87e6-763e8e7f37dd> a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity ;
+    ro:entryName "1313066.datacite4.xml"^^xsd:string ;
+    ore:proxyFor <urn:uuid:78e4d2da-10d9-4b0d-b789-c94a249ad899> ;
+    ore:proxyIn <urn:uuid:3a21b447-8639-452b-8f72-08d05e79a999> .
+
+<urn:uuid:093ef365-4501-4e85-9d51-763acbb2ecf6> a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity ;
+    ro:entryName "1320264.datacite4.xml"^^xsd:string ;
+    ore:proxyFor <urn:uuid:0f8c4abc-6f7a-4254-87e7-81ab30c8cea6> ;
+    ore:proxyIn <urn:uuid:3a21b447-8639-452b-8f72-08d05e79a999> .
+
+<urn:uuid:0b5d1d2d-de31-48a3-89a9-8fc3df8d9d70> a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity ;
+    ro:entryName "1420531.datacite4.xml"^^xsd:string ;
+    ore:proxyFor <urn:uuid:570fc5fc-2ed0-46a9-b068-8f4cfbd1ca45> ;
+    ore:proxyIn <urn:uuid:3a21b447-8639-452b-8f72-08d05e79a999> .
+
+<urn:uuid:10765473-3df4-4dd0-b5e4-a52c048a64b5> a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity ;
+    ro:entryName "3458522.datacite4.xml"^^xsd:string ;
+    ore:proxyFor <urn:uuid:749d357b-b6e5-463e-bba4-7307ed7aa353> ;
+    ore:proxyIn <urn:uuid:3a21b447-8639-452b-8f72-08d05e79a999> .
+
+<urn:uuid:1248b342-2739-47c1-80e0-85b91af6fb17> a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity ;
+    ro:entryName "1408170.datacite4.xml"^^xsd:string ;
+    ore:proxyFor <urn:uuid:9676f386-1383-4316-bce5-9267b21eb2a6> ;
+    ore:proxyIn <urn:uuid:3a21b447-8639-452b-8f72-08d05e79a999> .
+
+<urn:uuid:28b19172-b4fb-47fb-92de-48f28f8ed800> a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity ;
+    ro:entryName "1472385.datacite4.xml"^^xsd:string ;
+    ore:proxyFor <urn:uuid:9c6ca83d-d00a-464e-afbe-782a2ebb07fc> ;
+    ore:proxyIn <urn:uuid:3a21b447-8639-452b-8f72-08d05e79a999> .
+
+<urn:uuid:28cba5b7-709d-4a19-b2db-04a0a3c1abd0> a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity ;
+    ro:entryName "1966881.datacite4.xml"^^xsd:string ;
+    ore:proxyFor <urn:uuid:6c3f5c79-5fde-4fe7-bb70-9a507275a543> ;
+    ore:proxyIn <urn:uuid:3a21b447-8639-452b-8f72-08d05e79a999> .
+
+<urn:uuid:28fd3f44-55bd-432e-b36f-d4dd62d68d94> a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity ;
+    ro:entryName "1312652.datacite4.xml"^^xsd:string ;
+    ore:proxyFor id:c0730b8f-b4bb-4513-b9b6-87ef372d5115 ;
+    ore:proxyIn <urn:uuid:3a21b447-8639-452b-8f72-08d05e79a999> .
+
+<urn:uuid:2f35d627-629f-454d-834f-b0caecd60aa2> a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity ;
+    ro:entryName "3382423.datacite4.xml"^^xsd:string ;
+    ore:proxyFor <urn:uuid:4476194c-895a-46ea-8ac9-2a0c9f8b0b9e> ;
+    ore:proxyIn <urn:uuid:3a21b447-8639-452b-8f72-08d05e79a999> .
+
+<urn:uuid:300170e6-ac46-400f-9edf-ef3ac8b3f900> a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity ;
+    ro:entryName "3357806.datacite4.xml"^^xsd:string ;
+    ore:proxyFor id:f9449ea5-538b-4584-be9f-a0e15c5d3304 ;
+    ore:proxyIn <urn:uuid:3a21b447-8639-452b-8f72-08d05e79a999> .
+
+<urn:uuid:3230b4ed-16b2-4e6d-a5ad-d57572f783c6> a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity ;
+    ro:entryName "3336124.datacite4.xml"^^xsd:string ;
+    ore:proxyFor id:a5c980f0-6946-4cb7-928a-91a8c91d2778 ;
+    ore:proxyIn <urn:uuid:3a21b447-8639-452b-8f72-08d05e79a999> .
+
+<urn:uuid:34a699df-823d-45d3-b378-bb9c76713890> a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity ;
+    ro:entryName "3250687.datacite4.xml"^^xsd:string ;
+    ore:proxyFor id:e667cac8-f925-4826-abe2-e111c664cd17 ;
+    ore:proxyIn <urn:uuid:3a21b447-8639-452b-8f72-08d05e79a999> .
+
+<urn:uuid:357c141d-426f-4d7f-8bd2-7676d6be39b7> a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity ;
+    ro:entryName "3362412.datacite4.xml"^^xsd:string ;
+    ore:proxyFor <urn:uuid:0cdee29f-f366-4375-b4a3-0ba21ff5158f> ;
+    ore:proxyIn <urn:uuid:3a21b447-8639-452b-8f72-08d05e79a999> .
+
+<urn:uuid:377b0ba3-9c00-480a-98ec-0b5ee08333fa> a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity ;
+    ro:entryName "1299320.datacite4.xml"^^xsd:string ;
+    ore:proxyFor <urn:uuid:498922f7-a048-45f6-a74d-1f6b6068343b> ;
+    ore:proxyIn <urn:uuid:3a21b447-8639-452b-8f72-08d05e79a999> .
+
+<urn:uuid:37c8df07-fa27-4f72-8c66-824b8cf625cf> a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity ;
+    ro:entryName "1313218.datacite4.xml"^^xsd:string ;
+    ore:proxyFor <urn:uuid:5defd7db-e3e1-463c-b7e2-302c31010f55> ;
+    ore:proxyIn <urn:uuid:3a21b447-8639-452b-8f72-08d05e79a999> .
+
+<urn:uuid:38eaea64-3ee4-4220-8512-afe4f549ae42> a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity ;
+    ro:entryName "1310034.datacite4.xml"^^xsd:string ;
+    ore:proxyFor <urn:uuid:3f804321-b564-4a35-89d4-7973fe8880c1> ;
+    ore:proxyIn <urn:uuid:3a21b447-8639-452b-8f72-08d05e79a999> .
+
+<urn:uuid:398380d0-ff20-4395-8e6e-84ad5414e970> a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity ;
+    ro:entryName "3270620.datacite4.xml"^^xsd:string ;
+    ore:proxyFor <urn:uuid:5c186307-5d02-4cc8-8f9c-7242eb2d223c> ;
+    ore:proxyIn <urn:uuid:3a21b447-8639-452b-8f72-08d05e79a999> .
+
+<urn:uuid:3ad713ef-e450-4b22-994b-4f7dd7095d30> a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity ;
+    ro:entryName "1421066.datacite4.xml"^^xsd:string ;
+    ore:proxyFor id:faa89996-a482-4d9d-91db-88c1708f2813 ;
+    ore:proxyIn <urn:uuid:3a21b447-8639-452b-8f72-08d05e79a999> .
+
+<urn:uuid:3dcde9a1-c39a-4d18-8a78-cf82db2cf511> a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity ;
+    ro:entryName "1312582.datacite4.xml"^^xsd:string ;
+    ore:proxyFor <urn:uuid:9d068029-727d-4987-9aaf-9cbe7ae287d9> ;
+    ore:proxyIn <urn:uuid:3a21b447-8639-452b-8f72-08d05e79a999> .
+
+<urn:uuid:47639fd8-b5cf-4c5f-bd61-0e91c6fec1b5> a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity ;
+    ro:entryName "1208478.datacite4.xml"^^xsd:string ;
+    ore:proxyFor id:bb22d93d-386c-4756-bdc4-106d158a5a2a ;
+    ore:proxyIn <urn:uuid:3a21b447-8639-452b-8f72-08d05e79a999> .
+
+<urn:uuid:47d492fe-6c79-41a8-acea-b22ffddde11b> a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity ;
+    ro:entryName "1473157.datacite4.xml"^^xsd:string ;
+    ore:proxyFor <urn:uuid:6016ecb6-e3c7-4a3d-84a6-6087fb622494> ;
+    ore:proxyIn <urn:uuid:3a21b447-8639-452b-8f72-08d05e79a999> .
+
+<urn:uuid:4859c757-c9d6-4530-b887-3d9e2aa16018> a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity ;
+    ro:entryName "1311933.datacite4.xml"^^xsd:string ;
+    ore:proxyFor id:e0174318-314d-4696-a922-89d25c8ebec3 ;
+    ore:proxyIn <urn:uuid:3a21b447-8639-452b-8f72-08d05e79a999> .
+
+<urn:uuid:4ad1c8a9-19ed-47fe-9464-a637f117ffa2> a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity ;
+    ro:entryName "2841641.datacite4.xml"^^xsd:string ;
+    ore:proxyFor id:d1b2761a-90bc-4182-8692-1a0c413e0e90 ;
+    ore:proxyIn <urn:uuid:3a21b447-8639-452b-8f72-08d05e79a999> .
+
+<urn:uuid:4c1b8491-02a4-4b72-9dfb-09eefd7c8b62> a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity ;
+    ro:entryName "1301152.datacite4.xml"^^xsd:string ;
+    ore:proxyFor <urn:uuid:465fb332-126a-404c-8d98-7d21ad40caf5> ;
+    ore:proxyIn <urn:uuid:3a21b447-8639-452b-8f72-08d05e79a999> .
+
+<urn:uuid:4cd54572-3054-4bb2-b289-4c34b462ed94> a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity ;
+    ro:entryName "1308997.datacite4.xml"^^xsd:string ;
+    ore:proxyFor <urn:uuid:7823b053-bef8-4b76-ba15-c0fb207da033> ;
+    ore:proxyIn <urn:uuid:3a21b447-8639-452b-8f72-08d05e79a999> .
+
+<urn:uuid:4fc788ab-246a-4610-a345-a9e94095a40e> a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity ;
+    ro:entryName "1484424.datacite4.xml"^^xsd:string ;
+    ore:proxyFor id:ef20755f-fdf9-471f-a18e-6b3cdd3a61ff ;
+    ore:proxyIn <urn:uuid:3a21b447-8639-452b-8f72-08d05e79a999> .
+
+<urn:uuid:52eea9f9-85de-4282-8bd6-8a1a8f3ef02f> a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity ;
+    ro:entryName "2838898.datacite4.xml"^^xsd:string ;
+    ore:proxyFor <urn:uuid:51c294a3-87d1-4412-8126-033534480608> ;
+    ore:proxyIn <urn:uuid:3a21b447-8639-452b-8f72-08d05e79a999> .
+
+<urn:uuid:5470077f-f92e-4870-9a1b-05af33415afd> a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity ;
+    ro:entryName "3337883.datacite4.xml"^^xsd:string ;
+    ore:proxyFor <urn:uuid:02847a28-c431-4529-94f5-448ab2072e93> ;
+    ore:proxyIn <urn:uuid:3a21b447-8639-452b-8f72-08d05e79a999> .
+
+<urn:uuid:54de9eda-5afa-4ec2-a8af-916be44fc529> a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity ;
+    ro:entryName "3445531.datacite4.xml"^^xsd:string ;
+    ore:proxyFor id:bf4d525a-b17e-443e-b91f-cfc8edb0a4e3 ;
+    ore:proxyIn <urn:uuid:3a21b447-8639-452b-8f72-08d05e79a999> .
+
+<urn:uuid:58874489-a372-4ce2-afb3-7ac688a84f0b> a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity ;
+    ro:entryName "1441011.datacite4.xml"^^xsd:string ;
+    ore:proxyFor id:e2037499-c580-4cad-8749-94885bb459c4 ;
+    ore:proxyIn <urn:uuid:3a21b447-8639-452b-8f72-08d05e79a999> .
+
+<urn:uuid:6245546f-eced-4a6a-8f6d-5f31b261003a> a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity ;
+    ro:entryName "3270560.datacite4.xml"^^xsd:string ;
+    ore:proxyFor id:a9270802-0ba7-4350-9955-db3d79ce9c16 ;
+    ore:proxyIn <urn:uuid:3a21b447-8639-452b-8f72-08d05e79a999> .
+
+<urn:uuid:6af7f329-31b9-4b36-b77e-758b89bd0561> a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity ;
+    ro:entryName "1473154.datacite4.xml"^^xsd:string ;
+    ore:proxyFor <urn:uuid:5eac2d95-e835-475d-9a50-5a41af98cece> ;
+    ore:proxyIn <urn:uuid:3a21b447-8639-452b-8f72-08d05e79a999> .
+
+<urn:uuid:76ac97fe-a5ff-49a1-89ef-4817884fdaaa> a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity ;
+    ro:entryName "1314672.datacite4.xml"^^xsd:string ;
+    ore:proxyFor <urn:uuid:994c9024-069b-41f1-9388-da634e0e4220> ;
+    ore:proxyIn <urn:uuid:3a21b447-8639-452b-8f72-08d05e79a999> .
+
+<urn:uuid:7798da78-6163-4aad-9ee4-ce42045aabe8> a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity ;
+    ro:entryName "1312623.datacite4.xml"^^xsd:string ;
+    ore:proxyFor <urn:uuid:52f07d2a-7502-4089-b147-e2d486768363> ;
+    ore:proxyIn <urn:uuid:3a21b447-8639-452b-8f72-08d05e79a999> .
+
+<urn:uuid:7b9b5db2-94c0-4f85-b476-bf4e4212cf14> a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity ;
+    ro:entryName "3268904.datacite4.xml"^^xsd:string ;
+    ore:proxyFor <urn:uuid:4d1772da-a734-4ea5-b4b5-2643a2928ab9> ;
+    ore:proxyIn <urn:uuid:3a21b447-8639-452b-8f72-08d05e79a999> .
+
+<urn:uuid:7bf7d6dd-e755-4971-9fd8-2a4262051efb> a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity ;
+    ro:entryName "1484496.datacite4.xml"^^xsd:string ;
+    ore:proxyFor <urn:uuid:26d48a75-ea25-4585-818f-20fdd21fc713> ;
+    ore:proxyIn <urn:uuid:3a21b447-8639-452b-8f72-08d05e79a999> .
+
+<urn:uuid:7e350287-e831-41e2-8a63-85d04e418fad> a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity ;
+    ro:entryName "1484341.datacite4.xml"^^xsd:string ;
+    ore:proxyFor id:cc71da91-5047-43a4-b355-fbe36db91a06 ;
+    ore:proxyIn <urn:uuid:3a21b447-8639-452b-8f72-08d05e79a999> .
+
+<urn:uuid:83040824-0565-40d3-b90b-419329e4a172> a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity ;
+    ro:entryName "1309962.datacite4.xml"^^xsd:string ;
+    ore:proxyFor <urn:uuid:62fbb546-4024-473d-9f94-63682fce81a2> ;
+    ore:proxyIn <urn:uuid:3a21b447-8639-452b-8f72-08d05e79a999> .
+
+<urn:uuid:846c942a-7b54-4a49-977b-55c704856eae> a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity ;
+    ro:entryName "3337375.datacite4.xml"^^xsd:string ;
+    ore:proxyFor id:b9f0c2f9-1949-4c93-89ef-ab8ecfa866d1 ;
+    ore:proxyIn <urn:uuid:3a21b447-8639-452b-8f72-08d05e79a999> .
+
+<urn:uuid:865ca46d-164f-43d2-98ce-1e59da01255f> a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity ;
+    ro:entryName "1323831.datacite4.xml"^^xsd:string ;
+    ore:proxyFor id:faaf41f3-ce7d-466f-ac64-6221e4e671fa ;
+    ore:proxyIn <urn:uuid:3a21b447-8639-452b-8f72-08d05e79a999> .
+
+<urn:uuid:86d8cc2e-d936-4ae2-86e1-ff7e8a150e85> a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity ;
+    ro:entryName "3338176.datacite4.xml"^^xsd:string ;
+    ore:proxyFor id:c97865da-a415-4d46-9e13-e807243e8c00 ;
+    ore:proxyIn <urn:uuid:3a21b447-8639-452b-8f72-08d05e79a999> .
+
+<urn:uuid:8a99469e-4f5d-4ce2-a283-f4b1845e6417> a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity ;
+    ro:entryName "1410052.datacite4.xml"^^xsd:string ;
+    ore:proxyFor <urn:uuid:92c3440b-cd5a-4377-ba1d-7a231decd4b9> ;
+    ore:proxyIn <urn:uuid:3a21b447-8639-452b-8f72-08d05e79a999> .
+
+<urn:uuid:93cb31ea-c3e4-4bc0-810f-1b408e340e33> a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity ;
+    ro:entryName "3270824.datacite4.xml"^^xsd:string ;
+    ore:proxyFor <urn:uuid:0c2396f4-8e23-4d29-86c5-1591480ff8b8> ;
+    ore:proxyIn <urn:uuid:3a21b447-8639-452b-8f72-08d05e79a999> .
+
+<urn:uuid:9aba81be-3b30-4f89-85b5-6c3c14a87b08> a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity ;
+    ro:entryName "1484480.datacite4.xml"^^xsd:string ;
+    ore:proxyFor <urn:uuid:161bedb1-cccc-4bb5-934e-26d7efd13574> ;
+    ore:proxyIn <urn:uuid:3a21b447-8639-452b-8f72-08d05e79a999> .
+
+id:a00edb3a-497c-4dd2-bdf6-09d5cc8d957d a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity ;
+    ro:entryName "1312685.datacite4.xml"^^xsd:string ;
+    ore:proxyFor <urn:uuid:36e80846-f1ca-4312-a0d7-ee0962a684e0> ;
+    ore:proxyIn <urn:uuid:3a21b447-8639-452b-8f72-08d05e79a999> .
+
+id:a792a95d-4a94-4687-be27-fedfd571e8d6 a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity ;
+    ro:entryName "1442453.datacite4.xml"^^xsd:string ;
+    ore:proxyFor <urn:uuid:2c765630-d015-4b03-80ae-60f81f993605> ;
+    ore:proxyIn <urn:uuid:3a21b447-8639-452b-8f72-08d05e79a999> .
+
+id:a9b4fc31-8268-4dd8-af8b-d4f97b400d5d a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity ;
+    ro:entryName "3338725.datacite4.xml"^^xsd:string ;
+    ore:proxyFor <urn:uuid:037283f9-138a-45c9-b0a7-05ff72bec6dd> ;
+    ore:proxyIn <urn:uuid:3a21b447-8639-452b-8f72-08d05e79a999> .
+
+id:aabe5dbe-667c-4d3a-b8b3-7d924aaf2549 a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity ;
+    ro:entryName "3380592.datacite4.xml"^^xsd:string ;
+    ore:proxyFor id:e52c415a-4ff9-450f-87ed-5add5c1c2598 ;
+    ore:proxyIn <urn:uuid:3a21b447-8639-452b-8f72-08d05e79a999> .
+
+id:aea3789d-694a-4bc3-ab6b-0ddb4579bf98 a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity ;
+    ro:entryName "3334688.datacite4.xml"^^xsd:string ;
+    ore:proxyFor id:aafe3b0d-b2fb-40fb-ac2b-b637e444df5e ;
+    ore:proxyIn <urn:uuid:3a21b447-8639-452b-8f72-08d05e79a999> .
+
+id:b08a2442-de58-45a4-93f7-445bd099cd21 a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity ;
+    ro:entryName "3384296.datacite4.xml"^^xsd:string ;
+    ore:proxyFor <urn:uuid:68968d89-34ea-4fbe-b62b-8eadf6241b25> ;
+    ore:proxyIn <urn:uuid:3a21b447-8639-452b-8f72-08d05e79a999> .
+
+id:b0b1bb7c-3d13-4d37-86cb-806ffc71c7b4 a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity ;
+    ro:entryName "1215611.datacite4.xml"^^xsd:string ;
+    ore:proxyFor <urn:uuid:149ec865-31ca-474e-8c0c-df2b091afc00> ;
+    ore:proxyIn <urn:uuid:3a21b447-8639-452b-8f72-08d05e79a999> .
+
+id:b4415a25-e60f-47b7-b6c9-cdaad159bc78 a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity ;
+    ro:entryName "1326284.datacite4.xml"^^xsd:string ;
+    ore:proxyFor <urn:uuid:5b94d87c-b84a-4704-865a-521e57597788> ;
+    ore:proxyIn <urn:uuid:3a21b447-8639-452b-8f72-08d05e79a999> .
+
+id:b44867e0-483c-4421-9d5e-1aceeb48d522 a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity ;
+    ro:entryName "1484377.datacite4.xml"^^xsd:string ;
+    ore:proxyFor id:d0d6d914-a3e3-4b55-ab9a-cdd4c3147846 ;
+    ore:proxyIn <urn:uuid:3a21b447-8639-452b-8f72-08d05e79a999> .
+
+id:b52957c2-edd1-41cf-b0dc-debd1721ab65 a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity ;
+    ro:entryName "3358983.datacite4.xml"^^xsd:string ;
+    ore:proxyFor id:ba034470-5003-4cf8-a0cd-c8eb869eb3b0 ;
+    ore:proxyIn <urn:uuid:3a21b447-8639-452b-8f72-08d05e79a999> .
+
+id:b57e988a-e6cb-4b7d-87c4-ad2d5ad31314 a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity ;
+    ro:entryName "3268809.datacite4.xml"^^xsd:string ;
+    ore:proxyFor <urn:uuid:2eaa0d5e-c48f-4261-80b1-935615156437> ;
+    ore:proxyIn <urn:uuid:3a21b447-8639-452b-8f72-08d05e79a999> .
+
+id:bc6b1498-91ec-4ec5-ab40-f660c96fc0f6 a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity ;
+    ro:entryName "3336148.datacite4.xml"^^xsd:string ;
+    ore:proxyFor <urn:uuid:0e6c7fdb-efb2-4865-b1fc-42a6c7c373d8> ;
+    ore:proxyIn <urn:uuid:3a21b447-8639-452b-8f72-08d05e79a999> .
+
+id:bf465440-0945-44ab-b89c-4a2c4824117a a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity ;
+    ro:entryName "3406498.datacite4.xml"^^xsd:string ;
+    ore:proxyFor <urn:uuid:249a106f-4b18-4217-af56-75263dd81b9c> ;
+    ore:proxyIn <urn:uuid:3a21b447-8639-452b-8f72-08d05e79a999> .
+
+id:bf74bb23-99cf-47cd-a935-911e089ded30 a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity ;
+    ro:entryName "1299783.datacite4.xml"^^xsd:string ;
+    ore:proxyFor id:c87293a2-8942-416f-8648-dc9212335a7b ;
+    ore:proxyIn <urn:uuid:3a21b447-8639-452b-8f72-08d05e79a999> .
+
+id:c3f420c1-ec3b-4981-a956-072db5cace3b a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity ;
+    ro:entryName "3457390.datacite4.xml"^^xsd:string ;
+    ore:proxyFor <urn:uuid:6f7ccc96-f1e3-40f1-b3ae-02292a36dad9> ;
+    ore:proxyIn <urn:uuid:3a21b447-8639-452b-8f72-08d05e79a999> .
+
+id:c71ae48a-75d8-4ada-9060-07cae75cc8c2 a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity ;
+    ro:entryName "1484442.datacite4.xml"^^xsd:string ;
+    ore:proxyFor <urn:uuid:1c090e0a-2ddc-4d76-9e45-eca87e65475a> ;
+    ore:proxyIn <urn:uuid:3a21b447-8639-452b-8f72-08d05e79a999> .
+
+id:c938a50e-fcb6-4f07-a368-620def332371 a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity ;
+    ro:entryName "1484403.datacite4.xml"^^xsd:string ;
+    ore:proxyFor <urn:uuid:3a16c14e-2b95-44b7-bf3c-752b9da07968> ;
+    ore:proxyIn <urn:uuid:3a21b447-8639-452b-8f72-08d05e79a999> .
+
+id:cbfee1cb-ba9f-4606-9e5b-e4935cacf53e a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity ;
+    ro:entryName "1311612.datacite4.xml"^^xsd:string ;
+    ore:proxyFor <urn:uuid:8c0d0fd0-7edf-479c-bfa5-a00eca56e256> ;
+    ore:proxyIn <urn:uuid:3a21b447-8639-452b-8f72-08d05e79a999> .
+
+id:d3579799-de90-443e-82cc-94464c2a51fc a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity ;
+    ro:entryName "1304969.datacite4.xml"^^xsd:string ;
+    ore:proxyFor id:cd0d3a07-6fc8-4e81-a96a-47256d688820 ;
+    ore:proxyIn <urn:uuid:3a21b447-8639-452b-8f72-08d05e79a999> .
+
+id:d8174563-9c8f-4eef-b0e1-b50012ba89f5 a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity ;
+    ro:entryName "3459770.datacite4.xml"^^xsd:string ;
+    ore:proxyFor id:c89e6fd1-3987-4e37-9ec4-4d902e91d163 ;
+    ore:proxyIn <urn:uuid:3a21b447-8639-452b-8f72-08d05e79a999> .
+
+id:da1cea57-059a-4529-9ddd-52321062332c a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity ;
+    ro:entryName "3336609.datacite4.xml"^^xsd:string ;
+    ore:proxyFor <urn:uuid:672154c3-3e25-4fcd-9f24-be3168b5df6b> ;
+    ore:proxyIn <urn:uuid:3a21b447-8639-452b-8f72-08d05e79a999> .
+
+id:dc264440-be20-4b2a-933b-1b579e2d5292 a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity ;
+    ro:entryName "3459720.datacite4.xml"^^xsd:string ;
+    ore:proxyFor id:e117fc2a-e824-46b6-9677-720750030e49 ;
+    ore:proxyIn <urn:uuid:3a21b447-8639-452b-8f72-08d05e79a999> .
+
+id:e2028a7c-59d9-4d0f-82a8-26490e25d5ed a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity ;
+    ro:entryName "1484502.datacite4.xml"^^xsd:string ;
+    ore:proxyFor <urn:uuid:7518d78f-2426-4cb8-872f-6f4165ba0a74> ;
+    ore:proxyIn <urn:uuid:3a21b447-8639-452b-8f72-08d05e79a999> .
+
+id:e512c1ab-a0ad-43a2-96df-43313f27a7f0 a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity ;
+    ro:entryName "3382259.datacite4.xml"^^xsd:string ;
+    ore:proxyFor id:bbddd8e9-8390-400e-adf0-9de4ab8b8e75 ;
+    ore:proxyIn <urn:uuid:3a21b447-8639-452b-8f72-08d05e79a999> .
+
+id:ec251b42-b76f-4165-813a-d23d7cefa6bc a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity ;
+    ro:entryName "3343031.datacite4.xml"^^xsd:string ;
+    ore:proxyFor <urn:uuid:1d932dc1-722f-4ac3-b0f9-4d5aa2bcfff2> ;
+    ore:proxyIn <urn:uuid:3a21b447-8639-452b-8f72-08d05e79a999> .
+
+id:ee1759e5-63cf-4885-92b3-dc169a69f148 a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity ;
+    ro:entryName "1484286.datacite4.xml"^^xsd:string ;
+    ore:proxyFor <urn:uuid:4bd0d90a-9859-44af-800b-2c4e387f471f> ;
+    ore:proxyIn <urn:uuid:3a21b447-8639-452b-8f72-08d05e79a999> .
+
+id:ef1b7726-8391-4f1d-9e20-b805d2b87dc3 a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity ;
+    ro:entryName "3196309.datacite4.xml"^^xsd:string ;
+    ore:proxyFor id:c15bf0b4-7059-43ff-ac21-0248d7311f27 ;
+    ore:proxyIn <urn:uuid:3a21b447-8639-452b-8f72-08d05e79a999> .
+
+id:f6e2f01d-02d3-4fe2-8cb6-cabb5adddc65 a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity ;
+    ro:entryName "3458560.datacite4.xml"^^xsd:string ;
+    ore:proxyFor <urn:uuid:56a27ba9-85b1-468b-ab16-af917a3f7e5d> ;
+    ore:proxyIn <urn:uuid:3a21b447-8639-452b-8f72-08d05e79a999> .
+
+id:fc5ed9ef-e4a4-4941-8feb-6cff5588a90f a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity ;
+    ro:entryName "1410238.datacite4.xml"^^xsd:string ;
+    ore:proxyFor id:d2786fee-38b4-4376-8b95-6441c78d5bf6 ;
+    ore:proxyIn <urn:uuid:3a21b447-8639-452b-8f72-08d05e79a999> .
+
+<urn:uuid:3a21b447-8639-452b-8f72-08d05e79a999> a ro:Folder,
+        ore:Aggregation,
+        prov:Entity ;
+    ore:aggregates <urn:uuid:0042f871-8fd7-4b83-a582-182b8d03a398>,
+        <urn:uuid:024ebf07-c503-4f5d-a286-6ebf78e56382>,
+        <urn:uuid:0300e442-d368-4245-a155-55ce10066c2c>,
+        <urn:uuid:030dd67c-7e03-4ab0-b285-e5837c45098a>,
+        <urn:uuid:06995107-9f95-4dc8-87e6-763e8e7f37dd>,
+        <urn:uuid:093ef365-4501-4e85-9d51-763acbb2ecf6>,
+        <urn:uuid:0b5d1d2d-de31-48a3-89a9-8fc3df8d9d70>,
+        <urn:uuid:10765473-3df4-4dd0-b5e4-a52c048a64b5>,
+        <urn:uuid:1248b342-2739-47c1-80e0-85b91af6fb17>,
+        <urn:uuid:28b19172-b4fb-47fb-92de-48f28f8ed800>,
+        <urn:uuid:28cba5b7-709d-4a19-b2db-04a0a3c1abd0>,
+        <urn:uuid:28fd3f44-55bd-432e-b36f-d4dd62d68d94>,
+        <urn:uuid:2f35d627-629f-454d-834f-b0caecd60aa2>,
+        <urn:uuid:300170e6-ac46-400f-9edf-ef3ac8b3f900>,
+        <urn:uuid:3230b4ed-16b2-4e6d-a5ad-d57572f783c6>,
+        <urn:uuid:34a699df-823d-45d3-b378-bb9c76713890>,
+        <urn:uuid:357c141d-426f-4d7f-8bd2-7676d6be39b7>,
+        <urn:uuid:377b0ba3-9c00-480a-98ec-0b5ee08333fa>,
+        <urn:uuid:37c8df07-fa27-4f72-8c66-824b8cf625cf>,
+        <urn:uuid:38eaea64-3ee4-4220-8512-afe4f549ae42>,
+        <urn:uuid:398380d0-ff20-4395-8e6e-84ad5414e970>,
+        <urn:uuid:3ad713ef-e450-4b22-994b-4f7dd7095d30>,
+        <urn:uuid:3dcde9a1-c39a-4d18-8a78-cf82db2cf511>,
+        <urn:uuid:47639fd8-b5cf-4c5f-bd61-0e91c6fec1b5>,
+        <urn:uuid:47d492fe-6c79-41a8-acea-b22ffddde11b>,
+        <urn:uuid:4859c757-c9d6-4530-b887-3d9e2aa16018>,
+        <urn:uuid:4ad1c8a9-19ed-47fe-9464-a637f117ffa2>,
+        <urn:uuid:4c1b8491-02a4-4b72-9dfb-09eefd7c8b62>,
+        <urn:uuid:4cd54572-3054-4bb2-b289-4c34b462ed94>,
+        <urn:uuid:4fc788ab-246a-4610-a345-a9e94095a40e>,
+        <urn:uuid:52eea9f9-85de-4282-8bd6-8a1a8f3ef02f>,
+        <urn:uuid:5470077f-f92e-4870-9a1b-05af33415afd>,
+        <urn:uuid:54de9eda-5afa-4ec2-a8af-916be44fc529>,
+        <urn:uuid:58874489-a372-4ce2-afb3-7ac688a84f0b>,
+        <urn:uuid:6245546f-eced-4a6a-8f6d-5f31b261003a>,
+        <urn:uuid:6af7f329-31b9-4b36-b77e-758b89bd0561>,
+        <urn:uuid:76ac97fe-a5ff-49a1-89ef-4817884fdaaa>,
+        <urn:uuid:7798da78-6163-4aad-9ee4-ce42045aabe8>,
+        <urn:uuid:7b9b5db2-94c0-4f85-b476-bf4e4212cf14>,
+        <urn:uuid:7bf7d6dd-e755-4971-9fd8-2a4262051efb>,
+        <urn:uuid:7e350287-e831-41e2-8a63-85d04e418fad>,
+        <urn:uuid:83040824-0565-40d3-b90b-419329e4a172>,
+        <urn:uuid:846c942a-7b54-4a49-977b-55c704856eae>,
+        <urn:uuid:865ca46d-164f-43d2-98ce-1e59da01255f>,
+        <urn:uuid:86d8cc2e-d936-4ae2-86e1-ff7e8a150e85>,
+        <urn:uuid:8a99469e-4f5d-4ce2-a283-f4b1845e6417>,
+        <urn:uuid:93cb31ea-c3e4-4bc0-810f-1b408e340e33>,
+        <urn:uuid:9aba81be-3b30-4f89-85b5-6c3c14a87b08>,
+        id:a00edb3a-497c-4dd2-bdf6-09d5cc8d957d,
+        id:a792a95d-4a94-4687-be27-fedfd571e8d6,
+        id:a9b4fc31-8268-4dd8-af8b-d4f97b400d5d,
+        id:aabe5dbe-667c-4d3a-b8b3-7d924aaf2549,
+        id:aea3789d-694a-4bc3-ab6b-0ddb4579bf98,
+        id:b08a2442-de58-45a4-93f7-445bd099cd21,
+        id:b0b1bb7c-3d13-4d37-86cb-806ffc71c7b4,
+        id:b4415a25-e60f-47b7-b6c9-cdaad159bc78,
+        id:b44867e0-483c-4421-9d5e-1aceeb48d522,
+        id:b52957c2-edd1-41cf-b0dc-debd1721ab65,
+        id:b57e988a-e6cb-4b7d-87c4-ad2d5ad31314,
+        id:bc6b1498-91ec-4ec5-ab40-f660c96fc0f6,
+        id:bf465440-0945-44ab-b89c-4a2c4824117a,
+        id:bf74bb23-99cf-47cd-a935-911e089ded30,
+        id:c3f420c1-ec3b-4981-a956-072db5cace3b,
+        id:c71ae48a-75d8-4ada-9060-07cae75cc8c2,
+        id:c938a50e-fcb6-4f07-a368-620def332371,
+        id:cbfee1cb-ba9f-4606-9e5b-e4935cacf53e,
+        id:d3579799-de90-443e-82cc-94464c2a51fc,
+        id:d8174563-9c8f-4eef-b0e1-b50012ba89f5,
+        id:da1cea57-059a-4529-9ddd-52321062332c,
+        id:dc264440-be20-4b2a-933b-1b579e2d5292,
+        id:e2028a7c-59d9-4d0f-82a8-26490e25d5ed,
+        id:e512c1ab-a0ad-43a2-96df-43313f27a7f0,
+        id:ec251b42-b76f-4165-813a-d23d7cefa6bc,
+        id:ee1759e5-63cf-4885-92b3-dc169a69f148,
+        id:ef1b7726-8391-4f1d-9e20-b805d2b87dc3,
+        id:f6e2f01d-02d3-4fe2-8cb6-cabb5adddc65,
+        id:fc5ed9ef-e4a4-4941-8feb-6cff5588a90f .
+

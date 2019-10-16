@@ -1,0 +1,508 @@
+[2019-10-16T13:16:52,999Z] [cwltool] /home/stain/miniconda3/bin/cwltool --parallel --provenance zenodo-records.cwlprov zenodo-records-job.yml
+[2019-10-16T13:16:53,000Z] Resolved 'zenodo-records-job.yml' to 'file:///home/stain/src/ro-index-paper/code/data-gathering/test/zenodo-records/zenodo-records-job.yml'
+[2019-10-16T13:17:08,578Z] [workflow ] start
+[2019-10-16T13:17:08,578Z] [workflow ] starting step list-ids
+[2019-10-16T13:17:08,578Z] [step list-ids] start
+[2019-10-16T13:17:08,726Z] [job list-ids] /tmp/12nfpt91$ docker \
+    run \
+    -i \
+    --volume=/tmp/12nfpt91:/NQAxkk:rw \
+    --volume=/tmp/pyw0as0y:/tmp:rw \
+    --workdir=/NQAxkk \
+    --read-only=true \
+    --log-driver=none \
+    --user=1000:1000 \
+    --rm \
+    --env=TMPDIR=/tmp \
+    --env=HOME=/NQAxkk \
+    --cidfile=/tmp/9dbzjx9e/20191016141708-726680.cid \
+    stain/perl-oai-lib:branch-429-retry-after \
+    /bin/sh \
+    -c \
+    'oai_pmh' '--request' 'ListIdentifiers' '--metadataPrefix' 'oai_dc' '--set' 'user-ro' 'https://zenodo.org/oai2d' | grep identifier: | sed 's/^.*identifier: //g' > /tmp/12nfpt91/identifiers
+[2019-10-16T13:17:08,727Z] research_obj set but one of process_run_id or prov_obj is missing from runtimeContext: <cwltool.context.RuntimeContext object at 0x7ff427985da0>
+[2019-10-16T13:17:11,354Z] [job list-ids] Max memory used: 0MiB
+[2019-10-16T13:17:11,357Z] [job list-ids] completed success
+[2019-10-16T13:17:11,357Z] [step list-ids] completed success
+[2019-10-16T13:17:11,358Z] [workflow ] starting step make-uri
+[2019-10-16T13:17:11,358Z] [step make-uri] start
+[2019-10-16T13:17:11,516Z] [job make-uri] /tmp/9y3vc6bo$ docker \
+    run \
+    -i \
+    --volume=/tmp/9y3vc6bo:/NQAxkk:rw \
+    --volume=/tmp/z2y8iiby:/tmp:rw \
+    --volume=/tmp/12nfpt91/identifiers:/var/lib/cwl/stgd1cae579-948e-4f41-ba69-bcc45724e2bd/identifiers:ro \
+    --workdir=/NQAxkk \
+    --read-only=true \
+    --log-driver=none \
+    --user=1000:1000 \
+    --rm \
+    --env=TMPDIR=/tmp \
+    --env=HOME=/NQAxkk \
+    --cidfile=/tmp/mmg2lapl/20191016141711-515757.cid \
+    debian:9 \
+    sed \
+    --unbuffered \
+    --regexp-extended \
+    s,oai:zenodo.org:,https://zenodo.org/api/records/, \
+    /var/lib/cwl/stgd1cae579-948e-4f41-ba69-bcc45724e2bd/identifiers > /tmp/9y3vc6bo/modified.txt
+[2019-10-16T13:17:11,516Z] research_obj set but one of process_run_id or prov_obj is missing from runtimeContext: <cwltool.context.RuntimeContext object at 0x7ff427985da0>
+[2019-10-16T13:17:12,850Z] [job make-uri] Max memory used: 0MiB
+[2019-10-16T13:17:12,852Z] [job make-uri] completed success
+[2019-10-16T13:17:12,852Z] [step make-uri] completed success
+[2019-10-16T13:17:12,853Z] [workflow ] starting step chunk-by-line
+[2019-10-16T13:17:12,853Z] [step chunk-by-line] start
+[2019-10-16T13:17:13,005Z] [job chunk-by-line] /tmp/2uzc3v5r$ docker \
+    run \
+    -i \
+    --volume=/tmp/2uzc3v5r:/NQAxkk:rw \
+    --volume=/tmp/0om8o5ut:/tmp:rw \
+    --volume=/tmp/9y3vc6bo/modified.txt:/var/lib/cwl/stg793cbd1b-9e37-4f22-8671-34ec27577c1a/modified.txt:ro \
+    --workdir=/NQAxkk \
+    --read-only=true \
+    --user=1000:1000 \
+    --rm \
+    --env=TMPDIR=/tmp \
+    --env=HOME=/NQAxkk \
+    --cidfile=/tmp/lc4uszhj/20191016141713-005682.cid \
+    debian:10 \
+    split \
+    --lines \
+    50 \
+    /var/lib/cwl/stg793cbd1b-9e37-4f22-8671-34ec27577c1a/modified.txt
+[2019-10-16T13:17:13,006Z] research_obj set but one of process_run_id or prov_obj is missing from runtimeContext: <cwltool.context.RuntimeContext object at 0x7ff427985da0>
+[2019-10-16T13:17:14,275Z] [job chunk-by-line] Max memory used: 0MiB
+[2019-10-16T13:17:15,014Z] [job chunk-by-line] completed success
+[2019-10-16T13:17:15,014Z] [step chunk-by-line] completed success
+[2019-10-16T13:17:15,015Z] [workflow ] starting step split-ids-by-line
+[2019-10-16T13:17:15,015Z] [step split-ids-by-line] start
+[2019-10-16T13:17:15,017Z] [step split-ids-by-line] start
+[2019-10-16T13:17:15,939Z] [step split-ids-by-line] completed success
+[2019-10-16T13:17:15,940Z] [workflow ] starting step fetch-zenodo-datacite4
+[2019-10-16T13:17:15,940Z] [step fetch-zenodo-datacite4] start
+[2019-10-16T13:17:15,967Z] [step fetch-zenodo-datacite4] start
+[2019-10-16T13:17:15,989Z] [workflow ] starting step fetch-zenodo-jsonld
+[2019-10-16T13:17:15,989Z] [step fetch-zenodo-jsonld] start
+[2019-10-16T13:17:16,019Z] [step fetch-zenodo-jsonld] start
+[2019-10-16T13:17:16,036Z] [workflow ] starting step fetch-zenodo-json
+[2019-10-16T13:17:16,037Z] [step fetch-zenodo-json] start
+[2019-10-16T13:17:16,072Z] [step fetch-zenodo-json] start
+[2019-10-16T13:17:16,185Z] [job fetch-zenodo-datacite4] /tmp/bm2y3pdh$ docker \
+    run \
+    -i \
+    --volume=/tmp/bm2y3pdh:/NQAxkk:rw \
+    --volume=/tmp/bd7iqbpf:/tmp:rw \
+    --workdir=/NQAxkk \
+    --read-only=true \
+    --log-driver=none \
+    --user=1000:1000 \
+    --rm \
+    --env=TMPDIR=/tmp \
+    --env=HOME=/NQAxkk \
+    --cidfile=/tmp/rzgnlcr8/20191016141716-185128.cid \
+    stain/curl:7.67-DEV-f2941608f61adf1b2224ff4db400ffaeda3ea210 \
+    curl \
+    --show-error \
+    --fail-early \
+    --retry \
+    10 \
+    --retry-connrefused \
+    --location \
+    --remote-name-all \
+    --dump-header \
+    - \
+    --header \
+    'Accept: application/x-datacite-v41+xml' \
+    https://zenodo.org/api/records/1421066 \
+    https://zenodo.org/api/records/1311933 \
+    https://zenodo.org/api/records/3445531 \
+    https://zenodo.org/api/records/3458560 \
+    https://zenodo.org/api/records/3362412 \
+    https://zenodo.org/api/records/3380592 \
+    https://zenodo.org/api/records/3384296 \
+    https://zenodo.org/api/records/3334688 \
+    https://zenodo.org/api/records/3336148 \
+    https://zenodo.org/api/records/3338176 \
+    https://zenodo.org/api/records/3458522 \
+    https://zenodo.org/api/records/1484403 \
+    https://zenodo.org/api/records/1314672 \
+    https://zenodo.org/api/records/1310621 \
+    https://zenodo.org/api/records/3196309 \
+    https://zenodo.org/api/records/3336124 \
+    https://zenodo.org/api/records/1312652 \
+    https://zenodo.org/api/records/1442453 \
+    https://zenodo.org/api/records/1299320 \
+    https://zenodo.org/api/records/1472385 \
+    https://zenodo.org/api/records/3357806 \
+    https://zenodo.org/api/records/3268809 \
+    https://zenodo.org/api/records/3343031 \
+    https://zenodo.org/api/records/1484480 \
+    https://zenodo.org/api/records/1484442 \
+    https://zenodo.org/api/records/3270620 \
+    https://zenodo.org/api/records/1208478 \
+    https://zenodo.org/api/records/1299783 \
+    https://zenodo.org/api/records/1484496 \
+    https://zenodo.org/api/records/1484341 \
+    https://zenodo.org/api/records/1308997 \
+    https://zenodo.org/api/records/1309962 \
+    https://zenodo.org/api/records/1312623 \
+    https://zenodo.org/api/records/1323831 \
+    https://zenodo.org/api/records/1313218 \
+    https://zenodo.org/api/records/1410052 \
+    https://zenodo.org/api/records/3270824 \
+    https://zenodo.org/api/records/3337375 \
+    https://zenodo.org/api/records/3382259 \
+    https://zenodo.org/api/records/2838898 \
+    https://zenodo.org/api/records/3457390 \
+    https://zenodo.org/api/records/1304969 \
+    https://zenodo.org/api/records/2841641 \
+    https://zenodo.org/api/records/3338725 \
+    https://zenodo.org/api/records/2632836 \
+    https://zenodo.org/api/records/2636997 \
+    https://zenodo.org/api/records/3250687 \
+    https://zenodo.org/api/records/3336609 \
+    https://zenodo.org/api/records/3459770 \
+    https://zenodo.org/api/records/1966881 > /tmp/bm2y3pdh/.headers.txt
+[2019-10-16T13:17:16,186Z] research_obj set but one of process_run_id or prov_obj is missing from runtimeContext: <cwltool.context.RuntimeContext object at 0x7ff427985da0>
+[2019-10-16T13:17:16,241Z] [job fetch-zenodo-datacite4_2] /tmp/zh4asjq8$ docker \
+    run \
+    -i \
+    --volume=/tmp/zh4asjq8:/NQAxkk:rw \
+    --volume=/tmp/2ogbmpnw:/tmp:rw \
+    --workdir=/NQAxkk \
+    --read-only=true \
+    --log-driver=none \
+    --user=1000:1000 \
+    --rm \
+    --env=TMPDIR=/tmp \
+    --env=HOME=/NQAxkk \
+    --cidfile=/tmp/nlgnrrvl/20191016141716-241197.cid \
+    stain/curl:7.67-DEV-f2941608f61adf1b2224ff4db400ffaeda3ea210 \
+    curl \
+    --show-error \
+    --fail-early \
+    --retry \
+    10 \
+    --retry-connrefused \
+    --location \
+    --remote-name-all \
+    --dump-header \
+    - \
+    --header \
+    'Accept: application/x-datacite-v41+xml' \
+    https://zenodo.org/api/records/1326284 \
+    https://zenodo.org/api/records/3382423 \
+    https://zenodo.org/api/records/1215611 \
+    https://zenodo.org/api/records/1311612 \
+    https://zenodo.org/api/records/1301152 \
+    https://zenodo.org/api/records/1420531 \
+    https://zenodo.org/api/records/3459720 \
+    https://zenodo.org/api/records/1313066 \
+    https://zenodo.org/api/records/3337883 \
+    https://zenodo.org/api/records/1410238 \
+    https://zenodo.org/api/records/3270560 \
+    https://zenodo.org/api/records/1484286 \
+    https://zenodo.org/api/records/1412509 \
+    https://zenodo.org/api/records/1484424 \
+    https://zenodo.org/api/records/1310034 \
+    https://zenodo.org/api/records/3358983 \
+    https://zenodo.org/api/records/3268904 \
+    https://zenodo.org/api/records/1473157 \
+    https://zenodo.org/api/records/1473154 \
+    https://zenodo.org/api/records/3406498 \
+    https://zenodo.org/api/records/1484502 \
+    https://zenodo.org/api/records/1312685 \
+    https://zenodo.org/api/records/1441011 \
+    https://zenodo.org/api/records/1312582 \
+    https://zenodo.org/api/records/1408170 \
+    https://zenodo.org/api/records/1484377 \
+    https://zenodo.org/api/records/1320264 > /tmp/zh4asjq8/.headers.txt
+[2019-10-16T13:17:16,242Z] research_obj set but one of process_run_id or prov_obj is missing from runtimeContext: <cwltool.context.RuntimeContext object at 0x7ff427985da0>
+[2019-10-16T13:17:16,337Z] [job fetch-zenodo-jsonld_2] /tmp/zk5y2scd$ docker \
+    run \
+    -i \
+    --volume=/tmp/zk5y2scd:/NQAxkk:rw \
+    --volume=/tmp/aii28cic:/tmp:rw \
+    --workdir=/NQAxkk \
+    --read-only=true \
+    --log-driver=none \
+    --user=1000:1000 \
+    --rm \
+    --env=TMPDIR=/tmp \
+    --env=HOME=/NQAxkk \
+    --cidfile=/tmp/tf_e4crf/20191016141716-336703.cid \
+    stain/curl:7.67-DEV-f2941608f61adf1b2224ff4db400ffaeda3ea210 \
+    curl \
+    --show-error \
+    --fail-early \
+    --retry \
+    10 \
+    --retry-connrefused \
+    --location \
+    --remote-name-all \
+    --dump-header \
+    - \
+    --header \
+    'Accept: application/ld+json' \
+    https://zenodo.org/api/records/1326284 \
+    https://zenodo.org/api/records/3382423 \
+    https://zenodo.org/api/records/1215611 \
+    https://zenodo.org/api/records/1311612 \
+    https://zenodo.org/api/records/1301152 \
+    https://zenodo.org/api/records/1420531 \
+    https://zenodo.org/api/records/3459720 \
+    https://zenodo.org/api/records/1313066 \
+    https://zenodo.org/api/records/3337883 \
+    https://zenodo.org/api/records/1410238 \
+    https://zenodo.org/api/records/3270560 \
+    https://zenodo.org/api/records/1484286 \
+    https://zenodo.org/api/records/1412509 \
+    https://zenodo.org/api/records/1484424 \
+    https://zenodo.org/api/records/1310034 \
+    https://zenodo.org/api/records/3358983 \
+    https://zenodo.org/api/records/3268904 \
+    https://zenodo.org/api/records/1473157 \
+    https://zenodo.org/api/records/1473154 \
+    https://zenodo.org/api/records/3406498 \
+    https://zenodo.org/api/records/1484502 \
+    https://zenodo.org/api/records/1312685 \
+    https://zenodo.org/api/records/1441011 \
+    https://zenodo.org/api/records/1312582 \
+    https://zenodo.org/api/records/1408170 \
+    https://zenodo.org/api/records/1484377 \
+    https://zenodo.org/api/records/1320264 > /tmp/zk5y2scd/.headers.txt
+[2019-10-16T13:17:16,337Z] research_obj set but one of process_run_id or prov_obj is missing from runtimeContext: <cwltool.context.RuntimeContext object at 0x7ff427985da0>
+[2019-10-16T13:17:16,339Z] [job fetch-zenodo-jsonld] /tmp/5wjch1ad$ docker \
+    run \
+    -i \
+    --volume=/tmp/5wjch1ad:/NQAxkk:rw \
+    --volume=/tmp/ndklgu3e:/tmp:rw \
+    --workdir=/NQAxkk \
+    --read-only=true \
+    --log-driver=none \
+    --user=1000:1000 \
+    --rm \
+    --env=TMPDIR=/tmp \
+    --env=HOME=/NQAxkk \
+    --cidfile=/tmp/mk3g1ch7/20191016141716-338736.cid \
+    stain/curl:7.67-DEV-f2941608f61adf1b2224ff4db400ffaeda3ea210 \
+    curl \
+    --show-error \
+    --fail-early \
+    --retry \
+    10 \
+    --retry-connrefused \
+    --location \
+    --remote-name-all \
+    --dump-header \
+    - \
+    --header \
+    'Accept: application/ld+json' \
+    https://zenodo.org/api/records/1421066 \
+    https://zenodo.org/api/records/1311933 \
+    https://zenodo.org/api/records/3445531 \
+    https://zenodo.org/api/records/3458560 \
+    https://zenodo.org/api/records/3362412 \
+    https://zenodo.org/api/records/3380592 \
+    https://zenodo.org/api/records/3384296 \
+    https://zenodo.org/api/records/3334688 \
+    https://zenodo.org/api/records/3336148 \
+    https://zenodo.org/api/records/3338176 \
+    https://zenodo.org/api/records/3458522 \
+    https://zenodo.org/api/records/1484403 \
+    https://zenodo.org/api/records/1314672 \
+    https://zenodo.org/api/records/1310621 \
+    https://zenodo.org/api/records/3196309 \
+    https://zenodo.org/api/records/3336124 \
+    https://zenodo.org/api/records/1312652 \
+    https://zenodo.org/api/records/1442453 \
+    https://zenodo.org/api/records/1299320 \
+    https://zenodo.org/api/records/1472385 \
+    https://zenodo.org/api/records/3357806 \
+    https://zenodo.org/api/records/3268809 \
+    https://zenodo.org/api/records/3343031 \
+    https://zenodo.org/api/records/1484480 \
+    https://zenodo.org/api/records/1484442 \
+    https://zenodo.org/api/records/3270620 \
+    https://zenodo.org/api/records/1208478 \
+    https://zenodo.org/api/records/1299783 \
+    https://zenodo.org/api/records/1484496 \
+    https://zenodo.org/api/records/1484341 \
+    https://zenodo.org/api/records/1308997 \
+    https://zenodo.org/api/records/1309962 \
+    https://zenodo.org/api/records/1312623 \
+    https://zenodo.org/api/records/1323831 \
+    https://zenodo.org/api/records/1313218 \
+    https://zenodo.org/api/records/1410052 \
+    https://zenodo.org/api/records/3270824 \
+    https://zenodo.org/api/records/3337375 \
+    https://zenodo.org/api/records/3382259 \
+    https://zenodo.org/api/records/2838898 \
+    https://zenodo.org/api/records/3457390 \
+    https://zenodo.org/api/records/1304969 \
+    https://zenodo.org/api/records/2841641 \
+    https://zenodo.org/api/records/3338725 \
+    https://zenodo.org/api/records/2632836 \
+    https://zenodo.org/api/records/2636997 \
+    https://zenodo.org/api/records/3250687 \
+    https://zenodo.org/api/records/3336609 \
+    https://zenodo.org/api/records/3459770 \
+    https://zenodo.org/api/records/1966881 > /tmp/5wjch1ad/.headers.txt
+[2019-10-16T13:17:16,341Z] research_obj set but one of process_run_id or prov_obj is missing from runtimeContext: <cwltool.context.RuntimeContext object at 0x7ff427985da0>
+[2019-10-16T13:18:23,677Z] [job fetch-zenodo-jsonld_2] Max memory used: 3MiB
+[2019-10-16T13:18:23,700Z] [job fetch-zenodo-jsonld_2] completed success
+[2019-10-16T13:18:23,710Z] [job fetch-zenodo-json] /tmp/az3higmp$ docker \
+    run \
+    -i \
+    --volume=/tmp/az3higmp:/NQAxkk:rw \
+    --volume=/tmp/gb_r4chs:/tmp:rw \
+    --workdir=/NQAxkk \
+    --read-only=true \
+    --log-driver=none \
+    --user=1000:1000 \
+    --rm \
+    --env=TMPDIR=/tmp \
+    --env=HOME=/NQAxkk \
+    --cidfile=/tmp/38s27iu6/20191016141823-709617.cid \
+    stain/curl:7.67-DEV-f2941608f61adf1b2224ff4db400ffaeda3ea210 \
+    curl \
+    --show-error \
+    --fail-early \
+    --retry \
+    10 \
+    --retry-connrefused \
+    --location \
+    --remote-name-all \
+    --dump-header \
+    - \
+    --header \
+    'Accept: application/vnd.zenodo.v1+json' \
+    https://zenodo.org/api/records/1421066 \
+    https://zenodo.org/api/records/1311933 \
+    https://zenodo.org/api/records/3445531 \
+    https://zenodo.org/api/records/3458560 \
+    https://zenodo.org/api/records/3362412 \
+    https://zenodo.org/api/records/3380592 \
+    https://zenodo.org/api/records/3384296 \
+    https://zenodo.org/api/records/3334688 \
+    https://zenodo.org/api/records/3336148 \
+    https://zenodo.org/api/records/3338176 \
+    https://zenodo.org/api/records/3458522 \
+    https://zenodo.org/api/records/1484403 \
+    https://zenodo.org/api/records/1314672 \
+    https://zenodo.org/api/records/1310621 \
+    https://zenodo.org/api/records/3196309 \
+    https://zenodo.org/api/records/3336124 \
+    https://zenodo.org/api/records/1312652 \
+    https://zenodo.org/api/records/1442453 \
+    https://zenodo.org/api/records/1299320 \
+    https://zenodo.org/api/records/1472385 \
+    https://zenodo.org/api/records/3357806 \
+    https://zenodo.org/api/records/3268809 \
+    https://zenodo.org/api/records/3343031 \
+    https://zenodo.org/api/records/1484480 \
+    https://zenodo.org/api/records/1484442 \
+    https://zenodo.org/api/records/3270620 \
+    https://zenodo.org/api/records/1208478 \
+    https://zenodo.org/api/records/1299783 \
+    https://zenodo.org/api/records/1484496 \
+    https://zenodo.org/api/records/1484341 \
+    https://zenodo.org/api/records/1308997 \
+    https://zenodo.org/api/records/1309962 \
+    https://zenodo.org/api/records/1312623 \
+    https://zenodo.org/api/records/1323831 \
+    https://zenodo.org/api/records/1313218 \
+    https://zenodo.org/api/records/1410052 \
+    https://zenodo.org/api/records/3270824 \
+    https://zenodo.org/api/records/3337375 \
+    https://zenodo.org/api/records/3382259 \
+    https://zenodo.org/api/records/2838898 \
+    https://zenodo.org/api/records/3457390 \
+    https://zenodo.org/api/records/1304969 \
+    https://zenodo.org/api/records/2841641 \
+    https://zenodo.org/api/records/3338725 \
+    https://zenodo.org/api/records/2632836 \
+    https://zenodo.org/api/records/2636997 \
+    https://zenodo.org/api/records/3250687 \
+    https://zenodo.org/api/records/3336609 \
+    https://zenodo.org/api/records/3459770 \
+    https://zenodo.org/api/records/1966881 > /tmp/az3higmp/.headers.txt
+[2019-10-16T13:18:23,710Z] research_obj set but one of process_run_id or prov_obj is missing from runtimeContext: <cwltool.context.RuntimeContext object at 0x7ff427985da0>
+[2019-10-16T13:18:24,724Z] [job fetch-zenodo-datacite4_2] Max memory used: 3MiB
+[2019-10-16T13:18:24,764Z] [job fetch-zenodo-datacite4_2] completed success
+[2019-10-16T13:18:24,774Z] [job fetch-zenodo-json_2] /tmp/jphl5u_6$ docker \
+    run \
+    -i \
+    --volume=/tmp/jphl5u_6:/NQAxkk:rw \
+    --volume=/tmp/fsczxmud:/tmp:rw \
+    --workdir=/NQAxkk \
+    --read-only=true \
+    --log-driver=none \
+    --user=1000:1000 \
+    --rm \
+    --env=TMPDIR=/tmp \
+    --env=HOME=/NQAxkk \
+    --cidfile=/tmp/17rgp_25/20191016141824-773807.cid \
+    stain/curl:7.67-DEV-f2941608f61adf1b2224ff4db400ffaeda3ea210 \
+    curl \
+    --show-error \
+    --fail-early \
+    --retry \
+    10 \
+    --retry-connrefused \
+    --location \
+    --remote-name-all \
+    --dump-header \
+    - \
+    --header \
+    'Accept: application/vnd.zenodo.v1+json' \
+    https://zenodo.org/api/records/1326284 \
+    https://zenodo.org/api/records/3382423 \
+    https://zenodo.org/api/records/1215611 \
+    https://zenodo.org/api/records/1311612 \
+    https://zenodo.org/api/records/1301152 \
+    https://zenodo.org/api/records/1420531 \
+    https://zenodo.org/api/records/3459720 \
+    https://zenodo.org/api/records/1313066 \
+    https://zenodo.org/api/records/3337883 \
+    https://zenodo.org/api/records/1410238 \
+    https://zenodo.org/api/records/3270560 \
+    https://zenodo.org/api/records/1484286 \
+    https://zenodo.org/api/records/1412509 \
+    https://zenodo.org/api/records/1484424 \
+    https://zenodo.org/api/records/1310034 \
+    https://zenodo.org/api/records/3358983 \
+    https://zenodo.org/api/records/3268904 \
+    https://zenodo.org/api/records/1473157 \
+    https://zenodo.org/api/records/1473154 \
+    https://zenodo.org/api/records/3406498 \
+    https://zenodo.org/api/records/1484502 \
+    https://zenodo.org/api/records/1312685 \
+    https://zenodo.org/api/records/1441011 \
+    https://zenodo.org/api/records/1312582 \
+    https://zenodo.org/api/records/1408170 \
+    https://zenodo.org/api/records/1484377 \
+    https://zenodo.org/api/records/1320264 > /tmp/jphl5u_6/.headers.txt
+[2019-10-16T13:18:24,774Z] research_obj set but one of process_run_id or prov_obj is missing from runtimeContext: <cwltool.context.RuntimeContext object at 0x7ff427985da0>
+[2019-10-16T13:19:28,151Z] [job fetch-zenodo-datacite4] Max memory used: 3MiB
+[2019-10-16T13:19:28,198Z] [job fetch-zenodo-datacite4] completed success
+[2019-10-16T13:19:28,198Z] [step fetch-zenodo-datacite4] completed success
+[2019-10-16T13:19:28,201Z] [workflow ] starting step gather-datacite4
+[2019-10-16T13:19:28,201Z] [step gather-datacite4] start
+[2019-10-16T13:19:28,518Z] [job fetch-zenodo-jsonld] Max memory used: 3MiB
+[2019-10-16T13:19:28,579Z] [job fetch-zenodo-jsonld] completed success
+[2019-10-16T13:19:28,579Z] [step fetch-zenodo-jsonld] completed success
+[2019-10-16T13:19:28,581Z] [workflow ] starting step gather-jsonld
+[2019-10-16T13:19:28,581Z] [step gather-jsonld] start
+[2019-10-16T13:19:29,105Z] [step gather-datacite4] completed success
+[2019-10-16T13:19:29,510Z] [step gather-jsonld] completed success
+[2019-10-16T13:20:32,960Z] [job fetch-zenodo-json_2] Max memory used: 3MiB
+[2019-10-16T13:20:32,987Z] [job fetch-zenodo-json_2] completed success
+[2019-10-16T13:20:40,416Z] [job fetch-zenodo-json] Max memory used: 3MiB
+[2019-10-16T13:20:40,462Z] [job fetch-zenodo-json] completed success
+[2019-10-16T13:20:40,462Z] [step fetch-zenodo-json] completed success
+[2019-10-16T13:20:40,464Z] [workflow ] starting step gather-json
+[2019-10-16T13:20:40,465Z] [step gather-json] start
+[2019-10-16T13:20:41,368Z] [step gather-json] completed success
+[2019-10-16T13:20:41,371Z] [workflow ] completed success
+[2019-10-16T13:20:44,438Z] Final process status is success
