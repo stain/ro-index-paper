@@ -1,0 +1,51 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://datacite.org/schema/kernel-4" xsi:schemaLocation="http://datacite.org/schema/kernel-4 http://schema.datacite.org/meta/kernel-4.1/metadata.xsd">
+  <identifier identifierType="DOI">10.5281/zenodo.1484424</identifier>
+  <creators>
+    <creator>
+      <creatorName>Peter Wittenburg</creatorName>
+      <nameIdentifier nameIdentifierScheme="ORCID" schemeURI="http://orcid.org/">0000-0003-3538-0106</nameIdentifier>
+    </creator>
+    <creator>
+      <creatorName>Dimitris Koureas</creatorName>
+      <nameIdentifier nameIdentifierScheme="ORCID" schemeURI="http://orcid.org/">0000-0002-4842-6487</nameIdentifier>
+      <affiliation>International Biodiversity Infrastructures, Naturalis Biodiversity Center; Biodiversity Information Standards Organisation (TDWG); RDA Technical Advisory Board</affiliation>
+    </creator>
+    <creator>
+      <creatorName>Larry Lannom</creatorName>
+    </creator>
+    <creator>
+      <creatorName>Robert Quick</creatorName>
+    </creator>
+  </creators>
+  <titles>
+    <title>Implementing a Flexible Infrastructure for a Digital Object Based Data Management</title>
+  </titles>
+  <publisher>Zenodo</publisher>
+  <publicationYear>2018</publicationYear>
+  <dates>
+    <date dateType="Issued">2018-10-29</date>
+  </dates>
+  <resourceType resourceTypeGeneral="Text">Presentation</resourceType>
+  <alternateIdentifiers>
+    <alternateIdentifier alternateIdentifierType="url">https://zenodo.org/record/1484424</alternateIdentifier>
+  </alternateIdentifiers>
+  <relatedIdentifiers>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Documents">10.5281/zenodo.1310621</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="arXiv" relationType="Cites">arXiv:1402.4578</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Cites">10.1002/meet.2014.14505101108</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="URL" relationType="References">https://github.com/c2camp/core/wiki</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="IsVersionOf">10.5281/zenodo.1484423</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="URL" relationType="IsPartOf">https://zenodo.org/communities/ro</relatedIdentifier>
+  </relatedIdentifiers>
+  <rightsList>
+    <rights rightsURI="http://creativecommons.org/licenses/by/4.0/legalcode">Creative Commons Attribution 4.0 International</rights>
+    <rights rightsURI="info:eu-repo/semantics/openAccess">Open Access</rights>
+  </rightsList>
+  <descriptions>
+    <description descriptionType="Abstract">&lt;p&gt;Data intensive projects are inefficient since in science and industry it is known from surveys that 80 % of the time is wasted for data wrangling. We suffer from fragmentation at all levels from data organisation up to semantics which lets many data projects fail and prohibiits the participation of many researchers and companies. The concept of Digital Objects is now broadly accepted as a new level of commodity to overcome the fragmentation at data organisation level and to facilitate interoperability at other levels and to open the way to automatic processing which will be the only way to scale up data intensive work. The C2CAMP initiative as a GO FAIR implementation network is now working on specifying and implementing key components of a DO centric data infrastructure in close collaboration with the Research Data Alliance and organisations such as DONA and ITU.&lt;/p&gt;
+
+&lt;p&gt;Full abstract: &lt;a href="https://doi.org/10.5281/zenodo.1310621"&gt;https://doi.org/10.5281/zenodo.1310621&lt;/a&gt;&lt;/p&gt;</description>
+    <description descriptionType="Other">Accepted Talk at RO2018</description>
+  </descriptions>
+</resource>

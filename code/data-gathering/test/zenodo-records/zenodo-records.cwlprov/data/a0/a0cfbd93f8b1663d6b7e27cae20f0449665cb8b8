@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://datacite.org/schema/kernel-4" xsi:schemaLocation="http://datacite.org/schema/kernel-4 http://schema.datacite.org/meta/kernel-4.1/metadata.xsd">
+  <identifier identifierType="DOI">10.5281/zenodo.3357806</identifier>
+  <creators>
+    <creator>
+      <creatorName>Rosa</creatorName>
+      <nameIdentifier nameIdentifierScheme="ORCID" schemeURI="http://orcid.org/">0000-0002-5715-3046</nameIdentifier>
+      <affiliation>Filgueira</affiliation>
+    </creator>
+  </creators>
+  <titles>
+    <title>DARE Platform: Enabling Easy Data-Intensive Workflow Composition and Deployment.</title>
+  </titles>
+  <publisher>Zenodo</publisher>
+  <publicationYear>2019</publicationYear>
+  <subjects>
+    <subject>Scientific Workflows, Cloud systems, FAIR</subject>
+  </subjects>
+  <dates>
+    <date dateType="Issued">2019-08-01</date>
+  </dates>
+  <resourceType resourceTypeGeneral="Text">Conference paper</resourceType>
+  <alternateIdentifiers>
+    <alternateIdentifier alternateIdentifierType="url">https://zenodo.org/record/3357806</alternateIdentifier>
+  </alternateIdentifiers>
+  <relatedIdentifiers>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="IsVersionOf">10.5281/zenodo.3357805</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="URL" relationType="IsPartOf">https://zenodo.org/communities/ro</relatedIdentifier>
+  </relatedIdentifiers>
+  <rightsList>
+    <rights rightsURI="http://creativecommons.org/licenses/by/4.0/legalcode">Creative Commons Attribution 4.0 International</rights>
+    <rights rightsURI="info:eu-repo/semantics/openAccess">Open Access</rights>
+  </rightsList>
+  <descriptions>
+    <description descriptionType="Abstract">&lt;p&gt;This work presents the DARE platform and working environment for enabling easy data-intensive workflow composition&lt;br&gt;
+and deployment on clouds systems. DAREs technology translates scientists methods to concrete scientific workflows that&lt;br&gt;
+can be portable and reproducible on different computing environments without making any (or little) changes. For achieving&lt;br&gt;
+this, we have combined the strengths of dispel4py and CWL scientific workflows, Docker containers, Kubernetes infrastructure&lt;br&gt;
+orchestration, Jupyter notebooks, and Cloud platforms.&lt;/p&gt;</description>
+    <description descriptionType="Other">Preprint submitted to RO2019 workshop at IEEE eScience Conference 2019</description>
+  </descriptions>
+  <fundingReferences>
+    <fundingReference>
+      <funderName>European Commission</funderName>
+      <funderIdentifier funderIdentifierType="Crossref Funder ID">10.13039/501100000780</funderIdentifier>
+      <awardNumber awardURI="info:eu-repo/grantAgreement/EC/H2020/777413/">777413</awardNumber>
+      <awardTitle>Delivering Agile Research Excellence on European e-Infrastructures</awardTitle>
+    </fundingReference>
+  </fundingReferences>
+</resource>

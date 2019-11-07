@@ -1,0 +1,54 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://datacite.org/schema/kernel-4" xsi:schemaLocation="http://datacite.org/schema/kernel-4 http://schema.datacite.org/meta/kernel-4.1/metadata.xsd">
+  <identifier identifierType="URL">https://zenodo.org/record/1421066</identifier>
+  <creators>
+    <creator>
+      <creatorName>Palma, Raul</creatorName>
+      <givenName>Raul</givenName>
+      <familyName>Palma</familyName>
+      <affiliation>Poznan Supercomputing and Networking Center</affiliation>
+    </creator>
+    <creator>
+      <creatorName>Garcia-Silva, Andres</creatorName>
+      <givenName>Andres</givenName>
+      <familyName>Garcia-Silva</familyName>
+      <affiliation>Expert Systems</affiliation>
+    </creator>
+    <creator>
+      <creatorName>Gomez-Perez, Jose Manuel</creatorName>
+      <givenName>Jose Manuel</givenName>
+      <familyName>Gomez-Perez</familyName>
+      <affiliation>Expert Systems</affiliation>
+    </creator>
+    <creator>
+      <creatorName>Krystek, Marcin</creatorName>
+      <givenName>Marcin</givenName>
+      <familyName>Krystek</familyName>
+      <affiliation>Poznan Supercomputing and Networking Center</affiliation>
+    </creator>
+  </creators>
+  <titles>
+    <title>A Research Object-based Toolkit to Support the Earth Science Research Lifecycle</title>
+  </titles>
+  <publisher>Zenodo</publisher>
+  <publicationYear>2018</publicationYear>
+  <dates>
+    <date dateType="Issued">2018-09-18</date>
+  </dates>
+  <resourceType resourceTypeGeneral="Text">Conference paper</resourceType>
+  <alternateIdentifiers>
+    <alternateIdentifier alternateIdentifierType="url">https://zenodo.org/record/1421066</alternateIdentifier>
+  </alternateIdentifiers>
+  <relatedIdentifiers>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="IsIdenticalTo">10.24424/ro-id.DBIMALEDRQ</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="URL" relationType="IsPartOf">https://zenodo.org/communities/ro</relatedIdentifier>
+  </relatedIdentifiers>
+  <rightsList>
+    <rights rightsURI="http://creativecommons.org/licenses/by/4.0/legalcode">Creative Commons Attribution 4.0 International</rights>
+    <rights rightsURI="info:eu-repo/semantics/openAccess">Open Access</rights>
+  </rightsList>
+  <descriptions>
+    <description descriptionType="Abstract">&lt;p&gt;Data-intensive science disciplines, like Earth Science, are increasingly producing and consuming a variety of digital resources during the course of a scientific investigation. Instead of having these resources in isolated repositories, scientists are seeking ways for managing and making these resources available from a single place, and at the same time they are also increasingly interested in the adoption of FAIR principles to enhance the visibility and reusability of scientific results. This has called for new methods to improve the access and communication of results. Research Objects are a key building block towards realising this vision. They provide a structured way (a model) to describe scientific resources related to an investigation, along with the context in which they were used and the people involved. But research objects are as useful in practice as the availability of tools supporting their adoption. In this paper, we present a toolkit, tailored for Earth Sciences, comprising a set of services and applications around research objects that support scientists throughout the research lifecycle to manage, share, find and reuse scientific results, and we discuss initial insights into the community adoption&lt;/p&gt;</description>
+    <description descriptionType="Other">Preprint submitted to RO2018 workshop at IEEE eScience Conference 2018. Follow DOI to access paper (pdf + html)</description>
+  </descriptions>
+</resource>

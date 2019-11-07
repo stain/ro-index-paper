@@ -1,0 +1,116 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://datacite.org/schema/kernel-4" xsi:schemaLocation="http://datacite.org/schema/kernel-4 http://schema.datacite.org/meta/kernel-4.1/metadata.xsd">
+  <identifier identifierType="DOI">10.5281/zenodo.3250687</identifier>
+  <creators>
+    <creator>
+      <creatorName>Eoghan Ó Carragáin</creatorName>
+      <nameIdentifier nameIdentifierScheme="ORCID" schemeURI="http://orcid.org/">0000-0001-8131-2150</nameIdentifier>
+      <affiliation>University College Cork</affiliation>
+    </creator>
+    <creator>
+      <creatorName>Carole Goble</creatorName>
+      <nameIdentifier nameIdentifierScheme="ORCID" schemeURI="http://orcid.org/">0000-0003-1219-2137</nameIdentifier>
+      <affiliation>The University of Manchester</affiliation>
+    </creator>
+    <creator>
+      <creatorName>Peter Sefton</creatorName>
+      <nameIdentifier nameIdentifierScheme="ORCID" schemeURI="http://orcid.org/">0000-0002-3545-944X</nameIdentifier>
+      <affiliation>University of Technology Sydney</affiliation>
+    </creator>
+    <creator>
+      <creatorName>Stian Soiland-Reyes</creatorName>
+      <nameIdentifier nameIdentifierScheme="ORCID" schemeURI="http://orcid.org/">0000-0001-9842-9718</nameIdentifier>
+      <affiliation>The University of Manchester</affiliation>
+    </creator>
+  </creators>
+  <titles>
+    <title>A lightweight approach to research object data packaging</title>
+  </titles>
+  <publisher>Zenodo</publisher>
+  <publicationYear>2019</publicationYear>
+  <subjects>
+    <subject>data packaging</subject>
+    <subject>research object</subject>
+    <subject>linked data</subject>
+  </subjects>
+  <dates>
+    <date dateType="Issued">2019-06-20</date>
+  </dates>
+  <resourceType resourceTypeGeneral="Text">Conference paper</resourceType>
+  <alternateIdentifiers>
+    <alternateIdentifier alternateIdentifierType="url">https://zenodo.org/record/3250687</alternateIdentifier>
+  </alternateIdentifiers>
+  <relatedIdentifiers>
+    <relatedIdentifier relatedIdentifierType="URL" relationType="Documents">http://www.researchobject.org/ro-crate/</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="URL" relationType="Documents">http://github.com/researchobject/ro-crate</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Cites">10.1038/533452a</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Cites">10.1016/j.future.2011.08.004</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Cites">10.1016/j.websem.2015.01.003</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Cites">10.1109/eScience.2017.40</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Cites">10.5281/zenodo.51314</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Cites">10.1101/268755</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Cites">10.5281/zenodo.1966881</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Cites">10.5281/zenodo.1301152</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Cites">10.1371/journal.pbio.3000099</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Cites">10.5281/zenodo.1445817</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Cites">10.1145/2844544</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="URL" relationType="References">https://w3id.org/ro/2016-01-28/</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="URL" relationType="References">http://www.rohub.org/</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="URL" relationType="References">https://w3id.org/bundle/</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="References">10.5281/zenodo.12586</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="URL" relationType="References">https://tools.ietf.org/html/rfc8493</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="References">10.17487/rfc8493</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="URL" relationType="References">https://rd-alliance.org/</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="URL" relationType="References">https://www.force11.org/</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="URL" relationType="References">https://www.dataone.org/</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="URL" relationType="References">https://frictionlessdata.io/specs/</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="URL" relationType="References">https://github.com/biocompute-objects/BCO_Specification</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="URL" relationType="References">https://codemeta.github.io/</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="URL" relationType="References">https://psych-ds.github.io/</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="URL" relationType="References">https://github.com/UTS-eResearch/datacrate</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="URL" relationType="Cites">https://data.research.uts.edu.au/examples/v1.0/datacrate-RO-2018/data/paper.html</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="URL" relationType="References">https://docs.google.com/document/d/155lA2BcixTl-zwJHGfLkxsmg7WmQbBK00QWyP8QggkE/edit?usp=sharing</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="URL" relationType="References">https://schema.org/</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="URL" relationType="References">https://json-ld.org/</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="URL" relationType="References">https://rd-alliance.org/approaches-research-data-packaging-rda-11th-plenary-bof-meeting</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="URL" relationType="References">http://www.researchobject.org/overview/</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="URL" relationType="References">https://bioschemas.org/</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="URL" relationType="References">https://elixir-europe.org/news/eosc-life-start</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="URL" relationType="References">https://jupyter.org/</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="URL" relationType="References">https://github.com/ResearchObject/ro-lite/issues/1</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="URL" relationType="IsIdenticalTo">https://www.research.manchester.ac.uk/portal/en/publications/a-lightweight-approach-to-research-object-data-packaging(5bbfec09-5ff7-43a8-a333-eb0eb0eda6f5).html</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="Handle" relationType="IsIdenticalTo">oai:pure.atira.dk:publications/5bbfec09-5ff7-43a8-a333-eb0eb0eda6f5</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="IsSupplementedBy">10.5281/zenodo.3343031</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="IsSupplementedBy">10.7490/f1000research.1117129.1</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="URL" relationType="IsSupplementedBy">https://slides.com/soilandreyes/2019-07-24-bosc-ro-crate</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="IsVersionOf">10.5281/zenodo.2636996</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="URL" relationType="IsPartOf">https://zenodo.org/communities/ro</relatedIdentifier>
+  </relatedIdentifiers>
+  <rightsList>
+    <rights rightsURI="http://creativecommons.org/licenses/by/4.0/legalcode">Creative Commons Attribution 4.0 International</rights>
+    <rights rightsURI="info:eu-repo/semantics/openAccess">Open Access</rights>
+  </rightsList>
+  <descriptions>
+    <description descriptionType="Abstract">&lt;p&gt;A &lt;strong&gt;Research Object&lt;/strong&gt; (RO) provides a machine-readable mechanism to communicate the diverse set of digital and real-world resources that contribute to an item of research. The aim of an RO is to evolve from traditional academic publication as a static PDF, to rather provide a complete and structured archive of the items (such as people, organisations, funding, equipment, software etc) that contributed to the research outcome, including their identifiers, provenance, relations and annotations.&lt;/p&gt;
+
+&lt;p&gt;This is of particular importance as all domains of research and science are increasingly relying on computational analysis, yet we are facing a reproducibility crisis because key components are often not sufficiently tracked, archived or reported.&lt;/p&gt;
+
+&lt;p&gt;Here we propose &lt;strong&gt;Research Object Crate&lt;/strong&gt; (or &lt;strong&gt;RO-Crate&lt;/strong&gt; for short), an emerging lightweight approach to packaging research data with their structured metadata, rephrasing the Research Object model as schema.org annotations to formalize a JSON-LD format that can be used independently of infrastructure, e.g. in GitHub or Zenodo archives. RO-Crate can be extended for domain-specific descriptions, aiming at a wide variety of applications and repositories to encourage FAIR sharing of reproducible datasets and analytical methods.&lt;/p&gt;</description>
+    <description descriptionType="Other">Abstract accepted for talk at Bioinformatics Open Source Conference (BOSC2019). 
+Slides https://doi.org/10.7490/f1000research.1117129.1 Poster https://doi.org/10.7490/f1000research.1117130.1</description>
+  </descriptions>
+  <fundingReferences>
+    <fundingReference>
+      <funderName>European Commission</funderName>
+      <funderIdentifier funderIdentifierType="Crossref Funder ID">10.13039/501100000780</funderIdentifier>
+      <awardNumber awardURI="info:eu-repo/grantAgreement/EC/H2020/823830/">823830</awardNumber>
+      <awardTitle>BioExcel-2 Centre of Excellence for Computational Biomolecular Research</awardTitle>
+    </fundingReference>
+    <fundingReference>
+      <funderName>European Commission</funderName>
+      <funderIdentifier funderIdentifierType="Crossref Funder ID">10.13039/501100000780</funderIdentifier>
+      <awardNumber awardURI="info:eu-repo/grantAgreement/EC/H2020/675728/">675728</awardNumber>
+      <awardTitle>Centre of Excellence for Biomolecular Research</awardTitle>
+    </fundingReference>
+  </fundingReferences>
+</resource>

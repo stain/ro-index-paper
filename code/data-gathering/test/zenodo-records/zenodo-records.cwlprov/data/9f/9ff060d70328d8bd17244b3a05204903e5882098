@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://datacite.org/schema/kernel-4" xsi:schemaLocation="http://datacite.org/schema/kernel-4 http://schema.datacite.org/meta/kernel-4.1/metadata.xsd">
+  <identifier identifierType="DOI">10.5281/zenodo.3338176</identifier>
+  <creators>
+    <creator>
+      <creatorName>Katz, Daniel S.</creatorName>
+      <givenName>Daniel S.</givenName>
+      <familyName>Katz</familyName>
+      <nameIdentifier nameIdentifierScheme="ORCID" schemeURI="http://orcid.org/">0000-0001-5934-7525</nameIdentifier>
+      <affiliation>University of Illinois at Urbana-Champaign</affiliation>
+    </creator>
+  </creators>
+  <titles>
+    <title>Citation and Research Objects: Toward Active Research Objects</title>
+  </titles>
+  <publisher>Zenodo</publisher>
+  <publicationYear>2019</publicationYear>
+  <subjects>
+    <subject>software citation</subject>
+    <subject>data citation</subject>
+    <subject>Research Objects</subject>
+  </subjects>
+  <dates>
+    <date dateType="Issued">2019-07-15</date>
+  </dates>
+  <resourceType resourceTypeGeneral="Text">Preprint</resourceType>
+  <alternateIdentifiers>
+    <alternateIdentifier alternateIdentifierType="url">https://zenodo.org/record/3338176</alternateIdentifier>
+  </alternateIdentifiers>
+  <relatedIdentifiers>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="IsVersionOf">10.5281/zenodo.3336147</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="URL" relationType="IsPartOf">https://zenodo.org/communities/ro</relatedIdentifier>
+  </relatedIdentifiers>
+  <rightsList>
+    <rights rightsURI="http://creativecommons.org/licenses/by/4.0/legalcode">Creative Commons Attribution 4.0 International</rights>
+    <rights rightsURI="info:eu-repo/semantics/openAccess">Open Access</rights>
+  </rightsList>
+  <descriptions>
+    <description descriptionType="Abstract">&lt;p&gt;This extended abstract, submitted to the Workshop on Research Objects 2019 (RO2019), being held in conjuction with the 15th International Conference on eScience (eScience 2019), discusses the state of citation for software and for data, and explains challenges in citing more complex research objects, including Research Objects. It includes a proposal for how current Research Objects and their contents can be cited, and additionally proposes Active Research Objects to make this easier.&lt;/p&gt;</description>
+    <description descriptionType="Other">slides for a talk on this subject are available: https://www.slideshare.net/danielskatz/citation-and-research-objects-toward-active-research-objects-175726464</description>
+  </descriptions>
+</resource>

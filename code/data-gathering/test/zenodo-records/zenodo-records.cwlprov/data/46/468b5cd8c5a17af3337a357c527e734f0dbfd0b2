@@ -1,0 +1,63 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://datacite.org/schema/kernel-4" xsi:schemaLocation="http://datacite.org/schema/kernel-4 http://schema.datacite.org/meta/kernel-4.1/metadata.xsd">
+  <identifier identifierType="DOI">10.5281/zenodo.1408170</identifier>
+  <creators>
+    <creator>
+      <creatorName>Federica Foglini</creatorName>
+      <nameIdentifier nameIdentifierScheme="ORCID" schemeURI="http://orcid.org/">0000-0002-2736-0052</nameIdentifier>
+      <affiliation>CNR ISMAR</affiliation>
+    </creator>
+  </creators>
+  <titles>
+    <title>The Research objects paradigm to manage the Scientific Life Cycle within the marine science domain – the EVER-EST Solution</title>
+  </titles>
+  <publisher>Zenodo</publisher>
+  <publicationYear>2018</publicationYear>
+  <dates>
+    <date dateType="Issued">2018-08-21</date>
+  </dates>
+  <resourceType resourceTypeGeneral="Text">Presentation</resourceType>
+  <alternateIdentifiers>
+    <alternateIdentifier alternateIdentifierType="url">https://zenodo.org/record/1408170</alternateIdentifier>
+  </alternateIdentifiers>
+  <relatedIdentifiers>
+    <relatedIdentifier relatedIdentifierType="URL" relationType="References">http://sandbox.rohub.org/rodl/ROs/posidonia_regression_along_apulian_coast/</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="URL" relationType="References">http://sandbox.rohub.org/rodl/ROs/jellyfish_species_distribution_along_italian_coast/</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="URL" relationType="References">http://sandbox.rohub.org/rodl/ROs/trend_in_the_evolution_of_non_indigenous__jellyfish_species/</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="URL" relationType="References">http://sandbox.rohub.org/rodl/ROs/correlation_between_environment_variable_satellite_and_jellyfish_outbreaks-1/</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="URL" relationType="References">http://sandbox.rohub.org/rodl/ROs/historical_maps_venice_lagoon</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="IsDocumentedBy">10.5281/zenodo.1484377</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="IsVersionOf">10.5281/zenodo.1408169</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="URL" relationType="IsPartOf">https://zenodo.org/communities/ro</relatedIdentifier>
+  </relatedIdentifiers>
+  <rightsList>
+    <rights rightsURI="http://creativecommons.org/licenses/by/4.0/legalcode">Creative Commons Attribution 4.0 International</rights>
+    <rights rightsURI="info:eu-repo/semantics/openAccess">Open Access</rights>
+  </rightsList>
+  <descriptions>
+    <description descriptionType="Abstract">&lt;p&gt;The Earth Science community is facing the challenge of managing the entire scientific life cycle filling technological and knowledge gaps and overcoming the barriers for open science and application of FAIR principle. Within this framework the &lt;a href="https://ever-est.eu/"&gt;EVER-EST project&lt;/a&gt; put the scientist at the center adopting for the first time the research object paradigm as a solutions to aggregate all the resources (data, workflows, metadata, annotation, bibliography, results, provenance) that bundles the content of a research work to facilitate the reusability, reproducibly and better understanding.&lt;/p&gt;
+
+&lt;p&gt;The EVER-EST project has demonstrated the relevance of Research Object standardisation and interoperability to boost innovation and open science (FAIR principle). Different type of ROs (e.g. data ROs, Workflow ROs, Bibliographic ROs) complemented by Data and Publication DOIs enable the bi-directional link between the data and the research output results and assure the automatic recording and tracking of the quality of the research results and ROs. For the first time the functionality of GeoReferencing ROs was implemented and proved to be invaluable for Data Provider to assess data set valorisation requirements including historical maps ingestion to build long term data series from satellite images back to historical ground measurement.&lt;/p&gt;
+
+&lt;p&gt;The Sea Monitoring community, representing the marine domain, developed several case studies providing practical methods, procedures and protocols to support coherent and widely accepted interpretation of Good Environmental Status (GES) in the Marine Strategy Framework Directive (MSFD).&lt;/p&gt;
+
+&lt;p&gt;In this context, we will present the Research Objects implemented so far proving the effectiveness to manage the scientific life cycle, focusing on methodologies and results related to 1) benthic habitat mapping such as Cold Water Corals habitat suitability models, 2) mapping the trend in the evolution of non-indigenous jellyfish species; 3) mapping &lt;em&gt;posidonia&lt;/em&gt; regression along the Apulian coast; 4) preserving ancient map of the lagoon of Venice for assessing the changes of human foot print.&lt;/p&gt;
+
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;Federica Foglini&lt;/strong&gt;, Degree (Laurea) in Geology (2001), University of Bologna, MSc in GIS and Remote Sensing at Greenwich University, London. (2004). Technologist at ISMAR since 2005. Member of GEBCO Sub Committee Regional Undersea mapping since 2013. Member of technical group for the Italian MAGIC project as expert in Multi Beam data processing and acquisition. WP leader of the COCONET project for data management from 2012 to 2016. At present task leader for the Sea Monitoring case study in the EVER-EST project (European Virtual Environment for Research &amp;ndash; Earth Science Themes). She is coordinating the habitat mapping units in the framework of RITMARE project, a national flagship program funded by the Italian Ministry of Research and Education. She is coordinating the habitat mapping group in the Framework of the Marine Strategy Directive for ISMAR. She participated to several European projects as Database Manager (for the implementation of GIS and WebGIS system) and as expert in bathymetric data and habitat mapping (EMODNET, BIOMAP, MAGIC, HERMIONE, HERMES, Geological mapping of the Italian Sea). The main interests include: geodatabase design and implementation, seafloor mapping, marine cartography, habitat mapping technologies, multi beam swath bathymetry acquisition and processing. She participated in more than 20 oceanographic cruises as supervisor of geophysical data acquisition and processing and chief scientist. She is co-author of several international scientific papers and she wrote several technical reports about implementation and design of Marine Geodatabase and GIS mapping and multi beam bathymetry processing. She is supervisor of undergraduate, MSc and PhD theses and she is teaching GIS for Habitat mapping at Bologna University &lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;</description>
+    <description descriptionType="Other">Invited Keynote at Workshop for Research Object (RO2018)</description>
+  </descriptions>
+  <fundingReferences>
+    <fundingReference>
+      <funderName>European Commission</funderName>
+      <funderIdentifier funderIdentifierType="Crossref Funder ID">10.13039/501100000780</funderIdentifier>
+      <awardNumber awardURI="info:eu-repo/grantAgreement/EC/H2020/674907/">674907</awardNumber>
+      <awardTitle>European Virtual Environment for Research - Earth Science Themes</awardTitle>
+    </fundingReference>
+  </fundingReferences>
+</resource>

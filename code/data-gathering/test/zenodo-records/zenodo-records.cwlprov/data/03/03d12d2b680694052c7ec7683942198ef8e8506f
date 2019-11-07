@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://datacite.org/schema/kernel-4" xsi:schemaLocation="http://datacite.org/schema/kernel-4 http://schema.datacite.org/meta/kernel-4.1/metadata.xsd">
+  <identifier identifierType="DOI">10.5281/zenodo.3336609</identifier>
+  <creators>
+    <creator>
+      <creatorName>Kennedy, David N</creatorName>
+      <givenName>David N</givenName>
+      <familyName>Kennedy</familyName>
+      <nameIdentifier nameIdentifierScheme="ORCID" schemeURI="http://orcid.org/">0000-0002-9377-0797</nameIdentifier>
+      <affiliation>Eunice Kennedy Shriver Center, Department of Psychiatry  University of Massachusetts Medical School  Worcester, MA, United States</affiliation>
+    </creator>
+  </creators>
+  <titles>
+    <title>The ReproPub: A hybrid research object for supporting publication-level re-execution and generalization of neuroimaging research findings</title>
+  </titles>
+  <publisher>Zenodo</publisher>
+  <publicationYear>2019</publicationYear>
+  <subjects>
+    <subject>reproducible research, re-execution, data publication, software publication, containers</subject>
+  </subjects>
+  <dates>
+    <date dateType="Issued">2019-07-15</date>
+  </dates>
+  <resourceType resourceTypeGeneral="Text">Conference paper</resourceType>
+  <alternateIdentifiers>
+    <alternateIdentifier alternateIdentifierType="url">https://zenodo.org/record/3336609</alternateIdentifier>
+  </alternateIdentifiers>
+  <relatedIdentifiers>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="IsVersionOf">10.5281/zenodo.3336608</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="URL" relationType="IsPartOf">https://zenodo.org/communities/ro</relatedIdentifier>
+  </relatedIdentifiers>
+  <rightsList>
+    <rights rightsURI="http://creativecommons.org/licenses/by/4.0/legalcode">Creative Commons Attribution 4.0 International</rights>
+    <rights rightsURI="info:eu-repo/semantics/openAccess">Open Access</rights>
+  </rightsList>
+  <descriptions>
+    <description descriptionType="Abstract">&lt;p&gt;In this report we introduce the &amp;lsquo;ReproPub&amp;rsquo;, a publication that includes the complete provenance of its experimental data, workflow, execution environment, and results. The ReproPub concept supports re-executability of the original finding, which, it is argued, supports a more systematic exploration of the generalizability of the finding and hence enhances the evaluation of its reproducibility.&lt;/p&gt;</description>
+    <description descriptionType="Other">Preprint submitted to RO2019 workshop at IEEE eScience Conference 2019</description>
+  </descriptions>
+</resource>

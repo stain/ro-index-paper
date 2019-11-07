@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://datacite.org/schema/kernel-4" xsi:schemaLocation="http://datacite.org/schema/kernel-4 http://schema.datacite.org/meta/kernel-4.1/metadata.xsd">
+  <identifier identifierType="DOI">10.5281/zenodo.3384296</identifier>
+  <creators>
+    <creator>
+      <creatorName>James Myers</creatorName>
+      <affiliation>SEAD</affiliation>
+    </creator>
+    <creator>
+      <creatorName>Sebastian Karcher</creatorName>
+      <affiliation>Qualitative Data Repository</affiliation>
+    </creator>
+    <creator>
+      <creatorName>Sebastian Ostrowski</creatorName>
+      <affiliation>Qualitative Data Repository</affiliation>
+    </creator>
+    <creator>
+      <creatorName>Nic Weber</creatorName>
+      <affiliation>University of Washington</affiliation>
+    </creator>
+  </creators>
+  <titles>
+    <title>Simple, Standards-based Archiving in Dataverse</title>
+  </titles>
+  <publisher>Zenodo</publisher>
+  <publicationYear>2019</publicationYear>
+  <dates>
+    <date dateType="Issued">2019-09-02</date>
+  </dates>
+  <resourceType resourceTypeGeneral="Text">Journal article</resourceType>
+  <alternateIdentifiers>
+    <alternateIdentifier alternateIdentifierType="url">https://zenodo.org/record/3384296</alternateIdentifier>
+  </alternateIdentifiers>
+  <relatedIdentifiers>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="IsVersionOf">10.5281/zenodo.3384295</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="URL" relationType="IsPartOf">https://zenodo.org/communities/ro</relatedIdentifier>
+  </relatedIdentifiers>
+  <rightsList>
+    <rights rightsURI="http://creativecommons.org/licenses/by/4.0/legalcode">Creative Commons Attribution 4.0 International</rights>
+    <rights rightsURI="info:eu-repo/semantics/openAccess">Open Access</rights>
+  </rightsList>
+  <descriptions>
+    <description descriptionType="Abstract">&lt;p&gt;We describe the development of a tool for archiving packages of research data, metadata, and related documentation.&lt;br&gt;
+&amp;nbsp;&lt;/p&gt;</description>
+  </descriptions>
+</resource>

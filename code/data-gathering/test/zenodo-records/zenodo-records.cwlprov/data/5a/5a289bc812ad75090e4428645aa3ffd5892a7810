@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://datacite.org/schema/kernel-4" xsi:schemaLocation="http://datacite.org/schema/kernel-4 http://schema.datacite.org/meta/kernel-4.1/metadata.xsd">
+  <identifier identifierType="DOI">10.5281/zenodo.3338725</identifier>
+  <creators>
+    <creator>
+      <creatorName>D'Arcy, Mike</creatorName>
+      <givenName>Mike</givenName>
+      <familyName>D'Arcy</familyName>
+      <affiliation>University of Southern California</affiliation>
+    </creator>
+    <creator>
+      <creatorName>Chard, Kyle</creatorName>
+      <givenName>Kyle</givenName>
+      <familyName>Chard</familyName>
+      <affiliation>University of Chicago</affiliation>
+    </creator>
+    <creator>
+      <creatorName>Foster, Ian</creatorName>
+      <givenName>Ian</givenName>
+      <familyName>Foster</familyName>
+      <affiliation>University of Chicago</affiliation>
+    </creator>
+    <creator>
+      <creatorName>Kesselman, Carl</creatorName>
+      <givenName>Carl</givenName>
+      <familyName>Kesselman</familyName>
+      <affiliation>University of Southern California</affiliation>
+    </creator>
+    <creator>
+      <creatorName>Madduri, Ravi</creatorName>
+      <givenName>Ravi</givenName>
+      <familyName>Madduri</familyName>
+      <affiliation>University of Chicago</affiliation>
+    </creator>
+    <creator>
+      <creatorName>Saint, Nickolaus</creatorName>
+      <givenName>Nickolaus</givenName>
+      <familyName>Saint</familyName>
+      <affiliation>University of Chicago</affiliation>
+    </creator>
+    <creator>
+      <creatorName>Wagner, Rick</creatorName>
+      <givenName>Rick</givenName>
+      <familyName>Wagner</familyName>
+      <affiliation>University of Chicago</affiliation>
+    </creator>
+  </creators>
+  <titles>
+    <title>Big Data Bags: A Scalable Packaging Format for Science</title>
+  </titles>
+  <publisher>Zenodo</publisher>
+  <publicationYear>2019</publicationYear>
+  <dates>
+    <date dateType="Issued">2019-07-17</date>
+  </dates>
+  <resourceType resourceTypeGeneral="Text">Conference paper</resourceType>
+  <alternateIdentifiers>
+    <alternateIdentifier alternateIdentifierType="url">https://zenodo.org/record/3338725</alternateIdentifier>
+  </alternateIdentifiers>
+  <relatedIdentifiers>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="IsVersionOf">10.5281/zenodo.3338724</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="URL" relationType="IsPartOf">https://zenodo.org/communities/ro</relatedIdentifier>
+  </relatedIdentifiers>
+  <rightsList>
+    <rights rightsURI="http://creativecommons.org/licenses/by/4.0/legalcode">Creative Commons Attribution 4.0 International</rights>
+    <rights rightsURI="info:eu-repo/semantics/openAccess">Open Access</rights>
+  </rightsList>
+  <descriptions>
+    <description descriptionType="Abstract">&lt;p&gt;The need to describe and exchange large and complex data underlies the vast majority of science conducted today. Such needs arise when downloading data from a repository, moving data between remote locations, exchanging data between collaborators, and even publishing data as part of the publication process. While such examples are common, it is surprisingly difficult to describe and exchange data, and it is even more difficult when datasets are large and span multiple storage locations. To address some of these challenges we proposed the Big Data Bag (BDBag)&amp;nbsp;as a data packaging format for representing and describing complex, distributed, and large datasets. In this presentation, we outline the BDBag model and describe three scenarios in which it is currently being used&lt;/p&gt;</description>
+    <description descriptionType="Other">Preprint submitted to RO2019 workshop at IEEE eScience Conference 2019</description>
+  </descriptions>
+</resource>

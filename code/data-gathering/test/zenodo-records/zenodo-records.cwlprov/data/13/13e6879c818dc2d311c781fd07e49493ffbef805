@@ -1,0 +1,102 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://datacite.org/schema/kernel-4" xsi:schemaLocation="http://datacite.org/schema/kernel-4 http://schema.datacite.org/meta/kernel-4.1/metadata.xsd">
+  <identifier identifierType="DOI">10.5281/zenodo.1484496</identifier>
+  <creators>
+    <creator>
+      <creatorName>Stian Soiland-Reyes</creatorName>
+      <nameIdentifier nameIdentifierScheme="ORCID" schemeURI="http://orcid.org/">0000-0001-9842-9718</nameIdentifier>
+      <affiliation>The University of Manchester; Common Workflow Language project</affiliation>
+    </creator>
+    <creator>
+      <creatorName>Farah Zaib Khan</creatorName>
+      <nameIdentifier nameIdentifierScheme="ORCID" schemeURI="http://orcid.org/">0000-0002-6337-3037</nameIdentifier>
+      <affiliation>The University of Melbourne;  Common Workflow Language project</affiliation>
+    </creator>
+    <creator>
+      <creatorName>Richard O. Sinnott</creatorName>
+      <nameIdentifier nameIdentifierScheme="ORCID" schemeURI="http://orcid.org/">0000-0001-5998-222X</nameIdentifier>
+      <affiliation>The University of Melbourne</affiliation>
+    </creator>
+    <creator>
+      <creatorName>Andrew Lonie</creatorName>
+      <nameIdentifier nameIdentifierScheme="ORCID" schemeURI="http://orcid.org/">0000-0002-2006-3856</nameIdentifier>
+      <affiliation>The University of Melbourne</affiliation>
+    </creator>
+    <creator>
+      <creatorName>Michael R Crusoe</creatorName>
+      <nameIdentifier nameIdentifierScheme="ORCID" schemeURI="http://orcid.org/">0000-0002-2961-9670</nameIdentifier>
+      <affiliation>Common Workflow Language project</affiliation>
+    </creator>
+    <creator>
+      <creatorName>Carole Goble</creatorName>
+      <nameIdentifier nameIdentifierScheme="ORCID" schemeURI="http://orcid.org/">0000-0003-1219-2137</nameIdentifier>
+      <affiliation>The University of Manchester</affiliation>
+    </creator>
+  </creators>
+  <titles>
+    <title>Capturing interoperable reproducible workflows with Common Workflow Language</title>
+  </titles>
+  <publisher>Zenodo</publisher>
+  <publicationYear>2018</publicationYear>
+  <dates>
+    <date dateType="Issued">2018-10-29</date>
+  </dates>
+  <resourceType resourceTypeGeneral="Text">Presentation</resourceType>
+  <alternateIdentifiers>
+    <alternateIdentifier alternateIdentifierType="url">https://zenodo.org/record/1484496</alternateIdentifier>
+  </alternateIdentifiers>
+  <relatedIdentifiers>
+    <relatedIdentifier relatedIdentifierType="URL" relationType="IsIdenticalTo">http://slides.com/soilandreyes/2018-10-29-cwlprov</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Documents">10.5281/zenodo.1312623</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="URL" relationType="References">https://www.slideshare.net/soilandreyes/20171103-scientific-workflow-systems-81801626</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Cites">10.1186/s12859-017-1747-0</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="URL" relationType="References">https://slides.com/farahzkhan/cwlprov</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="URL" relationType="Cites">https://s.apache.org/existing-workflow-systems</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="URL" relationType="References">http://www.commonwl.org/</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="URL" relationType="Cites">https://w3id.org/cwl/v1.0/</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="URL" relationType="Cites">http://www.commonwl.org/user_guide/</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="URL" relationType="Cites">http://rabix.io/</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="URL" relationType="References">https://www.ebi.ac.uk/metagenomics/</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="URL" relationType="References">https://view.commonwl.org/</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="URL" relationType="IsSupplementedBy">https://w3id.org/cwl/view/git/886df9de6713e06228d2560c40f451155a196383/workflows/emg-qc-single.cwl</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="URL" relationType="References">https://w3id.org/cwl/view</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Cites">10.7490/f1000research.1115721.1</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="References">10.5281/zenodo.1208477</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="URL" relationType="References">http://researchobject.org/</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Cites">10.5281/zenodo.1473157</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="URL" relationType="Cites">http://www.w3.org/TR/prov-o/</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Cites">10.5281/zenodo.1215611</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="URL" relationType="Cites">https://www.w3.org/TR/prov-overview/</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="URL" relationType="Cites">https://tools.ietf.org/search/rfc6920</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="URL" relationType="Cites">https://pypi.org/project/cwlprov/</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="URL" relationType="References">https://github.com/fair-research/bdbag</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="URL" relationType="References">https://github.com/biocompute-objects/BCO_Specification</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="URL" relationType="References">http://book.validatingrdf.com/</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Cites">10.5281/zenodo.1473157</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="URL" relationType="References">https://bioexcel.eu/workflows/</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Cites">10.5281/zenodo.1471376</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Cites">10.6084/m9.figshare.3115156.v2</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="IsVersionOf">10.5281/zenodo.1484495</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="URL" relationType="IsPartOf">https://zenodo.org/communities/ro</relatedIdentifier>
+  </relatedIdentifiers>
+  <rightsList>
+    <rights rightsURI="http://creativecommons.org/licenses/by/4.0/legalcode">Creative Commons Attribution 4.0 International</rights>
+    <rights rightsURI="info:eu-repo/semantics/openAccess">Open Access</rights>
+  </rightsList>
+  <descriptions>
+    <description descriptionType="Abstract">&lt;p&gt;We present our ongoing work on integrating &lt;a href="http://researchobject.org/"&gt;Research Object&lt;/a&gt; practices with &lt;a href="http://commonwl.org/"&gt;Common Workflow Language&lt;/a&gt;, capturing and describing prospective and retrospective provenance with the &lt;a href="http://view.commonwl.org/"&gt;CWL Viewer&lt;/a&gt; and &lt;a href="http://w3id.org/cwl/prov/"&gt;CWLProv&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Full abstract: &lt;a href="http://s11.no/2018/cwl.html"&gt;http://s11.no/2018/cwl.html&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Online slides: &lt;a href="http://slides.com/soilandreyes/2018-10-29-cwlprov"&gt;http://slides.com/soilandreyes/2018-10-29-cwlprov&lt;/a&gt;&lt;/p&gt;</description>
+    <description descriptionType="Other">Accepted Talk at RO2018</description>
+  </descriptions>
+  <fundingReferences>
+    <fundingReference>
+      <funderName>European Commission</funderName>
+      <funderIdentifier funderIdentifierType="Crossref Funder ID">10.13039/501100000780</funderIdentifier>
+      <awardNumber awardURI="info:eu-repo/grantAgreement/EC/H2020/675728/">675728</awardNumber>
+      <awardTitle>Centre of Excellence for Biomolecular Research</awardTitle>
+    </fundingReference>
+  </fundingReferences>
+</resource>

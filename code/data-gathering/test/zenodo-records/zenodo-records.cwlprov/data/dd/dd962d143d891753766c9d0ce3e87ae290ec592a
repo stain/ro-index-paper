@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://datacite.org/schema/kernel-4" xsi:schemaLocation="http://datacite.org/schema/kernel-4 http://schema.datacite.org/meta/kernel-4.1/metadata.xsd">
+  <identifier identifierType="DOI">10.5281/zenodo.1301152</identifier>
+  <creators>
+    <creator>
+      <creatorName>Jo Barratt</creatorName>
+      <affiliation>Open Knowledge International</affiliation>
+    </creator>
+    <creator>
+      <creatorName>Serah Rono</creatorName>
+      <affiliation>Open Knowledge International</affiliation>
+    </creator>
+    <creator>
+      <creatorName>Paul Walsh</creatorName>
+      <affiliation>Open Knowledge International</affiliation>
+    </creator>
+  </creators>
+  <titles>
+    <title>Frictionless Data and Data Packages</title>
+  </titles>
+  <publisher>Zenodo</publisher>
+  <publicationYear>2018</publicationYear>
+  <subjects>
+    <subject>Frictionless data, Data Package</subject>
+  </subjects>
+  <dates>
+    <date dateType="Issued">2018-06-29</date>
+  </dates>
+  <resourceType resourceTypeGeneral="Text">Journal article</resourceType>
+  <alternateIdentifiers>
+    <alternateIdentifier alternateIdentifierType="url">https://zenodo.org/record/1301152</alternateIdentifier>
+  </alternateIdentifiers>
+  <relatedIdentifiers>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="IsVersionOf">10.5281/zenodo.1301151</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="URL" relationType="IsPartOf">https://zenodo.org/communities/ro</relatedIdentifier>
+  </relatedIdentifiers>
+  <version>1</version>
+  <rightsList>
+    <rights rightsURI="http://creativecommons.org/licenses/by-sa/4.0/legalcode">Creative Commons Attribution Share Alike 4.0 International</rights>
+    <rights rightsURI="info:eu-repo/semantics/openAccess">Open Access</rights>
+  </rightsList>
+  <descriptions>
+    <description descriptionType="Abstract">&lt;p&gt;There is significant friction in the acquisition, sharing, and reuse of research data. It is estimated that eighty percent of data analysis is invested in the cleaning and mapping of data. This friction hampers researchers not well versed in data processing techniques from reusing an ever-increasing amount of research data available on the web and within scientific data repositories. &lt;a href="https://frictionlessdata.io/"&gt;Frictionless Data&lt;/a&gt; is an ongoing project at &lt;a href="https://okfn.org/"&gt;Open Knowledge International&lt;/a&gt; focused on removing this friction in a variety of circumstances. We are doing this by developing a set of &lt;a href="https://frictionlessdata.io/software/"&gt;tools&lt;/a&gt;, &lt;a href="https://frictionlessdata.io/specs/"&gt;specifications&lt;/a&gt;, and &lt;a href="https://frictionlessdata.io/field-guide/"&gt;best practices&lt;/a&gt; for describing, publishing, and validating data. The heart of this project is the &amp;ldquo;&lt;a href="https://frictionlessdata.io/specs/data-package/"&gt;Data Package&amp;rdquo;&lt;/a&gt;, a containerization format for data based on existing practices for publishing open-source software.&lt;/p&gt;</description>
+    <description descriptionType="Other">Preprint submitted to RO2018 workshop at IEEE eScience Conference 2018</description>
+  </descriptions>
+</resource>

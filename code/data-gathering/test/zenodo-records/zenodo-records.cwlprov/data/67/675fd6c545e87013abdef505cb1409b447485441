@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://datacite.org/schema/kernel-4" xsi:schemaLocation="http://datacite.org/schema/kernel-4 http://schema.datacite.org/meta/kernel-4.1/metadata.xsd">
+  <identifier identifierType="DOI">10.5281/zenodo.3358983</identifier>
+  <creators>
+    <creator>
+      <creatorName>Imran Asif</creatorName>
+      <nameIdentifier nameIdentifierScheme="ORCID" schemeURI="http://orcid.org/">0000-0002-1144-6265</nameIdentifier>
+      <affiliation>Heriot-Watt University</affiliation>
+    </creator>
+    <creator>
+      <creatorName>Jessica Chen-Burger</creatorName>
+      <nameIdentifier nameIdentifierScheme="ORCID" schemeURI="http://orcid.org/">0000-0002-7909-0541</nameIdentifier>
+      <affiliation>Heriot-Watt University</affiliation>
+    </creator>
+    <creator>
+      <creatorName>Alasdair J G Gray</creatorName>
+      <nameIdentifier nameIdentifierScheme="ORCID" schemeURI="http://orcid.org/">0000-0002-5711-4872</nameIdentifier>
+      <affiliation>Heriot-Watt University</affiliation>
+    </creator>
+  </creators>
+  <titles>
+    <title>Data Quality Issues in Current Nanopublications</title>
+  </titles>
+  <publisher>Zenodo</publisher>
+  <publicationYear>2019</publicationYear>
+  <subjects>
+    <subject>Nanopublication</subject>
+    <subject>Semantic Publishing</subject>
+    <subject>Semantic Web</subject>
+    <subject>Linked Data</subject>
+    <subject>Data Quality</subject>
+    <subject>Provenance</subject>
+    <subject>SPARQL</subject>
+    <subject>Jena Fuseki</subject>
+    <subject>Virtuoso</subject>
+  </subjects>
+  <dates>
+    <date dateType="Issued">2019-07-05</date>
+  </dates>
+  <language>en</language>
+  <resourceType resourceTypeGeneral="Text">Preprint</resourceType>
+  <alternateIdentifiers>
+    <alternateIdentifier alternateIdentifierType="url">https://zenodo.org/record/3358983</alternateIdentifier>
+  </alternateIdentifiers>
+  <relatedIdentifiers>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Cites">10.1109/eScience.2018.00024</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Cites">10.1007/978-3-319-68288-4_26</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="IsVersionOf">10.5281/zenodo.3268903</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="URL" relationType="IsPartOf">https://zenodo.org/communities/ro</relatedIdentifier>
+  </relatedIdentifiers>
+  <rightsList>
+    <rights rightsURI="http://creativecommons.org/licenses/by/4.0/legalcode">Creative Commons Attribution 4.0 International</rights>
+    <rights rightsURI="info:eu-repo/semantics/openAccess">Open Access</rights>
+  </rightsList>
+  <descriptions>
+    <description descriptionType="Abstract">&lt;p&gt;Nanopublications are a granular way of publishing scientific claims together with their associated provenance and publication information. More than 10 million nanopublications have been published by a handful of researchers covering a wide range of topics within the life sciences. We were motivated to replicate an existing analysis of these nanopublications, but then went deeper into the structure of the existing nanopublications. In this paper, we analyse the usage of nanopublications by investigating the distribution of triples in each part and discuss the data quality issues that were subsequently revealed. We argue that there is a need for the community to develop a set of guidelines for the modelling of nanopublications.&lt;/p&gt;</description>
+  </descriptions>
+</resource>

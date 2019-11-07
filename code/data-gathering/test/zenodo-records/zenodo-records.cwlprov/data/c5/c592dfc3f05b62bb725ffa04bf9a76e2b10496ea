@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://datacite.org/schema/kernel-4" xsi:schemaLocation="http://datacite.org/schema/kernel-4 http://schema.datacite.org/meta/kernel-4.1/metadata.xsd">
+  <identifier identifierType="DOI">10.5281/zenodo.3337883</identifier>
+  <creators>
+    <creator>
+      <creatorName>Eoghan Ó Carragáin,</creatorName>
+      <familyName>Eoghan Ó Carragáin</familyName>
+    </creator>
+    <creator>
+      <creatorName>Carole Goble</creatorName>
+    </creator>
+    <creator>
+      <creatorName>Peter Sefton</creatorName>
+    </creator>
+    <creator>
+      <creatorName>Stian Soiland-Reyes</creatorName>
+    </creator>
+  </creators>
+  <titles>
+    <title>RO-Crate, a lightweight approach to Research Object data packaging</title>
+  </titles>
+  <publisher>Zenodo</publisher>
+  <publicationYear>2019</publicationYear>
+  <dates>
+    <date dateType="Issued">2019-07-16</date>
+  </dates>
+  <resourceType resourceTypeGeneral="Text">Preprint</resourceType>
+  <alternateIdentifiers>
+    <alternateIdentifier alternateIdentifierType="url">https://zenodo.org/record/3337883</alternateIdentifier>
+  </alternateIdentifiers>
+  <relatedIdentifiers>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="IsNewVersionOf">10.5281/zenodo.3250687</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="URL" relationType="IsDocumentedBy">https://github.com/ResearchObject/ro2019/issues/3</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="IsVersionOf">10.5281/zenodo.3337882</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="URL" relationType="IsPartOf">https://zenodo.org/communities/ro</relatedIdentifier>
+  </relatedIdentifiers>
+  <rightsList>
+    <rights rightsURI="http://creativecommons.org/licenses/by/4.0/legalcode">Creative Commons Attribution 4.0 International</rights>
+    <rights rightsURI="info:eu-repo/semantics/openAccess">Open Access</rights>
+  </rightsList>
+  <descriptions>
+    <description descriptionType="Abstract">&lt;p&gt;A &lt;strong&gt;Research Object&lt;/strong&gt; (RO) provides a machine-readable mechanism to communicate the diverse set of digital and real-world resources that contribute to an item of research. The aim of an RO is to replace traditional academic publications of static PDFs, to rather provide a complete and structured archive of the items (such as people, organisations, funding, equipment, software etc) that contributed to the research outcome, including their identifiers, provenance, relations and annotations.&lt;/p&gt;
+
+&lt;p&gt;This is increasingly important as researchers now rely heavily on computational analysis, yet we are facing a &lt;em&gt;reproducibility crisis&lt;/em&gt; as key components are often not sufficiently tracked, archived or reported.&lt;/p&gt;
+
+&lt;p&gt;We are developing &lt;em&gt;Research Object Crate&lt;/em&gt; (or &lt;strong&gt;RO-Crate&lt;/strong&gt; for short), a lightweight approach to package research data with their structured metadata, based on schema.org annotations in a formalized JSON-LD format that can be used independent of infrastructure to encourage FAIR sharing of reproducible datasets and analytical methods.&lt;/p&gt;</description>
+  </descriptions>
+  <fundingReferences>
+    <fundingReference>
+      <funderName>European Commission</funderName>
+      <funderIdentifier funderIdentifierType="Crossref Funder ID">10.13039/501100000780</funderIdentifier>
+      <awardNumber awardURI="info:eu-repo/grantAgreement/EC/H2020/823830/">823830</awardNumber>
+      <awardTitle>BioExcel-2 Centre of Excellence for Computational Biomolecular Research</awardTitle>
+    </fundingReference>
+    <fundingReference>
+      <funderName>European Commission</funderName>
+      <funderIdentifier funderIdentifierType="Crossref Funder ID">10.13039/501100000780</funderIdentifier>
+      <awardNumber awardURI="info:eu-repo/grantAgreement/EC/H2020/675728/">675728</awardNumber>
+      <awardTitle>Centre of Excellence for Biomolecular Research</awardTitle>
+    </fundingReference>
+  </fundingReferences>
+</resource>

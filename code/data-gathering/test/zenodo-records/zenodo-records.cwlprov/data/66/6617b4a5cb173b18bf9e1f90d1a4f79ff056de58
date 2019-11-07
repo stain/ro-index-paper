@@ -1,0 +1,55 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://datacite.org/schema/kernel-4" xsi:schemaLocation="http://datacite.org/schema/kernel-4 http://schema.datacite.org/meta/kernel-4.1/metadata.xsd">
+  <identifier identifierType="DOI">10.5281/zenodo.1484502</identifier>
+  <creators>
+    <creator>
+      <creatorName>Anita Bandrowski</creatorName>
+      <nameIdentifier nameIdentifierScheme="ORCID" schemeURI="http://orcid.org/">0000-0002-5497-0243</nameIdentifier>
+      <affiliation>SciCrunch / NIF / RRID</affiliation>
+    </creator>
+  </creators>
+  <titles>
+    <title>RRIDs are Research Object Identifiers; a practical use case (mainly for biology)</title>
+  </titles>
+  <publisher>Zenodo</publisher>
+  <publicationYear>2018</publicationYear>
+  <dates>
+    <date dateType="Issued">2018-10-29</date>
+  </dates>
+  <resourceType resourceTypeGeneral="Text">Presentation</resourceType>
+  <alternateIdentifiers>
+    <alternateIdentifier alternateIdentifierType="url">https://zenodo.org/record/1484502</alternateIdentifier>
+  </alternateIdentifiers>
+  <relatedIdentifiers>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Documents">10.5281/zenodo.1412731</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="URL" relationType="References">https://grants.nih.gov/grants/guide/notice-files/not-od-16-011.html</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Cites">10.7717/peerj.148</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="URL" relationType="Cites">https://www.nature.com/collections/prbfkwmwvz</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Cites">10.1016/j.surg.2016.03.001</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="URL" relationType="References">https://www.jax.org/strain/005557</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="URL" relationType="Cites">http://n2t.net/RRID:IMSR_JAX:005557</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="URL" relationType="References">http://antibodyregistry.org/</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Cites">10.7554/eLife.14862</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="URL" relationType="References">https://blog.box.com/blog/introducing-developer-tokens</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="URL" relationType="References">https://web.hypothes.is/</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="URL" relationType="IsSupplementedBy">https://scicrunch.org/resolver/AB_2535792.xml</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="URL" relationType="Cites">https://scholar.google.nl/scholar?hl=en&amp;as_sdt=0%2C5&amp;q=RRID%3A+SCR_001622&amp;btnG=</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="URL" relationType="References">https://orcid.org/0000-0002-5497-0243#body-work-list</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Cites">10.1002/cne.23913</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="IsVersionOf">10.5281/zenodo.1484501</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="URL" relationType="IsPartOf">https://zenodo.org/communities/ro</relatedIdentifier>
+  </relatedIdentifiers>
+  <rightsList>
+    <rights rightsURI="http://creativecommons.org/licenses/by/4.0/legalcode">Creative Commons Attribution 4.0 International</rights>
+    <rights rightsURI="info:eu-repo/semantics/openAccess">Open Access</rights>
+  </rightsList>
+  <descriptions>
+    <description descriptionType="Abstract">&lt;p&gt;&lt;a href="https://scicrunch.org/resources"&gt;Research Resource IDentifiers&lt;/a&gt;, RRIDs, are stable unique identifiers, that can be included in the methods&lt;br&gt;
+section of research papers. RRIDs are currently used to identify the cell line, antibody, transgenic organism or software tool used in the study and they have been adopted by about 100 journals as a matter of publishing best practice, i.e., they are in the instructions to authors, and have appeared in over 500 journals. Including RRIDs in a paper, makes the resources more findable.&lt;/p&gt;
+
+&lt;p&gt;RRIDs were created to introduce a standardized and machine-friendly syntax for reporting on resource use so that it would be easy not only to identify the exact resource used, but to make it possible to find all studies that used a particular research resource.&lt;/p&gt;
+
+&lt;p&gt;Full abstract: &lt;a href="https://doi.org/10.5281/zenodo.1412731"&gt;https://doi.org/10.5281/zenodo.1412731&lt;/a&gt;&lt;/p&gt;</description>
+    <description descriptionType="Other">Accepted Talk at RO2018</description>
+  </descriptions>
+</resource>

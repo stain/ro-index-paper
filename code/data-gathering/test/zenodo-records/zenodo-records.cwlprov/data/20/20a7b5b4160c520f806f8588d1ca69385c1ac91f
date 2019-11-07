@@ -1,0 +1,95 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://datacite.org/schema/kernel-4" xsi:schemaLocation="http://datacite.org/schema/kernel-4 http://schema.datacite.org/meta/kernel-4.1/metadata.xsd">
+  <identifier identifierType="DOI">10.5281/zenodo.1473157</identifier>
+  <creators>
+    <creator>
+      <creatorName>Farah Zaib Khan</creatorName>
+      <nameIdentifier nameIdentifierScheme="ORCID" schemeURI="http://orcid.org/">0000-0002-6337-3037</nameIdentifier>
+      <affiliation>The University of Melbourne; Common Workflow Language project</affiliation>
+    </creator>
+    <creator>
+      <creatorName>Stian Soiland-Reyes</creatorName>
+      <nameIdentifier nameIdentifierScheme="ORCID" schemeURI="http://orcid.org/">0000-0001-9842-9718</nameIdentifier>
+      <affiliation>The University of Manchester; Common Workflow Language project</affiliation>
+    </creator>
+    <creator>
+      <creatorName>Richard O. Sinnott</creatorName>
+      <nameIdentifier nameIdentifierScheme="ORCID" schemeURI="http://orcid.org/">0000-0001-5998-222X</nameIdentifier>
+      <affiliation>The University of Melbourne</affiliation>
+    </creator>
+    <creator>
+      <creatorName>Andrew Lonie</creatorName>
+      <nameIdentifier nameIdentifierScheme="ORCID" schemeURI="http://orcid.org/">0000-0002-2006-3856</nameIdentifier>
+      <affiliation>The University of Melbourne</affiliation>
+    </creator>
+    <creator>
+      <creatorName>Carole Goble</creatorName>
+      <nameIdentifier nameIdentifierScheme="ORCID" schemeURI="http://orcid.org/">0000-0003-1219-2137</nameIdentifier>
+      <affiliation>The University of Manchester</affiliation>
+    </creator>
+    <creator>
+      <creatorName>Michael R. Crusoe</creatorName>
+      <nameIdentifier nameIdentifierScheme="ORCID" schemeURI="http://orcid.org/">0000-0002-2961-9670</nameIdentifier>
+      <affiliation>Common Workflow Language project</affiliation>
+    </creator>
+  </creators>
+  <titles>
+    <title>CWLProv: Interoperable Retrospective Provenance Capture and Computational Analysis Sharing</title>
+  </titles>
+  <publisher>Zenodo</publisher>
+  <publicationYear>2018</publicationYear>
+  <subjects>
+    <subject>Provenance</subject>
+    <subject>Common Workflow Language</subject>
+    <subject>CWL</subject>
+    <subject>Research Object</subject>
+    <subject>RO</subject>
+    <subject>BagIt</subject>
+    <subject>Interoperability</subject>
+    <subject>Portability</subject>
+    <subject>Scientific Workflows</subject>
+    <subject>Containers</subject>
+  </subjects>
+  <dates>
+    <date dateType="Issued">2018-10-28</date>
+  </dates>
+  <resourceType resourceTypeGeneral="Text">Working paper</resourceType>
+  <alternateIdentifiers>
+    <alternateIdentifier alternateIdentifierType="url">https://zenodo.org/record/1473157</alternateIdentifier>
+  </alternateIdentifiers>
+  <relatedIdentifiers>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Cites">10.1109/BigData.2016.7840618</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Cites">10.5281/zenodo.592090</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Cites">10.5281/zenodo.51314</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="URL" relationType="IsDocumentedBy">https://zenodo.org/record/1304969</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="IsSupplementedBy">10.17632/xnwncxpw42.1</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="IsSupplementedBy">10.17632/6wtpgr3kbj.1</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="IsSupplementedBy">10.17632/97hj93mkfd.1</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="HasPart">10.5281/zenodo.1471376</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="HasPart">10.5281/zenodo.1471585</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="HasPart">10.5281/zenodo.1471589</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="IsVersionOf">10.5281/zenodo.1208477</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="URL" relationType="IsPartOf">https://zenodo.org/communities/linkeddata</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="URL" relationType="IsPartOf">https://zenodo.org/communities/ro</relatedIdentifier>
+  </relatedIdentifiers>
+  <rightsList>
+    <rights rightsURI="http://creativecommons.org/licenses/by/4.0/legalcode">Creative Commons Attribution 4.0 International</rights>
+    <rights rightsURI="info:eu-repo/semantics/openAccess">Open Access</rights>
+  </rightsList>
+  <descriptions>
+    <description descriptionType="Abstract">&lt;p&gt;&lt;strong&gt;Background:&lt;/strong&gt; The automation of data analysis in the form of scientific workflows has become a widely adopted practice in many fields of research. Computationally driven data-intensive experiments using workflows enable &lt;strong&gt;A&lt;/strong&gt;utomation, &lt;strong&gt;S&lt;/strong&gt;caling, &lt;strong&gt;A&lt;/strong&gt;daption and &lt;strong&gt;P&lt;/strong&gt;rovenance support (&lt;strong&gt;ASAP&lt;/strong&gt;). However, there are still several challenges associated with the effective sharing, publication, understandability and reproducibility of such workflows due to the incomplete capture of provenance and lack of interoperability between different technical (software) platforms.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Results:&lt;/strong&gt; Based on best practice recommendations identified from literature on workflow sharing and publishing, we define four hierarchical levels of provenance that collectively result in comprehensive and fully re-executable workflows when used with domain-specific information. To realise these levels, we present &lt;em&gt;CWLProv&lt;/em&gt;, a standard-based format to represent any workflow-based computational analysis to produce workflow output artefacts that satisfy the various levels of provenance. We utilise open source community-driven standards; interoperable workflow definitions in &lt;em&gt;Common Workflow Language&lt;/em&gt; (CWL), structured provenance representation using the &lt;em&gt;W3C PROV&lt;/em&gt; model, and resource aggregation and sharing as workflow-centric Research Objects (RO) generated along with the final outputs of a given workflow enactment. We illustrate this approach through a practical demonstration of CWLProv applied to real-life genomic workflows developed by independent groups.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Conclusions: &lt;/strong&gt;Our approach to workflow sharing and publication mitigates &lt;em&gt;workflow decay&lt;/em&gt;. The underlying principles of the standards utilised by CWLProv enable semantically-rich and executable Research Objects that capture computational workflows with retrospective provenance such that any platform supporting CWL will be able to understand the analysis, re-use the methods for partial re-runs, or reproduce the analysis to validate the published findings.&lt;/p&gt;</description>
+    <description descriptionType="Other">In preparation for submission to GigaScience</description>
+  </descriptions>
+  <fundingReferences>
+    <fundingReference>
+      <funderName>European Commission</funderName>
+      <funderIdentifier funderIdentifierType="Crossref Funder ID">10.13039/501100000780</funderIdentifier>
+      <awardNumber awardURI="info:eu-repo/grantAgreement/EC/H2020/675728/">675728</awardNumber>
+      <awardTitle>Centre of Excellence for Biomolecular Research</awardTitle>
+    </fundingReference>
+  </fundingReferences>
+</resource>

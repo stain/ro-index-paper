@@ -1,0 +1,106 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://datacite.org/schema/kernel-4" xsi:schemaLocation="http://datacite.org/schema/kernel-4 http://schema.datacite.org/meta/kernel-4.1/metadata.xsd">
+  <identifier identifierType="DOI">10.5281/zenodo.1314672</identifier>
+  <creators>
+    <creator>
+      <creatorName>Manghi, Paolo</creatorName>
+      <givenName>Paolo</givenName>
+      <familyName>Manghi</familyName>
+      <nameIdentifier nameIdentifierScheme="ORCID" schemeURI="http://orcid.org/">0000-0001-7291-3210</nameIdentifier>
+      <affiliation>Institute of Information Science and Technologies, National Research Council</affiliation>
+    </creator>
+    <creator>
+      <creatorName>Manunta, Michele</creatorName>
+      <givenName>Michele</givenName>
+      <familyName>Manunta</familyName>
+      <nameIdentifier nameIdentifierScheme="ORCID" schemeURI="http://orcid.org/">0000-0002-7245-1551</nameIdentifier>
+      <affiliation>Institute for the Electromagnetic Sensing of the Environment, National Research Council</affiliation>
+    </creator>
+    <creator>
+      <creatorName>Baglioni, Miriam</creatorName>
+      <givenName>Miriam</givenName>
+      <familyName>Baglioni</familyName>
+      <nameIdentifier nameIdentifierScheme="ORCID" schemeURI="http://orcid.org/">0000-0002-2273-9004</nameIdentifier>
+      <affiliation>Institute of Information Science and Technologies, National Research Council</affiliation>
+    </creator>
+    <creator>
+      <creatorName>Bardi, Alessia</creatorName>
+      <givenName>Alessia</givenName>
+      <familyName>Bardi</familyName>
+      <nameIdentifier nameIdentifierScheme="ORCID" schemeURI="http://orcid.org/">0000-0002-1112-1292</nameIdentifier>
+      <affiliation>Institute of Information Science and Technologies, National Research Council</affiliation>
+    </creator>
+    <creator>
+      <creatorName>Casu, Francesco</creatorName>
+      <givenName>Francesco</givenName>
+      <familyName>Casu</familyName>
+      <nameIdentifier nameIdentifierScheme="ORCID" schemeURI="http://orcid.org/">0000-0001-8555-6494</nameIdentifier>
+      <affiliation>Institute for the Electromagnetic Sensing of the Environment, National Research Council</affiliation>
+    </creator>
+    <creator>
+      <creatorName>De Luca, Claudio</creatorName>
+      <givenName>Claudio</givenName>
+      <familyName>De Luca</familyName>
+      <affiliation>Institute for the Electromagnetic Sensing of the Environment, National Research Council</affiliation>
+    </creator>
+    <creator>
+      <creatorName>Kokogiannaki, Argiro</creatorName>
+      <givenName>Argiro</givenName>
+      <familyName>Kokogiannaki</familyName>
+      <nameIdentifier nameIdentifierScheme="ORCID" schemeURI="http://orcid.org/">0000-0002-3880-0244</nameIdentifier>
+      <affiliation>Department of Informatics and Telecommunications National and Kapodistrian University of Athens</affiliation>
+    </creator>
+  </creators>
+  <titles>
+    <title>Enabling Open Science publishing for Research Infrastructures via OpenAIRE: The EPOS use-case</title>
+  </titles>
+  <publisher>Zenodo</publisher>
+  <publicationYear>2018</publicationYear>
+  <subjects>
+    <subject>reproducibility</subject>
+    <subject>Open Science</subject>
+    <subject>research objects</subject>
+    <subject>OpenAIRE</subject>
+    <subject>EPOS</subject>
+  </subjects>
+  <dates>
+    <date dateType="Issued">2018-07-18</date>
+  </dates>
+  <resourceType resourceTypeGeneral="Text">Conference paper</resourceType>
+  <alternateIdentifiers>
+    <alternateIdentifier alternateIdentifierType="url">https://zenodo.org/record/1314672</alternateIdentifier>
+  </alternateIdentifiers>
+  <relatedIdentifiers>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="IsVersionOf">10.5281/zenodo.1314671</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="URL" relationType="IsPartOf">https://zenodo.org/communities/openaire</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="URL" relationType="IsPartOf">https://zenodo.org/communities/ro</relatedIdentifier>
+  </relatedIdentifiers>
+  <rightsList>
+    <rights rightsURI="http://creativecommons.org/licenses/by/4.0/legalcode">Creative Commons Attribution 4.0 International</rights>
+    <rights rightsURI="info:eu-repo/semantics/openAccess">Open Access</rights>
+  </rightsList>
+  <descriptions>
+    <description descriptionType="Abstract">&lt;p&gt;Research infrastructures support scientists of a research community with the tools and services they require to perform scientific activities in the digital era. They are &amp;ldquo;system of systems&amp;rdquo;, often mature enough to support reproducibility of science by keeping forms of research objects. Still, often, such research objects are not published as scientific products. Publishing is limited to articles, possibly associated to datasets, and rarely to software. In this article, we present the solution proposed by the OpenAIRE infrastructure to solve this issue, with minimal efforts for research infrastructures and without renouncing any of their services or current practices. OpenAIRE offers a Research Community Dashboard service, designed to flank research infrastructures with scholarly communication services for discovery and publishing of an interlinked graph of articles, datasets, software, and other products, including research objects when these can be built. We present the Research Community Dashboard and its application in a real-case scenario, the one of the European Plate Observing System (EPOS) research infrastructure.&lt;/p&gt;</description>
+    <description descriptionType="Other">Preprint submitted to RO2018 workshop at IEEE eScience Conference 2018</description>
+  </descriptions>
+  <fundingReferences>
+    <fundingReference>
+      <funderName>European Commission</funderName>
+      <funderIdentifier funderIdentifierType="Crossref Funder ID">10.13039/501100000780</funderIdentifier>
+      <awardNumber awardURI="info:eu-repo/grantAgreement/EC/H2020/731011/">731011</awardNumber>
+      <awardTitle>OpenAIRE - CONNECTing scientific results in support of Open Science</awardTitle>
+    </fundingReference>
+    <fundingReference>
+      <funderName>European Commission</funderName>
+      <funderIdentifier funderIdentifierType="Crossref Funder ID">10.13039/501100000780</funderIdentifier>
+      <awardNumber awardURI="info:eu-repo/grantAgreement/EC/FP7/262229/">262229</awardNumber>
+      <awardTitle>European Plate Observing System</awardTitle>
+    </fundingReference>
+    <fundingReference>
+      <funderName>European Commission</funderName>
+      <funderIdentifier funderIdentifierType="Crossref Funder ID">10.13039/501100000780</funderIdentifier>
+      <awardNumber awardURI="info:eu-repo/grantAgreement/EC/H2020/777541/">777541</awardNumber>
+      <awardTitle>OpenAIRE Advancing Open Scholarship</awardTitle>
+    </fundingReference>
+  </fundingReferences>
+</resource>

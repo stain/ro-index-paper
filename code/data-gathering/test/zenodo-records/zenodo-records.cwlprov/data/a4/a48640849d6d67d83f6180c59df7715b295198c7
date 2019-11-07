@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://datacite.org/schema/kernel-4" xsi:schemaLocation="http://datacite.org/schema/kernel-4 http://schema.datacite.org/meta/kernel-4.1/metadata.xsd">
+  <identifier identifierType="DOI">10.5281/zenodo.1310034</identifier>
+  <creators>
+    <creator>
+      <creatorName>Madduri, Ravi</creatorName>
+      <givenName>Ravi</givenName>
+      <familyName>Madduri</familyName>
+      <nameIdentifier nameIdentifierScheme="ORCID" schemeURI="http://orcid.org/">0000-0003-2130-2887</nameIdentifier>
+      <affiliation>Uni</affiliation>
+    </creator>
+  </creators>
+  <titles>
+    <title>Reproducible big data science: A case study in continuous FAIRness</title>
+  </titles>
+  <publisher>Zenodo</publisher>
+  <publicationYear>2018</publicationYear>
+  <dates>
+    <date dateType="Issued">2018-07-11</date>
+  </dates>
+  <resourceType resourceTypeGeneral="Other"/>
+  <alternateIdentifiers>
+    <alternateIdentifier alternateIdentifierType="url">https://zenodo.org/record/1310034</alternateIdentifier>
+  </alternateIdentifiers>
+  <relatedIdentifiers>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="IsVersionOf">10.5281/zenodo.1310033</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="URL" relationType="IsPartOf">https://zenodo.org/communities/ro</relatedIdentifier>
+  </relatedIdentifiers>
+  <rightsList>
+    <rights rightsURI="http://creativecommons.org/licenses/by/4.0/legalcode">Creative Commons Attribution 4.0 International</rights>
+    <rights rightsURI="info:eu-repo/semantics/openAccess">Open Access</rights>
+  </rightsList>
+  <descriptions>
+    <description descriptionType="Abstract">&lt;p&gt;Big biomedical data create exciting opportunities for discovery but make it difficult to capture analyses and outputs in forms that are findable, accessible, interoperable, and reusable (FAIR). In response, we describe tools that make it easy to capture, and assign identifiers to, data and code throughout the data lifecycle. We illustrate the use of these tools via a case study [1] involving a multi- step analysis that creates an atlas of putative transcription factor binding sites from terabytes of ENCODE DNase I hypersensitive sites sequencing data. We show how the tools automate routine but complex tasks, capture analysis algorithms in understandable and reusable forms, and harness fast networks and powerful cloud computers to process data rapidly, all without sacrificing usability or reproducibility--thus ensuring that big data are not hard-to-(re)use data.&lt;/p&gt;
+
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+
+&lt;p&gt;In this talk, we will describe the enhancements made to the Galaxy framework to support working with datasets referred to by minids[2], support analyzing BagIt-based research objects called BDBags [2], execution using software encapsulated using docker containers with unique identifiers. We will describe the tools, services developed to create an end-to-end reproducible analysis pipelines while adhering to FAIR [3] principles.&lt;/p&gt;
+
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+
+&lt;ol&gt;
+	&lt;li&gt;Reproducible big data science: A case study in continuous FAIRness. Ravi K Madduri, Kyle Chard, Mike D&amp;#39;Arcy, Segun C Jung, Alexis Rodriguez, Dinanath Sulakhe, Eric W Deutsch, Cory Funk, Ben Heavner, Matthew Richards, Paul Shannon, Gustavo Glusman, Nathan Price, Carl Kesselman, Ian Foster. bioRxiv 268755; doi:&amp;nbsp;&lt;a href="https://doi.org/10.1101/268755"&gt;https://doi.org/10.1101/268755&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;&amp;nbsp;Chard K, D&amp;rsquo;Arcy M, Heavner B, Foster I, Kesselman C, Madduri R, et al. I&amp;rsquo;ll take that to go: Big data bags and minimal identifiers for exchange of large, complex datasets. In: IEEE International Conference on Big Data; 2016. p. 319&amp;ndash;328.&lt;/li&gt;
+	&lt;li&gt;Wilkinson MD, Dumontier M, Aalbersberg IJ, Appleton G, Axton M, Baak A, et al. The FAIR Guiding Principles for scientific data management and stewardship. Scientific Data. 2016;3:160018.&lt;/li&gt;
+&lt;/ol&gt;</description>
+  </descriptions>
+</resource>

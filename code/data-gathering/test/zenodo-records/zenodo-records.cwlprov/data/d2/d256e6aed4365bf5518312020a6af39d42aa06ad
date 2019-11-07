@@ -1,0 +1,133 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://datacite.org/schema/kernel-4" xsi:schemaLocation="http://datacite.org/schema/kernel-4 http://schema.datacite.org/meta/kernel-4.1/metadata.xsd">
+  <identifier identifierType="URL">https://zenodo.org/record/2632836</identifier>
+  <creators>
+    <creator>
+      <creatorName>Farah Zaib Khan</creatorName>
+      <nameIdentifier nameIdentifierScheme="ORCID" schemeURI="http://orcid.org/">0000-0002-6337-3037</nameIdentifier>
+      <affiliation>Department of Computing and Information Systems, The University of Melbourne, Australia</affiliation>
+    </creator>
+    <creator>
+      <creatorName>Stian Soiland-Reyes</creatorName>
+      <nameIdentifier nameIdentifierScheme="ORCID" schemeURI="http://orcid.org/">0000-0001-9842-9718</nameIdentifier>
+      <affiliation>School of Computer Science, The University of Manchester, UK</affiliation>
+    </creator>
+  </creators>
+  <titles>
+    <title>CWL run of Alignment Workflow (CWLProv 0.6.0 Research Object)</title>
+  </titles>
+  <publisher>Zenodo</publisher>
+  <publicationYear>2018</publicationYear>
+  <subjects>
+    <subject>provenance</subject>
+    <subject>workflow</subject>
+    <subject>research object</subject>
+    <subject>common workflow language</subject>
+    <subject>bioinformatics</subject>
+    <subject>reproducibility</subject>
+  </subjects>
+  <dates>
+    <date dateType="Issued">2018-12-04</date>
+  </dates>
+  <resourceType resourceTypeGeneral="Dataset"/>
+  <alternateIdentifiers>
+    <alternateIdentifier alternateIdentifierType="url">https://zenodo.org/record/2632836</alternateIdentifier>
+  </alternateIdentifiers>
+  <relatedIdentifiers>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="IsCitedBy">10.5281/zenodo.1208477</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="URL" relationType="Cites">https://w3id.org/cwl/prov/0.6.0</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="URL" relationType="HasPart">https://github.com/FarahZKhan/topmed-workflows/tree/cwlprov_testing</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="IsCompiledBy">10.5281/zenodo.1471594</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="URL" relationType="IsCompiledBy">https://w3id.org/cwl/view/git/923ae325fa3a6d3ee3871539c65afa06ac86ac54/aligner/sbg-alignment-cwl/topmed-alignment.cwl</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="URL" relationType="IsSupplementedBy">https://github.com/DataBiosphere</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="URL" relationType="IsSupplementedBy">https://pypi.org/project/cwlprov/</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="URL" relationType="IsIdenticalTo">https://data.mendeley.com/datasets/6wtpgr3kbj/1</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="IsIdenticalTo">10.17632/6wtpgr3kbj.1</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="URL" relationType="IsPartOf">https://zenodo.org/communities/bioexcel</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="URL" relationType="IsPartOf">https://zenodo.org/communities/ro</relatedIdentifier>
+  </relatedIdentifiers>
+  <version>1</version>
+  <rightsList>
+    <rights rightsURI="http://creativecommons.org/licenses/by/4.0/legalcode">Creative Commons Attribution 4.0 International</rights>
+    <rights rightsURI="info:eu-repo/semantics/openAccess">Open Access</rights>
+  </rightsList>
+  <descriptions>
+    <description descriptionType="Abstract">&lt;p&gt;This dataset folder is a &lt;strong&gt;CWLProv Research Object&lt;/strong&gt; that captures the &lt;a href="http://commonwl.org/"&gt;Common Workflow Language&lt;/a&gt; execution provenance, see &lt;a href="https://w3id.org/cwl/prov/0.6.0"&gt;CWLProv 0.6.0&lt;/a&gt; or use the &lt;a href="https://pypi.org/project/cwlprov/"&gt;cwlprov Python tool&lt;/a&gt; to explore.&lt;/p&gt;
+
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+
+&lt;p&gt;The CWL &lt;a href="https://w3id.org/cwl/view/git/923ae325fa3a6d3ee3871539c65afa06ac86ac54/aligner/sbg-alignment-cwl/topmed-alignment.cwl"&gt;alignment workflow&lt;/a&gt; included in this case study is designed by &lt;a href="https://github.com/DataBiosphere"&gt;Data Biosphere&lt;/a&gt;. It adapts the alignment pipeline originally developed at Abecasis Lab, The University of Michigan. This &lt;a href="https://github.com/FarahZKhan/topmed-workflows/tree/cwlprov_testing"&gt;workflow&lt;/a&gt; is part of NIH Data Commons initiative and comprises of four stages.&lt;/p&gt;
+
+&lt;p&gt;First step, &lt;strong&gt;&lt;em&gt;Pre-align&lt;/em&gt;&lt;/strong&gt;&lt;em&gt;,&lt;/em&gt; accepts a &lt;em&gt;Compressed Alignment Map&lt;/em&gt; (CRAM) file (a compressed format for BAM files developed &lt;em&gt;by European Bioinformatics Institute&lt;/em&gt; (EBI)) and human genome reference sequence as input and using underlying software utilities of &lt;strong&gt;SAMtools&lt;/strong&gt; such as &lt;em&gt;view&lt;/em&gt;, &lt;em&gt;sort&lt;/em&gt; and &lt;em&gt;fixmate&lt;/em&gt; returns a list of fastq files which can be used as input for the next step.&lt;/p&gt;
+
+&lt;p&gt;The next step &lt;strong&gt;&lt;em&gt;Align&lt;/em&gt;&lt;/strong&gt; also accepts the human reference genome as input along with the output files from &lt;em&gt;Pre-align&lt;/em&gt; and uses &lt;strong&gt;BWA-mem&lt;/strong&gt; to generate aligned reads as BAM files. &lt;strong&gt;SAMBLASTER&lt;/strong&gt; is used to mark duplicate reads and &lt;strong&gt;SAMtools&lt;/strong&gt; view to convert read files from SAM to BAM format.&lt;/p&gt;
+
+&lt;p&gt;The BAM files generated after &lt;em&gt;lign&lt;/em&gt; are sorted with &lt;strong&gt;&lt;em&gt;SAMtool sort&lt;/em&gt;&lt;/strong&gt;&amp;#39;.&lt;/p&gt;
+
+&lt;p&gt;Finally, these sorted alignment files are merged to produce single sorted BAM file using SAMtools merge in &lt;strong&gt;&lt;em&gt;Post-align&lt;/em&gt;&lt;/strong&gt; step.&lt;/p&gt;
+
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Steps to reproduce&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;This analysis was run using a 16-core Linux cloud instance with 64GB RAM and pre-installed docker.&lt;/p&gt;
+
+&lt;ol&gt;
+	&lt;li&gt;
+	&lt;p&gt;Install &lt;strong&gt;gsutils&lt;/strong&gt;&lt;br&gt;
+	&amp;nbsp;&lt;/p&gt;
+
+	&lt;pre&gt;&lt;code class="language-bash"&gt;export CLOUD_SDK_REPO="cloud-sdk-$(lsb_release -c -s)"
+
+echo "deb http://packages.cloud.google.com/apt $CLOUD_SDK_REPO main" | \
+  sudo tee -a /etc/apt/sources.list.d/google-cloud-sdk.list
+
+curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | \
+  sudo apt-key add -
+
+sudo apt-get update &amp;amp;&amp;amp; sudo apt-get install google-cloud-sdk&lt;/code&gt;&lt;/pre&gt;
+
+	&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+	&lt;/li&gt;
+	&lt;li&gt;
+	&lt;p&gt;Get the data and make the analysis environment ready:&lt;br&gt;
+	&amp;nbsp;&lt;/p&gt;
+
+	&lt;pre&gt;&lt;code class="language-bash"&gt;git clone https://github.com/FarahZKhan/topmed-workflows.git
+cd topmed-workflows
+git checkout cwlprov_testing
+cd aligner/sbg-alignment-cwl
+
+# this is a custom script download google bucket files from json files and create a local json
+# it needs gsutil to be installed though
+git clone https://github.com/DailyDreaming/fetch_gs_frm_json.git
+
+# Wait... this should download ~18Gb.
+python2.7 fetch_gs_frm_json/dl_gsfiles_frm_json.py topmed-alignment.sample.json
+&lt;/code&gt;&lt;/pre&gt;
+
+	&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+	&lt;/li&gt;
+	&lt;li&gt;
+	&lt;p&gt;Run the following commands to create the CWLProv Research Object:&lt;/p&gt;
+
+	&lt;pre&gt;&lt;code class="language-bash"&gt;time cwltool --no-match-user --provenance alignmnentwf0.6.0 --tmp-outdir-prefix=/CWLProv_workflow_testing/intermediate_temp/temp --tmpdir-prefix=/CWLProv_workflow_testing/intermediate_temp/temp topmed-alignment.cwl topmed-alignment.sample.json.new
+
+zip -r alignment_0.6.0_linux.zip alignment_0.6.0_linux
+
+sha256sum alignment_0.6.0_linux.zip &amp;gt; alignment_0.6.0_linux.zip.sha25&lt;/code&gt;&lt;/pre&gt;
+
+	&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+	&lt;/li&gt;
+&lt;/ol&gt;</description>
+    <description descriptionType="Other">Mirror of Mendeley Data upload https://data.mendeley.com/datasets/6wtpgr3kbj/1</description>
+  </descriptions>
+  <fundingReferences>
+    <fundingReference>
+      <funderName>European Commission</funderName>
+      <funderIdentifier funderIdentifierType="Crossref Funder ID">10.13039/501100000780</funderIdentifier>
+      <awardNumber awardURI="info:eu-repo/grantAgreement/EC/H2020/675728/">675728</awardNumber>
+      <awardTitle>Centre of Excellence for Biomolecular Research</awardTitle>
+    </fundingReference>
+  </fundingReferences>
+</resource>
