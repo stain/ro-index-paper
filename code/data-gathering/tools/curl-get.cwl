@@ -38,7 +38,7 @@ hints:
           - https://packages.debian.org/sid/curl
         version: [ "7.39.0", "7.65.3", "7.38.0", "7.52.1", "7.64.0", "7.65.3" ]
   DockerRequirement:
-    dockerPull: appropriate/curl:3.1
+    dockerPull: curlimages/curl:7.67.0
 
 inputs:
   url:
