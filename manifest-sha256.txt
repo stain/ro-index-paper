@@ -1,0 +1,7 @@
+635bd06020131b3aba5281dff35609fb60710e35cdefc6f2e243481bed22553f  data/zenodo-records/README.md
+7affa6f5d9a5ab3f264ab19e2acb8bb3b1e0fb2d0aa90b882b7b5f9ed22a7c18  data/zenodo-records/ro-crate-metadata.jsonld
+23da4a3e7978be3e196e55559b7d63d6ecd901c5bd1f521316b59b522330b383  data/zenodo-records/ro-crate-preview.html
+6e1d293b93f9e716a4144769a69248bb226061b4f4483ad1bd8f8c382179f9fe  data/zenodo-records/zenodo-records-json-2019-09-16-filtered.jsonseq.xz
+4358dcf9f053e5913fc825f22714784b09e1a394709d2b04cb42ef5e4ac79027  data/zenodo-records/zenodo-records-json-2019-09-16.tar.xz
+8993b3f2ca4b2ee3081b1d365919151699d590256accead520d27fe9f318762f  data/zenodo-records/zenodo-records.sh
+662c6095c2b24245c49793a0b2acdfecd0afcc95b23102bb1bcc8005cc2ebce7  data/zenodo-records/zipsizes.xslx.ods

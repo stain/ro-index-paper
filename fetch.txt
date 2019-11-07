@@ -1,0 +1,2 @@
+data/zenodo-records-json-2019-09-16-filtered.jsonseq.xz https://zenodo.org/record/3531504/files/zenodo-records-json-2019-09-16-filtered.jsonseq.xz
+data/zenodo-records-json-2019-09-16.tar.xz https://zenodo.org/record/3531504/files/zenodo-records-json-2019-09-16.tar.xz
