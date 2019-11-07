@@ -86,7 +86,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <header id="title-block-header">
 <h1 class="title">RO-Index: A survey of Research Object usage</h1>
 </header>
-<p><small><em> This manuscript (<a href="https://stain.github.io/ro-index-paper/v/7c2f8c09f4967bfbda966884f7363fe7a6d5e68c/">permalink</a>) was automatically generated from <a href="https://github.com/stain/ro-index-paper/tree/7c2f8c09f4967bfbda966884f7363fe7a6d5e68c">stain/ro-index-paper@7c2f8c0</a> on November 7, 2019. </em></small></p>
+<p><small><em> This manuscript (<a href="https://stain.github.io/ro-index-paper/v/e92199a0d79e844df5057630058fd83c632ae59b/">permalink</a>) was automatically generated from <a href="https://github.com/stain/ro-index-paper/tree/e92199a0d79e844df5057630058fd83c632ae59b">stain/ro-index-paper@e92199a</a> on November 7, 2019. </em></small></p>
 <h2 id="authors">Authors</h2>
 <ul>
 <li><p><strong>Stian Soiland-Reyes</strong><br> <img src="images/orcid.svg" alt="ORCID icon" class="inline_icon" /> <a href="https://orcid.org/0000-0001-9842-9718">0000-0001-9842-9718</a> · <img src="images/github.svg" alt="GitHub icon" class="inline_icon" /> <a href="https://github.com/stain">stain</a> · <img src="images/twitter.svg" alt="Twitter icon" class="inline_icon" /> <a href="https://twitter.com/soilandreyes">soilandreyes</a><br> <small> Department of Computer Science, The University of Manchester, UK; Informatics Institute, Faculty of Science, University of Amsterdam, NL · Funded by BioExcel-2 (European Commission H2020-INFRAEDI-02-2018-823830) </small></p></li>
@@ -373,7 +373,7 @@ as Zenodo JSON by iterating over possible numeric IDs (current maximum ID <code>
 <a class="sourceLine" id="cb1-15" title="15">  <span class="fu">xz</span> -4 -T5 <span class="op">&gt;</span> records-with-conceptrecid.jsonseq.xz</a>
 <a class="sourceLine" id="cb1-16" title="16"></a>
 <a class="sourceLine" id="cb1-17" title="17"><span class="fu">xzcat</span> records-wtih-conceptrecid.jsonseq.xz <span class="kw">|</span>  <span class="kw">\</span></a>
-<a class="sourceLine" id="cb1-18" title="18">  <span class="ex">jq</span> <span class="st">&#39;. | select(.metadata.access_right == &quot;open&quot;) | \.files[]? | </span></a>
+<a class="sourceLine" id="cb1-18" title="18">  <span class="ex">jq</span> <span class="st">&#39;. | select(.metadata.access_right == &quot;open&quot;) | .files[]? | </span></a>
 <a class="sourceLine" id="cb1-19" title="19"><span class="st">     select(.type == &quot;zip&quot;) | reduce .size as $s (0; . + $s)&#39;</span> <span class="kw">|</span> <span class="kw">\</span></a>
 <a class="sourceLine" id="cb1-20" title="20">  <span class="ex">jq</span> --slurp add</a>
 <a class="sourceLine" id="cb1-21" title="21"><span class="co"># 27620751244752</span></a></code></pre></div>

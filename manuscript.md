@@ -19,9 +19,9 @@ title: 'RO-Index: A survey of Research Object usage'
 
 <small><em>
 This manuscript
-([permalink](https://stain.github.io/ro-index-paper/v/7c2f8c09f4967bfbda966884f7363fe7a6d5e68c/))
+([permalink](https://stain.github.io/ro-index-paper/v/e92199a0d79e844df5057630058fd83c632ae59b/))
 was automatically generated
-from [stain/ro-index-paper@7c2f8c0](https://github.com/stain/ro-index-paper/tree/7c2f8c09f4967bfbda966884f7363fe7a6d5e68c)
+from [stain/ro-index-paper@e92199a](https://github.com/stain/ro-index-paper/tree/e92199a0d79e844df5057630058fd83c632ae59b)
 on November 7, 2019.
 </em></small>
 
@@ -395,7 +395,7 @@ find . -maxdepth 1 -type f -name 'record*json' | \
   xz -4 -T5 > records-with-conceptrecid.jsonseq.xz
 
 xzcat records-wtih-conceptrecid.jsonseq.xz |  \
-  jq '. | select(.metadata.access_right == "open") | \.files[]? | 
+  jq '. | select(.metadata.access_right == "open") | .files[]? | 
      select(.type == "zip") | reduce .size as $s (0; . + $s)' | \
   jq --slurp add
 # 27620751244752
