@@ -121,6 +121,7 @@ Please attribute by linking to <https://github.com/stain/ro-index-paper> and <ht
 Since CC BY is not ideal for code and data, certain repository components are also released under the [Apache Software License, version 2.0](https://www.apache.org/licenses/LICENSE-2.). ([`LICENSE-Apache-2.0.md`](LICENSE-Apache-2.0.md)).
 All files matched by the following glob patterns are dual licensed under CC BY 4.0 and Apache-2.0:
 
++ `data/*`
 + `code/*`
 + `*.sh`
 + `*.py`
