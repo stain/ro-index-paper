@@ -1,5 +1,5 @@
 {
-  "date": "November 7, 2019",
+  "date": "November 8, 2019",
   "authors": [
     {
       "github": "stain",
@@ -46,7 +46,7 @@
     "repo_slug": "stain/ro-index-paper",
     "repo_owner": "stain",
     "repo_name": "ro-index-paper",
-    "commit": "e92199a0d79e844df5057630058fd83c632ae59b"
+    "commit": "4cf83ffc213da3794a8fde11f7f6179cf3d17696"
   },
   "manuscript_stats": {
     "reference_counts": {
