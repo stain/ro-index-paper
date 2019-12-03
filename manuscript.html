@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
   <meta name="author" content="Stian Soiland-Reyes" />
   <meta name="author" content="Paul Groth" />
-  <meta name="dcterms.date" content="2019-11-08" />
+  <meta name="dcterms.date" content="2019-12-03" />
   <meta name="keywords" content="research object, linked data, scholarly communication, null" />
   <title>RO-Index: A survey of Research Object usage</title>
   <style>
@@ -86,7 +86,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <header id="title-block-header">
 <h1 class="title">RO-Index: A survey of Research Object usage</h1>
 </header>
-<p><small><em> This manuscript (<a href="https://stain.github.io/ro-index-paper/v/322f215ffb58ca5f735f8f4f6a0cdc96cbd0e0aa/">permalink</a>) was automatically generated from <a href="https://github.com/stain/ro-index-paper/tree/322f215ffb58ca5f735f8f4f6a0cdc96cbd0e0aa">stain/ro-index-paper@322f215</a> on November 8, 2019. </em></small></p>
+<p><small><em> This manuscript (<a href="https://stain.github.io/ro-index-paper/v/a6e68b6112ee62c0095d79d637bbeb735c941c45/">permalink</a>) was automatically generated from <a href="https://github.com/stain/ro-index-paper/tree/a6e68b6112ee62c0095d79d637bbeb735c941c45">stain/ro-index-paper@a6e68b6</a> on December 3, 2019. </em></small></p>
 <h2 id="authors">Authors</h2>
 <ul>
 <li><p><strong>Stian Soiland-Reyes</strong><br> <img src="images/orcid.svg" alt="ORCID icon" class="inline_icon" /> <a href="https://orcid.org/0000-0001-9842-9718">0000-0001-9842-9718</a> · <img src="images/github.svg" alt="GitHub icon" class="inline_icon" /> <a href="https://github.com/stain">stain</a> · <img src="images/twitter.svg" alt="Twitter icon" class="inline_icon" /> <a href="https://twitter.com/soilandreyes">soilandreyes</a><br> <small> Department of Computer Science, The University of Manchester, UK; Informatics Institute, Faculty of Science, University of Amsterdam, NL · Funded by BioExcel-2 (European Commission H2020-INFRAEDI-02-2018-823830) </small></p></li>
@@ -372,7 +372,7 @@ as Zenodo JSON by iterating over possible numeric IDs (current maximum ID <code>
 <a class="sourceLine" id="cb1-14" title="14">  <span class="fu">sed</span> <span class="kw">`</span><span class="bu">echo</span> -e <span class="st">&quot;s/^/\x1e/g&quot;</span><span class="kw">`</span> <span class="kw">|</span> <span class="kw">\</span></a>
 <a class="sourceLine" id="cb1-15" title="15">  <span class="fu">xz</span> -4 -T5 <span class="op">&gt;</span> records-with-conceptrecid.jsonseq.xz</a>
 <a class="sourceLine" id="cb1-16" title="16"></a>
-<a class="sourceLine" id="cb1-17" title="17"><span class="fu">xzcat</span> records-wtih-conceptrecid.jsonseq.xz <span class="kw">|</span>  <span class="kw">\</span></a>
+<a class="sourceLine" id="cb1-17" title="17"><span class="fu">xzcat</span> records-with-conceptrecid.jsonseq.xz <span class="kw">|</span>  <span class="kw">\</span></a>
 <a class="sourceLine" id="cb1-18" title="18">  <span class="ex">jq</span> <span class="st">&#39;. | select(.metadata.access_right == &quot;open&quot;) | .files[]? | </span></a>
 <a class="sourceLine" id="cb1-19" title="19"><span class="st">     select(.type == &quot;zip&quot;) | reduce .size as $s (0; . + $s)&#39;</span> <span class="kw">|</span> <span class="kw">\</span></a>
 <a class="sourceLine" id="cb1-20" title="20">  <span class="ex">jq</span> --slurp add</a>

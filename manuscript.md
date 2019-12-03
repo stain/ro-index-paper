@@ -2,7 +2,7 @@
 author-meta:
 - Stian Soiland-Reyes
 - Paul Groth
-date-meta: '2019-11-08'
+date-meta: '2019-12-03'
 keywords:
 - research object
 - linked data
@@ -19,10 +19,10 @@ title: 'RO-Index: A survey of Research Object usage'
 
 <small><em>
 This manuscript
-([permalink](https://stain.github.io/ro-index-paper/v/322f215ffb58ca5f735f8f4f6a0cdc96cbd0e0aa/))
+([permalink](https://stain.github.io/ro-index-paper/v/a6e68b6112ee62c0095d79d637bbeb735c941c45/))
 was automatically generated
-from [stain/ro-index-paper@322f215](https://github.com/stain/ro-index-paper/tree/322f215ffb58ca5f735f8f4f6a0cdc96cbd0e0aa)
-on November 8, 2019.
+from [stain/ro-index-paper@a6e68b6](https://github.com/stain/ro-index-paper/tree/a6e68b6112ee62c0095d79d637bbeb735c941c45)
+on December 3, 2019.
 </em></small>
 
 ## Authors
@@ -394,7 +394,7 @@ find . -maxdepth 1 -type f -name 'record*json' | \
   sed `echo -e "s/^/\x1e/g"` | \
   xz -4 -T5 > records-with-conceptrecid.jsonseq.xz
 
-xzcat records-wtih-conceptrecid.jsonseq.xz |  \
+xzcat records-with-conceptrecid.jsonseq.xz |  \
   jq '. | select(.metadata.access_right == "open") | .files[]? | 
      select(.type == "zip") | reduce .size as $s (0; . + $s)' | \
   jq --slurp add
