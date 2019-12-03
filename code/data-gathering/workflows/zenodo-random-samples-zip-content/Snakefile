@@ -1,0 +1,72 @@
+#  Copyright 2019 Stian Soiland-Reyes
+#
+#  Licensed under the Apache License, Version 2.0 (the "License");
+#  you may not use this file except in compliance with the License.
+#  You may obtain a copy of the License at
+#
+#      http://www.apache.org/licenses/LICENSE-2.0
+#
+#  Unless required by applicable law or agreed to in writing, software
+#  distributed under the License is distributed on an "AS IS" BASIS,
+#  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+#  See the License for the specific language governing permissions and
+#  limitations under the License.
+
+from snakemake.utils import min_version
+min_version("5.8")
+
+workdir: "../../../../data/"
+
+import os
+from snakemake.remote.HTTP import RemoteProvider as HTTPRemoteProvider
+
+HTTP = HTTPRemoteProvider()
+
+TYPES = ["software", "dataset", "others"]
+
+rule all:
+    input:
+        expand("zenodo-records/zipfiles-{type}.tsv", type=TYPES)
+
+rule zipfiles:
+    input: # https://doi.org/10.5281/zenodo.3531504
+        HTTP.remote("zenodo.org/record/3531504/files/zenodo-records-json-2019-09-16-filtered.jsonseq.xz", keep_local=True)
+    output:
+        "zenodo-records/zipfiles.tsv"
+    shell:
+        "xzcat {input} |"
+        """jq -r '. | select(.metadata.access_right == "open") | 
+            .metadata.resource_type.type as $rectype |
+            . as $rec | 
+            ( .files[]?  | select(.type == "zip") ) |
+            [$rec.id, $rec.links.self, $rec.links.doi, .checksum, .links.self, .size, .type, .key, $rectype] | @tsv
+            '"""
+        "> zenodo-records/zipfiles.tsv"
+
+rule seed:
+    output:
+        "seed"
+    shell: 
+        "dd if=/dev/urandom of=seed bs=1024 count=1024"
+
+rule shuffled:
+    input: 
+        tsv="zenodo-records/zipfiles.tsv",
+        seed="seed"
+    output:
+        "zenodo-records/zipfiles-shuffled.tsv"
+    shell:
+        "shuf --random-source={input.seed} {input.tsv} > {output}"
+
+rule splitzipfiles:
+    input: 
+        "zenodo-records/zipfiles-shuffled.tsv"
+    output:
+        software="zenodo-records/zipfiles-software.tsv",
+        dataset="zenodo-records/zipfiles-dataset.tsv",
+        others="zenodo-records/zipfiles-others.tsv"
+    shell:
+        "grep software$ {input} > {output.software} ;"
+        "grep dataset$ {input} > {output.dataset} ;"
+        "grep -v software$ {input} | grep -v dataset$ > {output.others}"
+
