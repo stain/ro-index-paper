@@ -3,5 +3,6 @@ channels:
   - bioconda
 dependencies:
   - python =3.6
+  - xz => 5.2.4
   - cwltool => 1.0.20191022103248
   - bioconda::snakemake-minimal =>5.8.1
