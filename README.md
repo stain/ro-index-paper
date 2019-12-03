@@ -143,3 +143,12 @@ All other manuscript files are only available under CC BY 4.0, including:
 
 
 Please open [an issue](https://github.com/stain/ro-index-paper/issues) for any question related to licensing.
+
+## Requirements
+
+Running the workflows in `code` will require  a [Common Workflow Language](https://www.commonwl.org/) implementation like [cwltool](https://github.com/common-workflow-language/cwltool), [snakemake](https://snakemake.readthedocs.io/) and [Docker](https://www.docker.com/).
+
+For convenience, a [Conda](https://conda.io/) environment is provided. First install [MiniConda for Python 3.x](https://conda.io/en/latest/miniconda.html), then run
+
+    conda env create --name ro-index-paper --file environment.yaml
+    conda activate ro-index-paper

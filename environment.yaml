@@ -1,0 +1,7 @@
+channels:
+  - conda-forge
+  - bioconda
+dependencies:
+  - python =3.6
+  - cwltool => 1.0.20191022103248
+  - bioconda::snakemake-minimal =>5.8.1
