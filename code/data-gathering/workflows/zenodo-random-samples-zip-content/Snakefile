@@ -35,7 +35,7 @@ rule zipfiles:
         "zenodo-records/zipfiles.tsv"
     conda:
         "envs/jq.yaml"
-    shell:
+    shell: # TODO: Split into .jq script file
         "xzcat {input} |"
         """jq -r '. | select(.metadata.access_right == "open") | 
             .metadata.resource_type.type as $rectype |
