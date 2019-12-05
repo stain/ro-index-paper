@@ -98,6 +98,6 @@ rule downloadzip:
     shell:
         """URL="`awk '{{print $5}}' {input}`";
         curl --retry 5 --output {output.zip} $URL;
-        unzip -Z -1 {output.zip} > {output.listing}"
+        unzip -Z -1 {output.zip} > {output.listing}
         """
 
