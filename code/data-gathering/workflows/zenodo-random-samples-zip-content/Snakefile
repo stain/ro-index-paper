@@ -26,7 +26,8 @@ TYPES = ["software", "dataset", "others"]
 
 rule all:
     input:
-        expand("zenodo-records/zipfiles-{type}.tsv", type=TYPES)
+        #expand("zenodo-records/zipfiles-{type}.tsv", type=TYPES)
+        dynamic("listing/{sample}.txt")
 
 rule zipfiles:
     input: # https://doi.org/10.5281/zenodo.3531504
@@ -73,4 +74,27 @@ rule splitzipfiles:
         "grep software$ {input} > {output.software} ;"
         "grep dataset$ {input} > {output.dataset} ;"
         "grep -v software$ {input} | grep -v dataset$ > {output.others}"
+
+rule samples:
+    input:
+        "zenodo-records/zipfiles-dataset.tsv"
+    output:
+        dynamic("sample/{sample}.tsv")
+    shell:
+        "split --additional-suffix .tsv --lines 1 {input} sample/"
+
+rule downloadzip:
+    input:
+        "sample/{sample}.tsv"
+    output:
+        zip=temp("zip/{sample}.zip"),
+        listing="listing/{sample}.txt"
+    threads: 4
+    conda:
+        "envs/curl-unzip.yaml"
+    shell:
+        """URL="`awk '{print $5}' {input}`";
+        curl --retry 5 --output {output.zip} $URL;
+        unzip -Z -1 {output.zip} > {output.listing}"
+        """
 
