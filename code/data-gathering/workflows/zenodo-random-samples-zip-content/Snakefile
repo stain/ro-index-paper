@@ -77,11 +77,11 @@ rule splitzipfiles:
 
 rule samples:
     input:
-        rules.splitzipfiles.output.software
+        rules.splitzipfiles.output.dataset
     output:
         dynamic("sample/{sample}.tsv")
     params:
-        maxsamples="100"
+        maxsamples="2000"
     shell:
         "head --lines={params.maxsamples} {input} | "
         "split --additional-suffix .tsv --lines 1 - sample/"
@@ -97,7 +97,7 @@ rule downloadzip:
         "envs/curl-unzip.yaml"
     shell:
         """URL="`awk '{{print $5}}' {input}`";
-        curl --retry 5 --output {output.zip} $URL;
-        unzip -Z -1 {output.zip} > {output.listing}
+        curl --fail --retry 5 --output {output.zip} $URL;
+        (unzip -Z -1 {output.zip} || true) > {output.listing}
         """
 
