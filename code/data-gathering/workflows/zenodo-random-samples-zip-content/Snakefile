@@ -54,8 +54,8 @@ rule seed:
 
 rule shuffled:
     input: 
-        tsv="zenodo-records/zipfiles.tsv",
-        seed="seed"
+        tsv=rules.zipfiles.output,
+        seed=rules.seed.output
     output:
         "zenodo-records/zipfiles-shuffled.tsv"
     conda:
@@ -65,7 +65,7 @@ rule shuffled:
 
 rule splitzipfiles:
     input: 
-        "zenodo-records/zipfiles-shuffled.tsv"
+        rules.shuffled.output
     output:
         software="zenodo-records/zipfiles-software.tsv",
         dataset="zenodo-records/zipfiles-dataset.tsv",
@@ -77,7 +77,7 @@ rule splitzipfiles:
 
 rule samples:
     input:
-        "zenodo-records/zipfiles-dataset.tsv"
+        rules.splitzipfiles.output.software
     output:
         dynamic("sample/{sample}.tsv")
     shell:
