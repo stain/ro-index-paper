@@ -83,7 +83,7 @@ rule samples:
     params:
         maxsamples="100"
     shell:
-        "head --lines={params.maxsamples} | "
+        "head --lines={params.maxsamples} {input} | "
         "split --additional-suffix .tsv --lines 1 - sample/"
 
 rule downloadzip:
