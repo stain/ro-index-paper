@@ -80,8 +80,11 @@ rule samples:
         rules.splitzipfiles.output.software
     output:
         dynamic("sample/{sample}.tsv")
+    params:
+        maxsamples="100"
     shell:
-        "split --additional-suffix .tsv --lines 1 {input} sample/"
+        "head --lines={params.maxsamples} | "
+        "split --additional-suffix .tsv --lines 1 - sample/"
 
 rule downloadzip:
     input:
@@ -93,7 +96,7 @@ rule downloadzip:
     conda:
         "envs/curl-unzip.yaml"
     shell:
-        """URL="`awk '{print $5}' {input}`";
+        """URL="`awk '{{print $5}}' {input}`";
         curl --retry 5 --output {output.zip} $URL;
         unzip -Z -1 {output.zip} > {output.listing}"
         """
