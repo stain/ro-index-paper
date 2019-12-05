@@ -27,7 +27,7 @@ TYPES = ["software", "dataset", "others"]
 rule all:
     input:
         #expand("zenodo-records/zipfiles-{type}.tsv", type=TYPES)
-        "listing/{sample}.txt"
+        dynamic("listing/{sample}.txt")
 
 rule zipfiles:
     input: # https://doi.org/10.5281/zenodo.3531504
@@ -87,13 +87,14 @@ rule downloadzip:
     input:
         "sample/{sample}.tsv"
     output:
-        zip=temp("zip/{sample}.zip")
+        zip=temp("zip/{sample}.zip"),
         listing="listing/{sample}.txt"
+    threads: 4
+    conda:
+        "envs/curl-unzip.yaml"
     shell:
         """URL="`awk '{print $5}' {input}`";
         curl --retry 5 --output {output.zip} $URL;
         unzip -Z -1 {output.zip} > {output.listing}"
         """
-    conda:
-        "envs/curl-unzip.yaml"
 
