@@ -97,7 +97,7 @@ rule downloadzip:
         "envs/curl-unzip.yaml"
     shell:
         """URL="`awk '{{print $5}}' {input}`";
-        curl --fail --retry 5 --output {output.zip} $URL;
+        curl --fail --retry 5 --retry-connrefused --output {output.zip} $URL || touch {output.zip};
         (unzip -Z -1 {output.zip} || true) > {output.listing}
         """
 
