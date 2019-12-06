@@ -18,17 +18,45 @@ min_version("5.8")
 workdir: "../../../../data/"
 
 import os
+import string
+import itertools
 from snakemake.remote.HTTP import RemoteProvider as HTTPRemoteProvider
 
 HTTP = HTTPRemoteProvider()
 
 TYPES = ["software", "dataset", "others"]
 
+MAXSAMPLES=2000
+def samples():
+    """Predict GNU coreutil split's alphabetic filename enumeration."""
+    # aa ab .. az ba .. yy yz  zaaa ..  zyzz zzaaaa .. zzyzzz zzzaaaaa
+    LETTERS = string.ascii_lowercase
+    MAX=len(LETTERS)-1 # "z"
+    digits = [0, 0] # "aa"
+    prefix = 0
+    while True:
+      yield "".join(LETTERS[c] for c in digits)
+      # Increment the digits starting from the right,
+      # but not beyond the prefix boundary
+      for p in range(len(digits)-1, prefix-1, -1):
+        if digits[p] < MAX:
+          digits[p] += 1 ## increment this letter
+          break # No increment further to the left
+        else:
+          digits[p] = 0
+          continue # increment to the left
+      if digits[prefix] == MAX:
+        # Overflow; extend our array by growing our "zz" prefix one char
+        prefix += 1
+        # add another 0 at suffix (e.g. adding "z0" in middle)
+        digits = [MAX,]*prefix + [0,]* (prefix+2)
+        # +2 reflect digits is now 2 chars wider
+
+SAMPLES = list(itertools.islice(samples(), MAXSAMPLES))
+
 rule all:
     input:
-        dynamic("software/listing/{sample}.txt"),
-        dynamic("dataset/listing/{sample}.txt"),
-        dynamic("others/listing/{sample}.txt"),
+        expand("{type}/listing/{sample}.txt", sample=SAMPLES, type=TYPES)
 
 rule zipfiles:
     input: # https://doi.org/10.5281/zenodo.3531504
@@ -67,25 +95,29 @@ rule shuffled:
 rule splitzipfiles:
     input: 
         rules.shuffled.output
+    params:
+        type="{type}"
     output:
-        software="zenodo-records/zipfiles-software.tsv",
-        dataset="zenodo-records/zipfiles-dataset.tsv",
-        others="zenodo-records/zipfiles-others.tsv"
-    shell:
-        "grep software$ {input} > {output.software} ;"
-        "grep dataset$ {input} > {output.dataset} ;"
-        "grep -v software$ {input} | grep -v dataset$ > {output.others}"
+        "zenodo-records/zipfiles-{type}.tsv"
+    run:
+        if wildcards.type=="others":
+            # Note: This join will strangely also filter out our meta-type
+            # "others" which should not appear in the TSV file
+            pattern = r"(%s)$" % "|".join(TYPES)
+            shell("grep -v '{pattern}' {input} > {output}")
+        else:
+            shell("grep {wildcards.type}$ {input} > {output}")
 
 rule samples:
     input:
         "zenodo-records/zipfiles-{type}.tsv"
     output:
-        dynamic("{type}/sample/{sample}.tsv")
+        expand("{{type}}/sample/{sample}.tsv", sample=SAMPLES)
     params:
-        maxsamples="2000"
+        maxsamples=MAXSAMPLES
     shell:
         "head --lines={params.maxsamples} {input} | "
-        "split --additional-suffix .tsv --lines 1 - {type}/sample/"
+        "split --additional-suffix .tsv --lines 1 - {wildcards.type}/sample/"
 
 rule downloadzip:
     input:
