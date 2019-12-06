@@ -26,8 +26,9 @@ TYPES = ["software", "dataset", "others"]
 
 rule all:
     input:
-        #expand("zenodo-records/zipfiles-{type}.tsv", type=TYPES)
-        dynamic("listing/{sample}.txt")
+        dynamic("software/listing/{sample}.txt"),
+        dynamic("dataset/listing/{sample}.txt"),
+        dynamic("others/listing/{sample}.txt"),
 
 rule zipfiles:
     input: # https://doi.org/10.5281/zenodo.3531504
@@ -77,21 +78,21 @@ rule splitzipfiles:
 
 rule samples:
     input:
-        rules.splitzipfiles.output.dataset
+        "zenodo-records/zipfiles-{type}.tsv"
     output:
-        dynamic("sample/{sample}.tsv")
+        dynamic("{type}/sample/{sample}.tsv")
     params:
         maxsamples="2000"
     shell:
         "head --lines={params.maxsamples} {input} | "
-        "split --additional-suffix .tsv --lines 1 - sample/"
+        "split --additional-suffix .tsv --lines 1 - {type}/sample/"
 
 rule downloadzip:
     input:
-        "sample/{sample}.tsv"
+        "{type}/sample/{sample}.tsv"
     output:
-        zip=temp("zip/{sample}.zip"),
-        listing="listing/{sample}.txt"
+        zip=temp("{type}/zip/{sample}.zip"),
+        listing="{type}/listing/{sample}.txt"
     threads: 4
     conda:
         "envs/curl-unzip.yaml"
