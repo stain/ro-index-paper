@@ -26,8 +26,9 @@ TYPES = ["software", "dataset", "others"]
 
 rule all:
     input:
-        #expand("zenodo-records/zipfiles-{type}.tsv", type=TYPES)
-        dynamic("listing/{sample}.txt")
+        dynamic("software/listing/{sample}.txt"),
+        dynamic("dataset/listing/{sample}.txt"),
+        dynamic("others/listing/{sample}.txt"),
 
 rule zipfiles:
     input: # https://doi.org/10.5281/zenodo.3531504
@@ -54,8 +55,8 @@ rule seed:
 
 rule shuffled:
     input: 
-        tsv="zenodo-records/zipfiles.tsv",
-        seed="seed"
+        tsv=rules.zipfiles.output,
+        seed=rules.seed.output
     output:
         "zenodo-records/zipfiles-shuffled.tsv"
     conda:
@@ -65,7 +66,7 @@ rule shuffled:
 
 rule splitzipfiles:
     input: 
-        "zenodo-records/zipfiles-shuffled.tsv"
+        rules.shuffled.output
     output:
         software="zenodo-records/zipfiles-software.tsv",
         dataset="zenodo-records/zipfiles-dataset.tsv",
@@ -77,24 +78,27 @@ rule splitzipfiles:
 
 rule samples:
     input:
-        "zenodo-records/zipfiles-dataset.tsv"
+        "zenodo-records/zipfiles-{type}.tsv"
     output:
-        dynamic("sample/{sample}.tsv")
+        dynamic("{type}/sample/{sample}.tsv")
+    params:
+        maxsamples="2000"
     shell:
-        "split --additional-suffix .tsv --lines 1 {input} sample/"
+        "head --lines={params.maxsamples} {input} | "
+        "split --additional-suffix .tsv --lines 1 - {type}/sample/"
 
 rule downloadzip:
     input:
-        "sample/{sample}.tsv"
+        "{type}/sample/{sample}.tsv"
     output:
-        zip=temp("zip/{sample}.zip"),
-        listing="listing/{sample}.txt"
+        zip=temp("{type}/zip/{sample}.zip"),
+        listing="{type}/listing/{sample}.txt"
     threads: 4
     conda:
         "envs/curl-unzip.yaml"
     shell:
-        """URL="`awk '{print $5}' {input}`";
-        curl --retry 5 --output {output.zip} $URL;
-        unzip -Z -1 {output.zip} > {output.listing}"
+        """URL="`awk '{{print $5}}' {input}`";
+        curl --fail --retry 5 --retry-connrefused --output {output.zip} $URL || touch {output.zip};
+        (unzip -Z -1 {output.zip} || true) > {output.listing}
         """
 
