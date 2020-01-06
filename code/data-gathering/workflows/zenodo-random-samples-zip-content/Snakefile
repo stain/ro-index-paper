@@ -26,7 +26,7 @@ HTTP = HTTPRemoteProvider()
 
 TYPES = ["software", "dataset", "others"]
 
-MAXSAMPLES=2000
+MAXSAMPLES=5000
 def samples():
     """Predict GNU coreutil split's alphabetic filename enumeration."""
     # aa ab .. az ba .. yy yz  zaaa ..  zyzz zzaaaa .. zzyzzz zzzaaaaa
@@ -101,10 +101,10 @@ rule splitzipfiles:
         "zenodo-records/zipfiles-{type}.tsv"
     run:
         if wildcards.type=="others":
-            # Note: This join will strangely also filter out our meta-type
-            # "others" which should not appear in the TSV file
+            # Note: This join will strangely also filter out our catch-all type
+            # "others" which should anyway not appear in the TSV file
             pattern = r"(%s)$" % "|".join(TYPES)
-            shell("grep -v '{pattern}' {input} > {output}")
+            shell("egrep -v \"{pattern}\" {input} > {output}")
         else:
             shell("grep {wildcards.type}$ {input} > {output}")
 
