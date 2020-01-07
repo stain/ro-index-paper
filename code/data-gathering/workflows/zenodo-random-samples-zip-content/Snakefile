@@ -26,7 +26,7 @@ HTTP = HTTPRemoteProvider()
 
 TYPES = ["software", "dataset", "others"]
 
-MAXSAMPLES=5000
+MAXSAMPLES=2000
 def samples():
     """Predict GNU coreutil split's alphabetic filename enumeration."""
     # aa ab .. az ba .. yy yz  zaaa ..  zyzz zzaaaa .. zzyzzz zzzaaaaa
