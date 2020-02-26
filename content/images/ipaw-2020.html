@@ -38,7 +38,7 @@
             <h2>Abstract</h2>
             <div datatype="rdf:HTML" property="schema:abstract">
               <p>
-                The replication crisis is now widely acknowledged across academic fields. Methods like Data Science and Cloud Computing is advancing to be applied by all domains, and Open Research practices like publishing datasets, documenting computational methods and improving reproducibility with containers, workflows and open source tools is gradually being taken up by eager researchers and enthusiastic communities. 
+                The replication crisis is now widely acknowledged across academic fields. Methods like Data Science and Cloud Computing are advancing to be applied by all domains, and Open Research practices like publishing datasets, documenting computational methods and improving reproducibility with containers, computational workflows and open source tools is gradually being taken up by eager researchers and enthusiastic communities. 
               </p>
               <p>              
                 However these additional data and software resources that support a traditional scholarly publication are often fragmented across multiple repositories and services, and add additional provenance and metadata challenges such as versioning, attribution, citation, access and persistent identifiers. 
@@ -61,6 +61,7 @@
             </div>
           </section>
 
+
           <section id="keywords">
             <h2>Keywords</h2>
             <div>
@@ -70,10 +71,69 @@
             </div>
           </section>
 
-          <section id="background" rel="schema:hasPart" resource="#backgrounc">
+          <section id="background" rel="schema:hasPart" resource="#background">
             <h2 property="schema:name">Background</h2>
             <div datatype="rdf:HTML" property="schema:description">
-              <p>This is the first paragraph.</p><p>This is second;</p>              
+              <p>This is the first paragraph.</p><p>This is second;
+
+<!--Notes from 2020-02-26-->                
+
+Review standards/specs/initiatives.
+
+Examine zenodo
+
+Show how big is zenodo
+
+broad brush - examine packages, potential packages. 
+
+Our result is there are still a lot of gaps, but there is some hope.
+
+Title: add sub "- " -- are they research objects in the wild?  Looking for research objects in the wild?  
+
+
+<pre>
+Structure: 
+
+1. Intro 
+1.1. Reproducibility crisis as motivation 
+1.2 Research Objects as the answer 
+1.3 Their uptake and potential in the wild 
+2. Related Work - a survey
+2.1 Review of these standards 
+2.2 Other “in the wild” analyses 
+3. Methdology 
+4 Results 
+5 Implications 
+6 Conlusion 
+
+</pre>
+
+ReproZip, WholeTale, etc. 
+
+<blockquote><!-- From Paul's paper draft -->
+  Our work is inspired by work on environments for computational reproducibility~\cite{pasquier2017if, stodden2016enhancing}. ReproZip~\cite{chirigati2016reprozip} automatically analyzes system calls to create bundles of files and programs that can be executed in a virtual machine or Docker image. Likewise~\cite{nust2019containerit}, describes containerIt, a system for building Docker based virtual machines for R environments. Indeed, Docker has become a foundation for a number efforts to ensure computational reproducibility (e.g.,~\cite{boettiger2015introduction,knoth2017reproducibility,Jupyter2018}). Beyond just capturing computational artifacts in a container, other approaches, such as the WholeTale\cite{BRINCKMAN2019854} and CWLProv~\cite{Khan2019}, aim to incorporate datasets, papers into larger so called research objects~\cite{Bechhofer2013} to further facilitate reproducibility. More broadly reproducibility is becoming an increasing concern in cybersecurity research~\cite{10.1145/3322790.3330593}. For a wider view of computational reproducibility and particular its relevance to notions of data provenance, we recommend the recent survey by Pimentel et al.~\cite{10.1145/3311955}. Our work builds on these approaches by adding full system recording capability. Additionally, our work sees the outcome not to be about reproducibility but to provide datasets for {\em analytics}. 
+
+</blockquote>
+
+WholeTale as an example of where data repositories have richer rendering - ROHub. Issue of diverging data repositories and their longevity.
+
+Conflict of datasharing. Motivation for data sharing.
+
+
+The motivation to data sharing 
+Drives researchers to well known data repositores 
+Most computational provenance is hosted elsewhere (e.g notebooks, GitHub)
+
+Things are hosted elsewhere but could be fragmented across.
+
+Reproducibility is a thing, provenance has developed lots of key solutions. Data sharing practices. Packaging provenance with data (RO) is ready to make the two worlds meet up.  Are packages being used, or things that look like RO -- "no, but...".  Examples we do find tell us what we should work on.
+
+SORT THE TITLE!
+
+What is the take-home message for the workshop? Tooling, practices for Provenance uptake.
+<!-- /Notes -->                
+
+              </p>
             </div>
             <section id="reproducibility-crisis" rel="schema:hasPart" resource="#reproducibility-crisis">
               <h3 property="schema:name">Reproducibility crisis</h3>
@@ -106,6 +166,7 @@
 
           <section id="discussion" rel="schema:hasPart" resource="#typesetting-of-your-paper-at-springer">
             <h2 property="schema:name">Discussion and Future Work<br /></h2>
+
             <div datatype="rdf:HTML" property="schema:description">
               <p>..</p><br />
               <section id="recommendation" rel="schema:hasPart" resource="#recommendation">
