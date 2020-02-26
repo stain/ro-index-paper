@@ -1,97 +1,245 @@
 <!DOCTYPE html>
 <html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
-  <head>
-    <meta charset="utf-8" />
-    <title>Where did all the provenance go?</title>
-    <link href="https://dokie.li/media/css/lncs.css" media="all" rel="stylesheet" title="LNCS" />
-    <link disabled="" href="https://dokie.li/media/css/acm.css" media="all" rel="stylesheet alternate" title="ACM" />
-    <link href="https://dokie.li/media/css/dokieli.css" media="all" rel="stylesheet" />
-    <script src="https://dokie.li/scripts/dokieli.js"></script>
-  </head>
 
-  <body about="" prefix="rdf: http://www.w3.org/1999/02/22-rdf-syntax-ns# rdfs: http://www.w3.org/2000/01/rdf-schema# owl: http://www.w3.org/2002/07/owl# xsd: http://www.w3.org/2001/XMLSchema# dcterms: http://purl.org/dc/terms/ dctypes: http://purl.org/dc/dcmitype/ foaf: http://xmlns.com/foaf/0.1/ pimspace: http://www.w3.org/ns/pim/space# cc: https://creativecommons.org/ns# skos: http://www.w3.org/2004/02/skos/core# prov: http://www.w3.org/ns/prov# mem: http://mementoweb.org/ns# qb: http://purl.org/linked-data/cube# schema: http://schema.org/ void: http://rdfs.org/ns/void# rsa: http://www.w3.org/ns/auth/rsa# cert: http://www.w3.org/ns/auth/cert# wgs: http://www.w3.org/2003/01/geo/wgs84_pos# bibo: http://purl.org/ontology/bibo/ sioc: http://rdfs.org/sioc/ns# doap: http://usefulinc.com/ns/doap# dbr: http://dbpedia.org/resource/ dbp: http://dbpedia.org/property/ sio: http://semanticscience.org/resource/ opmw: http://www.opmw.org/ontology/ deo: http://purl.org/spar/deo/ doco: http://purl.org/spar/doco/ cito: http://purl.org/spar/cito/ fabio: http://purl.org/spar/fabio/ oa: http://www.w3.org/ns/oa# as: https://www.w3.org/ns/activitystreams# ldp: http://www.w3.org/ns/ldp# solid: http://www.w3.org/ns/solid/terms# acl: http://www.w3.org/ns/auth/acl# dio: https://w3id.org/dio# rel: https://www.w3.org/ns/iana/link-relations/relation#" typeof="schema:CreativeWork prov:Entity">
-    <main>
-      <article about="" typeof="schema:ScholarlyArticle">
-        <h1 property="schema:name">Where did all the provenance go?</h1>
+<head>
+  <meta charset="utf-8" />
+  <title>Where did all the provenance go?</title>
+  <link href="https://dokie.li/media/css/lncs.css" media="all" rel="stylesheet" title="LNCS" />
+  <link disabled="" href="https://dokie.li/media/css/acm.css" media="all" rel="stylesheet alternate" title="ACM" />
+  <link href="https://dokie.li/media/css/dokieli.css" media="all" rel="stylesheet" />
+  <script src="https://dokie.li/scripts/dokieli.js"></script>
+</head>
 
-        <div id="authors">
-          <dl id="author-name">
-            <dt>Authors</dt>
-            <dd id="author-Stian"><span about="" rel="schema:creator schema:publisher schema:author"><a href="https://orcid.org/0000-0001-9842-9718">Stian Soiland-Reyes</a></span><span about="#stian" rel="schema:memberOf" resource="#esciencelab"></span><sup><a href="#indelab">1</a></sup><sup><a href=#esciencelab">2</a><a href="#author-email-a">,a</a> [<a rel="schema:identifier schema:sameAs owl:sameAs" href="https://orcid.org/0000-0001-9842-9718">0000-0001-9842-9718</a>]</sup></dd><dd id="author-Paul"><span about="" rel="schema:author"><a about="#paul" href="https://orcid.org/0000-0003-0183-6910" property="schema:name" rel="schema:url" typeof="schema:Person">Paul Groth</a></span><span about="#paul" rel="schema:memberOf" resource="#indelab"></span><sup><a href="#indelab">1</a></sup><sup><a href="#author-email-d">b</a> [<a rel="schema:identifier schema:sameAs owl:sameAs" href="https://orcid.org/0000-0003-0183-6910">0000-0003-0183-6910</a>]</sup></dd>
-          </dl>
+<body about=""
+  prefix="rdf: http://www.w3.org/1999/02/22-rdf-syntax-ns# rdfs: http://www.w3.org/2000/01/rdf-schema# owl: http://www.w3.org/2002/07/owl# xsd: http://www.w3.org/2001/XMLSchema# dcterms: http://purl.org/dc/terms/ dctypes: http://purl.org/dc/dcmitype/ foaf: http://xmlns.com/foaf/0.1/ pimspace: http://www.w3.org/ns/pim/space# cc: https://creativecommons.org/ns# skos: http://www.w3.org/2004/02/skos/core# prov: http://www.w3.org/ns/prov# mem: http://mementoweb.org/ns# qb: http://purl.org/linked-data/cube# schema: http://schema.org/ void: http://rdfs.org/ns/void# rsa: http://www.w3.org/ns/auth/rsa# cert: http://www.w3.org/ns/auth/cert# wgs: http://www.w3.org/2003/01/geo/wgs84_pos# bibo: http://purl.org/ontology/bibo/ sioc: http://rdfs.org/sioc/ns# doap: http://usefulinc.com/ns/doap# dbr: http://dbpedia.org/resource/ dbp: http://dbpedia.org/property/ sio: http://semanticscience.org/resource/ opmw: http://www.opmw.org/ontology/ deo: http://purl.org/spar/deo/ doco: http://purl.org/spar/doco/ cito: http://purl.org/spar/cito/ fabio: http://purl.org/spar/fabio/ oa: http://www.w3.org/ns/oa# as: https://www.w3.org/ns/activitystreams# ldp: http://www.w3.org/ns/ldp# solid: http://www.w3.org/ns/solid/terms# acl: http://www.w3.org/ns/auth/acl# dio: https://w3id.org/dio# rel: https://www.w3.org/ns/iana/link-relations/relation#"
+  typeof="schema:CreativeWork prov:Entity">
+  <main>
+    <article about="" typeof="schema:ScholarlyArticle">
+      <h1 property="schema:name">Where did all the provenance go?</h1>
 
-          <ul id="author-org">
-            <li id="indelab"><sup>1</sup><a rel="schema:url" href="https://indelab.org/">INDE Lab</a>, <a href="https://ivi.uva.nl/">Informatics Institute</a>, University of Amsterdam, Amsterdam, The Netherlands</li>
-            <li id="esciencelab"><sup>2</sup><a rel="schema:url" href="https://esciencelab.org.uk/">eScienceLab,</a> <a href="https://www.cs.manchester.ac.uk/">Department of Computer Science</a>, The University of Manchester, Manchester, UK</li>
-          </ul>
+      <div id="authors">
+        <dl id="author-name">
+          <dt>Authors</dt>
+          <dd id="author-Stian"><span about="" rel="schema:creator schema:publisher schema:author"><a
+                href="https://orcid.org/0000-0001-9842-9718">Stian Soiland-Reyes</a></span><span about="#stian"
+                rel="schema:memberOf" resource="#esciencelab"></span><sup><a href="#indelab">1</a></sup><sup><a
+                href=#esciencelab">2</a><a href="#author-email-a">,a</a> [<a
+                rel="schema:identifier schema:sameAs owl:sameAs"
+                href="https://orcid.org/0000-0001-9842-9718">0000-0001-9842-9718</a>]</sup></dd>
+          <dd id="author-Paul"><span about="" rel="schema:author"><a about="#paul"
+                href="https://orcid.org/0000-0003-0183-6910" property="schema:name" rel="schema:url"
+                typeof="schema:Person">Paul Groth</a></span><span about="#paul" rel="schema:memberOf"
+                resource="#indelab"></span><sup><a href="#indelab">1</a></sup><sup><a href="#author-email-d">b</a> [<a
+                rel="schema:identifier schema:sameAs owl:sameAs"
+                href="https://orcid.org/0000-0003-0183-6910">0000-0003-0183-6910</a>]</sup></dd>
+        </dl>
 
-          <ul id="author-email">
-            <li id="author-email-a"><sup>a</sup><a href="mailto:stian@soiland-reyes.com">stian@soiland-reyes.com</a></li>
-            <li id="author-email-b"><sup>b</sup><a href="mailto:p.t.groth@uva.nl">p.t.groth@uva.nl</a></li></ul>
-        </div>
-        <dl id="document-language"><dt>Language</dt><dd><span content="en" lang="" property="dcterms:language" xml:lang="">English</span></dd></dl>
-        <dl id="document-license"><dt>License</dt><dd><a href="https://creativecommons.org/licenses/by/4.0/" rel="schema:license" title="Creative Commons Attribution 4.0 International">CC BY 4.0</a></dd></dl>
-        <dl id="document-status"><dt>Document Status</dt><dd prefix="pso: http://purl.org/spar/pso/" rel="pso:holdsStatusInTime" resource="#8daf9f72-3ef6-4c8a-a15b-186f3e026803"><span rel="pso:withStatus" resource="http://purl.org/spar/pso/draft" typeof="pso:PublicationStatus">Draft</span></dd></dl>
+        <ul id="author-org">
+          <li id="indelab"><sup>1</sup><a rel="schema:url" href="https://indelab.org/">INDE Lab</a>, <a
+              href="https://ivi.uva.nl/">Informatics Institute</a>, University of Amsterdam, Amsterdam, The Netherlands
+          </li>
+          <li id="esciencelab"><sup>2</sup><a rel="schema:url" href="https://esciencelab.org.uk/">eScienceLab,</a> <a
+              href="https://www.cs.manchester.ac.uk/">Department of Computer Science</a>, The University of Manchester,
+            Manchester, UK</li>
+        </ul>
 
-        <div id="content">
-          <section id="abstract">
-            <h2>Abstract</h2>
-            <div datatype="rdf:HTML" property="schema:abstract">
-              <p>
-                The replication crisis is now widely acknowledged across academic fields. Methods like Data Science and Cloud Computing are advancing to be applied by all domains, and Open Research practices like publishing datasets, documenting computational methods and improving reproducibility with containers, computational workflows and open source tools is gradually being taken up by eager researchers and enthusiastic communities. 
-              </p>
-              <p>              
-                However these additional data and software resources that support a traditional scholarly publication are often fragmented across multiple repositories and services, and add additional provenance and metadata challenges such as versioning, attribution, citation, access and persistent identifiers. 
-              </p>
-              <p>
-                In this work we explore briefly well-established and emerging standards for structured metadata and provenance of scholarly digital objects and datasets, such as OAI-ORE, PROV, VoID, Research Objects, COMBINE archives, Frictionless Data, DataONE data packages, schema.org and DataCite Metadata Schema. 
-              </p>
-              <p>                
-                We then examine deposit patterns and the actual uptake of providing structured metadata in scholarly archives with the use case of Zenodo, a European-wide Open Repository of data, software and publications, popular across a wide range of research domains and hosting a variety of file formats and deposit types.
-              </p>
-              <p>
-                After gathering and analyzing record-level metadata across all of Zenodo, we sampled to explore deposits that contain ZIP archives, as we argue their composite nature of mixed content with potentially diverging provenance makes them prime candidates for utilizing manifests of structured metadata, augment record-level schemas such as DataCite. 
-              </p>
-              <p>          
-                Our study reveals that while most deposits lack such embedded metadata or detailed provenance, there are beacons of hope, where we find depositors are encouraged by best practices within specific communities and where metadata augmentation is inherently supported by their domain-specific tooling. 
-              </p>
-              <p>
-                Finally we give recommendations for improving the practice of providing provenance and structured metadata in scholarly repositories, in particular with a view of supporting their automated consumption by downstream aggregators and individual researchers, aiming for a minimal provenance profile that can be largely populated automatically.
-              </p>
-            </div>
+        <ul id="author-email">
+          <li id="author-email-a"><sup>a</sup><a href="mailto:stian@soiland-reyes.com">stian@soiland-reyes.com</a></li>
+          <li id="author-email-b"><sup>b</sup><a href="mailto:p.t.groth@uva.nl">p.t.groth@uva.nl</a></li>
+        </ul>
+      </div>
+
+      <dl id="document-language">
+        <dt>Language</dt>
+        <dd><span content="en" lang="" property="dcterms:language" xml:lang="">English</span></dd>
+      </dl>
+      <dl id="document-license">
+        <dt>License</dt>
+        <dd><a href="https://creativecommons.org/licenses/by/4.0/" rel="schema:license"
+            title="Creative Commons Attribution 4.0 International">CC BY 4.0</a></dd>
+      </dl>
+      <dl id="document-status">
+        <dt>Document Status</dt>
+        <dd prefix="pso: http://purl.org/spar/pso/" rel="pso:holdsStatusInTime"
+          resource="#8daf9f72-3ef6-4c8a-a15b-186f3e026803"><span rel="pso:withStatus"
+            resource="http://purl.org/spar/pso/draft" typeof="pso:PublicationStatus">Draft</span></dd>
+      </dl>
+
+      <div id="content">
+        <section id="abstract">
+          <h2>Abstract</h2>
+          <div datatype="rdf:HTML" property="schema:abstract">
+            <p>
+              The replication crisis is now widely acknowledged across academic fields. Methods like Data Science and
+              Cloud Computing are advancing to be applied by all domains, and Open Research practices like publishing
+              datasets, documenting computational methods and improving reproducibility with containers, computational
+              workflows and open source tools is gradually being taken up by eager researchers and enthusiastic
+              communities.
+            </p>
+            <p>
+              However these additional data and software resources that support a traditional scholarly publication are
+              often fragmented across multiple repositories and services, and add additional provenance and metadata
+              challenges such as versioning, attribution, citation, access and persistent identifiers.
+            </p>
+            <p>
+              In this work we explore briefly well-established and emerging standards for structured metadata and
+              provenance of scholarly digital objects and datasets, such as OAI-ORE, PROV, VoID, Research Objects,
+              COMBINE archives, Frictionless Data, DataONE data packages, schema.org and DataCite Metadata Schema.
+            </p>
+            <p>
+              We then examine deposit patterns and the actual uptake of providing structured metadata in scholarly
+              archives with the use case of Zenodo, a European-wide Open Repository of data, software and publications,
+              popular across a wide range of research domains and hosting a variety of file formats and deposit types.
+            </p>
+            <p>
+              After gathering and analyzing record-level metadata across all of Zenodo, we sampled to explore deposits
+              that contain ZIP archives, as we argue their composite nature of mixed content with potentially diverging
+              provenance makes them prime candidates for utilizing manifests of structured metadata, augment
+              record-level schemas such as DataCite.
+            </p>
+            <p>
+              Our study reveals that while most deposits lack such embedded metadata or detailed provenance, there are
+              beacons of hope, where we find depositors are encouraged by best practices within specific communities and
+              where metadata augmentation is inherently supported by their domain-specific tooling.
+            </p>
+            <p>
+              Finally we give recommendations for improving the practice of providing provenance and structured metadata
+              in scholarly repositories, in particular with a view of supporting their automated consumption by
+              downstream aggregators and individual researchers, aiming for a minimal provenance profile that can be
+              largely populated automatically.
+            </p>
+          </div>
+        </section>
+
+
+        <section id="keywords">
+          <h2>Keywords</h2>
+          <div>
+            <ul>
+              <li>metadata, open repositories, provenance, research object, scholarly communication<br /></li>
+            </ul>
+          </div>
+        </section>
+
+        <section id="background" rel="schema:hasPart" resource="#background">
+          <h2 property="schema:name">Background</h2>
+          <div datatype="rdf:HTML" property="schema:description">
+            <p>This is the first paragraph.</p>
+            <p>This is second;</p>                
+          </div>
+          <section id="reproducibility-crisis" rel="schema:hasPart" resource="#reproducibility-crisis">
+            <h3 property="schema:name">Reproducibility crisis as motivation</h3>
+          </section>
+          <section id="research-objects" rel="schema:hasPart" resource="#research-objects">
+            <h3 property="schema:name">Research Objects as the answer</h3>
+          </section>
+          <section id="uptake" rel="schema:hasPart" resource="#uptake">
+            <h3 property="schema:name">Their uptake and potential in the wild</h3>
           </section>
 
+        </section>
 
-          <section id="keywords">
-            <h2>Keywords</h2>
-            <div>
-              <ul>
-                <li>metadata, open repositories, provenance, research object, scholarly communication<br /></li>
-              </ul>
-            </div>
+
+
+        <section id="related" rel="schema:hasPart" resource="#related">
+          <h2 property="schema:name">Related Work - a survey</h2>
+          <div datatype="rdf:HTML" property="schema:description">
+            <p>..</p>
+          </div>
+          <section id="review-standards" rel="schema:hasPart" resource="#review-standards">
+            <h3 property="schema:name">Review of these standards</h3>
           </section>
+          <section id="in-the-wild" rel="schema:hasPart" resource="#in-the-wild">
+            <h3 property="schema:name">Other “in the wild” analyses</h3>
+          </section>
+        </section>
 
-          <section id="background" rel="schema:hasPart" resource="#background">
-            <h2 property="schema:name">Background</h2>
-            <div datatype="rdf:HTML" property="schema:description">
-              <p>This is the first paragraph.</p><p>This is second;
+        <section id="method" rel="schema:hasPart" resource="#method">
+          <h2 property="schema:name">Methodology</h2>
+          <div datatype="rdf:HTML" property="schema:description">
+            <p>..</p>
+          </div>
+          <section id="zenodo-metadata" rel="schema:hasPart" resource="#zenodo-metadata">
+            <h3 property="schema:name">Zenodo metadata</h3>
+          </section>
+          <section id="zip" rel="schema:hasPart" resource="#zip">
+            <h3 property="schema:name">ZIP archives in Zenodo</h3>
+          </section>
+        </section>
 
-<!--Notes from 2020-02-26-->                
+        <section id="results" rel="schema:hasPart" resource="#results">
+          <h2 property="schema:name">Results</h2>
+          <div datatype="rdf:HTML" property="schema:description">
+            <p>...</p>
+          </div>
+        </section>
 
-Review standards/specs/initiatives.
+        <section id="implications" rel="schema:hasPart" resource="#implications">
+          <h2 property="schema:name">Implications</h2>
+          <div datatype="rdf:HTML" property="schema:description">
+            <p>...</p>
+          </div>
+        </section>
 
-Examine zenodo
+        <section id="discussion" rel="schema:hasPart" resource="#typesetting-of-your-paper-at-springer">
+          <h2 property="schema:name">Discussion and Future Work<br /></h2>
 
-Show how big is zenodo
+          <div datatype="rdf:HTML" property="schema:description">
+            <p>..</p><br />
+            <section id="recommendation" rel="schema:hasPart" resource="#recommendation">
+              <h3 property="schema:name">Recommendation</h3>
+              <div datatype="rdf:HTML" property="schema:description">
+                <p>..<br /></p>
+              </div>
+            </section>
+          </div>
+        </section>
 
-broad brush - examine packages, potential packages. 
+        <section id="acknowledgements" rel="schema:hasPart" resource="#acknowledgements">
+          <h4 property="schema:name">Acknowledgements</h4>
+          <div datatype="rdf:HTML" property="schema:description">
+            <p>This work has been done as part of the BioExcel CoE (<a
+                href="https://bioexcel.eu/">https://bioexcel.eu/</a>), a project funded by the European Union contracts
+              <a href="https://cordis.europa.eu/project/id/823830">H2020-INFRAEDI-02-2018-823830</a>,
+              <a href="https://cordis.europa.eu/project/id/675728">H2020-EINFRA-2015-1-675728</a>.</p>
+          </div>
+        </section>
 
-Our result is there are still a lot of gaps, but there is some hope.
 
-Title: add sub "- " -- are they research objects in the wild?  Looking for research objects in the wild?  
+        <section id="references">
+          <h2>References</h2>
+          <div>
+            <ol>
+              <li id="ref-1" property="schema:citation">Sean Bechhofer, Iain Buchan, David De Roure, Paolo Missier, John
+                Ainsworth, Jiten Bhagat, Phillip Couch, Don Cruickshank, Mark Delderfield, Ian Dunlop, Matthew Gamble,
+                Danius Michaelides, Stuart Owen, David Newman, Shoaib Sufi, Carole Goble (2013):
+                <b>Why Linked Data is Not Enough for Scientists</b>,
+                <i>Future Generation Computer Systems</i>
+                <b>29</b>(2), February 2013, Pages 599-611, ISSN 0167-739X,
+                <a href="https://doi.org/10.1016/j.future.2011.08.004">https://doi.org/10.1016/j.future.2011.08.004</a>
+              </li>
+            </ol>
+          </div>
+        </section>
+
+        <section id="notes">
+          <h4>Random Notes</h4>
+        <h5>Stian/Paul 2020-02-26</h5>
+
+          Review standards/specs/initiatives.
+          
+          Examine zenodo.
+          
+          Show how big is zenodo.
+          
+          broad brush - examine packages, potential packages.
+          
+          Our result is there are still a lot of gaps, but there is some hope.
+          
+          Title: add sub "- " -- are they research objects in the wild? Looking for research objects in the wild?
 
 
-<pre>
+        <pre>
 Structure: 
 
 1. Intro 
@@ -108,100 +256,54 @@ Structure:
 
 </pre>
 
-ReproZip, WholeTale, etc. 
+        ReproZip, WholeTale, etc.
 
-<blockquote><!-- From Paul's paper draft -->
-  Our work is inspired by work on environments for computational reproducibility~\cite{pasquier2017if, stodden2016enhancing}. ReproZip~\cite{chirigati2016reprozip} automatically analyzes system calls to create bundles of files and programs that can be executed in a virtual machine or Docker image. Likewise~\cite{nust2019containerit}, describes containerIt, a system for building Docker based virtual machines for R environments. Indeed, Docker has become a foundation for a number efforts to ensure computational reproducibility (e.g.,~\cite{boettiger2015introduction,knoth2017reproducibility,Jupyter2018}). Beyond just capturing computational artifacts in a container, other approaches, such as the WholeTale\cite{BRINCKMAN2019854} and CWLProv~\cite{Khan2019}, aim to incorporate datasets, papers into larger so called research objects~\cite{Bechhofer2013} to further facilitate reproducibility. More broadly reproducibility is becoming an increasing concern in cybersecurity research~\cite{10.1145/3322790.3330593}. For a wider view of computational reproducibility and particular its relevance to notions of data provenance, we recommend the recent survey by Pimentel et al.~\cite{10.1145/3311955}. Our work builds on these approaches by adding full system recording capability. Additionally, our work sees the outcome not to be about reproducibility but to provide datasets for {\em analytics}. 
+        <blockquote>
+          <!-- From Paul's paper draft -->
+          Our work is inspired by work on environments for computational reproducibility~\cite{pasquier2017if,
+          stodden2016enhancing}. ReproZip~\cite{chirigati2016reprozip} automatically analyzes system calls to
+          create bundles of files and programs that can be executed in a virtual machine or Docker image.
+          Likewise~\cite{nust2019containerit}, describes containerIt, a system for building Docker based virtual
+          machines for R environments. Indeed, Docker has become a foundation for a number efforts to ensure
+          computational reproducibility
+          (e.g.,~\cite{boettiger2015introduction,knoth2017reproducibility,Jupyter2018}). Beyond just capturing
+          computational artifacts in a container, other approaches, such as the WholeTale\cite{BRINCKMAN2019854}
+          and CWLProv~\cite{Khan2019}, aim to incorporate datasets, papers into larger so called research
+          objects~\cite{Bechhofer2013} to further facilitate reproducibility. More broadly reproducibility is
+          becoming an increasing concern in cybersecurity research~\cite{10.1145/3322790.3330593}. For a wider
+          view of computational reproducibility and particular its relevance to notions of data provenance, we
+          recommend the recent survey by Pimentel et al.~\cite{10.1145/3311955}. Our work builds on these
+          approaches by adding full system recording capability. Additionally, our work sees the outcome not to be
+          about reproducibility but to provide datasets for {\em analytics}.
 
-</blockquote>
+        </blockquote>
 
-WholeTale as an example of where data repositories have richer rendering - ROHub. Issue of diverging data repositories and their longevity.
+          
+          WholeTale as an example of where data repositories have richer rendering - ROHub. Issue of diverging data
+          repositories and their longevity.
+          
+          Conflict of datasharing. Motivation for data sharing.
+          
+          
+          The motivation to data sharing
+          Drives researchers to well known data repositores
+          Most computational provenance is hosted elsewhere (e.g notebooks, GitHub)
+          
+          Things are hosted elsewhere but could be fragmented across.
+          
+          Reproducibility is a thing, provenance has developed lots of key solutions. Data sharing practices.
+          Packaging provenance with data (RO) is ready to make the two worlds meet up. Are packages being used, or
+          things that look like RO -- "no, but...". Examples we do find tell us what we should work on.
+          
+          SORT THE TITLE!
+          
+          What is the take-home message for the workshop? Tooling, practices for Provenance uptake.
+          <!-- /Notes -->
+      </section>
 
-Conflict of datasharing. Motivation for data sharing.
-
-
-The motivation to data sharing 
-Drives researchers to well known data repositores 
-Most computational provenance is hosted elsewhere (e.g notebooks, GitHub)
-
-Things are hosted elsewhere but could be fragmented across.
-
-Reproducibility is a thing, provenance has developed lots of key solutions. Data sharing practices. Packaging provenance with data (RO) is ready to make the two worlds meet up.  Are packages being used, or things that look like RO -- "no, but...".  Examples we do find tell us what we should work on.
-
-SORT THE TITLE!
-
-What is the take-home message for the workshop? Tooling, practices for Provenance uptake.
-<!-- /Notes -->                
-
-              </p>
-            </div>
-            <section id="reproducibility-crisis" rel="schema:hasPart" resource="#reproducibility-crisis">
-              <h3 property="schema:name">Reproducibility crisis</h3>
-            </section>
-            <section id="standards" rel="schema:hasPart" resource="#standards">
-              <h3 property="schema:name">Metadata standards and initiatives</h3>
-            </section>
-
-          </section>
-
-          <section id="method" rel="schema:hasPart" resource="#method">
-            <h2 property="schema:name">Method</h2>
-              <div datatype="rdf:HTML" property="schema:description">
-                <p>..</p>              
-              </div>
-              <section id="zenodo-metadata" rel="schema:hasPart" resource="#zenodo-metadata">
-                <h3 property="schema:name">Zenodo metadata</h3>
-              </section>
-              <section id="zip" rel="schema:hasPart" resource="#zip">
-                <h3 property="schema:name">ZIP archives in Zenodo</h3>
-              </section>                
-          </section>
-
-          <section id="additional-information-required-from-authors" rel="schema:hasPart" resource="#additional-information-required-from-authors">
-            <h2 property="schema:name">Results</h2>
-            <div datatype="rdf:HTML" property="schema:description">
-              <p>...</p>
-              </div>
-          </section>
-
-          <section id="discussion" rel="schema:hasPart" resource="#typesetting-of-your-paper-at-springer">
-            <h2 property="schema:name">Discussion and Future Work<br /></h2>
-
-            <div datatype="rdf:HTML" property="schema:description">
-              <p>..</p><br />
-              <section id="recommendation" rel="schema:hasPart" resource="#recommendation">
-                <h3 property="schema:name">Recommendation</h3>
-                <div datatype="rdf:HTML" property="schema:description">
-                  <p>..<br /></p>
-                </div>
-              </section>
-            </div>
-          </section>
-        
-          <section id="acknowledgements" rel="schema:hasPart" resource="#acknowledgements">
-                    <h4 property="schema:name">Acknowledgements</h4>
-                    <div datatype="rdf:HTML" property="schema:description">                       <p>This work has been done as part of the BioExcel CoE (<a href="https://bioexcel.eu/">https://bioexcel.eu/</a>), a project funded by the European Union contracts <a href="https://cordis.europa.eu/project/id/823830">H2020-INFRAEDI-02-2018-823830</a>, <a href="https://cordis.europa.eu/project/id/675728">H2020-EINFRA-2015-1-675728</a>.</p>                    </div>
-                  </section></div><ul>
-              </ul>
-            </div>
-          </section>
-
-          <section id="references">
-            <h2>References</h2>
-            <div>
-              <ol>
-                <li id="ref-1" property="schema:citation">Sean Bechhofer, Iain Buchan, David De Roure, Paolo Missier, John Ainsworth, Jiten Bhagat, Phillip Couch, Don Cruickshank, Mark Delderfield, Ian Dunlop, Matthew Gamble, Danius Michaelides, Stuart Owen, David Newman, Shoaib Sufi, Carole Goble (2013): <b>Why Linked Data is Not Enough for Scientists</b>, <i>Future Generation Computer Systems</i> <b>29</b>(2), February 2013, Pages 599-611, ISSN 0167-739X, <a href="https://doi.org/10.1016/j.future.2011.08.004">https://doi.org/10.1016/j.future.2011.08.004</a></li>
-              </ol>
-            </div>
-          </section>
-        </div>
-      </article>
-    </main>
-  
-
-
-
-
-
+      </div>
+    </article>
+  </main>
 </body>
+
 </html>
