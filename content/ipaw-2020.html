@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Where did all the provenance go?</title>
+    <link href="https://dokie.li/media/css/lncs.css" media="all" rel="stylesheet" title="LNCS" />
+    <link disabled="" href="https://dokie.li/media/css/acm.css" media="all" rel="stylesheet alternate" title="ACM" />
+    <link href="https://dokie.li/media/css/dokieli.css" media="all" rel="stylesheet" />
+    <script src="https://dokie.li/scripts/dokieli.js"></script>
+  </head>
+
+  <body about="" prefix="rdf: http://www.w3.org/1999/02/22-rdf-syntax-ns# rdfs: http://www.w3.org/2000/01/rdf-schema# owl: http://www.w3.org/2002/07/owl# xsd: http://www.w3.org/2001/XMLSchema# dcterms: http://purl.org/dc/terms/ dctypes: http://purl.org/dc/dcmitype/ foaf: http://xmlns.com/foaf/0.1/ pimspace: http://www.w3.org/ns/pim/space# cc: https://creativecommons.org/ns# skos: http://www.w3.org/2004/02/skos/core# prov: http://www.w3.org/ns/prov# mem: http://mementoweb.org/ns# qb: http://purl.org/linked-data/cube# schema: http://schema.org/ void: http://rdfs.org/ns/void# rsa: http://www.w3.org/ns/auth/rsa# cert: http://www.w3.org/ns/auth/cert# wgs: http://www.w3.org/2003/01/geo/wgs84_pos# bibo: http://purl.org/ontology/bibo/ sioc: http://rdfs.org/sioc/ns# doap: http://usefulinc.com/ns/doap# dbr: http://dbpedia.org/resource/ dbp: http://dbpedia.org/property/ sio: http://semanticscience.org/resource/ opmw: http://www.opmw.org/ontology/ deo: http://purl.org/spar/deo/ doco: http://purl.org/spar/doco/ cito: http://purl.org/spar/cito/ fabio: http://purl.org/spar/fabio/ oa: http://www.w3.org/ns/oa# as: https://www.w3.org/ns/activitystreams# ldp: http://www.w3.org/ns/ldp# solid: http://www.w3.org/ns/solid/terms# acl: http://www.w3.org/ns/auth/acl# dio: https://w3id.org/dio# rel: https://www.w3.org/ns/iana/link-relations/relation#" typeof="schema:CreativeWork prov:Entity">
+    <main>
+      <article about="" typeof="schema:ScholarlyArticle">
+        <h1 property="schema:name">Where did all the provenance go?</h1>
+
+        <div id="authors">
+          <dl id="author-name">
+            <dt>Authors</dt>
+            <dd id="author-Stian"><span about="" rel="schema:creator schema:publisher schema:author"><a href="https://orcid.org/0000-0001-9842-9718">Stian Soiland-Reyes</a></span><span about="#stian" rel="schema:memberOf" resource="#esciencelab"></span><sup><a href="#indelab">1</a></sup><sup><a href=#esciencelab">2</a><a href="#author-email-a">,a</a> [<a rel="schema:identifier schema:sameAs owl:sameAs" href="https://orcid.org/0000-0001-9842-9718">0000-0001-9842-9718</a>]</sup></dd><dd id="author-Paul"><span about="" rel="schema:author"><a about="#paul" href="https://orcid.org/0000-0003-0183-6910" property="schema:name" rel="schema:url" typeof="schema:Person">Paul Groth</a></span><span about="#paul" rel="schema:memberOf" resource="#indelab"></span><sup><a href="#indelab">1</a></sup><sup><a href="#author-email-d">b</a> [<a rel="schema:identifier schema:sameAs owl:sameAs" href="https://orcid.org/0000-0003-0183-6910">0000-0003-0183-6910</a>]</sup></dd>
+          </dl>
+
+          <ul id="author-org">
+            <li id="indelab"><sup>1</sup><a rel="schema:url" href="https://indelab.org/">INDE Lab</a>, <a href="https://ivi.uva.nl/">Informatics Institute</a>, University of Amsterdam, Amsterdam, The Netherlands</li>
+            <li id="esciencelab"><sup>2</sup><a rel="schema:url" href="https://esciencelab.org.uk/">eScienceLab,</a> <a href="https://www.cs.manchester.ac.uk/">Department of Computer Science</a>, The University of Manchester, Manchester, UK</li>
+          </ul>
+
+          <ul id="author-email">
+            <li id="author-email-a"><sup>a</sup><a href="mailto:stian@soiland-reyes.com">stian@soiland-reyes.com</a></li>
+            <li id="author-email-b"><sup>b</sup><a href="mailto:p.t.groth@uva.nl">p.t.groth@uva.nl</a></li></ul>
+        </div>
+        <dl id="document-language"><dt>Language</dt><dd><span content="en" lang="" property="dcterms:language" xml:lang="">English</span></dd></dl>
+        <dl id="document-license"><dt>License</dt><dd><a href="https://creativecommons.org/licenses/by/4.0/" rel="schema:license" title="Creative Commons Attribution 4.0 International">CC BY 4.0</a></dd></dl>
+        <dl id="document-status"><dt>Document Status</dt><dd prefix="pso: http://purl.org/spar/pso/" rel="pso:holdsStatusInTime" resource="#8daf9f72-3ef6-4c8a-a15b-186f3e026803"><span rel="pso:withStatus" resource="http://purl.org/spar/pso/draft" typeof="pso:PublicationStatus">Draft</span></dd></dl>
+
+        <div id="content">
+          <section id="abstract">
+            <h2>Abstract</h2>
+            <div datatype="rdf:HTML" property="schema:abstract">
+              <p>
+                In this work we explore briefly well-established and emerging standards for structured metadata and provenance of scholarly digital objects and datasets, such as OAI-ORE, PROV, VoID, Research Objects, COMBINE archives, Frictionless Data, DataONE data packages, schema.org and DataCite Metadata Schema. 
+                
+                We then examine deposit patterns and the use of structured metadata in scholarly archives for the practical use case of Zenodo, a European-wide Open Repository of data, software and publications, popular across a wide range of scientific domains and hosting a variety of file formats and deposit types.
+
+                After gathering and analyzing record-level metadata across all of Zenodo, we sample deposits that contain ZIP archives, as we argue their composite nature of mixed content with potentially diverging provenance makes them prime candidates for having manifests of structured metadata, to go beyond what is supported by record-level schemas such as DataCite. 
+                
+                Our study reveals that while most deposits lack such embedded metadata or detailed provenance, there are beacons of hope, where we find depositors are encouraged by best practices within specific communities and where metadata augmentation is inherently supported by their domain-specific tooling. 
+
+                Finally we give recommendations for improving the practice of providing provenance and structured metadata in scholarly repositories, in particular with a view of supporting their automated consumption by downstream aggregators and individual researchers, aiming for a minimal provenance profile that can be largely populated automatically.
+              </p>
+            </div>
+          </section>
+
+          <section id="keywords">
+            <h2>Keywords</h2>
+            <div>
+              <ul>
+                <li>metadata, open repositories, provenance, research object, scholarly communication<br /></li>
+              </ul>
+            </div>
+          </section>
+
+          <section id="introduction" rel="schema:hasPart" resource="#introduction">
+            <h2 property="schema:name">Background</h2>
+            <div datatype="rdf:HTML" property="schema:description">
+              <p>This is the first paragraph.</p><p>This is second;<br /></p>
+
+              
+            </div>
+          </section>
+
+          <section id="preperation-of-your-paper" rel="schema:hasPart" resource="#preperation-of-your-paper">
+            <h2 property="schema:name">Methods</h2>
+            <div datatype="rdf:HTML" property="schema:description">
+              
+
+              <section id="length-of-papers" rel="schema:hasPart" resource="#length-of-paper">
+                <h3 property="schema:name">Data Collection</h3>
+                <div datatype="rdf:HTML" property="schema:description">
+                  <p>Was it reproducible?<br /></p>
+                </div>
+              </section><section id="acknowledgements" rel="schema:hasPart" resource="#acknowledgements"><br /></section>
+                <section id="plagiarism" rel="schema:hasPart" resource="#plagiarism">
+              </section>
+            </div>
+          </section>
+
+          <section id="additional-information-required-from-authors" rel="schema:hasPart" resource="#additional-information-required-from-authors">
+            <h2 property="schema:name">Results</h2>
+            <div datatype="rdf:HTML" property="schema:description">
+              <section id="copyright-form" rel="schema:hasPart" resource="#copyright-form">
+                <h3 property="schema:name">Foo</h3>
+                <div datatype="rdf:HTML" property="schema:description">
+                  <p>I don't think it worked<br /></p>
+                </div>
+              </section>
+
+              </div>
+          </section>
+
+          <section id="typesetting-of-your-paper-at-springer" rel="schema:hasPart" resource="#typesetting-of-your-paper-at-springer">
+            <h2 property="schema:name">Discussion and Future Work<br /></h2>
+            <div datatype="rdf:HTML" property="schema:description">
+              <p>Did it work?</p><br /></div></section><section id="checklist-of-items-to-be-sent-to-volume-editor" rel="schema:hasPart" resource="#checklist-of-items-to-be-sent-to-volume-editor"><div datatype="rdf:HTML" property="schema:description"><ul>
+              </ul>
+            </div>
+          </section>
+
+          <section id="contact-us" rel="schema:hasPart" resource="#contact-us"><div datatype="rdf:HTML" property="schema:description"><div><section id="acknowledgements" rel="schema:hasPart" resource="#acknowledgements">
+                    <h4 property="schema:name">Acknowledgements</h4>
+                    <div datatype="rdf:HTML" property="schema:description">                       <p>This work has been done as part of the BioExcel CoE (<a href="https://bioexcel.eu/">https://bioexcel.eu/</a>), a project funded by the European Union contracts <a href="https://cordis.europa.eu/project/id/823830">H2020-INFRAEDI-02-2018-823830</a>, <a href="https://cordis.europa.eu/project/id/675728">H2020-EINFRA-2015-1-675728</a>.</p>                    </div>
+                  </section></div><ul>
+              </ul>
+            </div>
+          </section>
+
+          <section id="references">
+            <h2>References</h2>
+            <div>
+              <ol>
+                <li id="ref-1" property="schema:citation">Sean Bechhofer, Iain Buchan, David De Roure, Paolo Missier, John Ainsworth, Jiten Bhagat, Phillip Couch, Don Cruickshank, Mark Delderfield, Ian Dunlop, Matthew Gamble, Danius Michaelides, Stuart Owen, David Newman, Shoaib Sufi, Carole Goble (2013): <b>Why Linked Data is Not Enough for Scientists</b>, <i>Future Generation Computer Systems</i> <b>29</b>(2), February 2013, Pages 599-611, ISSN 0167-739X, <a href="https://doi.org/10.1016/j.future.2011.08.004">https://doi.org/10.1016/j.future.2011.08.004</a></li>
+              </ol>
+            </div>
+          </section>
+        </div>
+      </article>
+    </main>
+  
+
+
+
+
+
+</body>
+</html>
