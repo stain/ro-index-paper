@@ -38,11 +38,15 @@
             <h2>Abstract</h2>
             <div datatype="rdf:HTML" property="schema:abstract">
               <p>
+                The replication crisis is now widely acknowledged across academic fields. Methods like Data Science and Cloud Computing is advancing to be applied by all domains, and Open Research practices like publishing datasets, documenting computational methods and improving reproducibility with containers, workflows and open source tools is gradually being taken up by eager researchers and enthusiastic communities. 
+                
+                However these additional data and software resources that support a traditional scholarly publication are often fragmented across multiple repositories and services, and add additional provenance and metadata challenges such as versioning, attribution, citation, access and persistent identifiers. 
+
                 In this work we explore briefly well-established and emerging standards for structured metadata and provenance of scholarly digital objects and datasets, such as OAI-ORE, PROV, VoID, Research Objects, COMBINE archives, Frictionless Data, DataONE data packages, schema.org and DataCite Metadata Schema. 
                 
-                We then examine deposit patterns and the use of structured metadata in scholarly archives for the practical use case of Zenodo, a European-wide Open Repository of data, software and publications, popular across a wide range of scientific domains and hosting a variety of file formats and deposit types.
+                We then examine deposit patterns and the actual uptake of providing structured metadata in scholarly archives with the use case of Zenodo, a European-wide Open Repository of data, software and publications, popular across a wide range of research domains and hosting a variety of file formats and deposit types.
 
-                After gathering and analyzing record-level metadata across all of Zenodo, we sample deposits that contain ZIP archives, as we argue their composite nature of mixed content with potentially diverging provenance makes them prime candidates for having manifests of structured metadata, to go beyond what is supported by record-level schemas such as DataCite. 
+                After gathering and analyzing record-level metadata across all of Zenodo, we sampled to explore deposits that contain ZIP archives, as we argue their composite nature of mixed content with potentially diverging provenance makes them prime candidates for utilizing manifests of structured metadata, augment record-level schemas such as DataCite. 
                 
                 Our study reveals that while most deposits lack such embedded metadata or detailed provenance, there are beacons of hope, where we find depositors are encouraged by best practices within specific communities and where metadata augmentation is inherently supported by their domain-specific tooling. 
 
@@ -60,53 +64,54 @@
             </div>
           </section>
 
-          <section id="introduction" rel="schema:hasPart" resource="#introduction">
+          <section id="background" rel="schema:hasPart" resource="#backgrounc">
             <h2 property="schema:name">Background</h2>
             <div datatype="rdf:HTML" property="schema:description">
-              <p>This is the first paragraph.</p><p>This is second;<br /></p>
-
-              
+              <p>This is the first paragraph.</p><p>This is second;</p>              
             </div>
+            <section id="reproducibility-crisis" rel="schema:hasPart" resource="#reproducibility-crisis">
+              <h3 property="schema:name">Reproducibility crisis</h3>
+            </section>
+            <section id="standards" rel="schema:hasPart" resource="#standards">
+              <h3 property="schema:name">Metadata standards and initiatives</h3>
+            </section>
+
           </section>
 
-          <section id="preperation-of-your-paper" rel="schema:hasPart" resource="#preperation-of-your-paper">
-            <h2 property="schema:name">Methods</h2>
-            <div datatype="rdf:HTML" property="schema:description">
-              
-
-              <section id="length-of-papers" rel="schema:hasPart" resource="#length-of-paper">
-                <h3 property="schema:name">Data Collection</h3>
-                <div datatype="rdf:HTML" property="schema:description">
-                  <p>Was it reproducible?<br /></p>
-                </div>
-              </section><section id="acknowledgements" rel="schema:hasPart" resource="#acknowledgements"><br /></section>
-                <section id="plagiarism" rel="schema:hasPart" resource="#plagiarism">
+          <section id="method" rel="schema:hasPart" resource="#method">
+            <h2 property="schema:name">Method</h2>
+              <div datatype="rdf:HTML" property="schema:description">
+                <p>..</p>              
+              </div>
+              <section id="zenodo-metadata" rel="schema:hasPart" resource="#zenodo-metadata">
+                <h3 property="schema:name">Zenodo metadata</h3>
               </section>
-            </div>
+              <section id="zip" rel="schema:hasPart" resource="#zip">
+                <h3 property="schema:name">ZIP archives in Zenodo</h3>
+              </section>                
           </section>
 
           <section id="additional-information-required-from-authors" rel="schema:hasPart" resource="#additional-information-required-from-authors">
             <h2 property="schema:name">Results</h2>
             <div datatype="rdf:HTML" property="schema:description">
-              <section id="copyright-form" rel="schema:hasPart" resource="#copyright-form">
-                <h3 property="schema:name">Foo</h3>
-                <div datatype="rdf:HTML" property="schema:description">
-                  <p>I don't think it worked<br /></p>
-                </div>
-              </section>
-
+              <p>...</p>
               </div>
           </section>
 
-          <section id="typesetting-of-your-paper-at-springer" rel="schema:hasPart" resource="#typesetting-of-your-paper-at-springer">
+          <section id="discussion" rel="schema:hasPart" resource="#typesetting-of-your-paper-at-springer">
             <h2 property="schema:name">Discussion and Future Work<br /></h2>
             <div datatype="rdf:HTML" property="schema:description">
-              <p>Did it work?</p><br /></div></section><section id="checklist-of-items-to-be-sent-to-volume-editor" rel="schema:hasPart" resource="#checklist-of-items-to-be-sent-to-volume-editor"><div datatype="rdf:HTML" property="schema:description"><ul>
-              </ul>
+              <p>..</p><br />
+              <section id="recommendation" rel="schema:hasPart" resource="#recommendation">
+                <h3 property="schema:name">Recommendation</h3>
+                <div datatype="rdf:HTML" property="schema:description">
+                  <p>..<br /></p>
+                </div>
+              </section>
             </div>
           </section>
-
-          <section id="contact-us" rel="schema:hasPart" resource="#contact-us"><div datatype="rdf:HTML" property="schema:description"><div><section id="acknowledgements" rel="schema:hasPart" resource="#acknowledgements">
+        
+          <section id="acknowledgements" rel="schema:hasPart" resource="#acknowledgements">
                     <h4 property="schema:name">Acknowledgements</h4>
                     <div datatype="rdf:HTML" property="schema:description">                       <p>This work has been done as part of the BioExcel CoE (<a href="https://bioexcel.eu/">https://bioexcel.eu/</a>), a project funded by the European Union contracts <a href="https://cordis.europa.eu/project/id/823830">H2020-INFRAEDI-02-2018-823830</a>, <a href="https://cordis.europa.eu/project/id/675728">H2020-EINFRA-2015-1-675728</a>.</p>                    </div>
                   </section></div><ul>
