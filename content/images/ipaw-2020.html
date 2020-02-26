@@ -56,12 +56,12 @@
       <dl id="document-license">
         <dt>License</dt>
         <dd><a href="https://creativecommons.org/licenses/by/4.0/" rel="schema:license"
-            title="Creative Commons Attribution 4.0 International">CC BY 4.0</a></dd>
+               title="Creative Commons Attribution 4.0 International">CC BY 4.0</a></dd>
       </dl>
       <dl id="document-status">
         <dt>Document Status</dt>
         <dd prefix="pso: http://purl.org/spar/pso/" rel="pso:holdsStatusInTime"
-          resource="#8daf9f72-3ef6-4c8a-a15b-186f3e026803"><span rel="pso:withStatus"
+            resource="#8daf9f72-3ef6-4c8a-a15b-186f3e026803"><span rel="pso:withStatus"
             resource="http://purl.org/spar/pso/draft" typeof="pso:PublicationStatus">Draft</span></dd>
       </dl>
 
@@ -125,7 +125,7 @@
           <h2 property="schema:name">Background</h2>
           <div datatype="rdf:HTML" property="schema:description">
             <p>This is the first paragraph.</p>
-            <p>This is second;</p>                
+            <p>This is second;</p>
           </div>
           <section id="reproducibility-crisis" rel="schema:hasPart" resource="#reproducibility-crisis">
             <h3 property="schema:name">Reproducibility crisis as motivation</h3>
@@ -236,7 +236,7 @@
           
           Our result is there are still a lot of gaps, but there is some hope.
           
-          Title: add sub "- " -- are they research objects in the wild? Looking for research objects in the wild?
+          Title: add subtitle "- exploring foo bar in baz".  Looking for research objects in the wild?
 
 
         <pre>
@@ -258,24 +258,31 @@ Structure:
 
         ReproZip, WholeTale, etc.
 
+        
         <blockquote>
-          <!-- From Paul's paper draft -->
+          <h5>From Paul's recent paper (do not use verbatim!)</h5>
+          <p>
           Our work is inspired by work on environments for computational reproducibility~\cite{pasquier2017if,
           stodden2016enhancing}. ReproZip~\cite{chirigati2016reprozip} automatically analyzes system calls to
           create bundles of files and programs that can be executed in a virtual machine or Docker image.
           Likewise~\cite{nust2019containerit}, describes containerIt, a system for building Docker based virtual
-          machines for R environments. Indeed, Docker has become a foundation for a number efforts to ensure
+          machines for R environments. 
+          </p><p>
+          Indeed, Docker has become a foundation for a number efforts to ensure
           computational reproducibility
           (e.g.,~\cite{boettiger2015introduction,knoth2017reproducibility,Jupyter2018}). Beyond just capturing
           computational artifacts in a container, other approaches, such as the WholeTale\cite{BRINCKMAN2019854}
           and CWLProv~\cite{Khan2019}, aim to incorporate datasets, papers into larger so called research
-          objects~\cite{Bechhofer2013} to further facilitate reproducibility. More broadly reproducibility is
+          objects~\cite{Bechhofer2013} to further facilitate reproducibility. 
+          </p><p>
+          More broadly reproducibility is
           becoming an increasing concern in cybersecurity research~\cite{10.1145/3322790.3330593}. For a wider
           view of computational reproducibility and particular its relevance to notions of data provenance, we
           recommend the recent survey by Pimentel et al.~\cite{10.1145/3311955}. Our work builds on these
           approaches by adding full system recording capability. Additionally, our work sees the outcome not to be
           about reproducibility but to provide datasets for {\em analytics}.
-
+          </p>
+          
         </blockquote>
 
           
