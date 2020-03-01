@@ -39,7 +39,7 @@ pandoc --verbose \
   --bibliography="$BIBLIOGRAPHY_PATH" \
   --csl="$CSL_PATH" \
   --metadata link-citations=true \
-  --include-after-body=build/themes/default.html \
+  --include-in-header=build/themes/dokieli.html \
   --include-after-body=build/plugins/table-scroll.html \
   --include-after-body=build/plugins/anchors.html \
   --include-after-body=build/plugins/accordion.html \
@@ -85,8 +85,10 @@ fi
 # Create PDF output (unless BUILD_PDF environment variable equals "false")
 if [ "${BUILD_PDF:-}" != "false" ] && [ -n "$DOCKER_EXISTS" ]; then
   echo >&2 "Exporting PDF manuscript using Docker + Athena"
-  if [ -d output/images ]; then rm -rf output/images; fi  # if images is a directory, remove it
-  cp -R -L content/images output/
+  for d in static images ; do 
+    if [ -d output/$d ]; then rm -rf output/$d; fi  # if $d is a directory, remove it
+    cp -R -L content/$d output/
+  done
   docker run \
     --rm \
     --shm-size=1g \
