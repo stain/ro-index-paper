@@ -56,6 +56,10 @@ pandoc --verbose \
   --output=output/manuscript.html \
   "$INPUT_PATH"
 
+# Static HTML/CSS/JS copied as-is
+if [ -d output/static ]; then rm -rf output/static; fi  # if static is a directory, remove it
+cp -R -L content/static output/
+
 # Return null if docker command is missing, otherwise return path to docker
 DOCKER_EXISTS="$(command -v docker || true)"
 
@@ -85,10 +89,8 @@ fi
 # Create PDF output (unless BUILD_PDF environment variable equals "false")
 if [ "${BUILD_PDF:-}" != "false" ] && [ -n "$DOCKER_EXISTS" ]; then
   echo >&2 "Exporting PDF manuscript using Docker + Athena"
-  for d in static images ; do 
-    if [ -d output/$d ]; then rm -rf output/$d; fi  # if $d is a directory, remove it
-    cp -R -L content/$d output/
-  done
+  if [ -d output/images ]; then rm -rf output/images; fi  # if images is a directory, remove it
+  cp -R -L content/images output/
   docker run \
     --rm \
     --shm-size=1g \
