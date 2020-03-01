@@ -69,6 +69,9 @@
         <section id="abstract">
           <h2>Abstract</h2>
           <div datatype="rdf:HTML" property="schema:abstract">
+
+            
+
             <p>
               The replication crisis is now widely acknowledged across academic fields. Methods like Data Science and
               Cloud Computing are advancing to be applied by all domains, and Open Research practices like publishing
@@ -79,31 +82,38 @@
             <p>
               However these additional data and software resources that support a traditional scholarly publication are
               often fragmented across multiple repositories and services, and add additional provenance and metadata
-              challenges such as versioning, attribution, citation, access and persistent identifiers.
+              challenges such as versioning, attribution, citation, access and persistent identifiers. The concept of a 
+              <em>Research Object</em> has been proposed as a mechanism to gather these resources in a package or archive
+              combined with structured machine-readable metadata, however the uptake of this methodology seem to be slow.
             </p>
             <p>
               In this work we explore briefly well-established and emerging standards for structured metadata and
-              provenance of scholarly digital objects and datasets, such as OAI-ORE, PROV, VoID, Research Objects,
-              COMBINE archives, Frictionless Data, DataONE data packages, schema.org and DataCite Metadata Schema.
+              provenance of scholarly digital objects and datasets.
+              To investigate any actual practice of providing structured metadata in scholarly archives
+              we therefore examined deposit patterns with the use case of Zenodo, 
+              a European-wide Open Repository of data, software and publications,
+              popular across a wide range of research domains, 
+              and hosting a variety of file formats and deposit types.
+            </p> 
+            <p>
+              After gathering and analyzing record-level metadata for the 
+              3.5 million Zenodo records, we sampled and downloaded a subset of 
+              the 124k (~ 3.5%) deposited ZIP archives to further analyze their 
+              composition in terms of file names and extensions.
+              We argue their composite nature of mixed content, with potentially diverging
+              provenance, makes them prime candidates for utilizing manifests of structured metadata to
+              augment existing record-level schemas such as DataCite. 
             </p>
             <p>
-              We then examine deposit patterns and the actual uptake of providing structured metadata in scholarly
-              archives with the use case of Zenodo, a European-wide Open Repository of data, software and publications,
-              popular across a wide range of research domains and hosting a variety of file formats and deposit types.
+              Our study reveals that while most deposits lack embedded metadata or detailed provenance, 
+              there are beacons of hope, cases where we suggest depositors have been encouraged by best practices within 
+              specific communities and where metadata augmentation is inherently supported by their domain-specific tooling.
+              In addition, we found that a comparable subset of Zenodo records (~ 4%) consists of multiple files; such
+              records can themselves be considered as research object-like packages, but 
+              need a consistent structure or extended metadata to be consumed computationally.
             </p>
             <p>
-              After gathering and analyzing record-level metadata across all of Zenodo, we sampled to explore deposits
-              that contain ZIP archives, as we argue their composite nature of mixed content with potentially diverging
-              provenance makes them prime candidates for utilizing manifests of structured metadata, augment
-              record-level schemas such as DataCite.
-            </p>
-            <p>
-              Our study reveals that while most deposits lack such embedded metadata or detailed provenance, there are
-              beacons of hope, where we find depositors are encouraged by best practices within specific communities and
-              where metadata augmentation is inherently supported by their domain-specific tooling.
-            </p>
-            <p>
-              Finally we give recommendations for improving the practice of providing provenance and structured metadata
+              Finally we propose recommendations for improving the practice of providing provenance and structured metadata
               in scholarly repositories, in particular with a view of supporting their automated consumption by
               downstream aggregators and individual researchers, aiming for a minimal provenance profile that can be
               largely populated automatically.
