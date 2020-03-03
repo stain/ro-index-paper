@@ -19,9 +19,9 @@ title: 'RO-Index: A survey of Research Object usage'
 
 <small><em>
 This manuscript
-([permalink](https://stain.github.io/ro-index-paper/v/2430c03b79f3d6695d50b889aad3c718aad21ad4/))
+([permalink](https://stain.github.io/ro-index-paper/v/1f142b8ccf268fef47e0de370314adc8cb2c68bb/))
 was automatically generated
-from [stain/ro-index-paper@2430c03](https://github.com/stain/ro-index-paper/tree/2430c03b79f3d6695d50b889aad3c718aad21ad4)
+from [stain/ro-index-paper@1f142b8](https://github.com/stain/ro-index-paper/tree/1f142b8ccf268fef47e0de370314adc8cb2c68bb)
 on March 3, 2020.
 </em></small>
 
