@@ -7,6 +7,11 @@
   <link disabled="" href="https://dokie.li/media/css/acm.css" media="all" rel="stylesheet alternate" title="ACM" />
   <link href="https://dokie.li/media/css/dokieli.css" media="all" rel="stylesheet" />
   <script src="https://dokie.li/scripts/dokieli.js"></script>
+  <style>
+   #references {
+      font-size: 80%;
+    }
+  </style>
 </head>
 
 <body about="" prefix="rdf: http://www.w3.org/1999/02/22-rdf-syntax-ns# rdfs: http://www.w3.org/2000/01/rdf-schema# owl: http://www.w3.org/2002/07/owl# xsd: http://www.w3.org/2001/XMLSchema# dcterms: http://purl.org/dc/terms/ dctypes: http://purl.org/dc/dcmitype/ foaf: http://xmlns.com/foaf/0.1/ pimspace: http://www.w3.org/ns/pim/space# cc: https://creativecommons.org/ns# skos: http://www.w3.org/2004/02/skos/core# prov: http://www.w3.org/ns/prov# mem: http://mementoweb.org/ns# qb: http://purl.org/linked-data/cube# schema: http://schema.org/ void: http://rdfs.org/ns/void# rsa: http://www.w3.org/ns/auth/rsa# cert: http://www.w3.org/ns/auth/cert# wgs: http://www.w3.org/2003/01/geo/wgs84_pos# bibo: http://purl.org/ontology/bibo/ sioc: http://rdfs.org/sioc/ns# doap: http://usefulinc.com/ns/doap# dbr: http://dbpedia.org/resource/ dbp: http://dbpedia.org/property/ sio: http://semanticscience.org/resource/ opmw: http://www.opmw.org/ontology/ deo: http://purl.org/spar/deo/ doco: http://purl.org/spar/doco/ cito: http://purl.org/spar/cito/ fabio: http://purl.org/spar/fabio/ oa: http://www.w3.org/ns/oa# as: https://www.w3.org/ns/activitystreams# ldp: http://www.w3.org/ns/ldp# solid: http://www.w3.org/ns/solid/terms# acl: http://www.w3.org/ns/auth/acl# dio: https://w3id.org/dio# rel: https://www.w3.org/ns/iana/link-relations/relation#" typeof="schema:CreativeWork prov:Entity">
@@ -97,8 +102,8 @@
           <section id="reproducibility-crisis" rel="schema:hasPart" resource="#reproducibility-crisis">
             <h3 property="schema:name">Reproducibility crisis as motivation</h3>
             <p>In the last two decades, academia has increasingly recognized the dangers of a 
-              <a href="https://doi.org/10.1038/533452a">reproducibility crisis</a>[1] affecting published research 
-              across a <a href="https://doi.org/10.5860/crl.79.1.2">number of diciplines</a>[2].
+              <a href="https://doi.org/10.1038/533452a">reproducibility crisis</a> [1] affecting published research 
+              across a <a href="https://doi.org/10.5860/crl.79.1.2">number of diciplines</a> [2].
               While in general <em>reproducibility</em> can be considered achieving the same 
               results using same methods, materials and data, the wider goal of <em>replicability</em> 
               is finding equivalent results using the same methods but on new data. 
@@ -116,20 +121,49 @@
               collected and subsequently made openly available, 
               often the data is processed without sufficient  
               <a href="https://doi.org/10.1111/j.1740-9713.2015.00827.x">statistical and 
-              analytical skills</a>[3] or without taking simple
-              <a href="https://doi.org/10.1371%2Fjournal.pcbi.1005412">robustness measures</a> to 
+              analytical skills</a> [3] or without taking simple
+              <a href="https://doi.org/10.1371/journal.pcbi.1005412">robustness measures</a> to 
               ensure the software methods are understandable and reusable by
               other researchers [4] (this may include future self). 
             </p>
             <p>
               The practice of using <em>scientific workflows</em> to capture the 
-              digital analysis method was 
+              digital analysis
               <a href="https://doi.org/10.1007/978-1-84628-757-2">promoted early</a>
               to improve reproducibility 
               and consistency [6], but also to capture 
-              <a href="http://ceur-ws.org/Vol-83/prov_2.pdf">provenance of workflow executions</a>[7]
-              that track how result data is derived from other data.
+              <a href="http://ceur-ws.org/Vol-83/prov_2.pdf">provenance of workflow executions</a> [7]
+              that track how result data is derived from other data. Many alternative 
+              <a href="https://hal.archives-ouvertes.fr/hal-01544818">workflow management systems</a> have 
+              since evolved [8], covering a wide range of domains and computational models.
             </p>
+            <p>              
+              While early workflow systems could be seen as a way to formalize 
+              documentation of computational methods, as well as simplifying graphical 
+              access to complex computational resources 
+              (web services, clusters, grids), 
+              <a href="https://doi.org/10.1162/dint_a_00033">recent years</a> 
+              have seen a growth in use of more script-like
+              workflow systems that utillize cloud computing for scalability,
+              containers and package management tools (Docker, Singularity, Conda) 
+              for reliably executing open source tools in their latest versions [8].
+              In wider field there has also been a reemergence of 
+              script languages for Data Science using interactive 
+              platforms such as R Studio and Jupyter Notebook, backed by 
+              rich visualization libraries. Open Research 
+              practicioners are now commonly sharing workflow scripts and 
+              notebooks in source repositories like GitHub and GitLab.
+            </p>
+            <p>
+              Software Citation practices such as publishing
+              code releases from GitHub with a 
+              <a href="https://guides.github.com/activities/citable-code/">DOI from Zenodo</a>,
+              are now actively encouraged by some journals like GigaScience. 
+
+
+              
+            </p>
+
             <p>
               It has been <a href="https://doi.org/10.1073/pnas.1708272114">argued</a>
               that instead of focusing on a misleading narrative 
@@ -224,39 +258,40 @@
             <ol>
               <li id="ref-1" property="schema:citation">
                 Monya Baker (2016): 
-                <b>1,500 scientists lift the lid on reproducibility</b>.
-                <i>Nature</i> <b>533</b>, 452–454 
+                <strong>1,500 scientists lift the lid on reproducibility</strong>.
+                <em>Nature</em> <strong>533</strong>, 452–454 
                 <a href="https://doi.org/10.1038/533452a">https://doi.org/10.1038/533452a</a>
               </li>
               <li id="ref-2" property="schema:citation">
                 Franklin Sayre, Amy Riegelman (2018):
-                <b>The Reproducibility Crisis and Academic Libraries</b>.
-                <i>College & Research Libraries</i> <b>79</b>(1)
+                <strong>The Reproducibility Crisis and Academic Libraries</strong>.
+                <em>College & Research Libraries</em> <strong>79</strong>(1)
                 <a href="https://doi.org/10.5860/crl.79.1.2">https://doi.org/10.5860/crl.79.1.2</a>
                 </li>
               <li id="ref-3" property="schema:citation">
                 Roger Peng (2015):
-                <b>The reproducibility crisis in science: A statistical counterattack</b>.
-                <i>Significance</i> <b>12</b>(13)
+                <strong>The reproducibility crisis in science: A statistical counterattack</strong>.
+                <em>Significance</em> <strong>12</strong>(13)
                 <a href="https://doi.org/10.1111/j.1740-9713.2015.00827.x">https://doi.org/10.1111/j.1740-9713.2015.00827.x</a>
               </li>
-              <li id="ref-4" property="schema:citation"></li>
+              <li id="ref-4" property="schema:citation">
                 Morgan Taschuk, Greg Wilson (2017):
-                <b>Ten simple rules for making research software more robust</b>
-                <i>PLoS Computational Biology</i> <b>13</b>(4)
-                <a href="https://doi.org/10.1371%2Fjournal.pcbi.1005412">https://doi.org/10.1371%2Fjournal.pcbi.1005412</a>
+                <strong>Ten simple rules for making research software more robust</strong>
+                <em>PLoS Computational Biology</em> <strong>13</strong>(4)
+                <a href="https://doi.org/10.1371/journal.pcbi.1005412">https://doi.org/10.1371/journal.pcbi.1005412</a>
               </li> 
               <li id="ref-5" property="schema:citation">
                 Daniele Fanelli (2018):
-                <b>Opinion: Is science really facing a reproducibility crisis, and do we need it to?</b>
-                <i>PNAS</i> <b>115</b>(11)
+                <strong>Opinion: Is science really facing a reproducibility crisis, and do we need it to?</strong>
+                <em>PNAS</em> <strong>115</strong>(11)
                 <a href="https://doi.org/10.1073/pnas.1708272114">https://doi.org/10.1073/pnas.1708272114</a>
               </li>
               <li id="ref-6" property="schema:citation">
                 Ian J. Taylor, Ewa Deelman, Dennis B. Gannon, Matthew Shields (Eds.) (2007):
-                <b>Workflows for e-Science: Scientific Workflows for Grids</b>
+                <strong>Workflows for e-Science: Scientific Workflows for Grids</strong>.
                 Springer-Verlag London. ISBN 978-1-84628-757-2 
                 <a href="https://doi.org/10.1007/978-1-84628-757-2">https://doi.org/10.1007/978-1-84628-757-2</a>
+                <small>(not Open Access)</small>
               </li>
 
               <li id="ref-7" property="schema:citation">
@@ -264,17 +299,32 @@
                   Jun Zhao, Carol Goble, Mark Greenwood, Chris Wroe, Robert Stevens. (2003).
                   <strong>"Annotating, linking and browsing provenance logs for e-Science,"</strong>
                   <em>International Semantic Web Conference</em> 2003.
-                  <em>CEUR Workshop Proceedings</em> <strong>83</strong>
-                  <a href="http://ceur-ws.org/Vol-83/prov_2.pdf">http://ceur-ws.org/Vol-83/prov_2.pdf</a></p>
+                  <em>CEUR Workshop Proceedings</em> <strong>83</strong>.
+                  <a href="http://ceur-ws.org/Vol-83/prov_2.pdf">http://ceur-ws.org/Vol-83/prov_2.pdf</a>
+              </li>
+              <li id="ref-8" property="schema:citation">
+                Malcolm Atkinson, Sandra Gesing, Johan Montagnat, Ian Taylor (2017):
+                  <strong>Scientific workflows: Past, present and future</strong>
+                  <em>Future Generation Computer Systems</em> <strong>75</strong>.
+                  <a href="https://doi.org/10.1016/j.future.2017.05.041">https://doi.org/10.1016/j.future.2017.05.041</a>
+                  <small>(not Open Access, see <a href="https://hal.archives-ouvertes.fr/hal-01544818">preprint hal-01544818</a>)</small>
+              </li>
+              <li id="ref-8" property="schema:citation">
+                Carole Goble, Sarah Cohen-Boulakia, Stian Soiland-Reyes, Daniel Garijo, Yolanda Gil, Michael R. Crusoe, Kristian Peters, Daniel Schober (2020):
+                <strong>FAIR Computational Workflows</strong></a>.
+                <em>Data Intelligence</em>  <strong>2</strong>(1):108–121
+                <a href="https://doi.org/10.1162/dint_a_00033" target="_blank" class=" externalLink">https://doi.org/10.1162/dint_a_00033</a>
               </li>
 
               <li id="ref-xx" property="schema:citation">Sean Bechhofer, Iain Buchan, David De Roure, Paolo Missier, John
                 Ainsworth, Jiten Bhagat, Phillip Couch, Don Cruickshank, Mark Delderfield, Ian Dunlop, Matthew Gamble,
                 Danius Michaelides, Stuart Owen, David Newman, Shoaib Sufi, Carole Goble (2013):
-                <b>Why Linked Data is Not Enough for Scientists</b>,
-                <i>Future Generation Computer Systems</i>
-                <b>29</b>(2), February 2013, Pages 599-611, ISSN 0167-739X,
+                <strong>Why Linked Data is Not Enough for Scientists</strong>,
+                <em>Future Generation Computer Systems</em>
+                <strong>29</strong>(2) pp 599-611.
                 <a href="https://doi.org/10.1016/j.future.2011.08.004">https://doi.org/10.1016/j.future.2011.08.004</a>
+                <small>(not Open Access, see <a href="http://users.ox.ac.uk/~oerc0033/preprints/research-objects.pdf">preprint</a>)</small>
+
               </li>
             </ol>
           </div>
@@ -297,22 +347,7 @@
           Title: add subtitle "- exploring foo bar in baz".  Looking for research objects in the wild?
 
 
-        <pre>Structure: 
-
-1. Intro 
-1.1. Reproducibility crisis as motivation 
-1.2 Research Objects as the answer 
-1.3 Their uptake and potential in the wild 
-2. Related Work - a survey
-2.1 Review of these standards 
-2.2 Other “in the wild” analyses 
-3. Methdology 
-4 Results 
-5 Implications 
-6 Conlusion 
-
-</pre>
-
+          
         ReproZip, WholeTale, etc.
 
         
