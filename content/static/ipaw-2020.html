@@ -188,7 +188,7 @@
             </p>
             <p>
               It has been <a href="https://doi.org/10.1073/pnas.1708272114">argued</a>
-              that rather than of focusing on a negative narrative 
+              that rather than focusing on a negative narrative 
               of a reproducibility "crisis", academia should promote transparancy and 
               replicability as an ongoing scolarly revolution that is 
               empowering researchers to do better science [5].
@@ -205,7 +205,7 @@
               researchers are now expected to publish and cite additional 
               software and data resources. Let's take this very article as an example,
               with a limited data analysis. Beyond a "paper" (static PDF),
-              to be a good citizen of Academia 2.0 we will also need to publish:
+              to be a good citizen of Academia 2.0 we would ideally also need to publish:
             </p>
             <ul>
               <li>Data management plan</li>
@@ -217,12 +217,47 @@
               <li>Workflow diagram that shows tool composition</li>
               <li>(Re)executable interoperable workflow</li>
               <li>(Re)executable analysis for generating tables/figures</li>
-              <li>Preprint under an open license</li>
+              <li>Preprint of submitted article</li>
+              <li>Postprint of article after peer review</li>
               <li>Web accessible HTML with hyperlinked identifiers</li>
               <li>Open Source / Open Access licenses for all the above (e.g. CC-BY)</li>
               <li>Use and generate persistent identifiers for all the above (e.g. DOI)</li>
               <li>Linked Data and Metadata re-using FAIR vocabularies</li>
             </ul>
+            <p>
+              The notion of <a href="http://www.researchobject.org/">Research Objects</a> 
+              have been <a href="https://eprints.soton.ac.uk/271587/1/research-objects-final.pdf">proposed</a> 
+              for gathering and organizing the aggregated composite of research results 
+              and their surrounding provenance resources, such as research questions,
+              organizational contexts, study design, methods, measurements, observations and 
+              follow-on disseminations like papers, reports and slides [13]. The argument is that 
+              all of these resources, and the provenance relations that connect them,
+              are needed to fully support 
+              <a href="https://web.archive.org/web/20110108212231/http://blogs.nature.com/eresearch/2010/11/27/replacing-the-paper-the-twelve-rs-of-the-e-research-record">"the 
+                twelve Rs" of Research Objects</a>:
+              Repeatable, Reproducible, Reusable, Reusable, Repurposable, 
+              Reliable, Referencable, Re-interpretable, Respectful, Retrievable, 
+              Replayable, Refreshable, Recoverable [14].
+            </p>
+            <p>
+              <a href="https://eprints.soton.ac.uk/265709/1/fgcs.pdf">Early work</a> 
+              with the scientific workflow repository 
+              <a href="https://www.myexperiment.org/">myExperiment</a>
+              emphasized Research Objects as a way of combining the 
+              computational method in the form of a workflow with 
+              its related data, results and provenance, in one way to improve 
+              reproducibility, but primarily to support sharing 
+              and understanding of the computational methods [15]. This was 
+              later formalized by the <a href="http://wf4ever.org/">Wf4Ever project</a> as 
+              a <a href="https://w3id.org/ro/2016-01-28">suite of ontologies</a> 
+              for describing and 
+              preserving <a href="https://doi.org/10.1016/j.websem.2015.01.003">workflow-centric research objects</a>,
+              including provenance of individual workflow runs (e.g. inputs, outputs, runtime stats, software used) 
+              as well as the longer-term evolution of the workflow definitions and the research object itself [16].
+            </p>
+            <p>
+
+            </p>
           </section>
           <section id="uptake" rel="schema:hasPart" resource="#uptake">
             <h3 property="schema:name">Their uptake and potential in the wild</h3>
@@ -342,35 +377,34 @@
               </li>
 
               <li id="ref-7" property="schema:citation">
-              
-                  Jun Zhao, Carol Goble, Mark Greenwood, Chris Wroe, Robert Stevens. (2003).
-                  <strong>"Annotating, linking and browsing provenance logs for e-Science,"</strong>
-                  <em>International Semantic Web Conference</em> 2003.
-                  <em>CEUR Workshop Proceedings</em> <strong>83</strong>.
-                  <a href="http://ceur-ws.org/Vol-83/prov_2.pdf">http://ceur-ws.org/Vol-83/prov_2.pdf</a>
+                Jun Zhao, Carol Goble, Mark Greenwood, Chris Wroe, Robert Stevens. (2003).
+                <strong>"Annotating, linking and browsing provenance logs for e-Science,"</strong>
+                <em>International Semantic Web Conference</em> 2003.
+                <em>CEUR Workshop Proceedings</em> <strong>83</strong>.
+                <a href="http://ceur-ws.org/Vol-83/prov_2.pdf">http://ceur-ws.org/Vol-83/prov_2.pdf</a>
               </li>
               <li id="ref-8" property="schema:citation">
                 Malcolm Atkinson, Sandra Gesing, Johan Montagnat, Ian Taylor (2017):
-                  <strong>Scientific workflows: Past, present and future</strong>
-                  <em>Future Generation Computer Systems</em> <strong>75</strong>.
-                  <a href="https://doi.org/10.1016/j.future.2017.05.041">https://doi.org/10.1016/j.future.2017.05.041</a>
-                  <small>(not Open Access, see <a href="https://hal.archives-ouvertes.fr/hal-01544818">preprint hal-01544818</a>)</small>
+                <strong>Scientific workflows: Past, present and future</strong>
+                <em>Future Generation Computer Systems</em> <strong>75</strong>.
+                <a href="https://doi.org/10.1016/j.future.2017.05.041">https://doi.org/10.1016/j.future.2017.05.041</a>
+                <small>(not Open Access, see <a href="https://hal.archives-ouvertes.fr/hal-01544818">preprint hal-01544818</a>)</small>
               </li>
               <li id="ref-9" property="schema:citation">
                 Carole Goble, Sarah Cohen-Boulakia, Stian Soiland-Reyes, Daniel Garijo, Yolanda Gil, Michael R. Crusoe, Kristian Peters, Daniel Schober (2020):
                 <strong>FAIR Computational Workflows</strong></a>.
                 <em>Data Intelligence</em>  <strong>2</strong>(1):108–121
-                <a href="https://doi.org/10.1162/dint_a_00033" target="_blank" class=" externalLink">https://doi.org/10.1162/dint_a_00033</a>
+                <a href="https://doi.org/10.1162/dint_a_00033">https://doi.org/10.1162/dint_a_00033</a>
               </li>
 
               <li id="ref-10" property="schema:citation">
-              Directorate-General for Research and Innovation (European Commission) (2019):
-              <strong>Future of scholarly publishing and scholarly communication</strong>.
-              Jean-Claude Guédon, Michael Jubb, Bianca Kramer, Mikael Laakso, Birgin Scmidt, Elena Šimukovič, Jennifer Hansen, 
-              Robert Kiley, Anne Kitson, Wim van der Stelt, Kamilla Markram, Mark Petterson (eds.)             
-              Report of the Expert Group to the European Commission.
-              ISBN 978-92-79-97238-6
-              <a href="https://doi.org/10.2777/836532">https://doi.org/10.2777/836532</a>
+                Directorate-General for Research and Innovation (European Commission) (2019):
+                <strong>Future of scholarly publishing and scholarly communication</strong>.
+                Jean-Claude Guédon, Michael Jubb, Bianca Kramer, Mikael Laakso, Birgin Scmidt, Elena Šimukovič, Jennifer Hansen, 
+                Robert Kiley, Anne Kitson, Wim van der Stelt, Kamilla Markram, Mark Petterson (eds.)             
+                Report of the Expert Group to the European Commission.
+                ISBN 978-92-79-97238-6
+                <a href="https://doi.org/10.2777/836532">https://doi.org/10.2777/836532</a>
               </li>
 
               <li id="ref-11" property="schema:citation">
@@ -387,15 +421,39 @@
                 <a href="https://doi.org/10.1038/sdata.2016.18">https://doi.org/10.1038/sdata.2016.18</a>
               </li>
 
-              <li id="ref-xx" property="schema:citation">Sean Bechhofer, Iain Buchan, David De Roure, Paolo Missier, John
+              <li id="ref-13" property="schema:citation">Sean Bechhofer, Iain Buchan, David De Roure, Paolo Missier, John
                 Ainsworth, Jiten Bhagat, Phillip Couch, Don Cruickshank, Mark Delderfield, Ian Dunlop, Matthew Gamble,
                 Danius Michaelides, Stuart Owen, David Newman, Shoaib Sufi, Carole Goble (2013):
                 <strong>Why Linked Data is Not Enough for Scientists</strong>,
                 <em>Future Generation Computer Systems</em>
-                <strong>29</strong>(2) pp 599-611.
+                <strong>29</strong>(2) pp 599–611.
                 <a href="https://doi.org/10.1016/j.future.2011.08.004">https://doi.org/10.1016/j.future.2011.08.004</a>
-                <small>(not Open Access, see <a href="http://users.ox.ac.uk/~oerc0033/preprints/research-objects.pdf">preprint</a>)</small>
+                <small>(not Open Access, see <a href="http://eprints.soton.ac.uk/id/eprint/271587">preprint 271587</a>)</small>
               </li>
+              <li id="ref-14" property="schema:citation">              
+                David De Roure (2010):
+                <strong>Replacing the Paper: The Twelve Rs of the e-Research Record</strong>.
+                <em>Nature Network</em>,
+                nature.com eResearch blog, 27 Nov 2010.
+                <a href="https://web.archive.org/web/20110108212231/http://blogs.nature.com/eresearch/2010/11/27/replacing-the-paper-the-twelve-rs-of-the-e-research-record">http://blogs.nature.com/eresearch/2010/11/27/replacing-the-paper-the-twelve-rs-of-the-e-research-record</a>
+                <small>(web.archive.org 2011-01-08)</small>
+              </li>
+              <li id="ref-15" property="schema:citation">              
+                David De Roure, Carole Goble, Robert Stevens (2008):
+                <strong>The design and realisation of the Virtual Research Environment myExperiment for social sharing of workflows</strong>.
+                <em>Future Generation Computer Systems</em>,
+                <strong>25</strong>(5) 561–567.
+                <a href="https://doi.org/10.1016/j.future.2008.06.010">https://doi.org/10.1016/j.future.2008.06.010</a>
+                <small>(not Open Access, see <a href="http://eprints.soton.ac.uk/id/eprint/265709">preprint 265709</a></small>
+              </li>
+              <li id="ref-16" property="schema:citation">
+                Khalid Belhajjame, Jun Zhao, Daniel Garijo, Matthew Gamble, Kristina Hettne, Raul Palma, Eleni Mina, Oscar Corcho, 
+                José Manuel Gómez-Pérez, Sean Bechhofer, Graham Klyne, Carole Goble (2015): 
+                <strong>Using a suite of ontologies for preserving workflow-centric research objects</strong>.
+                <em>Web Semantics</em> <strong>32</strong>16–42.
+                <a href="https://doi.org/10.1016/j.websem.2015.01.003">https://doi.org/10.1016/j.websem.2015.01.003</a>
+              </li>
+
             </ol>
           </div>
         </section>
