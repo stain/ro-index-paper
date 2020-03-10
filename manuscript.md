@@ -2,7 +2,7 @@
 author-meta:
 - Stian Soiland-Reyes
 - Paul Groth
-date-meta: '2020-03-05'
+date-meta: '2020-03-10'
 keywords:
 - research object
 - linked data
@@ -19,10 +19,10 @@ title: 'RO-Index: A survey of Research Object usage'
 
 <small><em>
 This manuscript
-([permalink](https://stain.github.io/ro-index-paper/v/32bbf476555b4dcf29fde8d2ef1717ce64c312f9/))
+([permalink](https://stain.github.io/ro-index-paper/v/4c0d2b8050f661e2b778d2723bd7b65acd64cb84/))
 was automatically generated
-from [stain/ro-index-paper@32bbf47](https://github.com/stain/ro-index-paper/tree/32bbf476555b4dcf29fde8d2ef1717ce64c312f9)
-on March 5, 2020.
+from [stain/ro-index-paper@4c0d2b8](https://github.com/stain/ro-index-paper/tree/4c0d2b8050f661e2b778d2723bd7b65acd64cb84)
+on March 10, 2020.
 </em></small>
 
 ## Authors
