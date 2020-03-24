@@ -1,5 +1,5 @@
 {
-  "date": "March 10, 2020",
+  "date": "March 24, 2020",
   "authors": [
     {
       "github": "stain",
@@ -46,13 +46,13 @@
     "repo_slug": "stain/ro-index-paper",
     "repo_owner": "stain",
     "repo_name": "ro-index-paper",
-    "commit": "4c0d2b8050f661e2b778d2723bd7b65acd64cb84"
+    "commit": "5f4b5aab2a9e0fa53eb3d49d62a52d47025a967d"
   },
   "manuscript_stats": {
     "reference_counts": {
       "doi": 29,
       "total": 29
     },
-    "word_count": 4991
+    "word_count": 4994
   }
 }
